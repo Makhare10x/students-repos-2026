@@ -1,0 +1,1 @@
+repo: https://github.com/K0k1M4r/Gamocda-Module-1

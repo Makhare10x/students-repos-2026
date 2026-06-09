@@ -1,0 +1,1 @@
+repo: https://github.com/Gocha-Pinturia/collaboration-project-spotify-green-code

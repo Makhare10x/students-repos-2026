@@ -1,0 +1,1 @@
+repo: https://github.com/mariami1natchkebia/Git-Blame-Society
