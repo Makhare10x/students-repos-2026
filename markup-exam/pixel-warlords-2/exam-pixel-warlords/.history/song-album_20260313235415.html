@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Style Layout</title>
+  <link rel="stylesheet" href="album.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+</head>
+<body>
+  <div class="app">
+
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+       <h2>My Library</h2>
+      </div>
+
+      <nav class="sidebar__nav" aria-label="Sidebar navigation">
+        <ul>
+          <li><a href="#"><i class="fa-regular fa-compass"></i><span>Pins</span></a></li>
+          <li><a href="song.html"><i class="fa-solid fa-play"></i><span>Playlists</span></a></li>
+          <li><a href=""><i class="fa-regular fa-heart"></i><span>Liked songs</span></a></li>
+          <li><a href="#"><i class="fa-regular fa-bookmark"></i><span>Saves</span></a></li>
+          <li><a href="song-album.html"><i class="fa-regular fa-compact-disc"></i><span>Albums</span></a></li>
+          <li><a href="#"><i class="fa-regular fa-folder"></i><span>Folders</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-podcast"></i><span>Podcasts</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-book"></i><span>Audiobooks</span></a></li>
+          <li><a href="artist.html"><i class="fa-regular fa-user"></i><span>Artists</span></a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="layout">
+
+      <header class="topbar">
+        <nav class="topbar__nav" aria-label="Top navigation">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Discover</a></li>
+            <li><a href="#">Search</a></li>
+          </ul>
+        </nav>
+
+        <div class="topbar__actions">
+          <a href="#"><i class="fa-regular fa-bell"></i></a>
+          <a href="#"><i class="fa-solid fa-gear"></i></a>
+          <a href="#"><i class="fa-solid fa-user"></i></a>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <section class="content-panel">
+
+          <section class="album-layout">
+
+            <article class="album-main">
+              <header class="album-header">
+                <div class="album-header__text">
+                  <h2>Random Access Memories</h2>
+
+                  <div class="album-meta">
+                    <span><i class="fa-regular fa-user"></i> Daft Punk</span>
+                    <span>2013</span>
+                    <span>13 songs</span>
+                    <span>1 hr 14 min</span>
+                  </div>
+
+                  <div class="album-actions">
+                    <button class="play-btn" type="button">
+                      <i class="fa-solid fa-play"></i>
+                    </button>
+
+                    <button class="icon-btn" type="button">
+                      <i class="fa-solid fa-shuffle"></i>
+                    </button>
+
+                    <button class="icon-btn" type="button">
+                      <i class="fa-solid fa-plus"></i>
+                    </button>
+
+                    <button class="icon-btn" type="button">
+                      <i class="fa-solid fa-clock-rotate-left"></i>
+                    </button>
+
+                    <button class="icon-btn" type="button">
+                      <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                    </button>
+
+                    <button class="icon-btn" type="button">
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="album-search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </header>
+
+              <section class="tracklist">
+                <div class="tracklist__head">
+                  <span>#</span>
+                  <span>Title</span>
+                  <span>Duration</span>
+                  <span></span>
+                </div>
+
+                <article class="track">
+                  <span>1</span>
+                  <div class="track__info">
+                    <h3>Give Life Back to Music</h3>
+                    <p>Daft Punk</p>
+                  </div>
+                  <span>4:35</span>
+                  <button type="button"><i class="fa-regular fa-heart"></i></button>
+                </article>
+
+                <article class="track">
+                  <span>2</span>
+                  <div class="track__info">
+                    <h3>The Game of Love</h3>
+                    <p>Daft Punk</p>
+                  </div>
+                  <span>5:22</span>
+                  <button type="button"><i class="fa-regular fa-heart"></i></button>
+                </article>
+
+                <article class="track">
+                  <span>3</span>
+                  <div class="track__info">
+                    <h3>Giorgio by Moroder</h3>
+                    <p>Daft Punk</p>
+                  </div>
+                  <span>9:04</span>
+                  <button type="button"><i class="fa-regular fa-heart"></i></button>
+                </article>
+
+                <article class="track">
+                  <span>4</span>
+                  <div class="track__info">
+                    <h3>Within</h3>
+                    <p>Daft Punk</p>
+                  </div>
+                  <span>3:48</span>
+                  <button type="button"><i class="fa-regular fa-heart"></i></button>
+                </article>
+
+                <article class="track">
+                  <span>5</span>
+                  <div class="track__info">
+                    <h3>Instant Crush (feat. Julian Casablancas)</h3>
+                    <p>Daft Punk, Julian Casablancas</p>
+                  </div>
+                  <span>5:37</span>
+                  <button type="button"><i class="fa-regular fa-heart"></i></button>
+                </article>
+
+                <article class="track">
+                  <span>6</span>
+                  <div class="track__info">
+                    <h3>Lose Yourself to Dance (feat. Pharrell Williams)</h3>
+                    <p>Daft Punk, Pharrell Williams</p>
+                  </div>
+                  <span>5:53</span>
+                  <button type="button"><i class="fa-regular fa-heart"></i></button>
+                </article>
+
+                <article class="track">
+                  <span>7</span>
+                  <div class="track__info">
+                    <h3>Touch (feat. Pharrell Williams)</h3>
+                    <p>Daft Punk, Pharrell Williams</p>
+                  </div>
+                  <span>8:18</span>
+                  <button type="button"><i class="fa-regular fa-heart"></i></button>
+                </article>
+
+                <article class="track">
+                  <span>8</span>
+                  <div class="track__info">
+                    <h3>Get Lucky (feat. Pharrell Williams and Nile Rodgers)</h3>
+                    <p>Daft Punk, Pharrell Williams, Nile Rodgers</p>
+                  </div>
+                  <span>6:09</span>
+                  <button type="button"><i class="fa-regular fa-heart"></i></button>
+                </article>
+
+                <article class="track">
+                  <span>9</span>
+                  <div class="track__info">
+                    <h3>Beyond</h3>
+                    <p>Daft Punk</p>
+                  </div>
+                  <span>4:50</span>
+                  <button type="button"><i class="fa-regular fa-heart"></i></button>
+                </article>
+              </section>
+            </article>
+
+            <aside class="album-side">
+              <div class="album-cover">
+                <img
+                  src="assets/img/image 15.png"
+                  alt="Random Access Memories cover"
+                />
+              </div>
+
+              <div class="tags">
+                <span>Funk</span>
+                <span>Electronic music</span>
+                <span>Disco</span>
+                <span>Soft Rock</span>
+                <span>Progressive pop</span>
+              </div>
+
+              <div class="artists">
+                <article class="artist">
+                  <img src="assets/img/Frame 145 (2).png" alt="Daft Punk artist">
+                  <span>Daft Punk</span>
+                </article>
+
+                <article class="artist">
+                  <img src="assets/img/Frame 145 (4).png" alt="Pharrell Williams">
+                  <span>Pharrell Williams</span>
+                </article>
+
+                <article class="artist">
+                  <img src="assets/img/Frame 145 (3).png" alt="Nile Rodgers">
+                  <span>Nile Rodgers</span>
+                </article>
+              </div>
+            </aside>
+
+          </section>
+        </section>
+      </main>
+
+      <footer class="player-bar">
+        <div class="player-bar__left">
+          <button type="button" class="player-play"><i class="fa-solid fa-pause"></i></button>
+          <button type="button"><i class="fa-solid fa-backward-step"></i></button>
+          <button type="button"><i class="fa-solid fa-forward-step"></i></button>
+          <button type="button"><i class="fa-solid fa-shuffle"></i></button>
+          <span class="time">2:23</span>
+          <div class="progress">
+            <span></span>
+          </div>
+          <span class="time">4:45</span>
+        </div>
+
+        <div class="player-bar__center">
+          <img
+            src="assets/img/Frame 145 (2).png"
+            alt="album thumbnail"
+          />
+          <div class="now-playing">
+            <h4>Get Lucky</h4>
+            <p>Daft Punk</p>
+            <span>Random Access Memories</span>
+          </div>
+        </div>
+
+        <div class="player-bar__right">
+          <button type="button"><i class="fa-regular fa-heart"></i></button>
+          <button type="button"><i class="fa-solid fa-plus"></i></button>
+          <button type="button"><i class="fa-solid fa-list"></i></button>
+          <button type="button"><i class="fa-solid fa-volume-high"></i></button>
+          <div class="volume">
+            <span></span>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+// *==========header css start===============
+
+header {
+  padding: 1.6rem 2.8rem 2.4rem;
+  svg {
+    width: 4rem;
+    height: 4rem;
+  }
+  .header-wrapper {
+    @include mixins.flex-prop(calc((100% - 20rem) / 4), $align: center);
+
+    .header-nav,
+    .user-menu {
+      @include mixins.flex-prop($justify: space-between);
+
+      a {
+        @include mixins.flex-prop($direction: column, $align: center);
+      }
+    }
+
+    .header-nav {
+      flex: 3;
+    }
+
+    .user-menu {
+      flex: 2;
+    }
+
+    #searchbar-deskt {
+      display: none;
+    }
+
+    .user-menu-deskt {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 920px) {
+  header {
+    padding: 0;
+    padding-bottom: 0.7rem;
+    svg {
+      min-width: 4rem;
+      height: 4rem;
+    }
+    .header-wrapper {
+      @include mixins.flex-prop(0rem, $justify: space-between);
+      .header-nav {
+        gap: 1rem;
+        flex: none;
+        a {
+          @include mixins.flex-prop(1rem, row);
+          gap: 1rem;
+          display: flex;
+          flex-direction: row;
+          padding: 0rem 2rem 0rem 1rem;
+          border-radius: 1rem;
+          transition: 0.3s ease;
+
+          &.active,
+          &:hover {
+            @include mixins.interactiveIcon;
+            background-color: variables.$color-active;
+          }
+        }
+      }
+
+      .user-menu-deskt {
+        display: none;
+      }
+
+      .user-menu {
+        flex: 2;
+      }
+
+      #searchbar-deskt {
+        // width: 100%;
+        display: flex; // flex-direction: row;
+        flex-direction: row-reverse;
+        // justify-content: center;
+        // align-items: center;
+        input {
+          border: none;
+          outline: none;
+          background: transparent;
+          font-size: 1.2rem;
+          color: variables.$color-primary;
+          width: 12rem;
+
+          &::placeholder {
+            color: #898989;
+          }
+        }
+      }
+      #searchbar {
+        display: none;
+      }
+      // ==========
+      .user-menu {
+        display: none;
+      }
+      .user-menu-deskt {
+        display: block;
+        a {
+          @include mixins.interactiveIcon;
+        }
+
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1.3rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  header {
+    .header-wrapper {
+      .header-nav {
+        a {
+          padding: 0.7rem 10rem 0.7rem 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+// *==========header css end===============

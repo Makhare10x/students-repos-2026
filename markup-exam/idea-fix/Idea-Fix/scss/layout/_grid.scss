@@ -1,0 +1,12 @@
+@use "../abstracts/variables";
+@use "../base/reset";
+@use "../abstracts/mixins";
+
+@media (min-width: 39rem) {
+    .app {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: 1fr 80px;
+        height: 100vh;
+    }
+}

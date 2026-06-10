@@ -1,0 +1,10 @@
+# Ignore the Sass compiler's map file
+css/styles.css.map
+
+# Ignore Sass cache folders
+.sass-cache/
+.cache/
+
+# Ignore OS junk
+.DS_Store
+Thumbs.db

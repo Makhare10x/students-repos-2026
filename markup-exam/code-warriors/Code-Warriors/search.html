@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Markup</title>
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+
+  <div class="app">
+    <!-- header -->
+    <header class="header">
+      <nav class="header-nav">
+        <ul class="header-list">
+
+          <li class="header-item">
+            <button class="header-button" onclick="window.location.href='MyLibrary.html'">
+              <span class="header-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.14307 3.14307V20.4299" stroke="#898989" stroke-width="2.02054" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M8.9054 3.14307V20.4299" stroke="#898989" stroke-width="2.02054" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M14.6676 20.4299V3.14307L20.4299 7.13234V20.4299H14.6676Z" stroke="#898989"
+                    stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round" />
+                </svg></span>
+                <span class=" header-text">My Library</span>              
+            </button>
+          </li>
+
+          <li class="header-item">
+            <button class="header-button" onclick="window.location.href='index.html'">
+              <span class="header-icon">
+              <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25.2566 28.6243H28.6242C29.5541 28.6243 30.3079 27.8704 30.3079 26.9405V19.432C30.3079 18.9368 30.0899 18.4666 29.7118 18.1467L21.2929 11.023C20.6651 10.4918 19.7454 10.4918 19.1176 11.023L10.6987 18.1467C10.3206 18.4666 10.1025 18.9368 10.1025 19.432V26.9405C10.1025 27.8704 10.8564 28.6243 11.7863 28.6243H15.1539" stroke="#898989" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg></span>
+              <span class="header-text">Home</span>
+             </button>
+          </li>
+
+          <li class="header-item">
+            <button class="header-button" onclick="window.location.href='Discover.html'">
+              <span class="header-icon">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.8042 21.8062C14.0298 17.441 17.441 14.0298 21.8062 12.8042L23.6011 12.3003L21.8062 11.7964C17.441 10.5708 14.0298 7.1596 12.8042 2.79443L12.3003 0.999512L11.7964 2.79443C10.5708 7.1596 7.1596 10.5708 2.79443 11.7964L0.999512 12.3003L2.79443 12.8042C7.1596 14.0298 10.5708 17.441 11.7964 21.8062L12.3003 23.6011L12.8042 21.8062Z"
+                    stroke="#898989" stroke-width="2" />
+                </svg></span>
+                <span class="header-text">Discover</span>
+            </button>
+          </li>
+
+          <li class="header-item">
+            <button class="header-button" onclick="window.location.href='search.html'">
+              <span class="header-icon">
+              <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24.7357 24.361C26.2733 22.7925 27.2214 20.644 27.2214 18.274C27.2214 13.4715 23.3282 9.57837 18.5257 9.57837C13.7233 9.57837 9.83008 13.4715 9.83008 18.274C9.83008 23.0765 13.7233 26.9697 18.5257 26.9697C20.9582 26.9697 23.1575 25.9709 24.7357 24.361ZM24.7357 24.361L29.8301 29.5784" stroke="#E0E0E0" stroke-width="2.02054" stroke-linecap="round"/>
+              </svg>
+              </span>
+               <span class="header-text">Search</span>              
+            </button>
+          </li>
+
+        </ul>
+      </nav>
+      <div class="header-icons">
+        <button class="icon-button">
+          <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17.305 15.575H2.24935C1.0597 15.575 0.409813 14.1875 1.17141 13.2736L2.42592 11.7682C2.64129 11.5097 2.74882 11.1829 2.74555 10.8465C2.7249 8.7271 3.09697 0.841919 9.77719 0.841919C16.4574 0.841919 16.8295 8.7271 16.8088 10.8465C16.8056 11.1829 16.9131 11.5097 17.1285 11.7682L18.383 13.2736C19.1446 14.1875 18.4947 15.575 17.305 15.575Z"
+              stroke="#898989" stroke-width="1.6838" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <button class="icon-button lock-btn">
+          <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.5457 4.26552C14.7544 4.70905 15.2832 4.89939 15.7267 4.69066C16.1702 4.48192 16.3606 3.95316 16.1518 3.50963L14.5457 4.26552ZM3.61666 7.98816C4.49277 7.84598 4.49283 7.84638 4.49289 7.84675C4.49291 7.84684 4.49296 7.84719 4.49299 7.84737C4.49305 7.84773 4.49309 7.84799 4.49312 7.84814C4.49316 7.84844 4.49314 7.84833 4.49306 7.84781C4.4929 7.84676 4.49249 7.84408 4.49187 7.83981C4.49063 7.83128 4.48854 7.81644 4.48589 7.79571C4.48057 7.75421 4.47303 7.68935 4.46549 7.60449C4.45037 7.43439 4.43548 7.18627 4.43819 6.88671C4.44366 6.28146 4.52078 5.49832 4.79016 4.73233C5.05715 3.97315 5.50453 3.25206 6.24453 2.71568C6.98229 2.18093 8.08614 1.77515 9.7633 1.77515V0C7.79098 0 6.30174 0.481792 5.20273 1.27839C4.10595 2.07338 3.47285 3.12744 3.11555 4.1434C2.76065 5.15256 2.66967 6.14457 2.66311 6.87067C2.6598 7.2368 2.67792 7.5434 2.69731 7.76162C2.70702 7.87092 2.71711 7.95861 2.72511 8.02113C2.72911 8.0524 2.7326 8.07743 2.73528 8.09577C2.73661 8.10494 2.73774 8.11244 2.73863 8.11822C2.73908 8.12111 2.73947 8.12357 2.73979 8.12559C2.73995 8.1266 2.74009 8.1275 2.74022 8.1283C2.74028 8.12869 2.74036 8.1292 2.74039 8.1294C2.74047 8.12989 2.74055 8.13034 3.61666 7.98816ZM9.7633 1.77515C11.2681 1.77515 12.31 2.10211 13.0382 2.55229C13.7643 3.00119 14.2364 3.60832 14.5457 4.26552L16.1518 3.50963C15.7204 2.59289 15.0353 1.70001 13.9716 1.0424C12.91 0.386066 11.5295 0 9.7633 0V1.77515Z"
+              fill="#898989" />
+            <path
+              d="M15.9763 8.43188H3.55029C2.07971 8.43188 0.887573 9.62403 0.887573 11.0946V20.4141C0.887573 21.8847 2.07971 23.0768 3.55029 23.0768H15.9763C17.4469 23.0768 18.639 21.8847 18.639 20.4141V11.0946C18.639 9.62403 17.4469 8.43188 15.9763 8.43188Z"
+              stroke="#898989" stroke-width="1.77515" />
+            <circle cx="9.76331" cy="15.9763" r="2.66272" stroke="#898989" stroke-width="1.77515" />
+          </svg>
+        </button>
+
+        <button class="icon-button">
+          <svg width="35" height="26" viewBox="0 0 35 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M26.5729 6.73524C26.5729 8.5951 25.0652 10.1028 23.2054 10.1028C21.3455 10.1028 19.8378 8.5951 19.8378 6.73524C19.8378 4.87539 21.3455 3.36768 23.2054 3.36768C25.0652 3.36768 26.5729 4.87539 26.5729 6.73524Z"
+              stroke="#898989" stroke-width="2.02054" />
+            <path
+              d="M16.286 15.8383L17.0358 15.3384C18.8628 14.1204 21.0095 13.4705 23.2053 13.4705C25.4012 13.4705 27.5478 14.1204 29.3749 15.3384L30.1247 15.8383C31.0615 16.4629 31.6242 17.5143 31.6242 18.6403V20.3178C31.6242 21.1858 30.9206 21.8894 30.0527 21.8894H23.2053H16.3579C15.49 21.8894 14.7864 21.1858 14.7864 20.3178V18.6403C14.7864 17.5143 15.3491 16.4629 16.286 15.8383Z"
+              stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M15.1541 6.73524C15.1541 8.5951 13.6464 10.1028 11.7865 10.1028C9.92666 10.1028 8.41895 8.5951 8.41895 6.73524C8.41895 4.87539 9.92666 3.36768 11.7865 3.36768C13.6464 3.36768 15.1541 4.87539 15.1541 6.73524Z"
+              stroke="#898989" stroke-width="2.02054" />
+            <path
+              d="M11.7865 13.4705C9.59068 13.4705 7.44399 14.1204 5.61695 15.3384L4.86716 15.8383C3.93031 16.4629 3.36758 17.5143 3.36758 18.6403V20.3178C3.36758 21.1858 4.07118 21.8894 4.93912 21.8894H11"
+              stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <button class="icon-button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.1164 1H9.88363C9.60145 1 9.35689 1.09167 9.14995 1.275C8.94302 1.45833 8.82074 1.6875 8.78312 1.9625L8.4445 4.52C8.19994 4.61167 7.96968 4.72167 7.75371 4.85C7.537 4.97833 7.32517 5.11583 7.11824 5.2625L4.66325 4.2725C4.39988 4.18083 4.13651 4.17167 3.87313 4.245C3.60976 4.31833 3.40283 4.47417 3.25233 4.7125L1.16418 8.26C1.01368 8.49833 0.966651 8.755 1.02309 9.03C1.07952 9.305 1.22062 9.525 1.44636 9.69L3.56273 11.2575C3.54392 11.3858 3.53451 11.5098 3.53451 11.6293V12.3718C3.53451 12.4906 3.54392 12.6142 3.56273 12.7425L1.44636 14.31C1.22062 14.475 1.07952 14.695 1.02309 14.97C0.966651 15.245 1.01368 15.5017 1.16418 15.74L3.25233 19.2875C3.38402 19.5442 3.58606 19.7048 3.85846 19.7693C4.13161 19.8331 4.39988 19.8192 4.66325 19.7275L7.11824 18.7375C7.32517 18.8842 7.54151 19.0217 7.76726 19.15C7.993 19.2783 8.21875 19.3883 8.4445 19.48L8.78312 22.0375C8.82074 22.3125 8.94302 22.5417 9.14995 22.725C9.35689 22.9083 9.60145 23 9.88363 23H14.1164C14.3986 23 14.6431 22.9083 14.85 22.725C15.057 22.5417 15.1793 22.3125 15.2169 22.0375L15.5555 19.48C15.8001 19.3883 16.0307 19.2783 16.2474 19.15C16.4634 19.0217 16.6748 18.8842 16.8818 18.7375L19.3368 19.7275C19.6001 19.8192 19.8635 19.8283 20.1269 19.755C20.3902 19.6817 20.5972 19.5258 20.7477 19.2875L22.8358 15.74C22.9863 15.5017 23.0334 15.245 22.9769 14.97C22.9205 14.695 22.7794 14.475 22.5536 14.31L20.4373 12.7425C20.4561 12.6142 20.4655 12.4906 20.4655 12.3718V11.6293C20.4655 11.5098 20.4467 11.3858 20.4091 11.2575L22.5254 9.69C22.7512 9.525 22.8923 9.305 22.9487 9.03C23.0051 8.755 22.9581 8.49833 22.8076 8.26L20.7195 4.74C20.569 4.50167 20.3575 4.34107 20.0851 4.2582C19.812 4.17607 19.5437 4.18083 19.2803 4.2725L16.8818 5.2625C16.6748 5.11583 16.4585 4.97833 16.2327 4.85C16.007 4.72167 15.7813 4.61167 15.5555 4.52L15.2169 1.9625C15.1793 1.6875 15.057 1.45833 14.85 1.275C14.6431 1.09167 14.3986 1 14.1164 1Z"
+              stroke="#898989" stroke-width="2" />
+            <circle cx="3.34783" cy="3.34783" r="3.34783" transform="matrix(1 0 0 -1 8.65216 15.3478)" stroke="#898989"
+              stroke-width="2" />
+          </svg>
+        </button>
+
+        <button class="icon-button">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="32" height="32" rx="16" fill="url(#pattern0_7919_2040)" />
+            <defs>
+              <pattern id="pattern0_7919_2040" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_7919_2040" transform="scale(0.00208333)" />
+              </pattern>
+              <image id="image0_7919_2040" width="480" height="480" preserveAspectRatio="none"
+                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAHgCAYAAAB91L6VAAAAAXNSR0IArs4c6QAAC8NJREFUeJzt3DtuHNkBhtEqg7EChQo00DaMwSxhcsFagxUJcOJoQkaaNXA2oCUICrUJK2DIgBsop35Qg0v17f6qu8+JC1VXD/LDTf51WZZtAZ60bX48DrGua30E2K2/1AcAgGskwAAQEGAACAgwAAQEGAACAgwAAQEGgIAAA0BAgAEgcFMfgOtmaeowe1+a2vu/797//rhsbsAAEBBgAAgIMAAEBBgAAgIMAAEBBoCAAANAQIABICDAABCwhMWz7H3ZiH3Z+9LU7P/Pe//zsi9uwAAQEGAACAgwAAQEGAACAgwAAQEGgIAAA0BAgAEgIMAAELCEdeEsV8H3zV6usqzFc7gBA0BAgAEgIMAAEBBgAAgIMAAEBBgAAgIMAAEBBoCAAANAwBLWmbJwBftTLWtZzDpPbsAAEBBgAAgIMAAEBBgAAgIMAAEBBoCAAANAQIABICDAABCwhHUilquA5xpduJr9+8Wy1mm4AQNAQIABICDAABAQYAAICDAABAQYAAICDAABAQaAgAADQMAS1oEsXFH69eXL+ghTfHp4qI9w1mYvV43+XrOYdRg3YAAICDAABAQYAAICDAABAQaAgAADQECAASAgwAAQEGAACFjC+g4LV3A61aKXBa6njS5cWcw6jBswAAQEGAACAgwAAQEGgIAAA0BAgAEgIMAAEBBgAAgIMAAE1mVZrmryycIVl+T2zZv6CH/qy+NjfYQpLGYdxmLW09yAASAgwAAQEGAACAgwAAQEGAACAgwAAQEGgIAAA0BAgAEgcDFLWBauuEZ7X8Kq7H2By7LW065tMcsNGAACAgwAAQEGgIAAA0BAgAEgIMAAEBBgAAgIMAAEBBgAApawYIJ3778l3737+jb57u39ffLd2Sxm7YslLADg6AQYAAICDAABAQaAgAADQECAASAgwAAQEGAACAgwAAR2v4Rl4YrnqBapKtUSVmXvC1zVspbFrKftfTHLDRgAAgIMAAEBBoCAAANAQIABICDAABAQYAAICDAABAQYAALZEpaFK57j2hauRl3bEtYoi1lPs5j1tGoxyw0YAAICDAABAQaAgAADQECAASAgwAAQEGAACAgwAAQEGAAClrA4CstVp2EJ6zSqZS2LWYexhAUA/B8BBoCAAANAQIABICDAABAQYAAICDAABAQYAAICDACBm9kvtHB12SxccY0+vHo19NzsxayfX7wYeq5azNq70YWrajHLDRgAAgIMAAEBBoCAAANAQIABICDAABAQYAAICDAABAQYAALTl7A4Txau4HDVYtZsv758OfTcp4eHI5/ksrkBA0BAgAEgIMAAEBBgAAgIMAAEBBgAAgIMAAEBBoCAAANAYHgJa9u2Y54DgB/084sXQ899eXyc+t1LWcxa13XoudEOjr7PDRgAAgIMAAEBBoCAAANAQIABICDAABAQYAAICDAABAQYAALDS1icp3fvv9VHAP7Hh1evhp67vb+f+t1qMYunuQEDQECAASAgwAAQEGAACAgwAAQEGAACAgwAAQEGgIAAA0BgXZZlG3lw24Ye40QsXJ2nP37/aer7tn/8der7ls9zX8dpzF7Mmr2E9enhYer7KqMdXNd16Dk3YAAICDAABAQYAAICDAABAQaAgAADQECAASAgwAAQEGAACNzUB4A9m71ctXu/TH6fZS2WZfn15cuh5y5lMWuUGzAABAQYAAICDAABAQaAgAADQECAASAgwAAQEGAACAgwAARutm2rzwAnd3ULV5XRZS2LWbvy84sXQ899eXw88kn2ZV3XoedGu+oGDAABAQaAgAADQECAASAgwAAQEGAACAgwAAQEGAACAgwAgZv6APy3d++/1UfgnPxz8vt+m/w+TuLDq1dDz93e3x/5JDyHGzAABAQYAAICDAABAQaAgAADQECAASAgwAAQEGAACAgwAAQsYZG6+/h66vvWdZ36vqszuqw1ezHrl8HnPk/+LoTcgAEgIMAAEBBgAAgIMAAEBBgAAgIMAAEBBoCAAANAQIABIGAJi6OYvXA1atu2oecsZgE1N2AACAgwAAQEGAACAgwAAQEGgIAAA0BAgAEgIMAAEBBgAAhYwuJZqoWr2SxmATU3YAAICDAABAQYAAICDAABAQaAgAADQECAASAgwAAQEGAACAgwAAQEGAACAgwAAQEGgIAAA0BAgAEgIMAAEBBgAAgIMAAEBBgAAjf1ATgv795/G3ru7uPrI5/kMOu61kfYp9+i736OvgshN2AACAgwAAQEGAACAgwAAQEGgIAAA0BAgAEgIMAAEBBgAAhYwtqZ0QWp0UWqSrWYtfe/l+mq5Sp25fb+vj4CP8ANGAACAgwAAQEGgIAAA0BAgAEgIMAAEBBgAAgIMAAEBBgAAjfrug49uG3bkY/CNaqWq/72938NPffH7z8d+SQX7nN9AH7El8fH+gi7NNrB0a66AQNAQIABICDAABAQYAAICDAABAQYAAICDAABAQaAgAADQOCmPgDMdPfx9eQ3ji1mjdr9spblKo7g08NDfYRdcgMGgIAAA0BAgAEgIMAAEBBgAAgIMAAEBBgAAgIMAAEBBoDAuizLNvLgtg09xs68e/+tPsIU8xeu5qr+nu++vk2+y2nc3t8n3/3y+Dj1fZeyhDXawXVdh55zAwaAgAADQECAASAgwAAQEGAACAgwAAQEGAACAgwAAQEGgMBNfQCOa3RB6lIWs+AcXMrCFYdxAwaAgAADQECAASAgwAAQEGAACAgwAAQEGAACAgwAAQEGgMDwEta6rkPPbdv2w4eB7xld6hpd/pr9XShVC1efHh6S78422q3RDo5yAwaAgAADQECAASAgwAAQEGAACAgwAAQEGAACAgwAAQEGgMC6LMvU6SpLWJfNMtS+3H19Wx+B/3B7fz/1fRauTsMSFgBcEQEGgIAAA0BAgAEgIMAAEBBgAAgIMAAEBBgAAgIMAIGb2S8cXQqxmHWe7j6+HnrOYhaXZPbCVcXC1dNmL1yNcgMGgIAAA0BAgAEgIMAAEBBgAAgIMAAEBBgAAgIMAAEBBoDA9CUsWJbxxaxRlrV4jr0vV315fKyPwA64AQNAQIABICDAABAQYAAICDAABAQYAAICDAABAQaAgAADQGBdlmWrD/Fntm3Xx2Nnrm0x6+7r2/oIJ2Xh6mmfHh6S71ZGu7Cu65FPchg3YAAICDAABAQYAAICDAABAQaAgAADQECAASAgwAAQEGAACOx+CWuUxSxK1QJXtYS190WqUdVy1SgLV0/b+8LVKDdgAAgIMAAEBBgAAgIMAAEBBoCAAANAQIABICDAABAQYAAIWMKCM3b75k19hF2ycHWeLGEBAEcnwAAQEGAACAgwAAQEGAACAgwAAQEGgIAAA0BAgAEgcFMfYJbRZRSLWXA6e1+kGmW56jDXtnA1yg0YAAICDAABAQaAgAADQECAASAgwAAQEGAACAgwAAQEGAACF7OENcpiFpfkUpamKhauDmPh6jBuwAAQEGAACAgwAAQEGAACAgwAAQEGgIAAA0BAgAEgIMAAELi6JaxRFrPgdCxS7YuFq9NwAwaAgAADQECAASAgwAAQEGAACAgwAAQEGAACAgwAAQEGgMC6LIsppxOwmMUxWCJiWeb/fvH/6jTcgAEgIMAAEBBgAAgIMAAEBBgAAgIMAAEBBoCAAANAQIABIHBTH+BazF6WsawFl2/059xy1XlyAwaAgAADQECAASAgwAAQEGAACAgwAAQEGAACAgwAAQEGgIAlrDM1unxjMQtOZ/bPm4Wry+YGDAABAQaAgAADQECAASAgwAAQEGAACAgwAAQEGAACAgwAAUtYF272ko5lLS6J5SpKbsAAEBBgAAgIMAAEBBgAAgIMAAEBBoCAAANAQIABICDAABCwhMWzWNbiOfb+72u5ipIbMAAEBBgAAgIMAAEBBoCAAANAQIABICDAABAQYAAICDAABNZlWfY9VQOhvS857Z2lKfg+N2AACAgwAAQEGAACAgwAAQEGgIAAA0BAgAEgIMAAEBBgAAj8G0x15MsQAIbxAAAAAElFTkSuQmCC" />
+            </defs>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <ul class="sidebar-list">
+
+            <li class="sidebar-item">
+              <button class="sidebar-link">
+                <span class="sidebar-icon">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.6064 2.5178L11.0885 0.999964M12.6064 2.5178L5.90599 9.21819C5.78288 9.3413 5.62208 9.41961 5.44925 9.44062L2.69595 9.77532C2.05135 9.85367 1.78005 10.6401 2.23921 11.0992L6.16776 15.0278M12.6064 2.5178L18.6777 8.58914M20.1956 10.107L18.6777 8.58914M18.6777 8.58914L11.9773 15.2895C11.8542 15.4126 11.7759 15.5734 11.7549 15.7463L11.4202 18.4996C11.3418 19.1442 10.5555 19.4155 10.0963 18.9563L6.16776 15.0278M6.16776 15.0278L0.999964 20.1956"
+                      stroke="#898989" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span class="sidebar-text">Pins</span>
+                <span class="sidebar-right-icon">
+                  <img src="./assets/icons/sidebar right icon.svg" alt="Right-icon">
+                </span>
+              </button>
+            </li>
+
+            <li class="sidebar-item">
+              <button class="sidebar-link">
+                <span class="sidebar-icon">
+                  <img src="./assets/icons/sidebar 2.svg" alt="Playlists-icon">
+                </span>
+                <span class="sidebar-text">Playlists</span>
+                <span class="sidebar-right-icon">
+                  <img src="./assets/icons/sidebar right icon.svg" alt="Right-icon">
+                </span>
+              </button>
+              <ul class="sidebar-submenu">
+
+                <li class="submenu-item">
+                  <img src="./assets/icons/sidebar 2.svg">
+                  <span>Chill stuff</span>
+                </li>
+
+                <li class="submenu-item">
+                  <img src="./assets/icons/sidebar 2.svg">
+                  <span>Rock n Roll</span>
+                </li>
+
+                <li class="submenu-item">
+                  <img src="./assets/icons/sidebar 2.svg">
+                  <span>The Jux Box</span>
+                </li>
+
+                <li class="submenu-item">
+                  <img src="./assets/icons/sidebar 2.svg">
+                  <span>Selected Linkin Park</span>
+                </li>
+
+                <li class="submenu-item">
+                  <img src="./assets/icons/sidebar 2.svg">
+                  <span>Vibe</span>
+                </li>
+              </ul>
+            </li>
+
+            <li class="sidebar-item">
+              <button class="sidebar-link" onclick="window.location.href='liked-song.html'">
+                <span class="sidebar-icon">
+                  <img src="./assets/icons/sidebar 3.svg" alt="Liked-songs-icon">
+                </span>
+                <span class="sidebar-text">Liked songs</span>
+              </button>
+            </li>
+
+            <li class="sidebar-item">
+              <button class="sidebar-link">
+                <span class="sidebar-icon">
+                  <img src="./assets/icons/sidebar 4.svg" alt="Saves-icon">
+                </span>
+                <span class="sidebar-text">Saves</span>
+              </button>
+            </li>
+
+            <li class="sidebar-item">
+              <button class="sidebar-link">
+                <span class="sidebar-icon">
+                  <img src="./assets/icons/sidebar 5.svg" alt="Albums-icon">
+                </span>
+                <span class="sidebar-text">Albums</span>
+              </button>
+            </li>
+
+            <li class="sidebar-item">
+              <button class="sidebar-link">
+                <span class="sidebar-icon">
+                  <img src="./assets/icons/sidebar 6.svg" alt="Folders-icon">
+                </span>
+                <span class="sidebar-text">Folders</span>
+              </button>
+            </li>
+
+            <li class="sidebar-item">
+              <button class="sidebar-link">
+                <span class="sidebar-icon">
+                  <img src="./assets/icons/sidebar 7.svg" alt="Podcasts-icon">
+                </span>
+                <span class="sidebar-text">Podcasts</span>
+              </button>
+            </li>
+
+            <li class="sidebar-item">
+              <button class="sidebar-link">
+                <span class="sidebar-icon">
+                  <img src="./assets/icons/sidebar 8.svg" alt="Audiobooks-icon">
+                </span>
+                <span class="sidebar-text">Audiobooks</span>
+              </button>
+            </li>
+
+            <li class="sidebar-item">
+              <button class="sidebar-link">
+                <span class="sidebar-icon">
+                  <img src="./assets/icons/sidebar 9.svg" alt="Artists-icon">
+                </span>
+                <span class="sidebar-text">Artists</span>
+              </button>
+            </li>
+
+          </ul>
+        </nav>
+      </aside>
+
+
+      <!-- main -->
+      <div class="main">
+        <!-- scrollable -->
+        <main class="content">
+
+          <!-- section -->
+          <section class="mobile-search">
+            <div class="search-wrapper">
+              <div class="search-bar">
+                <input type="text" placeholder="What do you want to play?" class="search-input">
+                <img src="./assets/icons/search.svg" class="search-icon">
+              </div>
+              <button class="camera-btn">
+                <img src="./assets/icons/camera.svg">
+              </button>
+            </div>
+          </section>
+
+          <section class="section recent-searches">
+
+            <div class="section-header">
+              <h2 class="section-title">Recent searches</h2>
+
+            </div>
+            <div class="cards-scroll">
+              <div class="card-list">
+
+                <div class="card">
+                  <img src="./assets/images/search.png" alt="playlist cover" class="card-image">
+                  <div class="card-meta">
+                    <h3 class="card-title">Daft Punk</h3>
+                    <span class="card-badge"></span>
+                  </div>
+                  <p class="card-subtitle"></p>
+                </div>
+
+                <div class="card">
+                  <img src="./assets/images/search1.png" alt="playlist cover" class="card-image">
+                  <div class="card-meta">
+                    <h3 class="card-title">David Bowie</h3>
+                    <span class="card-badge"></span>
+                  </div>
+                  <p class="card-subtitle"></p>
+                </div>
+
+                <div class="card">
+                  <img src="./assets/images/23.png" alt="playlist cover" class="card-image">
+                  <div class="card-meta">
+                    <h3 class="card-title">Black Holes...</h3>
+                    <span class="card-badge"></span>
+                  </div>
+                  <p class="card-subtitle">Muse</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="browse">
+
+            <div class="browse-header">
+
+              <div class="browse-header-left">
+                <h2 class="section-title">Browse all</h2>
+                <h3 class="browse-subtitle">Discover</h3>
+              </div>
+
+              <div class="slider-arrows">
+                <button class="arrow arrow-left"></button>
+                <button class="arrow arrow-right"></button>
+              </div>
+
+            </div>
+
+            <div class="browse-scroll">
+
+              <div class="browse-grid">
+
+                <div class="browse-card browse-blue">
+                  <h3 class="browse-card-title">Made For You</h3>
+                  <img src="./assets/images/search1 (1).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-orange">
+                  <h3 class="browse-card-title">New Releases</h3>
+                  <img src="./assets/images/search1 (2).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-purple">
+                  <h3 class="browse-card-title">Spotify Classics</h3>
+                  <img src="./assets/images/search1 (3).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-pink">
+                  <h3 class="browse-card-title">Trending</h3>
+                  <img src="./assets/images/search1 (4).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-yellow">
+                  <h3 class="browse-card-title">Decades</h3>
+                  <img src="./assets/images/search1 (5).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-blue">
+                  <h3 class="browse-card-title">Made For You</h3>
+                  <img src="./assets/images/search1 (6).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-orange">
+                  <h3 class="browse-card-title">New Releases</h3>
+                  <img src="./assets/images/search1 (7).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-purple">
+                  <h3 class="browse-card-title">Spotify Classics</h3>
+                  <img src="./assets/images/search1 (8).png" class="browse-card-image">
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+          <section class="browse">
+
+            <div class="browse-header">
+
+              <div class="browse-header-left">
+                <h3 class="browse-subtitle">Genre</h3>
+              </div>
+
+              <div class="slider-arrows">
+                <button class="arrow arrow-left"></button>
+                <button class="arrow arrow-right"></button>
+              </div>
+
+            </div>
+
+            <div class="browse-scroll">
+
+              <div class="browse-grid">
+
+                <div class="browse-card browse-blue">
+                  <h3 class="browse-card-title">Made For You</h3>
+                  <img src="./assets/images/search1 (9).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-orange">
+                  <h3 class="browse-card-title">New Releases</h3>
+                  <img src="./assets/images/search1 (10).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-purple">
+                  <h3 class="browse-card-title">Spotify Classics</h3>
+                  <img src="./assets/images/search1 (11).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-pink">
+                  <h3 class="browse-card-title">Trending</h3>
+                  <img src="./assets/images/search1 (12).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-yellow">
+                  <h3 class="browse-card-title">Decades</h3>
+                  <img src="./assets/images/search1 (13).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-blue">
+                  <h3 class="browse-card-title">Made For You</h3>
+                  <img src="./assets/images/search1 (14).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-orange">
+                  <h3 class="browse-card-title">New Releases</h3>
+                  <img src="./assets/images/search1 (15).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-purple">
+                  <h3 class="browse-card-title">Spotify Classics</h3>
+                  <img src="./assets/images/search1 (16).png" class="browse-card-image">
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+          <section class="browse">
+
+            <div class="browse-header">
+
+              <div class="browse-header-left">
+                <h3 class="browse-subtitle">Mood & activity</h3>
+              </div>
+
+              <div class="slider-arrows">
+                <button class="arrow arrow-left"></button>
+                <button class="arrow arrow-right"></button>
+              </div>
+
+            </div>
+
+            <div class="browse-scroll">
+
+              <div class="browse-grid">
+
+                <div class="browse-card browse-blue">
+                  <h3 class="browse-card-title">Mood and activity</h3>
+                  <img src="./assets/images/search1 (9).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-orange">
+                  <h3 class="browse-card-title">New Releases</h3>
+                  <img src="./assets/images/search1 (10).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-purple">
+                  <h3 class="browse-card-title">Spotify Classics</h3>
+                  <img src="./assets/images/search1 (11).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-pink">
+                  <h3 class="browse-card-title">Trending</h3>
+                  <img src="./assets/images/search1 (12).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-yellow">
+                  <h3 class="browse-card-title">Decades</h3>
+                  <img src="./assets/images/search1 (13).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-blue">
+                  <h3 class="browse-card-title">Made For You</h3>
+                  <img src="./assets/images/search1 (14).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-orange">
+                  <h3 class="browse-card-title">New Releases</h3>
+                  <img src="./assets/images/search1 (15).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-purple">
+                  <h3 class="browse-card-title">Spotify Classics</h3>
+                  <img src="./assets/images/search1 (16).png" class="browse-card-image">
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+          <section class="browse">
+
+            <div class="browse-header">
+
+              <div class="browse-header-left">
+                <h3 class="browse-subtitle">Podcast</h3>
+              </div>
+
+            </div>
+
+            <div class="browse-scroll">
+
+              <div class="browse-grid">
+
+                <div class="browse-card browse-blue">
+                  <h3 class="browse-card-title">Made For You</h3>
+                  <img src="./assets/images/search1 (1).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-orange">
+                  <h3 class="browse-card-title">New Releases</h3>
+                  <img src="./assets/images/search1 (2).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-purple">
+                  <h3 class="browse-card-title">Spotify Classics</h3>
+                  <img src="./assets/images/search1 (3).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-pink">
+                  <h3 class="browse-card-title">Trending</h3>
+                  <img src="./assets/images/search1 (4).png" class="browse-card-image">
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+          <section class="browse">
+
+            <div class="browse-header">
+
+              <div class="browse-header-left">
+                <h3 class="browse-subtitle">Audiobooks</h3>
+              </div>
+            </div>
+
+            <div class="browse-scroll">
+              <div class="browse-grid">
+                <div class="browse-card browse-blue">
+                  <h3 class="browse-card-title">Made For You</h3>
+                  <img src="./assets/images/search1 (1).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-orange">
+                  <h3 class="browse-card-title">New Releases</h3>
+                  <img src="./assets/images/search1 (2).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-purple">
+                  <h3 class="browse-card-title">Spotify Classics</h3>
+                  <img src="./assets/images/search1 (3).png" class="browse-card-image">
+                </div>
+
+                <div class="browse-card browse-pink">
+                  <h3 class="browse-card-title">Trending</h3>
+                  <img src="./assets/images/search1 (4).png" class="browse-card-image">
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+  <!-- player -->
+  <footer class="player">
+    <!-- left -->
+    <div class="player-left">
+
+      <div class="player-controls">
+        <button class="play-btn">
+          <img src="./assets/icons/icons big.svg" alt="Play icon">
+        </button>
+
+        <button class="control-btn">
+          <img src="./assets/icons/icons big 1.svg" alt="Play icon">
+        </button>
+
+        <button class="control-btn">
+          <img src="./assets/icons/icons big 2.svg" alt="Play icon">
+        </button>
+
+        <button class="control-btn">
+          <img src="./assets/icons/icons big 3.svg" alt="Play icon">
+        </button>
+
+        <button class="control-btn">
+          <img src="./assets/icons/icons big 4.svg" alt="Play icon">
+        </button>
+
+        <div class="progress-wrapper">
+          <span class="time">2:23</span>
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+          <span class="time">4:45</span>
+        </div>
+        <button class="control-btn">
+          <img src="./assets/icons/icons big 5.svg" alt="Play icon">
+        </button>
+      </div>
+    </div>
+    <!-- center-->
+    <div class="player-center">
+      <img src="./assets/images/player.png" alt="cover" class="player-cover">
+      <div class="player-info">
+        <div class="song-title">Get Lucky</div>
+        <div class="song-artist">Daft Punk</div>
+        <div class="song-artist">Random Access Memories</div>
+      </div>
+      <button class="control-btn mobile-play">
+        <img src="./assets/icons/add.svg">
+      </button>
+
+      <button class="control-btn mobile-play">
+        <img src="./assets/icons/play.svg">
+      </button>
+    </div>
+
+
+    <!-- RIGHT -->
+
+    <div class="player-right">
+      <button class="control-btn">
+        <img src="./assets/icons/icons big 6.svg" alt="Play icon">
+      </button>
+
+      <button class="control-btn">
+        <img src="./assets/icons/pc-playlist 2.svg" alt="Play icon">
+      </button>
+      <button class="control-btn">
+        <img src="./assets/icons/pc-lyrics 3.svg" alt="Play icon">
+      </button>
+      <button class="control-btn">
+        <img src="./assets/icons/icons big 7.svg" alt="Play icon">
+      </button>
+      <button class="control-btn">
+        <img src="./assets/icons/pc-playing-5.svg" alt="Play icon">
+      </button>
+      <button class="control-btn">
+        <img src="./assets/icons/Frame 6.svg" alt="Play icon">
+      </button>
+      <button class="control-btn">
+        <img src="./assets/icons/DJ 7.svg" alt="Play icon">
+      </button>
+      <button class="control-btn">
+        <img src="./assets/icons/pc-queue 8.svg" alt="Play icon">
+      </button>
+
+    </div>
+
+  </footer>
+  <nav class="mobile-nav">
+
+    <button class="mobile-nav-item active" onclick="window.location.href='index.html'">
+      <img src="./assets/icons/header 2.svg">
+      <span>Home</span>
+    </button>
+
+    <button class="mobile-nav-item" onclick="window.location.href='Discover.html'">
+      <img src="./assets/icons/header 3.svg">
+      <span>Discover</span>
+    </button>
+
+    <button class="mobile-nav-item" onclick="window.location.href='search.html'">
+      <img src="./assets/icons/search.svg">
+      <span>Search</span>
+    </button>
+
+    <button class="mobile-nav-item" onclick="window.location.href='MyLibrary.html'">
+      <img src="./assets/icons/header 1.svg">
+      <span>Library</span>
+    </button>
+
+    <button class="mobile-nav-item">
+      <img src="./assets/icons/Me.svg">
+      <span>Me</span>
+    </button>
+
+  </nav>
+</body>
+
+</html>
+
+<script src="./js/app.js"></script>

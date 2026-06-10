@@ -1,0 +1,25 @@
+{
+  "name": "spotify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass --watch src/scss/main.scss:styles/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natchkebia/spotify.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/natchkebia/spotify/issues"
+  },
+  "homepage": "https://github.com/natchkebia/spotify#readme",
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
+}

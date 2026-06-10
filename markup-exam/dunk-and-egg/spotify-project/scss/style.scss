@@ -1,0 +1,23 @@
+@use './abstract/variables';
+@use './base/fonts';
+@use './base/reset';
+@use './layout/aside';
+@use './layout/header';
+@use './layout/main';
+@use './layout/player';
+@use './components/icon';
+@use './components/card';
+@use './pages/home';
+
+.app {
+  display: grid;
+  grid-template-columns: 273px 1fr;
+  grid-template-rows: 70px 1fr;
+
+  grid-template-areas:
+  "header header"
+  "sidebar main";
+
+  height: 100vh;
+  background-color: variables.$bg-main;
+}

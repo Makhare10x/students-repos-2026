@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+<!--navigation-->
+<input type="checkbox" id="friends-toggle" style="display: none;">
+<header class="header">
+  <nav class="nav">
+
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="/index.html" class="nav__link">
+          <!-- <img class="nav__icon" src="./assets/header-icons/home-icon.png" alt="home-icon"> -->
+         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23 21" fill="none">
+        <path d="M16.3328 19.1784H19.7003C20.6303 19.1784 21.3841 18.4245 21.3841 17.4946V9.98612C21.3841 9.49083 21.1661 9.02067 20.788 8.70074L12.369 1.57704C11.7413 1.04583 10.8216 1.04583 10.1938 1.57704L1.77487 8.70074C1.39677 9.02067 1.17871 9.49083 1.17871 9.98612V17.4946C1.17871 18.4245 1.93257 19.1784 2.86249 19.1784H6.23006" stroke="#898989" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+          <span class="nav__text">Home</span>
+        </a>
+      </li>
+
+      <li class="nav__item">
+        <a href="/discovery.html" class="nav__link">
+          <!-- <img class="nav__icon" src="./assets/header-icons/Star-icon.png" alt="Star-icon"> -->
+
+          <svg   xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 41 41" fill="none">
+          <path d="M20.5903 29.5869C21.8159 25.2217 25.2271 21.8105 29.5923 20.585L31.3872 20.0811L29.5923 19.5771C25.2271 18.3516 21.8159 14.9404 20.5903 10.5752L20.0864 8.78027L19.5825 10.5752C18.357 14.9404 14.9457 18.3516 10.5806 19.5771L8.78564 20.0811L10.5806 20.585C14.9457 21.8105 18.357 25.2217 19.5825 29.5869L20.0864 31.3818L20.5903 29.5869Z" stroke="#898989" stroke-width="2"/>
+          </svg>
+          <span class="nav__text">Discover</span>
+        </a>
+      </li>
+
+      <li class="nav__items">
+       <a href="/search.html" class="nav__link nav__btn"> 
+            <input type="text" name="search" placeholder="Search " class="nav__icon nav__text ">
+      
+      </a>
+      </li>
+    </ul>
+
+    <ul class="nav__list">
+      <li class="nav__items">
+        <button href="#" class="nav__btn">
+          <img class="nav__icon" src="./assets/header-icons/notification-icon.png" alt="notification-icon">
+          
+        </button>
+      </li>
+
+      <li class="nav__items">
+        <button href="#" class="nav__btn">
+          <img class="nav__icon" src="./assets/header-icons/unlock-icon.png" alt="unlock-icon">
+          
+        </button>
+      </li>
+
+      <!-- <li class="nav__item">
+        <a href="#" class="nav__link">
+          <img class="nav__icon" src="./assets/header-icons/friends-icon.png" alt="friends-icon">
+         
+        </a>
+      </li> -->
+      
+      <li class="nav__items">
+        <label for="friends-toggle" class="nav__friends-trigger nav__btn">
+            <!-- <img class="nav__icon" src="./assets/header-icons/friends-icon.png" alt="Friends Activity"> -->
+            <svg   xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 41 41" fill="none">
+            <path d="M29.4 14.3136C29.4 16.1735 27.8922 17.6812 26.0324 17.6812C24.1725 17.6812 22.6648 16.1735 22.6648 14.3136C22.6648 12.4538 24.1725 10.946 26.0324 10.946C27.8922 10.946 29.4 12.4538 29.4 14.3136Z" stroke="#898989" stroke-width="2.02054"/>
+            <path d="M19.113 23.4167L19.8628 22.9168C21.6898 21.6988 23.8365 21.0488 26.0324 21.0488C28.2282 21.0488 30.3749 21.6988 32.2019 22.9168L32.9517 23.4167C33.8885 24.0412 34.4513 25.0927 34.4513 26.2187V27.8962C34.4513 28.7641 33.7477 29.4677 32.8797 29.4677H26.0324H19.185C18.317 29.4677 17.6134 28.7641 17.6134 27.8962V26.2187C17.6134 25.0927 18.1762 24.0412 19.113 23.4167Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M17.9811 14.3136C17.9811 16.1735 16.4734 17.6812 14.6135 17.6812C12.7537 17.6812 11.246 16.1735 11.246 14.3136C11.246 12.4538 12.7537 10.946 14.6135 10.946C16.4734 10.946 17.9811 12.4538 17.9811 14.3136Z" stroke="#898989" stroke-width="2.02054"/>
+            <path d="M14.6135 21.0488C12.4177 21.0488 10.271 21.6988 8.44398 22.9168L7.69419 23.4167C6.75734 24.0412 6.19461 25.0927 6.19461 26.2187V27.8962C6.19461 28.7641 6.89821 29.4677 7.76614 29.4677H13.8271" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </label>
+      </li>
+
+      <li class="nav__items">
+        <button  href="#" class="nav__btn">
+          <img class="nav__icon" src="./assets/header-icons/settings-icon.png" alt="settings-icon">
+          
+        </button>
+      </li>
+
+      <li class="nav__items">
+        <button href="#" class="nav__btn">
+          <img class="nav__icon" src="./assets/header-icons/dark-mode-icon.png" alt="dark-mode-icon">
+          
+        </button>
+      </li>
+    </ul>
+
+  </nav>
+</header>
+<!--left side-bar-->
+<aside class="sidebar bg-color-library">
+   <nav class="nav-aside" aria-label="Main Navigation">
+    <ul class="nav-aside__list">
+      
+      <li class="nav-aside__item">
+        <a href="/library.html" class="nav-aside__link nav-aside__link--active">
+          <!-- <img class="nav-aside__icon" src="./assets/aside-icons/library-icon.png" alt="library" aria-hidden="true"> -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 41 41" fill="none">
+          <g clip-path="url(#clip0_11021_3266)">
+          <path d="M11.562 11.5621V28.849" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17.3242 11.5621V28.849" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M23.0865 28.849V11.5621L28.8488 15.5514V28.849H23.0865Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+
+          </svg>
+          <span class="nav-aside__text">My Library</span>
+        </a>
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/search" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/pin-icon.png" alt="pin" aria-hidden="true">
+          <span class="nav-aside__text">Pins</span>
+        </a>
+        <img  class="nav-aside__vector" src="./assets/aside-icons/vector-icon.png" alt="vector">
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/library" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/playlist-icon.png" alt="playlist" aria-hidden="true">
+          <span class="nav-aside__text">Playlists</span>
+        </a>
+        <img  class="nav-aside__vector" src="./assets/aside-icons/vector-icon.png" alt="vector">
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/likedsongs.html" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/heart-icons.png" alt="heart" aria-hidden="true">
+          <span class="nav-aside__text">Liked songs</span>
+        </a>
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/library" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/albums-icons.png" alt="albums" aria-hidden="true">
+          <span class="nav-aside__text">Albums</span>
+        </a>
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/library" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/folders-icons.png" alt="folders" aria-hidden="true">
+          <span class="nav-aside__text">Folders</span>
+        </a>
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/library" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/podcasts-icons.png" alt="Podcasts" aria-hidden="true">
+          <span class="nav-aside__text">Podcasts</span>
+        </a>
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/library" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/audiobooks-icons.png" alt="Audiobooks" aria-hidden="true">
+          <span class="nav-aside__text">Audiobooks</span>
+        </a>
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/library" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/artists-icons.png" alt="Artists" aria-hidden="true">
+          <span class="nav-aside__text">Artists</span>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+</aside>
+<!--right side-bar-->
+  <aside class="friends-sidebar">
+  <div class="friends-sidebar__header">
+    <span class="friends-sidebar__title">Friend Activity</span>
+    <div class="friends-sidebar__icons">
+    <img src="./assets/aside-icons/addfriends-icons.png" class="friends-sidebar__icon" alt="addfriends">
+    <label for="friends-toggle" class="friends-sidebar__close">✕</label>
+    </div>
+    
+  </div>
+
+  <div class="friends-sidebar__content">
+    <div class="friend-item">
+      <div class="friend-item__avatar">
+        <img src="./assets/aside-icons/friend1.png" alt="User">
+        <div class="friend-item__status-dot"></div> </div>
+      
+      <div class="friend-item__info">
+        <div class="friend-item__name">FriendlyMusicListener</div>
+        <div class="friend-item__details">
+          <span class="friend-item__icon"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+        <path d="M10.4172 20.323V16.24M14.8715 20.323V9.55859M19.3257 20.323V13.6417" stroke="#1ED760" stroke-width="1.48475" stroke-linecap="round"/>
+        </svg></span> <span class="friend-item__song">Goosebumps</span>
+          <span class="friend-item__separator">•</span>
+          <span class="friend-item__artist">Travis Scott</span>
+        </div>
+      </div> 
+    </div>
+    <div class="friend-item">
+      <div class="friend-item__avatar">
+        <img src="./assets/aside-icons/friend2.png" alt="User">
+        <div class="friend-item__status-dot"></div> </div>
+      
+      <div class="friend-item__info">
+        <div class="friend-item__name">AverageMusicEnjoyer</div>
+        <div class="friend-item__details">
+          <span class="friend-item__icon"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+        <path d="M10.4172 20.323V16.24M14.8715 20.323V9.55859M19.3257 20.323V13.6417" stroke="#1ED760" stroke-width="1.48475" stroke-linecap="round"/>
+        </svg></span> <span class="friend-item__song">Get Lucky</span>
+          <span class="friend-item__separator">•</span>
+          <span class="friend-item__artist">Daft Punk</span>
+        </div>
+      </div> 
+    </div>
+    <div class="friend-item">
+      <div class="friend-item__avatar">
+        <img src="./assets/aside-icons/friend3.png" alt="User">
+        <div class="friend-item__status-dot"></div> </div>
+      
+      <div class="friend-item__info">
+        <div class="friend-item__name">MusicEnthusiast</div>
+        <div class="friend-item__details">
+          <span >1h</span> <span class="friend-item__song">would he</span>
+          <span class="friend-item__separator">•</span>
+          <span class="friend-item__artist">joji</span>
+        </div>
+      </div> 
+    </div>
+    <div class="friend-item">
+      <div class="friend-item__avatar">
+        <img src="./assets/aside-icons/friend4.png" alt="User">
+        <div class="friend-item__status-dot"></div> </div>
+      
+      <div class="friend-item__info">
+        <div class="friend-item__name">IListenToMusic56</div>
+        <div class="friend-item__details">
+          <span >6h</span> <span class="friend-item__song">Rockstar</span>
+          <span class="friend-item__separator">•</span>
+          <span class="friend-item__artist">Post Malone</span>
+        </div>
+      </div> 
+    </div>
+
+  
+  
+  </div>
+</aside>
+
+<label for="friends-toggle" class="friends-overlay"></label> 
+
+    <main class="main-content">
+        <section class="main-hdr">
+            
+            <div class="main-hdr__btns">
+                <svg class="nav__btn"   xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                    <path d="M16.584 26.3298H28.584" stroke="#898989" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M11 26.3298H12" stroke="#898989" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M16.584 20.3298H28.584" stroke="#898989" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M11 20.3298H12" stroke="#898989" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M16.584 14.3298H28.584" stroke="#898989" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M11 14.3298H12" stroke="#898989" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+
+
+                <svg class="nav__btn"   xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                <rect width="40.4108" height="40.4108" rx="5" fill="#898989" fill-opacity="0.1"/>
+                <rect width="8.18182" height="8.18182" rx="2" transform="matrix(1 0 0 -1 10.335 30.3298)" stroke="#E0E0E0" stroke-width="2"/>
+                <rect width="8.18182" height="8.18182" rx="2" transform="matrix(1 0 0 -1 10.335 18.5116)" stroke="#E0E0E0" stroke-width="2"/>
+                <rect width="8.18182" height="8.18182" rx="2" transform="matrix(1 0 0 -1 22.1533 30.3298)" stroke="#E0E0E0" stroke-width="2"/>
+                <rect width="8.18182" height="8.18182" rx="2" transform="matrix(1 0 0 -1 22.1533 18.5116)" stroke="#E0E0E0" stroke-width="2"/>
+                </svg>
+
+                <svg class="nav__btn"    xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                <path d="M13.4327 26.8049V13.5287M13.4327 13.5287L18.0759 18.1718M13.4327 13.5287L8.78962 18.1718" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M26.4328 13.8049L26.4328 27.081M26.4328 27.081L21.7897 22.4379M26.4328 27.081L31.076 22.4379" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+                <svg class="nav__btn" xmlns="http://www.w3.org/2000/svg" width="44" height="11" viewBox="0 0 44 11" fill="none">
+                <path d="M1.00823 10.024H0.000226632V4.75645e-05H3.73823C5.76823 4.75645e-05 7.00023 1.12005 7.00023 2.89805C7.00023 4.34005 6.24423 5.34805 4.95623 5.69805L7.09823 10.024H5.97823L3.93423 5.86605H1.00823V10.024ZM1.00823 0.910048V4.95605H3.76623C5.15223 4.95605 5.96423 4.20005 5.96423 2.92605C5.96423 1.62405 5.11023 0.910048 3.73823 0.910048H1.00823ZM11.5151 10.192C9.52712 10.192 8.19712 8.76405 8.19712 6.63605C8.19712 4.52205 9.51312 3.06605 11.4451 3.06605C13.2791 3.06605 14.5251 4.36805 14.5251 6.28605V6.76205H9.13512C9.20512 8.41405 10.0731 9.36605 11.5291 9.36605C12.6351 9.36605 13.3491 8.89005 13.6011 7.99405H14.5251C14.1611 9.42205 13.1111 10.192 11.5151 10.192ZM11.4451 3.89205C10.1711 3.89205 9.33112 4.73205 9.16312 6.06205H13.5591C13.5591 4.76005 12.7191 3.89205 11.4451 3.89205ZM16.0136 6.65005C16.0136 4.52205 17.3156 3.06605 19.2896 3.06605C20.8576 3.06605 22.0056 3.97605 22.2716 5.37605H21.3056C21.0536 4.43805 20.2416 3.92005 19.3036 3.92005C17.9316 3.92005 16.9656 4.97005 16.9656 6.63605C16.9656 8.24605 17.8616 9.32405 19.2336 9.32405C20.2416 9.32405 21.0536 8.76405 21.3196 7.89605H22.2996C21.9776 9.28205 20.7736 10.192 19.2336 10.192C17.3156 10.192 16.0136 8.77805 16.0136 6.65005ZM27.025 10.192C25.037 10.192 23.707 8.76405 23.707 6.63605C23.707 4.52205 25.023 3.06605 26.955 3.06605C28.789 3.06605 30.035 4.36805 30.035 6.28605V6.76205H24.645C24.715 8.41405 25.583 9.36605 27.039 9.36605C28.145 9.36605 28.859 8.89005 29.111 7.99405H30.035C29.671 9.42205 28.621 10.192 27.025 10.192ZM26.955 3.89205C25.681 3.89205 24.841 4.73205 24.673 6.06205H29.069C29.069 4.76005 28.229 3.89205 26.955 3.89205ZM32.9655 10.024H31.9995V3.24805H32.8395L32.9795 4.42405C33.4275 3.55605 34.3235 3.06605 35.3035 3.06605C37.1655 3.06605 37.9355 4.17205 37.9355 5.88005V10.024H36.9695V6.09005C36.9695 4.50805 36.2555 3.94805 35.1355 3.94805C33.7495 3.94805 32.9655 4.95605 32.9655 6.48205V10.024ZM41.8349 10.024H40.8829V4.06005H39.5249V3.24805H40.8829V1.10605H41.8349V3.24805H43.1929V4.06005H41.8349V10.024Z" fill="#898989"/>
+                </svg>
+
+                <svg class="nav__btn" xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                <path d="M29.3351 14.081L11.3351 14.081" stroke="#898989" stroke-width="2" stroke-linecap="round"/>
+                <path d="M25.8273 20.081H15.8273" stroke="#898989" stroke-width="2" stroke-linecap="round"/>
+                <path d="M22.8273 26.081H18.8273" stroke="#898989" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+
+                <svg class="nav__btn" xmlns="http://www.w3.org/2000/svg" width="40" height="14" viewBox="0 0 40 14" fill="none">
+                <path d="M4.81595 0.952016C2.50595 0.952016 1.04995 2.66002 1.04995 5.22202C1.04995 7.82602 2.58995 9.40802 4.84395 9.40802C6.52395 9.40802 8.16195 8.59602 8.16195 6.18802V5.67002H4.53595V4.77402H9.11395V10.206H8.31595L8.21795 8.61002C7.68595 9.60402 6.42595 10.36 4.80195 10.36C1.95995 10.36 -5.07608e-05 8.31602 -5.07608e-05 5.22202C-5.07608e-05 2.15602 1.95995 1.5974e-05 4.82995 1.5974e-05C6.94395 1.5974e-05 8.58195 1.20402 8.97395 3.02402H7.88195C7.46195 1.65202 6.28595 0.952016 4.81595 0.952016ZM14.8679 3.33202V4.20002H14.3359C13.0899 4.20002 12.2919 5.04002 12.2919 6.32802V10.192H11.3259V3.41602H12.2359L12.3059 4.46602C12.5719 3.73802 13.2859 3.26202 14.2379 3.26202C14.4479 3.26202 14.6299 3.27602 14.8679 3.33202ZM15.8364 6.80402C15.8364 4.73202 17.2924 3.23402 19.2804 3.23402C21.2684 3.23402 22.7244 4.73202 22.7244 6.80402C22.7244 8.86202 21.2684 10.36 19.2804 10.36C17.2924 10.36 15.8364 8.86202 15.8364 6.80402ZM16.8164 6.79002C16.8164 8.38602 17.8244 9.49202 19.2804 9.49202C20.7224 9.49202 21.7444 8.38602 21.7444 6.79002C21.7444 5.22202 20.7224 4.10202 19.2804 4.10202C17.8244 4.10202 16.8164 5.22202 16.8164 6.79002ZM29.2853 3.41602H30.2513V10.192H29.4113L29.2853 9.04402C28.9073 9.82802 27.9693 10.36 26.9053 10.36C25.3093 10.36 24.4413 9.26802 24.4413 7.61602V3.40202H25.4213V7.30802C25.4213 8.91802 26.1353 9.49202 27.2133 9.49202C28.5153 9.49202 29.2853 8.62402 29.2853 7.01402V3.41602ZM32.6836 13.146V3.41602H33.5236L33.6216 4.78802C34.0976 3.73802 35.0496 3.23402 36.1836 3.23402C38.1436 3.23402 39.3196 4.73202 39.3196 6.77602C39.3196 8.82002 38.1856 10.36 36.1836 10.36C35.0356 10.36 34.1256 9.87002 33.6496 8.89002V13.146H32.6836ZM33.6636 6.80402C33.6636 8.35802 34.5316 9.49202 36.0156 9.49202C37.4856 9.49202 38.3396 8.35802 38.3396 6.80402C38.3396 5.23602 37.4856 4.11602 36.0156 4.11602C34.5316 4.11602 33.6636 5.23602 33.6636 6.80402Z" fill="#898989"/>
+                </svg>
+                
+                <svg  class="nav__btn" xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                <path d="M24.7357 24.361C26.2733 22.7925 27.2214 20.644 27.2214 18.274C27.2214 13.4715 23.3282 9.57837 18.5257 9.57837C13.7233 9.57837 9.83008 13.4715 9.83008 18.274C9.83008 23.0765 13.7233 26.9697 18.5257 26.9697C20.9582 26.9697 23.1575 25.9709 24.7357 24.361ZM24.7357 24.361L29.8301 29.5784" stroke="#898989" stroke-width="2.02054" stroke-linecap="round"/>
+                </svg>
+            </div>
+             
+            <!-- <img src="./assets/icon/Layoutcontrol.png" alt="Layout control"> -->
+             <svg  class="nav__btn" xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+            <path d="M20.2052 13.0618V20.2054M20.2052 27.3491V20.2054M20.2052 20.2054L13.0615 20.2054M20.2052 20.2054H27.3489" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+        </section>
+        <h1 class="hidden"></h1>
+        <!-- <section class="library">
+            <!-Made For You library section and action buttons -->
+            <!-- <div class="library__hdr">
+                <h2 class="library__title">Made For You</h2>
+                <div class="library__action">
+
+                    <a href="#first-card-MFY" class="library-left-arrow"><img src="./assets/icon/Arrow-Left.png"
+                            alt="Arrow Left"></a>
+
+                    <a href="#last-card-MFY" class="library-right-arrow"><img src="./assets/icon/Arrow-Right.png"
+                            alt="Arrow Right"></a>
+                    <button class="library__btn">
+                        <img src="./assets/icon/More.png" alt="More">
+                    </button>
+                </div>
+            </div> --> 
+
+            <!-- made for you cards section -->
+            <div class="library__body slider">
+                
+                <div class="library__card" id="first-card-MFY">
+                    <div class="library__cover library__cover_discover">
+                        <svg class="library__svg-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                        <rect y="40.4108" width="40.4108" height="40.4108" rx="20.2054" transform="rotate(-90 0 40.4108)" fill="#111111"/>
+                        <path d="M23.986 11.0899L22.4682 9.57203M23.986 11.0899L17.2856 17.7903C17.1625 17.9134 17.0017 17.9917 16.8289 18.0127L14.0756 18.3474C13.431 18.4257 13.1597 19.2121 13.6188 19.6713L17.5474 23.5998M23.986 11.0899L30.0574 17.1612M31.5752 18.679L30.0574 17.1612M30.0574 17.1612L23.357 23.8616C23.2339 23.9847 23.1556 24.1455 23.1345 24.3183L22.7998 27.0716C22.7215 27.7162 21.9351 27.9875 21.476 27.5284L17.5474 23.5998M17.5474 23.5998L12.3796 28.7676" stroke="#1ED760" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="library__title-group">
+                        <h3 class="library__card-title">
+                            Discover Weekly
+                        </h3>
+                        <span class="text-color_pop">8</span>
+                    </div>
+                    <p class="library__content">
+                        Your weekly mixtape of fresh music.
+                    </p>
+                </div>
+                <div class="library__card">
+                    <div class="library__cover library__cover_DailyMix1">
+                        <svg class="library__svg-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                        <rect y="40.4108" width="40.4108" height="40.4108" rx="20.2054" transform="rotate(-90 0 40.4108)" fill="#111111"/>
+                        <path d="M23.986 11.0899L22.4682 9.57203M23.986 11.0899L17.2856 17.7903C17.1625 17.9134 17.0017 17.9917 16.8289 18.0127L14.0756 18.3474C13.431 18.4257 13.1597 19.2121 13.6188 19.6713L17.5474 23.5998M23.986 11.0899L30.0574 17.1612M31.5752 18.679L30.0574 17.1612M30.0574 17.1612L23.357 23.8616C23.2339 23.9847 23.1556 24.1455 23.1345 24.3183L22.7998 27.0716C22.7215 27.7162 21.9351 27.9875 21.476 27.5284L17.5474 23.5998M17.5474 23.5998L12.3796 28.7676" stroke="#1ED760" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="library__title-group">
+                        <h3 class="library__card-title">
+                            Daily Mix 1
+                        </h3>
+                        <span>50</span>
+                    </div>
+                    <p class="library__content">
+                        Linkin Park, System Of A Down, Coal Chamber...
+                    </p>
+                </div>
+                <div class="library__card">
+                    <div class="library__cover library__cover_DailyMix2">
+                        <svg class="library__svg-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                        <rect y="40.4108" width="40.4108" height="40.4108" rx="20.2054" transform="rotate(-90 0 40.4108)" fill="#111111"/>
+                        <path d="M23.986 11.0899L22.4682 9.57203M23.986 11.0899L17.2856 17.7903C17.1625 17.9134 17.0017 17.9917 16.8289 18.0127L14.0756 18.3474C13.431 18.4257 13.1597 19.2121 13.6188 19.6713L17.5474 23.5998M23.986 11.0899L30.0574 17.1612M31.5752 18.679L30.0574 17.1612M30.0574 17.1612L23.357 23.8616C23.2339 23.9847 23.1556 24.1455 23.1345 24.3183L22.7998 27.0716C22.7215 27.7162 21.9351 27.9875 21.476 27.5284L17.5474 23.5998M17.5474 23.5998L12.3796 28.7676" stroke="#1ED760" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="library__title-group">
+                        <h3 class="library__card-title">
+                            Daily Mix 2
+                        </h3>
+                        <span>50</span>
+                    </div>
+                    <p class="library__content">
+                        Avril Lavigne, Lorde, Charli XCX and more
+                    </p>
+                </div>
+                <div class="library__card">
+                    <div class="library__cover library__cover_DailyMix3">
+                        <svg class="library__svg-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                        <rect y="40.4108" width="40.4108" height="40.4108" rx="20.2054" transform="rotate(-90 0 40.4108)" fill="#111111"/>
+                        <path d="M23.986 11.0899L22.4682 9.57203M23.986 11.0899L17.2856 17.7903C17.1625 17.9134 17.0017 17.9917 16.8289 18.0127L14.0756 18.3474C13.431 18.4257 13.1597 19.2121 13.6188 19.6713L17.5474 23.5998M23.986 11.0899L30.0574 17.1612M31.5752 18.679L30.0574 17.1612M30.0574 17.1612L23.357 23.8616C23.2339 23.9847 23.1556 24.1455 23.1345 24.3183L22.7998 27.0716C22.7215 27.7162 21.9351 27.9875 21.476 27.5284L17.5474 23.5998M17.5474 23.5998L12.3796 28.7676" stroke="#1ED760" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="library__title-group">
+                        <h3 class="library__card-title">
+                            Daily Mix 3
+                        </h3>
+                        <span>50</span>
+                    </div>
+                    <p class="library__content">
+                        The Strokes, Martin Garrix, MGMT and more
+                    </p>
+                </div>
+                <div class="library__card">
+                    <div class="library__cover library__cover_DailyMix4">
+                        <svg class="library__svg-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                        <rect y="40.4108" width="40.4108" height="40.4108" rx="20.2054" transform="rotate(-90 0 40.4108)" fill="#111111"/>
+                        <path d="M23.986 11.0899L22.4682 9.57203M23.986 11.0899L17.2856 17.7903C17.1625 17.9134 17.0017 17.9917 16.8289 18.0127L14.0756 18.3474C13.431 18.4257 13.1597 19.2121 13.6188 19.6713L17.5474 23.5998M23.986 11.0899L30.0574 17.1612M31.5752 18.679L30.0574 17.1612M30.0574 17.1612L23.357 23.8616C23.2339 23.9847 23.1556 24.1455 23.1345 24.3183L22.7998 27.0716C22.7215 27.7162 21.9351 27.9875 21.476 27.5284L17.5474 23.5998M17.5474 23.5998L12.3796 28.7676" stroke="#1ED760" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="library__title-group">
+                        <h3 class="library__card-title">
+                            Daily Mix 4
+                        </h3>
+                        <span>50</span>
+                    </div>
+                    <p class="library__content">
+                        Chuck Berry, Elvis Presley, Roy Orbison and more
+                    </p>
+                </div>
+                <div class="library__card">
+                    <div class="library__cover library__cover_DailyMix6">
+                        <svg class="library__svg-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                        <rect y="40.4108" width="40.4108" height="40.4108" rx="20.2054" transform="rotate(-90 0 40.4108)" fill="#111111"/>
+                        <path d="M23.986 11.0899L22.4682 9.57203M23.986 11.0899L17.2856 17.7903C17.1625 17.9134 17.0017 17.9917 16.8289 18.0127L14.0756 18.3474C13.431 18.4257 13.1597 19.2121 13.6188 19.6713L17.5474 23.5998M23.986 11.0899L30.0574 17.1612M31.5752 18.679L30.0574 17.1612M30.0574 17.1612L23.357 23.8616C23.2339 23.9847 23.1556 24.1455 23.1345 24.3183L22.7998 27.0716C22.7215 27.7162 21.9351 27.9875 21.476 27.5284L17.5474 23.5998M17.5474 23.5998L12.3796 28.7676" stroke="#1ED760" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="library__title-group">
+                        <h3 class="library__card-title">
+                            Daily Mix 5
+                        </h3>
+                        <span>50</span>
+                    </div>
+                    <p class="library__content">
+                        Frank Sinatra, Gerhard Trede, Dean Martin and more
+                    </p>
+                </div>
+                <div class="library__card">
+                    <div class="library__cover library__cover_Nirvana">
+                        <svg class="library__svg-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                        <rect y="40.4108" width="40.4108" height="40.4108" rx="20.2054" transform="rotate(-90 0 40.4108)" fill="#111111"/>
+                        <path d="M23.986 11.0899L22.4682 9.57203M23.986 11.0899L17.2856 17.7903C17.1625 17.9134 17.0017 17.9917 16.8289 18.0127L14.0756 18.3474C13.431 18.4257 13.1597 19.2121 13.6188 19.6713L17.5474 23.5998M23.986 11.0899L30.0574 17.1612M31.5752 18.679L30.0574 17.1612M30.0574 17.1612L23.357 23.8616C23.2339 23.9847 23.1556 24.1455 23.1345 24.3183L22.7998 27.0716C22.7215 27.7162 21.9351 27.9875 21.476 27.5284L17.5474 23.5998M17.5474 23.5998L12.3796 28.7676" stroke="#1ED760" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="library__title-group">
+                        <h3 class="library__card-title">
+                            Nirvana Radio
+                        </h3>
+                        <span>50</span>
+                    </div>
+                    <p class="library__content">
+                        The Strokes, Martin Garrix, MGMT and more
+                    </p>
+                </div>
+                <div class="library__card" id="last-card-MFY">
+                    <div class="library__cover library__cover_MixOutBoy">
+                        <svg class="library__svg-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                        <rect y="40.4108" width="40.4108" height="40.4108" rx="20.2054" transform="rotate(-90 0 40.4108)" fill="#111111"/>
+                        <path d="M23.986 11.0899L22.4682 9.57203M23.986 11.0899L17.2856 17.7903C17.1625 17.9134 17.0017 17.9917 16.8289 18.0127L14.0756 18.3474C13.431 18.4257 13.1597 19.2121 13.6188 19.6713L17.5474 23.5998M23.986 11.0899L30.0574 17.1612M31.5752 18.679L30.0574 17.1612M30.0574 17.1612L23.357 23.8616C23.2339 23.9847 23.1556 24.1455 23.1345 24.3183L22.7998 27.0716C22.7215 27.7162 21.9351 27.9875 21.476 27.5284L17.5474 23.5998M17.5474 23.5998L12.3796 28.7676" stroke="#1ED760" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="library__title-group">
+                        <h3 class="library__card-title">
+                            Fall Out Boy Radio
+                        </h3>
+                        <span>50</span>
+                    </div>
+                    <p class="library__content">
+                        With Panic! At The Disco, The All-American Rejects,...
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="library">
+            <!--Your top mixes library section and action buttons -->
+            <!-- <div class="library__hdr">
+                <h2 class="library__title">Your top mixes</h2>
+                <div class="library__action">
+
+                    <a href="#first-card-YTM" class="library-left-arrow"><img src="./assets/icon/Arrow-Left.png"
+                            alt="Arrow Left"></a>
+
+                    <a href="#last-card-YTM" class="library-right-arrow"><img src="./assets/icon/Arrow-Right.png"
+                            alt="Arrow Right"></a>
+                    <button class="library__btn">
+                        <img src="./assets/icon/More.png" alt="More">
+                    </button>
+                </div>
+            </div> -->
+            <!-- Your top mixes cards section -->
+            <div class="library__body slider">
+                <div class="library__card" id="first-card-YTM">
+                    <div class="library__cover library__cover_RockMix">
+                        <svg class="library__svg-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                        <rect y="40.4108" width="40.4108" height="40.4108" rx="20.2054" transform="rotate(-90 0 40.4108)" fill="#111111"/>
+                        <path d="M23.986 11.0899L22.4682 9.57203M23.986 11.0899L17.2856 17.7903C17.1625 17.9134 17.0017 17.9917 16.8289 18.0127L14.0756 18.3474C13.431 18.4257 13.1597 19.2121 13.6188 19.6713L17.5474 23.5998M23.986 11.0899L30.0574 17.1612M31.5752 18.679L30.0574 17.1612M30.0574 17.1612L23.357 23.8616C23.2339 23.9847 23.1556 24.1455 23.1345 24.3183L22.7998 27.0716C22.7215 27.7162 21.9351 27.9875 21.476 27.5284L17.5474 23.5998M17.5474 23.5998L12.3796 28.7676" stroke="#1ED760" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="library__title-group">
+                        <h3 class="library__card-title">
+                            Rock Mix
+                        </h3>
+                        <span class="text-color_rock">50</span>
+                    </div>
+                    <p class="library__content">
+                        Red Hot Chili Peppers, R.E.M., Guns N’ Roses...
+                    </p>
+                </div>
+                <div class="library__card">
+                    <div class="library__cover library__cover_ChillMix">
+                        <svg class="library__svg-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                        <rect y="40.4108" width="40.4108" height="40.4108" rx="20.2054" transform="rotate(-90 0 40.4108)" fill="#111111"/>
+                        <path d="M23.986 11.0899L22.4682 9.57203M23.986 11.0899L17.2856 17.7903C17.1625 17.9134 17.0017 17.9917 16.8289 18.0127L14.0756 18.3474C13.431 18.4257 13.1597 19.2121 13.6188 19.6713L17.5474 23.5998M23.986 11.0899L30.0574 17.1612M31.5752 18.679L30.0574 17.1612M30.0574 17.1612L23.357 23.8616C23.2339 23.9847 23.1556 24.1455 23.1345 24.3183L22.7998 27.0716C22.7215 27.7162 21.9351 27.9875 21.476 27.5284L17.5474 23.5998M17.5474 23.5998L12.3796 28.7676" stroke="#1ED760" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="library__title-group">
+                        <h3 class="library__card-title">
+                            Chill Mix
+                        </h3>
+                        <span class="text-color_punk">50</span>
+                    </div>
+                    <p class="library__content">
+                        MF DOOM, Daft Punk, The Chainsmokers, and more
+                    </p>
+                </div>
+                <div class="library__card">
+                    <div class="library__cover library__cover_PopMix">
+                    </div>
+                    <div class="library__title-group">
+                        <h3 class="library__card-title">
+                            Pop Mix
+                        </h3>
+                        <span class="text-color_trending">50</span>
+                    </div>
+                    <p class="library__content">
+                        Red Hot Chili Peppers, R.E.M., Guns N’ Roses...
+                    </p>
+                </div>
+                <div class="library__card">
+                    <div class="library__cover library__cover_DraftPunkMix">
+                    </div>
+                    <div class="library__title-group">
+                        <h3 class="library__card-title">
+                            Daft Punk Mix
+                        </h3>
+                        <span class="text-color_new">50</span>
+                    </div>
+                    <p class="library__content">
+                        Daft Punk, MGMT, Muse, and more
+                    </p>
+                </div>
+                <div class="library__card">
+                    <div class="library__cover library__cover_HappyMix">
+                    </div>
+                    <div class="library__title-group">
+                        <h3 class="library__card-title">
+                            Happy Mix
+                        </h3>
+                        <span class="text-color_metal">50</span>
+                    </div>
+                    <p class="library__content">
+                        The Turtles, Van Morrison, ABBA and more
+                    </p>
+                </div>
+                <div class="library__card">
+                    <div class="library__cover library__cover_PopMix">
+                    </div>
+                    <div class="library__title-group">
+                        <h3 class="library__card-title">
+                            Pop Mix
+                        </h3>
+                        <span class="text-color_charts">50</span>
+                    </div>
+                    <p class="library__content">
+                        Red Hot Chili Peppers, R.E.M., Guns N’ Roses...
+                    </p>
+                </div>
+                <div class="library__card">
+                    <div class="library__cover library__cover_UpbeatMix">
+                    </div>
+                    <div class="library__title-group">
+                        <h3 class="library__card-title">
+                            Upbeat Mix
+                        </h3>
+                        <span class="text-color_instrumental">50</span>
+                    </div>
+                    <p class="library__content">
+                        Kylie Minogue, Charli XCX, Cage The Elephant and...
+                    </p>
+                </div>
+                <div class="library__card" id="last-card-YTM">
+                    <div class="library__cover library__cover_60sMix">
+                    </div>
+                    <div class="library__title-group">
+                        <h3 class="library__card-title">
+                            60s Mix
+                        </h3>
+                        <span class="text-color_pop">50</span>
+                    </div>
+                    <p class="library__content">
+                        Chuck Berry, Skeeter David, Van Morrison and...
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="library">
+            <!--Your favorite artists library section and action buttons -->
+            <!-- <div class="library__hdr">
+                <h2 class="library__title">Your top mixes</h2>
+                <div class="library__action">
+
+                    <a href="#first-card-YFA" class="library-left-arrow"><img src="./assets/icon/Arrow-Left.png"
+                            alt="Arrow Left"></a>
+
+                    <a href="#last-card-YFA" class="library-right-arrow"><img src="./assets/icon/Arrow-Right.png"
+                            alt="Arrow Right"></a>
+                    <button class="library__btn">
+                        <img src="./assets/icon/More.png" alt="More">
+                    </button>
+                </div>
+            </div> -->
+            <!-- Your favorite artists cards section -->
+            <div class="library__body slider">
+                <div class="library__card" id="first-card-YFA">  <!--id connected with left arrow-->
+                    <div class="library__cover library__cover_GunsnRoses-YTM">
+                    </div>
+                    <div class="library__title-group">
+                        <h3 class="library__card-title">
+                            Guns'n Roses
+                        </h3>
+                        <span>50</span>
+                    </div>
+                    <p class="library__content">
+                        Red Hot Chili Peppers, R.E.M., Guns N’ Roses...
+                    </p>
+                </div>
+                <div class="library__card">
+                    <div class="library__cover library__cover_DraftPunkMix-YTM">
+                    </div>
+                    <div class="library__title-group">
+                        <h3 class="library__card-title">
+                            Daft Punk Mix
+                        </h3>
+                        <span  class="text-color_country">50</span>
+                    </div>
+                    <p class="library__content">
+                        Daft Punk, MGMT, Muse, and more
+                    </p>
+                </div>
+                <!-- <div class="library__card" id="last-card-YFA"> id connected with right arrow-->
+                    <!-- <div class="library__cover library__cover_DavidBowieMix-YTM">
+                    </div>
+                    <div class="library__title-group">
+                        <h3 class="library__card-title">
+                            David Bowie Mix
+                        </h3>
+                        <span class="text-color_pop">50</span>
+                    </div>
+                    <p class="library__content">
+                        Soft Cell, The Who and The Clash
+                    </p>
+                </div>
+                 --> 
+            </div>
+
+        </section>
+    </main>
+   
+ 
+    <footer class="main-footer">
+        <div class="music-bar">
+            <div class="functional-side">
+                <div class="controls-left">
+                    <img class="icon-size" src="./assets/footer-images/greenbutton.png" alt="play button">
+                    <img class="icon-size" src="./assets/footer-images/left.png" alt="click left ">
+                    <img class="icon-size" src="./assets/footer-images/right.png" alt="click right">
+                    <img class="icon-size" src="./assets/footer-images/random.png" alt="random">
+                    <img class="icon-size" src="./assets/footer-images/return.png" alt="return">
+                </div>
+                <div class="progress-part">
+                    <img src="./assets/footer-images/Group37.png" alt="music line">
+                    <img src="./assets/footer-images/volume.png" alt="volume">
+                    <div class="album-box">
+                        <img src="./assets/footer-images/Rectangle6.png" alt="album photo">
+                        <div class="album-box-title">
+                            <h3>Get Lucky</h3>
+                            <p>Daft Punk</p>
+                            <p>Random Access Memories</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls-right">
+                    <img src="./assets/footer-images/like.png" alt="like button ">
+                    <img src="./assets/footer-images/add.png" alt=" add playlist">
+                    <img src="./assets/footer-images/Group60.png" alt="lyrics">
+                    <img src="./assets/footer-images/Frame4(1).png" alt="device jam">
+                    <img src="./assets/footer-images/Frame4(2).png" alt="other">
+                    <img src="./assets/footer-images/Vector43.png" alt="break line">
+                    <img src="./assets/footer-images/image19.png" alt="Blue circle">
+                    <img src="./assets/footer-images/queue.png" alt="Queue">
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

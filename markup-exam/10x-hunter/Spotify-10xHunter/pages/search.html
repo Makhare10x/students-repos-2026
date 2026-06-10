@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#191414">
+  <title>Spotify - Search</title>
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="page--search">
+  <div class="app-layout">
+
+    <aside class="sidebar">
+      <div class="sidebar__header">
+        <a href="../index.html">
+          <img src="../assets/icons/big/library.svg" alt="spotify-library-icon" />
+          <span>My Library</span>
+        </a>
+      </div>
+      <nav class="sidebar__nav">
+        <ul class="sidebar__list">
+          <li class="sidebar__item sidebar__item--arrow">
+            <a href="#">
+              <div class="sidebar__link-left">
+                <img src="../assets/icons/big/pin.svg" alt="pins-icon" />
+                <span>Pins</span>
+              </div>
+              <span class="sidebar__arrow">
+                <img src="../assets/icons/big/right.svg" alt="arrow-right">
+              </span>
+            </a>
+          </li>
+          <li class="sidebar__item sidebar__item--accordion">
+            <button class="sidebar__accordion-trigger" aria-expanded="false">
+              <div class="sidebar__link-left">
+                <img src="../assets/icons/big/playlist.svg" alt="playlist-icon" />
+                <span class="sidebar__accordion-label">Playlists</span>
+              </div>
+              <span class="sidebar__arrow">
+                <img src="../assets/icons/big/right.svg" alt="arrow-right" />
+              </span>
+            </button>
+            <ul class="sidebar__dropdown">
+              <li class="sidebar__dropdown-item">
+                <a href="#">
+                  <img src="../assets/icons/small/playlist.svg" alt="playlist-icon" />
+                  <span>Chill stuff</span>
+                </a>
+              </li>
+              <li class="sidebar__dropdown-item">
+                <a href="#">
+                  <img src="../assets/icons/small/playlist.svg" alt="playlist-icon" />
+                  <span>Rock n Roll</span>
+                </a>
+              </li>
+              <li class="sidebar__dropdown-item">
+                <a href="#">
+                  <img src="../assets/icons/small/playlist.svg" alt="playlist-icon" />
+                  <span>The Jux Box</span>
+                </a>
+              </li>
+              <li class="sidebar__dropdown-item">
+                <a href="#">
+                  <img src="../assets/icons/small/playlist.svg" alt="playlist-icon" />
+                  <span>Selected Linkin Park</span>
+                </a>
+              </li>
+              <li class="sidebar__dropdown-item">
+                <a href="#">
+                  <img src="../assets/icons/small/playlist.svg" alt="playlist-icon" />
+                  <span>Vibe</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="sidebar__item">
+            <a href="liked-songs.html">
+              <img src="../assets/icons/big/like.svg" alt="spotify-liked-songs-icon" />
+              <span>Liked songs</span>
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#">
+              <img src="../assets/icons/big/save.svg" alt="spotify-saved-songs-icon" />
+              <span>Saves</span>
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#">
+              <img src="../assets/icons/big/album.svg" alt="spotify-album-songs-icon" />
+              <span>Albums</span>
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#">
+              <img src="../assets/icons/big/folder.svg" alt="spotify-folders-icon" />
+              <span>Folders</span>
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="podcasts.html">
+              <img src="../assets/icons/big/podcast.svg" alt="spotify-podcasts-icon" />
+              <span>Podcasts</span>
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#">
+              <img src="../assets/icons/big/audiobook.svg" alt="spotify-audiobooks-icon" />
+              <span>Audiobooks</span>
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="artist.html">
+              <img src="../assets/icons/big/artist.svg" alt="spotify-artists-icon" />
+              <span>Artists</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="app-layout__content">
+      <header class="app-header">
+        <div class="app-header__row">
+          <nav class="nav-primary" aria-label="Primary">
+            <div class="nav-primary__left">
+              <a class="nav-pill nav-pill--home" href="../index.html">
+                <img src="../assets/icons/big/home.svg" alt="" class="nav-icon icon--off" aria-hidden="true">
+                <img src="../assets/icons/big/home-filled.svg" alt="" class="nav-icon icon--on" aria-hidden="true">
+                <span class="nav-pill__label">Home</span>
+              </a>
+
+              <a class="nav-pill nav-pill--discover" href="discover.html">
+                <img src="../assets/icons/big/discover.svg" alt="" class="nav-icon icon--off" aria-hidden="true">
+                <img src="../assets/icons/big/discover-filled.svg" alt="" class="nav-icon icon--on" aria-hidden="true">
+                <span class="nav-pill__label">Discover</span>
+              </a>
+
+              <a class="nav-pill nav-pill--search nav-pill--active" href="search.html" aria-current="page">
+                <img src="../assets/icons/big/search.svg" alt="" class="nav-icon" aria-hidden="true">
+                <span class="nav-pill__label">Search...</span>
+              </a>
+            </div>
+
+            <div class="nav-primary__right">
+              <button class="icon-button" type="button" aria-label="News">
+                <img src="../assets/icons/big/news.svg" alt="" class="nav-icon" aria-hidden="true">
+              </button>
+
+              <label class="icon-button" aria-label="Private session">
+                <input type="checkbox" class="nav-radio">
+                <img src="../assets/icons/big/private.svg" alt="" class="nav-icon icon--off" aria-hidden="true">
+                <img src="../assets/icons/big/private-alt.svg" alt="" class="nav-icon icon--on icon--preserve" aria-hidden="true">
+              </label>
+
+              <label class="icon-button" aria-label="Friends activity">
+                <input type="checkbox" class="nav-radio">
+                <img src="../assets/icons/big/friends.svg" alt="" class="nav-icon icon--off" aria-hidden="true">
+                <img src="../assets/icons/big/friends-filled.svg" alt="" class="nav-icon icon--on" aria-hidden="true">
+              </label>
+
+              <button class="icon-button" type="button" aria-label="Settings">
+                <img src="../assets/icons/big/settings.svg" alt="" class="nav-icon" aria-hidden="true">
+              </button>
+
+              <button class="avatar-button" type="button" aria-label="Profile">
+                <img src="../assets/img/profilePicture.webp" alt="User profile picture" class="avatar-image">
+              </button>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main class="app-main app-main--search">
+        <h1 class="sr-only">Search</h1>
+        <div class="search-page">
+          <div class="search-page__inner">
+            <section class="search-mobile-hero" aria-label="Search library">
+              <div class="search-mobile-hero__toolbar" role="search">
+                <div class="search-mobile-field">
+                  <input
+                    class="search-mobile-field__input"
+                    type="search"
+                    placeholder="What do you want to play?"
+                    aria-label="What do you want to play?"
+                    autocomplete="off">
+                  <button class="search-mobile-field__button" type="button" aria-label="Search">
+                    <img src="../assets/icons/big/search.svg" alt="" aria-hidden="true">
+                  </button>
+                </div>
+
+                <button class="search-mobile-hero__camera" type="button" aria-label="Open camera search">
+                  <img src="../assets/icons/big/camera.svg" alt="" aria-hidden="true">
+                </button>
+              </div>
+            </section>
+
+            <section class="home-section search-section search-section--recent">
+              <div class="home-section__header">
+                <h2 class="home-section__title">Recent searches</h2>
+                <div class="home-section__controls">
+                  <button class="section-more-btn" aria-label="More recent searches">
+                    <img src="../assets/icons/big/more.svg" alt="" aria-hidden="true">
+                  </button>
+                </div>
+              </div>
+
+              <div class="home-section__track search-recent-track" role="list">
+                <article class="search-recent-card search-recent-card--artist" role="listitem">
+                  <button class="search-recent-card__remove" type="button" aria-label="Remove Daft Punk from recent">
+                    <img src="../assets/icons/big/close.svg" alt="" aria-hidden="true">
+                  </button>
+                  <div class="search-recent-card__thumb-wrap search-recent-card__thumb-wrap--circle">
+                    <img src="../assets/img/weekly.png" alt="Artist photo of Daft Punk" class="search-recent-card__thumb" loading="lazy">
+                  </div>
+                  <p class="search-recent-card__title">Daft Punk</p>
+                </article>
+
+                <article class="search-recent-card search-recent-card--artist" role="listitem">
+                  <button class="search-recent-card__remove" type="button" aria-label="Remove David Bowie from recent">
+                    <img src="../assets/icons/big/close.svg" alt="" aria-hidden="true">
+                  </button>
+                  <div class="search-recent-card__thumb-wrap search-recent-card__thumb-wrap--circle">
+                    <img src="../assets/img/weekly.png" alt="Artist photo of David Bowie" class="search-recent-card__thumb" loading="lazy">
+                  </div>
+                  <p class="search-recent-card__title">David Bowie</p>
+                </article>
+
+                <article class="search-recent-card" role="listitem">
+                  <button class="search-recent-card__remove" type="button" aria-label="Remove Black Holes from recent">
+                    <img src="../assets/icons/big/close.svg" alt="" aria-hidden="true">
+                  </button>
+                  <div class="search-recent-card__thumb-wrap">
+                    <img src="../assets/img/weekly.png" alt="Album cover for Black Holes and Revelations" class="search-recent-card__thumb" loading="lazy">
+                  </div>
+                  <p class="search-recent-card__title">Black Holes...</p>
+                  <p class="search-recent-card__subtitle">Muse</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="search-browse">
+              <h2 class="search-browse__title">Browse all</h2>
+
+              <section class="home-section search-row">
+                <div class="home-section__header">
+                  <h3 class="search-row__title">Discover</h3>
+                  <div class="home-section__controls">
+                    <button class="section-nav-btn section-nav-btn--prev" aria-label="Previous discover categories">
+                      <img src="../assets/icons/big/arrow-left.svg" alt="" aria-hidden="true">
+                    </button>
+                    <button class="section-nav-btn section-nav-btn--next" aria-label="Next discover categories">
+                      <img src="../assets/icons/big/arrow-right.svg" alt="" aria-hidden="true">
+                    </button>
+                  </div>
+                </div>
+
+                <div class="home-section__track search-tile-track" role="list">
+                  <a href="#" class="search-tile-link" role="listitem">
+                    <article class="search-tile search-tile--bg-blue search-tile--title-mobile-118">
+                      <h4 class="search-tile__title">Made For You</h4>
+                      <img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy">
+                    </article>
+                  </a>
+                  <a href="#" class="search-tile-link" role="listitem">
+                    <article class="search-tile search-tile--bg-orange search-tile--title-mobile-112">
+                      <h4 class="search-tile__title">New Releases</h4>
+                      <img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy">
+                    </article>
+                  </a>
+                  <a href="#" class="search-tile-link" role="listitem">
+                    <article class="search-tile search-tile--bg-blue search-tile--title-mobile-114">
+                      <h4 class="search-tile__title">Spotify Classics</h4>
+                      <img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy">
+                    </article>
+                  </a>
+                  <a href="#" class="search-tile-link" role="listitem">
+                    <article class="search-tile search-tile--bg-purple">
+                      <h4 class="search-tile__title">Charts</h4>
+                      <img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy">
+                    </article>
+                  </a>
+                  <a href="#" class="search-tile-link" role="listitem">
+                    <article class="search-tile search-tile--bg-magenta">
+                      <h4 class="search-tile__title">Trending</h4>
+                      <img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy">
+                    </article>
+                  </a>
+                  <a href="#" class="search-tile-link" role="listitem">
+                    <article class="search-tile search-tile--bg-purple">
+                      <h4 class="search-tile__title">Discover</h4>
+                      <img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy">
+                    </article>
+                  </a>
+                  <a href="#" class="search-tile-link" role="listitem">
+                    <article class="search-tile search-tile--bg-gray search-tile--title-mobile-112">
+                      <h4 class="search-tile__title">Spotify Singles</h4>
+                      <img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy">
+                    </article>
+                  </a>
+                  <a href="#" class="search-tile-link" role="listitem">
+                    <article class="search-tile search-tile--bg-orange">
+                      <h4 class="search-tile__title">Decades</h4>
+                      <img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy">
+                    </article>
+                  </a>
+                </div>
+              </section>
+
+              <section class="home-section search-row">
+                <div class="home-section__header">
+                  <h3 class="search-row__title">Genres</h3>
+                  <div class="home-section__controls">
+                    <button class="section-nav-btn section-nav-btn--prev" aria-label="Previous genres">
+                      <img src="../assets/icons/big/arrow-left.svg" alt="" aria-hidden="true">
+                    </button>
+                    <button class="section-nav-btn section-nav-btn--next" aria-label="Next genres">
+                      <img src="../assets/icons/big/arrow-right.svg" alt="" aria-hidden="true">
+                    </button>
+                  </div>
+                </div>
+
+                <div class="home-section__track search-tile-track" role="list">
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-green"><h4 class="search-tile__title">Pop</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-amber"><h4 class="search-tile__title">Country</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-plum"><h4 class="search-tile__title">Hip-Hop</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-teal"><h4 class="search-tile__title">Rock</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-red"><h4 class="search-tile__title">Indie</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-blue"><h4 class="search-tile__title">Punk</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-red"><h4 class="search-tile__title">Metal</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-steel"><h4 class="search-tile__title">Instrumental</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                </div>
+              </section>
+
+              <section class="home-section search-row">
+                <div class="home-section__header">
+                  <h3 class="search-row__title">Mood &amp; Activity</h3>
+                  <div class="home-section__controls">
+                    <button class="section-nav-btn section-nav-btn--prev" aria-label="Previous mood &amp; activity categories">
+                      <img src="../assets/icons/big/arrow-left.svg" alt="" aria-hidden="true">
+                    </button>
+                    <button class="section-nav-btn section-nav-btn--next" aria-label="Next mood &amp; activity categories">
+                      <img src="../assets/icons/big/arrow-right.svg" alt="" aria-hidden="true">
+                    </button>
+                  </div>
+                </div>
+
+                <div class="home-section__track search-tile-track" role="list">
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-indigo"><h4 class="search-tile__title">In the car</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-fuchsia"><h4 class="search-tile__title">Mood</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-gray"><h4 class="search-tile__title">Workout</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-amber"><h4 class="search-tile__title">Chill</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-blue"><h4 class="search-tile__title">Sleep</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-steel"><h4 class="search-tile__title">Party</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-sky"><h4 class="search-tile__title">At Home</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-plum"><h4 class="search-tile__title">Focus</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                </div>
+              </section>
+
+              <section class="home-section search-row">
+                <div class="home-section__header">
+                  <h3 class="search-row__title">Entertainment</h3>
+                </div>
+
+                <div class="home-section__track search-tile-track" role="list">
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-scarlet"><h4 class="search-tile__title">Netflix</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-rose"><h4 class="search-tile__title">Anime</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-bright-blue"><h4 class="search-tile__title">Disney</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-hot-pink"><h4 class="search-tile__title">Gaming</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                </div>
+              </section>
+
+              <section class="home-section search-row">
+                <div class="home-section__header">
+                  <h3 class="search-row__title">Podcasts</h3>
+                </div>
+
+                <div class="home-section__track search-tile-track" role="list">
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-teal"><h4 class="search-tile__title">Podcasts</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-bright-blue search-tile--title-mobile-108"><h4 class="search-tile__title">Podcast Charts</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-green-bright search-tile--title-mobile-132"><h4 class="search-tile__title">Podcast New Releases</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-red-bright"><h4 class="search-tile__title">Video</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                </div>
+              </section>
+
+              <section class="home-section search-row">
+                <div class="home-section__header">
+                  <h3 class="search-row__title">Audiobooks</h3>
+                </div>
+
+                <div class="home-section__track search-tile-track" role="list">
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-blue search-tile--title-mobile-128"><h4 class="search-tile__title">Audiobooks</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-purple search-tile--title-mobile-129 search-tile--title-mobile-compact"><h4 class="search-tile__title">Sci-Fi &amp; Fantasy Essentials</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-plum search-tile--title-mobile-99"><h4 class="search-tile__title">Fiction &amp; Literature</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-blue search-tile--title-mobile-117"><h4 class="search-tile__title">Mystery &amp; Thriller</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                  <a href="#" class="search-tile-link" role="listitem"><article class="search-tile search-tile--bg-teal"><h4 class="search-tile__title">Self-Help</h4><img src="../assets/img/weekly.png" alt="" class="search-tile__art" aria-hidden="true" loading="lazy"></article></a>
+                </div>
+              </section>
+            </section>
+          </div>
+        </div>
+      </main>
+      <!-- ===== Player ===== -->
+      <section class="player" aria-label="player bar">
+        <div class="player__left">
+          <button class="btn-play-pause">
+            <img src="../assets/icons/big/pause.svg" alt="pause">
+          </button>
+          <button class="player__btn-prev">
+            <img src="../assets/icons/big/prev.svg" alt="previous">
+          </button>
+          <button class="player__btn-next">
+            <img src="../assets/icons/big/next.svg" alt="next">
+          </button>
+          <button class="player__btn-shuffle">
+            <img src="../assets/icons/big/shuffle.svg" alt="shuffle">
+          </button>
+          <button class="player__btn-loop">
+            <img src="../assets/icons/big/loop.svg" alt="loop">
+          </button>
+        </div>
+        <div class="player__center">
+          <span class="player__time-current">2:23</span>
+          <input class="player__progress-bar" type="range" min="0" max="100" value="52">
+          <span class="player__time-total">4:45</span>
+          <button class="player__btn-volume">
+            <img src="../assets/icons/big/volume.svg" alt="volume">
+          </button>
+          <figure class="player__album-cover">
+            <img src="../assets/img/random-access-memories.webp" alt="album cover">
+          </figure>
+          <a href="lyrics.html" class="player__song-info">
+            <span class="player__song-title">Get Lucky</span>
+            <span class="player__song-artist">Daft Punk</span>
+            <span class="player__song-album">Random Access Memories</span>
+          </a>
+        </div>
+        <div class="player__right">
+          <button class="player__btn-fav">
+            <img src="../assets/icons/big/like.svg" alt="like">
+          </button>
+          <button class="btn-add">
+            <img src="../assets/icons/big/add-to-playlist.svg" alt="add">
+          </button>
+          <button class="player__btn-lyrics">
+            <img src="../assets/icons/big/lyrics.svg" alt="lyrics">
+          </button>
+          <button class="player__btn-device">
+            <img src="../assets/icons/big/device.svg" alt="device">
+          </button>
+          <button class="player__btn-more">
+            <img src="../assets/icons/big/more.svg" alt="more">
+          </button>
+          <button class="player__frame">
+            <img src="../assets/icons/big/frame.svg" alt="frame">
+          </button>
+          <button class="player__btn-dj">
+            <img src="../assets/icons/big/dj.svg" alt="dj">
+          </button>
+          <button class="player__btn-queue">
+            <img src="../assets/icons/big/queue.svg" alt="queue">
+          </button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <nav class="nav-mobile" aria-label="Primary mobile">
+    <div class="nav-mobile__inner">
+      <a class="nav-mobile__item" href="../index.html" aria-label="Home">
+        <img src="../assets/icons/big/home.svg" alt="" class="nav-mobile__icon icon--off" aria-hidden="true">
+        <img src="../assets/icons/big/home-filled.svg" alt="" class="nav-mobile__icon icon--on" aria-hidden="true">
+        <span class="nav-mobile__label">Home</span>
+      </a>
+
+      <a class="nav-mobile__item" href="discover.html" aria-label="Discover">
+        <img src="../assets/icons/big/discover.svg" alt="" class="nav-mobile__icon icon--off" aria-hidden="true">
+        <img src="../assets/icons/big/discover-filled.svg" alt="" class="nav-mobile__icon icon--on" aria-hidden="true">
+        <span class="nav-mobile__label">Discover</span>
+      </a>
+
+      <a class="nav-mobile__item nav-mobile__item--active" href="search.html" aria-label="Search" aria-current="page">
+        <img src="../assets/icons/big/search.svg" alt="" class="nav-mobile__icon icon--off" aria-hidden="true">
+        <img src="../assets/icons/big/search-filled.svg" alt="" class="nav-mobile__icon icon--on" aria-hidden="true">
+        <span class="nav-mobile__label">Search</span>
+      </a>
+
+      <a class="nav-mobile__item" href="liked-songs.html" aria-label="Library">
+        <img src="../assets/icons/big/library.svg" alt="" class="nav-mobile__icon icon--off" aria-hidden="true">
+        <img src="../assets/icons/big/library-filled.svg" alt="" class="nav-mobile__icon icon--on" aria-hidden="true">
+        <span class="nav-mobile__label">Library</span>
+      </a>
+
+      <a class="nav-mobile__item" href="artist.html" aria-label="Me">
+        <img src="../assets/icons/big/user.svg" alt="" class="nav-mobile__icon icon--off" aria-hidden="true">
+        <img src="../assets/icons/big/user-filled.svg" alt="" class="nav-mobile__icon icon--on" aria-hidden="true">
+        <span class="nav-mobile__label">Me</span>
+      </a>
+    </div>
+  </nav>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

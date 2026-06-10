@@ -1,0 +1,1111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>10X Markup Exam | Spotify Clone</title>
+  </head>
+  <body>
+    <div class="layout container">
+      <div class="layout__header">
+        <header class="header">
+          <div>
+            <nav class="navigation">
+              <!-- Left Navigation -->
+              <ul class="nav-links">
+                <li class="nav-item pinned_home-btn">
+                  <a href="./index.html" class="nav-link home-secondary">
+                    <img
+                      src="./assets/images/artist/home icon.svg"
+                      alt="Home icon"
+                      class="nav-icon"
+                    />
+                    <span>Home</span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <img
+                      src="./assets/images/header icons/star_discover.png"
+                      alt="Discover icon"
+                      class="nav-icon"
+                    />
+                    <span>Discover</span>
+                  </a>
+                </li>
+
+                <li class="nav-item hio">
+                  <a href="#" class="nav-link search_page--input">
+                    <img
+                      src="./assets/images/search-page/search-icon.svg"
+                      alt="Search icon"
+                      class="nav-icon search-main-icon"
+                    />
+                    <input
+                      type="text"
+                      name="search"
+                      id="search_input"
+                      placeholder="Search"
+                      text="search..."
+                      class="search search_page-search-input"
+                    />
+                  </a>
+                </li>
+              </ul>
+              <ul class="user-menu">
+                <li>
+                  <a href="#" aria-label="Notifications">
+                    <img
+                      src="./assets/images/header icons/notifycation.png"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" aria-label="Security">
+                    <img
+                      src="./assets/images/header icons/lock.png"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" aria-label="Friends">
+                    <img
+                      src="./assets/images/header icons/friend.png"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" aria-label="Settings">
+                    <img
+                      src="./assets/images/header icons/setting.png"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </a>
+                </li>
+
+                <li class="profile-item">
+                  <a href="#" aria-label="Profile">
+                    <img
+                      src="./assets/images/header icons/profile-img.png"
+                      alt="User profile"
+                      class="profile-img"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- Mobile Navigation -->
+            <nav class="mobile-navigation">
+              <ul class="mobile-nav-links">
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link home-secondary">
+                    <img
+                      src="./assets/images/artist/home icon.svg"
+                      alt="Home icon"
+                      class="nav-icon"
+                    />
+                    <span>Home</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <img
+                      src="./assets/images/header icons/star_discover.png"
+                      alt="Discover icon"
+                      class="nav-icon"
+                    />
+                    <span>Discover</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./search.html" class="nav-link">
+                    <img
+                      src="./assets/images/search-page/mobile-search.svg"
+                      alt="Search icon"
+                      class="nav-icon"
+                    />
+                    <span>Search</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./liked.html" class="nav-link">
+                    <img
+                      src="./assets/images/header icons/libary.png"
+                      alt="My Library icon"
+                      class="nav-icon"
+                    />
+                    <span>Library</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <img
+                      src="./assets/images/header icons/me.png"
+                      alt="My Library icon"
+                      class="nav-icon"
+                    />
+                    <span>Me</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+      </div>
+      <div class="layout__sidebar">
+        <section class="hero">
+          <!-- side bar -->
+          <aside class="sidebar">
+            <nav class="sidebar-nav">
+              <ul class="sidebar-list">
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <img
+                      src="./assets/images/header icons/libary.png"
+                      alt="My Library icon"
+                      class="sidebar-icon"
+                    />
+                    <span>My Library</span>
+                  </a>
+                </li>
+                <li class="sidebar-item has-arrow">
+                  <a href="./pinned.html" class="sidebar-link">
+                    <div class="link-name">
+                      <img
+                        src="./assets/images/aside icons/pin.png"
+                        alt="Pins icon"
+                        class="sidebar-icon"
+                      />
+                      <span>Pins</span>
+                    </div>
+                    <img
+                      src="./assets/images/aside icons/right arrow.png"
+                      alt=""
+                      class="arrow-icon"
+                    />
+                  </a>
+                </li>
+
+                <li class="sidebar-item has-arrow">
+                  <a href="./playlist.html" class="sidebar-link">
+                    <div class="link-name">
+                      <img
+                        src="./assets/images/aside icons/playlist.png"
+                        alt="Playlists icon"
+                        class="sidebar-icon"
+                      />
+                      <span>Playlists</span>
+                    </div>
+                    <img
+                      src="./assets/images/aside icons/right arrow.png"
+                      alt=""
+                      class="arrow-icon"
+                    />
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="./liked.html" class="sidebar-link">
+                    <img
+                      src="./assets/images/aside icons/liked.png"
+                      alt="Liked songs icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Liked Songs</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <img
+                      src="./assets/images/aside icons/saves.png"
+                      alt="Saves icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Saves</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <img
+                      src="./assets/images/aside icons/albums.png"
+                      alt="Albums icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Albums</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <img
+                      src="./assets/images/aside icons/folders.png"
+                      alt="Folders icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Folders</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <img
+                      src="./assets/images/aside icons/podcasts.png"
+                      alt="Podcasts icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Podcasts</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <img
+                      src="./assets/images/aside icons/audibooks.png"
+                      alt="Audiobooks icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Audiobooks</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="./artist.html" class="sidebar-link">
+                    <img
+                      src="./assets/images/aside icons/artists.png"
+                      alt="Artists icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Artists</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+        </section>
+      </div>
+      <div class="layout__main">
+        <!-- main page main content -->
+        <section class="home-content">
+          <div class="home-section">
+            <div class="home__filters--wrapper search__filter--wrapper">
+              <div class="home__section--filters searchPage__section--filter">
+                <button class="filter-btn active disappeared">
+                  <a href="#">All</a>
+                </button>
+                <button class="filter-btn"><a href="#">Music</a></button>
+                <button class="filter-btn"><a href="#">Podcasts</a></button>
+                <button class="filter-btn"><a href="#">Audiobooks</a></button>
+              </div>
+              <img
+                src="./assets/images/main-content/icons/iconsBig.svg"
+                alt="Filter-icon"
+              />
+            </div>
+
+            <div class="search__filter--wrapper--mobile">
+              <div class="search__page-mobile-input">
+                <input
+                  type="text"
+                  name="search"
+                  placeholder="What do you want to play?"
+                  class="search"
+                />
+                <img
+                  src="./assets/images/header icons/search.png"
+                  alt="Search icon"
+                  class="nav-icon"
+                />
+              </div>
+              <button>
+                <img
+                  src="./assets/images/search-page/camera.svg"
+                  alt="camera"
+                />
+              </button>
+            </div>
+
+            <!-- recently-played -->
+            <div class="recently-played">
+              <div>
+                <img
+                  src="./assets/images/main-content/recently-played/resentPlay1.png"
+                  alt="music card"
+                />
+                <div>
+                  <p>Get Lucky (feat. Pharrell Williams and Nile Rodgers)</p>
+                  <span>Daft Punk</span>
+                </div>
+              </div>
+
+              <div>
+                <img
+                  src="./assets/images/main-content/recently-played/resentPlay2.png"
+                  alt="music card"
+                />
+                <div>
+                  <p>Daily Mix 2</p>
+                </div>
+              </div>
+
+              <div>
+                <img
+                  src="./assets/images/main-content/recently-played/resentPlay3.png"
+                  alt="music card"
+                />
+                <div>
+                  <p>Daily Mix 1</p>
+                </div>
+              </div>
+
+              <div>
+                <img
+                  src="./assets/images/main-content/recently-played/resentPlay1.png"
+                  alt="music card"
+                />
+                <div>
+                  <p>Instant Crush</p>
+                  <span>Daft Punk</span>
+                </div>
+              </div>
+
+              <div>
+                <img
+                  src="./assets/images/main-content/recently-played/resentPlay1.png"
+                  alt="music card"
+                />
+                <div>
+                  <p>Around the world</p>
+                  <span>Daft Punk</span>
+                </div>
+              </div>
+
+              <div>
+                <img
+                  src="./assets/images/main-content/recently-played/resentPla4.png"
+                  alt="music card"
+                />
+                <div>
+                  <p>Rock Mix</p>
+                </div>
+              </div>
+            </div>
+            <!-- recently-played -->
+
+            <!-- made for you section -->
+            <div>
+              <div class="home-section__head">
+                <h2>Made For You</h2>
+                <div class="icon__wrapper">
+                  <img
+                    src="./assets/images/main-content/icons/arrow-left.svg"
+                    alt="arrow-left"
+                  />
+                  <img
+                    src="./assets/images/main-content/icons/arrow-right.svg"
+                    alt="arrow-right"
+                  />
+                  <img
+                    src="./assets/images/main-content/icons/dots.svg"
+                    alt="3 dots"
+                  />
+                </div>
+              </div>
+
+              <div class="home-section__row">
+                <article class="media-card">
+                  <div class="media-card__img card__img--wrapper">
+                    <img
+                      src="./assets/images/main-content/for-you/Frame.png"
+                      alt="music card"
+                    />
+                  </div>
+                  <div class="media-card__meta">
+                    <div>
+                      <h4>Discover Weekly</h4>
+                      <span class="Number-of-songs">50</span>
+                    </div>
+                    <p>Your weekly mixtape of fresh music.</p>
+                  </div>
+                </article>
+
+                <article class="media-card">
+                  <div class="media-card__img card__img--wrapper">
+                    <img
+                      src="./assets/images/main-content/for-you/Frame 1.png"
+                      alt="music card"
+                    />
+                  </div>
+                  <div class="media-card__meta">
+                    <div>
+                      <h4>Daily Mix 1</h4>
+                      <span class="Number-of-songs1">50</span>
+                    </div>
+                    <p>Linkin Park, System Of A Down, Coal Chamber...</p>
+                  </div>
+                </article>
+
+                <article class="media-card">
+                  <div class="media-card__img card__img--wrapper">
+                    <img
+                      src="./assets/images/main-content/for-you/Frame 2.png"
+                      alt="music card"
+                    />
+                  </div>
+                  <div class="media-card__meta">
+                    <div>
+                      <h4>Daily Mix 2</h4>
+                      <span class="Number-of-songs2">50</span>
+                    </div>
+                    <p>Avril Lavigne, Lorde, Charli XCX and more</p>
+                  </div>
+                </article>
+
+                <article class="media-card">
+                  <div class="media-card__img card__img--wrapper">
+                    <img
+                      src="./assets/images/main-content/for-you/Frame 3.png"
+                      alt="music card"
+                    />
+                  </div>
+                  <div class="media-card__meta">
+                    <div>
+                      <h4>Daily Mix 3</h4>
+                      <span class="Number-of-songs3">50</span>
+                    </div>
+                    <p>The Strokes, Martin Garrix, MGMT and more</p>
+                  </div>
+                </article>
+
+                <article class="media-card">
+                  <div class="media-card__img card__img--wrapper">
+                    <img
+                      src="./assets/images/main-content/for-you/Frame 4.png"
+                      alt="music card"
+                    />
+                  </div>
+                  <div class="media-card__meta">
+                    <div>
+                      <h4>Daily Mix 4</h4>
+                      <span class="Number-of-songs4">50</span>
+                    </div>
+                    <p>Chuck Berry, Elvis Presley, Roy Orbison and more</p>
+                  </div>
+                </article>
+
+                <article class="media-card">
+                  <div class="media-card__img card__img--wrapper">
+                    <img
+                      src="./assets/images/main-content/for-you/Frame 5.png"
+                      alt="music card"
+                    />
+                  </div>
+                  <div class="media-card__meta">
+                    <div>
+                      <h4>Daily Mix 5</h4>
+                      <span class="Number-of-songs5">50</span>
+                    </div>
+                    <p>The Strokes, Martin Garrix, MGMT and more</p>
+                  </div>
+                </article>
+
+                <article class="media-card">
+                  <div class="media-card__img card__img--wrapper">
+                    <img
+                      src="./assets/images/main-content/for-you/Frame 6.png"
+                      alt="music card"
+                    />
+                  </div>
+                  <div class="media-card__meta">
+                    <div>
+                      <h4>Nirvana Radio</h4>
+                      <span class="Number-of-songs6">50</span>
+                    </div>
+                    <p>The Strokes, Martin Garrix, MGMT and more</p>
+                  </div>
+                </article>
+
+                <article class="media-card">
+                  <div class="media-card__img card__img--wrapper">
+                    <img
+                      src="./assets/images/main-content/for-you/Frame 7.png"
+                      alt="music card"
+                    />
+                  </div>
+                  <div class="media-card__meta">
+                    <div>
+                      <h4>Fall Out Boy Radio</h4>
+                      <span class="Number-of-songs7">50</span>
+                    </div>
+                    <p>
+                      With Panic! At The Disco, The All-American Rejects,...
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <!-- made for you section -->
+
+            <!-- Your top mixes section -->
+            <div>
+              <div class="home-section__head">
+                <h2>Your top mixes</h2>
+                <div class="icon__wrapper">
+                  <img
+                    src="./assets/images/main-content/icons/arrow-left.svg"
+                    alt="arrow-left"
+                  />
+                  <img
+                    src="./assets/images/main-content/icons/arrow-right.svg"
+                    alt="arrow-right"
+                  />
+                  <img
+                    src="./assets/images/main-content/icons/dots.svg"
+                    alt="3 dots"
+                  />
+                </div>
+              </div>
+
+              <div class="home-section__row">
+                <article class="media-card">
+                  <div class="media-card__img card__img--wrapper">
+                    <img
+                      src="./assets/images/main-content/top-mixes/Frame 8.png"
+                      alt="music card"
+                    />
+                  </div>
+                  <div class="media-card__meta">
+                    <div>
+                      <h4>Rock Mix</h4>
+                      <span class="Number-of-songs8">50</span>
+                    </div>
+                    <p>Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+                  </div>
+                </article>
+
+                <article class="media-card">
+                  <div class="media-card__img card__img--wrapper">
+                    <img
+                      src="./assets/images/main-content/top-mixes/Frame 9.png"
+                      alt="music card"
+                    />
+                  </div>
+                  <div class="media-card__meta">
+                    <div>
+                      <h4>Chill Mix</h4>
+                      <span class="Number-of-songs9">50</span>
+                    </div>
+                    <p>MF DOOM, Daft Punk, The Chainsmokers, and more</p>
+                  </div>
+                </article>
+
+                <article class="media-card">
+                  <div class="media-card__img card__img--wrapper">
+                    <img
+                      src="./assets/images/main-content/top-mixes/Frame 10.png"
+                      alt="music card"
+                    />
+                  </div>
+                  <div class="media-card__meta">
+                    <div>
+                      <h4>Pop Mix</h4>
+                      <span class="Number-of-songs10">50</span>
+                    </div>
+                    <p>Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+                  </div>
+                </article>
+
+                <article class="media-card">
+                  <div class="media-card__img card__img--wrapper">
+                    <img
+                      src="./assets/images/main-content/top-mixes/Frame 11.png"
+                      alt="music card"
+                    />
+                  </div>
+                  <div class="media-card__meta">
+                    <div>
+                      <h4>Daft Punk Mix</h4>
+                      <span class="Number-of-songs11">50</span>
+                    </div>
+                    <p>Daft Punk, MGMT, Muse, and more</p>
+                  </div>
+                </article>
+
+                <article class="media-card">
+                  <div class="media-card__img card__img--wrapper">
+                    <img
+                      src="./assets/images/main-content/top-mixes/Frame 12.png"
+                      alt="music card"
+                    />
+                  </div>
+                  <div class="media-card__meta">
+                    <div>
+                      <h4>Happy Mix</h4>
+                      <span class="Number-of-songs12">50</span>
+                    </div>
+                    <p>The Turtles, Van Morrison, ABBA and more</p>
+                  </div>
+                </article>
+
+                <article class="media-card">
+                  <div class="media-card__img card__img--wrapper">
+                    <img
+                      src="./assets/images/main-content/top-mixes/Frame 13.png"
+                      alt="music card"
+                    />
+                  </div>
+                  <div class="media-card__meta">
+                    <div>
+                      <h4>David Bowie Mix</h4>
+                      <span class="Number-of-songs13">50</span>
+                    </div>
+                    <p>Soft Cell, The Who and The Clash</p>
+                  </div>
+                </article>
+
+                <article class="media-card">
+                  <div class="media-card__img card__img--wrapper">
+                    <img
+                      src="./assets/images/main-content/top-mixes/Frame 14.png"
+                      alt="music card"
+                    />
+                  </div>
+                  <div class="media-card__meta">
+                    <div>
+                      <h4>Upbeat Mix</h4>
+                      <span class="Number-of-songs14">50</span>
+                    </div>
+                    <p>Kylie Minogue, Charli XCX, Cage The Elephant and...</p>
+                  </div>
+                </article>
+
+                <article class="media-card">
+                  <div class="media-card__img card__img--wrapper">
+                    <img
+                      src="./assets/images/main-content/top-mixes/Frame 15.png"
+                      alt="music card"
+                    />
+                  </div>
+                  <div class="media-card__meta">
+                    <div>
+                      <h4>60s Mix</h4>
+                      <span class="Number-of-songs15">50</span>
+                    </div>
+                    <p>Chuck Berry, Skeeter David, Van Morrison and...</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <!-- Your top mixes section -->
+
+            <!-- Recent searches -->
+            <div class="recent__Search--wrapper">
+              <div class="home-section__head">
+                <h2>Recent searches</h2>
+                <div class="icon__wrapper">
+                  <img
+                    src="./assets/images/main-content/icons/dots.svg"
+                    alt="3 dots"
+                  />
+                </div>
+              </div>
+
+              <div class="home-section__row searches__wrapper">
+                <div class="searches__sectio">
+                  <div>
+                    <img
+                      src="./assets/images/main-content/searche/image1.png"
+                      alt="music cover"
+                    />
+                    <span>Daft Punk</span>
+                    <div class="close_button">
+                      <img
+                        src="./assets/images/main-content/icons/close.svg"
+                        alt="close button"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <img
+                      src="./assets/images/main-content/searche/image2.png"
+                      alt="David Bowie"
+                    />
+                    <span>David Bowie</span>
+                    <div class="close_button">
+                      <img
+                        src="./assets/images/main-content/icons/close.svg"
+                        alt="close button"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <img
+                      src="./assets/images/main-content/searche/image3.png"
+                      alt="music cover"
+                    />
+                    <div>
+                      <span>Black Holes...</span>
+                      <span>Muse</span>
+                    </div>
+                    <div class="close_button">
+                      <img
+                        src="./assets/images/main-content/icons/close.svg"
+                        alt="close button"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Recent searches -->
+
+            <!-- Browse all section -->
+            <div>
+              <h2 class="Browse-all__title">Browse all</h2>
+              <div class="home-section__head Browse__section--head">
+                <h2>Discover</h2>
+                <div class="icon__wrapper">
+                  <img
+                    src="./assets/images/main-content/icons/arrow-left.svg"
+                    alt="arrow-left"
+                  />
+                  <img
+                    src="./assets/images/main-content/icons/arrow-right.svg"
+                    alt="arrow-right"
+                  />
+                </div>
+              </div>
+
+              <div class="home-section__row browse__row">
+                <article class="media-card browse-card">
+                  <div class="media-card__img card1 tviniSeChama">
+                    <img
+                      src="./assets/images/main-content/browse/Frame1.png"
+                      alt="music card"
+                    />
+                    <span>Made For You</span>
+                  </div>
+                </article>
+
+                <article class="media-card browse-card">
+                  <div class="media-card__img card2">
+                    <img
+                      src="./assets/images/main-content/browse/Frame2.png"
+                      alt="music card"
+                    />
+                    <span>New Releases</span>
+                  </div>
+                </article>
+
+                <article class="media-card browse-card">
+                  <div class="media-card__img card3">
+                    <img
+                      src="./assets/images/main-content/browse/Frame3.png"
+                      alt="music card"
+                    />
+                    <span>Spotify Classics</span>
+                  </div>
+                </article>
+
+                <article class="media-card browse-card">
+                  <div class="media-card__img card4">
+                    <img
+                      src="./assets/images/main-content/browse/Frame4.png"
+                      alt="music card"
+                    />
+                    <span>Charts</span>
+                  </div>
+                </article>
+
+                <article class="media-card browse-card">
+                  <div class="media-card__img card5">
+                    <img
+                      src="./assets/images/main-content/browse/Frame5.png"
+                      alt="music card"
+                    />
+                    <span>Trending</span>
+                  </div>
+                </article>
+
+                <article class="media-card browse-card">
+                  <div class="media-card__img card6">
+                    <img
+                      src="./assets/images/main-content/browse/Frame6.png"
+                      alt="music card"
+                    />
+                    <span>Discover</span>
+                  </div>
+                </article>
+
+                <article class="media-card browse-card">
+                  <div class="media-card__img card7">
+                    <img
+                      src="./assets/images/main-content/browse/Frame7.png"
+                      alt="music card"
+                    />
+                    <span>Spotify Singles</span>
+                  </div>
+                </article>
+
+                <article class="media-card browse-card">
+                  <div class="media-card__img card8">
+                    <img
+                      src="./assets/images/main-content/browse/Frame8.png"
+                      alt="music card"
+                    />
+                    <span>Decades</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div>
+              <div class="home-section__head Browse__section--head">
+                <h2>Genres</h2>
+                <div class="icon__wrapper">
+                  <img
+                    src="./assets/images/main-content/icons/arrow-left.svg"
+                    alt="arrow-left"
+                  />
+                  <img
+                    src="./assets/images/main-content/icons/arrow-right.svg"
+                    alt="arrow-right"
+                  />
+                </div>
+              </div>
+
+              <div class="home-section__row browse__row">
+                <article class="media-card browse-card">
+                  <div class="media-card__img card9">
+                    <img
+                      src="./assets/images/main-content/browse/Frame9.png"
+                      alt="music card"
+                    />
+                    <span>Pop</span>
+                  </div>
+                </article>
+
+                <article class="media-card browse-card">
+                  <div class="media-card__img card10">
+                    <img
+                      src="./assets/images/main-content/browse/Frame10.png"
+                      alt="music card"
+                    />
+                    <span>Country</span>
+                  </div>
+                </article>
+
+                <article class="media-card browse-card">
+                  <div class="media-card__img card11">
+                    <img
+                      src="./assets/images/main-content/browse/Frame11.png"
+                      alt="music card"
+                    />
+                    <span>Hip-Hop</span>
+                  </div>
+                </article>
+
+                <article class="media-card browse-card">
+                  <div class="media-card__img card12">
+                    <img
+                      src="./assets/images/main-content/browse/Frame12.png"
+                      alt="music card"
+                    />
+                    <span>Rock</span>
+                  </div>
+                </article>
+
+                <article class="media-card browse-card">
+                  <div class="media-card__img card13">
+                    <img
+                      src="./assets/images/main-content/browse/Frame13.png"
+                      alt="music card"
+                    />
+                    <span>Indie</span>
+                  </div>
+                </article>
+
+                <article class="media-card browse-card">
+                  <div class="media-card__img card14">
+                    <img
+                      src="./assets/images/main-content/browse/Frame14.png"
+                      alt="music card"
+                    />
+                    <span>Punk</span>
+                  </div>
+                </article>
+
+                <article class="media-card browse-card">
+                  <div class="media-card__img card15">
+                    <img
+                      src="./assets/images/main-content/browse/Frame15.png"
+                      alt="music card"
+                    />
+                    <span>Metal</span>
+                  </div>
+                </article>
+
+                <article class="media-card browse-card">
+                  <div class="media-card__img card16">
+                    <img
+                      src="./assets/images/main-content/browse/Frame16.png"
+                      alt="music card"
+                    />
+                    <span>Instrumental</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <!-- Browse all section -->
+          </div>
+        </section>
+        <!-- main page main content -->
+      </div>
+      <!-- footer section -->
+      <div class="layout__footer">
+        <div>
+          <div class="Playback-controls">
+            <div class="Playback__controls--Progress-bar">
+              <a href="./get-lucky.html" class="play-button">
+                <img
+                  src="./assets/images/footer-icons/Play-Pause.svg"
+                  alt="Play-Pause img"
+                />
+              </a>
+              <button>
+                <img
+                  src="./assets/images/footer-icons/Previous-track.svg"
+                  alt="Previous-track img"
+                />
+              </button>
+              <button>
+                <img
+                  src="./assets/images/footer-icons/Next-Track.svg"
+                  alt="Next-Track img"
+                />
+              </button>
+              <button>
+                <img
+                  src="./assets/images/footer-icons/Shuffle.svg"
+                  alt="Shuffle img"
+                />
+              </button>
+              <button>
+                <img
+                  src="./assets/images/footer-icons/player-nowplaying.svg"
+                  alt="player-nowplaying img"
+                />
+              </button>
+
+              <div class="audio-slider-container">
+                <span class="time-display">2:23</span>
+                <input
+                  type="range"
+                  class="custom-range"
+                  min="0"
+                  max="100"
+                  value="50"
+                />
+                <span class="time-display">4:45</span>
+              </div>
+              <button>
+                <img
+                  src="./assets/images/footer-icons/volume.svg"
+                  alt="volume"
+                />
+              </button>
+            </div>
+            <div class="Track-info">
+              <div class="Track__info--container">
+                <img
+                  src="./assets/images/footer-icons/music-cover.png"
+                  alt="music cover img"
+                />
+                <div>
+                  <h4>Get Lucky</h4>
+                  <span>Daft Punk</span>
+                  <p>Random Access Memories</p>
+                </div>
+              </div>
+              <div class="mobile__actions">
+                <button>
+                  <img
+                    src="./assets/images/footer-icons/player-add.svg"
+                    alt="player-add"
+                  />
+                </button>
+                <button>
+                  <img src="./assets/images/footer-icons/play.svg" alt="play" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="action__wrapper">
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-like.svg"
+                alt="player-like"
+              />
+            </button>
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-add.svg"
+                alt="player-add"
+              />
+            </button>
+
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-queue.svg"
+                alt="player-queue"
+              />
+            </button>
+
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-device.svg"
+                alt="player-device"
+              />
+            </button>
+
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-more.svg"
+                alt="player-more"
+              />
+            </button>
+            <span></span>
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-profile.svg"
+                alt="player-profile"
+              />
+            </button>
+
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-menu.svg"
+                alt="player-menu"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- footer section -->
+    </div>
+  </body>
+</html>

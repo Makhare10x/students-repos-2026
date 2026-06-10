@@ -1,0 +1,146 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../base/base";
+@use "../base/reset";
+
+
+.header-nav {
+    display: none;
+}
+
+.mobile-bottom-nav {
+    background: $color-bg-main;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px 27px;
+    width: 100%;
+    height: 95px;
+   
+    background: linear-gradient(
+    to bottom,
+    rgba(18, 18, 18, 0) 0%,     
+    rgba(18, 18, 18, 0.8) 30%,  
+    rgba(18, 18, 18, 1) 100%   
+    );
+  }
+
+  .mobile-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: $color-fg-secondary;
+    
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    span {
+      font-size: $font-size-small;
+      font-weight: 500;
+    }
+   
+  }
+
+@media (min-width: 500px) {
+    .header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+    padding: 0 16px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
+  min-width: fit-content; 
+  width: 210px;
+}
+
+.nav-item:hover {
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.nav-item.active {
+    height: 45px;
+    width: 210px;
+    color: $color-fg-primary;
+    background: rgba(255, 255, 255, 0.1);
+
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+}
+
+.mobile-player-bar {
+    display: none;
+}
+
+}
+
+header,
+main,
+footer,
+.site-header,
+.pleyer-desktop {
+  margin-left: 280px;
+  width: calc(100% - 280px); 
+}
+
+  @media (max-width: 768px) {
+  header,
+  main, footer,
+  .site-header,
+  .pleyer-desktop {
+    margin-left: 0;
+    width: 100%;
+  }
+}

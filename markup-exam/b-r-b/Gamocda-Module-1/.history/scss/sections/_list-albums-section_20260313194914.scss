@@ -1,0 +1,114 @@
+@use '../abstract/mixins' as *;
+@use '../universal components/components' as *;
+@use '../abstract/responsive' as *;
+@use '../abstract/variables' as *;
+
+
+
+
+.daft-punk-album-list {
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+    padding-left: 2.5rem;
+    padding-right: 2.7rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+
+}
+
+
+.album-artist-whole-container {
+    display: flex;
+    border-bottom: 0.3rem solid $Bg-Primary;
+    padding-bottom: 3rem;
+    height: 17rem;
+    .card-album {
+        margin-right: 1.8rem;
+
+    }
+    h2 {
+        font-size: 2rem;
+        color: $font-fg-primary;
+    }
+    p {
+        color: $font-fg-secondary;
+        font-size: 1.4rem;
+    }
+    
+}
+
+
+
+
+
+
+
+
+ .artist-album-icons {
+        display: flex;
+        width: 100%;
+        column-gap: 1.4rem;
+        button {
+            padding: 0;
+            background: none;
+            border: none;
+            margin: 0
+
+        }
+
+        button:first-child img {
+            height:4.0411rem;
+            width: 4.0411rem;
+            padding: 0;
+            margin: 0;
+            
+        }
+
+        img {
+            padding: 0 1rem;
+        }
+
+    }
+
+
+
+
+
+
+
+.album-text-discription {
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-self: stretch;
+        row-gap: 1rem;
+        flex-grow: 1;
+    }
+
+
+
+
+
+.dotted-sentances {
+        display: flex;
+        column-gap: 1rem;
+        img {
+            width: 0.3rem;
+        }
+}        
+
+
+
+    
+
+
+.list-album-arrow {
+        padding: 1.5rem;
+        img {
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+    }
+}    

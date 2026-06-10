@@ -1,0 +1,39 @@
+//abstracts
+@use "./abstracts/functions";
+@use "./abstracts/mixins";
+@use "./abstracts/variables";
+
+//base
+@use "./base/reset";
+@use "./base/base";
+@use "./base/typography";
+
+//components
+@use "./components/buttons";
+@use "./components/cards";
+@use "./components/filter";
+@use "./components/albums";
+@use "./components/lists";
+@use "./components/friends-aside";
+
+//layout
+@use "./layout/app-layout";
+@use "./layout/top-header";
+@use "./layout/sidebar";
+@use "./layout/player-bar";
+@use "./layout/bottom-navigation";
+
+//pages
+@use "./pages/home";
+@use "./pages/search";
+@use "./pages/library";
+@use "./pages/song";
+@use "./pages/playlist";
+@use "./pages/album";
+@use "./pages/artist";
+@use "./pages/about-artist";
+@use "./pages/grid-albums";
+@use "./pages/list-albums";
+@use "./pages/podcast";
+@use "./pages/episode";
+@use "./pages/discover";

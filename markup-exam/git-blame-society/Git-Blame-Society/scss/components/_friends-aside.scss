@@ -1,0 +1,155 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+
+// friends aside styles
+
+.friends-aside{
+    display: none;
+    border-radius: 1rem;
+    border: 0.1rem solid v.$bg-secondary;
+    padding:2rem;
+    margin-bottom:0.5rem;
+    width: 35.8rem;
+}
+
+#friends, #account {
+    display: none;
+}
+
+
+body:has(#friends:checked) .friends-aside {
+    display: block;
+}
+
+
+
+.aside-filter {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom:1.6rem;
+}
+
+.friends-action, .friend-listening, .edit-share, .current-title, .current-description, .about-you {
+    display: flex;
+    gap:1rem;
+}
+
+.friend-listening {
+    gap: 0.2rem;
+}
+
+.friend-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+
+// styles for account aside section
+
+
+body:has(#account:checked) .account-aside {
+    display: block;
+}
+
+
+.account-aside{
+    display: none;
+    border-radius: 1rem;
+    border: 0.1rem solid v.$bg-secondary;
+    padding:2rem;
+    margin-bottom:0.5rem;
+    width: 35.8rem;
+        @media (max-width:v.$bp-desktop){
+            display: none;
+        }
+
+}
+
+.account-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.6rem;
+    border: 0.2rem solid rgba(#FFFFFF, 0.05);
+    border-radius: 1.2rem;
+    background: linear-gradient(180deg, rgba(138, 53, 74, 0.47) 0%, rgba(17, 17, 17, 1) 92%);
+}
+
+.your-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-share{
+    gap: 0.7rem;
+}
+
+.about-you{
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.your-friends, .current-plan{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.6rem;
+    border: 0.2rem solid rgba(#FFFFFF, 0.05);
+    border-radius: 1.2rem;
+      .aside-filter {
+        margin: 0;
+      }
+}
+
+.current-plan {
+    background: linear-gradient(180deg, rgba(#10301B, 0.47) 0%, rgba(17, 17, 17, 1) 92%);
+        .section-subtitle {
+            color: v.$primary-accent;
+        }
+}
+
+.current-title {
+    gap: 1.3rem;
+}
+
+.current-description {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.account-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.settings {
+    @include m.flex;
+    justify-content: space-between;
+    padding: 1rem 0 0.5rem 0;
+    border-top: 2px solid v.$bg-secondary;
+}
+
+.setting-name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+.my-account {
+    display: block;
+    width:clamp(36rem, 26.6rem + 19.4vw, 50rem) ;
+}
+
+.account-page {
+    display: flex;
+    justify-content: center;
+}
+
+
+

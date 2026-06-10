@@ -1,0 +1,143 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+
+// track styles 
+
+
+.discovery {
+    background-image: url(/assets/discover-page/background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.music-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5rem;
+    margin: 5rem 0 5rem 0;
+}
+
+.about-music {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.6rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    padding: 3rem;
+    background-color: rgba(#555555, 0.05);
+        @media (max-width:v.$bp-desktop){
+            flex-direction: column;
+    }
+
+}
+
+.image-album {
+    position: relative;
+        img {
+            width: clamp(13rem, 12.71rem + 9.41vw, 18rem);
+        }
+}
+
+.main-picture {
+     @media (max-width:v.$bp-desktop){
+        display: none; 
+    }
+}
+
+.music-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 2rem;
+        @media (max-width:v.$bp-desktop){
+            align-items: center;
+    }
+}
+
+.section-title {
+    h2 {
+        font-size: 3rem;
+        color: v.$text-primary;
+    }
+    
+}
+
+.details {
+    @include m.flex;
+    align-items: flex-end;
+    color: v.$text-secondary;
+    gap: 1rem;
+
+    li:not(:first-child)::before {
+        content: "•";  
+        margin-right: 0.5rem;     
+        color: v.$text-secondary;       
+}  
+}
+
+
+.details-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+        span {
+            font-size: map.get(v.$font-size, subtitle);
+            color: v.$text-secondary;
+        }
+}
+
+.btn-action {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.select-genre {
+    display: flex;
+    gap: 1rem;
+}
+
+.genres {
+    padding: 0.8rem 1.3rem;
+    border: 0.2rem solid rgba(v.$text-secondary, 0.25);
+    border-radius: 4.4rem;
+    color: v.$text-secondary;
+    font-size: map.get(v.$font-size, caption);
+
+}
+
+.small-image {
+    width: 4.3rem;
+    height: 4.3rem;
+}
+
+.album-play {
+    @include m.flex();
+    padding: 1rem;
+    gap: 1rem;
+    margin-top: 0;
+}
+
+.play-album {
+    display: none;
+    @media (max-width:v.$bp-desktop){
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+        row-gap: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+.mobile {
+    gap: 1rem;
+}
+
+.start-listening {
+    margin: 0;
+}

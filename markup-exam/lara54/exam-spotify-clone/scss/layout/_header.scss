@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as m;
+@use "../components/buttons" as bt;
+@use "../abstracts/nav-link" as nav;
+@use "../base/typography";
+@use "../components/cards";
+
+
+.main-header-navigation {
+    width: 100%;
+    height: 5.4rem;
+    background-color: var.$bg-base;
+    @include m.flex-between;
+    @include m.page-border;
+}
+
+.main-header__nav-bar {
+    width: 55%;
+    height: 100%;
+    @include m.flex-menu($grow: 0.5, $shrink: 0.5, $basis: auto);
+}
+
+.main-header__user-controls {
+
+    width: 45%;
+    height: 100%;
+    @include m.flex-menu($grow: 0, $shrink: 0, $basis: auto);
+
+    ul {
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+}

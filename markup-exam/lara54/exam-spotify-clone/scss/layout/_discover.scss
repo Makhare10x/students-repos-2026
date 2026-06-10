@@ -1,0 +1,121 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as m;
+@use "../components/buttons" as bt;
+@use "../abstracts/nav-link" as nav;
+@use "../base/typography";
+@use "../components/cards";
+
+
+.discover-page {
+
+    .main-app-container {
+        width: 100%;
+        height: 100vh;
+
+        display: grid;
+        grid-template-columns: 25.9rem 1fr 35.8rem;
+        grid-template-rows: 5.4rem 1fr 8.1rem;
+        grid-template-areas:
+            "sidebar  header header"
+            "sidebar  main main"
+            "sidebar footer footer";
+    }
+
+    .main-header {
+        grid-area: header;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .discover-content {
+        grid-area: main;
+        @include m.page-border;
+        background: var.$bg-discover;
+
+    }
+    .footer-player-bar {
+        grid-area: footer;
+    }
+
+}
+
+.main-content-navigation--discover__nav-bar {
+    width: 100%;
+    height: 5.8rem;
+    padding: 1rem;
+    background-color: var.$bg-base;
+
+    nav ul li {
+        gap: 1rem;
+
+        a {
+            border-radius: 0.5rem;
+            background-color: var.$bg-sd-bar-activ;
+
+        }
+    }
+}
+
+.discover-container {
+    padding-top: 2rem;
+    width: 100%;
+    @include m.flex-column( $direction: column);
+    gap: 5rem;
+    transition: all 0.4s ease;
+
+}
+
+.discover-music-card {
+    max-width: 104rem;
+    max-height: 61.2rem;
+    margin: 0 auto;
+    @include m.flex-box($justify:space-between, $align:center);
+
+    .discover-music-card {
+        transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    }
+}
+
+.discover-container:hover .discover-music-card {
+    filter: blur(3px);
+    opacity: 0.6;
+}
+
+.discover-container .discover-music-card:hover {
+    filter: blur(0);
+    opacity: 1;
+}
+
+.discover-avatar {
+    max-width: 39rem;
+    height: 100%;
+    img {
+        width: 100%;
+        border-radius: 1rem;
+    }
+
+}
+
+
+.discover__card {
+    width: 65rem;
+    @include m.flex-box($justify: center);  
+    gap: 1rem;
+
+    img {
+        width: 18rem;
+        height: auto;
+    }
+}
+
+.discover__card-description {
+    width: 34rem;
+    @include m.flex-column( $direction: column);
+    gap: 1rem;
+
+    h2 {
+        font-size: 3rem;
+    }
+}

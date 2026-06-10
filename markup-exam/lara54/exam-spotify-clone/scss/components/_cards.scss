@@ -1,0 +1,173 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as m;
+@use "../base/typography" as t;
+@use "../components/buttons" as bt;
+@use "../abstracts/nav-link" as nav;
+
+
+
+
+// ======= main-content__cards-container  style-- SPOTIFY   =======
+
+.music-card--album {
+    width: 17rem;
+    height: 25.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    position: relative;
+
+    figcaption {
+        padding: 0.5rem;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .play-button {
+        position: absolute;
+        width: 4rem;
+        height: 4rem;
+        right: 0.8rem;
+        bottom: 0.8rem;
+        opacity: 0;
+        transform: translateY(0.8rem);
+        transition: all 0.3s ease;
+        box-shadow: 0 0.8rem 1.6rem var.$bg-base;
+    }
+
+    &:hover {
+        background: #282828;
+        .play-button {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+}
+
+.music-card--album:nth-child(2n+1) span {
+    color: var.$bg-sticker-err;
+}
+
+.music-card--album:nth-child(3n+1) span {
+    color: var.$bg-sticker;
+}
+
+// ================= "main-article__card-badge  ==============
+
+.card-badge__items {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+
+    img {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+.card-badge__label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &::before {
+        display: inline-block;
+        content: "";
+        width: 3rem;
+        height: 3rem;
+        background-image: url(../assets/icons/iconsIIbig.svg);
+    }
+
+}
+
+// ========== Library  cards =========
+
+.music-card--artist {
+    width: 17rem;
+    height: 25rem;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+        display: inline-block;
+        content: " ";
+        width: 4rem;
+        height: 4rem;
+        padding: 0.2rem;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        background-image: url(../assets/icons/Vector38.svg);
+        background-position: center;
+        background-color: var.$bg-image-sticker;
+        position: absolute;
+        top: 1rem;
+        left: 14rem;
+        z-index: 1;
+    }
+
+    figcaption {
+        padding: 0.5rem;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.music-card__label {
+    text-align: center;
+}
+
+// ======== style  figcaption: h4  ===========
+
+.music-card__info {
+    @include m.flex-between;
+}
+
+
+// ================  style:  search cards   ======
+
+.music-card__image {
+    padding: 1rem;
+    width: 17rem;
+    height: 17rem;
+    position: relative;
+    text-align: center;
+
+    &::after {
+        display: inline-block;
+        content: " ";
+        width: 5rem;
+        height: 5rem;
+        background-image: url(../assets/icons/icons-xxbig.svg);
+        position: absolute;
+        background-repeat: no-repeat;
+
+        top: 1rem;
+        left: 14rem;
+        z-index: 1;
+    }
+
+    figcaption {
+        padding: 2rem;
+    }
+
+}
+
+// =========  index.html round  cards  ==========
+
+.music-card__image--round {
+    padding: 1rem;
+    width: 17rem;
+    height: 17rem;
+    position: relative;
+    text-align: center;
+
+    figcaption {
+        padding: 2rem;
+    }
+
+}

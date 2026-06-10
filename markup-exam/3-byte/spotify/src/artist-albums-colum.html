@@ -1,0 +1,1678 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>10X Markup Exam | Spotify Clone</title>
+  </head>
+  <body>
+    <div class="layout container">
+      <div class="layout__header">
+        <header class="header">
+          <div>
+            <nav class="navigation">
+              <!-- Left Navigation -->
+              <ul class="nav-links">
+                <li class="nav-item pinned_home-btn">
+                  <a href="./index.html" class="nav-link home-secondary">
+                    <img
+                      src="./assets/images/artist/home icon.svg"
+                      alt="Home icon"
+                      class="nav-icon"
+                    />
+                    <span>Home</span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <img
+                      src="./assets/images/header icons/star_discover.png"
+                      alt="Discover icon"
+                      class="nav-icon"
+                    />
+                    <span>Discover</span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="./search.html" class="nav-link">
+                    <img
+                      src="./assets/images/header icons/search.png"
+                      alt="Search icon"
+                      class="nav-icon"
+                    />
+                    <input
+                      type="text"
+                      name="search"
+                      id="search_input"
+                      placeholder="Search"
+                      class="search"
+                    />
+                  </a>
+                </li>
+              </ul>
+              <ul class="user-menu">
+                <li>
+                  <a href="#" aria-label="Notifications">
+                    <img
+                      src="./assets/images/header icons/notifycation.png"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" aria-label="Security">
+                    <img
+                      src="./assets/images/header icons/lock.png"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" aria-label="Friends">
+                    <img
+                      src="./assets/images/header icons/friend.png"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" aria-label="Settings">
+                    <img
+                      src="./assets/images/header icons/setting.png"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </a>
+                </li>
+
+                <li class="profile-item">
+                  <a href="#" aria-label="Profile">
+                    <img
+                      src="./assets/images/header icons/profile-img.png"
+                      alt="User profile"
+                      class="profile-img"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- Mobile Navigation -->
+            <nav class="mobile-navigation">
+              <ul class="mobile-nav-links">
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link home-secondary">
+                    <img
+                      src="./assets/images/artist/home icon.svg"
+                      alt="Home icon"
+                      class="nav-icon"
+                    />
+                    <span>Home</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <img
+                      src="./assets/images/header icons/star_discover.png"
+                      alt="Discover icon"
+                      class="nav-icon"
+                    />
+                    <span>Discover</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./search.html" class="nav-link">
+                    <img
+                      src="./assets/images/header icons/search.png"
+                      alt="Search icon"
+                      class="nav-icon"
+                    />
+                    <span>Search</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <img
+                      src="./assets/images/liked-song-page/library.svg"
+                      alt="My Library icon"
+                      class="nav-icon"
+                    />
+                    <span>Library</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <img
+                      src="./assets/images/header icons/me.png"
+                      alt="My Library icon"
+                      class="nav-icon"
+                    />
+                    <span>Me</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+      </div>
+      <div class="layout__sidebar">
+        <section class="hero">
+          <!-- side bar -->
+          <aside class="sidebar">
+            <nav class="sidebar-nav">
+              <ul class="sidebar-list">
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <img
+                      src="./assets/images/header icons/libary.png"
+                      alt="My Library icon"
+                      class="sidebar-icon"
+                    />
+                    <span>My Library</span>
+                  </a>
+                </li>
+                <li class="sidebar-item has-arrow">
+                  <a href="./pinned.html" class="sidebar-link">
+                    <div class="link-name">
+                      <img
+                        src="./assets/images/aside icons/pin.png"
+                        alt="Pins icon"
+                        class="sidebar-icon"
+                      />
+                      <span>Pins</span>
+                    </div>
+                    <img
+                      src="./assets/images/aside icons/right arrow.png"
+                      alt=""
+                      class="arrow-icon"
+                    />
+                  </a>
+                </li>
+
+                <li class="sidebar-item has-arrow">
+                  <a href="./playlist.html" class="sidebar-link">
+                    <div class="link-name">
+                      <img
+                        src="./assets/images/aside icons/playlist.png"
+                        alt="Playlists icon"
+                        class="sidebar-icon"
+                      />
+                      <span>Playlists</span>
+                    </div>
+                    <img
+                      src="./assets/images/aside icons/right arrow.png"
+                      alt=""
+                      class="arrow-icon"
+                    />
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="./liked.html" class="sidebar-link">
+                    <img
+                      src="./assets/images/aside icons/liked.png"
+                      alt="Liked songs icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Liked Songs</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <img
+                      src="./assets/images/aside icons/saves.png"
+                      alt="Saves icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Saves</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <img
+                      src="./assets/images/aside icons/albums.png"
+                      alt="Albums icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Albums</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <img
+                      src="./assets/images/aside icons/folders.png"
+                      alt="Folders icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Folders</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <img
+                      src="./assets/images/aside icons/podcasts.png"
+                      alt="Podcasts icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Podcasts</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <img
+                      src="./assets/images/aside icons/audibooks.png"
+                      alt="Audiobooks icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Audiobooks</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link liked-link">
+                    <img
+                      src="./assets/images/aside icons/artists.png"
+                      alt="Artists icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Artists</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+        </section>
+      </div>
+      <div class="layout__main">
+        <!-- main page main content -->
+        <section class="home-content artis__content">
+          <div class="home-section artists__section">
+            <div class="artist__cover-wrapper">
+              <img
+                src="./assets/images/artist/artist_cover.png"
+                alt="cover image"
+              />
+              <div class="cover__wrapper--header">
+                <div class="cover__wrapper--about">
+                  <p>Daft Punk</p>
+                  <span>20,795,080 monthly listeners</span>
+                </div>
+                <div class="cover__wrapper--action">
+                  <button class="active-btn">
+                    <img src="./assets/images/playlist/Play.svg" alt="play" />
+                  </button>
+                  <button class="follow_btn">Follow</button>
+                  <button>
+                    <img
+                      src="./assets/images/playlist/Add.svg"
+                      alt="add buton"
+                    />
+                  </button>
+                  <button>
+                    <img
+                      src="./assets/images/playlist/Add-to-Queue.svg"
+                      alt="add Add-to-Queue"
+                    />
+                  </button>
+                  <button>
+                    <img src="./assets/images/playlist/dotes.svg" alt="dotes" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="album__nav">
+              <div class="nav-container">
+                <nav>
+                  <ul>
+                    <li><a href="./artist.html">Home</a></li>
+                    <li>
+                      <a href="./artist-albums.html" class="active">Albums</a>
+                    </li>
+                    <li><a href="#">Singles and EPs</a></li>
+                    <li><a href="#">Compilattions</a></li>
+                    <li><a href="#">Merch</a></li>
+                    <li>
+                      <a href="./artist-about.html">About</a>
+                    </li>
+                    <li><a href="#">Features & More</a></li>
+                    <li>
+                      <img src="./assets/images/playlist/search.svg" alt="" />
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div>
+                <a href="#">
+                  <img
+                    src="./assets/images/artist/colum-icon.svg"
+                    alt="icon-column"
+                /></a>
+
+                <a href="./artist-albums.html">
+                  <img
+                    src="./assets/images/artist/row-icon.svg"
+                    alt="icon-row"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <section class="artist__albums-section artist__albums-column-section">
+              <div class="home-section">
+                <!-- made for you section -->
+
+                <div class="home-section__row albums__section-column">
+                  <article class="media-card albums__section-card">
+                    <div class="media-card__img card__img--wrapper">
+                      <img
+                        src="./assets/images/artist/Frame1.png"
+                        alt="music card"
+                      />
+                    </div>
+                    <div class="table__section--header album__section--header">
+                      <h2>Random Access Memories</h2>
+                      <div class="playlist-meta">
+                        <p>2023</p>
+                        <span></span>
+                        <p>22 songs</p>
+                        <span></span>
+                        <p>1 hr 14 min</p>
+                      </div>
+                      <div class="playlist-action">
+                        <div>
+                          <button class="playlist-active">
+                            <img
+                              src="./assets/images/playlist/Play.svg"
+                              alt="play svg"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Shuffle.svg"
+                              alt="Shuffle"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Add.svg"
+                              alt="add"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Add-to-Queue.svg"
+                              alt="add to queue"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Download.svg"
+                              alt="Download"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Share.svg"
+                              alt="share"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/More-Options.svg"
+                              alt="More-Options"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="media-card albums__section-card">
+                    <div class="media-card__img card__img--wrapper">
+                      <img
+                        src="./assets/images/artist/Frame2.png"
+                        alt="music card"
+                      />
+                    </div>
+                    <div class="table__section--header album__section--header">
+                      <h2>Random Access Memories (10th Anniversary Edition)</h2>
+                      <div class="playlist-meta">
+                        <p>2023</p>
+                        <span></span>
+                        <p>22 songs</p>
+                        <span></span>
+                        <p>1 hr 14 min</p>
+                      </div>
+                      <div class="playlist-action">
+                        <div>
+                          <button class="playlist-active">
+                            <img
+                              src="./assets/images/playlist/Play.svg"
+                              alt="play svg"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Shuffle.svg"
+                              alt="Shuffle"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Add.svg"
+                              alt="add"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Add-to-Queue.svg"
+                              alt="add to queue"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Download.svg"
+                              alt="Download"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Share.svg"
+                              alt="share"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/More-Options.svg"
+                              alt="More-Options"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="media-card albums__section-card">
+                    <div class="media-card__img card__img--wrapper">
+                      <img
+                        src="./assets/images/artist/Frame3.png"
+                        alt="music card"
+                      />
+                    </div>
+                    <div class="table__section--header album__section--header">
+                      <h2>Daft Punk Mix</h2>
+                      <div class="playlist-meta">
+                        <p>2023</p>
+                        <span></span>
+                        <p>22 songs</p>
+                        <span></span>
+                        <p>1 hr 14 min</p>
+                      </div>
+                      <div class="playlist-action">
+                        <div>
+                          <button class="playlist-active">
+                            <img
+                              src="./assets/images/playlist/Play.svg"
+                              alt="play svg"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Shuffle.svg"
+                              alt="Shuffle"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Add.svg"
+                              alt="add"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Add-to-Queue.svg"
+                              alt="add to queue"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Download.svg"
+                              alt="Download"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Share.svg"
+                              alt="share"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/More-Options.svg"
+                              alt="More-Options"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="media-card albums__section-card">
+                    <div class="media-card__img card__img--wrapper">
+                      <img
+                        src="./assets/images/artist/Frame4.png"
+                        alt="music card"
+                      />
+                    </div>
+
+                    <div class="table__section--header album__section--header">
+                      <h2>Daft Punk Mix</h2>
+                      <div class="playlist-meta">
+                        <p>2023</p>
+                        <span></span>
+                        <p>22 songs</p>
+                        <span></span>
+                        <p>1 hr 14 min</p>
+                      </div>
+                      <div class="playlist-action">
+                        <div>
+                          <button class="playlist-active">
+                            <img
+                              src="./assets/images/playlist/Play.svg"
+                              alt="play svg"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Shuffle.svg"
+                              alt="Shuffle"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Add.svg"
+                              alt="add"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Add-to-Queue.svg"
+                              alt="add to queue"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Download.svg"
+                              alt="Download"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Share.svg"
+                              alt="share"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/More-Options.svg"
+                              alt="More-Options"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="media-card albums__section-card">
+                    <div class="media-card__img card__img--wrapper">
+                      <img
+                        src="./assets/images/artist/Frame5.png"
+                        alt="music card"
+                      />
+                    </div>
+
+                    <div class="table__section--header album__section--header">
+                      <h2>Daft Punk Mix</h2>
+                      <div class="playlist-meta">
+                        <p>2023</p>
+                        <span></span>
+                        <p>22 songs</p>
+                        <span></span>
+                        <p>1 hr 14 min</p>
+                      </div>
+                      <div class="playlist-action">
+                        <div>
+                          <button class="playlist-active">
+                            <img
+                              src="./assets/images/playlist/Play.svg"
+                              alt="play svg"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Shuffle.svg"
+                              alt="Shuffle"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Add.svg"
+                              alt="add"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Add-to-Queue.svg"
+                              alt="add to queue"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Download.svg"
+                              alt="Download"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Share.svg"
+                              alt="share"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/More-Options.svg"
+                              alt="More-Options"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="media-card albums__section-card">
+                    <div class="media-card__img card__img--wrapper">
+                      <img
+                        src="./assets/images/artist/Frame6.png"
+                        alt="music card"
+                      />
+                    </div>
+                    <div class="table__section--header album__section--header">
+                      <h2>Daft Punk Mix</h2>
+                      <div class="playlist-meta">
+                        <p>2023</p>
+                        <span></span>
+                        <p>22 songs</p>
+                        <span></span>
+                        <p>1 hr 14 min</p>
+                      </div>
+                      <div class="playlist-action">
+                        <div>
+                          <button class="playlist-active">
+                            <img
+                              src="./assets/images/playlist/Play.svg"
+                              alt="play svg"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Shuffle.svg"
+                              alt="Shuffle"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Add.svg"
+                              alt="add"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Add-to-Queue.svg"
+                              alt="add to queue"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Download.svg"
+                              alt="Download"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Share.svg"
+                              alt="share"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/More-Options.svg"
+                              alt="More-Options"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="media-card albums__section-card">
+                    <div class="media-card__img card__img--wrapper">
+                      <img
+                        src="./assets/images/artist/Frame7.png"
+                        alt="music card"
+                      />
+                    </div>
+                    <div class="table__section--header album__section--header">
+                      <h2>Daft Punk Mix</h2>
+                      <div class="playlist-meta">
+                        <p>2023</p>
+                        <span></span>
+                        <p>22 songs</p>
+                        <span></span>
+                        <p>1 hr 14 min</p>
+                      </div>
+                      <div class="playlist-action">
+                        <div>
+                          <button class="playlist-active">
+                            <img
+                              src="./assets/images/playlist/Play.svg"
+                              alt="play svg"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Shuffle.svg"
+                              alt="Shuffle"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Add.svg"
+                              alt="add"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Add-to-Queue.svg"
+                              alt="add to queue"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Download.svg"
+                              alt="Download"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Share.svg"
+                              alt="share"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/More-Options.svg"
+                              alt="More-Options"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="media-card albums__section-card">
+                    <div class="media-card__img card__img--wrapper">
+                      <img
+                        src="./assets/images/artist/Frame8.png"
+                        alt="music card"
+                      />
+                    </div>
+                    <div class="table__section--header album__section--header">
+                      <h2>Daft Punk Mix</h2>
+                      <div class="playlist-meta">
+                        <p>2023</p>
+                        <span></span>
+                        <p>22 songs</p>
+                        <span></span>
+                        <p>1 hr 14 min</p>
+                      </div>
+                      <div class="playlist-action">
+                        <div>
+                          <button class="playlist-active">
+                            <img
+                              src="./assets/images/playlist/Play.svg"
+                              alt="play svg"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Shuffle.svg"
+                              alt="Shuffle"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Add.svg"
+                              alt="add"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Add-to-Queue.svg"
+                              alt="add to queue"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Download.svg"
+                              alt="Download"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/Share.svg"
+                              alt="share"
+                            />
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/playlist/More-Options.svg"
+                              alt="More-Options"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <!-- made for you section -->
+
+                <!-- Your top mixes section -->
+                <div>
+                  <div class="home-section__row albums__section-column">
+                    <article class="media-card albums__section-card">
+                      <div class="media-card__img card__img--wrapper">
+                        <img
+                          src="./assets/images/artist/Frame8.png"
+                          alt="music card"
+                        />
+                      </div>
+
+                      <div
+                        class="table__section--header album__section--header"
+                      >
+                        <h2>Daft Punk Mix</h2>
+                        <div class="playlist-meta">
+                          <p>2023</p>
+                          <span></span>
+                          <p>22 songs</p>
+                          <span></span>
+                          <p>1 hr 14 min</p>
+                        </div>
+                        <div class="playlist-action">
+                          <div>
+                            <button class="playlist-active">
+                              <img
+                                src="./assets/images/playlist/Play.svg"
+                                alt="play svg"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Shuffle.svg"
+                                alt="Shuffle"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Add.svg"
+                                alt="add"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Add-to-Queue.svg"
+                                alt="add to queue"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Download.svg"
+                                alt="Download"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Share.svg"
+                                alt="share"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/More-Options.svg"
+                                alt="More-Options"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="media-card albums__section-card">
+                      <div class="media-card__img card__img--wrapper">
+                        <img
+                          src="./assets/images/artist/Frame7.png"
+                          alt="music card"
+                        />
+                      </div>
+                      <div
+                        class="table__section--header album__section--header"
+                      >
+                        <h2>Daft Punk Mix</h2>
+                        <div class="playlist-meta">
+                          <p>2023</p>
+                          <span></span>
+                          <p>22 songs</p>
+                          <span></span>
+                          <p>1 hr 14 min</p>
+                        </div>
+                        <div class="playlist-action">
+                          <div>
+                            <button class="playlist-active">
+                              <img
+                                src="./assets/images/playlist/Play.svg"
+                                alt="play svg"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Shuffle.svg"
+                                alt="Shuffle"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Add.svg"
+                                alt="add"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Add-to-Queue.svg"
+                                alt="add to queue"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Download.svg"
+                                alt="Download"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Share.svg"
+                                alt="share"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/More-Options.svg"
+                                alt="More-Options"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="media-card albums__section-card">
+                      <div class="media-card__img card__img--wrapper">
+                        <img
+                          src="./assets/images/artist/Frame6.png"
+                          alt="music card"
+                        />
+                      </div>
+                      <div
+                        class="table__section--header album__section--header"
+                      >
+                        <h2>Daft Punk Mix</h2>
+                        <div class="playlist-meta">
+                          <p>2023</p>
+                          <span></span>
+                          <p>22 songs</p>
+                          <span></span>
+                          <p>1 hr 14 min</p>
+                        </div>
+                        <div class="playlist-action">
+                          <div>
+                            <button class="playlist-active">
+                              <img
+                                src="./assets/images/playlist/Play.svg"
+                                alt="play svg"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Shuffle.svg"
+                                alt="Shuffle"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Add.svg"
+                                alt="add"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Add-to-Queue.svg"
+                                alt="add to queue"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Download.svg"
+                                alt="Download"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Share.svg"
+                                alt="share"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/More-Options.svg"
+                                alt="More-Options"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="media-card albums__section-card">
+                      <div class="media-card__img card__img--wrapper">
+                        <img
+                          src="./assets/images/artist/Frame5.png"
+                          alt="music card"
+                        />
+                      </div>
+                      <div
+                        class="table__section--header album__section--header"
+                      >
+                        <h2>Daft Punk Mix</h2>
+                        <div class="playlist-meta">
+                          <p>2023</p>
+                          <span></span>
+                          <p>22 songs</p>
+                          <span></span>
+                          <p>1 hr 14 min</p>
+                        </div>
+                        <div class="playlist-action">
+                          <div>
+                            <button class="playlist-active">
+                              <img
+                                src="./assets/images/playlist/Play.svg"
+                                alt="play svg"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Shuffle.svg"
+                                alt="Shuffle"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Add.svg"
+                                alt="add"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Add-to-Queue.svg"
+                                alt="add to queue"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Download.svg"
+                                alt="Download"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Share.svg"
+                                alt="share"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/More-Options.svg"
+                                alt="More-Options"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="media-card albums__section-card">
+                      <div class="media-card__img card__img--wrapper">
+                        <img
+                          src="./assets/images/artist/Frame4.png"
+                          alt="music card"
+                        />
+                      </div>
+                      <div
+                        class="table__section--header album__section--header"
+                      >
+                        <h2>Daft Punk Mix</h2>
+                        <div class="playlist-meta">
+                          <p>2023</p>
+                          <span></span>
+                          <p>22 songs</p>
+                          <span></span>
+                          <p>1 hr 14 min</p>
+                        </div>
+                        <div class="playlist-action">
+                          <div>
+                            <button class="playlist-active">
+                              <img
+                                src="./assets/images/playlist/Play.svg"
+                                alt="play svg"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Shuffle.svg"
+                                alt="Shuffle"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Add.svg"
+                                alt="add"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Add-to-Queue.svg"
+                                alt="add to queue"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Download.svg"
+                                alt="Download"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Share.svg"
+                                alt="share"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/More-Options.svg"
+                                alt="More-Options"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="media-card albums__section-card">
+                      <div class="media-card__img card__img--wrapper">
+                        <img
+                          src="./assets/images/artist/Frame3.png"
+                          alt="music card"
+                        />
+                      </div>
+                      <div
+                        class="table__section--header album__section--header"
+                      >
+                        <h2>Daft Punk Mix</h2>
+                        <div class="playlist-meta">
+                          <p>2023</p>
+                          <span></span>
+                          <p>22 songs</p>
+                          <span></span>
+                          <p>1 hr 14 min</p>
+                        </div>
+                        <div class="playlist-action">
+                          <div>
+                            <button class="playlist-active">
+                              <img
+                                src="./assets/images/playlist/Play.svg"
+                                alt="play svg"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Shuffle.svg"
+                                alt="Shuffle"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Add.svg"
+                                alt="add"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Add-to-Queue.svg"
+                                alt="add to queue"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Download.svg"
+                                alt="Download"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Share.svg"
+                                alt="share"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/More-Options.svg"
+                                alt="More-Options"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="media-card albums__section-card">
+                      <div class="media-card__img card__img--wrapper">
+                        <img
+                          src="./assets/images/artist/Frame2.png"
+                          alt="music card"
+                        />
+                      </div>
+                      <div
+                        class="table__section--header album__section--header"
+                      >
+                        <h2>Daft Punk Mix</h2>
+                        <div class="playlist-meta">
+                          <p>2023</p>
+                          <span></span>
+                          <p>22 songs</p>
+                          <span></span>
+                          <p>1 hr 14 min</p>
+                        </div>
+                        <div class="playlist-action">
+                          <div>
+                            <button class="playlist-active">
+                              <img
+                                src="./assets/images/playlist/Play.svg"
+                                alt="play svg"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Shuffle.svg"
+                                alt="Shuffle"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Add.svg"
+                                alt="add"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Add-to-Queue.svg"
+                                alt="add to queue"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Download.svg"
+                                alt="Download"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Share.svg"
+                                alt="share"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/More-Options.svg"
+                                alt="More-Options"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="media-card albums__section-card">
+                      <div class="media-card__img card__img--wrapper">
+                        <img
+                          src="./assets/images/artist/Frame1.png"
+                          alt="music card"
+                        />
+                      </div>
+                      <div
+                        class="table__section--header album__section--header"
+                      >
+                        <h2>Daft Punk Mix</h2>
+                        <div class="playlist-meta">
+                          <p>2023</p>
+                          <span></span>
+                          <p>22 songs</p>
+                          <span></span>
+                          <p>1 hr 14 min</p>
+                        </div>
+                        <div class="playlist-action">
+                          <div>
+                            <button class="playlist-active">
+                              <img
+                                src="./assets/images/playlist/Play.svg"
+                                alt="play svg"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Shuffle.svg"
+                                alt="Shuffle"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Add.svg"
+                                alt="add"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Add-to-Queue.svg"
+                                alt="add to queue"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Download.svg"
+                                alt="Download"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/Share.svg"
+                                alt="share"
+                              />
+                            </button>
+                            <button>
+                              <img
+                                src="./assets/images/playlist/More-Options.svg"
+                                alt="More-Options"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <!-- Your top mixes section -->
+                <div class="artis__content-mobile">
+                  <div class="search__filter--wrapper--mobile">
+                    <div class="search__page-mobile-input">
+                      <input
+                        type="text"
+                        name="search"
+                        placeholder="Search library"
+                        class="search"
+                      />
+                      <img
+                        src="./assets/images/header icons/search.png"
+                        alt="Search icon"
+                        class="nav-icon"
+                      />
+                    </div>
+                    <button>
+                      <img
+                        src="./assets/images/liked-song-page/pluse.svg"
+                        alt="pluse"
+                      />
+                    </button>
+                  </div>
+                  <div class="liked__song--actions">
+                    <div class="penned__icon-wraper">
+                      <button>
+                        <img
+                          src="./assets/images/liked-song-page/GridViewIcon.svg"
+                          alt="GridViewIcon"
+                        />
+                      </button>
+                      <span>Recent</span>
+                    </div>
+                    <div class="penned__icon-wraper">
+                      <button>
+                        <img
+                          src="./assets/images/pinned-page/FilterIcon.svg"
+                          alt="Filter-icon"
+                        />
+                      </button>
+                      <span>Group</span>
+                    </div>
+                  </div>
+                  <div class="liked__song--mobile-content">
+                    <div>
+                      <p>Playlists</p>
+                      <button>
+                        <img
+                          src="./assets/images/liked-song-page/arrow-right.svg"
+                          alt="arrow-right"
+                        />
+                      </button>
+                    </div>
+                    <div>
+                      <p>Playlists by Spotify</p>
+                      <button>
+                        <img
+                          src="./assets/images/liked-song-page/arrow-right.svg"
+                          alt="arrow-right"
+                        />
+                      </button>
+                    </div>
+
+                    <div>
+                      <p>Albums</p>
+                      <button>
+                        <img
+                          src="./assets/images/liked-song-page/arrow-right.svg"
+                          alt="arrow-right"
+                        />
+                      </button>
+                    </div>
+
+                    <div>
+                      <p>Folders</p>
+                      <button>
+                        <img
+                          src="./assets/images/liked-song-page/arrow-right.svg"
+                          alt="arrow-right"
+                        />
+                      </button>
+                    </div>
+
+                    <div>
+                      <p>Artists</p>
+                      <button>
+                        <img
+                          src="./assets/images/liked-song-page/arrow-right.svg"
+                          alt="arrow-right"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- main page main content -->
+      </div>
+      <!-- footer section -->
+      <div class="layout__footer">
+        <div>
+          <div class="Playback-controls">
+            <div class="Playback__controls--Progress-bar">
+              <a href="./get-lucky.html" class="play-button">
+                <img
+                  src="./assets/images/footer-icons/Play-Pause.svg"
+                  alt="Play-Pause img"
+                />
+              </a>
+              <button>
+                <img
+                  src="./assets/images/footer-icons/Previous-track.svg"
+                  alt="Previous-track img"
+                />
+              </button>
+              <button>
+                <img
+                  src="./assets/images/footer-icons/Next-Track.svg"
+                  alt="Next-Track img"
+                />
+              </button>
+              <button>
+                <img
+                  src="./assets/images/footer-icons/Shuffle.svg"
+                  alt="Shuffle img"
+                />
+              </button>
+              <button>
+                <img
+                  src="./assets/images/footer-icons/player-nowplaying.svg"
+                  alt="player-nowplaying img"
+                />
+              </button>
+
+              <div class="audio-slider-container">
+                <span class="time-display">2:23</span>
+                <input
+                  type="range"
+                  class="custom-range"
+                  min="0"
+                  max="100"
+                  value="50"
+                />
+                <span class="time-display">4:45</span>
+              </div>
+              <button>
+                <img
+                  src="./assets/images/footer-icons/volume.svg"
+                  alt="volume"
+                />
+              </button>
+            </div>
+            <div class="Track-info">
+              <div class="Track__info--container">
+                <img
+                  src="./assets/images/footer-icons/music-cover.png"
+                  alt="music cover img"
+                />
+                <div>
+                  <h4>Get Lucky</h4>
+                  <span>Daft Punk</span>
+                  <p>Random Access Memories</p>
+                </div>
+              </div>
+              <div class="mobile__actions">
+                <button>
+                  <img
+                    src="./assets/images/footer-icons/player-add.svg"
+                    alt="player-add"
+                  />
+                </button>
+                <button>
+                  <img src="./assets/images/footer-icons/play.svg" alt="play" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="action__wrapper">
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-like.svg"
+                alt="player-like"
+              />
+            </button>
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-add.svg"
+                alt="player-add"
+              />
+            </button>
+
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-queue.svg"
+                alt="player-queue"
+              />
+            </button>
+
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-device.svg"
+                alt="player-device"
+              />
+            </button>
+
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-more.svg"
+                alt="player-more"
+              />
+            </button>
+            <span></span>
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-profile.svg"
+                alt="player-profile"
+              />
+            </button>
+
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-menu.svg"
+                alt="player-menu"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- footer section -->
+    </div>
+  </body>
+</html>

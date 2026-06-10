@@ -1,0 +1,66 @@
+$color-bg-primary: #060606; // Main page background
+$color-bg-secondary: #111111; // Sidebar / card background
+$color-bg-elevated: #202020; // Elevated surfaces (player, hover)\
+$color-bg-highlight: #282828; // Card hover, active states
+
+$color-brand-green: #1ed760; // Spotify green — primary action
+$color-brand-green-dark: #17a349; // Hover state for green
+
+$color-text-primary: #e0e0e0; // Main text
+$color-text-secondary: #898989; // Subtitles, descriptions
+$color-text-muted: #323232; // Inactive / disabled
+
+$color-border: #1a1a1a; // Dividers, borders
+$color-active-bg: #6e6e6e; // Active nav item background
+
+$white-theme-bg: #ffffff; // White theme background
+$white-theme-text: #000000; // White theme text color   
+
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px;
+
+$font-family-base: "Satoshi", sans-serif;
+
+$font-size-xs: 11px;
+$font-size-sm: 13px;
+$font-size-base: 14px;
+$font-size-md: 16px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;
+$font-size-xxl: 32px;
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$nav-width-normal: 200px;
+$nav-width-medium: 350px;
+$line-height-base: 1.5;
+
+$sidebar-width: 240px;
+$player-height: 72px;
+$header-height: 64px;
+
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 16px;
+$radius-pill: 5px;
+$radius-circle: 50%;
+
+$z-sidebar: 100;
+$z-header: 200;
+$z-player: 300;
+
+$transition-fast: 0.15s ease;
+$transition-base: 0.25s ease;
+$transition-slow: 0.4s ease;
+
+$bp-mobile: 390px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+
+$transition-fast: 0.2s;

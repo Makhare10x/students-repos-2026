@@ -1,0 +1,107 @@
+@use "../abstracts/default" as d;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+main {
+  grid-area: main;
+}
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  margin: 1rem 0 0.5rem 0;
+  column-gap: 0.5rem;
+  overflow-x: hidden;
+  @media (max-width: 1480px) {
+    margin: 0;
+    column-gap: 0;
+  }
+}
+.main-container.active {
+  grid-template-columns: 1fr 35.8rem;
+}
+.friend-list {
+  width: 33rem;
+  font-size: 3rem;
+  border: 0.1rem solid v.$color-border;
+  border-radius: v.$radius-lg;
+  padding: 2.1rem;
+
+  @media (max-width: 1480px) {
+    display: none;
+  }
+}
+
+#friends .friend-list-active {
+  display: none;
+}
+#friends.active .friend-list-active {
+  display: block;
+}
+#friends.active img {
+  display: none;
+}
+.friend-list-action {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4.5rem;
+  p {
+    font-size: v.$text-md;
+    color: v.$color-text-primary;
+  }
+  .action {
+    @include m.flex-between;
+    gap: 2.5rem;
+    img {
+      cursor: pointer;
+    }
+  }
+}
+.friend-list-wrapper {
+  li {
+    display: flex;
+    margin-bottom: 2.5rem;
+  }
+  .friend-profile-image {
+    margin-right: 1.2rem;
+  }
+}
+.info-about-friend {
+  .friend-name {
+    font-size: v.$text-xs;
+    color: v.$color-text-primary;
+    margin-bottom: 1rem;
+  }
+  .music-name {
+    font-size: v.$text-sm;
+    color: v.$color-text-primary;
+    margin-right: 1rem;
+  }
+  .music-style {
+    font-size: v.$text-sm;
+    color: v.$color-text-secondary;
+    margin-right: 1.5rem;
+  }
+  span {
+    @include m.flex-center;
+    img {
+      margin-right: 1.5rem;
+    }
+  }
+}
+.main-content {
+  border: 0.1rem solid v.$color-border;
+  border-radius: v.$radius-lg;
+  padding: 1.2rem 2.5rem;
+  width: calc(100vw - 28.6rem);
+  overflow-y: auto;
+  transition: width 0.3s ease-in-out;
+
+  @media (max-width: 1480px) {
+    width: auto;
+    padding: 0 0.7rem;
+    border: none;
+  }
+}
+.main-content.active {
+  width: calc(100vw - 62rem);
+}

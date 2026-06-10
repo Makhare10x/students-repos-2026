@@ -1,0 +1,35 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+$shared-cards-row-tablet-gap: 2.2rem;
+$shared-cards-row-desktop-gap: 2.6rem;
+
+.cards-row {
+  @include flex-center(row, $container-padding-mobile, flex-start, stretch);
+  overflow-x: auto;
+  padding: 1.8rem 0 0.8rem;
+  @include hide-scrollbar;
+}
+
+@include respond(tablet) {
+  .cards-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: $shared-cards-row-tablet-gap;
+    overflow-x: auto;
+    padding: 1.8rem 0 0;
+  }
+}
+
+@include respond(desktop) {
+  .cards-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: $shared-cards-row-desktop-gap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 2rem 0 0.4rem;
+
+    @include hide-scrollbar;
+  }
+}

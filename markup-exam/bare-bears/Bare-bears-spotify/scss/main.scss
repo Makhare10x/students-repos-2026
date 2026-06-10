@@ -1,0 +1,59 @@
+@use "./abstracts/variables";
+@use "./abstracts/functions";
+@use "./abstracts/mixins";
+
+@use "./base/reset";
+@use "./base/fonts";
+
+@use "./layout/layout";
+@use "./layout/side-bar";
+@use "./layout/header";
+@use "./layout/main-content";
+@use "./layout/player";
+
+@use "./pages/discover";
+@use "./pages/song";
+@use "./pages/artist";
+@use "./pages/artist-about";
+@use "./pages/artist-albums";
+@use "./pages/artist-albums-list";
+@use "./pages/search";
+@use "./pages/album";
+@use "./pages/playlist";
+@use "./pages/podcast";
+@use "./pages/episode";
+@use "./pages/library";
+@use "./pages/library-list";
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 1240px) {
+  .mobile-only {
+    display: inline;
+  }
+  .desktop-only {
+    display: none;
+  }
+  body {
+    display: block;
+    margin: 0;
+  }
+  .sidebar {
+    display: none;
+  }
+  .top-header {
+    grid-area: unset;
+  }
+  .main-content {
+    grid-area: unset;
+
+    > * {
+      min-height: auto;
+    }
+  }
+  .player-bar {
+    grid-area: unset;
+  }
+}

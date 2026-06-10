@@ -1,0 +1,136 @@
+/* მთლიანი კონტეინერი */
+.episode-page-full {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #5c3d2e 0%, #121212 100%);
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  padding: 60px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ზედა სამი სვეტის განლაგება */
+.ep-main-wrapper {
+  display: flex;
+  align-items: flex-end; /* რომ ყველაფერი ქვედა ხაზზე გასწორდეს */
+  gap: 40px;
+  margin-bottom: 60px;
+  flex-grow: 1; /* რომ მაქსიმალური ადგილი დაიკავოს */
+}
+
+/* მარცხენა სვეტი */
+.ep-left-col {
+  flex: 1.5;
+}
+
+.ep-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #b3b3b3;
+}
+
+.ep-title-main {
+  font-size: 52px;
+  font-weight: 900;
+  margin: 20px 0;
+  line-height: 1.1;
+}
+
+.follow-outline-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* შუა სვეტი (ფოტო) */
+.ep-center-col {
+  flex: 2.5;
+}
+
+.image-container {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+}
+
+.play-on-image {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  width: 70px;
+  height: 70px;
+  background: #1db954;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* მარჯვენა სვეტი (ბარათი) */
+.ep-right-col {
+  flex: 1;
+}
+
+.side-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.side-card-top {
+  font-size: 10px;
+  font-weight: bold;
+  color: #b3b3b3;
+}
+
+.side-img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+/* ქვედა ნაწილი */
+.ep-footer-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ep-full-desc {
+  color: #b3b3b3;
+  max-width: 700px;
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+.green-play-btn {
+  background: #1db954;
+  padding: 10px 14px;
+  border-radius: 50%;
+  color: black;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.all-episodes-btn {
+  background: transparent;
+  border: 1px solid #727272;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}

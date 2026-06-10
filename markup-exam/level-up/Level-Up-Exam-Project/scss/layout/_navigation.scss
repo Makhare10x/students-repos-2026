@@ -1,0 +1,71 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 259px; 
+    height: 100vh;
+    background-color: variables.$bg-color;
+    // padding: 0.8rem 1.6rem; 
+}
+
+.sidebar-actions {
+   padding: 0.8rem 1.6rem; 
+}
+
+
+.sidebar-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 1.7rem;
+    cursor: pointer;
+    @include mixins.icon-hover;
+    transition: background-color 0.2s ease;
+}
+
+
+.sidebar-action:hover {
+    background-color: variables.$button-inactive;
+    border-radius: 0.8rem;
+}
+
+
+.action-name {
+    display: flex;
+    align-items: center;
+    color: variables.$header-text; 
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+
+.action-icon {
+    // max-width: 2.4rem;
+    // height: auto;
+    margin-right: 1.8rem; 
+    object-fit: contain;
+}
+
+
+.dropdown-button {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-button img {
+    width: 1.8rem; 
+    height: 1.8rem;
+    color: variables.$header-text;
+}
+
+
+@media (max-width: 60rem) {
+
+    .sidebar {
+        display: none;
+    }
+}
+

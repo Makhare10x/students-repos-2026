@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="./css/main.css"/>
+  </head>
+  <body class="inner-page">
+    <div class="page-wrapper">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <ul class="sidebar-list">
+            <li class="sidebar-item">
+              <a href="/library.html">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Library.png"
+                  alt=""
+                />
+                <span>My Library</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="#">
+                <img class="sidebar-icon" src="./assets/icons/Pin.png" alt="" />
+                <span>Pins</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="#">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Playlist.png"
+                  alt=""
+                />
+                <span>Playlists</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="liked-songs.html">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Like.png"
+                  alt=""
+                />
+                <span>Liked Songs</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="#">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Save.png"
+                  alt=""
+                />
+                <span>Saves</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="#">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Album.png"
+                  alt=""
+                />
+                <span>Albums</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="#">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Folder.png"
+                  alt=""
+                />
+                <span>Folders</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="#">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Podcast.png"
+                  alt=""
+                />
+                <span>Podcasts</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="#">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Audiobook.png"
+                  alt=""
+                />
+                <span>Audiobooks</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="#">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Artist.png"
+                  alt=""
+                />
+                <span>Artists</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <header class="site-header">
+        <nav class="header-content">
+          <a href="index.html" class="nav-items" id="inactive-background">
+            <img src="./assets/icons/home-gray.png" alt="Home icon" />
+            <span>Home</span>
+          </a>
+          <a href="#" class="nav-items">
+            <img src="./assets/icons/discovery.png" alt="Discover icon" />
+            <span>Discover</span>
+          </a>
+          <a href="#" class="nav-items" id="active-background">
+            <img src="./assets/icons/search-white.png" alt="Search icon" />
+            <span class="active-background">Search...</span>
+          </a>
+        </nav>
+        <div class="header-actions">
+          <img src="./assets/icons/notification.png" alt="Notification icon" />
+          <img src="./assets/icons/lock.png" alt="lock icon" />
+          <button class="contact-btn turn-white-btn">
+            <img src="./assets/icons/contacts.png" alt="friends icon" />
+          </button>
+
+          <img src="./assets/icons/settings.png" alt="settings icon" />
+          <img src="./assets/icons/profile.png" alt="user profile icon" />
+        </div>
+      </header>
+      <aside class="toggledbar">
+        <div class="friends-activity">
+          <h3>Friends Activity</h3>
+          <div class="toggled-right">
+            <img
+              src="./assets/icons/Name=Add Friend, Filled=No.png"
+              alt="add friend icon"
+            />
+            <img
+              src="./assets/icons/Name=Close, Filled=No.png"
+              alt="close icon"
+            />
+          </div>
+        </div>
+        <div class="friends-list">
+          <div class="friends-listening">
+            <img
+              src="./assets/icons/friend4.png"
+              class="logo"
+              alt="friend profile picture"
+            />
+            <div class="friends-info">
+              <h5>FriendlyMusicListener</h5>
+              <div class="friends-playlist">
+                <img src="./assets/icons/Vector.png" alt="icon" />
+                <span><strong>Goosebumps</strong></span>
+                <img src="./assets/icons/Ellipse 27.png" alt="dot" />
+                <span><strong>Travis Scott</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="friends-listening">
+            <img
+              src="./assets/icons/friend1.png"
+              class="logo"
+              alt="friend profile picture"
+            />
+            <div class="friends-info">
+              <h5>AverageMusicEnjoyer</h5>
+              <div class="friends-playlist">
+                <img src="./assets/icons/Vector.png" alt="icon" />
+                <span><strong>Get Lucky</strong></span>
+                <img src="./assets/icons/Ellipse 27.png" alt="dot" />
+                <span><strong>Daft Punk</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="friends-listening">
+            <img
+              src="./assets/icons/friend2.png"
+              class="logo"
+              alt="friend profile picture"
+            />
+            <div class="friends-info">
+              <h5>MusicEnthusiast</h5>
+              <div class="friends-playlist">
+                <span>1h</span>
+                <span><strong>would he</strong></span>
+                <img src="./assets/icons/Ellipse 27.png" alt="dot" />
+                <span><strong>joji</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="friends-listening">
+            <img
+              src="./assets/icons/friend3.png"
+              class="logo"
+              alt="friend profile picture"
+            />
+            <div class="friends-info">
+              <h5>FriendlyMusicListener</h5>
+              <div class="friends-playlist">
+                <span>6h</span>
+                <span><strong>Rockstar</strong></span>
+                <img src="./assets/icons/Ellipse 27.png" alt="dot" />
+                <span><strong>Post Malone</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <section class="mobile-search-page">
+    <div class="mobile-search-top">
+      <div class="mobile-search-bar">
+        <input type="text" placeholder="What do you want to play?" />
+        <img src="./assets/icons/Name=Search, Filled=No.png" alt="search icon" />
+      </div>
+
+      <button class="mobile-camera-btn">
+        <img src="./assets/icons/Name=Camera, Filled=No.png" alt="camera icon" />
+      </button>
+    </div>
+
+    <h2 class="mobile-page-title">Browse all</h2>
+    <h3 class="mobile-section-subtitle">Discover</h3>
+
+    <div class="mobile-browse-grid">
+      <div class="mobile-browse-card card-blue">
+        <h4>Made For You</h4>
+        <img src="./assets/images/image 2.png" alt="Made For You" />
+      </div>
+
+      <div class="mobile-browse-card card-orange">
+        <h4>New Releases</h4>
+        <img src="./assets/images/image 3.png" alt="New Releases" />
+      </div>
+
+      <div class="mobile-browse-card card-blue-2">
+        <h4>Spotify Classics</h4>
+        <img src="./assets/images/image 13.png" alt="Spotify Classics" />
+      </div>
+
+      <div class="mobile-browse-card card-purple">
+        <h4>Charts</h4>
+        <img src="./assets/images/image 4.png" alt="Charts" />
+      </div>
+
+      <div class="mobile-browse-card card-pink">
+        <h4>Trending</h4>
+        <img src="./assets/images/image 5.png" alt="Trending" />
+      </div>
+
+      <div class="mobile-browse-card card-lilac">
+        <h4>Discover</h4>
+        <img src="./assets/images/image 6.png" alt="Discover" />
+      </div>
+
+      <div class="mobile-browse-card card-gray">
+        <h4>Spotify Singles</h4>
+        <img src="./assets/images/image 7.png" alt="Spotify Singles" />
+      </div>
+
+      <div class="mobile-browse-card card-brown">
+        <h4>Decades</h4>
+        <img src="./assets/images/image 8.png" alt="Decades" />
+      </div>
+    </div>
+    <h3 class="mobile-section-subtitle mobile-genres-title">Genres</h3>
+    <div class="mobile-browse-grid">
+      <div class="mobile-browse-card card-green">
+        <h4>Made For You</h4>
+        <img src="./assets/images/image 13 (1).png" alt="Made For You" />
+      </div>
+
+      <div class="mobile-browse-card card-orange2">
+        <h4>New Releases</h4>
+        <img src="./assets/images/image 13 (2).png" alt="New Releases" />
+      </div>
+      <div class="mobile-browse-card card-purple2">
+        <h4>New Releases</h4>
+        <img src="./assets/images/image 13 (3).png" alt="New Releases" />
+      </div>
+      <div class="mobile-browse-card card-swamp">
+        <h4>New Releases</h4>
+        <img src="./assets/images/image 13 (4).png" alt="New Releases" />
+      </div>
+      <div class="mobile-browse-card card-red">
+        <h4>New Releases</h4>
+        <img src="./assets/images/image 13 (5).png" alt="New Releases" />
+      </div>
+      <div class="mobile-browse-card card-blue3">
+        <h4>New Releases</h4>
+        <img src="./assets/images/image 13 (6).png" alt="New Releases" />
+      </div>
+      <div class="mobile-browse-card card-red">
+        <h4>New Releases</h4>
+        <img src="./assets/images/image 13 (7).png" alt="New Releases" />
+      </div>
+      <div class="mobile-browse-card card-lightblue">
+        <h4>New Releases</h4>
+        <img src="./assets/images/image 13 (8).png" alt="New Releases" />
+      </div>
+      </div>
+  </section>
+      <section class="section-for-search">
+          <div class="section-header">
+            <h2 class="section-title">Recent Searches</h2>
+            <div class="section-actions">
+              <button class="section-action-btn">
+                <img
+                  src="./assets/icons/Name=More, Filled=No.png"
+                  alt="More options icon"
+                />
+              </button>
+            </div>
+          </div>      
+            <div class="mix-grid">
+            <div class="artist-card">
+              <div class="artist-img">
+                <img src="./assets/images/daft.png" alt="Daft Punk" />
+                <button class="remove-btn">×</button>
+              </div>
+              <p class="artist-card__desc">Daft Punk</p>
+            </div>
+            <div class="artist-card">
+              <div class="artist-img">
+                <img src="./assets/images/davidbowie.png" alt="David Bowie" />
+                <button class="remove-btn">×</button>
+              </div>
+              <p class="artist-card__desc">David Bowie</p>
+            </div>
+            <div class="mix-card">
+              <div class="mix-card__art">
+                <img src="./assets/images/museframe.png" alt="Muse" />
+                <button class="remove-btn">×</button>
+              </div>
+              <div class="mix-card__title-row">
+                <h3 class="mix-card__title">Black Holes and...</h3>
+                <span class="mix-card__secondary">13</span>
+              </div>
+              <p class="mix-card__desc">Muse</p>
+            </div>
+          </div>
+        </section>
+        <h2>Browse all</h2>
+        <div class="discover-banner">          
+          <div class="discover-info">
+               <h2>Discover</h2>     
+              <div class="discover-arrows">
+                <img src="./assets/icons/Name=Arrow-Left, Filled=No.png" class="img-opacity" alt="arrow left">
+                <img src="./assets/icons/Name=Arrow-Right, Filled=No.png" alt="arrow right">
+              </div>
+          </div>
+        </div>
+          
+            <div class="discover-content">
+              <div class="square">
+                <h2>made for you</h2>
+                <img src="./assets/images/image 2.png" alt="made for you" />
+              </div>
+              <div class="square">
+                <h2>new releases</h2>
+                <img src="./assets/images/image 3.png" alt="new releases" />
+              </div>
+              <div class="square">
+                <h2>spotify classics</h2>
+                <img src="./assets/images/image 13.png" alt="spotify classics" />
+              </div>
+              <div class="square">
+                <h2>charts</h2>
+                <img src="./assets/images/image 4.png" alt="charts" />
+              </div>
+              <div class="square">
+                <h2>trending</h2>
+                <img src="./assets/images/image 5.png" alt="trending" />
+              </div>
+              <div class="square">
+                <h2>discover</h2>
+                <img src="./assets/images/image 6.png" alt="discover" />
+              </div>
+              <div class="square">
+                <h2>spotify singles</h2>
+                <img src="./assets/images/image 7.png" alt="spotify singles" />
+              </div>
+              <div class="square">
+                <h2>decades</h2>
+                <img src="./assets/images/image 8.png" alt="decades" />
+              </div>
+            </div>
+            <div class="discover-banner">
+              <div class="discover-banner">          
+                <div class="discover-info">
+                  <h2>Genres</h2>     
+                  <div class="discover-arrows">
+                    <img src="./assets/icons/Name=Arrow-Left, Filled=No.png" class="img-opacity" alt="arrow left">
+                    <img src="./assets/icons/Name=Arrow-Right, Filled=No.png"alt="arrow right">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="genres-content">
+              <div class="square">
+                <h2>Pop</h2>
+                <img src="./assets/images/image 13 (1).png" alt="pop" />
+              </div>
+              <div class="square">
+                <h2>Country</h2>
+                <img src="./assets/images/image 13 (2).png" alt="country" />
+              </div>
+              <div class="square">
+                <h2>Hip-Hop</h2>
+                <img src="./assets/images/image 13 (3).png" alt="hip-hop" />
+              </div>
+              <div class="square">
+                <h2>Rock</h2>
+                <img src="./assets/images/image 13 (4).png" alt="rock" />
+              </div>
+              <div class="square">
+                <h2>Indie</h2>
+                <img src="./assets/images/image 13 (5).png" alt="indie" />
+              </div>
+              <div class="square">
+                <h2>Punk</h2>
+                <img src="./assets/images/image 13 (6).png" alt="punk" />
+              </div>
+              <div class="square">
+                <h2>Metal</h2>
+                <img src="./assets/images/image 13 (7).png" alt="metal" />
+              </div>
+              <div class="square">
+                <h2>Instrumental</h2>
+                <img src="./assets/images/image 13 (8).png" alt="instrumental" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="mobile-player">
+        <div class="mobile-player__track">
+          <img
+            class="mobile-player__cover"
+            src="./assets/images/daftpankxxs.png"
+            alt="Get Lucky cover"
+          />
+          <div class="mobile-player__info">
+            <h4>Get Lucky (feat. Pharrell Williams...)</h4>
+            <p>Daft Punk</p>
+          </div>
+        </div>
+
+        <div class="mobile-player__actions">
+          <button class="mobile-player__btn" aria-label="Add to library">
+            <img
+              src="./assets/icons/Name=Add to Playlist, Filled=No.png"
+              alt="Add icon"
+            />
+          </button>
+
+          <button class="mobile-player__btn" aria-label="Play track">
+            <img
+              src="./assets/icons/Name=Play Simple, Filled=No.png"
+              alt="Play icon"
+            />
+          </button>
+        </div>
+
+        <div class="mobile-player__progress"></div>
+      </section>
+
+      <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+        <a href="./index.html" class="mobile-bottom-nav__item">
+          <img
+            src="./assets/icons/home-gray.png"
+            alt="Home icon"
+          />
+          <span>Home</span>
+        </a>
+
+        <a href="#" class="mobile-bottom-nav__item">
+          <img src="./assets/icons/discovery.png" alt="Discover icon" />
+          <span>Discover</span>
+        </a>
+
+        <a href="./search.html" class="mobile-bottom-nav__item">
+          <img src="./assets/icons/Name=Search, Filled=Yes.png" alt="Search icon" />
+          <span>Search</span>
+        </a>
+
+        <a href="/library.html" class="mobile-bottom-nav__item">
+          <img src="./assets/icons/Library.png" alt="Library icon" />
+          <span>Library</span>
+        </a>
+
+        <a href="#" class="mobile-bottom-nav__item">
+          <img
+            src="./assets/icons/Name=User, Filled=No.png"
+            alt="Profile icon"
+          />
+          <span>Me</span>
+        </a>
+      </nav>
+          
+          
+      </main>
+      <footer class="player">
+        <div class="player-left">
+          <button class="play-btn">
+            <img src="./assets/icons/pause.png" alt="play" />
+          </button>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/prev.left.png" alt="prev" />
+          </button>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/prev.right.png" alt="next" />
+          </button>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/shuffle.png" alt="shuffle" />
+          </button>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/repeat.png" alt="repeat" />
+          </button>
+
+          <span class="time">2:23</span>
+
+          <div class="progress">
+            <div class="progress-fill"></div>
+          </div>
+
+          <span class="time">4:45</span>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/volume.png" alt="volume" />
+          </button>
+        </div>
+
+        <div class="player-song">
+          <img class="song-cover" src="./assets/icons/image.png" alt="cover" />
+
+          <div class="song-info">
+            <h4>Get Lucky</h4>
+            <p>Daft Punk</p>
+            <span>Random Access Memories</span>
+          </div>
+        </div>
+
+        <div class="player-right">
+          <button class="icon-btn">
+            <img src="./assets/icons/like.png" alt="heart" />
+          </button>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/Name=Add to Playlist, Filled=No.png" alt="add" />
+          </button>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/queue.png" alt="queue" />
+          </button>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/device.png" alt="device" />
+          </button>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/Name=More, Filled=No.png" alt="more" />
+          </button>
+
+          <div class="divider"></div>
+
+          <button class="blue-btn">
+            <img src="./assets/icons/blue.png" alt="blue" />
+          </button>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/menu.png" alt="menu" />
+          </button>
+        </div>
+      </footer>
+      
+    </div>
+    <script>
+      const contactBtn = document.querySelector(".contact-btn");
+      const toggledBar = document.querySelector(".toggledbar");
+      const closeBtn = document.querySelector(".toggled-right img:nth-child(2)");
+      const turnWhiteBtn = document.querySelector(".turn-white-btn");
+      const whiteThemeBtn = document.querySelector(".white-theme-btn");
+
+      contactBtn.addEventListener("click", () => {
+        toggledBar.classList.toggle("toggledbar--active");
+      });
+      closeBtn.addEventListener("click", () => {
+        toggledBar.classList.remove("toggledbar--active");
+      });
+      turnWhiteBtn.addEventListener("click", () => {
+        if (turnWhiteBtn.style.filter === "brightness(0) invert(1)") {
+          turnWhiteBtn.style.filter = "none";
+        } else {
+          turnWhiteBtn.style.filter = "brightness(0) invert(1)";
+        }
+      });
+      whiteThemeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("white-theme-btn");
+      });
+    </script>
+
+  </body>
+</html>

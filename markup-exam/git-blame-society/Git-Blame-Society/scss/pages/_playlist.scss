@@ -1,0 +1,61 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+@use "sass:map";
+
+
+// Styles for Daft Punk Playlist
+
+.playlist {
+    background: linear-gradient(180deg, rgba(59, 79, 182, 0.45) 0%, rgba(6, 6, 6, 0.45) 100%);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.playlist-section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.other-artists {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+.other-artists-info {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+.aside-btns {
+    @include m.flex;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.aside-btn-wrapper {
+    margin-top: 3rem;
+}
+
+.large {
+    font-size: 3.6rem;
+    font-weight: map.get(v.$font-weight, bold);
+}
+
+.random {
+    background: linear-gradient(180deg, rgba(33, 38, 42, 0.45) 0%, rgba(6, 6, 6, 0.45) 100%);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}

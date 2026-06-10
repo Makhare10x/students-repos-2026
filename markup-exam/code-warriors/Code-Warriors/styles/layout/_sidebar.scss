@@ -1,0 +1,396 @@
+//  sidebar-ის მენიუსთვის
+
+.sidebar{
+width:$sidebar-width;
+flex-shrink:0;
+background-color:$color-sidebar;
+border-right:0.1rem solid $color-border;
+padding:$space-xxl $space-md;
+display:flex;
+flex-direction:column;
+}
+
+.sidebar-nav{
+flex:1;
+overflow-y:auto;
+}
+
+.sidebar-nav::-webkit-scrollbar{
+display:none;
+}
+  
+  .sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+  }
+  
+  .sidebar-item {
+    list-style: none;
+  }
+  
+  .sidebar-link {
+    // all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding:0.8rem 1.2rem;
+    border-radius: $radius-sm;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    color: $color-text-secondary;
+    font-size: 1.4rem;
+    gap:1.2rem;
+
+    cursor: pointer;
+    transition: $transition-base;
+        &:hover {
+      color: $color-text-primary;
+    } 
+  }
+
+  .sidebar-icon svg {
+    fill: $color-text-secondary;
+    transition: 0.2s;
+    margin-right: 0.8rem;
+  }
+
+    //  პინის გასამწვანებლად
+
+  .sidebar-link:hover .sidebar-icon svg {
+    fill: $color-accent;
+  }
+
+  .sidebar-icon,
+  .sidebar-right-icon {
+    opacity: 0.6;
+    @include flex-center;
+  }
+
+  .sidebar-icon img,
+  .sidebar-right-icon img {
+    display: block;
+    width: 2.2rem;
+    height: 2.2rem;
+    opacity: 0.6;
+    transition: $transition-base;
+  }
+
+  button.sidebar-link:hover img{
+    opacity: 1;
+  }
+    
+  .sidebar-text {
+    flex: 1;
+    text-align: left;
+    font-weight:500; 
+    @include truncate;
+  }
+  
+  // playlist-ის მენიუსთვის
+
+.sidebar-item {
+  position: relative;
+
+  .sidebar-submenu {
+    display: none;         
+    flex-direction: column;
+    padding-left: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  &:hover .sidebar-submenu {
+    display: flex;         
+  }
+
+  .sidebar-right-icon img {
+    transition: transform 0.3s;
+  }
+
+  &:hover .sidebar-right-icon img {
+    transform: rotate(90deg); 
+  }
+}
+
+.submenu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+  font-size: 1.3rem;
+  color: $color-text-secondary;
+
+  &:hover {
+    color: $color-text-primary;
+  }
+}
+
+  // liked-song.html-ისთვის   
+
+body {
+  background: $color-sidebar;
+  color: $color-text-primary;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 4rem;
+}
+
+//  ცხრილის ზემოთ აიქონებისთვის
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  color: $color-text-secondary;
+}
+
+.left-icons img {
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.4rem;
+}
+
+.right-icons img {
+  cursor: pointer;
+}
+
+.recent {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+// filter-all-ის ფანჯარისთვის 
+
+.filter {
+  position: relative;
+  display: inline-block;
+}
+
+.filter-all {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+
+.filter-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  background: $color-bg-primary;
+  padding: 1rem;
+  border-radius: 0.8rem;
+
+  list-style: none;
+  display: none;
+}
+
+.filter-menu li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: $color-text-primary;
+}
+
+.filter-menu li:hover {
+  background: $color-bg-elevated;
+}
+
+.filter:hover .filter-menu {
+  display: block;
+}
+
+//  ხაზისთვის
+
+.filter-menu hr {
+  border: none;
+  border-top: 1px solid $color-bg-elevated;
+  margin: 1rem 0;
+}
+
+ // group ისთვის
+
+.group-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.group-li {
+  color: $color-text-primary;
+}
+
+.switch {
+  width: 4rem;
+  height: 2rem;
+  background: $color-active;
+  border-radius: 2rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.slider {
+  width: $space-md;
+  height: $space-md;
+  background: $color-text-primary;
+  border-radius: 50%;
+  position: absolute;
+  top: $space-xs;
+  left: $space-xs;
+  transition: 0.3s;
+}
+
+//  გასამწვანებლად
+
+.group-toggle:hover .switch {
+  background: $color-accent; 
+}
+
+.group-toggle:hover .slider {
+  transform: translateX($space-md);
+}
+
+
+// ცხრილისთვის
+
+.playlist {
+  display: table-cell;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th, td {
+  vertical-align: top;
+}
+
+th {
+  vertical-align: top;
+  padding: 0.5rem 1rem;
+  color: $color-text-secondary;
+  font-size: 1.8rem;
+  text-align: left;
+  border-bottom: 1px solid $color-active;
+}
+
+td {
+  font-size: 1.4rem;
+  padding: 1rem 1rem;
+}
+
+  //  Row hover 
+  
+.song-row {
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.song-row:hover {
+  background-color: $color-bg-elevated;
+  // ზოლი ჰოვერზე
+  border-bottom: 1px solid $color-player;
+}
+
+ //  Song
+
+.song {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.song img {
+  width: 4rem;
+  height :4rem;
+  object-fit: cover;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.artist {
+  font-size: 1.4rem;
+  color: $color-text-secondary;
+}
+
+
+//  Heart + Plus + More 
+.heart-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+// Heart + Plus + More გვერდულად
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding-right: 4rem;
+}
+
+.actions img {
+  width: 2.5rem;  
+  height: 2.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin-right: 4rem;
+}
+
+.actions img:hover {
+  transform: scale(1.2);
+}
+
+// Heart ყოველთვის ხილული
+.like-btn {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+}
+
+//  Play-circle მარჯვნივ 
+
+.play-circle {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid $color-text-secondary;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+  position: relative;
+  margin-left: auto;
+}
+
+.play-circle.active {
+  background-color: $color-accent;
+  border-color: $color-accent;
+}
+
+// show sidebar on desktop 
+
+@include respond(desktop) {
+  .sidebar {
+    display: block;
+  }
+}

@@ -1,0 +1,270 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+@use "sass:map";
+
+.player-controls {
+    @include m.flex-center($direction: column-reverse);
+    column-gap: 5rem;
+    margin-top: 5rem;
+
+    &__container {
+        @include m.flex-center(
+            $justify: space-evenly,
+            $align: center,
+            $direction: row
+        );
+        gap: 4.6rem;
+        margin-top: -3rem;
+
+        @media (min-width: 991px) {
+            margin-top: 1rem;
+        }
+    }
+
+    &__shuffle {
+        img {
+            max-width: 3.75rem;
+            min-height: 3.75rem;
+            margin-left: 1rem;
+
+            @media (min-width: 991px) {
+                max-width: 7rem;
+                min-height: 7rem;
+            }
+        }
+    }
+
+    &__prev {
+        img {
+            max-width: 2.917rem;
+            min-height: 2.917rem;
+
+            @media (min-width: 991px) {
+                max-width: 6rem;
+                min-height: 6rem;
+            }
+        }
+    }
+
+    &__pause {
+        width: 5rem;
+        height: 5rem;
+        background-color: v.$primary;
+        border-radius: 50%;
+        @include m.flex-center($justify: center, $align: center);
+        img {
+            @include m.flex-center($justify: center, $align: center);
+            @media (min-width: 991px) {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+
+        @media (min-width: 991px) {
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+
+    &__next {
+        img {
+            max-width: 2.917rem;
+            min-height: 2.917rem;
+            @media (min-width: 991px) {
+                max-width: 6rem;
+                min-height: 6rem;
+            }
+        }
+    }
+
+    &__repeat {
+        img {
+            max-width: 2.5rem;
+            min-height: 2.083rem;
+            margin-right: 1rem;
+
+            @media (min-width: 991px) {
+                max-width: 5rem;
+                min-height: 5rem;
+            }
+        }
+    }
+}
+
+.player-bottom {
+    @include m.flex-center($direction: row, $justify: center);
+    margin-top: 3.7rem;
+
+    &__container {
+        @include m.flex-center($justify: space-around, $align: center);
+        flex-wrap: wrap;
+
+        gap: 5.5rem;
+        padding-bottom: 5rem;
+
+        @media (min-width: 991px) {
+            display: none;
+        }
+    }
+}
+
+.music-playlist {
+    @include m.playlist-overlay;
+
+    &__top {
+        @include m.flex-center(
+            $direction: row,
+            $justify: space-between,
+            $align: center
+        );
+
+        .list-icon {
+            min-height: 1.01rem;
+            pointer-events: none;
+        }
+    }
+
+    &__toggle {
+        @include m.flex-center(
+            $direction: row,
+            $align: center,
+            $justify: flex-start
+        );
+        margin-left: 1.5rem;
+        gap: 1rem;
+    }
+
+    &__info {
+        @include m.flex-center(
+            $direction: row,
+            $justify: center,
+            $align: center
+        );
+
+        .info-icon {
+            min-height: 1.2rem;
+        }
+        span {
+            color: v.$primary;
+            font-size: map.get(v.$font-sizes, "body-sm");
+        }
+    }
+}
+
+#toggle-playlist:checked ~ .music-playlist {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.playlist-scroll-area {
+    @include m.flex-center($direction: column, $justify: center);
+}
+
+.playlist-header__back {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.list-item {
+    width: 100%;
+    @include m.flex-center($align: center);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    background: linear-gradient(
+        90deg,
+        rgba(56, 62, 73, 1) 100%,
+        rgba(49, 53, 63, 0.13) 100%
+    );
+}
+
+.list-item::-webkit-scrollbar {
+    display: none;
+}
+
+.playlist-content {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    @include m.flex-center($align: center);
+    color: v.$primary;
+    background: v.$bg-panel;
+
+    padding: 1rem;
+
+    img {
+        max-width: 5.3rem;
+        min-height: 5.3rem;
+        border-radius: 0.5rem;
+        object-fit: cover;
+    }
+}
+
+.remove-btn {
+    flex: 0 0 100px;
+    scroll-snap-align: end;
+    background-color: v.$bg-secondary;
+    color: v.$primary;
+    border: none;
+    height: 100%;
+    cursor: pointer;
+    font-size: 1.4rem;
+    @include m.flex-center($align: center, $justify: center);
+    gap: 0.2rem;
+    max-width: 9.941rem;
+    min-height: 5.3rem;
+
+    span {
+        font-size: map.get(v.$font-sizes, "body");
+    }
+}
+
+.randomizer {
+    @include m.flex-center($align: center);
+    margin-right: 2.5rem;
+    gap: 3rem;
+
+    img:first-child {
+        max-width: 4rem;
+    }
+
+    img:last-child {
+        max-width: 2.5rem;
+    }
+}
+
+.info {
+    margin-left: 1.2rem;
+    flex-grow: 1;
+    @include m.flex-center($direction: column, $text: left);
+
+    gap: 0.2rem;
+}
+
+.drag-handle {
+    color: v.$second-primary;
+    font-size: 2rem;
+
+    img {
+        max-width: 4.041rem;
+        min-height: 4.041rem;
+        padding-right: 1.5rem;
+        @include m.flex-center($justify: center, $align: center);
+    }
+}
+
+.title {
+    font-size: map.get(v.$font-sizes, "body");
+    font-weight: map.get(v.$font-weights, "regular");
+    color: v.$primary;
+}
+
+.artist {
+    font-size: map.get(v.$font-sizes, "body-sm");
+    color: v.$second-primary;
+    font-weight: map.get(v.$font-weights, "regular");
+}

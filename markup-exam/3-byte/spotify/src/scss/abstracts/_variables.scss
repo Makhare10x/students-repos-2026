@@ -1,0 +1,30 @@
+:root {
+  --text-color: #898989;
+  --text-clicked-color: #e0e0e0;
+  --font-family: "Satoshi";
+  --text-size: 1.4rem;
+  --font-size: 62.5%;
+  // font weight
+  --regular-weight: 400;
+  --medium-weight: 500;
+  --bold-weight: 700;
+  // font-sizes
+  --normal-text-size: 1.4rem;
+  // bg colors
+  --main-bg: #060606;
+  --header-nav-clikced-bg: #20202080;
+  --mobile-nav-h: 9.5rem;
+  --footer-h: 4.2rem; 
+  --footer-desktop-h: 9.2rem;
+  --footer-gap: 3rem; 
+  --mobile-nav-h: 9.5rem;
+}
+
+$muted-text: rgba(255, 255, 255, 0.65);
+$border-soft: rgba(32, 32, 32, 1);
+$main-backround-color: rgba(6, 6, 6);
+$main-title-color: rgba(224, 224, 224, 1);
+$main-subTitle-color: rgba(137, 137, 137, 1);
+$main-close-Button: rgba(17, 17, 17, 1);
+$main-browse-card: rgba(255, 255, 255, 1);
+$footer-bg: rgba(51, 56, 66, 1);

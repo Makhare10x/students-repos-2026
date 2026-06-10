@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles/style.css" />
+  <title>Spotify | Home</title>
+</head>
+
+<body>
+
+  <div class="content-wrapper"> <!-- this will wrap all the content on screen -->
+    <aside class="aside-wrapper"> <!-- this is menu navigation on left side-->
+
+      <nav>
+        <ul>
+          <li class="aside-library">
+            <a href="./library.html">
+              <img src="../asset/icons/Library.svg" alt="Library" />
+              My Library
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../asset/icons/Pins.svg" alt="Pins" />
+              Pins
+              <img class="pinned-music" src="../asset/icons/right-arrow.svg" />
+            </a>
+          </li>
+          <li>
+            <a href="./playlist.html">
+              <img src="../asset/icons/Playlist.svg" alt="Playlist" />
+              Playlist
+              <img class="pinned-music" src="../asset/icons/right-arrow.svg" />
+            </a>
+          </li>
+          <li>
+            <a href="./likedsongs.html">
+              <img src="../asset/icons/Liked songs.svg" alt="Liked songs" />
+              Liked songs
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../asset/icons/Saves.svg" alt="Saves" />
+              Saves
+            </a>
+          </li>
+          <li>
+            <a href="./album.html">
+              <img src="../asset/icons/Albums.svg" alt="Albums" />
+              Albums
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../asset/icons/Folders.svg" alt="Folders" />
+              Folders
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../asset/icons/Podcasts.svg" alt="Podcasts" />
+              Podcasts
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../asset/icons/Audiobooks.svg" alt="Audiobooks" />
+              Audiobooks
+            </a>
+          </li>
+          <li>
+            <a href="./artistpage.html">
+              <img src="../asset/icons/Artists.svg" alt="Artists" />
+              Artists
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <header class="header-section"> <!-- this is menu navigation on top header -->
+      <nav>
+        <ul>
+          <li class="header-home">
+            <a href="./home.html" class="primary-active-text">
+              <img src="../asset/icons/Home-active.svg" alt="Home" class="desktop-version-icon" />
+              <img src="../asset/icons/home-normal.svg" alt="home" class="mobile-version-icon">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="./discover.html">
+              <img src="../asset/icons/Discover.svg" alt="Discover" />
+              Discover
+            </a>
+          </li>
+          <li>
+            <a href="./search.html">
+              <img src="../asset/icons/Search.svg" alt="Search" />
+              Search
+            </a>
+          </li>
+          <!-- header navigation mobile version start -->
+          <div class="mobile-version-list">
+            <li>
+              <a href="./library.html">
+                <img src="../asset/icons/Library.svg" alt="Library">
+                Library
+              </a>
+            </li>
+            <li>
+              <a href="./profile.html">
+                <img src="../asset/icons/profile.svg" alt="Profile">
+                Me
+              </a>
+            </li>
+          </div>
+          <!-- header navigation mobile version finish -->
+        </ul>
+        <!-- header navigation on left -->
+        <ul>
+          <li>
+            <a href="">
+              <img src="../asset/icons/Notification.svg" alt="Notification" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../asset/icons/block.svg" alt="block" />
+            </a>
+          </li>
+          <li id="friends">
+            <a href="#">
+              <img src="../asset/icons/Groups.svg" alt="Groups" />
+              <img src="../asset/icons/Groups-active.svg" alt="Friend List" class="friend-list-active" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../asset/icons/Settings.svg" alt="Settings" />
+            </a>
+          </li>
+          <li>
+            <a href="./profile.html">
+              <img src="../asset/icons/Sprite.svg" alt="Sprite" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- გვანცას კოდი აქედან იწყება -->
+    <main class="main-container">
+      <section class="main-content">
+
+        <section class="home__top">
+
+          <div class="home__tabs">
+            <button class="home__tab focuse" data-text="All">All</button>
+            <button class="home__tab" data-text="Music">Music</button>
+            <button class="home__tab" data-text="Podcasts">Podcasts</button>
+            <button class="home__tab" data-text="Audiobooks">Audiobooks</button>
+          </div>
+
+          <button class="icon-btn">
+            <img src="../asset/icons/filter.svg" alt="Filter">
+          </button>
+
+        </section>
+
+        <!-- music section for mobile version -->
+        <section id="mobile-version-list-generator" class="mobile-version__music-wrapper">
+        </section>
+        <!-- music section for mobile version -->
+
+
+        <!-- Made For You Section -->
+        <section class="content-section">
+
+          <div class="content-section__header">
+            <h2 class="content-section__title">Made For You</h2>
+
+            <div class="content-section__actions">
+              <button class="icon-btn arrow-btn">
+                <img src="../asset/icons/preview-arrow.svg" alt="Previous">
+              </button>
+
+              <button class="icon-btn arrow-btn">
+                <img src="../asset/icons/next-arrow.svg" alt="Next">
+              </button>
+
+              <button class="icon-btn">
+                <img src="../asset/icons/threedots.svg" alt="More">
+              </button>
+            </div>
+          </div>
+          <div id="music-container" class="card-flex"></div>
+        </section>
+
+        <!-- Your Top Mixes Section -->
+        <section class="content-section">
+
+          <div class="content-section__header">
+            <h2 class="content-section__title">Your Top Mixes</h2>
+
+            <div class="content-section__actions">
+              <button class="icon-btn arrow-btn">
+                <img src="../asset/icons/preview-arrow.svg" alt="Previous">
+              </button>
+
+              <button class="icon-btn arrow-btn">
+                <img src="../asset/icons/next-arrow.svg" alt="Next">
+              </button>
+
+              <button class="icon-btn">
+                <img src="../asset/icons/threedots.svg" alt="More">
+              </button>
+            </div>
+          </div>
+
+
+          <div id="top-mixes" class="card-flex"></div>
+
+        </section>
+
+        <!-- Your favorite artists Section -->
+        <section class="content-section">
+
+          <div class="content-section__header">
+            <h2 class="content-section__title">Your favorite artists</h2>
+
+            <div class="content-section__actions">
+              <button class="icon-btn arrow-btn">
+                <img src="../asset/icons/preview-arrow.svg" alt="Previous">
+              </button>
+
+              <button class="icon-btn arrow-btn">
+                <img src="../asset/icons/next-arrow.svg" alt="Next">
+              </button>
+
+              <button class="icon-btn">
+                <img src="../asset/icons/threedots.svg" alt="More">
+              </button>
+            </div>
+          </div>
+
+          <div id="favorit-artist" class="card-flex"></div>
+        </section>
+
+        <!-- Audiobooks for you Section -->
+        <section class="content-section">
+
+          <div class="content-section__header">
+            <h2 class="content-section__title">Audiobooks for you</h2>
+
+            <div class="content-section__actions">
+              <button class="icon-btn arrow-btn">
+                <img src="../asset/icons/preview-arrow.svg" alt="Previous">
+              </button>
+
+              <button class="icon-btn arrow-btn">
+                <img src="../asset/icons/next-arrow.svg" alt="Next">
+              </button>
+
+              <button class="icon-btn">
+                <img src="../asset/icons/threedots.svg" alt="More">
+              </button>
+            </div>
+          </div>
+
+          <div id="audio-books" class="card-flex"></div>
+
+
+
+        </section>
+
+        <!-- Podcasts for you Section -->
+        <section class="content-section">
+
+          <div class="content-section__header">
+            <h2 class="content-section__title">Podcasts for you</h2>
+
+            <div class="content-section__actions">
+              <button class="icon-btn arrow-btn">
+                <img src="../asset/icons/preview-arrow.svg" alt="Previous">
+              </button>
+
+              <button class="icon-btn arrow-btn">
+                <img src="../asset/icons/next-arrow.svg" alt="Next">
+              </button>
+
+              <button class="icon-btn">
+                <img src="../asset/icons/threedots.svg" alt="More">
+              </button>
+            </div>
+          </div>
+          <div id="podcasst" class="card-grid"></div>
+        </section>
+
+
+      </section>
+      <section class="friend-list">
+        <div class="friend-list-action">
+          <p>Friends Activity</p>
+          <div class="action">
+            <img src="../asset/icons/add-friend.svg" alt="Add Friend">
+            <img src="../asset/icons/close.svg" alt="Close" id="close-btn">
+          </div>
+        </div>
+        <ul class="friend-list-wrapper">
+          <li>
+            <div class="friend-profile-image">
+              <img src="../asset/images/friend-image-red.svg" alt="Friend">
+            </div>
+            <div class="info-about-friend">
+              <p class="friend-name">FriendlyMusicListener</p>
+              <span>
+                <img src="../asset/icons/vector-green.svg" alt="listening">
+                <p class="music-name">Goosebumps</p>
+                <p class="music-style">&#8226; Travis Scott</p>
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="friend-profile-image">
+              <img src="../asset/images/friend-image-blue.svg" alt="Friend">
+            </div>
+            <div class="info-about-friend">
+              <p class="friend-name">AverageMusicEnjoyer</p>
+              <span>
+                <img src="../asset/icons/vector-green.svg" alt="listening">
+                <p class="music-name">Get Lucky</p>
+                <p class="music-style">&#8226; Daft Punk</p>
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="friend-profile-image">
+              <img src="../asset/images/friend-image-green.svg" alt="Friend">
+            </div>
+            <div class="info-about-friend">
+              <p class="friend-name">MusicEnthusiast</p>
+              <span>
+                <!-- <img src="./asset/icons/vector-green.svg" alt="listening"> -->
+                <p class="music-style offline">1h</p>
+                <p class="music-name">would he</p>
+                <p class="music-style">&#8226; joji</p>
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="friend-profile-image">
+              <img src="../asset/images/friend-image-red.svg" alt="Friend">
+            </div>
+            <div class="info-about-friend">
+              <p class="friend-name">IListenToMusic56</p>
+              <span>
+                <!-- <img src="./asset/icons/vector-green.svg" alt="listening"> -->
+                <p class="music-style offline">6h</p>
+                <p class="music-name">Rockstar</p>
+                <p class="music-style">&#8226; Post Malone</p>
+              </span>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-player">
+        <div class="spotify-player">
+          <div class="controls">
+            <button id="play-pause" class="control-btn">
+              <img src="../asset/icons/play.svg" alt="Play" class="play-btn">
+              <img src="../asset/icons/pause.svg" alt="Pause" class="pause-btn">
+            </button>
+            <div class="control-arrows">
+              <img src="../asset/icons/pervious-music-icon.svg" alt="Pervious Music">
+              <img src="../asset/icons/next-music-icon.svg" alt="Next Music">
+              <img src="../asset/icons/shuffle.svg" alt="Suffle Music">
+              <img src="../asset/icons/repeat-music-icon.svg" alt="Repeat Music">
+            </div>
+            <div class="progress-container">
+              <span id="current-time" class="player-current-time">0:00</span>
+              <input type="range" id="progress-bar" class="player-progress-bar" value="0" max="100">
+              <span id="duration-time" class="player-duration-time">0:00</span>
+              <div class="volume-container">
+                <img src="../asset/icons/volume.svg" alt="Volume" class="volume-icon" id="mute-btn">
+                <input type="range" id="volume-slider" class="volume-bar" min="0" max="1" step="0.1" value="1">
+              </div>
+            </div>
+            <audio id="audio-element">
+              <source src="../asset/music/Guns-N-Roses.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+        </div>
+      </div>
+      <div class="footer-player-music">
+        <a href="./song.html">
+          <div class="footer-music__music-info">
+            <div class="footer-music__image">
+              <img src="../asset/images/get-lucky.svg" alt="Get lucky">
+            </div>
+            <div class="footer-music__info">
+              <p class="footer-music__title">Get Lucky</p>
+              <p class="footer-music__author">Daft Punk</p>
+              <p class="footer-music__album">Random Access Memories</p>
+            </div>
+          </div>
+        </a>
+        <div class="music-controlers">
+          <div id="like-toggle">
+            <img src="../asset/icons/like.svg" alt="Like" class="heart-like">
+            <img src="../asset/icons/like-active.svg" alt="Like" class="heart-like-active">
+          </div>
+          <img src="../asset/icons/add.svg" alt="Add">
+          <img src="../asset/icons/music-list.svg" alt="List">
+          <img src="../asset/icons/music-icon.svg" alt="music">
+          <img src="../asset/icons/threedots.svg" alt="More">
+          <div class="vertical-line"></div>
+          <img src="../asset/icons/dj.svg" alt="DJ">
+          <img src="../asset/icons/music-set.svg" alt="More">
+        </div>
+      </div>
+
+      <!-- footer mobile version player -->
+      <a href="./playlist.html">
+        <div class="mobile-footer__music-info">
+          <div class="footer-music__image">
+            <img src="../asset/images/get-lucky.svg" alt="Get lucky">
+          </div>
+          <div class="footer-music__info">
+            <p class="footer-music__title">Get Lucky(feat. Pharrell Williams)</p>
+            <p class="footer-music__author">Daft Punk</p>
+          </div>
+        </div>
+      </a>
+
+      <div class="mobile-footer__music-controls">
+        <img src="../asset/icons/add.svg" alt="Add">
+        <div id="mobile-play-pause" class="mobile-footer__play-pause">
+          <img src="../asset/icons/mobile-play.svg" alt="Play" class="play-btn">
+          <img src="../asset/icons/mobile-pause.svg" alt="Play" class="pause-btn">
+        </div>
+      </div>
+      <!-- footer mobile version player -->
+
+    </footer>
+  </div>
+  <script src="../script.js"></script>
+  <script type="module" src="../data.js"></script>
+</body>
+
+</html>

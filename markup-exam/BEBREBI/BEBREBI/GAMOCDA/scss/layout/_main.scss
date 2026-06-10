@@ -1,0 +1,291 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: variables.$primary-color;
+  padding-top: 75px;
+  border: 1px solid rgba(32, 32, 32, 1);
+  padding-right: 40px;
+  padding-left: variables.$main-padding;
+  margin-left: 248px;
+}
+.main-section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 59px;
+  gap: 10px;
+}
+
+.mobile-artist-section {
+  display: none;
+}
+.search-bar-mobile-container {
+  display: none;
+}
+.main-section-top-button1 {
+  width: 48px;
+  @include mixins.primary-button();
+}
+.main-section-top-button2 {
+  width: 68px;
+  @include mixins.primary-button();
+}
+.main-section-top-button3 {
+  width: 89px;
+  @include mixins.primary-button();
+}
+.main-section-top-button4 {
+  width: 107px;
+  @include mixins.primary-button();
+}
+
+@media (max-width: 768px) {
+  .main {
+    width: 390px;
+    display: flex;
+    justify-content: center;
+  }
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: variables.$primary-color;
+    padding-top: 75px;
+    border: 1px solid rgba(32, 32, 32, 1);
+    padding-right: 0px;
+    padding-left: variables.$main-padding;
+    margin-left: 0px;
+  }
+  .main-section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 51px;
+    gap: 10px;
+    margin-right: 20px;
+  }
+  .main-section-top-button1 {
+    display: none;
+  }
+  .main-section-top-button2 {
+    width: 63px;
+    @include mixins.primary-button-mobile();
+  }
+  .main-section-top-button3 {
+    width: 80px;
+    @include mixins.primary-button-mobile();
+  }
+  .main-section-top-button4 {
+    width: 96px;
+    @include mixins.primary-button-mobile();
+  }
+
+  .mobile-artist-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding-right: variables.$main-padding;
+    .mobile-artist-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 175px;
+      height: 58px;
+      border-radius: 10px;
+      background-color: rgba(32, 32, 32, 1);
+      p {
+        color: variables.$primary-text-color;
+        font-size: variables.$primary-font-size;
+        @include mixins.main-text();
+        padding-bottom: 5px;
+      }
+      p:last-child {
+        color: rgba(137, 137, 137, 1);
+      }
+    }
+  }
+  .search-bar-mobile-container {
+    display: flex;
+
+    .camera-icon-container {
+      position: relative;
+      left: 40px;
+      top: 50px;
+    }
+  }
+
+  .search-bar-mobile {
+    display: flex;
+    position: relative;
+    top: 40px;
+    width: 306px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: rgba(32, 32, 32, 0.5);
+    border: none;
+    color: rgba(137, 137, 137, 0.7);
+  }
+  .search-bar-mobile-icon {
+    position: relative;
+    top: 3px;
+    left: 250px;
+  }
+}
+
+.album-container {
+  margin-top: variables.$main-margin;
+  height: 311.41px;
+  div {
+    h2 {
+      color: variables.$primary-text-color;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .album-container {
+    width: 390px;
+    overflow: hidden;
+  }
+}
+
+.album-container-top {
+  padding-bottom: variables.$main-padding;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40.41px;
+}
+.album-container-icons {
+  display: flex;
+  gap: 20px;
+}
+.album-container-albums {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 15px;
+}
+.album {
+  width: 160px;
+  height: 253.3px;
+  h4 {
+    color: rgba(224, 224, 224, 1);
+    padding-top: 5px;
+    font-size: 14px;
+    @include mixins.main-text();
+  }
+  p {
+    padding-top: 5px;
+    color: rgba(137, 137, 137, 1);
+    font-size: 12px;
+    @include mixins.main-text();
+  }
+}
+
+.album-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.artists {
+  width: 170.13px;
+  height: 253.3px;
+  img {
+    width: 170.13px;
+    height: 170.13px;
+    border-radius: 121.85px;
+  }
+  h4 {
+    display: flex;
+    justify-content: center;
+    color: rgba(224, 224, 224, 1);
+    padding-top: 5px;
+    font-size: 14px;
+    @include mixins.main-text();
+  }
+  .close-icon {
+    width: 40.41px;
+    height: 40.41px;
+    position: relative;
+    left: 130px;
+    bottom: 200px;
+  }
+}
+
+.muse {
+  .close-icon {
+    width: 40.41px;
+    height: 40.41px;
+    position: relative;
+    left: 140px;
+    bottom: 220px;
+  }
+  h4 {
+    color: rgba(224, 224, 224, 1);
+    padding-top: 5px;
+    font-size: 14px;
+    @include mixins.main-text();
+  }
+  p {
+    padding-top: 5px;
+    color: rgba(137, 137, 137, 1);
+    font-size: 12px;
+  }
+  .rectangle {
+    position: relative;
+    top: -280px;
+    left: 10px;
+  }
+}
+
+.browse-all-container {
+  .album-container-top {
+    padding-bottom: variables.$main-padding;
+    color: variables.$primary-text-color;
+  }
+}
+.browse-all-container {
+  h2 {
+    padding-bottom: 40px;
+    color: variables.$primary-text-color;
+  }
+  h4 {
+    padding-bottom: variables.$main-padding;
+    color: variables.$primary-text-color;
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .browse-all-container {
+    display: inline;
+    width: 390px;
+    overflow: hidden;
+  }
+  .album-container-icons {
+    display: none;
+  }
+  .album-container-albums-mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding-bottom: 20px;
+  }
+
+  .album-mobile {
+    width: 170px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+}

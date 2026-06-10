@@ -1,0 +1,235 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+@use "../base/reset";
+
+.main-content::-webkit-scrollbar {
+    display: none;
+}
+.card-container {
+    height: 113%;
+}
+
+.card-title {
+    @include mixin.flex-center(space-between);
+    font-size: variables.$h-font;
+    font-weight: 700;
+    padding: 2.5rem 0;
+}
+.card-title div {
+    @include mixin.flex-center(space-between);
+    gap: 2.5rem;
+}
+.arr {
+    display: none;
+}
+
+
+.treeDots {
+    cursor: pointer;
+    @include mixin.hover-active-green;
+}
+
+
+// card-ებზე მუშაობა
+.cards-row1, .cards-row2, .cards-row3 {
+    padding-left: 0.5rem;  // distance form left side bar
+    
+    @include mixin.flex-center(space-between);
+    gap: 1rem;
+    overflow-x: scroll;
+
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 20rem;
+    }
+
+    .card > div:nth-of-type(1) {
+        width: 11rem;
+        height: 0.25rem;
+    }
+    .card > div:nth-of-type(2) {
+        width: 12.6rem;
+        height: 0.5rem;
+    }
+
+    .card {
+        width: 14.1rem;
+        height: 18.5rem;
+    }
+
+    .card-img {
+        width: 100%;
+    }
+
+    .card-text {
+        width: 13.5rem;
+        height: 2.5rem;
+        font-weight: 500;
+        font-size: 1.16rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cards-container > p:nth-of-type(1) {
+        color: variables.$p-color;
+        font-weight: 400;
+        font-size: 1rem;
+        width: 13.5rem;;
+    }
+
+    .card:hover, 
+    .card-img-row3:hover {
+        transform: scale(1.02);
+        transition: 0.1s;
+    }
+    .card:active, 
+    .card-img-row3:active {
+        transform: scale(1.04);
+    }
+}
+
+
+// main last section
+.cards-row3 {
+    @include mixin.flex-center(start);
+    gap: 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.cards-row3 p {
+    padding: 1.5rem 0;
+}
+
+.card-img-row3 {
+    width: 14.1rem;
+    height: 14.1rem;
+    box-sizing: content-box;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cards-row3 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+
+
+// scroll modification
+.cards-row1::-webkit-scrollbar,
+.cards-row2::-webkit-scrollbar,
+.cards-row3::-webkit-scrollbar {
+    display: none
+}
+
+
+// First card section
+
+.cards-row1 .cards-container:nth-of-type(1) {
+    @include mixin.card-layers(#CE6E9A, #CE6E9A26, #CE6E9A4D);
+}
+.cards-row1 .cards-container:nth-of-type(2) {
+    @include mixin.card-layers(#95E6D3, #95E6D326, #95E6D34D);
+}
+.cards-row1 .cards-container:nth-of-type(3) {
+    @include mixin.card-layers(#F4B8BD, #F4B8BD26, #F4B8BD4D);
+}
+.cards-row1 .cards-container:nth-of-type(4) {
+    @include mixin.card-layers(#C3E7B7, #C3E7B726, #C3E7B74D);
+}
+.cards-row1 .cards-container:nth-of-type(5) {
+    @include mixin.card-layers(#F37FA6, #F37FA626, #F37FA64D);
+}
+.cards-row1 .cards-container:nth-of-type(6) {
+    @include mixin.card-layers(#A0BEC8, #A0BEC826, #A0BEC84D);
+}
+.cards-row1 .cards-container:nth-of-type(7) {
+    @include mixin.card-layers(#FDD87D, #FDD87D26, #FDD87D4D);
+}
+.cards-row1 .cards-container:nth-of-type(8) {
+    @include mixin.card-layers(#D4B2A9, #D4B2A926, #D4B2A94D);
+}
+
+
+
+.cards-row2 .cards-container:nth-of-type(1) {
+    @include mixin.card-layers(#CCF665, #CCF66526, #CCF6654D);
+}
+.cards-row2 .cards-container:nth-of-type(2) {
+    @include mixin.card-layers(#F9E72C, #F9E72C26, #F9E72C4D);
+}
+.cards-row2 .cards-container:nth-of-type(3) {
+    @include mixin.card-layers(#9BF0E2, #9BF0E226, #9BF0E24D);
+}
+.cards-row2 .cards-container:nth-of-type(4) {
+    @include mixin.card-layers(#6F86FF, #6F86FF26, #6F86FF4D);
+}
+.cards-row2 .cards-container:nth-of-type(5) {
+    @include mixin.card-layers(#FFCBD4, #FFCBD426, #FFCBD44D);
+}
+.cards-row2 .cards-container:nth-of-type(6) {
+    @include mixin.card-layers(#FFC668, #FFC66826, #FFC6684D);
+}
+.cards-row2 .cards-container:nth-of-type(7) {
+    @include mixin.card-layers(#27856B, #27856B26, #27856B4D);
+}
+.cards-row2 .cards-container:nth-of-type(8) {
+    @include mixin.card-layers(#DD138B, #DD138B26, #DD138B4D);
+}
+
+
+
+@media (min-width: 1200px) {
+    .card-container {
+        height: 108%;
+    }
+
+    .cards-row1, .cards-row2, .cards-row3 {
+        height: 25.3rem;
+
+        .cards-container {
+            width: 17rem;
+            height: 25.3rem;
+        }
+        .card {
+            width: 17rem;
+            height: 19rem;
+        }
+        .card-img {
+            width: 100%;
+        }
+        .card > div:nth-of-type(1) {
+            width: 13.3rem;
+        }
+        .card > div:nth-of-type(2) {
+            width: 15rem;
+        }
+
+        .card-text {
+            font-size: 1.4rem;
+            width: 16rem;
+        }
+        .cards-container > p:nth-of-type(1) {
+            font-size: 1.2rem;
+            width: 16rem;
+        }
+
+        .card-img-row3 {
+            width: 17rem;
+            height: 17rem;
+        }
+    }
+    .cards-row3 {
+        height: 22rem;
+    }
+
+    .arr {
+        display: block;
+        cursor: pointer;
+        @include mixin.hover-active-green;
+    }
+}

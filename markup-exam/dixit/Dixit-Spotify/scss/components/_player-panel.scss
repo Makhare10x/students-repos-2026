@@ -1,0 +1,281 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+@use "sass:map";
+
+// Full-screen / bottom-sheet player
+.player-panel {
+    position: fixed;
+    inset: 0;
+    @include m.flex-center($justify: center);
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(1.6rem);
+    transition:
+        transform 0.4s ease-in-out,
+        opacity 0.3s ease,
+        visibility 0.3s;
+    z-index: 30;
+
+    .player-checkbox:checked ~ & {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    &__backdrop {
+        position: absolute;
+        inset: 0;
+        transition:
+            transform 0.4s ease-in-out,
+            opacity 0.3s ease,
+            visibility 0.3s;
+    }
+    &__backdrop-close {
+        position: absolute;
+        inset: 0;
+    }
+
+    &__sheet {
+        margin: 0 auto;
+        background: v.$bg-panel;
+        z-index: 1;
+        box-shadow: 0 -0.8rem 2rem rgba(0, 0, 0, 0.6);
+        overflow-y: auto;
+        padding-top: 1rem;
+        width: 100%;
+    }
+}
+
+.header-top {
+    @include m.flex-center($direction: row, $justify: center, $align: center);
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    .list-icon {
+        min-height: 1.01rem;
+    }
+}
+
+.album-info {
+    @include m.flex-center($direction: row, $justify: center, $align: center);
+
+    .album-icon {
+        min-height: 1.2rem;
+    }
+
+    .info {
+        color: v.$primary;
+        font-size: map.get(v.$font-sizes, "body-sm");
+        font-weight: 200;
+    }
+}
+
+.panel-header {
+    @include m.flex-center($justify: center);
+    margin-bottom: 1.2rem;
+    margin: 0 auto;
+    background: transparent;
+
+    &__handle {
+        width: 3.2rem;
+        height: 0.4rem;
+        border-radius: 99.9rem;
+        background: v.$secondary;
+        display: block;
+        cursor: pointer;
+
+        @media (min-width: 991px) {
+            width: 6rem;
+            height: 0.5rem;
+        }
+    }
+}
+
+.content {
+    @include m.flex-center($direction: column);
+    gap: 2rem;
+
+    &__album {
+        margin: 0;
+        @include m.flex-center($direction: column, $align: center);
+        gap: 1.6rem;
+
+        img {
+            height: auto;
+            border-radius: 0.5rem;
+            margin-top: 2rem;
+            object-fit: cover;
+            max-width: 35.4rem;
+            min-height: 35.4rem;
+
+            @media (min-width: 991px) {
+                max-width: 50rem;
+                min-height: 50rem;
+            }
+        }
+    }
+}
+
+.track-info {
+    @include m.flex-center($text: left, $direction: column);
+    gap: 0.6rem;
+    flex: 1;
+
+    @media (min-width: 991) {
+        margin-left: 14rem;
+    }
+
+    &__title-shell {
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        font-weight: map.get(v.$font-weights, "bold");
+        font-size: map.get(v.$font-sizes, "title");
+        color: v.$player-text;
+        width: 100%;
+        max-width: 35rem;
+        display: flex;
+        background: v.$bg-panel;
+
+        @media (min-width: 991px) {
+            margin-right: 41rem;
+        }
+    }
+
+    &__title {
+        display: inline-block;
+        white-space: nowrap;
+        padding-left: 100%;
+        animation: player-marquee 18s linear infinite;
+    }
+
+    &__artist {
+        font-style: normal;
+        font-size: map.get(v.$font-sizes, "body-sm");
+        color: v.$second-primary;
+
+        @media (min-width: 991px) {
+            margin-left: 26rem;
+            font-size: map.get(v.$font-sizes, "heading");
+        }
+    }
+}
+
+.controls {
+    @include m.flex-center($justify: space-between, $direction: row-reverse);
+    gap: 1.6rem;
+    z-index: 3;
+
+    @media (min-width: 991px) {
+        margin-top: 4rem;
+    }
+
+    &__icon {
+        @include m.flex-center($align: center);
+        gap: 2rem;
+        height: fit-content;
+        margin-top: -6rem;
+        margin-right: 2rem;
+        background: v.$bg-panel;
+
+        .like-icon {
+            margin-left: 1rem;
+        }
+
+        .liked-icon {
+            max-width: 2.4rem;
+            min-height: 2.021rem;
+            margin-left: 1rem;
+        }
+    }
+
+    &__label {
+        max-width: 2.4rem;
+        min-height: 2.021rem;
+    }
+}
+
+footer:has(#icon-like:checked) {
+    label[for="icon-like"] .icon-outline {
+        display: none;
+    }
+
+    label[for="icon-like"] .icon-filled {
+        @include m.flex-center($justify: center, $align: center);
+        transform: scale(1.8);
+        margin-bottom: 0.15rem;
+        margin: 0 auto;
+        max-width: 1.5rem;
+        margin-left: 1.5rem;
+    }
+}
+
+footer:has(#icon-added:checked) {
+    label[for="icon-added"] .icon-outline {
+        display: none;
+    }
+
+    label[for="icon-added"] .icon-filled {
+        @include m.flex-center($justify: center, $align: center);
+        transform: scale(1.8);
+        margin: 0 auto;
+        margin-bottom: 0.15rem;
+    }
+}
+
+.playback-control {
+    @include m.flex-center($direction: column, $justify: space-between);
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+    margin-right: -8rem;
+}
+
+.slider-wrapper {
+    @include m.flex-center($align: center, $justify: space-between);
+    margin-top: 0.9rem;
+}
+
+time {
+    font-size: map.get(v.$font-sizes, "body-sm");
+    color: v.$second-primary;
+    min-width: 0.4rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 0.4rem;
+    border-radius: 0.2rem;
+    background: v.$player-bar;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    background: v.$primary;
+    transition: transform 0.1s ease;
+}
+
+.progress-bar:hover::-webkit-slider-thumb {
+    transform: scale(1.2);
+}
+
+// Shared scrolling-text animation for song titles
+@keyframes player-marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

@@ -1,0 +1,413 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+// ─────────────────────────────────────────
+// Search Bar
+// ─────────────────────────────────────────
+.search-content-wrapper{
+  padding: 1rem;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(0deg, #06060633 0%, #060606 42.62%);
+    padding: 1.5rem 0;
+    margin-left:1rem;
+    margin-right:1rem;
+}
+
+.search-bar__input-wrapper {
+  position: relative;
+  flex: 1;
+
+  input[type='search'] {
+    width: 100%;
+    background-color: #2a2a2a;
+    border: none;
+    border-radius: 0.6rem;
+    padding: 1.2rem 1.8rem 1.2rem 2rem;
+    font-family: $satoshi;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $white;
+    outline: none;
+    appearance: none;
+
+    &::placeholder {
+      color: $text-color;
+      opacity: 1;
+    }
+  }
+}
+
+.search-bar__search-icon {
+  position: absolute;
+  right: 1.2rem;
+  left: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3.54rem;
+  height: 3.54rem;
+  object-fit: contain;
+  pointer-events: none;
+  filter: invert(1);
+}
+
+input[type='search'] {
+    width: 100%;
+    background-color: #2a2a2a;
+    border: none;
+    border-radius: 0.6rem;
+    padding: 1.2rem 1.8rem 1.2rem 4rem;
+    font-family: $satoshi;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $white;
+    outline: none;
+    appearance: none;
+
+    &::placeholder {
+      color: $text-color;
+      opacity: 1;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0px 1000px #2a2a2a inset;
+      -webkit-text-fill-color: $white;
+    }
+  }
+
+.search-bar__camera-icon {
+  width: 2.8rem;
+  height: 2.8rem;
+  object-fit: contain;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+// ─────────────────────────────────────────
+// Headings
+// ─────────────────────────────────────────
+
+.section-heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+  color: $white;
+}
+
+.section-label {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $white;
+  margin-bottom: 1.4rem;
+}
+
+// ─────────────────────────────────────────
+// Section label row — mobile hidden
+// ─────────────────────────────────────────
+
+.section-label-row {
+  display: none;
+}
+
+.section-label--mobile {
+  display: block;
+}
+
+// ─────────────────────────────────────────
+// Section nav arrows — mobile hidden
+// ─────────────────────────────────────────
+
+.section-nav-arrows {
+  display: none;
+}
+
+// ─────────────────────────────────────────
+// Recent Searches — mobile hidden
+// ─────────────────────────────────────────
+
+.recent-searches {
+  display: none;
+}
+
+// ─────────────────────────────────────────
+// Category Grid
+// ─────────────────────────────────────────
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2.4rem;
+  padding: 1rem 0;
+}
+
+// ─────────────────────────────────────────
+// Category Card
+// ─────────────────────────────────────────
+
+.category-card {
+  position: relative;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.15s ease, filter 0.15s ease;
+
+  &:active {
+    transform: scale(0.97);
+    filter: brightness(0.88);
+  }
+
+  .category-card__bg,
+  .category-card__art,
+  .category-card__badge {
+    display: none;
+  }
+}
+
+// ── Card backgrounds — Discover ──────────
+
+.card--blue-dark    { background-image: url('../../dist/assets/img/searchimg/img/Made For You.jpg'); }
+.card--amber        { background-image: url('../../dist/assets/img/searchimg/img/New Realases.png'); }
+.card--purple-mid   { background-image: url('../../dist/assets/img/searchimg/img/Spotyfy Classics.png'); }
+.card--purple-light { background-image: url('../../dist/assets/img/searchimg/img/Charts.png'); }
+.card--pink         { background-image: url('../../dist/assets/img/searchimg/img/Trending .png'); }
+.card--teal         { background-image: url('../../dist/assets/img/searchimg/img/Discover.png'); }
+.card--gray         { background-image: url('../../dist/assets/img/searchimg/img/Spotify Singles.png'); }
+.card--orange       { background-image: url('../../dist/assets/img/searchimg/img/Decoades.png'); }
+
+// ── Card backgrounds — Genres ────────────
+
+.card--red          { background-image: url('../../dist/assets/img/searchimg/img/Pop.png'); }
+.card--green        { background-image: url('../../dist/assets/img/searchimg/img/Country.png'); }
+.card--hip-hop      { background-image: url('../../dist/assets/img/searchimg/img/Hip-Hop.png'); }
+.card--rock         { background-image: url('../../dist/assets/img/searchimg/img/Rock.png'); }
+.card--indie        { background-image: url('../../dist/assets/img/searchimg/img/Indie.png'); }
+.card--punk         { background-image: url('../../dist/assets/img/searchimg/img/Punk.png'); }
+.card--metal        { background-image: url('../../dist/assets/img/searchimg/img/Metal.png'); }
+.card--instrumental { background-image: url('../../dist/assets/img/searchimg/img/Instrumental.png'); }
+
+// ─────────────────────────────────────────
+// Divider
+// ─────────────────────────────────────────
+
+.divider {
+  border: none;
+  border-top: 1px solid rgba($white, 0.08);
+  margin: 0.4rem 0 2.4rem;
+}
+
+@media (min-width: 600px) {
+
+}
+
+// ─────────────────────────────────────────
+// Desktop
+// ─────────────────────────────────────────
+
+  @media (min-width: 1024px) {
+    .search-content-wrapper {
+        border: 0.1px solid #202020;
+        border-radius: 1rem;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        min-height: 0;
+        position: relative;
+        padding: 1rem;
+    }
+    
+    
+    
+    
+    // ── Search Bar ───────────────────────────
+    .search-bar {
+      display: none;
+    }
+    
+    // ── Section label row ────────────────────
+    .section-label-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.4rem;
+    }
+    
+    .section-label--mobile {
+      display: none;
+    }
+    
+    .section-label { margin-bottom: 0; }
+    
+    .section-nav-arrows {
+      display: flex;
+      gap: 0.8rem;
+      
+      button {
+        background: none;
+        border: none;
+        color: #b3b3b3;
+        font-size: 1.8rem;
+        cursor: pointer;
+      padding: 0 0.4rem;
+      transition: color 0.15s ease;
+      line-height: 1;
+
+      &:hover { color: $white; }
+      &:disabled { opacity: 0.3; cursor: default; }
+    }
+  }
+
+  // ── Recent Searches ──────────────────────
+  .recent-searches {
+    display: block;
+    border: none;
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+
+  .recent-searches__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.6rem;
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: $white;
+    }
+    
+    .recent-searches__more {
+      background: none;
+      border: none;
+      color: #b3b3b3;
+      font-size: 2rem;
+      letter-spacing: 0.15em;
+      cursor: pointer;
+      line-height: 1;
+
+      &:hover { color: $white; }
+    }
+  }
+  
+  .recent-searches__list {
+    display: flex;
+    gap: 2.4rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    
+    &::-webkit-scrollbar { display: none; }
+  }
+
+  .recent-searches__item {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+    width: 12rem;
+  }
+
+  .recent-searches__remove-wrap {
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+    
+    &:hover .recent-searches__remove { opacity: 1; }
+  }
+  
+  .recent-searches__img {
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 50%;
+    
+    &--square {
+      border-radius: 0.8rem;
+    }
+  }
+
+  .recent-searches__remove {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    background: rgba(#000, 0.7);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    color: $white;
+    font-size: 1rem;
+
+    &:hover { background: rgba(#000, 0.9); }
+  }
+
+  .recent-searches__name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: $white;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .recent-searches__sub {
+    font-size: 1.2rem;
+    color: #b3b3b3;
+    text-align: center;
+    margin-top: -0.2rem;
+    white-space: nowrap;
+  }
+
+  // ── Category Grid — horizontal row ───────
+  .category-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+    overflow-x: auto;
+    overflow-y: visible;
+    scrollbar-width: none;
+    margin-bottom: 2.4rem;
+    padding-bottom: 0.4rem;
+
+    &::-webkit-scrollbar { display: none; }
+  }
+
+  // ── Category Card — desktop size ─────────
+  .category-card {
+    flex: 0 0 17rem;
+    height: 13rem;
+    aspect-ratio: unset;
+    border-radius: 1rem;
+
+    &:hover {
+      transform: scale(1.03);
+      filter: brightness(1.08);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+  
+}

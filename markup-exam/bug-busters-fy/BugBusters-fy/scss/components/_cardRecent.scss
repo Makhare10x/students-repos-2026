@@ -1,0 +1,42 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+// For horizontal cards
+
+.card-recent {
+  @include mixins.flex-prop($gap: 0.3rem, $align: center);
+  padding: 8px;
+  border-radius: 8px;
+  .img-container {
+    width: 43px;
+    flex-shrink: 0;
+    img {
+      @include mixins.imageShaper;
+    }
+  }
+
+  .text-container {
+    @include mixins.flex-prop($direction: column, $justify: center);
+    overflow: hidden;
+
+    h3 {
+      color: variables.$color-active-desk;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; // adds ... if  title is too long
+    }
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+@media (min-width: 920px) {
+  .card-recent {
+    .img-container {
+      width: 5.1rem;
+    }
+  }
+}

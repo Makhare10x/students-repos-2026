@@ -1,0 +1,83 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@media screen and (max-width: 1050px) {
+    .search-wrapper, .recent-searches, .discover-wrapper img, .genres-wrapper img {
+        display: none;
+    }
+
+    footer {
+        z-index: 999;
+    }
+
+    //serach container
+
+    .search-main-content {
+        padding-right: 16px;
+        padding-bottom: 170px;
+    }
+
+    .search-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+        background: rgba(32, 32, 32, 0.5);
+        border-radius: 10px;
+        padding: 6px 12px;
+        min-width: 306px;
+        width: 80%;
+        height: 35px;
+        color: rgba(137, 137, 137, 0.7);
+    }
+
+    .search-bar input {
+        flex: 1;
+        background: transparent;
+        border: none;
+        font-size: 14px;
+        outline: none;
+    }
+
+    .search-bar input::placeholder {
+        font-family: 'Satoshi', sans-serif;
+
+        font-size: 14px;
+    }
+
+    //discovery and genres sections
+
+    .discover-wrapper, .genres-wrapper {
+        font-size: 18px;
+        color: $primary-font-color;
+        margin-bottom: 20px;
+    }
+
+    .boxes {
+        grid-auto-flow: unset;
+        grid-template-columns: repeat(2, 1fr);
+        overflow-x: visible;
+        gap: 12px;
+
+        .album-cover-text {
+            z-index: 1;
+        }
+
+        .box {
+            height: 100px;
+        }
+
+        .box img {
+            bottom: -40px;
+            right: -20px;
+
+            transform: rotate(30deg);
+        }
+    }
+
+}

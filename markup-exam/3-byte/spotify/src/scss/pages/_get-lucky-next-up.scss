@@ -1,0 +1,155 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables" as v;
+
+@media screen and (max-width: 490px) {
+  // next up
+  .page-get-lucky .album-control {
+    gap: 1.2rem;
+  }
+
+  .page-get-lucky .arrow-list {
+    .arrow-list {
+      img {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+    flex: 0 0 auto;
+    overflow: visible;
+  }
+
+  .page-get-lucky .arrow-list img {
+    display: block;
+    flex-shrink: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    min-width: 2.4rem;
+    min-height: 2.4rem;
+    object-fit: contain;
+  }
+
+  .page-get-lucky .album-name {
+    min-width: 0;
+  }
+  .album-name-icon {
+    @include mixins.flex-row;
+    p {
+      color: v.$main-title-color;
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+  }
+  .section-name-next-up {
+    @include mixins.flex-column-start;
+  }
+  .album-name-next-up {
+    @include mixins.flex-between;
+    width: 100%;
+  }
+  .album-name-actions {
+    @include mixins.flex-between;
+    gap: 2rem;
+  }
+  .next-up-title {
+    color: v.$main-title-color;
+    font-size: 1.8rem;
+  }
+  .music-next-up-img {
+    flex: 0 0 auto;
+
+    img {
+      width: 5.3rem;
+      height: 5.3rem;
+      border-radius: 5px;
+    }
+  }
+  .music-next-up {
+    @include mixins.flex-between;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .music-next-up-head {
+    @include mixins.flex-between;
+    gap: 1rem;
+    flex: 1;
+    min-width: 0;
+    justify-content: flex-start;
+  }
+  .music-next-up-info {
+    flex: 1;
+    min-width: 0;
+
+    .title-next-up-music {
+      width: 40%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-weight: 400;
+      font-size: 1.6rem;
+      color: v.$main-title-color;
+    }
+  }
+  .artist-next-up {
+    color: v.$muted-text;
+    font-size: 1.4rem;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .other-options {
+    flex: 0 0 auto;
+    display: flex;
+
+    img {
+      min-width: 4rem;
+      min-height: 4rem;
+      cursor: pointer;
+    }
+  }
+
+  .control-music-all {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10001;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem 1.6rem;
+  }
+
+  .control-music-all .control-page {
+    position: static;
+    padding-bottom: 0;
+  }
+  .full-control {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10001;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1.6rem calc(5rem + env(safe-area-inset-bottom));
+    background: linear-gradient(
+      180deg,
+      rgba(59, 65, 77, 0) 0,
+      #3b414d 1rem,
+      #272b33 100%
+    );
+  }
+
+  .full-control .control-page {
+    position: static;
+    padding-bottom: 0;
+  }
+
+  .full-control .control-page .control-list {
+    margin-top: 0;
+  }
+}

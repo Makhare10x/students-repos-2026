@@ -1,0 +1,83 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+
+@media (min-width: 991px) {
+    .songs {
+        background-color: #060606;
+        border: 0.1rem solid v.$border-radius;
+        border-radius: 1rem;
+        height: 100vh;
+    }
+
+    .filter {
+        &__icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10rem;
+            margin-top: 2rem;
+        }
+
+        &__plus-icon {
+            display: flex;
+            padding-left: 2.5rem;
+        }
+
+        &__right-icons {
+            display: flex;
+            gap: 5rem;
+            align-items: center;
+            padding-right: 2.5rem;
+
+            figure {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+
+                figcaption {
+                    color: v.$second-primary;
+                }
+            }
+
+            .recent {
+                margin-left: 2rem;
+            }
+        }
+    }
+
+    .song-table {
+        margin-top: 2.1rem;
+        margin-left: 3rem;
+
+        thead th {
+            &:nth-child(3) {
+                text-align: left;
+                padding-left: 2rem;
+            }
+            &:nth-child(4) {
+                text-align: left;
+                padding-left: 2rem;
+            }
+        }
+    }
+
+    .album-tracklist,
+    .home-tracklist {
+        padding: 1.2rem 1rem;
+        width: 35rem;
+    }
+
+    .table-album {
+        color: v.$second-primary;
+        width: 40rem;
+        text-align: left;
+        padding-left: 2rem;
+        font-size: map.get(v.$font-sizes, "body");
+    }
+
+    .song-tbody {
+        width: 30rem;
+    }
+}

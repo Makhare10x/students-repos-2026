@@ -1,0 +1,116 @@
+@use "../abstracts/mixins";
+
+.title-group {
+  @include mixins.flex-prop($align: center, $justify: space-between);
+  width: 100%;
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .navigation-controls {
+    display: flex;
+    gap: 0.8rem;
+
+    .control-btn {
+      border: none;
+      color: #fff;
+      width: 3.2rem;
+      height: 3.2rem;
+      background-color: transparent;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+
+      &.more {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media (min-width: 920px) {
+  .title-group {
+    .navigation-controls .control-btn {
+      display: flex;
+    }
+  }
+}
+
+/*   <div class="title-group">
+                <h3 class="section-title">SOME TITLE</h3>
+                <div class="navigation-controls">
+                  <button class="control-btn">
+                    <svg
+                      width="41"
+                      height="41"
+                      viewBox="0 0 41 41"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21.8892 15.1543L16.8379 20.2056L21.8892 25.257"
+                        stroke="currentColor"
+                        stroke-width="2.3573"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+
+                  <button class="control-btn">
+                    <svg
+                      width="41"
+                      height="41"
+                      viewBox="0 0 41 41"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18.5216 25.2578L23.5729 20.2065L18.5216 15.1551"
+                        stroke="currentColor"
+                        stroke-width="2.3573"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+
+                  <button class="control-btn more">
+                    <svg
+                      width="41"
+                      height="41"
+                      viewBox="0 0 41 41"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="11.7865"
+                        cy="20.2072"
+                        r="1.68378"
+                        fill="currentColor"
+                      />
+                      <circle
+                        cx="20.2055"
+                        cy="20.2072"
+                        r="1.68378"
+                        fill="currentColor"
+                      />
+                      <circle
+                        cx="28.6243"
+                        cy="20.2072"
+                        r="1.68378"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+*/

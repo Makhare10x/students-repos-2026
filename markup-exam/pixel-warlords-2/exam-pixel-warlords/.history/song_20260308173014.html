@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Pixel Redesign</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- ЛЕВАЯ ПАНЕЛЬ: НАВИГАЦИЯ -->
+    <aside class="sidebar">
+      <nav class="nav-links">
+        <div class="nav-item active"><img src="assets/img/MyLibrary.png"> My Library</div>
+        <div class="nav-item"><img src="assets/img/Pins.png"> Pins</div>
+        <div class="nav-item"><img src="assets/img/Playlists.png"> Playlists</div>
+        <div class="nav-item"><img src="assets/img/Likedsongs.png"> Liked songs</div>
+        <div class="nav-item"><img src="assets/img/Saves.png"> Saves</div>
+        <div class="nav-item"><img src="assets/img/Albums.png"> Albums</div>
+        <div class="nav-item"><img src="assets/img/Folders.png"> Folders</div>
+        <div class="nav-item"><img src="assets/img/Podcasts.png"> Podcasts</div>
+        <div class="nav-item"><img src="assets/img/Audiobooks.png"> Audiobooks</div>
+        <div class="nav-item"><img src="assets/img/Artists.png"> Artists</div>
+      </nav>
+    </aside>
+
+    <!-- ЦЕНТРАЛЬНАЯ ЧАСТЬ -->
+    <main class="main-view">
+      <header class="top-header">
+        <div class="nav-left">
+          <button class="nav-pill"><img src="assets/img/home.png"> Home</button>
+          <button class="nav-pill"><img src="assets/img/Discover.png"> Discover</button>
+          <button class="nav-pill active"><img src="assets/img/Search.png"> Search</button>
+        </div>
+        <div class="nav-right">
+          <img src="assets/img/iconsbig.png">
+          <img src="assets/img/lock.png">
+          <img src="assets/img/settings.png">
+          <img src="assets/img/Sprite-eyes.png" class="avatar-top">
+        </div>
+      </header>
+
+      <section class="song-content">
+        <!-- Блок с артистами и названием -->
+        <div class="song-hero">
+          <div class="artists-column">
+            <div class="artist-card">
+              <img src="assets/img/song/image 4.png">
+              <div class="artist-info"><h4>Daft Punk</h4><p>Main Artist</p></div>
+            </div>
+            <div class="artist-card">
+              <img src="assets/img/song/Frame 145 (1).png">
+              <div class="artist-info"><h4>Pharrell Williams</h4><p>Main Artist</p></div>
+            </div>
+            <div class="artist-card">
+              <img src="assets/img/song/image 4 (1).png">
+              <div class="artist-info"><h4>Nile Rodgers</h4><p>Main Artist</p></div>
+            </div>
+          </div>
+
+          <div class="song-title-group">
+            <h1 class="main-title">Get Lucky (feat. Pharrell Williams and Nile Rodgers)</h1>
+          </div>
+        </div>
+
+        <!-- Секция текста песни -->
+        <div class="lyrics-section">
+          <nav class="lyrics-tabs">
+            <span class="tab active">Lyrics</span>
+            <span class="tab">Credits</span>
+            <span class="tab">More like this</span>
+          </nav>
+          
+          <div class="lyrics-layout">
+            <aside class="lyrics-tools">
+              <img src="assets/img/song/icons big.png">
+              <img src="assets/img/song/icons big (1).png">
+              <img src="assets/img/song/icons big (2).png">
+            </aside>
+            <div class="lyrics-text">
+              <p>Like the legend of the phoenix, huh</p>
+              <p>All ends with beginnings</p>
+              <p>What keeps the planet spinning, ah</p>
+              <p>The force from the beginning, hm, look</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ПРАВАЯ ПАНЕЛЬ: ДРУЗЬЯ -->
+    <aside class="friends-sidebar">
+      <div class="friends-header">
+        <h3>Friends Activity</h3>
+        <img src="assets/img/lock.png">
+      </div>
+      <div class="friends-list">
+        <div class="friend-item">
+          <img src="assets/img/P1.png" class="friend-avatar">
+          <div class="friend-status">
+            <span class="name">FriendlyListener</span>
+            <span class="track">Goosebumps • Travis Scott</span>
+          </div>
+        </div>
+        <!-- Добавьте остальных друзей здесь -->
+      </div>
+    </aside>
+
+  </div>
+
+</body>
+</html>

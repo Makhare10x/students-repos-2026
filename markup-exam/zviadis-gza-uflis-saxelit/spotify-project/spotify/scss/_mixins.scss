@@ -1,0 +1,55 @@
+@use "variables" as *;
+
+//Flexbox Center 
+@mixin flex-center($justify: center, $align: center, $gap: 0) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+// Text Truncation (For long song/album titles)
+@mixin truncate($max-width) {
+  display: -webkit-box;
+    -webkit-line-clamp: 2;   // For older Chrome, Safari, and Edge
+    line-clamp: 2;          
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+
+// Reset Button (for player and filter buttons)
+@mixin btn-reset {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+
+@mixin music-section-styles {
+  padding: 24px;
+  background-color: $color-border;
+  color: $color-white;
+  border-radius: $radius-md;
+  margin-bottom: $spacing-lg;
+
+  .section-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .card-grid {
+    display: flex;
+    
+    gap: $spacing-md;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    &::-webkit-scrollbar { display: none; }
+    scrollbar-width: none;
+  }
+}

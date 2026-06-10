@@ -1,0 +1,53 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.sidebar {
+    display: none;
+}
+
+// tablet
+@media (min-width: 600px) {
+  
+}
+// desktop
+@media (min-width: 1024px) {
+    .library-navigation, .sidebar {
+        grid-area: sidebar;
+        height: 100%;
+        background-color: inherit;
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        padding:1rem;
+        z-index: 1000; 
+        a{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            span{
+                font-size: 1.4rem;
+
+            }
+        }
+    }
+    .sidebar-items {
+        @include flex-center(0.5rem);
+        justify-content: flex-start;
+        gap: 1rem;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        color: $text-color;
+        font-size: 1.4rem;
+        letter-spacing: 3%;
+        cursor: pointer;
+        transition: filter 0.2s linear;
+
+        
+    }
+    .sidebar-link:hover{
+            filter: invert(61%) sepia(53%) 
+                    saturate(3025%) hue-rotate(104deg) 
+                    brightness(96%) contrast(90%);
+        }
+    
+}

@@ -1,0 +1,41 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.aside {
+  position: fixed;
+  width: 248px;
+  height: 100%;
+  margin-top: 53px;
+  background-color: variables.$primary-color;
+}
+
+.aside-container {
+  padding-top: 30px;
+  padding-left: 25px;
+}
+.aside-container div {
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 20px;
+  gap: variables.$main-gap;
+  @include mixins.paragraph-header-aside();
+}
+.aside-container div:hover {
+  background-color: variables.$primary-hover-color;
+  border-radius: 10px;
+}
+.aside-arrow-right-icon1 {
+  margin-left: 84px;
+}
+
+.aside-arrow-right-icon2 {
+  margin-left: 60px;
+}
+
+@media (max-width: 768px) {
+  .aside {
+    display: none;
+  }
+}

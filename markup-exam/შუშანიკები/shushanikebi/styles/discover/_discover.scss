@@ -1,0 +1,291 @@
+@use "../abstracts/default" as d;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+#padding-fix {
+  @media (max-width: 1480px) {
+    padding: 2.5rem 1.8rem;
+  }
+}
+
+.discover__top {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: rgba(6, 6, 6, 0.8);
+  backdrop-filter: blur(10rem);
+  z-index: 10;
+  @media (max-width: 1480px) {
+    padding: 0;
+    margin-bottom: 1.3rem;
+  }
+}
+.discover__tabs {
+  padding: 1.2rem 2.5rem;
+
+  @media (max-width: 1480px) {
+    display: flex;
+    gap: 6rem;
+    padding: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    background: linear-gradient(#000000 0%, #1e1b1b 100%);
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.discover__tab {
+  @include m.primary-button;
+  position: relative;
+  margin-right: 1rem;
+
+  &.focuse {
+    background-color: v.$color-text-primary;
+    color: #000;
+  }
+
+  @media (max-width: 1480px) {
+    background: none;
+    border: none;
+    padding: 6rem 0 1rem 0;
+    color: v.$color-text-secondary;
+    position: relative;
+
+    &:hover {
+      background-color: transparent;
+      color: v.$color-text-primary;
+    }
+
+    &.focuse {
+      background-color: transparent;
+      color: v.$color-text-secondary;
+    }
+  }
+}
+
+.discover-page {
+  background: linear-gradient(#1b2d2a 0%, #1e3833 40%, #603319 100%);
+  padding-bottom: 10rem;
+
+  @media (max-width: 1480px) {
+    background: none;
+    padding: 0;
+  }
+}
+
+.discover-hero {
+  @include m.flex-align(5rem);
+  padding: 6rem 22rem;
+
+  @media (max-width: 1480px) {
+    padding: 0;
+  }
+}
+
+/* LEFT SIDE (BIG COVER) */
+
+.discover-hero__main-cover {
+  width: 39rem;
+}
+
+.discover-hero__main-cover img {
+  width: 100%;
+  display: block;
+  border-radius: v.$radius-lg;
+}
+
+/* RIGHT SIDE */
+
+.discover-hero__info {
+  @include m.flex-align(1.8rem);
+
+  @media (max-width: 1480px) {
+    position: relative;
+    height: 612px;
+    margin-bottom: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 2rem;
+    background-color: v.$color-bg-hover;
+    border-radius: 1rem;
+  }
+}
+
+/* Mini stacked card */
+
+.discover-hero__mini-cover {
+  width: 18rem;
+  border-radius: v.$radius-lg;
+  overflow: hidden;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  @media (max-width: 1480px) {
+    position: absolute;
+    left: 2rem;
+    width: 55px;
+
+    img {
+      border-radius: 0.6rem;
+    }
+  }
+}
+
+/* TEXT BLOCK */
+
+.discover-hero__text {
+  @include m.flex-column(1.8rem);
+
+  @media (max-width: 1480px) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-left: 7rem;
+  }
+}
+
+.discover-hero__title {
+  font-size: v.$text-xl;
+  font-weight: 700;
+  color: v.$color-text-primary;
+
+  @media (max-width: 1480px) {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+}
+
+.discover-hero__meta {
+  font-size: v.$text-sm;
+  color: v.$color-text-secondary;
+
+  @media (max-width: 1480px) {
+    font-size: 1.3rem;
+  }
+}
+
+.discover-hero__meta .dot {
+  margin: 0 0.5rem;
+}
+
+.discover-hero__author {
+  color: v.$color-text-primary;
+}
+
+/* ACTIONS */
+
+.discover-hero__actions {
+  @include m.flex-align(2.4rem);
+
+  @media (max-width: 1480px) {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.btn {
+  @include m.btn-reset;
+}
+
+.btn--play {
+  @include m.flex-center;
+
+  img {
+    width: 4rem;
+  }
+}
+
+.btn--icon img {
+  width: 2.2rem;
+  @include m.icon-hover;
+}
+
+/* Save group (icon + 500K) */
+
+.discover-hero__save-group {
+  @include m.flex-align(1rem);
+
+  @media (max-width: 1480px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+}
+
+.discover-hero__likes {
+  font-size: v.$text-xs;
+  color: v.$color-text-secondary;
+
+  @media (max-width: 1480px) {
+    font-size: 1.2rem;
+    color: v.$color-text-secondary;
+  }
+}
+
+/* TAGS */
+
+.discover-hero__tags {
+  display: flex;
+  gap: 1.2rem;
+
+  @media (max-width: 1480px) {
+    position: absolute;
+    left: 2rem;
+    bottom: 10rem;
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.discover-hero__tag {
+  padding: 0.8rem 1.3rem;
+  border: 2px solid v.$color-border-soft;
+  border-radius: v.$radius-pill;
+  font-size: v.$text-xs;
+  color: v.$color-text-secondary;
+
+  &:hover {
+    color: v.$color-text-primary;
+    background-color: v.$color-bg-secondary;
+    transition: all v.$transition-base;
+    cursor: pointer;
+  }
+}
+
+.header-discover {
+  background-color: v.$color-bg-secondary;
+}
+
+@media (max-width: 1480px) {
+  .content-wrapper-discover {
+    padding: 0;
+  }
+
+  .discover-hero__media {
+    display: none;
+  }
+  .footer-wrapper {
+    visibility: hidden;
+    padding: 0;
+  }
+  .player-mobile-version-hide {
+    display: none;
+  }
+}

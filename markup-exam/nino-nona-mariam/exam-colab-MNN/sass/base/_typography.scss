@@ -1,0 +1,19 @@
+@use '../abstract/variables' as v;
+
+html {
+    font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+    font-family: 'Satoshi', sans-serif;
+    // Add the 'v.' prefix to all variables
+    font-size: v.$font-size-medium; 
+    font-weight: v.$font-weight-regular;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+    // Add the 'v.' prefix here too
+    font-weight: v.$font-weight-bold;
+    font-size: v.$font-size-large;
+}

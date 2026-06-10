@@ -1,0 +1,14 @@
+{
+  "name": "code-warriors",
+  "version": "1.0.0",
+  "description": "Spotify Markup Project",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass styles/main.scss styles/main.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}

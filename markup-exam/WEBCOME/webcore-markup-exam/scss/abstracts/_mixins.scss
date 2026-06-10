@@ -1,0 +1,103 @@
+@use "./variables" as *;
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin aside-btn {
+  @include flex-center;
+  padding: 8px 15px;
+  color: $color-text-btn;
+  background-color: $color-bg-btn;
+  font-size: $font-size-sm;
+  border-radius: $radius-md;
+  font-weight: $font-weight-regular;
+  letter-spacing: 3%;
+  cursor: pointer;
+}
+
+@mixin catalog-card {
+  padding: $spacing-sm;
+  background-color: $color-bg-btn;
+  border-radius: $radius-lg;
+  color: $color-text-alt;
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+  letter-spacing: 3%;
+}
+
+@mixin truncate-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+//mixins used for search card styles
+
+@mixin search-card {
+  position: relative;
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+  @media (min-width: 790px) {
+    width: 160px;
+    height: 160px;
+    margin-right: 15px;
+  }
+}
+
+@mixin search-card-img {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  transform: rotate(30deg) translate(100%, -10%);
+  @media (min-width: 790px) {
+    width: 100px;
+    height: 100px;
+    transform: rotate(30deg) translate(95%, 20%);
+  }
+}
+
+@mixin search-card-header {
+  position: absolute;
+  padding-left: 20px;
+  padding-top: 20px;
+  font-size: 24px;
+}
+
+@mixin home_main_box_first_line {
+  width: calc(100% - 15.35px * 2);
+  margin-inline: auto;
+  border-radius: 6.02px 6.02px 0 0;
+  height: 2.49px;
+}
+
+@mixin home_main_box_second_line {
+  width: calc(100% - 6.64px * 2);
+  margin-inline: auto;
+  border-radius: 6.02px 6.02px 0 0;
+  height: 4.98px;
+}

@@ -1,0 +1,358 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// =====================
+// Player (Footer)
+// =====================
+.player {
+  position: fixed;
+  bottom: 10px;
+  left: calc(#{$sidebar-width} + 10px + #{$spacing-sm});
+  right: $spacing-lg;
+  height: $player-height;
+  background-color: $color-player-bg;
+  border-radius: $radius-md;
+  display: flex;
+  align-items: center;
+  padding: 0 $spacing-lg;
+  gap: $spacing-xl;
+  z-index: 100;
+}
+
+// =====================
+// Player Center (Controls + Progress)
+// visually: LEFT side
+// =====================
+.player-center {
+  order: -1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: $spacing-sm;
+  flex: 2;
+}
+
+// =====================
+// Player Left (Track Info)
+// visually: CENTER
+// =====================
+.player-left {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  flex: 1;
+}
+
+// =====================
+// Player Right (Action Buttons)
+// visually: RIGHT side
+// =====================
+.player-right {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  flex: 1;
+  min-width: 0;
+  justify-content: flex-end;
+  overflow: visible;
+}
+
+// =====================
+// Player Controls
+// =====================
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  flex-shrink: 0;
+}
+
+// =====================
+// Player Buttons
+// =====================
+.player-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-text-muted;
+  transition: all 0.2s ease;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+
+  img {
+    width: 40px;
+    height: 40px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+  }
+
+  &:hover img {
+    opacity: 1;
+  }
+
+  &--play {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $color-primary;
+    color: #000;
+
+    img {
+      opacity: 1;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      background-color: #1fdf64;
+    }
+  }
+
+  &--separator {
+    margin-left: $spacing-sm;
+    padding-left: $spacing-sm;
+    border-left: 1px solid $color-border;
+    width: auto;
+  }
+}
+
+// =====================
+// Player Cover
+// =====================
+.player-cover {
+  width: 48px;
+  height: 48px;
+  border-radius: $radius-sm;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+// =====================
+// Player Track Info
+// =====================
+.player-track {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+
+  &__title {
+    font-size: $font-md;
+    font-weight: 600;
+    color: $color-text;
+    @include truncate;
+  }
+
+  &__artist {
+    font-size: $font-sm;
+    color: $color-text-muted;
+    @include truncate;
+  }
+
+  &__album {
+    font-size: $font-sm;
+    color: $color-text-muted;
+    @include truncate;
+  }
+}
+
+
+// =====================
+// Player Progress Bar
+// =====================
+.player-progress {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  flex: 1;
+
+  &__bar {
+    flex: 1;
+    height: 4px;
+    background-color: $color-surface;
+    border-radius: $radius-pill;
+    cursor: pointer;
+
+    &:hover .player-progress__fill {
+      background-color: $color-text;
+    }
+  }
+
+  &__fill {
+    height: 100%;
+    width: 50%;
+    background-color: $color-text;
+    border-radius: $radius-pill;
+    transition: width 0.1s linear;
+  }
+
+  &__time {
+    font-size: $font-sm;
+    color: $color-text-muted;
+    flex-shrink: 0;
+  }
+}
+
+// =====================
+// DJ Panel
+// =====================
+.dj-toggle__input {
+  display: none;
+}
+
+.dj-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  flex-shrink: 0;
+  padding-left: $spacing-md;
+  margin-left: $spacing-sm;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 36px;
+    background-color: $color-text-muted;
+  }
+}
+
+.dj-toggle__btn {
+  width: auto;
+}
+
+.dj-panel {
+  display: none;
+  align-items: center;
+  gap: $spacing-sm;
+  background-color: rgba(9, 89, 183, 0.2);
+  border-radius: $radius-pill;
+  padding: $spacing-sm $spacing-md;
+}
+
+.dj-panel__dj-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.dj-toggle__input:checked ~ .player .dj-panel {
+  display: flex;
+}
+
+.dj-toggle__input:checked ~ .player .dj-toggle__btn {
+  display: none;
+}
+
+// =====================
+// Player Volume
+// =====================
+.player-volume {
+  width: 80px;
+
+  &__bar {
+    height: 4px;
+    background-color: $color-surface;
+    border-radius: $radius-pill;
+    cursor: pointer;
+  }
+
+  &__fill {
+    height: 100%;
+    width: 70%;
+    background-color: $color-text;
+    border-radius: $radius-pill;
+  }
+}
+
+// =====================
+// Mobile-only elements (hidden on desktop)
+// =====================
+.player-mobile-actions {
+  display: none;
+}
+
+.player-mobile-progress {
+  display: none;
+}
+
+// =====================
+// Mobile Player
+// =====================
+@include mobile {
+  .player {
+    bottom: calc(#{$bottom-nav-height} + 1px);
+    left: $spacing-md;
+    right: $spacing-md;
+    height: $mobile-player-height;
+    border-radius: 10px;
+    padding: 0 $spacing-md;
+    gap: $spacing-md;
+    overflow: hidden;
+  }
+
+  .player-center {
+    display: none;
+  }
+
+  .player-right {
+    display: none;
+  }
+
+  .player-left {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .player-track__album {
+    display: none;
+  }
+
+  .player-cover {
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+  }
+
+  .player-mobile-actions {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    flex-shrink: 0;
+
+    img {
+      width: 28px;
+      height: 28px;
+      opacity: 0.8;
+    }
+
+    .player-btn:last-child img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .player-mobile-progress {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    right: 16px;
+    height: 2px;
+    background: $color-surface;
+    border-radius: $radius-pill;
+
+    &__fill {
+      width: 50%;
+      height: 100%;
+      background: $color-text;
+      border-radius: $radius-pill;
+    }
+  }
+}
+

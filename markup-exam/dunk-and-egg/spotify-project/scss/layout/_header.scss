@@ -1,0 +1,65 @@
+@use "../abstract/variables";
+.topbar {
+    color: variables.$color-primary;
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: variables.$bg-main;
+}
+.left-icons {
+    margin-left: 18px;
+    ul{
+        grid-template-columns: repeat(4,minmax(210px, 0.725fr));
+        display: grid;
+    li a {
+        display:flex;
+        align-items: center;
+    }
+    }
+    li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+    a{
+        margin-left: 10px;
+        margin-top: 6.79px;
+        margin-bottom: 6.79px;
+    }
+    }
+    a {
+        display: flex;
+        align-items: center;
+        transition: 0.2s ease;  
+        gap: 20.1px;
+    }
+    a:hover{
+        filter: brightness(1.5); 
+    }
+}
+.right-icons {
+        display: flex;
+        justify-content: end;
+        margin-right: 10px;
+    ul{
+        display: flex;
+        align-items: center; 
+        gap: clamp(12px, 1.5vw, 22px);  
+    }
+}
+.search{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    height: 54px;
+    width: clamp(220px, 25vw, 350px);
+    padding: 6px 12px; 
+}
+// .library{
+//     width:clamp(130px, 15vw, 262px);
+// }
+.active {
+    background-color: #111111;
+}

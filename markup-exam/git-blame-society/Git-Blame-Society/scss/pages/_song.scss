@@ -1,0 +1,123 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+
+
+.song-section {
+  padding-inline: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(138,157,187,0.18) 0%,
+      rgba(138,157,187,0.14) 30%,
+      rgba(138,157,187,0.08) 60%,
+      rgba(138,157,187,0) 90%
+    ),
+    #060606;
+
+    .artist-navigation{
+        border-top: 1px solid rgba(137,137,137,0.2);
+        background: linear-gradient(
+      90deg,
+      rgba(138,157,187,0.18) 0%,
+      rgba(138,157,187,0.14) 30%,
+      rgba(138,157,187,0.08) 60%,
+      rgba(138,157,187,0) 90%
+    ),
+    #060606;
+    }
+}
+
+.song-hero, .song-meta, .lyrics{
+    @include m.flex;
+}
+
+.song-hero{
+    padding:3.7rem;
+    gap:6.2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    @media (max-width:v.$bp-desktop){
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 3.6rem;
+    }
+}
+.song-hero-info{
+    @include m.flex ($direction:column,$align:flex-start);
+    gap:2rem;
+}
+
+.song-meta{
+    gap:1rem;
+    justify-content: flex-start;
+    .white-subtitle{
+        font-size:map.get(v.$font-size,subtitle);
+        color:v.$text-primary;
+    }
+}
+
+.song-hero-img{
+    width: clamp(35.5rem, calc(10.5vw + 31.4rem), 50rem);
+    object-fit: cover;
+}
+
+.song-nav-active{
+    border-bottom: 0.2rem solid v.$primary-accent;
+    padding: 1.6rem 0 1.4rem;
+    color:v.$text-primary;
+}
+
+.song-nav {
+    border-bottom: 0.2rem solid rgba(137, 137, 137, 0.25);
+    ul {
+    padding: 1rem 2.5rem;
+    @include m.flex($justify:flex-start);
+    color: v.$text-secondary;
+    font-size:map.get(v.$font-size,subtitle);
+    gap:5rem;
+    }
+}
+
+.lyrics-section{
+    padding: 1rem 2.5rem;
+}
+
+.lyrics{
+    justify-content: flex-start;
+    gap:30rem;
+    margin-top:3.5rem;
+    align-items: flex-start;
+    @media (max-width:v.$bp-desktop){
+        flex-direction: column;
+        gap:0.5rem;
+    }
+}
+
+.lyrics-buttons{
+    @include m.flex($direction:column);
+    gap:1.2rem;
+    padding: 1rem 2.5rem;
+    @media (max-width:v.$bp-desktop){
+        flex-direction: row;
+    }
+}
+
+.lyrics-text, .lyrics-text-active{
+    font-size:2.8rem;
+    font-weight: map.get(v.$font-weight,bold);
+    @media (max-width:v.$bp-desktop){
+        font-size: 1.8rem;
+        padding: 1rem 2.5rem;
+    }
+}
+
+.lyrics-text{
+    color:v.$text-secondary;
+}
+
+.lyrics-text-active {
+    color:v.$text-primary;
+}

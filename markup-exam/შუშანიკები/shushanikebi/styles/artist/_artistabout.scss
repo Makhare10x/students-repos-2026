@@ -1,0 +1,80 @@
+@use "../abstracts/default" as d;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.artist-about {
+  padding: 4rem 4.5rem;
+}
+
+.artist-about__layout {
+  display: grid;
+  grid-template-columns: 130px 1fr 250px;
+  gap: 12rem;
+}
+
+/* Rank Badge */
+.artist-about__rank-badge {
+  position: relative;
+  width: 132px;
+}
+
+.artist-about__rank-image {
+  width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.artist-about__rank-content {
+  position: absolute;
+  inset: 0;
+  @include m.flex-column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: v.$color-text-primary;
+}
+
+.artist-about__rank-number {
+  font-size: v.$text-xl;
+  font-weight: 700;
+}
+
+.artist-about__rank-text {
+  font-size: v.$text-sm;
+}
+
+/* Bio */
+.artist-about__text {
+  line-height: 1.75;
+  font-size: v.$text-md;
+  color: v.$color-text-primary;
+}
+
+/* Stats */
+.artist-about__stat,
+.artist-about__city {
+  margin-bottom: 2.3rem;
+}
+
+.artist-about__stat-value {
+  font-weight: 700;
+  font-size: v.$text-xl;
+  color: v.$color-text-primary;
+}
+
+.artist-about__stat-label,
+.artist-about__city-count {
+  line-height: 1.75;
+  font-size: v.$text-sm;
+  color: v.$color-text-secondary;
+}
+
+.artist-about__city-name {
+  font-weight: 700;
+  font-size: v.$text-md;
+  color: v.$color-text-primary;
+}
+
+.artist-active {
+  background-color: v.$color-bg-hover;
+}

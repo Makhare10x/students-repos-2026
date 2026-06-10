@@ -1,0 +1,73 @@
+@use "../layout/pageLayout";
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+// Main content
+
+.search-page {
+  .library-header {
+    padding-bottom: 1rem;
+  }
+  .browse {
+    h2 {
+      padding: 2.5rem 1.5rem;
+      font-size: 2.2rem;
+      font-family: variables.$ff-satoshi-bold;
+      color: variables.$color-active-desk;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.search {
+  padding: 0 1.5rem;
+  margin-bottom: 3rem;
+  &.discover {
+  }
+  .search-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1.6rem;
+    padding-top: 2rem;
+  }
+}
+.recent-search {
+  display: none;
+}
+@media (min-width: 920px) {
+  .search {
+    padding: 0 2.5rem;
+    &.discover {
+    }
+    .search-wrapper {
+      & > * {
+        width: 17rem;
+      }
+      @include mixins.horizontalScroll;
+    }
+  }
+  .search-page {
+    .library {
+      display: none;
+    }
+    .browse {
+      h2 {
+        padding: 2.5rem;
+      }
+    }
+  }
+  .recent-search {
+    display: block;
+    .card-main {
+      @include mixins.pinStyle(ex);
+      a {
+        gap: 1.2rem;
+      }
+      img {
+        @include mixins.imageShaper($shape: circle);
+      }
+      .heading {
+        align-self: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Liked Songs</title>
+</head>
+
+<body class="main-page">
+    <div class="main-app-container">
+        <header class="main-header">
+            <div class="main-header-navigation">
+                <nav class="main-header__nav-bar">
+                    <ul>
+                        <li><a class="nav-link" href="./index.html"><img class="nav-link__icon"
+                                    src="./assets/icons/icons1-big.svg" alt="icon"><span
+                                    class="nav-link__label">Home</span></a>
+                        </li>
+                        <li><a class="nav-link" href="#"><img class="nav-link__icon" src="./assets/icons/icons2-big.svg"
+                                    alt="icon"><span class="nav-link__label">Discover</span></a>
+                        </li>
+                        <li><a class="nav-link" href="./search.html"><img class="nav-link__icon"
+                                    src="./assets/icons/icons-3big.svg" alt="icon"><span
+                                    class="nav-link__label">Search</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="main-header__user-controls">
+                    <ul>
+                        <li><a class="nav-link" href="#"><img class="nav-link__icon" src="./assets/icons/icons4-big.svg"
+                                    alt="icon"></a>
+                        </li>
+                        <li><a class="nav-link" href="#"><img class="nav-link__icon" src="./assets/icons/icons5-big.svg"
+                                    alt="icon"></a>
+                        </li>
+                        <li><a class="nav-link" href="./home.html"><img class="nav-link__icon"
+                                    src="./assets/icons/icons6-big.svg" alt="icon"></a>
+                        </li>
+                        <li><a class="nav-link" href="#"><img class="nav-link__icon" src="./assets/icons/icons7-big.svg"
+                                    alt="icon"></a>
+                        </li>
+                        <li><a class="nav-link" href="#"><img class="nav-link__icon"
+                                    src="./assets/icons/Sprite-00021.svg" alt="icon"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- ==sidebar== -->
+
+        <aside class="sidebar">
+            <nav class="sidebar-nav__menu">
+                <ul>
+                    <li><a href="./library.html"><img src="./assets/icons/Frame-102.svg" alt="icon"><span>My
+                                Library</span></a>
+                    <li class="sidebar__pins-nav-link"><a href="#"><img src="./assets/icons/icons8-big.svg"
+                                alt="icon"><span>Pins</span></a>
+                        <a href="#"><img src="./assets/icons/icons9-big.svg" alt="icon"></a>
+                    </li>
+                    <li class="sidebar__pins-nav-link"><a href="./playlist.html"><img src="./assets/icons/icons10-big.svg"
+                                alt="icon"><span>Playlists</span></a>
+                        <a href="#"><img src="./assets/icons/icons9-big.svg" alt="icon"></a>
+                    </li>
+                    <li><a href="#"><img src="./assets/icons/icons11-big.svg" alt="icon"><span>Liked
+                                songs</span></a></li>
+                    <li><a href="#"><img src="./assets/icons/iconsS-big.svg" alt="icon"><span>Saves</span></a></li>
+                    <li><a href="./album.html"><img src="./assets/icons/icons12-big.svg" alt="icon"><span>Albums</span></a></li>
+                    <li><a href="#"><img src="./assets/icons/icons13-big.svg" alt="icon"><span>Folders</span></a></li>
+                    <li><a href="#"><img src="./assets/icons/icons14-big.svg" alt="icon"><span>Podcasts</span></a></li>
+                    <li><a href="#"><img src="./assets/icons/icons15-big.svg" alt="icon"><span>Audioboks</span></a></li>
+                    <li><a href="./artists.html"><img src="./assets/icons/icons16-big.svg" alt="icon"><span>Artists</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <div class="liked-songs-content-navigation">
+                <nav>
+                    <ul>
+                        <li> <a class="nav-link" href="#"><img class="nav-link__icon"
+                                    src="./assets/icons/iconslb1big.svg" alt="icon"></a></li>
+                        <li> <a class="nav-link" href="#"><img class="nav-link__icon"
+                                    src="./assets/icons/iconslb2big.svg" alt="icon"></a></li>
+                        <li><a class="nav-link" href="#"><img class="nav-link__icon"
+                                    src="./assets/icons/iconslb3big.svg" alt="icon"><span
+                                    class="nav-link__label">Recent</span></a></li>
+                        <li><a class="nav-link" href="#"><img class="nav-link__icon"
+                                    src="./assets/icons/iconslb4big.svg" alt="icon"><span
+                                    class="nav-link__label">Filter: All</span></a></li>
+                        <li> <a class="nav-link" href="#"><img class="nav-link__icon"
+                                    src="./assets/icons/icons-3big.svg" alt="icon"></a></li>
+                    </ul>
+                </nav>
+                <span><a class="nav-link" href="#"><img class="nav-link__icon" src="./assets/icons/Framelb584.svg"
+                            alt="icon"></a></span>
+            </div>
+            <section class="liked-songs-library">
+                <table class="liked-songs-library__table">
+                    <thead>
+                        <tr>
+                            <th><span>#</span></th>
+                            <th><span>Title</span></th>
+                            <th><span>Album</span></th>
+                            <th><span>Duration</span></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="liked-songs-library__table">
+                        <tr>
+                            <td><span>1</span></td>
+                            <td>
+                                <figure class="card-badge__items ">
+                                    <img src="./assets/icons/Rectangle 6.png" alt="Get Lucky">
+                                    <figcaption>
+                                        <h3>Get Lucky </h3><span>Daft Punk</span>
+                                    </figcaption>
+                                </figure>
+                            </td>
+                            <td><span>Random Access Memories</span></td>
+                            <td><span>4:35</span></td>
+                            <td>
+                                <button><img src="./assets/icons/pc-like.svg" alt="like-icon"></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2</span></td>
+                            <td>
+                                <figure class="card-badge__items ">
+                                    <img src="./assets/icons/Rectangle 6.png" alt="Get Lucky">
+                                    <figcaption>
+                                        <h3>Instant Crush</h3><span>Daft Punk, Julian Casablancas</span>
+                                    </figcaption>
+                                </figure>
+                            </td>
+                            <td><span>Random Access Memories</span></td>
+                            <td><span>5:57</span></td>
+                            <td>
+                                <button><img src="./assets/icons/pc-like.svg" alt="like-icon"></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>3</span></td>
+                            <td>
+                                <figure class="card-badge__items ">
+                                    <img src="./assets/image/Rectanglels3.png" alt="Get Lucky">
+                                    <figcaption>
+                                        <h3>On Melancholy Hill</h3><span>Gorillaz</span>
+                                    </figcaption>
+                                </figure>
+                            </td>
+                            <td "><span>Plastic Beach</span></td>
+                            <td><span>3:53</span></td>
+                            <td >
+                                <button><img src="./assets/icons/pc-like.svg" alt="like-icon"></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>4</span></td>
+                            <td>
+                                <figure class="card-badge__items ">
+                                    <img src="./assets/image/Rectanglels4.png" alt="Get Lucky">
+                                    <figcaption>
+                                        <h3>Tainted Love</h3><span>Soft Cell</span>
+                                    </figcaption>
+                                </figure>
+                            </td>
+                            <td><span>Non-Stop Erotic Cabaret</span></td>
+                            <td><span>2:33</span></td>
+                            <td>
+                                <button><img src="./assets/icons/pc-like.svg" alt="like-icon"></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>5</span></td>
+                            <td>
+                                <figure class="card-badge__items ">
+                                    <img src="./assets/image/Rectanglels5.png" alt="Get Lucky">
+                                    <figcaption>
+                                        <h3>One More Time</h3><span>Discovery</span>
+                                    </figcaption>
+                                </figure>
+                            </td>
+                            <td><span>Random Access Memories</span></td>
+                            <td><span>5:20</span></td>
+                            <td>
+                                <button><img src="./assets/icons/pc-like.svg" alt="like-icon"></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>6</span></td>
+                            <td>
+                                <figure class="card-badge__items ">
+                                    <img src="./assets/image/Rectanglls6.png" alt="Get Lucky">
+                                    <figcaption>
+                                        <h3>Electric Feel</h3><span>MGMT</span>
+                                    </figcaption>
+                                </figure>
+                            </td>
+                            <td><span>Oracular Spectacular</span></td>
+                            <td><span>3.:49</span></td>
+                            <td>
+                                <button><img src="./assets/icons/pc-like.svg" alt="like-icon"></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>7</span></td>
+                            <td>
+                                <figure class="card-badge__items ">
+                                    <img src="./assets/icons/Rectangle 6.png" alt="Get Lucky">
+                                    <figcaption>
+                                        <h3>Get Lucky </h3><span>Daft Punk</span>
+                                    </figcaption>
+                                </figure>
+                            </td>
+                            <td><span>Random Access Memories</span></td>
+                            <td><span>4:35</span></td>
+                            <td>
+                                <button><img src="./assets/icons/pc-like.svg" alt="like-icon"></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <!-- <article class="main-article">
+
+        </article> -->
+        <footer class="bottom-player">
+            <div class="bottom-player__container">
+                <ul class="player-controls">
+                    <li><button class="player-btn__primary"><img class="player-btn__icon"
+                                src="./assets/icons/Group-2.svg" alt="icon"></button>
+                    </li>
+                    <li><button class="player-btn"><img src="./assets/icons/Name=Prev.svg" alt="icon"></button>
+                    </li>
+                    <li><button class="player-btn"><img src="./assets/icons/Name=Next.svg" alt="icon"></button>
+                    </li>
+                    <li><button class="player-btn"><img src="./assets/icons/Name=Shuffle.svg" alt="icon"></button>
+                    </li>
+                    <li><button class="player-btn"><img src="./assets/icons/Name=Loop.svg" alt="icon"></button>
+                    </li>
+                    <li><img class="player-btn" src="./assets/icons/Group-37.svg" alt="icon"></li>
+                    <li><button class="player-btn"><img src="./assets/icons/Name=Volume.svg" alt="icon"></button>
+                    </li>
+                    <li><a href="./song.html"><img class="player-btn" src="./assets/icons/Group-52.png" alt="icon"></a>
+                    </li>
+                </ul>
+                <ul class="player-links">
+                    <li><a href="#"><img class="player-btn" src="./assets/icons/icons11-big.svg" alt="icon"></a></li>
+                    <li><a href="#"><img class="player-btn" "
+                                src=" ./assets/icons/Name=AddPlaylist.svg" alt="icon"></a></li>
+                    <li><a href="#"><img class="player-btn" src="./assets/icons/Name=Lyricso.svg" alt="icon"></a></li>
+                    <li><a href="#"><img class="player-btn" src="./assets/icons/Name=Device.svg" alt="icon"></a></li>
+                    <li><a href="#"><img class="player-btn" src="./assets/icons/Name=More.svg" alt="icon"></a></li>
+                    <li><a href="#"><img class="player-btn" src="./assets/icons/PropertyDefault.svg" alt="icon"></a>
+                    </li>
+                    <li><a href="#"><img class="player-btn" src="./assets/icons/Name=Queue.svg" alt="icon"></a></li>
+                </ul>
+
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

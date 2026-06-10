@@ -1,0 +1,446 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    <div class="app">
+        <!--Left Sidebar-->
+        <aside class="sidebar">
+            <a href="./library.html" class="sidebar-top">
+                <img src="../images/library-icon.svg" alt="My Library" class="library-icon" />
+                <span class="sidebar-title">My Library</span>
+            </a>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="sidebar-item">
+                        <a href="#">
+                            <div class="sidebar-item-icon-group">
+                                <img src="../images/pins-icon.svg" alt="Pins icon" class="sidebar-icon">
+                                <span class="sidebar-text">Pins</span>
+                            </div>
+                            <span><img src="../images/arrow-icon.svg" alt="Arrow Icon" class="sidebar-arrow"></span>
+                        </a>
+                    </li>
+                   
+                    <li class="sidebar-item">
+                        <a href="#">
+                            <div class="sidebar-item-icon-group">
+                                <img src="../images/playlists-icon.svg" alt="Playlists icon" class="sidebar-icon">
+                                <span class="sidebar-text">Playlists</span>
+                            </div>
+                            <span><img src="../images/arrow-icon.svg" alt="Arrow Icon" class="sidebar-arrow"></span>
+                        </a>
+                    </li>
+
+                   <li class="sidebar-item">
+                        <a href="#">
+                            <div class="sidebar-item-icon-group">
+                                <img src="../images/liked-songs-icon.svg" alt="Liked Songs icon" class="sidebar-icon">
+                                <span class="sidebar-text">Liked Songs</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="#">
+                            <div class="sidebar-item-icon-group">
+                                <img src="../images/saves-icon.svg" alt="Saves icon" class="sidebar-icon">
+                                <span class="sidebar-text">Saves</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="#">
+                            <div class="sidebar-item-icon-group">
+                                <img src="../images/albums-icon.svg" alt="Albums icon" class="sidebar-icon">
+                                <span class="sidebar-text">Albums</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="#">
+                            <div class="sidebar-item-icon-group">
+                                <img src="../images/folders-icon.svg" alt="Folders icon" class="sidebar-icon">
+                                <span class="sidebar-text">Folders</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="#">
+                            <div class="sidebar-item-icon-group">
+                                <img src="../images/podcasts-icon.svg" alt="Podcasts icon" class="sidebar-icon">
+                                <span class="sidebar-text">Podcasts</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="#">
+                            <div class="sidebar-item-icon-group">
+                                <img src="../images/audiobooks-icon.svg" alt="Audiobooks icon" class="sidebar-icon">
+                                <span class="sidebar-text">Audiobooks</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="#">
+                            <div class="sidebar-item-icon-group">
+                                <img src="../images/artists-icon.svg" alt="Artists icon" class="sidebar-icon">
+                                <span class="sidebar-text">Artists</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <!--header/main content area/footer/friends sidebar container-->
+        <div class="content-wrapper">
+            <!--Header-->
+            <header class="header">
+                <div class="header-left-container">
+                    <nav>
+                        <a href="../index.html" class="header-nav-link" id="home-link-active">
+                            <img src="../images/home-active-icon.svg" alt="Home Icon" class="home-icon">
+                            <span>Home</span>
+                        </a>
+                        <a href="#" class="header-nav-link">
+                            <img src="../images/discover-icon.svg" alt="Discover Icon" class="discover-icon">
+                            <span>Discover</span>
+                        </a>
+                    </nav>
+                    <a href="./search.html" class="header-search">
+                        <img src="../images/search-icon.svg" alt="" class="search-icon">
+                        <input type="text" placeholder="Search" class="search-input">
+                    </a>
+                </div>
+                <div class="header-right-container">
+                    <button class="header-icon-btn">
+                        <img src="../images/notification-icon.svg" alt="Notifications">
+                    </button>
+
+                    <button class="header-icon-btn">
+                        <img src="../images/lock-icon.svg" alt="Security">
+                    </button>
+
+                    <a class="header-icon-btn" href="#friends">
+                        <img src="../images/friends-icon.svg" alt="Friends">
+                    </a>
+
+                    <button class="header-icon-btn">
+                        <img src="../images/settings-icon.svg" alt="Settings">
+                    </button>
+
+                    <button class="header-icon-btn">
+                        <img src="../images/profile-icon.svg" alt="Profile" class="header-avatar">
+                    </button>
+                </div>
+            </header>
+            <!--Friends Activity Sidebar-->
+            <aside id="friends" class="friends-sidebar">
+                <div class="friends-sidebar-header">
+                    <h2>Friends Activity</h2>
+                    <div class="icons-group">
+                        <a>
+                            <img src="../images/add-friend-icon.svg" alt="Add Friend">
+                        </a>
+                        <a href="#" class="close">
+                            <img src="../images/x-close-icon.svg" alt="Close">
+                        </a>
+                    </div>
+                </div>
+                <div class="friends-list-container">
+                    <div class="friend-card">
+                        <img src="../images/friend-avatar-1.png" alt="FriendlyMusicListener">
+                        <div class="friend-info">
+                            <div class="friend-name">FriendlyMusicListener</div>
+                            <div class="friend-activity">
+                                <img src="../images/online-icon.svg" alt="Listenint Now">
+                                <div>Goosebumps</div>
+                                <span>&bull;</span>
+                                <div class="artist">Travis Scott</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="friend-card">
+                        <img src="../images/friend-avatar-2.png" alt="AverageMusicEnjoyer">
+                        <div class="friend-info">
+                            <div class="friend-name">AverageMusicEnjoyer</div>
+                            <div class="friend-activity">
+                                <img src="../images/online-icon.svg" alt="Listenint Now">
+                                <div>Get Lucky</div>
+                                <span>&bull;</span>
+                                <div class="artist">Daft Punk</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="friend-card">
+                        <img src="../images/friend-avatar-3.png" alt="MusicEnthusiast">
+                        <div class="friend-info">
+                            <div class="friend-name">MusicEnthusiast</div>
+                            <div class="friend-activity">
+                                <span>1h</span>
+                                <div>would he</div>
+                                <span>&bull;</span>
+                                <div class="artist">joji</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="friend-card">
+                        <img src="../images/friend-avatar-4.png" alt="IListenToMusic56">
+                        <div class="friend-info">
+                            <div class="friend-name">IlistenToMusic56</div>
+                            <div class="friend-activity">
+                                <span>6h</span>
+                                <div>Rockstar</div>
+                                <span>&bull;</span>
+                                <div class="artist">Post Malone</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!--Main Content Area-->
+            <main class="liked-songs-content main-content home-page">
+                <div class="liked-songs-header">
+                    <div class="left-side">
+                        <button class="liked-songs-btn">
+                            <img src="../images/plusicon.svg" alt="plus-icon">
+                        </button>
+                    </div>
+                    <div class="right-side">
+                        <button class="liked-songs-btn">
+                            <img src="../images/listicon.svg" alt="list-icon">
+                        </button>
+
+                        <button class="liked-songs-btn">
+                            <img src="../images/gridicon.svg" alt="grid-icon">
+                        </button>
+
+                        <button class="liked-songs-btn">
+                            <img src="../images/twoarrow.svg" alt="recent">
+                            <span>Recent</span>
+                        </button>
+
+                        <button class="liked-songs-btn">
+                            <img src="../images/filter.svg" alt="filter-all">
+                            <span>Filter: All</span>
+                        </button>
+
+                        <button class="liked-songs-btn">
+                            <img src="../images/searchicon.svg" alt="search">
+                        </button>
+                    </div>  
+                </div>
+                <!-- here starts table -->
+                <section id="liked-songs-table">
+                    <table class="songs-table">
+                        <thead class="songs-header">
+                            <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th>Album</th>
+                                <th>Duration</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="songs-description">
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <img src="../images/song-image-icon.png" alt="daft-punk">
+                                    <div class="liked-songs-info">
+                                        <h4>Get Lucky</h4>
+                                        <p>Daft Punk</p>
+                                    </div>
+                                </td>
+                                <td>Random Access Memories</td>
+                                <td>4:35</td>
+                                <td><img src="../images/little-green-heart.svg" alt="heart"></td>
+                            </tr>
+                        </tbody>
+
+                        <tbody class="songs-description">
+                            <tr>
+                                <td>2</td>
+                                <td>
+                                    <img src="../images/song-image-icon.png" alt="daft-punk">
+                                    <div class="liked-songs-info">
+                                        <h4>Instant Crush</h4>
+                                        <p>Daft Punk, Julian Casablancas </p>
+                                    </div>
+                                </td>
+                                <td>Random Access Memories</td>
+                                <td>5:37</td>
+                                <td><img src="../images/little-green-heart.svg" alt="heart"></td>
+                            </tr>
+                        </tbody>
+
+                        <tbody class="songs-description">
+                            <tr>
+                                <td>3</td>
+                                <td>
+                                    <img src="../images/Gorillaz.svg" alt="gorillaz">
+                                    <div class="liked-songs-info">
+                                        <h4>On Melancholy Hill</h4>
+                                        <p>Gorillaz</p>
+                                    </div>
+                                </td>
+                                <td>Plastic Beach</td>
+                                <td>3:53</td>
+                                <td><img src="../images/little-green-heart.svg" alt="heart"></td>
+                            </tr>
+                        </tbody>
+
+                         <tbody class="songs-description">
+                            <tr>
+                                <td>4</td>
+                                <td>
+                                    <img src="../images/softcell.svg" alt="soft-cell">
+                                    <div class="liked-songs-info">
+                                        <h4>Trained Love</h4>
+                                        <p>Soft Cell</p>
+                                    </div>
+                                </td>
+                                <td>Non-Stop Erotic Cabaret</td>
+                                <td>2:33</td>
+                                <td><img src="../images/little-green-heart.svg" alt="heart"></td>
+                            </tr>
+                        </tbody>
+
+                         <tbody class="songs-description">
+                            <tr>
+                                <td>5</td>
+                                <td>
+                                    <img src="../images/one-more-time.svg" alt="daft-punk">
+                                    <div class="liked-songs-info">
+                                        <h4>One More Time</h4>
+                                        <p>Daft Punk</p>
+                                    </div>
+                                </td>
+                                <td>Discovery</td>
+                                <td>5:20</td>
+                                <td><img src="../images/little-green-heart.svg" alt="heart"></td>
+                            </tr>
+                        </tbody>
+
+                         <tbody class="songs-description">
+                            <tr>
+                                <td>6</td>
+                                <td>
+                                    <img src="../images/MGMT.svg" alt="mgmt">
+                                    <div class="liked-songs-info">
+                                        <h4>Electric Feel</h4>
+                                        <p>MGMT</p>
+                                    </div>
+                                </td>
+                                <td>Oracular Spectacular</td>
+                                <td>3:49</td>
+                                <td><img src="../images/little-green-heart.svg" alt="heart"></td>
+                            </tr>
+                        </tbody>
+
+                        <tbody class="songs-description">
+                            <tr>
+                                <td>7</td>
+                                <td>
+                                    <img src="../images/song-image-icon.png" alt="daft-punk">
+                                    <div class="liked-songs-info">
+                                        <h4>Give Life Back to Music</h4>
+                                        <p>Daft Punk</p>
+                                    </div>
+                                </td>
+                                <td>Random Access Memories</td>
+                                <td>4:35</td>
+                                <td><img src="../images/little-green-heart.svg" alt="heart"></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </section>
+
+            </main>
+
+            <!--Fixed footer player-->
+            <footer class="footer">
+                <a href="./song.html" class="footer-overlay"></a>
+                <div class="footer-left-group">
+                    <div class="player-controls">
+                        <img src="../images/play-icon.svg" alt="play/pause">
+                        <img src="../images/prev-icon.svg" alt="skip back">
+                        <img src="../images/next-icon.svg" alt="skip forward">
+                        <img src="../images/shuffle-icon.svg" alt="shuffle">
+                        <img src="../images/repeat-icon.svg" alt="repeat">
+                        <div class="play-progress">
+                            <div class="runtime">2:23</div>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <div class="duration">4:45</div>
+                        </div>
+                        <img src="../images/volume-icon.svg" alt="volume">
+                    </div>
+                    <div class="song-playing">
+                        <img src="../images/song-image-icon.png" alt="cover">
+                        <div class="song-info">
+                            <div class="song-title">Get Lucky <span class="none feat">(Feat. Pharrell Williams)</span></div>
+                            <div class="artist">Daft Punk</div>
+                            <div class="album">Random Access Memories</div>
+                        </div>
+                    </div>
+                    <div class="mobile-footer-icons none">
+                        <img src="../images/add-song.svg" alt="Add Song">
+                        <img src="../images/play-mobile-icon.svg" alt="Play/Pause">
+                    </div>
+                </div>
+                <div class="other-controls">
+                    <img src="../images/like-icon.svg" alt="Add to Liked Songs">
+                    <img src="../images/add-icon.svg" alt="Add to Playlist">
+                    <img src="../images/lyrics-icon.svg" alt="Song Lyrics">
+                    <img src="../images/pc-icon.svg" alt="Device">
+                    <img src="../images/more-icon.svg" alt="More Options">
+                    <div class="line"></div>
+                    <img src="../images/dj-icon.svg" alt="DJ">
+                    <img src="../images/queue-icon.svg" alt="Queue">
+                </div>
+                 <img src="../images/more-icon.svg" class="none more-menu" alt="More Options">
+                 <div class="mobile-progress-bar none">
+                    <div class="progress"></div>
+                 </div>
+            </footer>
+            <!--Mobile Navigation-->
+            <nav class="mobile-nav none">
+                <div class="nav-item">
+                    <img src="../images/home-inactive-icon.svg" alt="Home">
+                    <a href="../index.html">Home</a>
+                </div>
+                <div class="nav-item">
+                    <img src="../images/discover-icon.svg" alt="Discover">
+                    <a href="">Discover</a>
+                </div>
+                <div class="nav-item">
+                    <img src="../images/search-icon.svg" alt="Search">
+                    <a href="./search.html">Search</a>
+                </div>
+                <div class="nav-item">
+                    <img src="../images/library-icon.svg" alt="Library">
+                    <a href="./library.html">Library</a>
+                </div>
+                <div class="nav-item">
+                    <img src="../images/user-icon.svg" alt="Profile">
+                    <a href="">Me</a>
+                </div>
+            </nav>
+            
+        </div>
+    </div>
+</body>
+</html>

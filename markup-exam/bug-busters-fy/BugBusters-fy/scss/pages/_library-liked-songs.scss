@@ -1,0 +1,107 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+@use "../components/tracklist";
+
+.library {
+  position: sticky;
+  z-index: 3;
+  top: 0;
+
+  .library-header {
+    background-color: #111111;
+    &-search {
+      display: grid;
+      grid-template-columns: 1fr 4rem;
+      grid-template-areas:
+        "search" "add-more"
+        "navbar" "navbar";
+    }
+
+    .library-search {
+      grid-area: search;
+      width: 90%;
+      max-width: 30rem;
+
+      input {
+        &::placeholder {
+          display: block;
+        }
+        height: 100%;
+        padding-left: 2rem;
+      }
+    }
+    .add-moded {
+      grid-area: add-more;
+    }
+    button {
+      @include mixins.flex-prop(1rem);
+      @include mixins.interactiveIcon;
+      svg {
+        flex-shrink: 0;
+      }
+    }
+    .library-nav {
+      grid-area: navbar;
+      @include mixins.flex-prop(1rem);
+
+      .view-type,
+      .list-view,
+      .group-icon,
+      .recents {
+        @include mixins.flex-prop(1rem, $align: center);
+      }
+    }
+    .group-type {
+      order: 1;
+    }
+  }
+}
+/*==================
+  Media List
+==================*/
+.library-liked-songs {
+  margin-top: 1rem;
+  .library-songs {
+    padding: 0 3.5rem;
+  }
+}
+
+@media (min-width: 920px) {
+  .library {
+    .library-header {
+      position: sticky;
+      top: 0;
+      background-color: #060606;
+      &-search {
+        @include mixins.flex-prop($justify: space-between);
+        order: 1;
+        justify-content: flex-end;
+        gap: 2rem;
+      }
+      button#add-more {
+        margin-right: auto;
+      }
+      .library-search {
+        order: 1;
+        width: 4rem;
+        #search-bar {
+          display: none;
+        }
+      }
+
+      .library-nav {
+        order: 1;
+        .recents,
+        .group-icon {
+          @include mixins.interactiveIcon;
+          @include mixins.flex-prop(1rem, $align: center);
+        }
+
+        #add-more {
+          order: 1;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}

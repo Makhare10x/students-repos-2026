@@ -1,0 +1,32 @@
+@use '../abstracts/variables' as *;
+
+.app-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: $color-bg-app;
+
+  &__content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-right: 0.7rem;
+  }
+
+  // Mobile: stack vertically, hide sidebar
+  @media (max-width: #{$bp-mobile}) {
+    background: $color-bg-mobile;
+
+    &__content {
+      background: $color-bg-mobile;
+      margin-right: 0;
+    }
+
+    .sidebar {
+      display: none;
+    }
+  }
+
+}

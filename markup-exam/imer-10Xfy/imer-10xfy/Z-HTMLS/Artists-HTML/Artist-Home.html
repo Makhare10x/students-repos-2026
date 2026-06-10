@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Home</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body> <!-- mobile and desktop header and menu -->
+    <header> <!-- desktop >1200px -->
+        <section class="desktop-menu">
+            <figure class="first-section-head">
+                <div class="header-div"> <a href="../../Z-HTMLS/Library-HTML/Library.html"> <img src="../.././assets/images/library.svg" alt="#">
+                        <p>Library</p>
+                    </a> </div>
+                <div class="header-div"> <a href="../../index.html"> <img src="../.././assets/images/home button.svg" alt="#">
+                        <p>Home</p>
+                    </a> </div>
+                <div class="header-div"> <a href="../../Z-HTMLS/Discover.html"> <img src="../.././assets/images/Star.svg" alt="#">
+                        <p>Discover</p>
+                    </a> </div>
+                <div class="header-div"> <a href="../../Z-HTMLS/search.html"> <img
+                            src="../.././assets/images/search.svg" alt="#">
+                        <p>Search</p>
+                    </a> </div>
+            </figure>
+            <figure class="second-section-head"> <a href="#"><img src="../.././assets/images/News.svg"
+                        class="green-hover" alt="#"></a> <a href="#"><img src="../.././assets/images/private.svg"
+                        class="green-hover" alt="#"></a> <!-- მარჯვენა საიდბარის ღილაკი --> <label for="right-sidebar"
+                    class="right-sidebar-btn"> <input type="checkbox" id="right-sidebar" hidden> <img
+                        src="../.././assets/images/friends.svg" alt="#" class="checked-color"> </label> <a href="#"><img
+                        src="../.././assets/images/settings.svg" class="green-hover" alt="#"></a> <a href="#"><img
+                        src="../.././assets/images/profile image.png" class="profile-img" alt="#"></a> </figure>
+        </section> <!-- mobile 390px -->
+        <section class="mobile-menu">
+            <div class="header-div"> <a href="../../index.html"> <img src="../.././assets/images/home button.svg" alt="#">
+                    <p>Home</p>
+                </a> </div>
+            <div class="header-div"> <a href="../../Z-HTMLS/Discover.html"> <img src="../.././assets/images/Star.svg" alt="#">
+                    <p>Discover</p>
+                </a> </div>
+            <div class="header-div"> <a href="../../Z-HTMLS/search.html"> <img src="../.././assets/images/search.svg"
+                        alt="#">
+                    <p>Search</p>
+                </a> </div>
+            <div class="header-div"> <a href="../../Z-HTMLS/Library-HTML/Library.html"> <img src="../.././assets/images/library.svg" alt="#">
+                    <p>Library</p>
+                </a> </div>
+            <div class="header-div"> <a href="#"> <img src="../.././assets/images/profile.svg" alt="#">
+                    <p>Me</p>
+                </a> </div>
+        </section>
+    </header>
+    <main> <!-- sidebar sections -->
+        <aside class="side-bar">
+            <nav>
+                <ul>
+                    <li> <a href="#"> <img src="../.././assets/images/Pins.svg" alt="#">
+                            <p>Pins</p>
+                        </a> <img class="arrow" src="../.././assets/images/sidebar.svg" alt="#"> </li>
+                    <li> <a href="../../Z-HTMLS/Playlist.html"> <img src="../.././assets/images/Playlist.svg" alt="#">
+                            <p>Playlists</p>
+                        </a> <img class="arrow" src="../.././assets/images/sidebar.svg" alt="#"> </li>
+                    <li> <a href="../../Z-HTMLS/Library-HTML/Linked-songs.html"> <img src="../.././assets/images/liked songs.svg" alt="#">
+                            <p>Liked songs</p>
+                        </a> </li>
+                    <li> <a href="#"> <img src="../.././assets/images/saves.svg" alt="#">
+                            <p>Saves</p>
+                        </a> </li>
+                    <li> <a href="../../Z-HTMLS/Album.html"> <img src="../.././assets/images/Alboms.svg" alt="#">
+                            <p>Alboms</p>
+                        </a> </li>
+                    <li> <a href="#"> <img src="../.././assets/images/Folders.svg" alt="#">
+                            <p>Folders</p>
+                        </a> </li>
+                    <li> <a href="#"> <img src="../.././assets/images/podcast.svg" alt="#">
+                            <p>Podcast</p>
+                        </a> </li>
+                    <li> <a href="#"> <img src="../.././assets/images/audiobook.svg" alt="#">
+                            <p>Audiobooks</p>
+                        </a> </li>
+                    <li> <a href="../../Z-HTMLS/Artists-HTML/Artist-Home.html"> <img
+                                src="../.././assets/images/Artists.svg" alt="#">
+                            <p>Artsits</p>
+                        </a> </li>
+                </ul>
+            </nav>
+        </aside> <!-- ****************************************** -->
+        <section class="main-content">
+            <div id="spotify-artist-profile">
+                <header class="profile-header">
+                    <div class="artist-info">
+                        <h1 class="artist-name">Daft Punk</h1>
+                        <p class="monthly-listeners">20,795,080 monthly listeners</p>
+                    </div>
+                    <div class="header-actions"> <button class="play-btn circular-btn"> <img
+                                src="/assets/images/player-icon.png" alt="Play"> </button> <button
+                            class="follow-btn rounded-btn">Follow</button> <button class="more-options-btn icon-btn">
+                            <img src="/assets/images/add-icon.png" alt="More options"> </button> <button
+                            class="add-playlist-btn icon-btn"> <img src="/assets/images/add-playlist.png"
+                                alt="Add to playlist"> </button> <button class="queue-btn icon-btn"> <img
+                                src="/assets/images/queue.png" alt="Queue"> </button> </div>
+                </header>
+                <nav class="navigation-bar">
+                    <ul class="nav-links">
+                        <li class="active"><a>Home</a></li>
+                        <li><a>Albums</a></li>
+                        <li><a>Singles and EPs</a></li>
+                        <li><a>Compilations</a></li>
+                        <li><a>Merch</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Features & More</a></li>
+                    </ul>
+                    <div class="search-icon-nav"> <img src="/assets/images/search-icon.png" alt="Search"> </div>
+                </nav>
+                <div class="content-wrapper-artist">
+                    <div class="most-played-section">
+                        <h3>Your most played</h3>
+                        <div class="track-list">
+                            <div class="track-row"> <span class="track-number">1</span> <img
+                                    src="/assets/images/one-more-time.png" alt="Album art" class="track-art">
+                                <div class="track-text">
+                                    <p class="track-title">One More Time</p>
+                                    <p class="track-artist">Daft Punk</p>
+                                </div> <span class="track-duration">5:20</span> <button class="like-btn icon-btn"> <img
+                                        src="/assets/images/like-icon.png" alt="Like"> </button>
+                            </div>
+                            <div class="track-row"> <span class="track-number">2</span> <img
+                                    src="/assets/images/daft_punk.png" alt="Album art" class="track-art">
+                                <div class="track-text">
+                                    <p class="track-title">Get Lucky</p>
+                                    <p class="track-artist">Daft Punk</p>
+                                </div> <span class="track-duration">4:35</span> <button class="like-btn icon-btn"> <img
+                                        src="/assets/images/like-icon.png" alt="Like"> </button>
+                            </div>
+                            <div class="track-row"> <span class="track-number">2</span> <img
+                                    src="/assets/images/daft_punk.png" alt="Album art" class="track-art">
+                                <div class="track-text">
+                                    <p class="track-title">Give Life Back to Music</p>
+                                    <p class="track-artist">Daft Punk</p>
+                                </div> <span class="track-duration">4:35</span> <button class="like-btn icon-btn"> <img
+                                        src="/assets/images/like-icon.png" alt="Like"> </button>
+                            </div>
+                            <div class="track-row"> <span class="track-number">2</span> <img
+                                    src="/assets/images/daft_punk.png" alt="Album art" class="track-art">
+                                <div class="track-text">
+                                    <p class="track-title">Instant Crush</p>
+                                    <p class="track-artist">Daft Punk, Julian Casablanca</p>
+                                </div> <span class="track-duration">5:37</span> <button class="like-btn icon-btn"> <img
+                                        src="/assets/images/like-icon.png" alt="Like"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artist-pick-section">
+                        <h3>Artist Pick</h3>
+                        <div class="artist-pick-card">
+                            <div class="main-pick-art"> <img src="../../assets/images/Frame 126.png"
+                                    alt="Daft Punk Logo"> </div>
+                            <div class="pick-details">
+                                <p class="pick-title">Listen to the Best of Daft Punk</p>
+                                <p class="pick-artist">Daft Punk</p>
+                            </div>
+                        </div>
+                        <div class="artist-banner-below"> <img src="../../assets/images/image 15.png"
+                                alt="Daft Punk Banner"> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section> <!-- ****************************************** --> <!-- ********* rightb side bar ********** -->
+            <section class="right-sidebar-section">
+                <aside class="rightSidebar">
+                    <div class="right-bar-head">
+                        <p>Friends Activity</p> <img src="../../assets/images/addFriends.png" class="addFriends-img">
+                    </div>
+                    <div class="right-main-divs"> <img src="../.././assets/images/friend1.png" class="friends-img">
+                        <div>
+                            <p>FriendlyMusicListener</p>
+                            <div class="friends-list1"> <img src="../../assets/images/iconsConection.png">
+                                <p>Goosebumps</p>
+                                <div></div>
+                                <p>Travis Scott</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-main-divs"> <img src="../.././assets/images/friend2.png" class="friends-img">
+                        <div>
+                            <p>AverageMusicEnjoyer</p>
+                            <div class="friends-list1"> <img src="../../assets/images/iconsConection.png">
+                                <p>Get Lucky</p>
+                                <div></div>
+                                <p>Daft Punk</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-main-divs"> <img src="../.././assets/images/friend3.png" class="friends-img">
+                        <div>
+                            <p>MusicEnthusiast</p>
+                            <div class="friends-list2">
+                                <p>1h</p>
+                                <p>would he</p>
+                                <div></div>
+                                <p>joji</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-main-divs"> <img src="../.././assets/images/friend4.png" class="friends-img">
+                        <div>
+                            <p>IListenToMusic56</p>
+                            <div class="friends-list2">
+                                <p>6h</p>
+                                <p>Rockstar</p>
+                                <div></div>
+                                <p>Post Malone</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+    </main>
+    <footer>
+        <section class="player">
+            <nav class="mobile-player">
+                <ul class="items-wrapper">
+                    <li class="song-player"> <img class="mobile-player-photo"
+                            src="../.././assets/player images/music-img.png" alt>
+                        <article class="player-text-container">
+                            <p class="song-title">Get Lucky (feat. Pharrell Williams and Nile Rodgers)</p>
+                            <p>Daft Punk</p>
+                        </article>
+                    </li>
+                    <li class="buttons-container"> <button><img src="../.././assets/player images/add to playlits.svg"
+                                alt="#"></button> <button><img src="../.././assets/player images/play simple.svg"
+                                alt="#"></button> </li>
+                </ul>
+            </nav>
+            <nav class="desktop-player">
+                <ul class="list-item-containers">
+                    <li><button class="pause-button"><img
+                                src="../.././assets/desktop-player imagaes/desktop player -pouse button.svg"
+                                alt="#"></button></li>
+                    <li><button><img src="../.././assets/desktop-player imagaes/player left.svg" alt="#"></button></li>
+                    <li><button><img src="../.././assets/desktop-player imagaes/player right.svg" alt="#"></button></li>
+                    <li><button><img src="../.././assets/desktop-player imagaes/shuffle.svg" alt="#"></button></li>
+                    <li><button><img src="../.././assets/desktop-player imagaes/loop.svg" alt="#"></button></li>
+                    <li>
+                        <article class="player-time"> <span>2:23</span> <input type="range" min="0" max="100" value="50"
+                                class="progress"> <span>4:45</span> </article>
+                    </li>
+                    <li><button><img src="../.././assets/desktop-player imagaes/volume.svg" alt="#"></button></li>
+                    <li>
+                        <figure> <img class="desktop-playe-image" src="../.././assets/player images/music-img.png"
+                                alt="#">
+                            <figcaption>
+                                <h1>Get Lucky</h1>
+                                <p>Daft Punk</p>
+                                <p>Random Access Memories</p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <ul class="list-item-containers">
+                    <li><button><img src="../.././assets/desktop-player imagaes/pc-like.svg" alt="#"></button></li>
+                    <li><button><img src="../.././assets/desktop-player imagaes/pc-playlist.svg" alt="#"></button></li>
+                    <li><button><img src="../.././assets/desktop-player imagaes/pc-lyrics.svg" alt="#"></button></li>
+                    <li><button><img src="../.././assets/desktop-player imagaes/pc-device.svg" alt="#"></button></li>
+                    <li><button><img src="../.././assets/desktop-player imagaes/pc-playing-more.svg" alt="#"></button>
+                    </li>
+                    <li><button class="line"><img src="../.././assets/desktop-player imagaes/line.svg" alt="#"></button>
+                    </li>
+                    <li><button class="profile-img"><img src="../.././assets/desktop-player imagaes/DJ.svg"
+                                alt="#"></button></li>
+                    <li><button><img src="../.././assets/desktop-player imagaes/pc-queue.svg" alt="#"></button></li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
+</body>
+
+</html>

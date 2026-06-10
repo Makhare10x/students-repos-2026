@@ -1,0 +1,25 @@
+
+@use '../abstracts/variables';
+
+
+.player-bar {
+  position:relative;
+  grid-area: player;
+  background: variables.$player-bar;
+  border-radius: 1rem;
+  display: flex;
+  margin:0.5rem;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.now-playing ul {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  li:hover { transform: scale(0.95); }
+}

@@ -1,0 +1,262 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../base/base" as *;
+@use "../components/buttons" as *;
+@use "sass:color";
+
+.footer-player {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 95%;
+    max-width: 1491px;
+    background-color: $color-bg-player;
+    transition: background-color 0.3s linear; //after click start button, background changes color;
+    border-radius: 10px;
+    border: 1px solid $color-border-main;
+    padding: 0 20px 0 20px;
+    @include flex-layout(space-between, center, 5px);
+    height: 81px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    z-index: 1000;
+
+//dinamic class, which means that when music is on, player background changes color
+    &.is-playing {
+        background-color: color.adjust($color-bg-player, $lightness: 5%); //build-in-function
+    }
+
+    // Player left side (playback controls and time)
+    .player-left {
+        @include flex-layout(flex-start, center, 15px);
+        flex: 0 1 auto; // Allows section to shrink
+        min-width: 0; // Necessary for inner elements to shrink properly
+
+        .left-side-icons {
+            @include flex-layout(flex-start, center, 15px);
+            flex-shrink: 0; // Icons will never shrink
+        }
+
+        .btn-play {
+            width: 38px;
+            height: 38px;
+            background-color: $color-spotify;
+            border-radius: 50%;
+            @include flex-layout(center, center);
+            flex-shrink: 0;
+        }
+        .when-click {
+            display: none;
+        }
+
+        .player-time {
+            font-family: $font-main;
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: $text-gray;
+            white-space: nowrap;
+            flex-shrink: 0;
+            @media (min-width: 768px) and (max-width: 1180px) {
+                display: none;
+            }
+        }
+
+        .player__progress-line {
+            width: 100%;
+            max-width: 317px;
+            min-width: 50px;
+            object-fit: contain;//მოთავსდეს შიგთავსი მითითებულ ზომებში პროპორციების დარღვევის გარეშე
+            cursor: pointer;
+
+            @media (min-width: 768px) and (max-width: 1180px) {
+                display: none;
+            }
+        }
+    }
+
+    // Player center (music album)
+    .player-center {
+        flex: 1 1 0; // Takes up remaining space
+        min-width: 0; // Necessary for text truncation
+
+        .mini-track {
+            @include flex-layout(flex-start, center, 12px);
+            min-width: 0;
+
+            &__img {
+                width: 51px;
+                height: 51px;
+                border-radius: 3px;
+                flex-shrink: 0; // Image won't get distorted during shrinkage
+            }
+
+            &__text {
+                display: flex;
+                flex-direction: column;
+                min-width: 0;
+
+                .mobile-text {
+                    @include hide-elements;
+                }
+
+                .mini-track__title,
+                .mini-track__artist,
+                .mini-track__album {
+                    font-family: $font-main;
+                    font-size: 0.875rem;
+                    font-weight: 400;
+                    margin: 0;
+                    @include text-truncate;
+                    max-width: 100%; // Won't exceed parent width
+                }
+
+                // Specific colors for right hierarchy
+                .mini-track__title {
+                    color: $color-text-primary;
+                }
+
+                .mini-track__artist,
+                .mini-track__album {
+                    color: $text-gray;
+                }
+            }
+        }
+    }
+
+    // Player right side (additional controls)
+    .player-right {
+        flex: 0 1 350px;
+        min-width: 300px;
+        @include flex-layout(flex-end, center);
+
+        .footer-right-icons {
+            @include flex-layout(flex-start, center, 8px);
+            .btn-icon {
+                width: 40px;
+                height: 40px;
+                @include flex-layout(center, center);
+                padding: 0;
+                background: none;
+                border: none;
+                transition:
+                    transform 0.2s ease,
+                    opacity 0.2s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                    opacity: 0.8;
+                }
+
+                &__svg {
+                    width: 25px;
+                    height: 25px;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        display: flex !important;
+        visibility: visible;
+        opacity: 1;
+        position: fixed;
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 92px;
+        background: $color-bg-player;
+        width: auto;
+        z-index: 99999;
+
+        .player-left {
+            order: 3;
+            gap: 15px;
+            flex: 0 0 auto;
+
+            .btn-icon,
+            .player-time,
+            .player__progress-line,
+            .voice-btn {
+                @include hide-elements;
+            }
+            .btn-play {
+                img {
+                    @include hide-elements;
+                }
+                background-image: url("/assets/icons/player-icons/player-start-icon-mobile.svg");
+                background-color: transparent;
+                width: 20px;
+                height: 20px;
+                padding: 0;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                color: $text-gray;
+            }
+        }
+
+        .player-center {
+            order: 1;
+            min-width: 0;
+            flex: 1;
+
+            .mini-track {
+                display: flex;
+                align-items: center;
+
+                &__text {
+                    display: flex;
+                    flex-direction: column;
+                    min-width: 0;
+
+                    .desktop-text {
+                        @include hide-elements;
+                    }
+
+                    // unhide mobile text and give styles
+                    .mobile-text {
+                        display: block;
+                        font-family: $font-main;
+                        color: $color-text-primary;
+                        font-size: 0.875rem;
+                        @include text-fade-right(80%);//to smoothly transition long titles on small screens (ტექსტის ბოლოს გამჭვირვალობას სძენს)
+                    }
+                }
+
+                &__img {
+                    width: 43px;
+                    height: 43px;
+                    border-radius: 3px;
+                    flex-shrink: 0;
+                }
+
+                &__album {
+                    @include hide-elements;
+                }
+            }
+        }
+
+        .player-right {
+            order: 2;
+            flex: 0 0 auto;
+            min-width: unset;
+            width: auto;
+
+            .footer-right-icons {
+                .btn-icon {
+                    @include hide-elements;
+
+                    &:nth-child(2) {
+                        display: flex;
+                    }
+                }
+
+                span,
+                .btn-icon:last-child {
+                    @include hide-elements;
+                }
+            }
+        }
+    }
+}

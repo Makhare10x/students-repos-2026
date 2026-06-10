@@ -1,0 +1,64 @@
+@use "./abstracts/variables" as var;
+@use "./base/typography";
+@use "./base/reset";
+@use "./abstracts/mixins" as m;
+@use "./components/buttons";
+@use "./abstracts/nav-link";
+@use "./components/cards";
+@use "./layout/header";
+@use "./layout/sidebar";
+@use "./layout/main-content";
+@use "./layout/home";
+@use "./layout/footer";
+@use "./layout/search";
+@use "./layout/library";
+@use "./layout/liked-songs";
+@use "./layout/song";
+@use "./layout/album";
+@use "./layout/playlist";
+@use "./layout/artists";
+@use "./layout/about-artist";
+@use "./layout/grid-albums";
+@use "./layout/list-albums";
+@use "./layout/podcast";
+@use "./layout/episode";
+@use "./layout/discover";
+
+
+
+
+.main-page {
+
+    .main-app-container {
+        width: 100%;
+        height: 100vh;
+
+        display: grid;
+        grid-template-columns: 25.9rem 1fr 1fr;
+        grid-template-rows: 5.4rem 1fr 9rem;
+        grid-template-areas:
+            "sidebar header header "
+            "sidebar  main   main "
+            "sidebar footer  footer ";
+    }
+
+    .main-header {
+        grid-area: header;
+
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+
+    }
+
+    .main-content {
+        grid-area: main;
+
+    }
+
+    .bottom-player {
+        grid-area: footer;
+
+    }
+}

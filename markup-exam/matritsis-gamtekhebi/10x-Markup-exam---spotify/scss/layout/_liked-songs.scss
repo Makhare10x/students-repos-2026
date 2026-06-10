@@ -1,0 +1,288 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.liked-main-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.liked-songs {
+  width: 100%;
+  max-width: 1700px;
+  margin-left: 20px;
+  margin-right: auto;
+  background-color: $color-bg-primary;
+  border: none;
+  border-radius: $radius-md;
+  overflow: hidden;
+  height: auto;
+  min-height: unset;
+
+  @include flex-col(flex-start, stretch);
+
+  &__topbar {
+    @include flex-row(space-between, center);
+    min-height: 44px;
+    padding: 0 12px 0 12px;
+    border-bottom: none;
+  }
+
+  &__topbar-actions {
+    @include flex-row(flex-end, center);
+    gap: 14px;
+    margin-left: auto;
+    flex-wrap: nowrap;
+  }
+
+  &__add-btn {
+    @include square(28px);
+    border: 0;
+    background: transparent;
+    color: $color-text-primary;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-medium;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: $radius-sm;
+    margin-left: -2px;
+
+    &:hover {
+      background-color: $color-bg-highlight;
+    }
+  }
+
+  &__icon-btn,
+  &__filter-btn {
+    border: 0;
+    background: transparent;
+    color: $color-text-secondary;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    cursor: pointer;
+    padding: 0;
+    height: 24px;
+
+    @include flex-row(center, center);
+
+    &:hover {
+      color: $color-text-primary;
+    }
+  }
+
+  &__filter-btn {
+    gap: 6px;
+    white-space: nowrap;
+  }
+
+  &__icon-btn img,
+  &__filter-btn img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    display: block;
+  }
+
+  &__table {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  &__head {
+    display: grid;
+    grid-template-columns: 44px 220px 290px 110px;
+    align-items: center;
+    column-gap: 16px;
+    min-height: 42px;
+    padding: 0 16px;
+    border-bottom: 1px solid $color-border;
+    color: $color-text-secondary;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+  }
+
+  &__body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 44px 220px 290px 110px;
+    align-items: center;
+    column-gap: 16px;
+    min-height: 60px;
+    padding: 0 16px;
+
+    &:hover {
+      background-color: $color-bg-highlight;
+    }
+  }
+
+  &__col,
+  &__index,
+  &__album-name,
+  &__time {
+    @include text-truncate;
+  }
+
+  &__index {
+    color: $color-text-secondary;
+    font-size: $font-size-sm;
+  }
+
+  &__track {
+    @include flex-row(flex-start, center);
+    gap: 10px;
+    min-width: 0;
+  }
+
+  &__cover {
+    width: 51px;
+    height: 51px;
+    object-fit: cover;
+    border-radius: $radius-sm;
+    flex-shrink: 0;
+  }
+
+  &__track-info {
+    min-width: 0;
+    @include flex-col(center, flex-start);
+    gap: 2px;
+  }
+
+  &__track-title {
+    margin: 0;
+    color: $color-text-primary;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    line-height: 1.2;
+    @include text-truncate;
+  }
+
+  &__track-artist {
+    margin: 0;
+    color: $color-text-secondary;
+    font-size: $font-size-xs;
+    line-height: 1.2;
+    @include text-truncate;
+  }
+
+  &__album-name {
+    margin: 0;
+    color: $color-text-secondary;
+    font-size: $font-size-sm;
+    @include text-truncate;
+  }
+
+  &__meta {
+    @include flex-row(flex-start, center);
+    gap: 12px;
+  }
+
+  &__time {
+    color: $color-text-secondary;
+    font-size: $font-size-sm;
+    text-align: left;
+    white-space: nowrap;
+    overflow: visible;
+  }
+
+  &__like {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    margin-left: 50px;
+    padding: 0;
+    @include flex-row(center, center);
+
+    img {
+      width: 23px;
+      height: 20px;
+      object-fit: contain;
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .liked-songs {
+    &__head,
+    &__row {
+      grid-template-columns: 36px 360px 220px 70px 36px;
+      column-gap: 14px;
+    }
+  }
+}
+
+@media (max-width: $bp-tablet) {
+  .liked-songs {
+    &__topbar {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding: $spacing-sm;
+    }
+
+    &__topbar-actions {
+      width: auto;
+      flex-wrap: wrap;
+      gap: $spacing-sm;
+    }
+
+    &__head {
+      display: none;
+    }
+
+    &__row {
+    display: grid;
+    grid-template-columns: 44px minmax(260px, 2fr) minmax(180px, 1.4fr) 110px;
+    align-items: center;
+    gap: $spacing-md;
+    min-height: 80px;
+    padding: 32px $spacing-md;
+    }
+
+    &__album-name {
+      display: none;
+    }
+
+    &__meta {
+      gap: 8px;
+    }
+  }
+}
+
+@media (max-width: $bp-mobile) {
+  .liked-main-content {
+    padding: $spacing-sm;
+  }
+
+  .liked-songs {
+    &__row {
+      grid-template-columns: 24px minmax(0, 1fr) 58px 28px;
+      column-gap: $spacing-sm;
+      min-height: 56px;
+      padding: 0 $spacing-sm;
+    }
+
+    &__cover {
+      width: 32px;
+      height: 32px;
+    }
+
+    &__track-title {
+      font-size: $font-size-sm;
+    }
+
+    &__track-artist,
+    &__time {
+      font-size: $font-size-xs;
+    }
+
+    &__like img {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}

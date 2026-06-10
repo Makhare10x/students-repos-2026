@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="sass/style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/library.png">
+              <span>My Library</span>
+            </a>
+          </li>
+
+           <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/pins.png" alt="Pins">
+              <span>Pins</span>
+            </a>
+          </li>
+
+           <li class="sidebar-link">
+            <input type="checkbox" id="playlist-toggle">
+            <label for="playlist-toggle" class="playlist-btn">
+              <img src="css/assets/images/playlists.png" alt="playlist">
+                     <span>Playlists</span>
+              <img src="css/assets/images/arrow.png" alt="arrow icon" class="dropdown-img">
+            </label>
+            <ul class="dropdown-playlist">
+              <li>Chill Stuff</li>
+              <li>Rock n Roll</li>
+              <li>The Jux Box</li>
+              <li>Selected Linkin Park</li>
+              <li>Vibe</li>
+            </ul>
+          </li>
+
+           <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/liked songs.png" alt="liked songs">
+              <span>Liked Songs</span>
+            </a>
+          </li>
+
+           <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/save.png" alt="saves">
+              <span>Saves</span>
+            </a>
+          </li>
+
+          <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/folders.png" alt="folders">
+              <span>Folders</span>
+            </a>
+          </li>
+
+          <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/podcasts.png" alt="podcasts">
+              <span>Podcasts</span>
+            </a>
+          </li>
+
+          <li class="sidebar-link">
+              
+            <a href="#">
+
+              <img src="css/assets/images/audiobooks.png" alt="audiobooks">
+              <span>Audiobooks</span>
+            </a>
+          </li>
+
+           <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/artists.png" alt="artists">
+              <span>Artists</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+
+      </aside>
+    <div class="main-layout">
+      <header class="top-header">
+          <!-- Header-->
+          <nav>
+            <ul class="header-right-list">
+              <li class="right-list-item">
+                <img src="css/assets/images/home.png">
+                <span>Home</span>
+              </li>
+
+              <li class="right-list-item">
+              <img src="css/assets/images/discoverr.png">
+              <span>Discover</span>
+              </li>
+
+              <li class="right-list-item">
+              <img src="css/assets/images/search.png">
+              <span>Search</span>
+              </li>
+            </ul>
+   <!-- Header-left list-->
+            <ul class="header-left-list">
+              <li class="left-list-item">
+                <img src="css/assets/images/bell.png" alt="bell">
+              </li>
+
+              <li class="left-list-item">
+                <img src="css/assets/images/lock.png" alt="lock">
+              </li>
+
+              <li class="left-list-item">
+                <img src="css/assets/images/activity.png" alt="activity">
+              </li>
+
+              <li class="left-list-item">
+                <img src="css/assets/images/settings.png" alt="settings">
+              </li>
+
+              <li class="left-list-item">
+                <img src="css/assets/images/sprite.png" alt="sprite">
+              </li>
+
+            </ul>
+          </nav>
+          
+        </header>
+      <main class="main-content">
+        <section class="artist-section">
+          <div class="artist-hero">
+            <img class="artist-hero-image" src="assets/artist_cover.png" alt="Daft Punk">
+            <div class="artist-hero-overlay"></div>
+
+            <div class="artist-hero-left">
+              <h1>Daft Punk</h1>
+              <p>20,795,080 monthly listeners</p>
+            </div>
+
+            <div class="artist-hero-actions">
+              <button class="artist-play" aria-label="Play artist">
+                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2054" cy="20.2054" r="20.2054" fill="#1ED760"/>
+                  <path d="M26.328 18.8797C27.3484 19.4688 27.3484 20.9418 26.328 21.5309L18.2917 26.1707C17.2712 26.7598 15.9956 26.0234 15.9956 24.845L15.9956 15.5656C15.9956 14.3872 17.2712 13.6508 18.2917 14.2399L26.328 18.8797Z" fill="black"/>
+                </svg>
+              </button>
+              <button class="artist-follow" aria-label="Follow">Follow</button>
+              <button aria-label="Add">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="20" height="20" rx="3" transform="matrix(1 0 0 -1 9.82715 31.3298)" stroke="#E0E0E0" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M11.8271 11.3298H27.8271C27.8271 9.67298 26.484 8.32983 24.8271 8.32983H14.8271C13.1703 8.32983 11.8271 9.67298 11.8271 11.3298Z" stroke="#E0E0E0" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M15.8271 21.3298H19.8271M23.8271 21.3298H19.8271M19.8271 21.3298V17.3298M19.8271 21.3298V25.3298" stroke="#E0E0E0" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+              </button>
+              <button aria-label="Queue">
+                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.3632 11.7866H14.5924C13.0426 11.7866 11.7861 13.043 11.7861 14.5929C11.7861 16.1428 13.0426 17.3992 14.5924 17.3992H19.3632" stroke="#E0E0E0" stroke-width="2.3573" stroke-linecap="round"/>
+                  <path d="M11.7861 23.0118L28.624 23.0118" stroke="#E0E0E0" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M11.7861 28.6244L28.624 28.6244" stroke="#E0E0E0" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M23.5732 14.3123H26.0989M28.6246 14.3123H26.0989M26.0989 14.3123V11.7866M26.0989 14.3123V16.838" stroke="#E0E0E0" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button aria-label="More">
+                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="11.7863" cy="20.2056" r="1.68378" fill="#E0E0E0"/>
+                  <circle cx="20.2053" cy="20.2056" r="1.68378" fill="#E0E0E0"/>
+                  <circle cx="28.6242" cy="20.2056" r="1.68378" fill="#E0E0E0"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <nav class="artist-tabs" aria-label="Artist sections">
+            <a class="active home-tab-active" href="#">Home</a>
+            <a href="grid_albums.html">Albums</a>
+            <a href="#">Singles and EPs</a>
+            <a href="#">Compilations</a>
+            <a href="#">Merch</a>
+            <a href="about_artist.html">About</a>
+            <a href="#">Features &amp; More</a>
+            <button aria-label="Search artist page">
+              <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24.7357 24.361C26.2733 22.7925 27.2214 20.644 27.2214 18.274C27.2214 13.4715 23.3282 9.57837 18.5257 9.57837C13.7233 9.57837 9.83008 13.4715 9.83008 18.274C9.83008 23.0765 13.7233 26.9697 18.5257 26.9697C20.9582 26.9697 23.1575 25.9709 24.7357 24.361ZM24.7357 24.361L29.8301 29.5784" stroke="#898989" stroke-width="2.02054" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </nav>
+
+          <div class="artist-content">
+            <div class="artist-most-played">
+              <h3>Your most played</h3>
+              <ul>
+                <li>
+                  <span class="artist-track-number">1</span>
+                  <div class="artist-track-main">
+                    <img src="assets/p_5.png" alt="One More Time">
+                    <div>
+                      <strong>One More Time</strong>
+                      <p>Daft Punk</p>
+                    </div>
+                  </div>
+                  <span class="artist-track-duration">5:20</span>
+                  <label class="artist-track-like" aria-label="Like song">
+                    <input type="checkbox" class="artist-like-input">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.0693 13.5678L20.2054 15.3738L18.3416 13.5678C16.3872 11.6741 13.2521 11.7787 11.4282 13.7984C9.65847 15.7581 9.41482 18.6936 11.0174 20.7923C11.2143 21.0502 11.408 21.2972 11.5922 21.5232C12.7587 22.9542 15.3037 25.4531 16.5788 26.7942C17.5209 27.785 18.3677 28.6113 19.0057 29.2132C19.6794 29.8488 20.7194 29.835 21.3944 29.2007C22.5707 28.0954 24.3747 26.3736 25.6453 25.0372C26.9205 23.6961 27.6522 22.9542 28.8186 21.5232C29.0029 21.2972 29.1965 21.0502 29.3935 20.7923C30.996 18.6936 30.7524 15.7581 28.9826 13.7984C27.1588 11.7787 24.0236 11.6741 22.0693 13.5678Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </label>
+                </li>
+                <li>
+                  <span class="artist-track-number">2</span>
+                  <div class="artist-track-main">
+                    <img src="assets/song_cover.png" alt="Get Lucky">
+                    <div>
+                      <strong><a href="song.html">Get Lucky</a></strong>
+                      <p>Daft Punk</p>
+                    </div>
+                  </div>
+                  <span class="artist-track-duration">4:35</span>
+                  <label class="artist-track-like" aria-label="Like song">
+                    <input type="checkbox" class="artist-like-input">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.0693 13.5678L20.2054 15.3738L18.3416 13.5678C16.3872 11.6741 13.2521 11.7787 11.4282 13.7984C9.65847 15.7581 9.41482 18.6936 11.0174 20.7923C11.2143 21.0502 11.408 21.2972 11.5922 21.5232C12.7587 22.9542 15.3037 25.4531 16.5788 26.7942C17.5209 27.785 18.3677 28.6113 19.0057 29.2132C19.6794 29.8488 20.7194 29.835 21.3944 29.2007C22.5707 28.0954 24.3747 26.3736 25.6453 25.0372C26.9205 23.6961 27.6522 22.9542 28.8186 21.5232C29.0029 21.2972 29.1965 21.0502 29.3935 20.7923C30.996 18.6936 30.7524 15.7581 28.9826 13.7984C27.1588 11.7787 24.0236 11.6741 22.0693 13.5678Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </label>
+                </li>
+                <li>
+                  <span class="artist-track-number">3</span>
+                  <div class="artist-track-main">
+                    <img src="assets/song_cover.png" alt="Give Life Back to Music">
+                    <div>
+                      <strong>Give Life Back to Music</strong>
+                      <p>Daft Punk</p>
+                    </div>
+                  </div>
+                  <span class="artist-track-duration">4:35</span>
+                  <label class="artist-track-like" aria-label="Like song">
+                    <input type="checkbox" class="artist-like-input">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.0693 13.5678L20.2054 15.3738L18.3416 13.5678C16.3872 11.6741 13.2521 11.7787 11.4282 13.7984C9.65847 15.7581 9.41482 18.6936 11.0174 20.7923C11.2143 21.0502 11.408 21.2972 11.5922 21.5232C12.7587 22.9542 15.3037 25.4531 16.5788 26.7942C17.5209 27.785 18.3677 28.6113 19.0057 29.2132C19.6794 29.8488 20.7194 29.835 21.3944 29.2007C22.5707 28.0954 24.3747 26.3736 25.6453 25.0372C26.9205 23.6961 27.6522 22.9542 28.8186 21.5232C29.0029 21.2972 29.1965 21.0502 29.3935 20.7923C30.996 18.6936 30.7524 15.7581 28.9826 13.7984C27.1588 11.7787 24.0236 11.6741 22.0693 13.5678Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </label>
+                </li>
+                <li>
+                  <span class="artist-track-number">4</span>
+                  <div class="artist-track-main">
+                    <img src="assets/song_cover.png" alt="Instant Crush">
+                    <div>
+                      <strong>Instant Crush</strong>
+                      <p>Daft Punk, Julian Casablancas</p>
+                    </div>
+                  </div>
+                  <span class="artist-track-duration">5:37</span>
+                  <label class="artist-track-like" aria-label="Like song">
+                    <input type="checkbox" class="artist-like-input">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.0693 13.5678L20.2054 15.3738L18.3416 13.5678C16.3872 11.6741 13.2521 11.7787 11.4282 13.7984C9.65847 15.7581 9.41482 18.6936 11.0174 20.7923C11.2143 21.0502 11.408 21.2972 11.5922 21.5232C12.7587 22.9542 15.3037 25.4531 16.5788 26.7942C17.5209 27.785 18.3677 28.6113 19.0057 29.2132C19.6794 29.8488 20.7194 29.835 21.3944 29.2007C22.5707 28.0954 24.3747 26.3736 25.6453 25.0372C26.9205 23.6961 27.6522 22.9542 28.8186 21.5232C29.0029 21.2972 29.1965 21.0502 29.3935 20.7923C30.996 18.6936 30.7524 15.7581 28.9826 13.7984C27.1588 11.7787 24.0236 11.6741 22.0693 13.5678Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </label>
+                </li>
+                <li>
+                  <span class="artist-track-number">5</span>
+                  <div class="artist-track-main">
+                    <img src="assets/song_cover.png" alt="Around the World">
+                    <div>
+                      <strong>Around the world</strong>
+                      <p>Daft Punk</p>
+                    </div>
+                  </div>
+                  <span class="artist-track-duration">4:35</span>
+                  <label class="artist-track-like" aria-label="Like song">
+                    <input type="checkbox" class="artist-like-input">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.0693 13.5678L20.2054 15.3738L18.3416 13.5678C16.3872 11.6741 13.2521 11.7787 11.4282 13.7984C9.65847 15.7581 9.41482 18.6936 11.0174 20.7923C11.2143 21.0502 11.408 21.2972 11.5922 21.5232C12.7587 22.9542 15.3037 25.4531 16.5788 26.7942C17.5209 27.785 18.3677 28.6113 19.0057 29.2132C19.6794 29.8488 20.7194 29.835 21.3944 29.2007C22.5707 28.0954 24.3747 26.3736 25.6453 25.0372C26.9205 23.6961 27.6522 22.9542 28.8186 21.5232C29.0029 21.2972 29.1965 21.0502 29.3935 20.7923C30.996 18.6936 30.7524 15.7581 28.9826 13.7984C27.1588 11.7787 24.0236 11.6741 22.0693 13.5678Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <aside class="artist-picks">
+              <h2>Artist Pick</h2>
+              <a class="artist-pick-card" href="playlist.html">
+                <img src="assets/artist_pick.png" alt="Best of Daft Punk">
+                <p>Listen to the Best of Daft Punk</p>
+              </a>
+              <article class="artist-pick-card artist-pick-banner">
+                <img src="assets/artist_pick1.png" alt="Daft Punk banner">
+              </article>
+            </aside>
+          </div>
+
+          <div class="artist-lower">
+            <div class="artist-popular">
+              <h3>Popular</h3>
+              <ul>
+                <li>
+                  <span class="artist-track-number">1</span>
+                  <div class="artist-track-main">
+                    <img src="assets/song_cover.png" alt="Get Lucky">
+                    <div>
+                      <strong>Get Lucky</strong>
+                      <p>Daft Punk</p>
+                    </div>
+                  </div>
+                  <span class="artist-track-plays">1,064,097,461</span>
+                  <span class="artist-track-duration">4:35</span>
+                  <label class="artist-track-like" aria-label="Like song">
+                    <input type="checkbox" class="artist-like-input">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.0693 13.5678L20.2054 15.3738L18.3416 13.5678C16.3872 11.6741 13.2521 11.7787 11.4282 13.7984C9.65847 15.7581 9.41482 18.6936 11.0174 20.7923C11.2143 21.0502 11.408 21.2972 11.5922 21.5232C12.7587 22.9542 15.3037 25.4531 16.5788 26.7942C17.5209 27.785 18.3677 28.6113 19.0057 29.2132C19.6794 29.8488 20.7194 29.835 21.3944 29.2007C22.5707 28.0954 24.3747 26.3736 25.6453 25.0372C26.9205 23.6961 27.6522 22.9542 28.8186 21.5232C29.0029 21.2972 29.1965 21.0502 29.3935 20.7923C30.996 18.6936 30.7524 15.7581 28.9826 13.7984C27.1588 11.7787 24.0236 11.6741 22.0693 13.5678Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </label>
+                </li>
+                <li>
+                  <span class="artist-track-number">2</span>
+                  <div class="artist-track-main">
+                    <img src="assets/song_cover.png" alt="Instant Crush">
+                    <div>
+                      <strong>Instant Crush</strong>
+                      <p>Daft Punk, Julian Casablancas</p>
+                    </div>
+                  </div>
+                  <span class="artist-track-plays">598,754,929</span>
+                  <span class="artist-track-duration">5:37</span>
+                  <label class="artist-track-like" aria-label="Like song">
+                    <input type="checkbox" class="artist-like-input">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.0693 13.5678L20.2054 15.3738L18.3416 13.5678C16.3872 11.6741 13.2521 11.7787 11.4282 13.7984C9.65847 15.7581 9.41482 18.6936 11.0174 20.7923C11.2143 21.0502 11.408 21.2972 11.5922 21.5232C12.7587 22.9542 15.3037 25.4531 16.5788 26.7942C17.5209 27.785 18.3677 28.6113 19.0057 29.2132C19.6794 29.8488 20.7194 29.835 21.3944 29.2007C22.5707 28.0954 24.3747 26.3736 25.6453 25.0372C26.9205 23.6961 27.6522 22.9542 28.8186 21.5232C29.0029 21.2972 29.1965 21.0502 29.3935 20.7923C30.996 18.6936 30.7524 15.7581 28.9826 13.7984C27.1588 11.7787 24.0236 11.6741 22.0693 13.5678Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </label>
+                </li>
+                <li>
+                  <span class="artist-track-number">3</span>
+                  <div class="artist-track-main">
+                    <img src="assets/p_5.png" alt="One More Time">
+                    <div>
+                      <strong>One More Time</strong>
+                      <p>Daft Punk</p>
+                    </div>
+                  </div>
+                  <span class="artist-track-plays">578,637,618</span>
+                  <span class="artist-track-duration">5:20</span>
+                  <label class="artist-track-like" aria-label="Like song">
+                    <input type="checkbox" class="artist-like-input">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.0693 13.5678L20.2054 15.3738L18.3416 13.5678C16.3872 11.6741 13.2521 11.7787 11.4282 13.7984C9.65847 15.7581 9.41482 18.6936 11.0174 20.7923C11.2143 21.0502 11.408 21.2972 11.5922 21.5232C12.7587 22.9542 15.3037 25.4531 16.5788 26.7942C17.5209 27.785 18.3677 28.6113 19.0057 29.2132C19.6794 29.8488 20.7194 29.835 21.3944 29.2007C22.5707 28.0954 24.3747 26.3736 25.6453 25.0372C26.9205 23.6961 27.6522 22.9542 28.8186 21.5232C29.0029 21.2972 29.1965 21.0502 29.3935 20.7923C30.996 18.6936 30.7524 15.7581 28.9826 13.7984C27.1588 11.7787 24.0236 11.6741 22.0693 13.5678Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </label>
+                </li>
+                <li>
+                  <span class="artist-track-number">4</span>
+                  <div class="artist-track-main">
+                    <img src="assets/song_cover.png" alt="Give Life Back to Music">
+                    <div>
+                      <strong>Give Life Back to Music</strong>
+                      <p>Daft Punk</p>
+                    </div>
+                  </div>
+                  <span class="artist-track-plays">490,307,607</span>
+                  <span class="artist-track-duration">4:35</span>
+                  <label class="artist-track-like" aria-label="Like song">
+                    <input type="checkbox" class="artist-like-input">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.0693 13.5678L20.2054 15.3738L18.3416 13.5678C16.3872 11.6741 13.2521 11.7787 11.4282 13.7984C9.65847 15.7581 9.41482 18.6936 11.0174 20.7923C11.2143 21.0502 11.408 21.2972 11.5922 21.5232C12.7587 22.9542 15.3037 25.4531 16.5788 26.7942C17.5209 27.785 18.3677 28.6113 19.0057 29.2132C19.6794 29.8488 20.7194 29.835 21.3944 29.2007C22.5707 28.0954 24.3747 26.3736 25.6453 25.0372C26.9205 23.6961 27.6522 22.9542 28.8186 21.5232C29.0029 21.2972 29.1965 21.0502 29.3935 20.7923C30.996 18.6936 30.7524 15.7581 28.9826 13.7984C27.1588 11.7787 24.0236 11.6741 22.0693 13.5678Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </label>
+                </li>
+                <li>
+                  <span class="artist-track-number">5</span>
+                  <div class="artist-track-main">
+                    <img src="assets/song_cover.png" alt="Around the World">
+                    <div>
+                      <strong>Around the world</strong>
+                      <p>Daft Punk</p>
+                    </div>
+                  </div>
+                  <span class="artist-track-plays">366,613,346</span>
+                  <span class="artist-track-duration">4:35</span>
+                  <label class="artist-track-like" aria-label="Like song">
+                    <input type="checkbox" class="artist-like-input">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.0693 13.5678L20.2054 15.3738L18.3416 13.5678C16.3872 11.6741 13.2521 11.7787 11.4282 13.7984C9.65847 15.7581 9.41482 18.6936 11.0174 20.7923C11.2143 21.0502 11.408 21.2972 11.5922 21.5232C12.7587 22.9542 15.3037 25.4531 16.5788 26.7942C17.5209 27.785 18.3677 28.6113 19.0057 29.2132C19.6794 29.8488 20.7194 29.835 21.3944 29.2007C22.5707 28.0954 24.3747 26.3736 25.6453 25.0372C26.9205 23.6961 27.6522 22.9542 28.8186 21.5232C29.0029 21.2972 29.1965 21.0502 29.3935 20.7923C30.996 18.6936 30.7524 15.7581 28.9826 13.7984C27.1588 11.7787 24.0236 11.6741 22.0693 13.5678Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <aside class="artist-bio">
+              <p>As they evolved from '90s French house pioneers to 2000s dance tastemakers to mainstream heroes in the 2010s, Daft Punk remained one of dance music's most iconic acts...</p>
+              <div class="artist-tags">
+                <span>Funk</span>
+                <span>Electronic music</span>
+                <span>Disco</span>
+                <span>Soft Rock</span>
+                <span>Progressive pop</span>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <footer class="bottom-player">
+    <div class="bottom-player-content">
+      <img src="css/assets/images/Rectangle 6 (1).png">
+      <div class="bottom-player-text">
+        <p class="slide-in">Get Lucky (feat. Pharrell Williams )</p>
+        <p class="artist-name">Daft punk</p>
+      </div>
+      <div class="player-controls">
+        <a href="#">
+          <img src="css/assets/images/add.png" alt="play">
+        </a>
+        <a href="#">
+          <img src="css/assets/images/play.png" alt="add">
+        </a>
+        </div>
+    </div>
+    <!-- Bottom nav for mobile-->
+     <nav class="bottom-menu">
+        <a href="index.html" class="nav-item">
+          <img src="css/assets/images/home.png" alt="home icon">
+          <span>Home</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="css/assets/images/discoverr.png" alt="home icon">
+          <span>Discover</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="css/assets/images/search.png" alt="search icon">
+          <span>Search</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="css/assets/images/library.png" alt="library icon">
+          <span>Library</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="css/assets/images/profile.png" alt="profile icon">
+          <span>Me</span>
+        </a>
+        </nav>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "spotify-clone",
+  "version": "1.0.0",
+  "description": "Spotify Clone - SCSS Project",
+  "scripts": {
+    "sass": "sass --watch scss/main.scss css/main.css",
+    "sass:build": "sass scss/main.scss css/main.css"
+  },
+  "devDependencies": {
+    "sass": "^1.69.0"
+  }
+}

@@ -1,0 +1,45 @@
+@use "./abstracts/variables";
+@use "./abstracts/mixins";
+@use "./base/reset";
+@use "./components/buttons";
+@use "./components/cards";
+@use "./components/friends_activity";
+@use "./components/recommendation";
+@use "./layout/header";
+@use "./layout/asidebar";
+@use "./layout/main";
+@use "./layout/container";
+@use "./layout/footer";
+
+@import url('satoshi.css');
+
+
+.document_body {
+  display: grid;
+  grid-template-columns: minmax(150px, 260px) calc(100% - 260px);
+  grid-template-rows: auto 1fr auto;
+  gap: 0px 7px;
+  justify-items: left;
+  justify-content: start;
+  grid-template-areas:
+    "aside-bar header"
+    "aside-bar main"
+    "aside-bar footer";
+}
+
+.aside-bar { grid-area: aside-bar; }
+
+.header { grid-area: header; }
+
+.main { grid-area: main; }
+
+.player { grid-area: footer; }
+
+@media screen and (max-width: 770px) {
+    .document_body {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+}

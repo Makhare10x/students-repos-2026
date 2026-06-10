@@ -1,0 +1,65 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+@use "../components" as *;
+@use "../layout" as *;
+
+
+
+.filter-bar1 ul{
+    justify-content: flex-end;
+    position: relative;
+    .left-item{
+     position: absolute;
+     left: 10px;
+     transform: translatey(50%);
+     
+    }
+}
+
+.active-item{
+    background-color: #323232;
+}
+.table-row{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    color: $color-text-alt;
+    margin-bottom: 20px;
+    padding: 5px;
+
+}
+.table-col-1{
+    @include flex-row;
+    gap:15px;
+    div{
+        @include flex-column;
+        h3{
+            color: $color-text-btn;
+        }
+    }
+}
+
+.table-col-3{
+    @include flex-row;
+    align-items: center;
+    gap:15px;
+}
+
+//animations and hovers
+.liked-song-icon{
+    opacity: 0;
+    
+}
+.table-row:hover .liked-song-icon{
+       animation: slide 0.3s ease-in-out forwards;
+}
+.table-row:hover{
+    background-color: $color-bg-btn;
+    border-radius: 10px;
+}
+@keyframes slide {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}

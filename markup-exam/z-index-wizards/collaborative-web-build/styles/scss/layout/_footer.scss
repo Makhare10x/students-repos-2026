@@ -1,0 +1,257 @@
+@use "../abstracts/mixins" as *;
+
+.player-bar {
+  width: 100%;
+  height: 80px;
+  padding-inline: 12px;
+  background-color: #333842;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 888;
+  display: none;
+  align-items: center;
+}
+
+.music-player {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+}
+
+.music-player img {
+  cursor: pointer;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.control-icon {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.control-icon:hover {
+  opacity: 1;
+}
+
+.play-btn {
+  cursor: pointer;
+}
+
+.play-btn:active {
+  transform: scale(0.9);
+}
+
+.progress-container {
+  display: none;
+  align-items: center;
+  width: 100%;
+  max-width: 250px;
+  gap: 8px;
+}
+
+.time {
+  @include text-style($size: 12px, $color: #898989, $spacing: 3%);
+}
+
+.progress-rail {
+  flex-grow: 1;
+  height: 4px;
+  background-color: #89898945;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: height 0.2s ease;
+}
+
+.progress-rail:hover {
+  height: 6px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #e0e0e0;
+  border-radius: 2px;
+}
+
+.progress-rail:hover .progress-fill {
+  background-color: #1ed760;
+}
+
+.icon-group {
+  display: none;
+  gap: 10px;
+}
+
+.icon-group img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.icon-group img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.icon-group img[alt="Add to favorites"]:active {
+  transform: scale(1.4);
+  filter: hue-rotate(300deg) brightness(1.6);
+  transition: 0.1s;
+}
+
+.meta-ai {
+  transition:
+    filter 0.3s ease,
+    transform 0.2s ease;
+}
+
+.meta-ai:hover {
+  filter: drop-shadow(0 0 8px #0052cc);
+  transform: scale(1.2) rotate(360deg) !important;
+}
+
+.footer-music-card {
+  height: 57px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.footer-music-card:hover {
+  transform: scale(1.02);
+}
+
+.footer-music-card__img-wrapper img {
+  width: 51px;
+  height: 51px;
+}
+
+.footer-discover-weekly {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-discover-weekly h4 {
+  @include text-style($color: #e0e0e0);
+  animation: neonGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonGlow {
+  from {
+    text-shadow:
+      0 0 2px #fff,
+      0 0 5px #fff;
+  }
+
+  to {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 15px #4da6ff;
+  }
+}
+
+.footer-discover-weekly span {
+  @include text-style();
+}
+
+.scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 150px;
+}
+
+.album-name {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 10s linear infinite;
+  opacity: 0.7;
+  color: rgb(0, 255, 234) !important;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+.footer-music-card__img-wrapper img {
+  border-radius: 4px;
+  overflow: visible;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0px rgba(77, 166, 255, 0);
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(77, 166, 255, 0.4);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0px rgba(77, 166, 255, 0);
+  }
+}
+
+@media (min-width: 375px) {
+  .player-bar {
+    display: flex;
+  }
+  .music-player {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) {
+  .player-bar {
+    width: calc(100% - 262px);
+  }
+
+  .music-player {
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .progress-container {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .progress-container {
+    display: flex;
+    flex-grow: 1;
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .music-player {
+    justify-content: start;
+    gap: 32px;
+  }
+  .icon-group {
+    display: flex;
+    margin-left: auto;
+  }
+}

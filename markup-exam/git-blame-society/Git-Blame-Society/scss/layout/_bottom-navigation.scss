@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+
+
+.menu-navigation {
+    position: fixed;
+    height:9rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    @include m.flex ($justify:space-between);
+}
+
+.menu {
+    flex-direction: column;
+    width: auto;
+}

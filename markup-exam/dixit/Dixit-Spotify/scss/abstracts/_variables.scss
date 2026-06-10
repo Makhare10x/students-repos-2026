@@ -1,0 +1,126 @@
+// Fonts and typography
+$font-base: "Satoshi", sans-serif;
+$font-sizes: (
+    // 12px -> 14px (Used for minor details, captions, or small footer links)
+    body-sm: clamp(
+            1.2rem,
+            calc(1.2rem + (1.4 - 1.2) * ((100vw - 32rem) / 112)),
+            1.4rem
+        ),
+    // 14px -> 16px (Standard body text size for paragraphs and general content)
+    body: clamp(
+            1.4rem,
+            calc(1.4rem + (1.6 - 1.4) * ((100vw - 32rem) / 112)),
+            1.6rem
+        ),
+    // 16px -> 18px (Ideal for navigation links or secondary headers)
+    heading: clamp(
+            1.6rem,
+            calc(1.6rem + (1.8 - 1.6) * ((100vw - 32rem) / 112)),
+            1.8rem
+        ),
+    // 16px -> 2.0rem (For emphasized text, buttons, or subheadings that need to scale more)
+    title: clamp(
+            1.6rem,
+            calc(1.6rem + (2 - 1.6) * ((100vw - 32rem) / 112)),
+            2rem
+        )
+);
+// Recent Played Card Dimensions (Fluid 320px to 700px)
+$card-dimensions: (
+    // სიგანე: 15rem (320px-ზე) -> 25rem (700px-ზე)
+    recent-width: clamp(
+            15rem,
+            calc(15rem + (25 - 15) * ((100vw - 32rem) / 38)),
+            25rem
+        ),
+    // სიმაღლე: 3.9rem (320px-ზე) -> 6.5rem (700px-ზე)
+    recent-height: clamp(
+            3.9rem,
+            calc(3.9rem + (6.5 - 3.9) * ((100vw - 32rem) / 38)),
+            6.5rem
+        ),
+    search-width: clamp(
+            24.6rem,
+            calc(24.6rem + (53.9 - 24.6) * ((100vw - 32rem) / 38)),
+            53.9rem
+        ),
+    search-height: clamp(
+            2.8rem,
+            calc(2.8rem + (6.3 - 2.8) * ((100vw - 32rem) / 38)),
+            6.3rem
+        )
+);
+
+$font-weights: (
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    black: 900,
+);
+
+// Colors
+
+$primary: #e0e0e0;
+$second-primary: #898989;
+$secondary: #1ed760;
+$bg-primary-mobile: #060606;
+$bg-primary: #111111;
+$bg-secondary: #b63f3f;
+$footer-bg: linear-gradient(
+    180deg,
+    rgba(17, 17, 17, 0.85) 0%,
+    rgba(17, 17, 17, 1) 43%
+);
+$cover-text: #ffffff;
+$footer-text: #898989;
+$footer-text-active: #e0e0e0;
+$bg-player: #333842;
+$player-text: #dbdbdb;
+$bg-panel: linear-gradient(
+    90deg,
+    rgba(39, 43, 51, 1) 100%,
+    rgba(59, 65, 77, 0.13) 100%
+);
+$player-bar: linear-gradient(to right, #ffffff 70%, #4d4d4d 70%);
+$bg-primary: #111111;
+$bg-overlay: linear-gradient(rgba(17, 17, 17, 0.85), rgba(17, 17, 17, 0.85));
+$bg-form: #20202080;
+$form-text: #898989b2;
+//p colurs for home section
+$p-purple: #ce6e9a;
+$p-mint: #95e6d3;
+$p-soft-pink: #f4b8bd;
+$p-pale-green: #c3e7b7;
+$p-pink: #f37fa6;
+$p-lightblue: #a0bec8;
+$p-yellow-gold: #fdd87d;
+$p-dusty-rose: #d4b2a9;
+$p-bronze: #deb075;
+$p-teal: #8dc3b5;
+$p-sky-grey: #a6bad3;
+$p-lightyellow: #ccf665;
+$p-yellow: #f9e72c;
+$p-green: #9bf0e2;
+$p-blue: #6f86ff;
+$p-dark-green: #27856b;
+$p-magenta: #dd138b;
+$active-p-color: #b3b3b3;
+//podcast for you
+$backgroound-card-subtitle: #227422;
+$backgroound-card-subtitle-laschilde: #f75414;
+
+$green-hover: invert(72%) sepia(82%) saturate(452%) hue-rotate(90deg)
+    brightness(97%) contrast(92%);
+
+$album-bg-overlay: linear-gradient(
+    180deg,
+    rgba(51, 56, 66, 0.47) 0%,
+    rgba(6, 6, 6, 0.47) 100%
+);
+
+$border-secondary: #89898940;
+$border-radius: #202020;
+$border-primary: #323232;
+$bg-media: #060606;

@@ -1,0 +1,52 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+
+
+.recent-played{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(3,auto);
+    justify-content: center;
+    row-gap: 0.8rem;
+    column-gap: 0.5rem;
+     margin-top: 1rem;
+    article{
+         width: map.get(v.$card-dimensions, "recent-width");
+         height: map.get(v.$card-dimensions, "recent-height");
+        @include m.recent-played;
+        img{
+            padding-left: 0.5rem;
+            padding-top:0.5rem ;
+            padding-bottom: 0.4rem;
+        }
+        h2{
+            font-size: map.get(v.$font-sizes, "heading");
+             padding-top:0.5rem ;
+             padding-left: 0.8rem;
+        }
+        p{
+            font-size: map.get(v.$font-sizes, "body");
+             padding-top:0.1rem ;
+             padding-left: 0.8rem;
+        }
+        
+    } 
+}
+.recent-played article
+{
+    &:nth-child(3),&:nth-child(6){
+         .recent-played__info{
+              display: flex;
+               align-items: center;
+                    h2{
+                    padding-top: 0%;
+                    }
+           }
+    }
+ }
+ @media (min-width:991px){
+    .recent-played{
+        display: none;
+    }
+}

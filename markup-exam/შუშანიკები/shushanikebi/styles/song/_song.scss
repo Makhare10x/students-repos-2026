@@ -1,0 +1,203 @@
+@use "../abstracts/default" as d;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.main-content--song-background {
+  background: linear-gradient(
+  180deg,
+  #242b37 0%, 
+  #1b1d20 100%)
+}
+
+.song {
+  padding: 2.5rem 1.2rem;
+
+  &__container {
+    @include m.flex-column(6rem);
+  }
+
+  &__divider {
+    height: 1px;
+    background-color: rgba(255,255,255,0.1);
+  }
+}
+
+/* HERO */
+.song-hero {
+  display: grid;
+  grid-template-columns: 50rem 1fr;
+  gap: 6rem;
+
+  &__image {
+    width: 500px;
+    height: 500px;
+
+    img {
+      @include m.image-cover;
+      border-radius: v.$radius-lg;
+    }
+  }
+}
+
+.song-hero__info {
+  @include m.flex-column(2rem);
+  color: v.$color-text-primary;
+  width: 72rem;
+}
+
+/* TITLE */
+.song-hero__title {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+/* META */
+.song-hero__meta {
+  display: flex;
+  gap: 1.2rem;
+  color: v.$color-text-secondary;
+  font-size: v.$text-sm;
+  font-weight: 400;
+}
+
+.song-hero__meta-title {
+  color: v.$color-text-primary;
+}
+
+.song-hero__meta span::before {
+  content: "•";
+  margin-right: 1.2rem;
+}
+
+/* CONTROLS */
+.song-hero__controls {
+  @include m.flex-align(3rem);
+}
+
+.song-hero__controls img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* PLAY BUTTON */
+.song-hero__controls img:first-child {
+  width: 40px;
+  height: 40px;
+}
+
+/* GENRES */
+.song-hero__genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.song-hero__genres span {
+  padding: 1rem 2rem;
+  border: 2px solid v.$color-border-soft;
+  border-radius: v.$radius-pill;
+  font-size: v.$text-sm;
+  color: v.$color-text-secondary;
+}
+
+/* ARTISTS */
+.song-hero__artists {
+  @include m.flex-column(1.5rem);
+}
+
+.song-hero__artist {
+  @include m.flex-align(2rem);
+}
+
+.song-hero__artist img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.song-hero__artist-name {
+  font-weight: 500;
+  font-size: v.$text-md;
+  color: v.$color-text-primary;
+  margin-bottom: 1rem;
+}
+
+.song-hero__artist span {
+  font-size: v.$text-md;
+  color: v.$color-text-secondary;
+}
+
+
+/* -- LYRICS SECTION -- */
+.song-lyrics__tabs {
+  display: flex;
+  gap: 5rem;
+  border-bottom: 0.2rem solid rgba(v.$color-text-secondary, 0.2);
+  padding-bottom: 1.7rem;
+}
+
+.song-lyrics__tab {
+  @include m.btn-reset;
+  color: v.$color-text-secondary;
+  font-size: v.$text-sm;
+}
+
+.song-lyrics__tab--active {
+  color: v.$color-text-primary;
+  position: relative;
+}
+
+.song-lyrics__tab--active::after {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #22c55e;
+}
+
+.song-lyrics__tab:hover {
+  color: v.$color-text-primary;
+}
+
+.song-lyrics__content {
+  display: flex;
+  gap: 21rem;
+  padding-top: 3.5rem;
+}
+
+.song-lyrics__actions {
+  @include m.flex-column(3rem);
+}
+
+.song-lyrics__actions img {
+  width: 20px;
+  cursor: pointer;
+}
+
+.song-lyrics__text {
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 5.5rem;
+  color: v.$color-text-primary;
+  
+  // ტექსტის fade effect
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,1) 30%,
+    rgba(0,0,0,0) 100%
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,1) 30%,
+    rgba(0,0,0,0) 100%
+  );
+}

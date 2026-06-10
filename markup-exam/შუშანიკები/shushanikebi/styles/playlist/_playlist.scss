@@ -1,0 +1,327 @@
+@use "../abstracts/default" as d;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.main-content--background {
+  background: linear-gradient(180deg, #293573 0%, #060606 100%);
+}
+
+.playlist {
+  padding: 1rem 0;
+}
+
+.playlist-layout {
+  display: flex;
+  gap: 3.8rem;
+  @media (max-width: 1480px) {
+    @include m.flex-column(2.4rem);
+  }
+}
+
+.playlist-left {
+  flex: 1;
+}
+
+.playlist-hero {
+  padding: 0rem 1.2rem;
+  margin-bottom: 3rem;
+
+  @media (max-width: 1480px) {
+    margin-bottom: 2rem;
+  }
+
+  &__info {
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: v.$color-text-primary;
+    margin-bottom: 2rem;
+    @media (max-width: 1480px) {
+      font-size: v.$text-lg;
+    }
+  }
+
+  &__meta {
+    font-size: v.$text-sm;
+    color: v.$color-text-secondary;
+
+    span {
+      font-weight: 500;
+      color: v.$color-text-primary;
+    }
+  }
+
+  /* ACTIONS ROW */
+  &__actions {
+    @include m.flex-between;
+  }
+
+  &__controls {
+    @include m.flex-align(3rem);
+    @media (max-width: 1480px) {
+      gap: 3.1rem;
+    }
+  }
+
+  /* PLAY BUTTON */
+  &__play {
+    @include m.btn-reset;
+    img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.15s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+
+  /* ICON BUTTON */
+  &__button {
+    @include m.btn-reset;
+
+    img {
+      width: 20px;
+      height: 20px;
+      opacity: 0.8;
+      transition: opacity 0.2s ease;
+      @media (max-width: 1480px) {
+        opacity: 1;
+      }
+    }
+
+    &:hover img {
+      opacity: 1;
+    }
+  }
+}
+
+.liked-songs__divider-light {
+  height: 2px;
+  background-color: v.$color-border-soft;
+  margin-bottom: 2rem;
+}
+
+.song-row--active:hover {
+  background-color: rgba(87, 118, 230, 0.15);
+}
+
+/** ASSIDE STARTS HERE */
+.playlist-sidebar {
+  width: 32rem;
+  @include m.flex-column(3rem);
+  margin-right: 2.5rem;
+
+  @media (max-width: 1480px) {
+    order: -1;
+    width: 211px;
+    margin: 0 auto;
+  }
+
+  /* CARD */
+  &__card {
+    border-radius: v.$radius-lg;
+    overflow: hidden;
+
+    img {
+      @include m.image-cover;
+    }
+  }
+
+  /* GENRES */
+  &__genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    @media (max-width: 1480px) {
+      display: none;
+    }
+  }
+
+  &__genre {
+    padding: 1rem 1.8rem;
+    background: transparent;
+    cursor: pointer;
+    border-radius: v.$radius-pill;
+    border: 2px solid v.$color-border-soft;
+    color: v.$color-text-secondary;
+    font-size: v.$text-sm;
+    transition: all v.$transition-base;
+
+    &:hover {
+      border-color: v.$color-text-primary;
+      color: v.$color-text-primary;
+    }
+  }
+
+  /* ARTISTS */
+  &__artists {
+    @include m.flex-column(1.5rem);
+    @media (max-width: 1480px) {
+      display: none;
+    }
+  }
+
+  &__artist {
+    @include m.flex-align(2rem);
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  &__artist-name {
+    font-weight: 500;
+    font-size: v.$text-md;
+    color: v.$color-text-secondary;
+  }
+}
+
+.playlist-active {
+  background-color: v.$color-bg-hover;
+}
+
+.playlist-search {
+  display: none;
+}
+.threedots-movile-version {
+  display: none;
+}
+
+.song-row__liked .like-desktop-version {
+  display: block;
+}
+.like-active-desktop-version {
+  display: none;
+}
+.song-row__liked.active {
+  .like-desktop-version {
+    display: none;
+  }
+  .like-active-desktop-version {
+    display: block;
+  }
+}
+
+////// * RESPONSIVE * //////
+@media (max-width: 1480px) {
+  .song-row__liked .like-desktop-version {
+    display: none;
+  }
+  .song-row__liked.active {
+    .like-active-desktop-version {
+      display: none;
+    }
+  }
+  .threedots-movile-version {
+    display: block;
+  }
+  /* hero */
+  .playlist-hero__search {
+    display: none;
+  }
+  /* controls order */
+  .playlist-hero__controls button:nth-child(3) {
+    order: 1;
+  }
+  .playlist-hero__controls button:nth-child(4) {
+    order: 2;
+  }
+  .playlist-hero__controls button:nth-child(5) {
+    order: 3;
+  }
+  .playlist-hero__controls button:nth-child(7) {
+    order: 4;
+  }
+  .playlist-hero__controls button:nth-child(6) {
+    order: 5;
+    visibility: hidden;
+  }
+  .playlist-hero__controls button:nth-child(2) {
+    order: 6;
+  }
+  .playlist-hero__play {
+    order: 7;
+  }
+
+  /* liked songs header */
+  .liked-songs__header,
+  .liked-songs__divider-light {
+    display: none;
+  }
+
+  /* hide columns */
+  .song-row__number,
+  .song-row__album,
+  .song-row__duration {
+    display: none;
+  }
+
+  /* spacing cleanup */
+  .content-wrapper-playlist {
+    padding: 0;
+  }
+
+  .main-content--background {
+    padding: 0 1.5rem;
+    border-radius: 0;
+  }
+
+  /* playlist search */
+  .playlist-search {
+    @include m.flex-align(2rem);
+    margin: 6rem 0 2rem 0;
+  }
+
+  .playlist-search__field {
+    position: relative;
+    flex: 1;
+  }
+
+  .playlist-search__input {
+    width: 100%;
+    border-radius: v.$radius-lg;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    font-family: "Satoshi";
+    background: rgba(v.$color-text-primary, 0.04);
+    color: v.$color-text-primary;
+    font-size: v.$text-sm;
+    letter-spacing: 3%;
+
+    &::placeholder {
+      color: rgba(v.$color-text-secondary, 0.7);
+    }
+  }
+
+  .playlist-search__icon-btn {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    @include m.btn-reset;
+
+    img {
+      width: 20px;
+      height: 20px;
+      opacity: 0.7;
+      padding-top: 0.2rem;
+    }
+  }
+
+  .playlist-search__sort-btn {
+    @include m.btn-reset;
+
+    img {
+      width: 22px;
+    }
+  }
+}

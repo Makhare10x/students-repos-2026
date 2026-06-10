@@ -1,0 +1,86 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+
+$provided-colors: (#1E3264, #BA5D07, #1E3264, #8D67AB, #B02897, #8D67AB, #777777, #BA5D07);
+.discover{
+    margin-top: 2.8rem;
+.search-cards {
+    .playlist-card {
+        @for $i from 1 through length($provided-colors) {
+            &:nth-child(#{length($provided-colors)}n + #{$i}) {
+                background-color: nth($provided-colors, $i);
+            }
+        }
+    }}}
+
+
+$provided-colors: (#148A08, #D84000,#503750, #006450,#E91429,#1E3264,#E91429,#537AA1);
+.genres {
+
+     margin-top: 2.8rem;
+.search-cards {
+    .playlist-card {
+        @for $i from 1 through length($provided-colors) {
+            &:nth-child(#{length($provided-colors)}n + #{$i}) {
+                background-color: nth($provided-colors, $i);
+            }
+        }
+    }}}
+
+    $provided-colors: (#2D46B9,#E1118C,#777777,#D84000,#1E3264,#537AA1,#5179A1,#503750);
+.mood-activity {
+   margin-top: 2.8rem;
+
+.search-cards {
+    .playlist-card {
+        @for $i from 1 through length($provided-colors) {
+            &:nth-child(#{length($provided-colors)}n + #{$i}) {
+                background-color: nth($provided-colors, $i);
+            }
+        }
+    }}}
+    
+     $provided-colors: (#EB1E32, #E41D63,#0D73EC,#E8115B,);
+.entertainment{
+       margin-top: 1.8rem;
+
+.search-cards {
+    .playlist-card {
+        @for $i from 1 through length($provided-colors) {
+            &:nth-child(#{length($provided-colors)}n + #{$i}) {
+                background-color: nth($provided-colors, $i);
+            }
+        }
+    }}}
+
+        
+     $provided-colors: (#006450, #0D73EC,#27856A,#E61E32,);
+.podcasts{
+
+     margin-top: 1.8rem;
+.search-cards {
+    .playlist-card {
+        @for $i from 1 through length($provided-colors) {
+            &:nth-child(#{length($provided-colors)}n + #{$i}) {
+                background-color: nth($provided-colors, $i);
+            }
+        }
+    }}}
+    
+
+        
+     $provided-colors: (#1E3264, #8D67AB,#503750,#1E3264,);
+.audiobooks{
+
+     margin-top: 1.8rem;
+.search-cards {
+    .playlist-card {
+        @for $i from 1 through length($provided-colors) {
+            &:nth-child(#{length($provided-colors)}n + #{$i}) {
+                background-color: nth($provided-colors, $i);
+            }
+        }
+    }}}
+    
+   

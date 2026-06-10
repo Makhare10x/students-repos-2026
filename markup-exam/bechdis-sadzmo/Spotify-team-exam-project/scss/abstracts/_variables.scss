@@ -1,0 +1,35 @@
+/* ============================
+   SPOTIFY PROJECT VARIABLES
+   ============================ */
+
+$color-bg: #060606; // მთავარი ფონი
+$color-border-main: #202020; //main content-ის  გარშემო ბორდერის ფერი
+$color-bg-card-hover: #282828; // ქარდზე მაუსის მიტანისას (Hover)
+$color-text-primary: #e0e0e0; // მთავარი სათაურები ("Made For You"), ქარდების სათაურები Mix-ები, აქტიური ღილაკების ფერები
+$color-spotify: #1ed760; // მხოლოდ Play ღილაკისთვის
+$color-bg-active: #e0e0e0; // აქტიური ღილაკების თეთრი ფონი
+$color-active-chip-text: #111111; // "All" აქტიური chip-ის შავი ტექსტი
+$color-bg-inactive-chip: #20202080; // არააქტიური ფილტრების ბექგრაუნდის ფერი(Music, Podcasts...)
+$color-bg-player:  #333842; // Player-ის ბექგრაუნდის ფერი
+$color-text-secondary: #898989;
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1020px;
+$text-gray: #898989;
+$font-main: 'satoshi', sans-serif;
+$breakpoint-mobile: 768px;
+$font-size-primary: 14px;
+$hover-background-color: #111111;
+$menu-text-hover: #e0e0e0;
+$music-button-color: #1a1a1a;
+$bg-discover: #8cd8cc;
+$main-color-library-liked: #898989;
+$font-weight-light: 300;
+$transition-base: 0.2s linear;
+$radius-sm: 3px;
+$radius-md: 5px;
+$radius-pill: 32px;
+$color-white-muted: rgba(255, 255, 255, 0.1);
+$max-width-main: 1920px;
+$max-width-table: 1400px;
+$breakpoint-md: 768px;

@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify</title>
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+  <input type="checkbox" id="dj-toggle" class="dj-toggle__input">
+  <input type="checkbox" id="player-popup" class="player-popup__input">
+
+  <!-- App Wrapper -->
+  <div class="app-wrapper">
+
+    <!-- =============================================
+         SIDEBAR — left navigation panel
+         ============================================= -->
+    <aside class="sidebar">
+
+      <!-- Sidebar header: library title + action buttons -->
+      <div class="sidebar-header">
+        <a href="library.html" class="sidebar-header__left">
+          <img src="../assets/icons/mylibrary.svg" alt="" class="sidebar-header__icon">
+          <span class="sidebar-title">My Library</span>
+        </a>
+        <div class="sidebar-header__actions">
+          <button class="sidebar-header__btn" aria-label="More">···</button>
+          <button class="sidebar-header__btn" aria-label="Add">+</button>
+        </div>
+      </div>
+
+      <!-- Sidebar navigation list -->
+      <nav class="sidebar-nav">
+        <ul class="sidebar-list">
+
+          <!-- Pins link -->
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <img src="../assets/icons/pins.svg" alt="" class="sidebar-link__icon">
+              <span class="sidebar-link__text">Pins</span>
+              <span class="sidebar-link__arrow">›</span>
+            </a>
+          </li>
+
+          <!-- Playlists — collapsible dropdown -->
+          <li class="sidebar-item">
+            <details class="sidebar-dropdown">
+              <summary class="sidebar-link">
+                <img src="../assets/icons/playlists.svg" alt="" class="sidebar-link__icon">
+                <span class="sidebar-link__text">Playlists</span>
+                <span class="sidebar-link__arrow">›</span>
+              </summary>
+              <ul class="sidebar-sublist">
+                <li class="sidebar-subitem">
+                  <a href="#" class="sidebar-sublink">
+                    <img src="../assets/icons/playlists.svg" alt="" class="sidebar-link__icon">
+                    <span>Chill stuff</span>
+                  </a>
+                </li>
+                <li class="sidebar-subitem">
+                  <a href="#" class="sidebar-sublink">
+                    <img src="../assets/icons/playlists.svg" alt="" class="sidebar-link__icon">
+                    <span>Rock n Roll</span>
+                  </a>
+                </li>
+                <li class="sidebar-subitem">
+                  <a href="#" class="sidebar-sublink">
+                    <img src="../assets/icons/playlists.svg" alt="" class="sidebar-link__icon">
+                    <span>The Jux Box</span>
+                  </a>
+                </li>
+                <li class="sidebar-subitem">
+                  <a href="#" class="sidebar-sublink">
+                    <img src="../assets/icons/playlists.svg" alt="" class="sidebar-link__icon">
+                    <span>Selected Linkin Park</span>
+                  </a>
+                </li>
+                <li class="sidebar-subitem">
+                  <a href="#" class="sidebar-sublink">
+                    <img src="../assets/icons/playlists.svg" alt="" class="sidebar-link__icon">
+                    <span>Vibe</span>
+                  </a>
+                </li>
+              </ul>
+            </details>
+          </li>
+
+          <!-- Liked Songs link -->
+          <li class="sidebar-item">
+            <a href="liked.songs.html" class="sidebar-link">
+              <img src="../assets/icons/likedsongs.svg" alt="" class="sidebar-link__icon">
+              <span class="sidebar-link__text">Liked songs</span>
+            </a>
+          </li>
+
+          <!-- Saves link -->
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <img src="../assets/icons/saves.svg" alt="" class="sidebar-link__icon">
+              <span class="sidebar-link__text">Saves</span>
+            </a>
+          </li>
+
+          <!-- Albums link -->
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <img src="../assets/icons/albums.svg" alt="" class="sidebar-link__icon">
+              <span class="sidebar-link__text">Albums</span>
+            </a>
+          </li>
+
+          <!-- Folders link -->
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <img src="../assets/icons/folders.svg" alt="" class="sidebar-link__icon">
+              <span class="sidebar-link__text">Folders</span>
+            </a>
+          </li>
+
+          <!-- Podcasts link -->
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <img src="../assets/icons/podcasts.svg" alt="" class="sidebar-link__icon">
+              <span class="sidebar-link__text">Podcasts</span>
+            </a>
+          </li>
+
+          <!-- Audiobooks link -->
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <img src="../assets/icons/audiobooks.svg" alt="" class="sidebar-link__icon">
+              <span class="sidebar-link__text">Audiobooks</span>
+            </a>
+          </li>
+
+          <!-- Artists link -->
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <img src="../assets/icons/artists.svg" alt="" class="sidebar-link__icon">
+              <span class="sidebar-link__text">Artists</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </aside>
+    <!-- END SIDEBAR -->
+
+    <!-- =============================================
+         MAIN AREA — top header + scrollable content
+         ============================================= -->
+    <div class="main-area">
+
+      <!-- Top navigation header -->
+      <header class="top-header">
+        <nav class="header-nav">
+          <a href="../index.html" class="header-nav__link">
+            <img src="../assets/icons/home-active.svg" alt="" class="header-nav__icon">
+            <span class="header-nav__text">Home</span>
+          </a>
+          <a href="discover.html" class="header-nav__link">
+            <img src="../assets/icons/discover.svg" alt="" class="header-nav__icon">
+            <span class="header-nav__text">Discover</span>
+          </a>
+          <a href="search.html" class="header-nav__link">
+            <img src="../assets/icons/search.svg" alt="" class="header-nav__icon">
+            <span class="header-nav__text">Search</span>
+          </a>
+        </nav>
+
+        <!-- Header utility buttons -->
+        <div class="header-actions">
+          <button class="header-actions__btn" aria-label="Notifications">
+            <img src="../assets/icons/notification.svg" alt="">
+          </button>
+          <button class="header-actions__btn header-actions__btn--lock" aria-label="Lock">
+            <img src="../assets/icons/lock.svg" alt="">
+          </button>
+          <button class="header-actions__btn" aria-label="Friends">
+            <img src="../assets/icons/friends.svg" alt="">
+          </button>
+          <button class="header-actions__btn" aria-label="Settings">
+            <img src="../assets/icons/settings.svg" alt="">
+          </button>
+          <button class="header-actions__btn header-actions__btn--avatar" aria-label="Profile">
+            <img src="../assets/icons/avatar.png" alt="Profile" class="header-avatar">
+          </button>
+        </div>
+      </header>
+      <!-- END TOP HEADER -->
+
+      <!-- =============================================
+           MAIN CONTENT — library section
+           ============================================= -->
+      <main class="main-content">
+
+        <!-- Mobile Library Header (visible on mobile only) -->
+        <div class="library-mobile-header">
+          <div class="library-mobile-header__search-row">
+            <div class="library-mobile-header__search">
+              <input type="text" placeholder="Search library" class="library-mobile-header__input">
+              <img src="../assets/icons/search.svg" alt="" class="library-mobile-header__search-icon">
+            </div>
+            <button class="library-mobile-header__add">
+              <img src="../assets/icons/plus.svg" alt="">
+            </button>
+          </div>
+          <div class="library-mobile-header__controls">
+            <div class="library-mobile-header__controls-left">
+              <button class="library-mobile-header__btn">
+                <img src="../assets/icons/filter.svg" alt="">
+                <span>Group</span>
+              </button>
+              <button class="library-mobile-header__btn">
+                <span>Recents</span>
+                <img src="../assets/icons/layout.svg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <section class="library_section-wrapper">
+
+          <!-- ==========================================
+               PLAYLIST NAV BAR — view toggle + sort + filter
+               ========================================== -->
+          <div class="playlist-nav-bar">
+
+            <!-- Left group: view mode buttons + sort + filter + search -->
+            <div class="nav-group-left">
+
+              <!-- View toggle: list view -->
+              <button class="nav-btn" aria-label="List view">
+                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.58398 13H18.584" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M1 13H2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M6.58398 7H18.584" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M1 7H2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M6.58398 1H18.584" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M1 1H2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </button>
+
+              <!-- View toggle: grid view (currently active) -->
+              <button class="nav-btn active" aria-label="Grid view">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="8.18182" height="8.18182" rx="2" transform="matrix(1 0 0 -1 1 21)" stroke="currentColor" stroke-width="2"/>
+                  <rect width="8.18182" height="8.18182" rx="2" transform="matrix(1 0 0 -1 1 9.18176)" stroke="currentColor" stroke-width="2"/>
+                  <rect width="8.18182" height="8.18182" rx="2" transform="matrix(1 0 0 -1 12.8184 21)" stroke="currentColor" stroke-width="2"/>
+                  <rect width="8.18182" height="8.18182" rx="2" transform="matrix(1 0 0 -1 12.8184 9.18176)" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </button>
+
+              <!-- Sort button: "Recent" with up/down arrow icon -->
+              <button class="nav-btn-text" aria-label="Sort by recent">
+                <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.65327 14.2864L5.65327 1.01023M5.65327 1.01023L10.2964 5.65335M5.65327 1.01023L1.01015 5.65335" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18.6534 1.28638L18.6534 14.5625M18.6534 14.5625L14.0103 9.9194M18.6534 14.5625L23.2965 9.9194" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Recent</span>
+              </button>
+
+              <!-- Filter dropdown: Group by type (All, Songs, Playlists…) -->
+              <div class="filter-dropdown-container">
+
+                <!-- Trigger button: toggles .show on the dropdown menu -->
+                <button class="filter-trigger" onclick="this.nextElementSibling.classList.toggle('show')" aria-label="Filter and group">
+                  <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
+                    <path d="M19 1L1 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M15.4922 7L5.49219 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M12.4922 13H8.49219" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                  <span>Group</span>
+                </button>
+
+                <!-- Dropdown menu (shown when .show class is present) -->
+                <div class="filter-dropdown-menu">
+
+                  <!-- Filter by content type -->
+                  <ul class="filter-list">
+                    <li class="filter-item active">All</li>
+                    <li class="filter-item">Songs</li>
+                    <li class="filter-item">Playlists</li>
+                    <li class="filter-item">Albums</li>
+                    <li class="filter-item">Artists</li>
+                    <li class="filter-item">Folders</li>
+                    <li class="filter-item">Podcasts</li>
+                    <li class="filter-item">Audiobooks</li>
+                  </ul>
+
+                  <div class="dropdown-divider"></div>
+
+                  <!-- Group toggle switch -->
+                  <div class="group-section">
+                    <span class="group-label">Group</span>
+                    <label class="switch">
+                      <input type="checkbox" id="group-checkbox">
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+              <!-- END FILTER DROPDOWN -->
+
+              <!-- Search / magnifier button -->
+              <button class="nav-btn" aria-label="Search library">
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.9158 15.7929C17.4535 14.2244 18.4016 12.0759 18.4016 9.70591C18.4016 4.90343 14.5084 1.01025 9.70591 1.01025C4.90343 1.01025 1.01025 4.90343 1.01025 9.70591C1.01025 14.5084 4.90343 18.4016 9.70591 18.4016C12.1384 18.4016 14.3377 17.4027 15.9158 15.7929ZM15.9158 15.7929L21.0103 21.0103" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round"/>
+                </svg>
+              </button>
+
+            </div>
+            <!-- END NAV GROUP LEFT -->
+
+            <!-- Right group: add new item (+) button -->
+            <div class="nav-group-right">
+              <button class="nav-btn" aria-label="Add new">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.9059 4.76246V11.9061M11.9059 19.0498V11.9061M11.9059 11.9061L4.76221 11.9061M11.9059 11.9061H19.0496" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+
+          </div>
+          <!-- END PLAYLIST NAV BAR -->
+
+
+          <!-- ==========================================
+               DESKTOP LIBRARY — visible on wide screens
+               ========================================== -->
+          <div class="desktop-library">
+
+            <!-- ------------------------------------------
+                 FIRST ROW — pinned playlists + artist cards
+                 ------------------------------------------ -->
+            <div class="section-header library-scroll">
+              <div class="section__controls">
+                <button class="arrow" onclick="document.getElementById('desktop-first-row').scrollBy({left:-600, behavior:'smooth'})" aria-label="Scroll left">
+                  <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.3224 6.90363L1.01029 6.90363M1.01029 6.90363L6.90353 12.7969M1.01029 6.90363L6.90353 1.01039" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <button class="arrow" onclick="document.getElementById('desktop-first-row').scrollBy({left:600, behavior:'smooth'})" aria-label="Scroll right">
+                  <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.01025 6.90301H15.3224M15.3224 6.90301L9.42917 1.00977M15.3224 6.90301L9.42917 12.7963" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="library_cards-wrapper" id="desktop-first-row">
+
+              <!-- Pinned card: Liked Songs (green heart) -->
+              <div class="search_card-square pinned-card">
+                <div class="x-mark">
+                  <img src="../assets/icons/greenpin.svg" alt="Pinned">
+                </div>
+                <div class="card_wrapper">
+                  <div class="second" style="background-color: rgba(30, 215, 96, 0.3);"></div>
+                  <div class="third"  style="background-color: rgba(30, 215, 96, 0.15);"></div>
+                  <div class="card_banner">
+                    <img src="../assets/images/heartgreen.svg" alt="">
+                  </div>
+                  <div class="card_content">
+                    <div class="content_header">
+                      <h4 class="card_title">Liked songs</h4>
+                      <h4 class="card_number" style="color: #1ED760;">8</h4>
+                    </div>
+                    <p class="card_text">Numb, Crawling, In the End, and more</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pinned artist card: David Bowie (round image)-->
+              <div class="search_card">
+                <div class="x-mark">
+                  <img src="../assets/icons/greenpin.svg" alt="Pinned">
+                </div>
+                <img class="search_card-banner" src="../assets/images/davidbowie.svg" alt="David Bowie">
+                <div class="search_card-title">
+                  <h3 class="artist">Daft Punk</h3>
+                  <p>Artist</p>
+                </div>
+              </div>
+
+              <!-- Pinned artist card: Daft Punk (round image) -->
+              <div class="search_card">
+                <div class="x-mark">
+                  <img src="../assets/icons/greenpin.svg" alt="Pinned">
+                </div>
+                <img class="search_card-banner" src="../assets/images/daftpunk3.svg" alt="Daft Punk">
+                <div class="search_card-title">
+                  <h3 class="artist">Daft Punk</h3>
+                  <p>Artist</p>
+                </div>
+              </div>
+
+              <!-- Pinned card: Chill Stuff playlist -->
+              <div class="search_card-square pinned-card">
+                <div class="x-mark">
+                  <img src="../assets/icons/greenpin.svg" alt="Pinned">
+                </div>
+                <div class="card_wrapper">
+                  <div class="second" style="background-color: rgba(137, 137, 137, 0.3);"></div>
+                  <div class="third"  style="background-color: rgba(137, 137, 137, 0.15);"></div>
+                  <div class="card_banner">
+                    <img src="../assets/images/note.svg" alt="">
+                  </div>
+                  <div class="card_content">
+                    <div class="content_header">
+                      <h4 class="card_title">Chill Stuff</h4>
+                      <h4 class="card_number" style="color: #898989;">152</h4>
+                    </div>
+                    <p class="card_text">Simon and Garfunkel, Daft Punk, and more</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pinned card: The Jux Box playlist -->
+              <div class="search_card-square pinned-card">
+                <div class="x-mark">
+                  <img src="../assets/icons/greenpin.svg" alt="Pinned">
+                </div>
+                <div class="card_wrapper">
+                  <div class="second" style="background-color: rgba(137, 137, 137, 0.3);"></div>
+                  <div class="third"  style="background-color: rgba(137, 137, 137, 0.15);"></div>
+                  <div class="card_banner">
+                    <img src="../assets/images/note.svg" alt="">
+                  </div>
+                  <div class="card_content">
+                    <div class="content_header">
+                      <h4 class="card_title">The Jux Box</h4>
+                      <h4 class="card_number" style="color: #898989;">50</h4>
+                    </div>
+                    <p class="card_text">Simon and Garfunkel, Daft Punk, and more</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pinned card: Vibe playlist -->
+              <div class="search_card-square pinned-card">
+                <div class="x-mark">
+                  <img src="../assets/icons/greenpin.svg" alt="Pinned">
+                </div>
+                <div class="card_wrapper">
+                  <div class="second" style="background-color: rgba(137, 137, 137, 0.3);"></div>
+                  <div class="third"  style="background-color: rgba(137, 137, 137, 0.15);"></div>
+                  <div class="card_banner">
+                    <img src="../assets/images/note.svg" alt="">
+                  </div>
+                  <div class="card_content">
+                    <div class="content_header">
+                      <h4 class="card_title">Vibe</h4>
+                      <h4 class="card_number" style="color: #898989;">30</h4>
+                    </div>
+                    <p class="card_text">Blue Skies, No Heaven</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pinned card: Selected Linkin Park playlist -->
+              <div class="search_card-square pinned-card">
+                <div class="x-mark">
+                  <img src="../assets/icons/greenpin.svg" alt="Pinned">
+                </div>
+                <div class="card_wrapper">
+                  <div class="second" style="background-color: rgba(137, 137, 137, 0.3);"></div>
+                  <div class="third"  style="background-color: rgba(137, 137, 137, 0.15);"></div>
+                  <div class="card_banner">
+                    <img src="../assets/images/note.svg" alt="">
+                  </div>
+                  <div class="card_content">
+                    <div class="content_header">
+                      <h4 class="card_title">Selected Linkin Park</h4>
+                      <h4 class="card_number" style="color: #898989;">8</h4>
+                    </div>
+                    <p class="card_text">Numb, Crawling, In the End, and more</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pinned card: Fav Bands folder -->
+              <div class="search_card-square pinned-card">
+                <div class="x-mark">
+                  <img src="../assets/icons/greenpin.svg" alt="Pinned">
+                </div>
+                <div class="card_wrapper">
+                  <div class="second" style="background-color: rgba(137, 137, 137, 0.3);"></div>
+                  <div class="third"  style="background-color: rgba(137, 137, 137, 0.15);"></div>
+                  <div class="card_banner">
+                    <img src="../assets/images/folder.svg" alt="">
+                  </div>
+                  <div class="card_content">
+                    <div class="content_header">
+                      <h4 class="card_title">Fav bands</h4>
+                      <h4 class="card_number" style="color: #898989;">6</h4>
+                    </div>
+                    <p class="card_text">Linkin Park, Muse, and more</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- END DESKTOP FIRST ROW -->
+
+            <!-- ------------------------------------------
+                 SECOND ROW — albums + Spotify daily mixes
+                 ------------------------------------------ -->
+            <div class="section-header library-scroll">
+              <div class="section__controls">
+                <button class="arrow" onclick="document.getElementById('desktop-second-row').scrollBy({left:-600, behavior:'smooth'})" aria-label="Scroll left">
+                  <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.3224 6.90363L1.01029 6.90363M1.01029 6.90363L6.90353 12.7969M1.01029 6.90363L6.90353 1.01039" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <button class="arrow" onclick="document.getElementById('desktop-second-row').scrollBy({left:600, behavior:'smooth'})" aria-label="Scroll right">
+                  <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.01025 6.90301H15.3224M15.3224 6.90301L9.42917 1.00977M15.3224 6.90301L9.42917 12.7963" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="library_cards-wrapper" id="desktop-second-row">
+
+              <!-- Saved album: Meteora — Linkin Park -->
+              <div class="search_card-square pinned-card">
+                <div class="x-mark">
+                  <img src="../assets/icons/greenpin.svg" alt="Pinned">
+                </div>
+                <div class="card_wrapper">
+                  <div class="second" style="background-color: rgba(166, 145, 116, 0.3)"></div>
+                  <div class="third"  style="background-color: rgba(166, 145, 116, 0.15)"></div>
+                  <div class="card_banner">
+                    <img src="../assets/images/frame(linkinpark).svg" alt="">
+                  </div>
+                  <div class="card_content">
+                    <div class="content_header">
+                      <h4 class="card_title">Meteora</h4>
+                    </div>
+                    <p class="card_text">Linkin Park</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Saved album: Abbey Road — The Beatles -->
+              <div class="search_card-square pinned-card">
+                <div class="x-mark">
+                  <img src="../assets/icons/greenpin.svg" alt="Pinned">
+                </div>
+                <div class="card_wrapper">
+                  <div class="second" style="background-color: rgba(117, 164, 150, 0.3)"></div>
+                  <div class="third"  style="background-color: rgba(117, 164, 150, 0.15)"></div>
+                  <div class="card_banner">
+                    <img src="../assets/images/frame(beatles).svg" alt="">
+                  </div>
+                  <div class="card_content">
+                    <div class="content_header">
+                      <h4 class="card_title">Abbey Road</h4>
+                      <h4 class="card_number" style="color: #898989;">13</h4>
+                    </div>
+                    <p class="card_text">The Beatles</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Saved album: Random Access Memories — Daft Punk -->
+              <div class="search_card-square pinned-card">
+                <div class="x-mark">
+                  <img src="../assets/icons/greenpin.svg" alt="Pinned">
+                </div>
+                <div class="card_wrapper">
+                  <div class="second" style="background-color: rgba(187, 180, 216, 0.3)"></div>
+                  <div class="third"  style="background-color: rgba(187, 180, 216, 0.15)"></div>
+                  <div class="card_banner">
+                    <img src="../assets/images/frame(daftpunk).svg" alt="">
+                  </div>
+                  <div class="card_content">
+                    <div class="content_header">
+                      <h4 class="card_title">Random Access Memories</h4>
+                      <h4 class="card_number" style="color: #898989;">13</h4>
+                    </div>
+                    <p class="card_text">Daft Punk</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Saved album: Black Holes and Revelations — Muse -->
+              <div class="search_card-square pinned-card">
+                <div class="x-mark">
+                  <img src="../assets/icons/greenpin.svg" alt="Pinned">
+                </div>
+                <div class="card_wrapper">
+                  <div class="second" style="background-color: rgba(98, 120, 177, 0.3)"></div>
+                  <div class="third"  style="background-color: rgba(98, 120, 177, 0.15)"></div>
+                  <div class="card_banner">
+                    <img src="../assets/images/muse.svg" alt="">
+                  </div>
+                  <div class="card_content">
+                    <div class="content_header">
+                      <h4 class="card_title">Black Holes and Revelations</h4>
+                      <h4 class="card_number" style="color: #898989;">13</h4>
+                    </div>
+                    <p class="card_text">Muse</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Spotify-generated card: Daily Mix 1 -->
+              <div class="card_wrapper home-card">
+                <div class="second" style="background-color: rgba(149, 230, 211, 0.3);"></div>
+                <div class="third"  style="background-color: rgba(149, 230, 211, 0.15);"></div>
+                <div class="card_banner">
+                  <img src="../assets/images/dailymix1.svg" alt="">
+                </div>
+                <div class="card_content">
+                  <div class="content_header">
+                    <h4 class="card_title">Daily Mix 1</h4>
+                    <h4 class="card_number" style="color:#95E6D3;">50</h4>
+                  </div>
+                  <p class="card_text">Linkin Park, System Of A Down, Coal Chamber...</p>
+                </div>
+              </div>
+
+              <!-- Spotify-generated card: Daily Mix 2 -->
+              <div class="card_wrapper home-card">
+                <div class="second" style="background-color: rgba(244, 184, 189, 0.3);"></div>
+                <div class="third"  style="background-color: rgba(244, 184, 189, 0.15);"></div>
+                <div class="card_banner">
+                  <img src="../assets/images/dailymix2.svg" alt="">
+                </div>
+                <div class="card_content">
+                  <div class="content_header">
+                    <h4 class="card_title">Daily Mix 2</h4>
+                    <h4 class="card_number" style="color: #F4B8BD;">50</h4>
+                  </div>
+                  <p class="card_text">Avril Lavigne, Lorde, Charli XCX and more</p>
+                </div>
+              </div>
+
+              <!-- Spotify-generated card: Daily Mix 3 -->
+              <div class="card_wrapper home-card">
+                <div class="second" style="background-color: rgba(195, 231, 183, 0.3);"></div>
+                <div class="third"  style="background-color: rgba(195, 231, 183, 0.15);"></div>
+                <div class="card_banner">
+                  <img src="../assets/images/dailymix3.svg" alt="">
+                </div>
+                <div class="card_content">
+                  <div class="content_header">
+                    <h4 class="card_title">Daily Mix 3</h4>
+                    <h4 class="card_number" style="color: #C3E7B7;">50</h4>
+                  </div>
+                  <p class="card_text">The Strokes, Martin Garrix, MGMT and more</p>
+                </div>
+              </div>
+
+              <!-- Spotify-generated card: Rock Mix -->
+              <div class="card_wrapper home-card">
+                <div class="second" style="background-color: rgba(204, 246, 101, 0.3);"></div>
+                <div class="third"  style="background-color: rgba(204, 246, 101, 0.15);"></div>
+                <div class="card_banner">
+                  <img src="../assets/images/rockmix.svg" alt="">
+                </div>
+                <div class="card_content">
+                  <div class="content_header">
+                    <h4 class="card_title">Rock Mix</h4>
+                    <h4 class="card_number" style="color: #CCF665;">50</h4>
+                  </div>
+                  <p class="card_text">Red Hot Chili Peppers, R.E.M., Guns N' Roses...</p>
+                </div>
+              </div>
+
+            </div>
+            <!-- END DESKTOP SECOND ROW -->
+
+            <!-- ------------------------------------------
+                 THIRD ROW — additional Spotify mixes (no scroll controls)
+                 ------------------------------------------ -->
+            <div class="library_cards-wrapper">
+
+              <!-- Spotify-generated card: Chill Mix -->
+              <div class="card_wrapper home-card">
+                <div class="second" style="background-color: rgba(249, 231, 44, 0.3);"></div>
+                <div class="third"  style="background-color: rgba(249, 231, 44, 0.15);"></div>
+                <div class="card_banner">
+                  <img src="../assets/images/chillmix.svg" alt="">
+                </div>
+                <div class="card_content">
+                  <div class="content_header">
+                    <h4 class="card_title">Chill Mix</h4>
+                    <h4 class="card_number" style="color: #F9E72C;">50</h4>
+                  </div>
+                  <p class="card_text">MF DOOM, Daft Punk, The Chainsmokers, and more</p>
+                </div>
+              </div>
+
+              <!-- Spotify-generated card: Pop Mix-->
+              <div class="card_wrapper home-card">
+                <div class="second" style="background-color: rgba(155, 240, 226, 0.3);"></div>
+                <div class="third"  style="background-color: rgba(155, 240, 226, 0.15);"></div>
+                <div class="card_banner">
+                  <img src="../assets/images/popmix.svg" alt="">
+                </div>
+                <div class="card_content">
+                  <div class="content_header">
+                    <h4 class="card_title">Pop Mix</h4>
+                    <h4 class="card_number" style="color: #9BF0E2;">50</h4>
+                  </div>
+                  <p class="card_text">Red Hot Chili Peppers, R.E.M., Guns N' Roses...</p>
+                </div>
+              </div>
+
+            </div>
+            <!-- END DESKTOP THIRD ROW -->
+
+          </div>
+          <!-- END DESKTOP LIBRARY -->
+
+
+          <!-- ==========================================
+               MOBILE LIBRARY — accordion sections, hidden on desktop
+               ========================================== -->
+          <div class="mobile-library">
+
+            <!-- Accordion: Playlists -->
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                <h2 class="accordion-title">Playlists</h2>
+                <svg class="chevron-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.3 2.3a1 1 0 0 1 1.4 0l6 6a1 1 0 0 1 0 1.4l-6 6a1 1 0 0 1-1.4-1.4L10.6 9 5.3 3.7a1 1 0 0 1 0-1.4z"/>
+                </svg>
+              </div>
+              <div class="accordion-content">
+                <div class="library_cards-wrapper">
+
+                  <!-- Pinned: Liked Songs -->
+                  <div class="search_card-square pinned-card">
+                    <div class="x-mark">
+                      <img src="../assets/icons/greenpin.svg" alt="Pinned">
+                    </div>
+                    <div class="card_wrapper">
+                      <div class="second" style="background-color: rgba(30, 215, 96, 0.3);"></div>
+                      <div class="third"  style="background-color: rgba(30, 215, 96, 0.15);"></div>
+                      <div class="card_banner">
+                        <img src="../assets/images/heartgreen.svg" alt="">
+                      </div>
+                      <div class="card_content">
+                        <div class="content_header">
+                          <h4 class="card_title">Liked songs</h4>
+                          <h4 class="card_number" style="color: #1ED760;">8</h4>
+                        </div>
+                        <p class="card_text">Numb, Crawling, In the End, and more</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Playlist card (placeholder) -->
+                  <div class="search_card-square pinned-card">
+                    <div class="x-mark">
+                      <img src="../assets/icons/greenpin.svg" alt="Pinned">
+                    </div>
+                    <div class="card_wrapper">
+                      <div class="second" style="background-color: rgba(137, 137, 137, 0.3);"></div>
+                      <div class="third"  style="background-color: rgba(137, 137, 137, 0.15);"></div>
+                      <div class="card_banner">
+                        <img src="../assets/images/note.svg" alt="">
+                      </div>
+                      <div class="card_content">
+                        <div class="content_header">
+                          <h4 class="card_title">Selected Linkin Park</h4>
+                          <h4 class="card_number" style="color: #898989;">8</h4>
+                        </div>
+                        <p class="card_text">Numb, Crawling, In the End, and more</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Playlist card (placeholder) -->
+                  <div class="search_card-square pinned-card">
+                    <div class="x-mark">
+                      <img src="../assets/icons/greenpin.svg" alt="Pinned">
+                    </div>
+                    <div class="card_wrapper">
+                      <div class="second" style="background-color: rgba(137, 137, 137, 0.3);"></div>
+                      <div class="third"  style="background-color: rgba(137, 137, 137, 0.15);"></div>
+                      <div class="card_banner">
+                        <img src="../assets/images/note.svg" alt="">
+                      </div>
+                      <div class="card_content">
+                        <div class="content_header">
+                          <h4 class="card_title">Selected Linkin Park</h4>
+                          <h4 class="card_number" style="color: #898989;">8</h4>
+                        </div>
+                        <p class="card_text">Numb, Crawling, In the End, and more</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Playlist card (placeholder) -->
+                  <div class="search_card-square pinned-card">
+                    <div class="x-mark">
+                      <img src="../assets/icons/greenpin.svg" alt="Pinned">
+                    </div>
+                    <div class="card_wrapper">
+                      <div class="second" style="background-color: rgba(137, 137, 137, 0.3);"></div>
+                      <div class="third"  style="background-color: rgba(137, 137, 137, 0.15);"></div>
+                      <div class="card_banner">
+                        <img src="../assets/images/note.svg" alt="">
+                      </div>
+                      <div class="card_content">
+                        <div class="content_header">
+                          <h4 class="card_title">Selected Linkin Park</h4>
+                          <h4 class="card_number" style="color: #898989;">8</h4>
+                        </div>
+                        <p class="card_text">Numb, Crawling, In the End, and more</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Playlist card (placeholder) -->
+                  <div class="search_card-square pinned-card">
+                    <div class="x-mark">
+                      <img src="../assets/icons/greenpin.svg" alt="Pinned">
+                    </div>
+                    <div class="card_wrapper">
+                      <div class="second" style="background-color: rgba(137, 137, 137, 0.3);"></div>
+                      <div class="third"  style="background-color: rgba(137, 137, 137, 0.15);"></div>
+                      <div class="card_banner">
+                        <img src="../assets/images/note.svg" alt="">
+                      </div>
+                      <div class="card_content">
+                        <div class="content_header">
+                          <h4 class="card_title">Selected Linkin Park</h4>
+                          <h4 class="card_number" style="color: #898989;">8</h4>
+                        </div>
+                        <p class="card_text">Numb, Crawling, In the End, and more</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- END ACCORDION: PLAYLISTS -->
+
+            <!-- Accordion: Playlists by Spotify (Daily/Rock/Chill/Pop mixes) -->
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                <h2 class="accordion-title">Playlists by Spotify</h2>
+                <svg class="chevron-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.3 2.3a1 1 0 0 1 1.4 0l6 6a1 1 0 0 1 0 1.4l-6 6a1 1 0 0 1-1.4-1.4L10.6 9 5.3 3.7a1 1 0 0 1 0-1.4z"/>
+                </svg>
+              </div>
+              <div class="accordion-content">
+                <div class="library_cards-wrapper">
+
+                  <!-- Daily Mix 1 -->
+                  <div class="card_wrapper">
+                    <div class="second" style="background-color: rgba(149, 230, 211, 0.3);"></div>
+                    <div class="third"  style="background-color: rgba(149, 230, 211, 0.15);"></div>
+                    <div class="card_banner">
+                      <img src="../assets/images/dailymix1.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                      <div class="content_header">
+                        <h4 class="card_title">Daily Mix 1</h4>
+                        <h4 class="card_number" style="color: #95E6D3;">50</h4>
+                      </div>
+                      <p class="card_text">Linkin Park, System Of A Down, Coal Chamber...</p>
+                    </div>
+                  </div>
+
+                  <!-- Daily Mix 2-->
+                  <div class="card_wrapper">
+                    <div class="second" style="background-color: rgba(244, 184, 189, 0.3);"></div>
+                    <div class="third"  style="background-color: rgba(244, 184, 189, 0.15);"></div>
+                    <div class="card_banner">
+                      <img src="../assets/images/dailymix2.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                      <div class="content_header">
+                        <h4 class="card_title">Daily Mix 2</h4>
+                        <h4 class="card_number" style="color: #F4B8BD;">50</h4>
+                      </div>
+                      <p class="card_text">Avril Lavigne, Lorde, Charli XCX and more</p>
+                    </div>
+                  </div>
+
+                  <!-- Daily Mix 3 -->
+                  <div class="card_wrapper">
+                    <div class="second" style="background-color: rgba(195, 231, 183, 0.3);"></div>
+                    <div class="third"  style="background-color: rgba(195, 231, 183, 0.15);"></div>
+                    <div class="card_banner">
+                      <img src="../assets/images/dailymix3.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                      <div class="content_header">
+                        <h4 class="card_title">Daily Mix 3</h4>
+                        <h4 class="card_number" style="color: #C3E7B7;">50</h4>
+                      </div>
+                      <p class="card_text">The Strokes, Martin Garrix, MGMT and more</p>
+                    </div>
+                  </div>
+
+                  <!-- Rock Mix -->
+                  <div class="card_wrapper">
+                    <div class="second" style="background-color: rgba(204, 246, 101, 0.3);"></div>
+                    <div class="third"  style="background-color: rgba(204, 246, 101, 0.15);"></div>
+                    <div class="card_banner">
+                      <img src="../assets/images/rockmix.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                      <div class="content_header">
+                        <h4 class="card_title">Rock Mix</h4>
+                        <h4 class="card_number" style="color: #CCF665;">50</h4>
+                      </div>
+                      <p class="card_text">Red Hot Chili Peppers, R.E.M., Guns N' Roses...</p>
+                    </div>
+                  </div>
+
+                  <!-- Chill Mix -->
+                  <div class="card_wrapper">
+                    <div class="second" style="background-color: rgba(249, 231, 44, 0.3);"></div>
+                    <div class="third"  style="background-color: rgba(249, 231, 44, 0.15);"></div>
+                    <div class="card_banner">
+                      <img src="../assets/images/chillmix.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                      <div class="content_header">
+                        <h4 class="card_title">Chill Mix</h4>
+                        <h4 class="card_number" style="color: #F9E72C;">50</h4>
+                      </div>
+                      <p class="card_text">MF DOOM, Daft Punk, The Chainsmokers, and more</p>
+                    </div>
+                  </div>
+
+                  <!-- Pop Mix -->
+                  <div class="card_wrapper">
+                    <div class="second" style="background-color: rgba(155, 240, 226, 0.3);"></div>
+                    <div class="third"  style="background-color: rgba(155, 240, 226, 0.15);"></div>
+                    <div class="card_banner">
+                      <img src="../assets/images/popmix.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                      <div class="content_header">
+                        <h4 class="card_title">Pop Mix</h4>
+                        <h4 class="card_number" style="color: #9BF0E2;">50</h4>
+                      </div>
+                      <p class="card_text">Red Hot Chili Peppers, R.E.M., Guns N' Roses...</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- END ACCORDION: PLAYLISTS BY SPOTIFY -->
+
+            <!-- Accordion: Albums -->
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                <h2 class="accordion-title">Albums</h2>
+                <svg class="chevron-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.3 2.3a1 1 0 0 1 1.4 0l6 6a1 1 0 0 1 0 1.4l-6 6a1 1 0 0 1-1.4-1.4L10.6 9 5.3 3.7a1 1 0 0 1 0-1.4z"/>
+                </svg>
+              </div>
+              <div class="accordion-content">
+                <div class="library_cards-wrapper">
+
+                  <!-- Album: Abbey Road — The Beatles -->
+                  <div class="card_wrapper">
+                    <div class="second" style="background-color: rgba(117, 164, 150, 0.3)"></div>
+                    <div class="third"  style="background-color: rgba(117, 164, 150, 0.15)"></div>
+                    <div class="card_banner">
+                      <img src="../assets/images/frame(beatles).svg" alt="">
+                    </div>
+                    <div class="card_content">
+                      <div class="content_header">
+                        <h4 class="card_title">Abbey Road</h4>
+                        <h4 class="card_number" style="color: #898989;">13</h4>
+                      </div>
+                      <p class="card_text">The Beatles</p>
+                    </div>
+                  </div>
+
+                  <!-- Album: Random Access Memories — Daft Punk -->
+                  <div class="card_wrapper">
+                    <div class="second" style="background-color: rgba(187, 180, 216, 0.3)"></div>
+                    <div class="third"  style="background-color: rgba(187, 180, 216, 0.15)"></div>
+                    <div class="card_banner">
+                      <img src="../assets/images/frame(daftpunk).svg" alt="">
+                    </div>
+                    <div class="card_content">
+                      <div class="content_header">
+                        <h4 class="card_title">Random Access Memories</h4>
+                        <h4 class="card_number" style="color: #898989;">13</h4>
+                      </div>
+                      <p class="card_text">Daft Punk</p>
+                    </div>
+                  </div>
+
+                  <!-- Album: Meteora — Linkin Park -->
+                  <div class="card_wrapper">
+                    <div class="second" style="background-color: rgba(166, 145, 116, 0.3)"></div>
+                    <div class="third"  style="background-color: rgba(166, 145, 116, 0.15)"></div>
+                    <div class="card_banner">
+                      <img src="../assets/images/frame(linkinpark).svg" alt="">
+                    </div>
+                    <div class="card_content">
+                      <div class="content_header">
+                        <h4 class="card_title">Meteora</h4>
+                      </div>
+                      <p class="card_text">Linkin Park</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- END ACCORDION: ALBUMS -->
+
+            <!-- Accordion: Folders -->
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                <h2 class="accordion-title">Folders</h2>
+                <svg class="chevron-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.3 2.3a1 1 0 0 1 1.4 0l6 6a1 1 0 0 1 0 1.4l-6 6a1 1 0 0 1-1.4-1.4L10.6 9 5.3 3.7a1 1 0 0 1 0-1.4z"/>
+                </svg>
+              </div>
+              <div class="accordion-content">
+                <div class="library_cards-wrapper">
+
+                  <!-- Folder: Fav Bands -->
+                  <div class="search_card-square pinned-card">
+                    <div class="x-mark">
+                      <img src="../assets/icons/greenpin.svg" alt="Pinned">
+                    </div>
+                    <div class="card_wrapper">
+                      <div class="second" style="background-color: rgba(137, 137, 137, 0.3);"></div>
+                      <div class="third"  style="background-color: rgba(137, 137, 137, 0.15);"></div>
+                      <div class="card_banner">
+                        <img src="../assets/images/folder.svg" alt="">
+                      </div>
+                      <div class="card_content">
+                        <div class="content_header">
+                          <h4 class="card_title">Fav bands</h4>
+                          <h4 class="card_number" style="color: #898989;">6</h4>
+                        </div>
+                        <p class="card_text">Linkin Park, Muse, and more</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- END ACCORDION: FOLDERS -->
+
+            <!-- Accordion: Artists -->
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                <h2 class="accordion-title">Artists</h2>
+                <svg class="chevron-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.3 2.3a1 1 0 0 1 1.4 0l6 6a1 1 0 0 1 0 1.4l-6 6a1 1 0 0 1-1.4-1.4L10.6 9 5.3 3.7a1 1 0 0 1 0-1.4z"/>
+                </svg>
+              </div>
+              <div class="accordion-content">
+                <div class="library_cards-wrapper">
+
+                  <!-- Artist card: Guns N' Roses -->
+                  <div class="search_card">
+                    <img class="search_card-banner" src="../assets/images/gnr.svg" alt="Guns N' Roses">
+                    <div class="search_card-title">
+                      <h3 class="artist">Guns N' Roses</h3>
+                    </div>
+                  </div>
+
+                  <!-- Artist card: Daft Punk -->
+                  <div class="search_card">
+                    <img class="search_card-banner" src="../assets/images/daftpunk3.svg" alt="Daft Punk">
+                    <div class="search_card-title">
+                      <h3 class="artist">Daft Punk</h3>
+                    </div>
+                  </div>
+
+                  <!-- Artist card: David Bowie -->
+                  <div class="search_card">
+                    <img class="search_card-banner" src="../assets/images/davidbowie.svg" alt="David Bowie">
+                    <div class="search_card-title">
+                      <h3 class="artist">David Bowie</h3>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- END ACCORDION: ARTISTS -->
+
+          </div>
+          <!-- END MOBILE LIBRARY -->
+
+        </section>
+      </main>
+      <!-- END MAIN CONTENT -->
+
+    </div>
+    <!-- END MAIN AREA -->
+
+  </div>
+  <!-- END APP WRAPPER -->
+
+  <!-- =============================================
+       BOTTOM PLAYER — persistent playback bar
+       ============================================= -->
+  <footer class="player">
+    <!-- CENTER visually: Track Info -->
+    <label for="player-popup" class="player-left">
+      <img src="../assets/images/get-lucky.png" alt="Get Lucky" class="player-cover">
+      <div class="player-track">
+        <a href="song.html">
+          <span class="player-track__title">Get Lucky</span>
+          <span class="player-track__artist">Daft Punk</span>
+          <span class="player-track__album">Random Access Memories</span>
+        </a>
+      </div>
+    </label>
+
+    <!-- CENTER: playback controls + progress bar -->
+    <div class="player-center">
+      <div class="player-controls">
+        <button class="player-btn player-btn--play" aria-label="Pause">
+          <img src="../assets/icons/pause.svg" alt="">
+        </button>
+        <button class="player-btn" aria-label="Previous">
+          <img src="../assets/icons/previous-song.svg" alt="">
+        </button>
+        <button class="player-btn" aria-label="Next">
+          <img src="../assets/icons/next-song.svg" alt="">
+        </button>
+        <button class="player-btn" aria-label="Shuffle">
+          <img src="../assets/icons/shuffle.svg" alt="">
+        </button>
+        <button class="player-btn" aria-label="Repeat">
+          <img src="../assets/icons/repeat.svg" alt="">
+        </button>
+      </div>
+
+      <!-- Progress bar with timestamps and volume -->
+      <div class="player-progress">
+        <span class="player-progress__time">2:23</span>
+        <div class="player-progress__bar">
+          <div class="player-progress__fill"></div>
+        </div>
+        <span class="player-progress__time">4:45</span>
+        <button class="player-btn" aria-label="Volume">
+          <img src="../assets/icons/sound.svg" alt="">
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Actions (visible on mobile only) -->
+    <div class="player-mobile-actions">
+      <button class="player-btn" aria-label="Add to playlist">
+        <img src="../assets/icons/add.svg" alt="">
+      </button>
+      <button class="player-btn" aria-label="Play">
+        <img src="../assets/icons/play-mobile.svg" alt="">
+      </button>
+    </div>
+
+    <!-- Mobile Progress Bar (visible on mobile only) -->
+    <div class="player-mobile-progress">
+      <div class="player-mobile-progress__fill"></div>
+    </div>
+
+    <!-- RIGHT visually: Actions -->
+    <div class="player-right">
+      <button class="player-btn" aria-label="Like">
+        <img src="../assets/icons/pc-like.svg" alt="">
+      </button>
+      <button class="player-btn" aria-label="Add to playlist">
+        <img src="../assets/icons/pc-playlist.svg" alt="">
+      </button>
+      <button class="player-btn" aria-label="Lyrics">
+        <img src="../assets/icons/pc-lyrics.svg" alt="">
+      </button>
+      <button class="player-btn" aria-label="Connect to device">
+        <img src="../assets/icons/speaker.svg" alt="">
+      </button>
+      <button class="player-btn" aria-label="More options">
+        <img src="../assets/icons/pc-playing-more.svg" alt="">
+      </button>
+
+      <!-- DJ section: toggle opens a mini panel with DJ controls -->
+      <div class="dj-section">
+
+        <!-- Closed state: DJ icon acts as toggle label -->
+        <label for="dj-toggle" class="player-btn dj-toggle__btn" aria-label="Open DJ">
+          <img src="../assets/icons/DJ.png" alt="DJ">
+        </label>
+
+        <!-- Open state: expanded DJ control panel -->
+        <div class="dj-panel">
+          <button class="player-btn" aria-label="Skip">
+            <img src="../assets/icons/dj-skip.svg" alt="">
+          </button>
+          <button class="player-btn" aria-label="Like">
+            <img src="../assets/icons/like.svg" alt="">
+          </button>
+          <button class="player-btn" aria-label="Dislike">
+            <img src="../assets/icons/dislike.svg" alt="">
+          </button>
+          <!-- Clicking turn-off icon closes the DJ panel -->
+          <label for="dj-toggle" class="player-btn" aria-label="Close DJ">
+            <img src="../assets/icons/turn-off.svg" alt="">
+          </label>
+          <img src="../assets/icons/DJ.png" alt="DJ" class="dj-panel__dj-icon">
+        </div>
+
+        <!-- Queue button sits outside the DJ panel -->
+        <button class="player-btn" aria-label="Queue">
+          <img src="../assets/icons/pc-queue.svg" alt="">
+        </button>
+
+      </div>
+      <!-- END DJ SECTION -->
+
+    </div>
+    <!-- END PLAYER RIGHT -->
+
+  </footer>
+
+  <!-- Bottom Navigation (Mobile only) -->
+  <nav class="bottom-nav">
+    <ul class="bottom-nav__list">
+      <li>
+        <a href="../index.html" class="bottom-nav__item">
+          <img src="../assets/icons/home-active.svg" alt="" class="bottom-nav__icon bottom-nav__icon--active">
+          <img src="../assets/icons/home.svg" alt="" class="bottom-nav__icon bottom-nav__icon--default">
+          <span class="bottom-nav__label">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="bottom-nav__item">
+          <img src="../assets/icons/discover-active.svg" alt="" class="bottom-nav__icon bottom-nav__icon--active">
+          <img src="../assets/icons/discover.svg" alt="" class="bottom-nav__icon bottom-nav__icon--default">
+          <span class="bottom-nav__label">Discover</span>
+        </a>
+      </li>
+      <li>
+        <a href="search.html" class="bottom-nav__item">
+          <img src="../assets/icons/search-active.svg" alt="" class="bottom-nav__icon bottom-nav__icon--active">
+          <img src="../assets/icons/search.svg" alt="" class="bottom-nav__icon bottom-nav__icon--default">
+          <span class="bottom-nav__label">Search</span>
+        </a>
+      </li>
+      <li>
+        <a href="library.html" class="bottom-nav__item bottom-nav__item--active">
+          <img src="../assets/icons/library-active.svg" alt="" class="bottom-nav__icon bottom-nav__icon--active">
+          <img src="../assets/icons/mylibrary.svg" alt="" class="bottom-nav__icon bottom-nav__icon--default">
+          <span class="bottom-nav__label">Library</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="bottom-nav__item">
+          <img src="../assets/icons/me-active.svg" alt="" class="bottom-nav__icon bottom-nav__icon--active">
+          <img src="../assets/icons/me.svg" alt="" class="bottom-nav__icon bottom-nav__icon--default">
+          <span class="bottom-nav__label">Me</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+<script>
+    // ვუსმენთ ნებისმიერ კლიკს მთლიან დოკუმენტზე
+    document.addEventListener('click', function(event) {
+      const filterContainer = document.querySelector('.filter-dropdown-container');
+      const filterMenu = document.querySelector('.filter-dropdown-menu');
+
+      // If the click happened outside the filter container, hide the menu
+      if (filterContainer && !filterContainer.contains(event.target)) {
+        filterMenu.classList.remove('show');
+      }
+    });
+</script>
+
+  <!-- Player Popup (Mobile only) -->
+  <div class="player-popup">
+    <div class="player-popup__top">
+      <label for="player-popup" class="player-popup__close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </label>
+      <div class="player-popup__source">
+        <img src="../assets/icons/albums.svg" alt="">
+        <span>Random Access Memories</span>
+      </div>
+      <div></div>
+    </div>
+    <img src="../assets/images/player-main.png" class="player-popup__cover" alt="Get Lucky">
+    <div class="player-popup__info">
+      <div class="player-popup__track">
+        <span class="player-popup__title">Get Lucky</span>
+        <span class="player-popup__artist">Daft Punk</span>
+      </div>
+      <div class="player-popup__track-btns">
+        <button class="player-popup__btn"><img src="../assets/icons/heart.svg" alt=""></button>
+        <button class="player-popup__btn"><img src="../assets/icons/pc-playlist.svg" alt=""></button>
+      </div>
+    </div>
+    <div class="player-popup__progress">
+      <input type="range" class="player-popup__range" min="0" max="100" value="50">
+      <div class="player-popup__times">
+        <span>2:23</span>
+        <span>-0:45</span>
+      </div>
+    </div>
+    <div class="player-popup__controls">
+      <button class="player-popup__btn"><img src="../assets/icons/shuffle.svg" alt=""></button>
+      <button class="player-popup__btn"><img src="../assets/icons/previous-song.svg" alt=""></button>
+      <button class="player-popup__btn player-popup__btn--play"><img src="../assets/icons/Player-mobile.svg" alt=""></button>
+      <button class="player-popup__btn"><img src="../assets/icons/next-song.svg" alt=""></button>
+      <button class="player-popup__btn"><img src="../assets/icons/repeat.svg" alt=""></button>
+    </div>
+    <div class="player-popup__extras">
+      <button class="player-popup__btn"><img src="../assets/icons/speaker.svg" alt=""></button>
+      <button class="player-popup__btn"><img src="../assets/icons/upload.svg" alt=""></button>
+      <button class="player-popup__btn"><img src="../assets/icons/pc-lyrics.svg" alt=""></button>
+      <button class="player-popup__btn"><img src="../assets/icons/pc-queue.svg" alt=""></button>
+      <button class="player-popup__btn"><img src="../assets/icons/pc-playing-more.svg" alt=""></button>
+    </div>
+  </div>
+
+</body>
+</html>

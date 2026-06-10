@@ -1,0 +1,24 @@
+@use "variables" as *;
+
+  aside nav ul li a {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  width: 100%; 
+  padding: 10px;
+  color: $color-text;
+  text-decoration: none;
+  position: relative; // ensures hover works
+  z-index: 2;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $color-secondary;
+  }
+
+  &.active {
+    font-weight: bold;
+    color: $color-white;
+    background-color: $color-secondary;
+  }
+}

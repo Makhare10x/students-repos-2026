@@ -1,0 +1,98 @@
+@use '../abstract/mixins' as *;
+
+@use '../abstract/responsive' as *;
+@use '../abstract/variables' as *; 
+
+
+.about-artist-main-content {
+    @include desktop {
+        display: flex;
+        padding-top: 4rem;
+        padding-left: 4.5rem;
+        padding-right: 13.6rem;
+    }
+}
+
+
+
+
+.bage-section {
+    @include desktop {
+        margin-right: 10.4rem;
+    }
+}
+
+
+.bage {
+     @include desktop {
+        display: grid;
+        grid-template: 1fr / 1fr;
+        width: min-content;
+        color: $font-fg-primary;
+        
+        img, h2, span {
+            grid-area: 1/1;
+        }
+        img {
+            width: 13.2rem;
+        }
+        h2 {
+            z-index: 100;
+            align-self: center; 
+            justify-self: center;
+            font-size: 3.002rem;
+            transform: translateY(-1.5rem);
+            font-weight: 700;
+        }
+        span {
+            z-index: 100;
+            align-self: center; 
+            justify-self: center;
+            font-size: 1.413rem;
+            transform: translateY(1.5rem);
+            font-weight: 700;
+        }
+    }
+}
+
+
+.article {
+     @include desktop {
+        font-size: 1.6rem;
+        color: $font-fg-primary;
+        margin-right: 15.3rem;
+        line-height: 175%;
+    }
+}
+
+
+.about-artist-stats {
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.3rem;
+        
+
+        h2,h3 {
+            color: $font-fg-primary;
+        }
+        h2 {
+            font-size: 3.002rem;
+            font-weight: 700;
+        }
+        h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+        p {
+            font-size: 1.413rem;
+            font-weight: 400;
+            color: $font-fg-secondary;
+        }
+
+        p,h2,h3 {
+            line-height: 175%;
+        }
+    }
+    
+}

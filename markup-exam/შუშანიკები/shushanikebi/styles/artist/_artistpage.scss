@@ -1,0 +1,284 @@
+@use "../abstracts/default" as d;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.artist-hero {
+  position: relative;
+  height: 426px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  border-top-left-radius: v.$radius-lg;
+  border-top-right-radius: v.$radius-lg;
+}
+
+/* Overlay */
+.artist-hero__overlay {
+  position: absolute;
+  border-radius: inherit;
+  inset: 0;
+}
+
+.artist-hero__overlay img {
+  object-fit: cover;
+}
+
+/* Content */
+.artist-hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding: 3.5rem;
+}
+
+/* Text */
+.artist-hero__name {
+  font-size: 5rem;
+  font-weight: 900;
+  color: v.$color-text-primary;
+  margin-bottom: 2rem;
+}
+
+.artist-hero__listeners {
+  font-size: v.$text-sm;
+  color: v.$color-text-primary;
+}
+
+/* Actions */
+.artist-hero__actions {
+  @include m.flex-align(1.4rem);
+}
+
+/* Base button */
+.btn {
+  @include m.btn-reset;
+}
+
+/* Play */
+.btn--play {
+  width: 40px;
+}
+
+/* Follow */
+.btn--follow {
+  padding: 1rem 2rem;
+  background-color: rgba(137, 137, 137, 0.25);
+  border-radius: 2rem;
+  color: v.$color-text-primary;
+  font-size: v.$text-sm;
+}
+
+/* Icon buttons */
+.btn--icon {
+  width: 40px;
+  height: 40px;
+  @include m.flex-center;
+}
+
+.btn--icon img {
+  @include m.icon-hover;
+}
+
+.main-content--no-padding {
+  padding: 0;
+}
+
+/* nav starts here */
+.artist-nav {
+  @include m.flex-between;
+  padding: 2rem 4.6rem;
+  border-bottom: 0.1rem solid v.$color-border;
+}
+
+/* List */
+.artist-nav__list {
+  @include m.flex-align(5rem);
+  list-style: none;
+}
+
+/* Buttons */
+.artist-nav__btn {
+  @include m.btn-reset;
+  font-size: v.$text-sm;
+  color: v.$color-text-secondary;
+  transition: color v.$transition-base;
+  position: relative;
+}
+
+.artist-nav__btn:hover,
+.artist-nav__btn--active {
+  color: v.$color-text-primary;
+}
+
+.artist-nav__btn--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -22px;
+  width: 100%;
+  height: 2px;
+  background: v.$color-accent-green;
+  border-radius: 2px;
+}
+
+/* Search */
+.artist-nav__search {
+  @include m.btn-reset;
+}
+
+.artist-nav__search img {
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.artist-nav__search:hover img {
+  opacity: 1;
+}
+
+/* main content */
+.artist-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  padding: 4rem 2.5rem;
+}
+
+/* main left content */
+.artist-section {
+  @include m.flex-column(2rem);
+  margin-bottom: 5rem;
+}
+
+.track-item__info {
+  @include m.flex-align(1.2rem);
+  cursor: pointer;
+}
+
+.artist-section__title {
+  font-weight: 700;
+  font-size: v.$text-lg;
+  color: v.$color-text-primary;
+}
+
+.track-list {
+  list-style: none;
+  @include m.flex-column(0.5rem);
+}
+
+.track-item {
+  display: grid;
+  grid-template-columns: 40px 600px 70px 40px;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 0;
+}
+
+.track-item__index,
+.track-item__artist,
+.track-item__duration,
+.track-item__streams {
+  color: v.$color-text-secondary;
+  font-size: v.$text-sm;
+}
+
+.track-item__info img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.track-item__title {
+  font-size: v.$text-md;
+  color: v.$color-text-primary;
+}
+
+.track-item__like {
+  @include m.btn-reset;
+}
+
+.track-item__like img {
+  opacity: 0.7;
+  transition: opacity v.$transition-base;
+}
+
+.track-item__like:hover img {
+  opacity: 1;
+}
+
+/* main right content */
+
+.artist-main__right {
+  width: 25%;
+  @include m.flex-column(3rem);
+}
+
+/* Artist Pick */
+.artist-pick {
+  @include m.flex-column(2rem);
+}
+
+.artist-pick__title {
+  font-weight: 700;
+  font-size: v.$text-lg;
+  color: v.$color-text-primary;
+}
+
+.artist-pick__card {
+  display: flex;
+  gap: 1.3rem;
+  padding: 1.3rem;
+  background: rgba(24, 25, 30, 0.3);
+  border-radius: v.$radius-lg;
+}
+
+.artist-pick__cover {
+  width: 120px;
+  object-fit: cover;
+}
+
+.artist-pick__text {
+  font-size: v.$text-md;
+  color: v.$color-text-primary;
+}
+
+/* Sidebar Image */
+.artist-sidebar__image img {
+  @include m.image-cover;
+  border-radius: v.$radius-sm;
+}
+
+/* Bio */
+.artist-bio__text {
+  font-size: v.$text-md;
+  color: v.$color-text-primary;
+}
+
+/* Tags */
+.artist-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.artist-tag {
+  border: 2px solid rgba(v.$color-text-secondary, 0.25);
+  font-size: v.$text-sm;
+  color: v.$color-text-secondary;
+  transition: all v.$transition-base;
+  padding: 1rem 2rem;
+  border-radius: 4.4rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.artist-tag:hover {
+  color: v.$color-text-primary;
+  border-color: v.$color-bg-secondary;
+}
+
+.artist-active {
+  background-color: v.$color-bg-hover;
+}

@@ -1,0 +1,104 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.header-nav {
+    width: 100%;
+    @include mixins.fixed-layout();
+    padding: 1.5rem;
+    background: linear-gradient(180deg, rgba(17, 17, 17, 0.85) 0%, #111111 42.62%);
+    backdrop-filter: blur(0.3rem);
+    .nav-phone {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;      
+        padding-inline: 1rem;
+        height: 9.5rem;
+    }
+        .nav-item {
+            @include mixins.flex-col-center;
+            color: variables.$header-text;
+            @include mixins.icon-hover;
+            transition: background-color 0.2s ease;
+            padding: 1.7rem;
+            justify-content: space-between;
+            &:hover {
+                background-color: variables.$button-inactive;
+                border-radius: 0.8rem;
+            }   
+        }
+        .nav-icon {
+            width: 2.4rem;
+            height: 2.4rem;
+            margin-bottom: 1.1rem;
+        }
+        .nav-title {
+            font-family: Satoshi;
+            font-weight: 400;
+            font-size: variables.$small-text;
+            line-height: 100%;
+            letter-spacing: 3%;
+            color: variables.$header-text;
+        }
+    }
+    .header-actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1.3rem;
+        // display: none;
+        .action-item { 
+            display: flex;          
+            // width: 2.4rem;
+            // height: 2.4rem;
+            @include mixins.icon-hover;
+            img {
+                width: 100%
+            }          
+        }
+
+        #open-friends {
+            border: none;
+            background-color: transparent;
+        }
+    }
+@media (max-width: 60rem) {
+    .header-actions,
+    .action-item {
+        display: none;
+    }
+}
+@media (min-width: 60rem) {
+    .header-nav {
+        position: fixed;
+        width: calc(100vw - 25.9rem);
+        left: 25.9rem;
+        height: 6.4rem;
+        padding: 0 1rem;
+        top: 0;
+    .nav-phone {
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 3rem;
+    }
+    .nav-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        padding: 1rem;
+    }    
+        .library,
+        .nav-title .library {
+            display: none;
+        }
+        .person, 
+        .nav-title .person {
+            display: none;
+        }
+        .nav-icon {
+            margin-bottom: 0;
+        }
+    }
+}

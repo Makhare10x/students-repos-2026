@@ -1,0 +1,133 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+
+.header-nav-bar{
+    display: none;
+}
+.nav-wrapper{ 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 9.5rem;
+    @include flex-center(null);
+    background: $nav-bg;
+    z-index: 1000; 
+}
+
+.nav-bar{
+    @include flex-center(3.1rem);
+    justify-content: center;
+    width: 100%;
+    
+}
+.nav-item{
+    @include flex-center(0.5rem);
+    flex-direction: column;
+    
+    img{
+        width: 2rem;
+        height: 2rem;
+        
+    }
+    span{
+        font-size: 1.2rem;
+        color: $text-color;
+        letter-spacing: 3%;
+    }
+    
+}
+.nav-link {
+    background: transparent;
+}
+.nav-link.filter {
+        img, span {
+            filter: invert(61%) sepia(53%) 
+                    saturate(3025%) hue-rotate(104deg) 
+                    brightness(96%) contrast(90%);
+        }
+    }
+
+// tablet
+@media (min-width: 600px) {
+    .header-nav-bar{
+        display: none;
+    }
+}
+// desktop
+@media (min-width: 1024px) {
+    .nav-bar, .nav-wrapper{
+        display: none;
+    }
+    header{
+        grid-area: header;
+        width: 100%;
+        padding: 0.5rem;
+    }
+    .header-nav-bar{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .header-nav-item, .header-nav-item-mid{
+        display: flex;
+        flex-direction: row;
+        padding: 0rem 2rem ;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.4rem;
+        width: 21rem;
+        font-family: $satoshi;
+        cursor: pointer;
+    }
+    .header-nav-mid-section{
+        display: flex;
+        gap:1rem;
+        align-items: center;
+    }
+    .header-nav-item-mid{
+        width: 21rem;
+    }
+    .header-nav-link, .header-nav-link-mid {
+        display: flex;
+        align-items: center;
+        height: 100%; 
+        text-decoration: none;
+        border-radius: 0.8rem;
+        padding: 1rem;
+        transition: filter 0.3s linear;
+        &:hover {
+            filter: invert(61%) sepia(53%) 
+                        saturate(3025%) hue-rotate(104deg) 
+                        brightness(96%) contrast(90%);
+        }
+    }
+    .profile-container{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        padding-right: 0.5rem;
+    }
+    .profile-item{
+        max-width: 4rem;
+        width: 100%;
+    }
+    .profile.link{
+        display: block;
+        width: 100%;
+    }
+    .profile-link:hover{
+        filter: invert(61%) sepia(53%) 
+                saturate(3025%) hue-rotate(104deg) 
+                brightness(96%) contrast(90%);
+    }
+    .profile-container {
+        .profile-link:last-child:hover {
+            filter: none;
+        }
+    }
+}
+

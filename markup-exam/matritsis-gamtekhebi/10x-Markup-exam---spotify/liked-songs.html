@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liked Songs</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body class="inner-page">
+    <div class="page-wrapper">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <ul class="sidebar-list">
+            <li class="sidebar-item">
+              <a href="library.html">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Library.png"
+                  alt=""
+                />
+                <span>My Library</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="#">
+                <img class="sidebar-icon" src="./assets/icons/Pin.png" alt="" />
+                <span>Pins</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="#">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Playlist.png"
+                  alt=""
+                />
+                <span>Playlists</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="liked-songs.html" class="active">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Like.png"
+                  alt=""
+                />
+                <span>Liked Songs</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="#">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Save.png"
+                  alt=""
+                />
+                <span>Saves</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="#">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Album.png"
+                  alt=""
+                />
+                <span>Albums</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="#">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Folder.png"
+                  alt=""
+                />
+                <span>Folders</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="#">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Podcast.png"
+                  alt=""
+                />
+                <span>Podcasts</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="#">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Audiobook.png"
+                  alt=""
+                />
+                <span>Audiobooks</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="#">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Artist.png"
+                  alt=""
+                />
+                <span>Artists</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- HEADER -->
+      <header class="site-header">
+        <nav class="header-content">
+          <a href="index.html" class="nav-items" id="inactive-background">
+            <img src="./assets/icons/home-gray.png" alt="Home icon" />
+            <span>Home</span>
+          </a>
+          <a href="#" class="nav-items">
+            <img src="./assets/icons/discovery.png" alt="Discover icon" />
+            <span>Discover</span>
+          </a>
+          <a href="search.html" class="nav-items">
+            <img src="./assets/icons/search.png" alt="Search icon" />
+            <span>Search</span>
+          </a>
+        </nav>
+
+        <div class="header-actions">
+          <img src="./assets/icons/notification.png" alt="Notification icon" />
+          <img src="./assets/icons/lock.png" alt="lock icon" />
+          <button class="contact-btn turn-white-btn">
+            <img src="./assets/icons/contacts.png" alt="friends icon" />
+          </button>
+          <img src="./assets/icons/settings.png" alt="settings icon" />
+          <img src="./assets/icons/profile.png" alt="user profile icon" />
+        </div>
+      </header>
+
+      <!-- RIGHT TOGGLED BAR -->
+      <aside class="toggledbar">
+        <div class="friends-activity">
+          <h3>Friends Activity</h3>
+          <div class="toggled-right">
+            <img
+              src="./assets/icons/Name=Add Friend, Filled=No.png"
+              alt="add friend icon"
+            />
+            <img
+              src="./assets/icons/Name=Close, Filled=No.png"
+              alt="close icon"
+            />
+          </div>
+        </div>
+        <div class="friends-list">
+          <div class="friends-listening">
+            <img
+              src="./assets/icons/friend4.png"
+              class="logo"
+              alt="friend profile picture"
+            />
+            <div class="friends-info">
+              <h5>FriendlyMusicListener</h5>
+              <div class="friends-playlist">
+                <img src="./assets/icons/Vector.png" alt="icon" />
+                <span><strong>Goosebumps</strong></span>
+                <img src="./assets/icons/Ellipse 27.png" alt="dot" />
+                <span><strong>Travis Scott</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="friends-listening">
+            <img
+              src="./assets/icons/friend1.png"
+              class="logo"
+              alt="friend profile picture"
+            />
+            <div class="friends-info">
+              <h5>AverageMusicEnjoyer</h5>
+              <div class="friends-playlist">
+                <img src="./assets/icons/Vector.png" alt="icon" />
+                <span><strong>Get Lucky</strong></span>
+                <img src="./assets/icons/Ellipse 27.png" alt="dot" />
+                <span><strong>Daft Punk</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="friends-listening">
+            <img
+              src="./assets/icons/friend2.png"
+              class="logo"
+              alt="friend profile picture"
+            />
+            <div class="friends-info">
+              <h5>MusicEnthusiast</h5>
+              <div class="friends-playlist">
+                <span>1h</span>
+                <span><strong>would he</strong></span>
+                <img src="./assets/icons/Ellipse 27.png" alt="dot" />
+                <span><strong>joji</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="friends-listening">
+            <img
+              src="./assets/icons/friend3.png"
+              class="logo"
+              alt="friend profile picture"
+            />
+            <div class="friends-info">
+              <h5>FriendlyMusicListener</h5>
+              <div class="friends-playlist">
+                <span>6h</span>
+                <span><strong>Rockstar</strong></span>
+                <img src="./assets/icons/Ellipse 27.png" alt="dot" />
+                <span><strong>Post Malone</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content liked-main-content">
+        <section class="liked-songs">
+<div class="liked-songs__topbar">
+  <button class="liked-songs__add-btn" aria-label="Add song">+</button>
+
+  <div class="liked-songs__topbar-actions">
+    <button class="liked-songs__icon-btn" aria-label="List view">
+      <img src="./assets/icons/Name=List, Filled=No.png" alt="list view" />
+    </button>
+
+    <button class="liked-songs__icon-btn" aria-label="Grid view">
+      <img src="./assets/icons/Name=Grid, Filled=No.png" alt="grid view" />
+    </button>
+
+    
+  <button class="liked-songs__filter-btn">
+    <img src="./assets/icons/sort.png" alt="sort icon" />
+    <span>Recent</span>
+  </button>
+
+      <button class="liked-songs__filter-btn">
+    <img src="./assets/icons/Filter2.png" alt="filter icon" />
+    <span>Filter: All</span>
+  </button>
+
+    <button class="liked-songs__icon-btn" aria-label="Search">
+      <img src="./assets/icons/search.png" alt="search" />
+    </button>
+  </div>
+</div>
+
+          <div class="liked-songs__table">
+            <div class="liked-songs__head">
+              <span class="liked-songs__col liked-songs__col--index">#</span>
+              <span class="liked-songs__col liked-songs__col--title">Title</span>
+              <span class="liked-songs__col liked-songs__col--album">Album</span>
+              <span class="liked-songs__col liked-songs__col--duration">Duration</span>
+            </div>
+
+            <div class="liked-songs__body">
+              <div class="liked-songs__row">
+                <span class="liked-songs__index">1</span>
+
+                <div class="liked-songs__track">
+                  <img
+                    src="./assets/images/daftpankxxs.png"
+                    alt="Get Lucky cover"
+                    class="liked-songs__cover"
+                  />
+                  <div class="liked-songs__track-info">
+                    <p class="liked-songs__track-title">Get Lucky</p>
+                    <p class="liked-songs__track-artist">Daft Punk</p>
+                  </div>
+                </div>
+
+                <p class="liked-songs__album-name">Random Access Memories</p>
+
+                <div class="liked-songs__meta">
+                  <span class="liked-songs__time">4:35</span>
+                  <button class="liked-songs__like active" aria-label="liked">
+                    <img src="./assets/icons/greenheart.png" alt="liked" />
+                  </button>
+                </div>
+              </div>
+
+              <div class="liked-songs__row">
+                <span class="liked-songs__index">2</span>
+
+                <div class="liked-songs__track">
+                  <img
+                    src="./assets/images/daftpankxxs.png"
+                    alt="Instant Crush cover"
+                    class="liked-songs__cover"
+                  />
+                  <div class="liked-songs__track-info">
+                    <p class="liked-songs__track-title">Instant Crush</p>
+                    <p class="liked-songs__track-artist">
+                      Daft Punk, Julian Casablancas
+                    </p>
+                  </div>
+                </div>
+
+                <p class="liked-songs__album-name">Random Access Memories</p>
+
+                <div class="liked-songs__meta">
+                  <span class="liked-songs__time">5:37</span>
+                  <button class="liked-songs__like active" aria-label="liked">
+                     <img src="./assets/icons/greenheart.png" alt="liked" />
+                  </button>
+                </div>
+              </div>
+
+              <div class="liked-songs__row">
+                <span class="liked-songs__index">3</span>
+
+                <div class="liked-songs__track">
+                  <img
+                    src="./assets/images/melancholy.png"
+                    alt="On Melancholy Hill cover"
+                    class="liked-songs__cover"
+                  />
+                  <div class="liked-songs__track-info">
+                    <p class="liked-songs__track-title">On Melancholy Hill</p>
+                    <p class="liked-songs__track-artist">Gorillaz</p>
+                  </div>
+                </div>
+
+                <p class="liked-songs__album-name">Plastic Beach</p>
+
+                <div class="liked-songs__meta">
+                  <span class="liked-songs__time">3:53</span>
+                  <button class="liked-songs__like active" aria-label="liked">
+                    <img src="./assets/icons/greenheart.png" alt="liked" />
+                  </button>
+                </div>
+              </div>
+
+              <div class="liked-songs__row">
+                <span class="liked-songs__index">4</span>
+
+                <div class="liked-songs__track">
+                  <img
+                    src="./assets/images/taintedlove.png"
+                    alt="Tainted Love cover"
+                    class="liked-songs__cover"
+                  />
+                  <div class="liked-songs__track-info">
+                    <p class="liked-songs__track-title">Tainted Love</p>
+                    <p class="liked-songs__track-artist">Soft Cell</p>
+                  </div>
+                </div>
+
+                <p class="liked-songs__album-name">Non-Stop Erotic Cabaret</p>
+
+                <div class="liked-songs__meta">
+                  <span class="liked-songs__time">2:33</span>
+                  <button class="liked-songs__like active" aria-label="liked">
+                    <img src="./assets/icons/greenheart.png" alt="liked" />
+                  </button>
+                </div>
+              </div>
+
+              <div class="liked-songs__row">
+                <span class="liked-songs__index">5</span>
+
+                <div class="liked-songs__track">
+                  <img
+                    src="./assets/images/onemore.png"
+                    alt="One More Time cover"
+                    class="liked-songs__cover"
+                  />
+                  <div class="liked-songs__track-info">
+                    <p class="liked-songs__track-title">One More Time</p>
+                    <p class="liked-songs__track-artist">Daft Punk</p>
+                  </div>
+                </div>
+
+                <p class="liked-songs__album-name">Discovery</p>
+
+                <div class="liked-songs__meta">
+                  <span class="liked-songs__time">5:20</span>
+                  <button class="liked-songs__like active" aria-label="liked">
+                    <img src="./assets/icons/greenheart.png" alt="liked" />
+                  </button>
+                </div>
+              </div>
+
+              <div class="liked-songs__row">
+                <span class="liked-songs__index">6</span>
+
+                <div class="liked-songs__track">
+                  <img
+                    src="./assets/images/electriclove.png"
+                    alt="Electric Feel cover"
+                    class="liked-songs__cover"
+                  />
+                  <div class="liked-songs__track-info">
+                    <p class="liked-songs__track-title">Electric Feel</p>
+                    <p class="liked-songs__track-artist">MGMT</p>
+                  </div>
+                </div>
+
+                <p class="liked-songs__album-name">Oracular Spectacular</p>
+
+                <div class="liked-songs__meta">
+                  <span class="liked-songs__time">3:49</span>
+                  <button class="liked-songs__like active" aria-label="liked">
+                    <img src="./assets/icons/greenheart.png" alt="liked" />
+                  </button>
+                </div>
+              </div>
+
+              <div class="liked-songs__row">
+                <span class="liked-songs__index">7</span>
+
+                <div class="liked-songs__track">
+                  <img
+                    src="./assets/images/daftpankxxs.png"
+                    alt="Give Life Back to Music cover"
+                    class="liked-songs__cover"
+                  />
+                  <div class="liked-songs__track-info">
+                    <p class="liked-songs__track-title">Give Life Back to Music</p>
+                    <p class="liked-songs__track-artist">Daft Punk</p>
+                  </div>
+                </div>
+
+                <p class="liked-songs__album-name">Random Access Memories</p>
+
+                <div class="liked-songs__meta">
+                  <span class="liked-songs__time">4:35</span>
+                  <button class="liked-songs__like active" aria-label="liked">
+                    <img src="./assets/icons/greenheart.png" alt="liked" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- MOBILE MINI PLAYER -->
+      <section class="mobile-player">
+        <div class="mobile-player__track">
+          <img
+            class="mobile-player__cover"
+            src="./assets/images/daftpankxxs.png"
+            alt="Get Lucky cover"
+          />
+          <div class="mobile-player__info">
+            <h4>Get Lucky (feat. Pharrell Williams...)</h4>
+            <p>Daft Punk</p>
+          </div>
+        </div>
+
+        <div class="mobile-player__actions">
+          <button class="mobile-player__btn" aria-label="Add to library">
+            <img
+              src="./assets/icons/Name=Add to Playlist, Filled=No.png"
+              alt="Add icon"
+            />
+          </button>
+
+          <button class="mobile-player__btn" aria-label="Play track">
+            <img
+              src="./assets/icons/Name=Play Simple, Filled=No.png"
+              alt="Play icon"
+            />
+          </button>
+        </div>
+
+        <div class="mobile-player__progress"></div>
+      </section>
+
+      <!-- MOBILE BOTTOM NAV -->
+      <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+        <a href="index.html" class="mobile-bottom-nav__item">
+          <img
+            src="./assets/icons/Name=Home, Filled=Yes (1).png"
+            alt="Home icon"
+          />
+          <span>Home</span>
+        </a>
+
+        <a href="#" class="mobile-bottom-nav__item">
+          <img src="./assets/icons/discovery.png" alt="Discover icon" />
+          <span>Discover</span>
+        </a>
+
+        <a href="search.html" class="mobile-bottom-nav__item">
+          <img src="./assets/icons/search.png" alt="Search icon" />
+          <span>Search</span>
+        </a>
+
+        <a href="#" class="mobile-bottom-nav__item">
+          <img src="./assets/icons/Library.png" alt="Library icon" />
+          <span>Library</span>
+        </a>
+
+        <a href="#" class="mobile-bottom-nav__item">
+          <img
+            src="./assets/icons/Name=User, Filled=No.png"
+            alt="Profile icon"
+          />
+          <span>Me</span>
+        </a>
+      </nav>
+
+      <!-- FOOTER PLAYER -->
+      <footer class="player">
+        <div class="player-left">
+          <button class="play-btn">
+            <img src="./assets/icons/pause.png" alt="play" />
+          </button>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/prev.left.png" alt="prev" />
+          </button>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/prev.right.png" alt="next" />
+          </button>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/shuffle.png" alt="shuffle" />
+          </button>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/repeat.png" alt="repeat" />
+          </button>
+
+          <span class="time">2:23</span>
+
+          <div class="progress">
+            <div class="progress-fill"></div>
+          </div>
+
+          <span class="time">4:45</span>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/volume.png" alt="volume" />
+          </button>
+        </div>
+
+        <div class="player-song">
+          <img class="song-cover" src="./assets/icons/image.png" alt="cover" />
+
+          <div class="song-info">
+            <h4>Get Lucky</h4>
+            <p>Daft Punk</p>
+            <span>Random Access Memories</span>
+          </div>
+        </div>
+
+        <div class="player-right">
+          <button class="icon-btn">
+            <img src="./assets/icons/like.png" alt="heart" />
+          </button>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/add.png" alt="add" />
+          </button>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/queue.png" alt="queue" />
+          </button>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/device.png" alt="device" />
+          </button>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/more.png" alt="more" />
+          </button>
+
+          <div class="divider"></div>
+
+          <button class="blue-btn">
+            <img src="./assets/icons/blue.png" alt="blue" />
+          </button>
+
+          <button class="icon-btn">
+            <img src="./assets/icons/menu.png" alt="menu" />
+          </button>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const contactBtn = document.querySelector(".contact-btn");
+      const toggledBar = document.querySelector(".toggledbar");
+      const closeBtn = document.querySelector(
+        ".toggled-right img:nth-child(2)",
+      );
+      const turnWhiteBtn = document.querySelector(".turn-white-btn");
+
+      contactBtn.addEventListener("click", () => {
+        toggledBar.classList.toggle("toggledbar--active");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        toggledBar.classList.remove("toggledbar--active");
+      });
+
+      turnWhiteBtn.addEventListener("click", () => {
+        if (turnWhiteBtn.style.filter === "brightness(0) invert(1)") {
+          turnWhiteBtn.style.filter = "none";
+        } else {
+          turnWhiteBtn.style.filter = "brightness(0) invert(1)";
+        }
+      });
+    </script>
+  </body>
+</html>

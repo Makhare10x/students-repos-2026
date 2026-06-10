@@ -1,0 +1,302 @@
+@use "../layout/pageLayout";
+// @use "../layout/header";
+// @use "../layout/sideNavbar";
+// @use "../layout/sidePopup";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+// @use "../abstracts/placeholders";
+// @use "../components/cardMain";
+
+@media (min-width: 768px) {
+  .hero-section {
+    z-index: 1;
+    position: sticky;
+    @include mixins.flex-prop($justify: space-between, $align: flex-end);
+    max-width: 100%;
+    height: 50%;
+    position: sticky;
+    top: 0;
+    width: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, #000 -15%, transparent 90%);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+      object-position: center 20%;
+      top: 0rem;
+    }
+
+    .hero-heading {
+      @include mixins.flex-prop(2rem, $direction: column);
+      color: variables.$color-active-desk;
+      z-index: 2;
+      margin: 0 0 3.4rem 3.7rem;
+
+      h1 {
+        font-size: 5rem;
+        font-weight: 900;
+      }
+    }
+
+    .hero-nav {
+      @include mixins.flex-prop(1.4rem);
+      z-index: 2;
+      margin: 0 3.4rem 3.3rem 0;
+
+      .follow-btn {
+        color: variables.$color-active-desk;
+        transition: 0.3s ease;
+        padding: 1rem 2.5rem;
+
+        &:hover {
+          color: white;
+          background-color: rgba(137, 137, 137, 25%);
+          border-radius: 4.4rem;
+        }
+      }
+
+      .play-btn {
+        @include mixins.flex-prop($align: center, $justify: center);
+        width: 3.8rem;
+        height: 3.8rem;
+        border: none;
+        border-radius: 50%;
+        background-color: #1ed760;
+
+        svg {
+          margin-left: 0.3rem;
+        }
+      }
+    }
+  }
+  .artist-home {
+    position: relative;
+    .main-nav {
+      width: 100%;
+      top: 50%;
+      position: sticky;
+      background: #060606;
+
+      border-bottom: 0.1rem solid #646464bd;
+      padding: 1rem 0 1rem 4.6rem;
+      .navigation {
+        @include mixins.flex-prop(5rem, $align: center, $direction: row);
+        font-size: 1.4rem;
+
+        svg {
+          width: 4rem;
+          height: 4rem;
+        }
+
+        li {
+          position: relative;
+          a {
+            display: inline-block;
+            text-decoration: none;
+            color: #898989;
+            font-size: 1.4rem;
+            font-weight: 700;
+            padding: 1.5rem 0;
+            border-bottom: 0.3rem solid transparent;
+            margin-bottom: -0.1rem;
+            transition:
+              color 0.4s,
+              border-color 0.2s;
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -1.1rem;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 0;
+              height: 2px;
+              background: #1ed760;
+              transition: width 0.3s;
+            }
+
+            &:hover::after,
+            &.active::after {
+              width: 100%;
+              box-shadow:
+                0 0 6px #1ed760,
+                0 0 14px #1ed760,
+                0 0 30px #1ed760;
+            }
+          }
+        }
+
+        .searchbox {
+          @include mixins.flex-prop(1rem, $direction: row-reverse);
+
+          input {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .most-played,
+    .popular-played {
+      padding: 4rem 0 4rem 2.5rem;
+      h2 {
+        margin-bottom: 1rem;
+        color: variables.$color-active-desk;
+        font-size: 2rem;
+      }
+    }
+
+    .main-content-wrapper {
+      @include mixins.flex-prop($justify: space-between);
+      padding: 4rem 3.8rem 0 4rem;
+
+      .artist-pick-wrapper {
+        @include mixins.flex-prop(3rem, $direction: column);
+        margin-top: 4rem;
+        width: 32rem;
+        flex-shrink: 0;
+        padding-right: 1.5rem;
+
+        .tags {
+          @include mixins.flex-prop(1rem);
+          flex-wrap: wrap;
+          span {
+            padding: 1rem 2rem;
+            border: 2px solid #535252;
+            border-radius: 4.4rem;
+          }
+        }
+
+        img {
+        }
+
+        h3 {
+          font-size: 2rem;
+          color: variables.$color-active-desk;
+        }
+        .top-card {
+          @include mixins.flex-prop($gap: 0.3rem, $align: center);
+          padding: 8px;
+          border-radius: 8px;
+          background-color: #18191e;
+          gap: 1.2rem;
+          .img-container {
+            width: 12rem;
+            aspect-ratio: 1/1;
+            flex-shrink: 0;
+            img {
+              @include mixins.imageShaper;
+            }
+          }
+
+          .text-container {
+            @include mixins.flex-prop($direction: column, $justify: center);
+            overflow: hidden;
+            margin-bottom: 6rem;
+            font-size: 1.4rem;
+            color: variables.$color-active-desk;
+
+            h3 {
+              color: variables.$color-active-desk;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; // adds ... if  title is too long
+            }
+            p {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+
+        .description {
+          font-size: 1.6rem;
+          color: variables.$color-active-desk;
+        }
+      }
+    }
+  }
+
+  // *card styles =======================
+
+  .tracklist {
+    width: 100%;
+    min-width: 80rem;
+
+    &-table {
+      width: 100%;
+      border-collapse: collapse;
+
+      thead {
+        display: none;
+        th {
+          text-align: left;
+          padding: 10px;
+          padding-bottom: 1.2rem;
+        }
+      }
+      tbody {
+        .track {
+          transition: all 0.15s ease;
+          &:hover {
+            background: variables.$bg-secondary-dark;
+          }
+          td {
+            padding: 10px;
+            vertical-align: middle;
+          }
+
+          &-index {
+            width: 30px;
+          }
+
+          /* title cell track details */
+          &-title-cell {
+            a {
+              @include mixins.flex-prop(
+                0.5rem,
+                $direction: row,
+                $align: center
+              );
+            }
+          }
+          &-cover {
+            width: 5.1rem;
+            height: 5.1rem;
+            object-fit: cover;
+            border-radius: 4px;
+          }
+          &-meta {
+            display: flex;
+            flex-direction: column;
+          }
+          &-name {
+            color: variables.$color-active-desk;
+          }
+
+          /*likes*/
+          &-like {
+            @include mixins.interactiveIcon(
+              $hoverColor: #1ed760,
+              $activeColor: #1ed760
+            );
+            text-align: center;
+          }
+          .track-album {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

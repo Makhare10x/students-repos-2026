@@ -1,0 +1,132 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables" as v;
+
+.circle-dot {
+  width: 3px;
+  height: 3px;
+  background-color: #898989;
+  border-radius: 50%;
+}
+
+.song-info-suggestion {
+  @include mixins.flex-row;
+  align-items: flex-start;
+  padding: 3.7rem;
+  gap: 6rem;
+}
+
+.info {
+  @include mixins.flex-column-start;
+  gap: 1rem;
+  .music-title {
+    h1 {
+      color: v.$main-title-color;
+      font-size: 3.6rem;
+      width: 80%;
+      letter-spacing: 0.03em;
+    }
+  }
+  .music-release-info {
+    @include mixins.flex-between;
+    gap: 1rem;
+    color: v.$muted-text;
+  }
+  .control-play {
+    img {
+      cursor: pointer;
+    }
+    @include mixins.flex-between;
+    gap: 1rem;
+  }
+  .music-style {
+    @include mixins.flex-between;
+    gap: 1rem;
+    color: v.$muted-text;
+    p {
+      border: 2px solid #89898940;
+      border-radius: 4.4rem;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      width: max-content;
+      text-align: center;
+
+      font-size: 140%;
+    }
+  }
+}
+
+.feat-artists {
+  @include mixins.flex-column-start;
+  gap: 1.5rem;
+  .feat-artist {
+    @include mixins.flex-row;
+    gap: 2rem;
+    .name-role {
+      h2 {
+        cursor: pointer;
+        color: v.$main-title-color;
+      }
+      h3 {
+        margin-top: 1rem;
+        color: v.$muted-text;
+      }
+    }
+  }
+}
+.home-content {
+  position: relative;
+
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 17, 21, 0.88),
+    rgba(26, 31, 39, 0.82),
+    rgba(13, 16, 22, 0.9)
+  );
+  background-color: #8a9dbb2e !important;
+}
+
+.lyrics {
+  padding: 0 2rem 2rem 4rem;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #89898933;
+  width: 100%;
+  .nav-list {
+    @include mixins.flex-row;
+    gap: 5rem;
+    color: v.$muted-text;
+    .opened {
+      color: v.$main-title-color;
+      position: relative;
+    }
+    .opened::after {
+      content: "";
+      position: absolute;
+      width: 5rem;
+      height: 0.2rem;
+      background-color: #1ed760;
+      bottom: -2rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+// nav-control-list
+.lyrics-control {
+  padding: 0 2rem 2rem 2rem;
+  @include mixins.flex-row;
+  gap: 25rem;
+}
+.nav-control-list {
+  @include mixins.flex-column-start;
+  gap: 2rem;
+}
+
+.lyrics-text {
+  @include mixins.flex-column-start;
+  gap: 2rem;
+  color: v.$main-title-color;
+  font-size: 2.8rem;
+  font-weight: 700;
+}

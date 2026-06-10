@@ -1,0 +1,29 @@
+@use '../abstract/variables' as v;
+
+body {
+    background-color: v.$primary-color; 
+    color: v.$primary-text-color; 
+    font-family: 'Satoshi';
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, li{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: inherit;
+    font-family: inherit;
+}

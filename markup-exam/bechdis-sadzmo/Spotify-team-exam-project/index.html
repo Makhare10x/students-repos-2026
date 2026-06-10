@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - exam group project</title>
+    <link rel="stylesheet" href="/assets/fonts/fonts.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+    <!-- Khatia -->
+    <!-- desctop header -->
+    <header class="header">
+        <!-- TOP NAVIGATION -->
+        <nav class="header-nav">
+            <ul class="nav-list">
+                <li class="nav-item library-list-active">
+                    <a href="#">
+                        <img src="assets/icons/home.svg" alt="Homeicon" />
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="discover" href="discover.html">
+                        <img src="assets/icons/discover.svg" alt="Discovericon" />
+                        <span>Discover</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#">
+                        <img src="assets/icons/search.svg" alt="Search icon" />
+                        <span>Search</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- RIGHT SIDE HEADER ICONS -->
+        <div class="header-actions">
+            <button class="icon-btn">
+                <img src="assets/icons/bell.svg" alt="Notifications" />
+            </button>
+
+            <button class="icon-btn">
+                <img src="assets/icons/lock.svg" alt="Security" />
+            </button>
+
+            <button class="icon-btn">
+                <img src="assets/icons/users.svg" alt="Users" />
+            </button>
+
+            <button class="icon-btn">
+                <img src="assets/icons/settings.svg" alt="Settings" />
+            </button>
+
+            <button class="icon-btn avatar-btn">
+                <img src="assets/icons/Sprite-0002 1.svg" alt="Profile" />
+            </button>
+        </div>
+    </header>
+
+    <!-- responsive-nav -->
+    <section class="responsive-nav">
+        <div>
+            <a href="#">
+                <img src="assets/icons/home-responsive.svg" alt="home-responsive" />
+            </a>
+            <p>Home</p>
+        </div>
+        <div>
+            <a href="#">
+                <img src="assets/icons/discover-responsive.svg" alt="discover-responsive" />
+            </a>
+            <p>Discover</p>
+        </div>
+        <div>
+            <a href="#">
+                <img src="assets/icons/search-responsive.svg" alt="search-responsive" />
+            </a>
+            <p>Search</p>
+        </div>
+        <div>
+            <a href="#">
+                <img src="assets/icons/library-responsive.svg" alt="library-responsive" />
+            </a>
+            <p>Library</p>
+        </div>
+        <div>
+            <a href="#">
+                <img src="assets/icons/me-responsive.svg" alt="me-responsive" />
+            </a>
+            <p>Me</p>
+        </div>
+    </section>
+
+    <!-- Khatia -->
+    <!-- sidebar -->
+    <div class="app-container">
+        <aside class="sidebar">
+            <nav class="library">
+                <!-- <div class="library-header">
+            <a href="#" class="library-title-link">
+            </a>
+          </div> -->
+                <ul class="library-list">
+                    <li>
+                        <img src="/assets/icons/spotifyicon.svg" alt="library" />
+                        <span>My library</span>
+                    </li>
+                    <li>
+                        <img src="/assets/icons/pins.svg" alt="pins" />
+                        <span>Pins</span>
+                    </li>
+                    <li>
+                        <img src="assets/icons/playlist.svg" alt="playlist" />
+                        <span>Playlists</span>
+                    </li>
+                    <li>
+                        <a href="liked-library.html">
+                            <img src="assets/icons/heart.svg" alt="heart" />
+                            <span>Liked songs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="assets/icons/saves.svg" alt="saves" />
+                        <span>Saves</span>
+                    </li>
+                    <li>
+                        <img src="assets/icons/albums.svg" alt="album" />
+                        <span>Albums</span>
+                    </li>
+                    <li>
+                        <img src="assets/icons/folders.svg" alt="folders" />
+                        <span>Folders</span>
+                    </li>
+                    <li>
+                        <img src="assets/icons/podcasts.svg" alt="podcast" />
+                        <span>Podcasts</span>
+                    </li>
+                    <li>
+                        <img src="assets/icons/audiobooks.svg" alt="audiobooks" />
+                        <span>Audiobooks</span>
+                    </li>
+                    <li>
+                        <img src="assets/icons/artists.svg" alt="artists" />
+                        <span>Artists</span>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+
+        <!-- Nodari -->
+        <!-- Main content -->
+<main class="main-content">
+  <section class="filters-section" aria-label="Content filters">
+    <div class="filters">
+      <button class="filter filter--active" type="button">All</button>
+      <button class="filter" type="button">Music</button>
+      <button class="filter" type="button">Podcasts</button>
+      <button class="filter" type="button">Audiobooks</button>
+    </div>
+
+    <div class="filters-layout-action">
+      <button class="icon-action" type="button" aria-label="Change layout">
+        <img
+          src="assets/icons/card-icons/layout.svg"
+          class="icon-action__icon"
+          alt="Layout"
+        />
+      </button>
+    </div>
+  </section>
+
+  <!-- mobile shortcuts -->
+  <section class="mobile-shortcuts" aria-label="Quick access playlists">
+    <a href="#" class="mobile-shortcuts__item">
+      <img
+        src="assets/icons/card-icons/song-cover1.svg"
+        alt="Get Lucky cover"
+        class="mobile-shortcuts__image"
+      />
+      <div class="mobile-shortcuts__text">
+        <h3 class="mobile-shortcuts__title">Get Lucky (feat....</h3>
+        <p class="mobile-shortcuts__subtitle">Daft Punk</p>
+      </div>
+    </a>
+
+    <a href="#" class="mobile-shortcuts__item">
+      <img
+        src="assets/icons/card-icons/song-cover2.svg"
+        alt="Daily Mix 2 cover"
+        class="mobile-shortcuts__image"
+      />
+      <div class="mobile-shortcuts__text">
+        <h3 class="mobile-shortcuts__title">Daily Mix 2</h3>
+      </div>
+    </a>
+
+    <a href="#" class="mobile-shortcuts__item">
+      <img
+        src="assets/icons/card-icons/song-cover3.svg"
+        alt="Daily Mix 1 cover"
+        class="mobile-shortcuts__image"
+      />
+      <div class="mobile-shortcuts__text">
+        <h3 class="mobile-shortcuts__title">Daily Mix 1</h3>
+      </div>
+    </a>
+
+    <a href="#" class="mobile-shortcuts__item">
+      <img
+        src="assets/icons/card-icons/song-cover1.svg"
+        alt="Instant Crush cover"
+        class="mobile-shortcuts__image"
+      />
+      <div class="mobile-shortcuts__text">
+        <h3 class="mobile-shortcuts__title">Instant Crush</h3>
+        <p class="mobile-shortcuts__subtitle">Daft Punk</p>
+      </div>
+    </a>
+
+    <a href="#" class="mobile-shortcuts__item">
+      <img
+        src="assets/icons/card-icons/song-cover1.svg"
+        alt="Around the World cover"
+        class="mobile-shortcuts__image"
+      />
+      <div class="mobile-shortcuts__text">
+        <h3 class="mobile-shortcuts__title">Around the wo...</h3>
+        <p class="mobile-shortcuts__subtitle">Daft Punk</p>
+      </div>
+    </a>
+
+    <a href="#" class="mobile-shortcuts__item">
+      <img
+        src="assets/icons/card-icons/song-cover4.svg"
+        alt="Rock Mix cover"
+        class="mobile-shortcuts__image"
+      />
+      <div class="mobile-shortcuts__text">
+        <h3 class="mobile-shortcuts__title">Rock Mix</h3>
+      </div>
+    </a>
+  </section>
+
+  <!-- cards -->
+  <div class="content-wrapper">
+    <section class="catalogue">
+      <div class="catalogue-top">
+        <h2 class="catalogue-title">Made For You</h2>
+
+        <div class="catalogue-actions">
+          <button class="catalogue-btn" type="button" aria-label="Previous">
+            <img src="assets/icons/card-icons/arrow-left.svg" alt="Previous" />
+          </button>
+          <button class="catalogue-btn" type="button" aria-label="Next">
+            <img
+              src="assets/icons/card-icons/arrow-right-top.svg"
+              alt="Next"
+            />
+          </button>
+          <button class="catalogue-btn" type="button" aria-label="More options">
+            <img src="assets/icons/card-icons/dots.svg" alt="More" />
+          </button>
+        </div>
+      </div>
+
+      <div class="catalogue-grid">
+        <article class="music-card">
+          <a href="#" class="music-card__link">
+            <div class="music-card__image-wrap">
+              <img
+                src="assets/icons/card-icons/card-1.svg"
+                class="music-card__image"
+                alt="Discover Weekly"
+              />
+            </div>
+            <div class="music-card__meta">
+              <span class="music-card__type">Discover Weekly</span>
+              <span class="music-card__count">50</span>
+            </div>
+            <p class="music-card__desc">Your weekly mixtape of fresh music.</p>
+          </a>
+        </article>
+
+        <article class="music-card">
+          <a href="#" class="music-card__link">
+            <div class="music-card__image-wrap">
+              <img
+                src="assets/icons/card-icons/card-2.svg"
+                class="music-card__image"
+                alt="Daily Mix 1"
+              />
+            </div>
+            <div class="music-card__meta">
+              <span class="music-card__type">Daily Mix 1</span>
+              <span class="music-card__count">50</span>
+            </div>
+            <p class="music-card__desc">
+              Linkin Park, System Of A Down, Coal Chamber...
+            </p>
+          </a>
+        </article>
+
+        <article class="music-card">
+          <a href="#" class="music-card__link">
+            <div class="music-card__image-wrap">
+              <img
+                src="assets/icons/card-icons/card-3.svg"
+                class="music-card__image"
+                alt="Daily Mix 2"
+              />
+            </div>
+            <div class="music-card__meta">
+              <span class="music-card__type">Daily Mix 2</span>
+              <span class="music-card__count">50</span>
+            </div>
+            <p class="music-card__desc">
+              Avril Lavigne, Lorde, Charli XCX and more
+            </p>
+          </a>
+        </article>
+
+        <article class="music-card">
+          <a href="#" class="music-card__link">
+            <div class="music-card__image-wrap">
+              <img
+                src="assets/icons/card-icons/card-4.svg"
+                class="music-card__image"
+                alt="Daily Mix 3"
+              />
+            </div>
+            <div class="music-card__meta">
+              <span class="music-card__type">Daily Mix 3</span>
+              <span class="music-card__count">50</span>
+            </div>
+            <p class="music-card__desc">
+              The Strokes, Martin Garrix, MGMT and more
+            </p>
+          </a>
+        </article>
+
+        <article class="music-card">
+          <a href="#" class="music-card__link">
+            <div class="music-card__image-wrap">
+              <img
+                src="assets/icons/card-icons/card-5.svg"
+                class="music-card__image"
+                alt="Daily Mix 4"
+              />
+            </div>
+            <div class="music-card__meta">
+              <span class="music-card__type">Daily Mix 4</span>
+              <span class="music-card__count">50</span>
+            </div>
+            <p class="music-card__desc">
+              Chuck Berry, Elvis Presley, Roy Orbison and more
+            </p>
+          </a>
+        </article>
+
+        <article class="music-card">
+          <a href="#" class="music-card__link">
+            <div class="music-card__image-wrap">
+              <img
+                src="assets/icons/card-icons/card-6.svg"
+                class="music-card__image"
+                alt="Daily Mix 5"
+              />
+            </div>
+            <div class="music-card__meta">
+              <span class="music-card__type">Daily Mix 5</span>
+              <span class="music-card__count">50</span>
+            </div>
+            <p class="music-card__desc">
+              Frank Sinatra, Gerhard Trede, Dean Martin and more
+            </p>
+          </a>
+        </article>
+
+        <article class="music-card">
+          <a href="#" class="music-card__link">
+            <div class="music-card__image-wrap">
+              <img
+                src="assets/icons/card-icons/card-7.svg"
+                class="music-card__image"
+                alt="Nirvana Radio"
+              />
+            </div>
+            <div class="music-card__meta">
+              <span class="music-card__type">Nirvana Radio</span>
+              <span class="music-card__count">50</span>
+            </div>
+            <p class="music-card__desc">
+              The Strokes, Martin Garrix, MGMT and more
+            </p>
+          </a>
+        </article>
+
+        <article class="music-card">
+          <a href="#" class="music-card__link">
+            <div class="music-card__image-wrap">
+              <img
+                src="assets/icons/card-icons/card-8.svg"
+                class="music-card__image"
+                alt="Fall Out Boy Radio"
+              />
+            </div>
+            <div class="music-card__meta">
+              <span class="music-card__type">Fall Out Boy Radio</span>
+              <span class="music-card__count">50</span>
+            </div>
+            <p class="music-card__desc">
+              With Panic! At The Disco, The All-American Rejects...
+            </p>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="catalogue">
+      <div class="catalogue-top">
+        <h2 class="catalogue-title">Your top mixes</h2>
+
+        <div class="catalogue-actions">
+          <button class="catalogue-btn" type="button" aria-label="Previous">
+            <img src="assets/icons/card-icons/arrow-left.svg" alt="Previous" />
+          </button>
+          <button class="catalogue-btn" type="button" aria-label="Next">
+            <img
+              src="assets/icons/card-icons/arrow-right-top.svg"
+              alt="Next"
+            />
+          </button>
+          <button class="catalogue-btn" type="button" aria-label="More options">
+            <img src="assets/icons/card-icons/dots.svg" alt="More" />
+          </button>
+        </div>
+      </div>
+
+      <div class="catalogue-grid">
+        <article class="mix-card">
+          <a href="#" class="mix-card__link">
+            <div class="mix-card__image-wrap">
+              <img
+                src="assets/icons/card-icons/mix1.svg"
+                class="mix-card__image"
+                alt="Rock Mix"
+              />
+            </div>
+            <div class="mix-card__meta">
+              <span class="mix-card__type">Rock Mix</span>
+              <span class="mix-card__count">50</span>
+            </div>
+            <p class="mix-card__desc">
+              Red Hot Chili Peppers, R.E.M., Guns N’ Roses...
+            </p>
+          </a>
+        </article>
+
+        <article class="mix-card">
+          <a href="#" class="mix-card__link">
+            <div class="mix-card__image-wrap">
+              <img
+                src="assets/icons/card-icons/mix2.svg"
+                class="mix-card__image"
+                alt="Chill Mix"
+              />
+            </div>
+            <div class="mix-card__meta">
+              <span class="mix-card__type">Chill Mix</span>
+              <span class="mix-card__count">50</span>
+            </div>
+            <p class="mix-card__desc">
+              MF DOOM, Daft Punk, The Chainsmokers, and more
+            </p>
+          </a>
+        </article>
+
+        <article class="mix-card">
+          <a href="#" class="mix-card__link">
+            <div class="mix-card__image-wrap">
+              <img
+                src="assets/icons/card-icons/mix3.svg"
+                class="mix-card__image"
+                alt="Pop Mix"
+              />
+            </div>
+            <div class="mix-card__meta">
+              <span class="mix-card__type">Pop Mix</span>
+              <span class="mix-card__count">50</span>
+            </div>
+            <p class="mix-card__desc">
+              Red Hot Chili Peppers, R.E.M., Guns N' Roses...
+            </p>
+          </a>
+        </article>
+
+        <article class="mix-card">
+          <a href="#" class="mix-card__link">
+            <div class="mix-card__image-wrap">
+              <img
+                src="assets/icons/card-icons/mix4.svg"
+                class="mix-card__image"
+                alt="Daft Punk Mix"
+              />
+            </div>
+            <div class="mix-card__meta">
+              <span class="mix-card__type">Daft Punk Mix</span>
+              <span class="mix-card__count">50</span>
+            </div>
+            <p class="mix-card__desc">Daft Punk, MGMT, Muse and more</p>
+          </a>
+        </article>
+
+        <article class="mix-card">
+          <a href="#" class="mix-card__link">
+            <div class="mix-card__image-wrap">
+              <img
+                src="assets/icons/card-icons/mix5.svg"
+                class="mix-card__image"
+                alt="Happy Mix"
+              />
+            </div>
+            <div class="mix-card__meta">
+              <span class="mix-card__type">Happy Mix</span>
+              <span class="mix-card__count">50</span>
+            </div>
+            <p class="mix-card__desc">
+              The Turtles, Van Morrison, ABBA and more
+            </p>
+          </a>
+        </article>
+
+        <article class="mix-card">
+          <a href="#" class="mix-card__link">
+            <div class="mix-card__image-wrap">
+              <img
+                src="assets/icons/card-icons/mix6.svg"
+                class="mix-card__image"
+                alt="David Bowie Mix"
+              />
+            </div>
+            <div class="mix-card__meta">
+              <span class="mix-card__type">David Bowie Mix</span>
+              <span class="mix-card__count">50</span>
+            </div>
+            <p class="mix-card__desc">Soft Cell, The Who and The Clash</p>
+          </a>
+        </article>
+
+        <article class="mix-card">
+          <a href="#" class="mix-card__link">
+            <div class="mix-card__image-wrap">
+              <img
+                src="assets/icons/card-icons/mix7.svg"
+                class="mix-card__image"
+                alt="Upbeat Mix"
+              />
+            </div>
+            <div class="mix-card__meta">
+              <span class="mix-card__type">Upbeat Mix</span>
+              <span class="mix-card__count">50</span>
+            </div>
+            <p class="mix-card__desc">
+              Kylie Minogue, Charli XCX, Cage The Elephant and...
+            </p>
+          </a>
+        </article>
+
+        <article class="mix-card">
+          <a href="#" class="mix-card__link">
+            <div class="mix-card__image-wrap">
+              <img
+                src="assets/icons/card-icons/mix8.svg"
+                class="mix-card__image"
+                alt="60s Mix"
+              />
+            </div>
+            <div class="mix-card__meta">
+              <span class="mix-card__type">60s Mix</span>
+              <span class="mix-card__count">50</span>
+            </div>
+            <p class="mix-card__desc">
+              Chuck Berry, Skeeter David, Van Morrison and...
+            </p>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="catalogue catalogue-artists">
+      <div class="catalogue-top catalogue-top--artists">
+        <h2 class="catalogue-title">Your favorite artists</h2>
+
+        <div class="catalogue-actions">
+          <button class="catalogue-btn" type="button" aria-label="Previous">
+            <img src="assets/icons/card-icons/arrow-left.svg" alt="Previous" />
+          </button>
+          <button class="catalogue-btn" type="button" aria-label="Next">
+            <img
+              src="assets/icons/card-icons/arrow-right-top.svg"
+              alt="Next"
+            />
+          </button>
+          <button class="catalogue-btn" type="button" aria-label="More options">
+            <img src="assets/icons/card-icons/dots.svg" alt="More" />
+          </button>
+        </div>
+      </div>
+
+      <div class="artists-grid">
+        <article class="artist-card">
+          <a href="#" class="artist-card__link artist-card__link--artist1">
+            <img
+              src="assets/icons/card-icons/artist1.png"
+              class="artist-card__image"
+              alt="Artist 1"
+            />
+          </a>
+        </article>
+
+        <article class="artist-card">
+          <a href="#" class="artist-card__link artist-card__link--artist2">
+            <img
+              src="assets/icons/card-icons/artist2.png"
+              class="artist-card__image"
+              alt="Artist 2"
+            />
+          </a>
+        </article>
+
+        <article class="artist-card">
+          <a href="#" class="artist-card__link artist-card__link--artist3">
+            <img
+              src="assets/icons/card-icons/artist3.png"
+              class="artist-card__image"
+              alt="Artist 3"
+            />
+          </a>
+        </article>
+      </div>
+    </section>
+  </div>
+</main>
+
+
+    <!-- footer player -->
+    <!-- Ani -->
+    <footer class="footer-player">
+        <!--Player left section-->
+        <section class="player-left">
+            <div class="left-side-icons">
+                <button class="btn-play" aria-label="Start" id="start-btn">
+                    <img src="./assets/icons/player-icons/player-start-icon.svg" alt="Start button" />
+                </button>
+                <button class="btn-play when-click" aria-label="Play" id="playing-btn">
+                    <img src="./assets/icons/player-icons/player-playing-icon.svg" alt="Plaing button" />
+                </button>
+                <button class="btn-icon" aria-label="Previous">
+                    <img src="./assets/icons/player-icons/player-left-arrow.svg" alt="Previous" class="btn-icon__svg" />
+                </button>
+                <button class="btn-icon" aria-label="Next">
+                    <img src="./assets/icons/player-icons/player-right-arrow.svg" alt="Next" class="btn-icon__svg" />
+                </button>
+                <button class="btn-icon" aria-label="Shuffle">
+                    <img src="./assets/icons/player-icons/player-shuffle-icon.svg" alt="Shuffle"
+                        class="btn-icon__svg btn-icon__svg--active" />
+                </button>
+                <button class="btn-icon" aria-label="Repeat">
+                    <img src="./assets/icons/player-icons/player-resume-icon.svg" alt="Repeat" class="btn-icon__svg" />
+                </button>
+                <time class="player-time">2:23</time>
+                <img class="player__progress-line" src="./assets/icons/player-icons/player-line.svg"
+                    alt="progress line" />
+                <time class="player-time">4:45</time>
+                <button class="voice-btn" aria-label="Voice Control">
+                    <img src="./assets/icons/player-icons/player-voice-icon.svg" alt="Voice control"
+                        class="btn-icon__svg" />
+                </button>
+                <audio src="./assets/icons/player-icons/player-mp3/DaftPunk-GetLucky.mp3" id="music-file"></audio>
+            </div>
+        </section>
+
+        <!--Player center section-->
+        <section class="player-center">
+                <div class="mini-track">
+                    <img src="./assets/icons/player-icons/player-album-icon.svg" alt="Get Lucky Cover"
+                        class="mini-track__img" />
+                    <div class="mini-track__text">
+                        <h4 class="mini-track__title desktop-text">Get Lucky</h4>
+                        <!--in mobile it will be hidden-->
+                        <h4 class="mini-track__title mobile-text">
+                            Get Lucky (feat. Pharrell Williams and Nile Rodgers)
+                            <!--in desktop it will be hidden-->
+                        </h4>
+                        <p class="mini-track__artist">Daft Punk</p>
+                        <p class="mini-track__album">Random Access Memories</p>
+                    </div>
+                </div>   
+        </section>
+
+        <!--Player right section-->
+        <section class="player-right">
+            <div class="footer-right-icons">
+                <button class="btn-icon">
+                    <img src="./assets/icons/player-icons/player-heart-icon.svg" alt="Like" class="btn-icon__svg" />
+                </button>
+                <button class="btn-icon">
+                    <img src="./assets/icons/player-icons/player-square-icon.svg" alt="Add" class="btn-icon__svg" />
+                </button>
+                <button class="btn-icon">
+                    <img src="./assets/icons/player-icons/player-music-icon.svg" alt="Microphone"
+                        class="btn-icon__svg" />
+                </button>
+                <button class="btn-icon">
+                    <img src="./assets/icons/player-icons/player-mobiles-icon.svg" alt="Layer Group"
+                        class="btn-icon__svg" />
+                </button>
+                <button class="btn-icon">
+                    <img src="./assets/icons/player-icons/player-dots-icon.svg" alt="Dots" class="btn-icon__svg" />
+                </button>
+                <span class="btn-icon">
+                    <img src="./assets/icons/player-icons/player-right-line-icon.svg" alt="line"
+                        class="btn-icon__svg" />
+                </span>
+
+                <div class="btn-icon">
+                    <img src="./assets/icons/player-icons/player-blue-icon.svg" alt="profile icon"
+                        class="btn-icon__svg" />
+                </div>
+
+                <button class="btn-icon">
+                    <img src="./assets/icons/player-icons/player-burger-icon.svg" alt="burger icon"
+                        class="btn-icon__svg" />
+                </button>
+            </div>
+        </section>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

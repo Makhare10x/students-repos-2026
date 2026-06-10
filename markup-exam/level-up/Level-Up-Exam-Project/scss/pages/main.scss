@@ -1,0 +1,59 @@
+@use "../base/reset";
+@use "../base/typography";
+@use "../abstracts/variables";
+@use "../layout/navigation";
+@use "../layout/header";
+@use "../layout/maincontent";
+@use "../layout/player";
+@use "../layout/friends";
+@use "../layout/search";
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: variables.$bg-color;
+
+    .main-section {
+        width: 100%;
+        margin-bottom: 12rem;
+    }
+    .friends-section {
+        display: none;
+    }
+}
+
+@media (min-width: 60rem) {
+    body {
+        display: flex;
+        flex-direction: row;
+        height: 100vh; 
+        overflow-x: hidden;
+
+        .main-section {
+            margin-top: 6.5rem;
+            padding-bottom: 3rem;
+            position: relative;
+            // left: 5.9rem;
+        }
+
+        // .friends-section {
+        //     display: block;
+        // }
+    }
+    main {
+        width: calc(100vw - 25.9rem);
+        // width: calc(100vw - 63.7rem);
+        position: relative;
+        left: 25.9rem;
+        height: 100vh;
+    }
+    .sidebar {
+    display: block;
+}
+    // .player-text {
+    //     display: none;
+    // }  
+}
+
+

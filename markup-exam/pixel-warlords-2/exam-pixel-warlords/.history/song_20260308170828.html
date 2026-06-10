@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Pixel UI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="spotify-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav class="nav-links">
+        <div class="nav-item active"><a href="library.html"><img src="assets/img/MyLibrary.png" alt=""> My Library</a></div>
+        <div class="nav-item"><a href="#"><img src="assets/img/Pins.png" alt=""> Pins</a></div>
+        <div class="nav-item"><a href="#"><img src="assets/img/Playlists.png" alt=""> Playlists</a></div>
+        <div class="nav-item"><a href="#"><img src="assets/img/Likedsongs.png" alt=""> Liked songs</a></div>
+        <div class="nav-item"><a href="#"><img src="assets/img/Saves.png" alt=""> Saves</a></div>
+        <div class="nav-item"><a href="#"><img src="assets/img/Albums.png" alt=""> Albums</a></div>
+        <div class="nav-item"><a href="#"><img src="assets/img/Folders.png" alt=""> Folders</a></div>
+        <div class="nav-item"><a href="#"><img src="assets/img/Podcasts.png" alt=""> Podcasts</a></div>
+        <div class="nav-item"><a href="#"><img src="assets/img/Audiobooks.png" alt=""> Audiobooks</a></div>
+        <div class="nav-item"><a href="#"><img src="assets/img/Artists.png" alt=""> Artists</a></div>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-view">
+      <header class="header">
+        <div class="top-nav">
+          <ul class="nav-list-left">
+            <li><img src="assets/img/home.png" alt=""> Home</li>
+            <li><img src="assets/img/Discover.png" alt=""> Discover</li>
+            <li><a href="search.html"><img src="assets/img/Search.png" alt=""> Search</a></li>
+          </ul>
+          <div class="nav-list-right">
+            <img src="assets/img/iconsbig.png" alt="">
+            <img src="assets/img/lock.png" alt="">
+            <label for="toggle-theme"><img src="assets/img/friends.png" alt=""></label>
+            <input type="checkbox" id="toggle-theme" hidden>
+            <img src="assets/img/settings.png" alt="">
+            <img src="assets/img/Sprite-eyes.png" alt="">
+          </div>
+        </div>
+        <div class="filter-bar">
+          <ul class="filters">
+            <li><a href="#" class="active">All</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a href="#">Podcasts</a></li>
+            <li><a href="#">Audiobooks</a></li>
+          </ul>
+          <img src="assets/img/pc-home-add.png" alt="" class="add-icon">
+        </div>
+      </header>
+
+      <div class="content-wrapper">
+        <!-- Song Hero Section -->
+        <section class="song-hero">
+          <div class="song-layout">
+            <figure class="album-cover">
+              <img src="assets/img/song/image 16.png" alt="Get Lucky">
+            </figure>
+            
+            <div class="song-info">
+              <h1>Get Lucky (feat. Pharrell Williams and Nile Rodgers)</h1>
+              <p class="song-meta">Daft Punk • Random Access Memories • 2013 • 6:09</p>
+              
+              <div class="song-controls">
+                <button class="play-btn"><img src="assets/img/song/play.png" alt="Play"></button>
+                <img src="assets/img/song/pc-like.png" alt="Like">
+                <img src="assets/img/song/pc-playlist-down.png" alt="Add">
+                <img src="assets/img/song/icons big (4).png" alt="">
+                <img src="assets/img/song/icons big (5).png" alt="">
+              </div>
+
+              <div class="artists-grid">
+                <div class="artist-card">
+                  <img src="assets/img/song/image 4.png" alt="">
+                  <div><h4>Daft Punk</h4><p>Main Artist</p></div>
+                </div>
+                <div class="artist-card">
+                  <img src="assets/img/song/Frame 145 (1).png" alt="">
+                  <div><h4>Pharrell Williams</h4><p>Main Artist</p></div>
+                </div>
+                <div class="artist-card">
+                  <img src="assets/img/song/image 4 (1).png" alt="">
+                  <div><h4>Nile Rodgers</h4><p>Main Artist</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Lyrics Section -->
+        <section class="lyrics-section">
+          <nav class="tabs">
+            <a href="#" class="active">Lyrics</a>
+            <a href="#">Credits</a>
+            <a href="#">More like this</a>
+          </nav>
+          
+          <div class="lyrics-body">
+            <aside class="lyrics-tools">
+              <img src="assets/img/song/icons big.png" alt="">
+              <img src="assets/img/song/icons big (1).png" alt="">
+              <img src="assets/img/song/icons big (2).png" alt="">
+            </aside>
+            <div class="lyrics-text">
+              <p>Like the legend of the phoenix, huh</p>
+              <p>All ends with beginnings</p>
+              <p>What keeps the planet spinning, ah</p>
+              <p>The force from the beginning, hm, look</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Friends Sidebar -->
+    <aside class="friends-activity">
+      <div class="friends-header">
+        <h3>Friends Activity</h3>
+        <img src="assets/img/lock.png" alt="">
+      </div>
+      <div class="friends-list">
+        <div class="friend-card">
+          <img src="assets/img/P1.png" alt="" class="avatar">
+          <div class="friend-info">
+            <span class="username">FriendlyListener</span>
+            <span class="track">Goosebumps • Travis Scott</span>
+          </div>
+        </div>
+        <!-- Повторите карточки для других друзей -->
+      </div>
+    </aside>
+  </div>
+</body>
+</html>

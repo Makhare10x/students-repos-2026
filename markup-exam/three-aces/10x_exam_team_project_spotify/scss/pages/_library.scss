@@ -1,0 +1,226 @@
+
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+@use '../base/typography' as *;
+
+.bg-color-library {
+    background-color:  #111111;
+
+}
+.main-hdr__btns {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+}
+
+.main-content {
+    padding: 1.2rem 2.5rem;
+    background-color: rgba(6, 6, 6, 0.8);
+
+    .main-hdr {
+        @include display ($jus: space-between);
+
+        &__btn {
+        // მაგალითად: რადიუსი 30px, პადინგი 0.8rem და 1.5rem, ფონტი 1.4rem
+        // ფონი: მუქი ნაცრისფერი, ტექსტი: თეთრი
+        @include btn (0.8rem, 0.8rem, 1.5rem, 1.4rem, #282828, #ffffff);
+ 
+        
+        &:first-child {
+            @include btn (0.8rem, 0.8rem, 1.5rem, 1.4rem, #E0E0E0, #000000);
+        }
+    }
+    }
+
+
+    .library {
+
+        &__hdr {
+            @include display ($jus: space-between);
+
+            .library__title {
+                @include text-style (2rem, 700, #E0E0E0)
+            }
+        }
+
+        // scroll functional 
+        &__body {
+            display: flex; // ბარათები ერთ ხაზზე
+            overflow-x: auto; // ჰორიზონტალური სქროლი
+            scroll-behavior: smooth; // რბილი გადასვლა ისრებზე
+            scroll-snap-type: x mandatory; // მაგნიტის ეფექტი
+            gap: 2.4rem; // დაშორება ბარათებს შორის
+            padding-bottom: 1rem; // მცირე დაშორება ქვემოთ
+
+            &::-webkit-scrollbar {
+                display: none; // სქროლბარის დამალვა
+            }
+        }
+
+        // scroll functional 
+        &__action {
+            display: flex;
+            gap: 0.8rem;
+            align-items: center;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        // scroll functional 
+        &__card {
+            flex-shrink: 0; // ბარათები არ დაპატარავდეს
+            width: 17rem; // ან შენი მიქსინის ზომა
+            scroll-snap-align: start; // ბარათი გასწორდეს კუთხეში
+            position: relative;
+            .library__svg-icon {
+             position: absolute;
+             top: 0;
+             right: 0;
+            }
+
+            .library__cover_discover {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/library-img/greenheart.png');
+
+                box-shadow: 
+                    0 -1rem 0 -0.4rem rgba(28, 116, 81, 0.671),   // პირველი ფენა (მუქი, 30% opacity)
+                    0 -2rem 0 -0.8rem #1ED76026; // მეორე ფენა (გამჭვირვალე ნაცრისფერი) 
+
+                
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-0.5rem); // ჰოვერზე ოდნავ "ამოიწევა"
+                }
+                 
+            }
+
+            .library__cover_DailyMix1 {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/library-img/Frame 8.png');
+                 box-shadow:none;
+            }
+
+            .library__cover_DailyMix2 {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/library-img/daftpunk.png');
+                box-shadow:none;
+            }
+
+            .library__cover_DailyMix3 {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/library-img/note.png');
+            }
+
+            .library__cover_DailyMix4 {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/library-img/note.png');
+            }
+
+            .library__cover_DailyMix6 {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/library-img/note.png');
+            }
+
+            .library__cover_Nirvana {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/library-img/note.png');
+            }
+
+            .library__cover_MixOutBoy {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/FallOutBoy.png');
+            }
+
+            // Your top mixes library covers
+
+             .library__cover_RockMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/RockMix.png');
+            }
+
+            .library__cover_ChillMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/ChillMix.png');
+            }
+
+            .library__cover_PopMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/PopMix.png');
+            }
+
+            .library__cover_DraftPunkMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DraftPunkMix.png');
+            }
+
+            .library__cover_HappyMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/HappyMix.png');
+            }
+
+            .library__cover_DavidBowieMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DavidBowieMix.png');
+               
+            }
+
+            .library__cover_UpbeatMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/UpbeatMix.png');
+            }
+
+            .library__cover_60sMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/60sMix.png');
+            }
+
+
+            // Your top mixes covers
+            .library__cover_GunsnRoses-YTM {
+                @include card-cover (17rem, 17rem, 50%, '/assets/library-img/beatles.png');
+                
+                 border-radius: 0%;
+            }
+             .library__cover_PopMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/library-img/black-holes.png');
+                 box-shadow:none;
+            }
+
+            .category__cover_DavidBowieMix-YTM {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DavidBowieMix.png');
+                
+                
+            }
+
+
+            .library__title-group {
+                @include display ($jus: space-between);
+
+                .library__card-title {
+                    @include text-style (1.4rem, 500, #E0E0E0);
+                }
+            }
+
+            .library__content {
+                @include text-style (1.2rem, 400, #898989);
+            }
+        }
+    }
+
+    .library__cover {
+    width: 17rem;
+    height: 17rem;
+    border-radius: 0.725rem;
+    background-size: cover;
+    position: relative;
+    margin-top: 2rem; // აუცილებელია, რომ ზედა "ფენებისთვის" ადგილი დარჩეს
+
+    // 💡 აი აქ ხდება მაგია:
+    // ფორმატი: x y blur spread color
+    // blur-ს ვსვამთ 0-ზე, რომ მკვეთრი ხაზები მივიღოთ
+    box-shadow: 
+         0 -1rem 0 -0.4rem rgba(115, 115, 115, 0.3)  , // პირველი ფენა (მუქი, 30% opacity)background: rgba(115, 115, 115, 0.3);
+
+
+        0 -2rem 0 -0.8rem rgba(115, 115, 115, 0.15); // მეორე ფენა (გამჭვირვალე ნაცრისფერი)  
+    
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-0.5rem); // ჰოვერზე ოდნავ "ამოიწევა"
+    }
+}
+
+}
+
+
+   

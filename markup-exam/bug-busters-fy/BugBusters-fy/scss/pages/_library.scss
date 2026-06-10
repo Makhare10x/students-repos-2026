@@ -1,0 +1,201 @@
+// @use "../layout/pageLayout";
+@use "../layout/header";
+@use "../layout/sideNavbar";
+@use "../layout/sidePopup";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+@use "../components/cardMain";
+
+.library {
+  .card-wrapper {
+    display: none;
+  }
+
+  .library-header {
+    padding: 1.3rem 1rem 0 1.5rem;
+    &-search {
+      @include mixins.flex-prop($justify: space-between, $align: center);
+      display: flex;
+    }
+
+    .library-search {
+      @include mixins.flex-prop($align: center);
+      background-color: variables.$bg-secondary-dark;
+      width: 30.6rem;
+      height: 3.5rem;
+      border-radius: 1rem;
+      input {
+        &::placeholder {
+          display: block;
+        }
+        width: 100%;
+        padding-left: 2rem;
+      }
+    }
+    #search-bar {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      &::placeholder {
+        color: transparent;
+        height: 3.5rem;
+      }
+    }
+
+    .library-nav {
+      @include mixins.flex-prop(1rem);
+      .view-type {
+        @include mixins.flex-prop(1rem);
+      }
+
+      a {
+        @include mixins.flex-prop($align: center);
+      }
+      .group-type {
+        @include mixins.flex-prop(1rem);
+      }
+    }
+    .list-view {
+      display: none;
+    }
+    .group-icon {
+      order: -1;
+    }
+    .grid-view {
+      order: 1;
+    }
+  }
+
+  // * main section of the library mob starts here !!
+
+  .library-main-mob {
+    padding: 0 1.6rem;
+
+    .playlists,
+    .by-spotify,
+    .albums,
+    .folders,
+    .artists {
+      @include mixins.flex-prop($align: center, $justify: space-between);
+      border-bottom: 2px solid variables.$bg-secondary-dark;
+      padding: 2rem 0;
+      h3 {
+        font-size: 2rem;
+        color: variables.$color-active-desk;
+      }
+    }
+  }
+}
+// * main section of the library mob END's here !!
+
+// *here starts desktop version of Library
+
+@media (min-width: 920px) {
+  // * header part of library desk.
+  .library {
+    .library-header {
+      margin-bottom: 2rem;
+      @include mixins.flex-prop(3rem);
+
+      &-search {
+        height: 100%;
+        width: 100%;
+        @include mixins.flex-prop($justify: space-between);
+        order: 1;
+      }
+
+      svg {
+        min-width: 4rem;
+        height: 4rem;
+      }
+
+      .library-search {
+        background-color: transparent;
+        @include mixins.flex-prop($direction: row-reverse);
+        #search-bar {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          &::placeholder {
+            color: transparent;
+          }
+        }
+      }
+
+      .library-nav {
+        @include mixins.flex-prop(3.5rem);
+        .view-type {
+          @include mixins.flex-prop(1rem);
+        }
+
+        .group-type {
+          @include mixins.flex-prop(3.5rem);
+        }
+
+        .recents a,
+        .group-icon a {
+          @include mixins.flex-prop(1rem, $align: center);
+        }
+
+        .list-view {
+          display: block;
+        }
+        .group-icon {
+          order: 0;
+        }
+        .grid-view {
+          order: 0;
+        }
+      }
+    }
+  }
+
+  .library-main-mob {
+    display: none;
+  }
+
+  // *end of the library header desk
+
+  //  * Card section desk start
+
+  .library-main-desk {
+    .card-wrapper {
+      display: grid;
+
+      grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+
+      gap: 1.1rem;
+      padding: 1rem 2.8rem 0.8rem 2.5rem;
+    }
+    .card-main {
+      @include mixins.flex-prop(0.6rem, $direction: column);
+      width: 100%;
+      @include mixins.card-badges(variables.$library-colors);
+
+      .img-container {
+        @include mixins.cardBeforeEffect;
+        border-radius: 0.7rem;
+        img {
+          @include mixins.imageShaper();
+        }
+      }
+
+      &.pinned {
+        @include mixins.pinStyle();
+      }
+    }
+    .folder-card {
+      .img-container {
+        position: relative;
+        @include mixins.cardBeforeEffect(one);
+
+        &::before {
+          position: absolute;
+          left: 0.6rem;
+          width: 40%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+sass --watch scss/style.scss css/style.css
+git pull origin main
+git pull origin mixins/stuff
+
+
+
+
+  

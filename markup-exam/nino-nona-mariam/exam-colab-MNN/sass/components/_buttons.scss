@@ -1,0 +1,312 @@
+@use '../abstract/mixins' as *;
+@use '../abstract/variables' as *;
+// button styles (hover color + scale) to player icons
+.player 
+    .add-sm{
+    margin-left: 10px;
+    @include icon-btn;
+}
+.player .play-sm{
+    @include icon-btn;
+}
+
+// play/pause button style
+.btn-playback {
+    display: none;
+    & ~ label #start {display: block;}
+    & ~ label #pause {display: none;}
+    &:checked ~ label #start {display: none;}
+    &:checked ~ label #pause {display: block;}
+}
+
+// previous and next button style
+.player-prev, .player-next {
+    @include icon-btn;
+}
+
+// Shuffle button
+.shuffle {
+    @include icon-btn;
+}
+
+// Repeat button
+.repeat {
+    @include icon-btn;
+}
+
+// Volume button
+.volume {
+    input {
+        display: none;
+        width: 70%;
+        height: 4px;
+        appearance: none; 
+        transform: translateX(20%) translateY(-100%) rotate(-90deg);   
+    }
+    .vol-icon {
+        @include icon-btn;   
+    }
+    &:hover {
+        input {display: block;}
+    }
+}
+
+// Favorite button
+.right-cont {
+    .favorite {
+        display: none;
+        & ~ label .fav {display: block;}
+        & ~ label .fav-hover {display: none;}
+        &:checked ~ label .fav {display: none;}
+        &:checked ~ label .fav-hover {display: block;}
+    }
+}
+
+// Add button
+.right-cont {
+    .add-btn{
+       position: relative;
+       @include toggle-btn;
+       @include toggle-window('.add-window', '.add-backdrop');
+
+       // Checked playlist item button
+        .album-list{   
+            .check-btn  {
+                @include check-btn
+            }
+            
+        }
+
+        // Cancel and Done buttons
+        .Cancel, .Done {
+            width:154px ;
+            height:39px ;
+            background-color: rgba(32, 32, 32, 0);
+            color:$secondary-text-color ;
+            margin: 15px 20px;
+            border: none;
+            border-radius: $radius-main;
+            
+            &:hover {
+                background-color: #1ED760;
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+// Lyrics button
+.right-cont {
+    .lyrics-btn{
+       @include toggle-btn;
+       @include toggle-window('.lyrics-window', '.lyrics-backdrop');
+
+        .sync-btn {
+            display: none;
+            & ~ label .sync {display: block;}
+            & ~ label .sync-hover {display: none;}
+            &:checked ~ label .sync {display: none;}
+            &:checked ~ label .sync-hover {display: block;}
+        }
+
+        .share-btn {
+            display: none;
+            & ~ label .share {display: block;}
+            & ~ label .share-hover {display: none;}
+            &:checked ~ label .share {display: none;}
+            &:checked ~ label .share-hover {display: block;}
+        }
+
+    }
+}
+
+// Device button
+.right-cont{
+    .devices {
+        @include icon-btn
+    }
+}
+
+// More option button
+.right-cont {
+    .more-button{
+       @include toggle-btn;
+       @include toggle-window('.more-window', '.more-backdrop');
+    }
+}
+
+// Reaction buttons
+.right-cont {
+    .reaction-cont {
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        .expand-box {
+            display: none;
+            flex-direction: row-reverse;
+            position:relative;
+            bottom: 95%; 
+            right: 80%;
+            width: 190px;
+            height: 40px;
+            z-index: 10;
+            background-color:  rgba(9, 89, 183, 0.2);
+            border-radius: $radius-main;
+            transition: width 0.3s ease, opacity 0.3s ease;
+           
+        }
+
+        .open-btn {
+            cursor: pointer;
+        }
+
+        input:checked ~ .expand-box {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .song-close-btn {
+            cursor: pointer;
+            margin: 5px 0 0 10px
+        }
+    }
+}
+
+//  Queue button
+.right-cont {
+    .queue-container{
+       @include toggle-btn;
+       @include toggle-window('.queue-window', '.queue-backdrop');
+    }
+    .dots, .close, .shuffle, .repeat {
+        @include icon-btn;
+        width: 40.41px;
+        height: 40.41px;
+        margin-right: 5px;
+    }
+}
+
+
+// SONG PAGE//
+
+
+.song-page {
+    .close-btn {
+        width: 40.41px;
+        height: 40.41px;
+        cursor: pointer;
+        margin-bottom: 18.59px;
+        color: $secondary-text-color;
+        transition: color 0.15s;
+
+        &:hover {
+            color: $primary-text-color;
+        }
+    }
+    .favorite {
+        display: none;
+        & ~ label .fav {display: block;}
+        & ~ label .fav-hover {display: none;}
+        &:checked ~ label .fav {display: none;}
+        &:checked ~ label .fav-hover {display: block;}
+    }
+}
+
+//lyrics buttom//
+ 
+.lyrics-input:checked ~ .song-header {
+    display: none;
+}
+
+.lyrics-input:checked ~ .mobile-lyrics-view {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+}
+
+.lyrics-input:checked ~ .song-page-mobile .btn-lyrics svg {
+    color: $primary-text-color;
+
+}
+
+//  Queue button
+.queue-input:checked ~ .song-header {
+    display: none;
+}
+
+.queue-input:checked ~ .mobile-queue-view {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        
+}
+.queue-input:checked ~ .song-page-mobile .queue-btn svg {
+        color: $primary-text-color;
+}
+
+// More option button//
+
+.mobile-more-button {
+    @include toggle-btn;
+    .more-btn-wrapper {
+        display: none;
+        z-index: 2;
+    }
+    .more-backdrop {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+    }
+    input:checked ~ .more-backdrop {
+        display: block;
+    }
+
+    input:checked ~ .more-btn-wrapper {
+        display: block;
+    }
+}
+.genre{
+    button{
+        border:2px solid rgba(137, 137, 137, 0.25) ;
+        border-radius:44px ;
+        padding: 10px 20px;
+        transition: color 0.2s ease;
+
+        &:hover{
+            color: $primary-text-color;
+            transform: scale(1.1);
+        }
+    }
+}
+
+//Icons for desktop lyrics controls
+.song-lyrics-desktop{
+    .sync-btn {
+        display: none;
+        & ~ label .sync {display: block;}
+        & ~ label .sync-hover {display: none;}
+        &:checked ~ label .sync {display: none;}
+        &:checked ~ label .sync-hover {display: block;}
+    }
+    .translate-btn{
+         display: none;
+        & ~ label .translate {display: block;}
+        & ~ label .translate-hover{display: none;}
+        &:checked ~ label .translate {display: none;}
+        &:checked ~ label .translate-hover {display: block;}
+    }
+    .note-btn{
+         display: none;
+        & ~ label .note {display: block;}
+        & ~ label .note-hover{display: none;}
+        &:checked ~ label .note {display: none;}
+        &:checked ~ label .note-hover {display: block;}
+    }
+
+}
+
+
+

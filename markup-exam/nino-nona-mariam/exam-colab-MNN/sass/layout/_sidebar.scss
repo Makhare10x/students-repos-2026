@@ -1,0 +1,132 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as m;
+
+.sidebar{
+    display: none;
+}
+.mobile-library {
+    padding: 16px;
+}
+.mobile-library-header{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.search-form{
+    flex-grow: 1;
+}
+.search-input-wrapper{
+    @include m.flex-center($justify: space-between);
+    background-color: v.$secondary-color-50;
+    border-radius: v.$radius-main;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    
+    .search-icon{
+        width: 35.41px;
+        height: auto;
+    }
+    input{
+        background-color: transparent;
+        border: none;
+        font-size: v.$font-size-medium;
+        font-weight: 500;
+        font-style: medium;
+        
+    }
+
+}
+.filter{
+   @include m.flex-center($gap: 32px);
+    margin-bottom: 10px;
+    margin-top: 12px;
+
+    button{
+        @include m.flex-center;
+    }
+}
+
+    .mobile-library-item{
+    border-bottom: 2px solid #202020;
+
+    a{
+        @include m.flex-center($justify: space-between);
+         padding-bottom: 20px;
+    }
+
+    span {
+            font-size: v.$font-size-large;
+            font-weight: v.$font-weight-bold;
+        }
+    }
+
+    //Desktop
+    @media (min-width: 768px){
+        .mobile-library{
+            display: none;
+            
+        }
+
+        .library-header {
+        display: flex;
+        align-items: center;
+        gap: 12px; // Controls space between icon and text
+        text-decoration: none;
+        color: v.$secondary-text-color;
+        font-size: v.$font-size-medium;
+        font-weight: v.$font-weight-regular;
+        padding-left: 22px;
+        padding-top: 10px;
+
+        .icon-box {
+            width: 24px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &:hover {
+            color: v.$primary-text-color;
+        }
+}
+
+.library-header {
+    margin-bottom: 16px; // Adjusts spacing below the header
+      // Matches the bolder look of the header
+}
+
+        .sidebar{
+            display: flex;
+            flex-direction: column;
+            color: v.$secondary-text-color;
+            font-size: v.$font-size-medium;
+            font-weight: v.$font-weight-regular;
+            grid-area: sidebar;
+        }
+
+
+        .sidebar-nav-list{
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+            padding-left: 17px;
+            
+        }
+        .sidebar-item{
+           @include m.flex-center;
+        }
+        .sidebar-link {
+             @include m.flex-center($gap:12px);
+                
+            }
+             .sidebar-link:hover {
+                    color: v.$primary-text-color; // Interaction requirement
+                }
+
+    }
+
+    
+
+
+ 

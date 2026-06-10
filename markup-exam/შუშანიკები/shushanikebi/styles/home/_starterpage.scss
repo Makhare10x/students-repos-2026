@@ -1,0 +1,157 @@
+.shushanikebio {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(12px);
+  background: rgba(10, 10, 15, 0.75);
+}
+
+/* names container */
+.names-list {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 5rem;
+}
+
+/* Created by */
+.created {
+  font-size: 26px;
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+  color: #a78bfa;
+  animation: fade 1s ease forwards;
+}
+
+/* names */
+.names h2 {
+  font-size: 44px;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slide 0.8s ease forwards;
+  font-weight: 600;
+}
+
+/* Gvantsa */
+.names:nth-of-type(1) h2 {
+  animation-delay: 0.5s;
+  background: linear-gradient(90deg, #ff4798, #ce47ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* And */
+.names:nth-of-type(2) h2 {
+  animation-delay: 1s;
+  color: #d9c3ff;
+  font-size: 42px;
+}
+
+/* Giorgi */
+.names:nth-of-type(3) h2 {
+  animation-delay: 1.5s;
+  background: linear-gradient(90deg, #4e4fce, #4e4fce);
+
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* animations */
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
+}
+.profile-img-wrapper {
+  position: relative;
+}
+/* start button */
+.start-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 4rem;
+  opacity: 0;
+  animation: showBtn 0.7s ease forwards;
+  animation-delay: 4.9s;
+
+  font-size: 18px;
+  padding: 14px 32px;
+  border-radius: 12px;
+  border: none;
+  color: white;
+
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.start-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.6);
+}
+
+.start-btn a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* button animation */
+@keyframes showBtn {
+  from {
+    opacity: 0;
+    transform: translatex(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translatex(-50%);
+  }
+}
+
+.gvantsa-img {
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 110rem;
+  opacity: 0;
+  transform: translateY(200px) scale(0.3);
+  animation: gvantsaAppear 1s ease forwards;
+  animation-delay: 2.6s;
+}
+
+@keyframes gvantsaAppear {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px) scale(0.7);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+.shushanikebi {
+  width: 100%;
+}

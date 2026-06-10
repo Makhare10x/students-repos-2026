@@ -1,0 +1,136 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.control-bar {
+  width: calc(100% - 280px);
+  margin: 0 10px;
+  height: 81px;
+  display: flex;
+  position: fixed;
+  left: 248px;
+  bottom: 0+5px;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(51, 56, 66, 1);
+  z-index: 1;
+}
+.control-bar-left {
+  display: flex;
+  align-items: center;
+  padding-left: variables.$main-padding;
+  gap: variables.$main-gap;
+  div {
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      @include mixins.main-text();
+      color: variables.$player-bar-color;
+      padding-bottom: 4px;
+    }
+    span {
+      display: none;
+    }
+  }
+  div P:first-child {
+    color: rgba(224, 224, 224, 1);
+  }
+}
+.control-bar-right {
+  display: flex;
+  align-items: center;
+  padding-right: variables.$main-padding;
+  gap: variables.$main-gap;
+  div:last-child {
+    display: none;
+  }
+}
+
+.player {
+  display: flex;
+  color: variables.$player-bar-color;
+  gap: variables.$main-gap;
+  align-items: center;
+}
+
+.player-bar {
+  width: 250px;
+  height: 4px;
+  background: variables.$player-bar-color;
+  border-radius: 2px;
+}
+
+.player-bar-fill {
+  width: 48%;
+  height: 100%;
+  background-color: rgba(224, 224, 224, 1);
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .control-bar {
+    width: 390px;
+    margin: 0 10px;
+    height: 81px;
+    display: flex;
+    position: fixed;
+    bottom: 0+53px;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(51, 56, 66, 1);
+    z-index: 1;
+  }
+  .control-bar-left {
+    display: flex;
+    align-items: center;
+    padding-left: variables.$main-padding;
+    gap: variables.$main-gap;
+    div {
+      display: none;
+      span {
+        display: inline;
+      }
+      .mobile-text-scroll {
+        width: 220px;
+        overflow: hidden;
+        white-space: nowrap;
+        .text-scroll {
+          display: inline-block;
+          animation: scrollText 12s linear infinite;
+        }
+        @keyframes scrollText {
+          from {
+            transform: translateX(-70%);
+          }
+          to {
+            transform: translateX(calc(100% + 50px));
+          }
+        }
+      }
+    }
+
+    div:nth-child(8) {
+      display: inline;
+    }
+    div:nth-child(9) {
+      display: inline;
+      p:last-child {
+        display: none;
+      }
+    }
+  }
+  .control-bar-right {
+    div {
+      display: none;
+    }
+    div:nth-child(2) {
+      display: inline;
+    }
+    div:last-child {
+      display: inline;
+    }
+  }
+}

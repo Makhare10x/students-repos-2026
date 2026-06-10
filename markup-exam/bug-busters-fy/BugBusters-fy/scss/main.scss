@@ -1,0 +1,12 @@
+@use "./base/reset";
+@use "./abstracts/fonts";
+@use "./base/base";
+
+// Pages
+@use "./pages/home";
+@use "./pages/library";
+@use "./pages/library-liked-songs";
+@use "./pages/aboutartist";
+@use "./pages/gridalbums";
+@use "./pages/songsPage";
+@use "./pages/search";

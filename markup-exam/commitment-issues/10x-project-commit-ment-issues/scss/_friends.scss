@@ -1,0 +1,94 @@
+@use 'variables' as *;
+
+.friends-sidebar {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 57px;
+    bottom: $footer-height + 10px;
+    width: clamp(270px, 21vw, 358px);
+
+    border: solid 1px #202020; 
+    border-radius: 10px;
+
+    color: $primary-font-color; 
+    padding: 20px 12px;
+
+    .friends-sidebar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 44px;
+
+        h2 {
+            font-size: 14px;
+        }
+
+        .icons-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+
+    .friends-list-container {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .friend-card {
+        display: flex;
+        gap: 12px;
+        border-radius: 6px;
+        cursor: pointer;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .friend-info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+
+        img {
+            width: 10px;
+            height: 12px;
+        }
+
+        .friend-name {
+            color: $primary-font-color;
+            font-size: 12px;
+
+            &:hover {
+                color: $spotify-green;
+            }
+        }
+
+        .friend-activity {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+
+            .artist, span {
+                color: $secondary-font-color;
+            }
+            
+        }
+    }
+
+}
+
+#friends:target {
+    display: block;
+}
+
+#friends:target ~ .home-page {
+    margin-right: clamp(275px, 21.5vw, 365px);
+    transition: margin-right 0.3s ease;
+}

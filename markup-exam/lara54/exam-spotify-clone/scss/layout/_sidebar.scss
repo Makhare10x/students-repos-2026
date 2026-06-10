@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as m;
+@use "../components/buttons" as bt;
+@use "../abstracts/nav-link" as nav;
+@use "../base/typography" as t;
+
+.sidebar {
+    height: 100vh;
+    @include m.page-border;
+
+    &:hover {
+        background-color: var.$bg-sd-bar-activ;
+    }
+
+}
+
+.sidebar-nav__menu {
+    padding: 0 1rem;
+
+    ul {
+        @include m.flex-column($justify: center, $direction: column);
+        gap: 2rem;
+
+        li {
+            height: 4rem;
+        }
+    }
+}
+
+.sidebar__pins-nav-link { 
+    @include m.flex-between;
+}

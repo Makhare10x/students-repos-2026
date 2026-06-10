@@ -1,0 +1,91 @@
+@use "./variables" as *;
+
+@mixin mobile-version-logos{
+    width: 19px;
+    height: 16px;   
+}
+@mixin logos-desktop-version{
+    width: 4vw;
+    height: 4vh;
+    object-fit: scale-down;
+}
+@mixin flexbox-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin typography-small{
+font-family: "Satoshi",sans-serif;
+font-weight: 400;
+font-style: Regular;
+font-size: 12px;
+line-height: 100%;
+letter-spacing: 3%;
+color: $color-fg-primary;
+
+}
+@mixin typography-sub{
+font-family: "Satoshi",sans-serif;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 3%;
+color: $color-fg-secondary;
+}
+@mixin typography-search {
+font-family: "Satoshi", sans-serif;
+font-weight: 500;
+font-style: Medium;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 3%;
+}
+@mixin h3{
+font-family: "Satoshi",sans-serif;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 3%;
+color: $color-fg-primary;
+}
+@mixin h4 {
+font-family: "Satoshi",sans-serif;
+font-weight: 500;
+font-style: Medium;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 3%;
+}
+@mixin search-circular-image{
+  width:170px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+}
+@mixin cancel-icon{
+width: 40px;
+height: 40px;
+color: $color-fg-primary;
+}
+@mixin logos-for-profile {
+    width: 40px;
+    height: 40px;
+    background-color:inherit;
+    border-radius: 50%;
+}
+@mixin profile-card {
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    display: flex;
+}
+@mixin devider-dot {
+    width: 3px;
+    height: 3px;
+    background-color: $color-fg-secondary;
+    border-radius: 50%;
+}

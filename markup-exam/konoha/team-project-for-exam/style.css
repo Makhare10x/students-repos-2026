@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  background-color: #111111;
+}
+
+.media-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem;
+}
+.media-tab img {
+  width: 2.5rem;
+  height: auto;
+  margin-left: 6rem;
+}
+.media-tab .media-button {
+  flex: 0 0 auto;
+  padding: 0.4rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #202020;
+  color: #E0E0E0;
+}
+.media-tab .media-button:hover {
+  cursor: pointer;
+  color: #898989;
+}
+
+.playlist {
+  padding: 0.9rem;
+  display: grid;
+  grid-template-columns: repeat(2, 175px);
+  grid-template-rows: repeat(3, 58px);
+  gap: 0.6rem;
+  color: #E0E0E0;
+}
+.playlist-card {
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  background-color: #202020;
+  border-radius: 0.6rem;
+}
+.playlist .playlist-descr {
+  font-size: 0.8rem;
+  padding-left: 0.5rem;
+}
+.playlist .playlist-descr .song-title {
+  color: #E0E0E0;
+}
+.playlist .playlist-descr .artist-name {
+  color: #898989;
+}
+
+/*# sourceMappingURL=style.css.map */

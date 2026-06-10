@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Redesign project</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    <input id="theme-toggle" type="checkbox" hidden />
+    <div class="app container">
+        <div id="header"></div>
+
+        
+    <!-- desktop sidebar -->
+      <aside class="sidebar" aria-label="Sidebar">
+        <div class="sidebar-head">
+          <a class="sidebar-head-link" href="library.html">
+            <span class="icon-swap sidebar-icon">
+              <img
+                class="icon-default"
+                src="./assets/icons/Name=Library, Filled=No.svg"
+                alt="Library icon"
+              />
+              <img
+                class="icon-filled"
+                src="./assets/icons/Name=Library, Filled=Yes.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </span>
+            <span class="sidebar-text">My Library</span>
+          </a>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="My Library Navigation">
+          <ul class="sidebar-list">
+            <!-- sidebar item 1 -->
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link--has-arrow" href="pages/playlist.html">
+                <span class="icon-swap sidebar-icon">
+                  <img
+                    class="icon-default"
+                    src="./assets/icons/Name=Pin, Filled=No.svg"
+                    alt="Pins icon"
+                  />
+                  <img
+                    class="icon-filled"
+                    src="./assets/icons/Name=Pin, Filled=Yes.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </span>
+                <span class="sidebar-text">Pins</span>
+              </a>
+            </li>
+
+            <!-- sidebar item 2 -->
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link--has-arrow" href="pages/playlist.html">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Name=Playlist, Filled=No.svg"
+                  alt="Playlists icon"
+                />
+                <span class="sidebar-text">Playlists</span>
+              </a>
+            </li>
+
+            <!-- sidebar item 3 -->
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="pages/song.html">
+                <span class="icon-swap sidebar-icon">
+                  <img
+                    class="icon-default"
+                    src="./assets/icons/Name=Like, Filled=No.svg"
+                    alt="Liked songs icon"
+                  />
+                  <img
+                    class="icon-filled"
+                    src="./assets/icons/Name=Like, Filled=Yes.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </span>
+                <span class="sidebar-text">Liked songs</span>
+              </a>
+            </li>
+
+            <!-- sidebar item 4 -->
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="pages/album.html">
+                <span class="icon-swap sidebar-icon">
+                  <img
+                    class="icon-default"
+                    src="./assets/icons/Name=Save, Filled=No.svg"
+                    alt="Saves icon"
+                  />
+                  <img
+                    class="icon-filled"
+                    src="./assets/icons/Name=Save, Filled=Yes.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </span>
+                <span class="sidebar-text">Saves</span>
+              </a>
+            </li>
+
+            <!-- sidebar item 5 -->
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="pages/album.html">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Name=Album, Filled=No.svg"
+                  alt="Albums icon"
+                />
+                <span class="sidebar-text">Albums</span>
+              </a>
+            </li>
+
+            <!-- sidebar item 6 -->
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="pages/library.html">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Name=Folder, Filled=No.svg"
+                  alt="Folders icon"
+                />
+                <span class="sidebar-text">Folders</span>
+              </a>
+            </li>
+
+            <!-- sidebar item 7 -->
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="pages/podcast.html">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Name=Podcast, Filled=No.svg"
+                  alt="Podcasts icon"
+                />
+                <span class="sidebar-text">Podcasts</span>
+              </a>
+            </li>
+
+            <!-- sidebar item 8 -->
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="pages/episode.html">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Name=Audiobook, Filled=No.svg"
+                  alt="Audiobooks icon"
+                />
+                <span class="sidebar-text">Audiobooks</span>
+              </a>
+            </li>
+
+            <!-- sidebar item 9 -->
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="pages/artist.html">
+                <img
+                  class="sidebar-icon"
+                  src="./assets/icons/Name=Artist, Filled=No.svg"
+                  alt="Artists icon"
+                />
+                <span class="sidebar-text">Artists</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+       <!-- mobile fixed sidebar -->
+      <aside class="mobile-sidebar" aria-label="Mobile menu">
+        <nav class="mobile-nav" aria-label="Primary Mobile Navigation">
+          <ul class="mobile-nav-list">
+            <!-- mobile nav item 1 -->
+            <li class="mobile-nav-item mobile-nav-item-active">
+              <a class="mobile-nav-link" href="index.html">
+                <img
+                  class="mobile-nav-icon"
+                  src="./assets/icons/Name=Home, Filled=Yes.svg"
+                  alt="Home icon"
+                />
+                <span class="mobile-nav-text">Home</span>
+              </a>
+            </li>
+            <!-- mobile nav item 2 -->
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="pages/discover.html">
+                <span class="icon-swap mobile-nav-icon">
+                  <img
+                    class="icon-default"
+                    src="./assets/icons/Name=Discover, Filled=No.svg"
+                    alt="Discover icon"
+                  />
+                  <img
+                    class="icon-filled"
+                    src="./assets/icons/Name=Discover, Filled=Yes.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </span>
+                <span class="mobile-nav-text">Discover</span>
+              </a>
+            </li>
+            <!-- mobile nav item 3 -->
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="pages/search.html">
+                <span class="icon-swap mobile-nav-icon">
+                  <img
+                    class="icon-default"
+                    src="./assets/icons/Name=Search, Filled=No.svg"
+                    alt="Search icon"
+                  />
+                  <img
+                    class="icon-filled"
+                    src="./assets/icons/Name=Search, Filled=Yes.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </span>
+                <span class="mobile-nav-text">Search</span>
+              </a>
+            </li>
+            <!-- mobile nav item 4 -->
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="pages/library.html">
+                <span class="icon-swap mobile-nav-icon">
+                  <img
+                    class="icon-default"
+                    src="./assets/icons/Name=Library, Filled=No.svg"
+                    alt="Library icon"
+                  />
+                  <img
+                    class="icon-filled"
+                    src="./assets/icons/Name=Library, Filled=Yes.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </span>
+                <span class="mobile-nav-text">Library</span>
+              </a>
+            </li>
+            <!-- mobile nav item 5 -->
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="pages/profile.html">
+                <span class="icon-swap mobile-nav-icon">
+                  <img
+                    class="icon-default"
+                    src="./assets/icons/Name=User, Filled=No.svg"
+                    alt="Profile icon"
+                  />
+                  <img
+                    class="icon-filled"
+                    src="./assets/icons/Name=User, Filled=Yes.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </span>
+                <span class="mobile-nav-text">Me</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+       <!-- MAIN CONTENT -->
+      <main class="main" aria-label="Main Content">
+        <!--Filter chips-->
+        <nav class="filters" aria-label="Content filters">
+          <button class="chip chip--active" type="button">All</button>
+          <button class="chip" type="button">Music</button>
+          <button class="chip" type="button">Podcasts</button>
+          <button class="chip" type="button">Audiobooks</button>
+          <button
+            class="filters-icon-btn"
+            type="button"
+            aria-label="Open filters"
+          >
+            <img src="./assets/icons/filter icon.svg" alt="Filter icon" />
+          </button>
+        </nav>
+
+        <!-- SECTION: Quick Mixes -->
+        <section id="quick-mixes" class="mix-grid" aria-label="Quick mixes"></section>
+
+        <!-- SECTION: Made For You -->
+        <section class="section-wrapper" data-home-section="music" aria-label="Made For You">
+          <header class="section-head">
+            <h2 class="section-title">Made For You</h2>
+            <div class="section-controls" aria-label="Section controls">
+              <button class="section-control-btn" type="button" aria-label="Previous">
+                <img src="./assets/icons/Name=Arrow-Left, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="Next">
+                <img src="./assets/icons/Name=Arrow-Right, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="More options">
+                <img src="./assets/icons/Name=More, Filled=No.svg" alt="" />
+              </button>
+            </div>
+          </header>
+
+          <div id="made-for-you-cards" class="cards-row" aria-label="Made For You cards"></div>
+        </section>
+
+           <!-- SECTION: Your top mixes -->
+        <section class="section-wrapper" data-home-section="music" aria-label="Your top mixes">
+          <header class="section-head">
+            <h2 class="section-title">Your top mixes</h2>
+            <div class="section-controls" aria-label="Section controls">
+              <button class="section-control-btn" type="button" aria-label="Previous">
+                <img src="./assets/icons/Name=Arrow-Left, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="Next">
+                <img src="./assets/icons/Name=Arrow-Right, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="More options">
+                <img src="./assets/icons/Name=More, Filled=No.svg" alt="" />
+              </button>
+            </div>
+          </header>
+
+          <div id="top-mixes-cards" class="cards-row" aria-label="Your top mixes cards"></div>
+        </section>
+
+        <!-- SECTION: Podcasts For You -->
+        <section class="section-wrapper" data-home-section="podcasts" aria-label="Podcasts For You">
+          <header class="section-head">
+            <h2 class="section-title">Podcasts For You</h2>
+            <div class="section-controls" aria-label="Section controls">
+              <button class="section-control-btn" type="button" aria-label="Previous">
+                <img src="./assets/icons/Name=Arrow-Left, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="Next">
+                <img src="./assets/icons/Name=Arrow-Right, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="More options">
+                <img src="./assets/icons/Name=More, Filled=No.svg" alt="" />
+              </button>
+            </div>
+          </header>
+
+          <div id="podcast-cards" class="cards-row" aria-label="Podcast cards"></div>
+        </section>
+
+        <section class="section-wrapper" data-home-section="audiobooks" aria-label="Audiobooks For You">
+          <header class="section-head">
+            <h2 class="section-title">Audiobooks For You</h2>
+            <div class="section-controls" aria-label="Section controls">
+              <button class="section-control-btn" type="button" aria-label="Previous">
+                <img src="./assets/icons/Name=Arrow-Left, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="Next">
+                <img src="./assets/icons/Name=Arrow-Right, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="More options">
+                <img src="./assets/icons/Name=More, Filled=No.svg" alt="" />
+              </button>
+            </div>
+          </header>
+
+          <div id="audiobook-cards" class="cards-row" aria-label="Audiobook cards"></div>
+        </section>
+
+        <!-- SECTION: Your favorite artists -->
+        <section class="section-wrapper section-wrapper--artists" data-home-section="music" aria-label="Your favorite artists">
+          <header class="section-head">
+            <h2 class="section-title">Your favorite artists</h2>
+            <div class="section-controls" aria-label="Section controls">
+              <button class="section-control-btn" type="button" aria-label="Previous">
+                <img src="./assets/icons/Name=Arrow-Left, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="Next">
+                <img src="./assets/icons/Name=Arrow-Right, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="More options">
+                <img src="./assets/icons/Name=More, Filled=No.svg" alt="" />
+              </button>
+            </div>
+          </header>
+
+          <div id="favorite-artists-row" class="artists-row" aria-label="Favorite artists"></div>
+        </section>
+      </main>
+
+      <div id="player"></div>
+    </div>
+
+
+
+    <script src="./js/header-load.js"></script>
+    <script src="./js/home-load.js"></script>
+    <script src="./js/player-load.js"></script>
+
+</body>
+</html>

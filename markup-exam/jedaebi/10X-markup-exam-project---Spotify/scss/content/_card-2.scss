@@ -1,0 +1,235 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// =============================================================================
+// HOME / SHARED CARDS — card_wrapper, decorative layers, section header
+// =============================================================================
+
+
+// -----------------------------------------------------------------------------
+// CARDS WRAPPER — horizontal scrollable row of cards
+// -----------------------------------------------------------------------------
+
+.cards-wrapper {
+  display: flex;
+  gap: 12px;                       
+  overflow-x: auto;
+  overflow-y: hidden;              
+  flex-shrink: 0;              
+  flex-grow: 0;                    
+}
+
+
+// -----------------------------------------------------------------------------
+// CARD WRAPPER — individual card tile with stacked decorative layers
+// -----------------------------------------------------------------------------
+
+.card_wrapper {
+  flex-shrink: 0;                 
+  margin-top: 15px;                
+  width: 170px;                     
+  height: 254px;                    
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+
+  // On hover: scale up and reveal the .second and .third depth layers
+  &:hover {
+    transform: scale(1.05);
+
+    .second { opacity: 1; }
+    .third  { opacity: 1; }
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// CARD BANNER — main square album art / cover image
+// -----------------------------------------------------------------------------
+
+.card_banner {
+  width: 170px;                    
+  height: 170px;                   
+  border-radius: $radius-md;        
+  overflow: hidden;
+  margin-top: 15px;                 
+  position: relative;
+  z-index: 1;                       
+}
+
+
+// -----------------------------------------------------------------------------
+// SECOND — middle depth layer (semi-transparent tinted rectangle behind banner)
+// -----------------------------------------------------------------------------
+
+.second {
+  width: 154px;                    
+  height: 170px;                    
+  border-radius: $radius-md;       
+  background-color: rgba(206, 110, 154, 0.3); 
+  position: absolute;
+  z-index: 0;                      
+  top: 6px;
+  left: 8px;
+  opacity: 0;                       
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+// -----------------------------------------------------------------------------
+// THIRD — back depth layer (lightest tinted rectangle, widest offset)
+// -----------------------------------------------------------------------------
+
+.third {
+  width: 133px;                   
+  height: 170px;                    
+  border-radius: $radius-md;       
+  background-color: rgba(206, 110, 154, 0.15); 
+  position: absolute;
+  z-index: 0;                      
+  top: 0;
+  left: 18.5px;                    
+  opacity: 0;                       
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+// -----------------------------------------------------------------------------
+// CARD CONTENT — text area below the banner image
+// -----------------------------------------------------------------------------
+
+.card_content {
+  margin-top: $spacing-xs;          
+}
+
+// Title row: name on the left, count/number on the right
+.content_header {
+  @include flex-between;           
+                                    
+}
+
+// Card title and track count share the same base style
+.card_title,
+.card_number {
+  font-size: $font-md;              
+  font-weight: 400;
+  color: $color-text;               
+}
+
+// Subtitle / artist / track list preview
+.card_text {
+  font-size: $font-sm;              
+  padding-top: $spacing-sm;        
+  font-weight: 400;
+  color: $color-text-muted;        
+}
+
+
+// -----------------------------------------------------------------------------
+// SECTION HEADER — title + scroll arrow controls
+// -----------------------------------------------------------------------------
+
+.section_header {
+  @include flex-between;            
+  margin-top: 30px;                
+}
+
+.section_title {
+  font-size: $font-xl;              
+                                   
+  color: $color-text;               
+}
+
+.section_controls {
+  display: flex;
+  gap: 12px;                        
+}
+
+// Scroll arrow buttons
+.arrow {
+  color: $color-text-muted;         
+
+  &:hover {
+    color: $color-text;          
+  }
+}
+
+
+// =============================================================================
+// SCROLLBAR HIDING — applied to all horizontal scroll rows
+// =============================================================================
+
+// Chrome, Safari, new Edge
+.cards-wrapper::-webkit-scrollbar,
+.search_card-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+// IE / old Edge + Firefox
+.cards-wrapper,
+.search_card-wrapper {
+  -ms-overflow-style: none;         
+  scrollbar-width: none;          
+}
+
+
+// =============================================================================
+// MOBILE — compact card sizes + hide depth layers and arrows (≤768px)
+// =============================================================================
+
+@include mobile {
+
+  // Narrower card to fit 2+ cards on a 390px screen
+  .card_wrapper {
+    width: 141px;                   
+    height: 220px;                 
+  }
+
+  // 1. Scale down the main banner proportionally
+  .card_banner {
+    width: 141px;                   
+    height: 141px;                  
+    margin-top: 10px;               
+  }
+
+  // 2. Scale down the middle depth layer and keep it always visible on mobile
+  //    (hover effects are unreliable on touch devices)
+  .second {
+    width: 128px;                  
+    height: 141px;                 
+    top: 5px;
+    left: 6.5px;                 
+    opacity: 1;                    
+  }
+
+  // 3. Hide the back depth layer on mobile — too subtle at small sizes
+  .third {
+    display: none;
+  }
+
+  // 4. Hide scroll arrow buttons — not needed in mobile layout
+  button.arrow {
+    display: none !important;
+  }
+
+}
+
+// =============================================================================
+// SCROLLBAR HIDING — applied to main content and horizontal rows
+// =============================================================================
+
+// Chrome, Safari, new Edge
+.main-content::-webkit-scrollbar, 
+.cards-wrapper::-webkit-scrollbar,
+.search_card-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+// IE / old Edge + Firefox
+.main-content, 
+.cards-wrapper,
+.search_card-wrapper {
+  -ms-overflow-style: none;         
+  scrollbar-width: none;          
+}
+// END @include mobile

@@ -1,0 +1,435 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.main-content .main-content-discover {
+  margin: -0.7rem;
+  background-color: #060606;
+  padding: 15px 0 0 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  timeline-scope: --discover-scroll;
+
+  .discover-filters {
+    margin-bottom: 28px;
+    flex-shrink: 0;
+    padding: 0 25px;
+  }
+
+  .discover-chips {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    li a {
+      padding: 8px 15px;
+      text-decoration: none;
+      color: rgba(224, 224, 224, 1);
+      background-color: $color-bg-chip;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 400;
+      white-space: nowrap;
+      display: inline-block;
+
+      &:hover {
+        background: $color-bg-chip-active;
+        color: $color-text-chip-active;
+      }
+    }
+
+    .active-chip a {
+      background-color: $color-bg-chip-active;
+      color: $color-text-chip-active;
+    }
+  }
+
+  .discover-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .discover-bg-1 {
+    background: radial-gradient(
+      ellipse at 30% 50%,
+      rgba(40, 160, 200, 0.7) 0%,
+      rgba(25, 100, 140, 0.45) 30%,
+      rgba(15, 50, 80, 0.2) 60%,
+      rgba(5, 20, 40, 0.05) 85%,
+      transparent 100%
+    );
+    animation: fadeOut linear both;
+    animation-timeline: --discover-scroll;
+  }
+
+  .discover-bg-2 {
+    background: radial-gradient(
+      ellipse at 30% 50%,
+      rgba(180, 60, 30, 0.7) 0%,
+      rgba(140, 40, 15, 0.45) 30%,
+      rgba(80, 20, 5, 0.2) 60%,
+      rgba(30, 8, 2, 0.05) 85%,
+      transparent 100%
+    );
+    opacity: 0;
+    animation: fadeIn linear both;
+    animation-timeline: --discover-scroll;
+  }
+
+  .discover-filters,
+  .discover-featured {
+    position: relative;
+    z-index: 1;
+  }
+
+  .discover-featured {
+    flex: 1;
+    overflow: hidden auto;
+    scroll-snap-type: y mandatory;
+    scroll-timeline-name: --discover-scroll;
+    scroll-timeline-axis: block;
+    scroll-padding-top: 8%;
+    scrollbar-width: none;
+
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 8%,
+      black 88%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 8%,
+      black 88%,
+      transparent 100%
+    );
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .discover-slide {
+    scroll-snap-align: start;
+    height: 82%;
+    flex-shrink: 0;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16vh;
+
+    &:first-child {
+      margin-top: 10vh;
+    }
+
+    &:last-child {
+      margin-bottom: 10vh;
+    }
+  }
+
+  .discover-card {
+    position: relative;
+    flex-shrink: 0;
+
+    img {
+      width: 390px;
+      height: auto;
+      border-radius: 12px;
+    }
+  }
+
+  .discover-info {
+    flex-shrink: 0;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .discover-cover {
+    width: 184px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .discover-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: rgba(224, 224, 224, 1);
+    margin-bottom: 8px;
+  }
+
+  .discover-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-text-secondary;
+
+    &-highlight {
+      color: rgba(224, 224, 224, 1);
+      font-weight: 500;
+    }
+  }
+
+  .discover-dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: $color-text-secondary;
+  }
+
+  .discover-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .discover-play {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
+
+  .discover-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: $color-text-secondary;
+    font-size: 13px;
+
+    img {
+      width: auto;
+      height: 40px;
+      opacity: 0.7;
+    }
+
+    &:hover img {
+      opacity: 1;
+      filter: brightness(1.5);
+    }
+  }
+
+  .discover-save-count {
+    color: $color-text-secondary;
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .discover-genres {
+    display: flex;
+    gap: 10px;
+
+    .genre-tag {
+      padding: 8px 18px;
+      border-radius: 44px;
+      border: 2px solid rgba(137, 137, 137, 0.25);
+      color: $color-text-secondary;
+      font-size: 14px;
+      font-weight: 400;
+      cursor: pointer;
+
+      &:hover {
+        border-color: rgba(137, 137, 137, 0.5);
+        color: rgba(224, 224, 224, 1);
+      }
+    }
+  }
+
+  @media (max-width: 1500px) {
+    .discover-slide {
+      gap: 35px;
+    }
+
+    .discover-card img {
+      width: 320px;
+    }
+
+    .discover-cover {
+      width: 140px;
+    }
+
+    .discover-info {
+      gap: 18px;
+    }
+
+    .discover-title {
+      font-size: 24px;
+    }
+
+    .discover-meta {
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .discover-play img {
+      width: 34px;
+      height: 34px;
+    }
+
+    .discover-action-btn {
+      font-size: 12px;
+
+      img {
+        height: 34px;
+      }
+    }
+
+    .discover-actions {
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .discover-save-count {
+      font-size: 12px;
+    }
+
+    .discover-genres .genre-tag {
+      padding: 6px 14px;
+      font-size: 13px;
+    }
+  }
+
+  @media (max-width: 1240px) {
+    padding-top: 10px;
+    margin: 0;
+    height: calc(100dvh - 9.5rem - 7.2rem);
+
+    .discover-featured {
+      scroll-padding-top: 5%;
+
+      mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 5%,
+        black 90%,
+        transparent 100%
+      );
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 5%,
+        black 90%,
+        transparent 100%
+      );
+    }
+
+    .discover-slide {
+      flex-direction: column;
+      gap: 20px;
+      height: auto;
+      min-height: 90%;
+      margin-bottom: 4vh;
+      padding: 0 15px;
+
+      &:first-child {
+        margin-top: 5vh;
+      }
+
+      &:last-child {
+        margin-bottom: 5vh;
+      }
+    }
+
+    .discover-info {
+      padding: 0 15px;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .discover-slide {
+      gap: 25px;
+    }
+
+    .discover-card img {
+      width: 260px;
+    }
+
+    .discover-cover {
+      width: 110px;
+    }
+
+    .discover-info {
+      gap: 14px;
+    }
+
+    .discover-title {
+      font-size: 20px;
+    }
+
+    .discover-meta {
+      font-size: 12px;
+      margin-bottom: 14px;
+    }
+
+    .discover-play img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .discover-action-btn {
+      font-size: 11px;
+
+      img {
+        height: 30px;
+      }
+    }
+
+    .discover-actions {
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .discover-save-count {
+      font-size: 11px;
+    }
+
+    .discover-genres .genre-tag {
+      padding: 5px 12px;
+      font-size: 12px;
+    }
+  }
+}

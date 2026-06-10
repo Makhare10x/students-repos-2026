@@ -1,0 +1,88 @@
+@use "../base" as *;
+
+.section {
+  margin-bottom: calc($spacing-xl - 2px);
+}
+
+.section-header {
+  @include flex-row(space-between, center);
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+}
+
+.section-actions {
+  @include flex-row(flex-end, center);
+  gap: $spacing-xs;
+}
+.img-opacity {
+  opacity: 0.5;
+}
+
+.section-action-btn {
+  @include square(40px);
+  @include flex-row(center, center);
+  @include hover-transition(color);
+  border-radius: $radius-circle;
+  color: $color-text-muted;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-text-primary;
+    background-color: $color-bg-elevated;
+  }
+}
+
+.library-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  color: $color-text-secondary;
+}
+
+.library-toolbar__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toolbar-btn,
+.sort-btn,
+.search-btn,
+.toolbar-plus {
+  border: 0;
+  background: transparent;
+  color: $color-text-secondary;
+  cursor: pointer;
+  @include hover-transition(color);
+  border-radius: $radius-pill;
+
+  &:hover {
+    color: $color-text-primary;
+    background-color: $color-bg-elevated;
+  }
+}
+
+.toolbar-btn {
+  width: 40px;
+  height: 40px;
+}
+
+.sort-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 8px;
+  font-size: $font-size-base;
+}
+
+.library-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 20px 11px;
+}

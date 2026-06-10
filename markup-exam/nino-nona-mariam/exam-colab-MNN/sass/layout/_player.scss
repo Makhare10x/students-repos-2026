@@ -1,0 +1,552 @@
+@use '../abstract/variables' as *;
+
+// this is the scrolling animation for the song title
+@keyframes marquee-scroll { 
+  0%    { transform: translateX(0); }        
+  85%, 100% { transform: translateX(-50%); }        
+}
+
+// the music player bar at the bottom of the screen
+.player {
+    position: fixed;
+    bottom: 95px;          
+    left: 0;
+    right: 0;
+    background-color: #333842;
+    border-radius: $radius-main;
+    width: 100vw;
+    height: 61px;
+    margin: 0 8px;
+    padding: 8px;
+    font-family: 'satoshi';
+    z-index: 100;
+    transition: height 0.3s ease;
+} 
+
+// only used on desktop, hidden for now
+.left-cont {
+    display: none;
+}
+
+// the album art and song info on mobile
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    // album cover image
+    img {
+        width: 43px;
+        height: 43px;
+        padding-right:8px ;
+    }
+}
+
+// the column about song title, artist, album
+.song-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    letter-spacing: 3%;
+    line-height: 100%;
+    font-size:$font-size-medium ;
+    font-weight: $font-weight-regular;
+        
+    // the song title row
+    .song-name {
+        position: relative;
+        overflow: hidden;
+        width: 150px;
+
+        // this creates the fade/blur effect on the right edge
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 28px;
+            z-index: 2;
+            pointer-events: none;
+            right: 0;
+            background: linear-gradient(to left, #333842, transparent); 
+            }
+
+        // the scrolling track
+        .marquee {         
+            display: flex;
+            width: max-content;
+            animation: marquee-scroll 8s ease-in-out infinite;
+        }
+        .song {
+            padding-right: 60px;
+            color: $primary-text-color;
+        }
+    }
+
+    // artist name below the song title
+    .artist {
+        color: $secondary-text-color;
+    }
+
+    // album name, only shown on desktop
+    .album {
+        display: none;
+    }
+}
+// the progress bar at the bottom of the player
+.progress-bar{
+        width: 90%;
+        position: fixed;
+        bottom: 95.5px;          
+        left: 12px;
+        right: 0;
+    }
+
+// right side controls like volume,lyrics, only used on desktop
+.right-cont {
+    display: none;
+}
+
+// ───────────────────────────
+// DESKTOP
+// ───────────────────────────
+
+@media (min-width: 768px) {
+
+    // the music player bar at the bottom of the screen
+    .player {
+        max-width: 1491px;
+        height: 81px;
+        bottom: 0;
+        padding: 0;
+        margin: 4px 7px;
+        display: flex;
+        flex-direction: row;
+        margin-left: auto
+    }
+
+    // show desktop left section (buttons + progress bar)
+    .left-cont {
+        display: flex;
+        align-items: center;
+        margin: 21px 0 20px 21px;
+        max-width: 655px;
+    }
+
+    //progress bar
+    .left-time {
+        color: $secondary-text-color;
+        font-size: $font-size-small;
+        font-weight: $font-weight-regular;
+        letter-spacing: 3%;
+        line-height: 100%;
+        margin: 11px 10px 13px 5px;
+    }
+    .playback-bar {
+        margin: 4px 0;
+        transition:  transform 0.1s;
+        .bar-hover {
+            display: none;
+        }
+
+        &:hover {
+            :first-child {
+                display: none;
+            }
+            :last-child {
+                display: block;
+            }
+        }
+    }
+
+    // show desktop right section (buttons + song info)
+    .center {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        max-width: 250px;
+        height: 57px;
+        padding: 3px 0;
+        margin: 12px 26px;
+        
+        
+        img {
+            width: 51px;
+            height: 51px;
+        }
+        
+        .song-name .marquee {
+            animation: none;
+            span{
+                display: none;
+            }
+        }
+        .album {
+            display: block;
+            color: $secondary-text-color;
+        }
+        .play-sm, .add-sm, .progress-bar {
+            display: none;
+        }
+    }
+    .right-cont {
+       display: flex;
+       flex-direction: row;
+       justify-content: right;
+       margin: 16px 16px 16px 200px;
+    }
+
+    // Add to playlist popup window
+    .add-window {
+        position: absolute;
+        bottom: 137%; 
+        right: 0;
+        width: 372px;
+        z-index: 10;
+        background-color:  rgba(32, 32, 32, 1);
+        border-radius:$radius-main;
+
+        .add-header {
+            color: $primary-text-color;
+            padding: 17px 24px 17px;
+            border-bottom: 1px solid rgba(137, 137, 137, 0.30);
+            font-size: $font-size-medium;
+            font-weight: $font-weight-medium;
+        }
+
+        .add-search {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 21px 23px;
+            background-color: $primary-color;
+            border-radius:$radius-main ;
+            border: none;
+
+            input {
+                background-color: transparent;
+                border: none;
+                margin: 18px 19px;
+                color: rgba(137, 137, 137, 0.70);
+                font-size: $font-size-medium;
+                font-weight: $font-weight-medium;
+            }
+            .search {
+                margin:8px 7.5px ;
+            }
+        }
+
+        .new-list {
+            display: flex;
+            justify-content: center;
+            margin: 0 23px;
+
+            span {
+                margin: 11px 10px ;
+                text-align: center;
+                color: $primary-text-color;
+                font-size: $font-size-medium;
+                font-weight: $font-weight-medium;
+            }
+        }
+
+        .album-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-bottom: 1px solid rgba(137, 137, 137, 0.3);
+            padding: 12px 23px 31px 23px;
+            gap: 15px;
+
+            span {
+                margin: 11px 161px 11px 10px ;
+                text-align: center;
+                color: $primary-text-color;
+                font-size: $font-size-medium;
+                font-weight: $font-weight-medium;
+            }
+
+            .playlists {
+                display: flex;
+                flex-direction:row;
+            }
+
+            .right-btn {
+                width: 40.41px;
+                height: 40.41px;
+                
+            }
+        }
+
+        .playlist-actions {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around; 
+            
+        }
+    
+    }
+
+    // Lyrics popup window
+    .lyrics-window {
+        position: absolute;
+        bottom: 102%; 
+        right: 15%;
+        width: 432px;
+        height: 535px;
+        z-index: 10;
+        background-color:  rgba(32, 32, 32, 1);
+        border-radius:$radius-main;
+
+        .lyrics-header {
+            display: flex;
+            flex-direction: row;
+            margin-top: 7px;
+            border-bottom: 1px solid rgba(137, 137, 137, 0.3);
+            
+            span {
+                color:$primary-text-color ;
+                margin: 10px 0 17px 23px ;
+            }
+
+            .arrow {
+                width: 40px;
+                height: 40px;
+                margin-right: 223px;
+            }
+        }
+        
+        .lyrics-content {
+            display: flex;
+            flex-direction: column;
+            gap: 42px;
+            margin:20px 22px 30px 23px ;
+            
+
+            .upper {
+                color: $primary-text-color;
+                font-size: $font-size-large;
+                font-weight: $font-weight-bold;
+                line-height: 200%;
+            }
+
+            .bottom {
+                color: rgba(219, 219, 219, 0.2);
+                font-size: $font-size-large;
+                font-weight: $font-weight-bold;
+                line-height: 200%;
+
+                span {
+                    background: linear-gradient(to right, $primary-text-color 55%, rgba(219, 219, 219, 0.2) 20%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent; 
+                    background-clip: text; 
+                 }
+            }
+        }
+    }
+
+    // More options popup window
+    .more-window {
+        position: absolute;
+        bottom: 102%; 
+        right: 10%;
+        width: 287px;
+        height: 609px;
+        z-index: 10;
+        background-color:  rgba(32, 32, 32, 1);
+        border-radius:$radius-main;
+        padding: 17px 18px;
+
+        .more-list {
+            display: flex;
+            flex-direction: row;
+            gap: 9px;
+            margin-bottom: 13px;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+
+            p {
+                margin-top: 10px;
+                color: $primary-text-color;
+                font-size: 16px;
+                font-weight: $font-weight-medium;
+            }
+
+            .forward-1 {margin-left: 50px;}
+            .forward-2 {margin-left: 12px;}
+            .forward-3 {margin-left: 75px;}
+        }
+    }
+    
+    // Queue popup window
+    .queue-window {
+        position: absolute;
+        bottom: 102%; 
+        right: 0%;
+        width: 432px;
+        height: 867px;
+        z-index: 10;
+        background-color:  rgba(32, 32, 32, 1);
+        border-radius:$radius-main;
+    }
+
+    .queue-header {
+        display: flex;
+        flex-direction: row;
+        gap: 53px;
+        color: $primary-text-color;
+        padding: 17px 23px 17px;
+        border-bottom: 1px solid rgba(137, 137, 137, 0.30);
+        font-size: $font-size-medium;
+        font-weight: $font-weight-medium;
+    }
+
+    .queue-list {
+        display: flex;
+        flex-direction: column;
+
+        .queue-song-1 {
+            display: flex;
+            flex-direction: row;
+            margin: 19px 16px 20px 23px;
+
+            .cover {
+                width: 53px;
+                height: 53px;
+
+                .line-bar {
+                    position: absolute;
+                    z-index: 1;
+                    left: 6%;
+                    top: 9%;
+                }
+            }
+
+            .name {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 5px;
+                margin-left: 12px;
+                margin-right: 106px;
+
+                span {
+                    color: $primary-text-color;
+                    font-size: 16px;
+                }
+
+                small {
+                    color: $secondary-text-color;
+                    font-size: $font-size-small;
+                }
+            }
+        }
+
+        .next-up{
+            color: white;
+            font-size: 16px;
+            font-weight:$font-weight-bold ;
+            margin: 16px 0 8px 23px;
+        }
+
+        .album-functions {
+            display: flex;
+            flex-direction: row;
+            width: 393.41px;
+            height: 40.41px;
+            margin: 8px 15.59px 14.59px 18px ;
+
+            .album-icon {
+                width: 24px;
+                height: 24px;
+                margin-top: 6px;
+            }
+
+            span {
+                font-size: 16px;
+                color: white;
+                margin: 9px 44px 0 2px;
+            }
+        }
+
+        .queue-song {
+            display: flex;
+            flex-direction: row;
+            margin: 11px 16px 0 23px ;
+
+            .cover {
+                width: 53px;
+                height: 53px;
+
+            }
+
+            .name {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 5px;
+                margin-left: 12px;
+                margin-right: 106px;
+
+                span {
+                    color: $primary-text-color;
+                    font-size: 16px;
+                }
+
+                small {
+                    color: $secondary-text-color;
+                    font-size: $font-size-small;
+                }
+            }
+        }
+
+        .album-functions-2 {
+            display: flex;
+            flex-direction: row;
+            width: 400.41px;
+            height: 40.41px;
+            margin: 11px 15.59px 14.59px 18px ;
+
+            .album-icon{
+                width: 24px;
+                height: 24px;
+                margin-top: 6px;
+            }
+            span {
+                font-size: 16px;
+                color: white;
+                margin: 9px 148px 0 2px;
+            }
+        }
+
+    } 
+
+    .queue-footer {
+        width: 432px;
+        height: 57px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 45px;
+        border-top: 1px solid rgba(137, 137, 137, 0.30); 
+
+        span {
+            color: $primary-text-color;
+            font-size: $font-size-medium;
+            margin: 19px 162px 19px 23px;
+        }
+
+        img{
+            width: 50px;
+            height: 25.41px;
+            margin: 16px 15.59px;
+        }
+    }
+
+}

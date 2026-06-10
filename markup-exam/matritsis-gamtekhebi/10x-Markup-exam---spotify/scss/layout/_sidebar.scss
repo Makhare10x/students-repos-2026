@@ -1,0 +1,96 @@
+@use "../base/" as *;
+
+:root {
+  --sidebar-width: 300px;
+}
+
+.sidebar {
+  flex-shrink: 0;
+  background: #060606 !important;
+  position: relative;
+}
+
+.sidebar {
+  transform-origin: top left;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/* LIST */
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: -12px;
+  padding: 0;
+  list-style: none;
+}
+
+/* ITEM */
+.sidebar-item {
+  border-radius: 5px;
+}
+
+/* ROW */
+.sidebar-item > a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  height: 40px;
+  padding: 0 12px;
+
+  border-radius: 5px;
+
+  font-family: "Satoshi", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+/* ICON */
+.sidebar-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* TEXT */
+.sidebar-item > a span {
+  flex: 1;
+  white-space: nowrap;
+}
+
+/* ARROW */
+.sidebar-item:nth-child(2) > a::after,
+.sidebar-item:nth-child(3) > a::after {
+  content: "";
+  width: 8px;
+  height: 9px;
+
+  background-image: url("../assets/icons/arrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  margin-left: auto;
+}
+
+/* HOVER */
+.sidebar-item > a:hover {
+  background: #1a1a1a;
+}
+
+/* ACTIVE */
+.sidebar-item--active > a {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.inner-page .sidebar {
+  background-color: #111111 !important;
+  border-radius: 10px;
+  margin: 8px 8px 8px 8px;
+  padding: 24px;
+}

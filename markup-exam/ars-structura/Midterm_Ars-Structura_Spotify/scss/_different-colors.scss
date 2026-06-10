@@ -1,0 +1,401 @@
+$light-color: #E0E0E0;
+$gray-color: #202020;
+@mixin music-photo-size {
+    width: 150px;
+    height: 150px;
+}
+
+@mixin grid-font {
+    font-family: "satoshi", "sans-sarif";
+    color: #E0E0E0;
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+
+.music-photo1 {
+   @include music-photo-size;
+
+   background-image: url(../assets/card_img_1.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; 
+}   
+.fifty1 {
+    @include grid-font;
+    color: #CE6E9A;
+    margin-left: 25px;
+}
+.background-shadow1 {
+    width: 120px;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+    background-color: rgba(240, 128, 128, 0.5);
+    margin-bottom: 1px;
+}
+
+
+
+.music-photo2 {
+  @include music-photo-size;
+
+   background-image: url(../assets/card_img_2.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; 
+}   
+
+.fifty2 {
+    @include grid-font;
+    color: #95E6D3;
+    margin-left: 25px;
+}
+.background-shadow2 {
+    width: 120px;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+    background-color: #95e6d33b;
+    margin-bottom: 1px;
+}
+
+
+
+.music-photo3 {
+   @include music-photo-size;
+
+   background-image: url(../assets/card_img_3.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; 
+}   
+
+.fifty3 {
+    @include grid-font;
+    color: #F4B8BD;
+    margin-left: 25px;
+}
+.background-shadow3 {
+    width: 120px;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+    background-color: #f4b8bd74;
+    margin-bottom: 1px;
+}
+
+.music-photo4 {
+   @include music-photo-size;
+
+   background-image: url(../assets/card_img_4.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; 
+}   
+
+.fifty4 {
+    @include grid-font;
+    color: #C3E7B7;
+    margin-left: 25px;
+}
+.background-shadow4 {
+    width: 120px;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+    background-color: #c3e7b775;
+    margin-bottom: 1px;
+}
+
+.music-photo5 {
+  @include music-photo-size;
+
+   background-image: url(../assets/card_img_5.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; 
+}   
+
+.fifty5 {
+    @include grid-font;
+    color: #F37FA6;
+    margin-left: 25px;
+}
+.background-shadow5 {
+    width: 120px;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+    background-color: #f37fa672;
+    margin-bottom: 1px;
+}
+
+.music-photo6 {
+   @include music-photo-size;
+
+   background-image: url(../assets/card_img_6.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; 
+}   
+
+.fifty6 {
+    @include grid-font;
+    color: #A0BEC8;
+    margin-left: 25px;
+}
+.background-shadow6 {
+    width: 120px;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+    background-color: #a0bec86d;
+    margin-bottom: 1px;
+}
+
+.music-photo7 {
+   @include music-photo-size;
+
+   background-image: url(../assets/card_img_7.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; 
+}   
+
+.fifty7 {
+    @include grid-font;
+    color: #FDD87D;
+    margin-left: 25px;
+}
+.background-shadow7 {
+    width: 120px;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+    background-color: #fdd97d73;
+    margin-bottom: 1px;
+}
+
+.music-photo8 {
+   @include music-photo-size;
+
+   background-image: url(../assets/card_img_8.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; 
+}   
+
+.fifty8 {
+    @include grid-font;
+    color: #D4B2A9;
+    margin-left: 25px;
+}
+.background-shadow8 {
+    width: 120px;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+    background-color: #d4b2a966;
+    margin-bottom: 1px;
+}
+
+
+.music-photo9 {
+   @include music-photo-size;
+
+   background-image: url(../assets/card_img_9.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; 
+}   
+
+.fifty9 {
+    @include grid-font;
+    color: #CCF665;
+    margin-left: 25px;
+}
+.background-shadow9 {
+    width: 120px;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+    background-color: #cdf66570;
+    margin-bottom: 1px;
+}
+
+.music-photo10 {
+   @include music-photo-size;
+
+   background-image: url(../assets/card_img_10.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; 
+}   
+
+.fifty10 {
+    @include grid-font;
+    color: #9BF0E2;
+    margin-left: 25px;
+}
+.background-shadow10 {
+    width: 120px;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+    background-color: #9bf0e273;
+    margin-bottom: 1px;
+}
+
+
+.music-photo11 {
+   @include music-photo-size;
+
+   background-image: url(../assets/card_img_11.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; 
+}   
+
+.fifty11 {
+    @include grid-font;
+    color: #6F86FF;
+    margin-left: 25px;
+}
+.background-shadow11 {
+    width: 120px;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+    background-color: #6f87ff77;
+    margin-bottom: 1px;
+}
+
+
+.music-photo12 {
+   @include music-photo-size;
+
+   background-image: url(../assets/card_img_12.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; 
+}   
+
+.fifty12 {
+    @include grid-font;
+    color: #FFCBD4;
+    margin-left: 25px;
+}
+.background-shadow12 {
+    width: 120px;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+    background-color: #ffcbd47b;
+    margin-bottom: 1px;
+}
+
+.music-photo13 {
+   @include music-photo-size;
+
+   background-image: url(../assets/card_img_13.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; 
+}   
+
+.fifty13 {
+    @include grid-font;
+    color: #D4B2A9;
+    margin-left: 25px;
+}
+.background-shadow13 {
+    width: 120px;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+    background-color: #d4b2a966;
+    margin-bottom: 1px;
+}
+
+.music-photo14 {
+   @include music-photo-size;
+
+   background-image: url(../assets/card_img_14.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; 
+}   
+
+.fifty14 {
+    @include grid-font;
+    color: #27856B;
+    margin-left: 25px;
+}
+.background-shadow14 {
+    width: 120px;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+    background-color: #27856a82;
+    margin-bottom: 1px;
+}
+
+
+
+.music-photo15 {
+   @include music-photo-size;
+
+   background-image: url(../assets/card_img_15.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; 
+}   
+
+.fifty15 {
+    @include grid-font;
+    color: #D4B2A9;
+    margin-left: 25px;
+}
+.background-shadow15 {
+    width: 120px;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+    background-color: #d4b2a966;
+    margin-bottom: 1px;
+}
+
+
+.music-photo17 {
+   @include music-photo-size;
+
+   background-image: url(../assets/card_img_17.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; 
+}   
+
+.fifty17 {
+    @include grid-font;
+    color: #F9E72C;
+    margin-left: 25px;
+}
+.background-shadow17 {
+    width: 120px;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+    background-color: #f9e82c80;
+    margin-bottom: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

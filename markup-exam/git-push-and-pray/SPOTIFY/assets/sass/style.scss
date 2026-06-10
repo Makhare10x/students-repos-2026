@@ -1,0 +1,34 @@
+// abstracts
+@use 'abstracts/variables';
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+
+// layout
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/main';
+@use 'layout/aside';
+
+// pages
+@use 'pages/album';
+@use 'pages/discover';
+@use 'pages/episodes';
+@use 'pages/library';
+@use 'pages/liked-songs';
+@use 'pages/podcasts';
+@use 'pages/friends';
+@use 'pages/mobilelib';
+@use 'pages/librarypg2';
+@use 'pages/song';
+
+
+
+body {
+    background-color: #060606;
+    
+}
+.main_structure {
+    display: flex;
+    gap:20px;
+
+}

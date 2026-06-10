@@ -1,0 +1,389 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.friends-panel{
+    display: none;
+}
+.nav-filter{
+    @include flex-center(1rem);
+    justify-content: space-between;
+    align-self: start;
+    width: 100%;
+    padding: 0 1.5rem;
+    position: sticky;
+    top: 0;
+    background: $nav-bg-reverse;
+    z-index: 1000;
+}
+.filter-bttn-wrapper{
+    @include flex-center(1rem);
+    button{
+        transition: color 0.2s linear, transform 0.2s linear;
+
+        &:hover{
+            color: #1DB954;
+            transform: scale(1.05); 
+        }
+    }
+}
+.filter-bttn{
+    background-color: transparent;
+    width: 4rem;
+    height: 4rem;
+    padding: 0;
+    img{
+        width: 100%;
+    }
+}
+.filtered-content{
+    @include flex-center(1rem);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem;
+    
+}
+.filtered-item{
+    @include flex-center(1rem);
+    max-width: 17.5rem;
+    width: 100%;
+    background: #282828;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    flex-grow: 1;
+}
+.filtered-item-img{
+    width: 4.3rem;
+    border-radius: 0.5rem;
+    }
+.filtered-item-info{
+    @include flex-center(1rem);
+    align-items: center;
+    flex-direction: column;
+    color: $white;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 5.8rem;
+    overflow: hidden;
+    span{
+        width: 100%;
+        text-align: start;
+    }
+
+}
+.filtered-item-info {
+    @include flex-center(1rem);
+    align-items: center;
+    flex-direction: column;
+    color: $white;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 5.8rem;
+    overflow: hidden;
+
+    span {
+        width: 100%;
+        text-align: start;
+        font-size: 1.4rem;
+        letter-spacing: 3%;
+        line-height: 100%;
+    }
+
+    &:hover {
+        .filtered-item-title {
+            @include marquee(10s);
+            animation-play-state: running; 
+        }
+    }
+}
+
+.filtered-item-title {
+    display: inline-block; 
+    white-space: nowrap;
+    
+}
+@include marquee-key; //this is keyframe for marquee brooo
+
+.suggested-content{
+    @include flex-center(1.5rem);
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem;
+}
+.suggested-content-header{
+    @include flex-center(1rem);
+    justify-content: space-between;
+    width: 100%;
+    h3{
+        font-size: 2rem;
+    }
+}
+.more-bttn{
+    @include flex-center(0.5rem);
+    padding: 0 0.8rem;
+    height: 2rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    &:hover{
+        div{
+            background-color: #1DB954;
+        }
+    }
+    div{
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background: $text-color;
+        transition: background-color 0.2s linear;
+    }
+}
+.pagination-btn-container{
+    display: none
+}
+.suggested-card-container{
+    @include flex-center(1rem);
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 1.5rem 0.5rem 0;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
+}
+.suggestion-card{
+    @include flex-center(1rem);
+    flex: 0 0 14rem;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.2s linear;
+    &:hover{
+        transform: scale(1.03);
+    }
+}
+.card-banner{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 0.6rem;
+    position: relative;
+    overflow: visible;
+    z-index: 0;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.6rem;
+        position: relative;
+        z-index: 1;
+    }
+}
+.card-background-1{
+    position: absolute;
+    width: 90%;
+    aspect-ratio: 1/1;
+    background: #ce6e9955;
+    border-radius: 0.6rem;
+    top: -0.6rem; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+.card-background-2{
+    position: absolute;
+    width: 80%;
+    aspect-ratio: 1/1;
+    background: #CE6E9A26;
+    border-radius: 0.6rem;
+    top: -1rem; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
+}
+.card-content{
+    @include flex-center(0.5rem);
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    span{
+        width: 100%;
+        text-align: start;
+        font-size: 1.2rem;
+        letter-spacing: 3%;
+        line-height: 100%;
+    }
+}
+.suggestion-card-artist{
+    font-size: 1rem;
+    color: $text-color;
+}
+
+// tablet
+@media (min-width: 600px) {
+  .friends-panel{
+    display: none;
+}
+}
+// desktop
+@media (min-width: 1024px) {
+    main{
+        border: 0.1px solid #202020;
+        border-radius: 1rem;
+        width: 100%;
+        overflow-x: hidden; 
+        overflow-y: auto;
+        min-height: 0;
+        position: relative;
+    }
+    .filtered-content{
+        display: none;
+    }
+    .suggestion-card{
+        flex: 0 0 17rem;
+    }
+    .more-bttn-container{
+        @include flex-center(0.2rem);
+        justify-content: space-between;
+    }
+    .pagination-btn-container{
+        @include flex-center(0.5rem);
+    }
+    .next-pgnt-bttn, .prev-pgnt-bttn{
+        background: transparent;
+        width: 100%;
+        padding: 1rem;
+        transition: filter 0.2s linear;
+        &:hover{
+            filter: invert(61%) sepia(53%) 
+                        saturate(3025%) hue-rotate(104deg) 
+                        brightness(96%) contrast(90%);
+        }
+        img{
+            max-width: 4rem;
+            width: 100%;
+        }
+    }
+    .friends-panel {
+        display: none;
+        grid-area: friends;
+        background: $bg-primary;
+        overflow-y: auto;
+        padding: 2rem 1.5rem;
+        border: 0.1px solid #202020;
+        border-radius: 1rem;
+        margin-left: 0.5rem;
+    }
+    .active{
+        display: block;
+    }
+
+    .friends-panel-header {
+        @include flex-center(0.5rem);
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+    }
+
+    .friends-panel-actions {
+        @include flex-center(0rem);
+        justify-content: flex-end;
+
+        button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+
+            &:hover {
+                filter: invert(61%) sepia(53%) 
+                    saturate(3025%) hue-rotate(104deg) 
+                    brightness(96%) contrast(90%);
+            }
+
+            img {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+    }
+
+    .friend-item {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 1rem 0;
+        border-bottom: 1px solid #1a1a1a;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .friend-avatar {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .friend-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        overflow: hidden;
+    }
+
+    .friend-name {
+        font-size: 1.3rem;
+        font-family: $satoshi;
+        color: $text-color;
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .friend-activity {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+
+        img {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+    }
+
+    .friend-song {
+        font-size: 1.2rem;
+        color: $text-color;
+        font-family: $satoshi;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .friend-separator {
+        color: #888;
+        font-size: 1.2rem;
+    }
+
+    .friend-artist {
+        font-size: 1.2rem;
+        color: #888;
+        font-family: $satoshi;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+}

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="sass/style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/library.png" alt="library">
+              <span>My Library</span>
+            </a>
+          </li>
+
+           <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/pins.png" alt="Pins">
+              <span>Pins</span>
+            </a>
+          </li>
+
+           <li class="sidebar-link">
+            <input type="checkbox" id="playlist-toggle">
+            <label for="playlist-toggle" class="playlist-btn">
+              <img src="css/assets/images/playlists.png" alt="playlist">
+                     <span>Playlists</span>
+              <img src="css/assets/images/arrow.png" alt="arrow icon" class="dropdown-img">
+            </label>
+            <ul class="dropdown-playlist">
+              <li>Chill Stuff</li>
+              <li>Rock n Roll</li>
+              <li>The Jux Box</li>
+              <li>Selected Linkin Park</li>
+              <li>Vibe</li>
+            </ul>
+          </li>
+
+           <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/liked songs.png" alt="liked songs">
+              <span>Liked Songs</span>
+            </a>
+          </li>
+
+           <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/save.png" alt="saves">
+              <span>Saves</span>
+            </a>
+          </li>
+
+          <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/folders.png" alt="folders">
+              <span>Folders</span>
+            </a>
+          </li>
+
+          <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/podcasts.png" alt="podcasts">
+              <span>Podcasts</span>
+            </a>
+          </li>
+
+          <li class="sidebar-link">
+              
+            <a href="#">
+
+              <img src="css/assets/images/audiobooks.png" alt="audiobooks">
+              <span>Audiobooks</span>
+            </a>
+          </li>
+
+           <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/artists.png" alt="artists">
+              <span>Artists</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+
+      </aside>
+      <div class="main-layout">
+        <header class="top-header">
+          <!-- Header-->
+          <nav>
+            <ul class="header-right-list">
+              <li class="right-list-item">
+                <img src="css/assets/images/home.png" alt="home">
+                <span>Home</span>
+              </li>
+
+              <li class="right-list-item">
+              <img src="css/assets/images/discoverr.png" alt="discoverr">
+              <span>Discover</span>
+              </li>
+
+              <li class="right-list-item">
+              <img src="css/assets/images/search.png" alt="search">
+              <span>Search</span>
+              </li>
+            </ul>
+   <!-- Header-left list-->
+            <ul class="header-left-list">
+              <li class="left-list-item">
+                <img src="css/assets/images/bell.png" alt="bell">
+              </li>
+
+              <li class="left-list-item">
+                <img src="css/assets/images/lock.png" alt="lock">
+              </li>
+
+              <li class="left-list-item">
+                <img src="css/assets/images/activity.png" alt="activity">
+              </li>
+
+              <li class="left-list-item">
+                <img src="css/assets/images/settings.png" alt="settings">
+              </li>
+
+              <li class="left-list-item">
+                <img src="css/assets/images/sprite.png" alt="sprite">
+              </li>
+
+            </ul>
+          </nav>
+          
+        </header>
+      <main class="main-content">
+<!-- song -->
+        <section class="song-section">
+          <div class="song-top">
+            <div class="album-cover">
+              <img src="assets/song_cover.png" alt="Random Access Memories album cover">
+            </div>
+
+            <div class="song-info">
+                <h1>Get Lucky (feat. Pharrell Williams and Nile Rodgers)</h1>
+
+                <p class="song-meta">
+                  <a class="meta-item meta-item--artist" href="artist_home.html">
+                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 4C9 5.10457 8.10457 6 7 6C5.89543 6 5 5.10457 5 4C5 2.89543 5.89543 2 7 2C8.10457 2 9 2.89543 9 4Z" stroke="#898989" stroke-width="1.2"/>
+                      <path d="M5 8L2.8906 9.40627C2.3342 9.7772 2 10.4017 2 11.0704V12.0667C2 12.5821 2.41787 13 2.93333 13H7" stroke="#898989" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M11.5 4V8.5M11.5 8.5V10.7348C11.5 11.1798 11.1832 11.5678 10.7385 11.5538C10.0031 11.5306 9 11.2669 9 10C9 8 11.5 8.5 11.5 8.5Z" stroke="#898989" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Daft Punk
+                  </a>
+                  <span class="meta-dot">·</span>
+                  <a class="meta-item meta-item--album song-album-link" href="album.html">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11.9996" cy="12.0001" r="1.63636" stroke="#898989" stroke-width="1.2"/>
+                      <path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C13.7298 6 15.2887 6.73202 16.3837 7.90319" stroke="#898989" stroke-width="1.2" stroke-linecap="round"/>
+                      <path d="M17.3984 10.4398V14.9398M17.3984 14.9398V17.1747C17.3984 17.6196 17.0816 18.0076 16.6369 17.9936C15.9015 17.9705 14.8984 17.7067 14.8984 16.4398C14.8984 14.4398 17.3984 14.9398 17.3984 14.9398Z" stroke="#898989" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Random Access Memories
+                  </a>
+                  <span class="meta-dot">·</span>
+                  <span class="meta-item meta-muted">2013</span>
+                  <span class="meta-dot">·</span>
+                  <span class="meta-item meta-muted">6:09</span>
+                  <span class="meta-dot">·</span>
+                  <span class="meta-item meta-muted">489,691,133</span>
+                </p>
+
+                <div class="song-actions">
+                <button class="icon-btn play-btn" aria-label="Play">
+                  <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20.2054" cy="20.2054" r="20.2054" fill="#1ED760"/>
+                    <path d="M26.3283 18.8804C27.3487 19.4696 27.3487 20.9425 26.3283 21.5317L18.292 26.1714C17.2715 26.7606 15.996 26.0241 15.996 24.8458L15.996 15.5663C15.996 14.388 17.2715 13.6515 18.292 14.2407L26.3283 18.8804Z" fill="black"/>
+                  </svg>
+                </button>
+                <label class="icon-btn toggle-icon toggle-heart" aria-label="Like">
+                  <input type="checkbox" class="song-like-input">
+                  <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.1337 2.36517L11.2699 4.17112L9.40606 2.36518C7.45169 0.471504 4.31654 0.57606 2.49269 2.59574C0.722922 4.55551 0.479272 7.49092 2.08184 9.58963C2.27877 9.84753 2.47241 10.0945 2.65668 10.3206C3.82313 11.7515 6.36813 14.2505 7.64327 15.5916C8.58536 16.5824 9.43219 17.4087 10.0702 18.0106C10.7439 18.6462 11.7838 18.6323 12.4588 17.9981C13.6352 16.8927 15.4391 15.171 16.7098 13.8346C17.9849 12.4935 18.7166 11.7515 19.8831 10.3206C20.0674 10.0945 20.261 9.84753 20.4579 9.58963C22.0605 7.49092 21.8168 4.55551 20.0471 2.59574C18.2232 0.57606 15.0881 0.471502 13.1337 2.36517Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </label>
+                <button class="icon-btn" aria-label="Add to playlist">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="20" height="20" rx="3" transform="matrix(1 0 0 -1 9.82715 31.3297)" stroke="#898989" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M11.8271 11.3297H27.8271C27.8271 9.67286 26.484 8.32971 24.8271 8.32971H14.8271C13.1703 8.32971 11.8271 9.67286 11.8271 11.3297Z" stroke="#898989" stroke-width="1.5" stroke-linejoin="round"/>
+                    <path d="M15.8271 21.3297H19.8271M23.8271 21.3297H19.8271M19.8271 21.3297V17.3297M19.8271 21.3297V25.3297" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <button class="icon-btn" aria-label="Queue">
+                  <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.3632 11.7866H14.5924C13.0426 11.7866 11.7861 13.043 11.7861 14.5929C11.7861 16.1428 13.0426 17.3992 14.5924 17.3992H19.3632" stroke="#898989" stroke-width="2.3573" stroke-linecap="round"/>
+                    <path d="M11.7861 23.0118L28.624 23.0118" stroke="#898989" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.7861 28.6244L28.624 28.6244" stroke="#898989" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M23.5732 14.3123H26.0989M28.6246 14.3123H26.0989M26.0989 14.3123V11.7866M26.0989 14.3123V16.838" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <button class="icon-btn" aria-label="Download">
+                  <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.2047 15.1539V25.0161M20.2047 25.0161L23.5723 21.6485M20.2047 25.0161L16.8371 21.6485" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="20.2052" cy="20.2055" r="9.26081" stroke="#898989" stroke-width="1.68378"/>
+                  </svg>
+                </button>
+                <button class="icon-btn" aria-label="Share">
+                  <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.6897 22.0167V10.7406M20.6897 10.7406L16.0466 15.3837M20.6897 10.7406L25.3328 15.3837M28.981 20.3585V25.0016C28.981 26.4669 27.7931 27.6548 26.3278 27.6548L15.0516 27.6548C13.5863 27.6548 12.3984 26.4669 12.3984 25.0016V20.3585" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <button class="icon-btn" aria-label="More">
+                  <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11.7863" cy="20.2056" r="1.68378" fill="#898989"/>
+                    <circle cx="20.2053" cy="20.2056" r="1.68378" fill="#898989"/>
+                    <circle cx="28.6242" cy="20.2056" r="1.68378" fill="#898989"/>
+                  </svg>
+                </button>
+                </div>
+
+                <div class="song-tags">
+                  <span>Funk</span>
+                  <span>Electronic music</span>
+                  <span>Disco</span>
+                  <span>Soft Rock</span>
+                  <span>Progressive pop</span>
+                </div>
+
+              <ul class="artist-list">
+                <li>
+                  <a class="artist-link" href="artist_home.html">
+                    <img class="avatar" src="assets/d.png" alt="Daft Punk">
+                    <div>
+                      <strong>Daft Punk</strong>
+                      <p>Main artist</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <img class="avatar" src="assets/ph.png" alt="Pharrell Williams">
+                  <div>
+                    <strong>Pharrell Williams</strong>
+                    <p>Main artist, Composer, Lyricist</p>
+                  </div>
+                </li>
+                <li>
+                  <img class="avatar avatar-nile" src="assets/n.png" alt="Nile Rodgers">
+                  <div>
+                    <strong>Nile Rodgers</strong>
+                    <p>Main artist, Composer, Lyricist</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="song-tabs">
+            <button class="active">Lyrics</button>
+            <button>Credits</button>
+            <button>More like this</button>
+          </div>
+
+          <div class="lyrics-block">
+            <div class="lyrics-layout">
+              <div class="lyrics-tools" aria-label="Lyrics tools">
+                <input class="tool-toggle" type="checkbox" id="lyrics-tool-sync">
+                <label class="icon-btn tool-btn" for="lyrics-tool-sync" aria-label="Sync lyrics">
+                  <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.0762 12.8269H15.7324" stroke="#898989" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M11.0762 19.0496L15.7324 19.0496" stroke="#898989" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M20.9654 10.8269C25.997 10.8269 30.0759 14.9058 30.0759 19.9374C30.0759 24.969 25.997 29.0479 20.9654 29.0479C20.9654 29.0479 15.6317 29.0479 12.9648 24.6056" stroke="#898989" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21.1719 14.3828V19.9376L25.8552 22.8278" stroke="#898989" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="20.0762" cy="35.8269" r="2" fill="#898989"/>
+                  </svg>
+                </label>
+                <input class="tool-toggle" type="checkbox" id="lyrics-tool-translate">
+                <label class="icon-btn tool-btn" for="lyrics-tool-translate" aria-label="Translate lyrics">
+                  <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.9281 30.335C21.5281 30.335 21.2408 30.206 21.0661 29.948C20.8908 29.6893 20.8698 29.3683 21.0031 28.985L24.6531 19.31C24.7531 19.0433 24.9408 18.814 25.2161 18.622C25.4908 18.4306 25.7781 18.335 26.0781 18.335C26.3615 18.335 26.6448 18.4306 26.9281 18.622C27.2115 18.814 27.4031 19.0433 27.5031 19.31L31.1531 28.985C31.2865 29.3683 31.2658 29.6893 31.0911 29.948C30.9158 30.206 30.6198 30.335 30.2031 30.335C30.0198 30.335 29.8531 30.2766 29.7031 30.16C29.5531 30.0433 29.4448 29.9016 29.3781 29.735L28.5281 27.285H23.6781L22.8031 29.735C22.7365 29.9016 22.6198 30.0433 22.4531 30.16C22.2865 30.2766 22.1115 30.335 21.9281 30.335ZM24.2781 25.535H27.8781L26.1281 20.585H26.0281L24.2781 25.535ZM15.7281 16.885C15.9948 17.3683 16.2781 17.814 16.5781 18.222C16.8781 18.6306 17.2281 19.0516 17.6281 19.485C18.3615 18.685 18.9698 17.8643 19.4531 17.023C19.9365 16.181 20.3448 15.285 20.6781 14.335H10.5781C10.2948 14.335 10.0575 14.2393 9.86612 14.048C9.67412 13.856 9.57812 13.6183 9.57812 13.335C9.57812 13.0516 9.67412 12.814 9.86612 12.622C10.0575 12.4306 10.2948 12.335 10.5781 12.335H16.5781V11.335C16.5781 11.0516 16.6741 10.814 16.8661 10.622C17.0575 10.4306 17.2948 10.335 17.5781 10.335C17.8615 10.335 18.0991 10.4306 18.2911 10.622C18.4825 10.814 18.5781 11.0516 18.5781 11.335V12.335H24.5781C24.8615 12.335 25.0988 12.4306 25.2901 12.622C25.4821 12.814 25.5781 13.0516 25.5781 13.335C25.5781 13.6183 25.4821 13.856 25.2901 14.048C25.0988 14.2393 24.8615 14.335 24.5781 14.335H22.6781C22.3281 15.5183 21.8531 16.6683 21.2531 17.785C20.6531 18.9016 19.9115 19.9516 19.0281 20.935L21.4281 23.385L20.6781 25.435L17.5781 22.335L13.2781 26.635C13.0948 26.8183 12.8615 26.91 12.5781 26.91C12.2948 26.91 12.0615 26.8183 11.8781 26.635C11.6948 26.4516 11.6031 26.2183 11.6031 25.935C11.6031 25.6516 11.6948 25.4183 11.8781 25.235L16.2281 20.885C15.7781 20.3683 15.3615 19.8473 14.9781 19.322C14.5948 18.7973 14.2531 18.2433 13.9531 17.66C13.7698 17.31 13.7615 17.0016 13.9281 16.735C14.0948 16.4683 14.3865 16.335 14.8031 16.335C14.9698 16.335 15.1448 16.389 15.3281 16.497C15.5115 16.6056 15.6448 16.735 15.7281 16.885Z" fill="#898989"/>
+                  </svg>
+                </label>
+                <input class="tool-toggle" type="checkbox" id="lyrics-tool-notes">
+                <label class="icon-btn tool-btn" for="lyrics-tool-notes" aria-label="Notes">
+                  <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.4932 15.5522H25.2166" stroke="#898989" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M14.4932 20.7695H21.6421" stroke="#898989" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M9.57812 23.8132V12.9437C9.57812 11.5029 10.7461 10.335 12.1868 10.335H27.9694C29.4102 10.335 30.5781 11.5029 30.5781 12.9437V23.8132C30.5781 25.254 29.4102 26.4219 27.9694 26.4219H24.6837C23.8908 26.4219 23.141 26.7825 22.6459 27.4019L21.66 28.6353C20.9638 29.5064 19.6393 29.5064 18.943 28.6353L17.9571 27.4019C17.4621 26.7825 16.7122 26.4219 15.9194 26.4219H12.1868C10.7461 26.4219 9.57812 25.254 9.57812 23.8132Z" stroke="#898989" stroke-width="2"/>
+                  </svg>
+                </label>
+                <input class="tool-toggle" type="checkbox" id="lyrics-tool-font">
+                <label class="icon-btn tool-btn" for="lyrics-tool-font" aria-label="Font size">
+                  <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.825 27.2494C11.6328 27.7998 11.1137 28.1684 10.5307 28.1684C9.58067 28.1684 8.91867 27.2255 9.24137 26.3319L13.9092 13.4071C14.1954 12.6145 14.9476 12.0864 15.7903 12.0864H15.864C16.7066 12.0864 17.4589 12.6145 17.7451 13.4071L22.4029 26.3043C22.7305 27.2113 22.0585 28.1684 21.0942 28.1684C20.5025 28.1684 19.9755 27.7942 19.7805 27.2356L19.0422 25.1208C18.902 24.7193 18.5233 24.4504 18.0981 24.4504H13.5122C13.087 24.4504 12.7082 24.7193 12.5681 25.1208L11.825 27.2494ZM15.4641 16.8824L13.8723 21.4085C13.7579 21.7338 13.9993 22.0744 14.344 22.0744H17.2854C17.631 22.0744 17.8724 21.7323 17.7565 21.4068L16.1461 16.8824C16.0713 16.6454 15.5462 16.6478 15.4641 16.8824Z" fill="#898989"/>
+                    <path d="M25.1352 27.6095C25.0239 27.897 24.7473 28.0864 24.4391 28.0864C23.9108 28.0864 23.5497 27.5528 23.7462 27.0624L26.2451 20.8245C26.4237 20.3787 26.8557 20.0864 27.3359 20.0864C27.8162 20.0864 28.2482 20.3787 28.4268 20.8245L30.9195 27.047C31.1189 27.5447 30.7524 28.0864 30.2162 28.0864C29.9033 28.0864 29.6226 27.8941 29.5096 27.6024L29.2196 26.8534C29.0757 26.4818 28.7182 26.2369 28.3197 26.2369H26.3279C25.9294 26.2369 25.5719 26.4818 25.428 26.8534L25.1352 27.6095ZM27.1356 22.4722L26.128 25.055H28.5317L27.512 22.4722C27.4671 22.3442 27.1847 22.3457 27.1356 22.4722Z" fill="#898989"/>
+                  </svg>
+                </label>
+              </div>
+              <div class="lyrics-text">
+                <p>Like the legend of the phoenix, huh</p>
+                <p>All ends with beginnings</p>
+                <p>What keeps the planet spinning, ah</p>
+                <p>The force from the beginning, hm, look</p>
+              </div>
+            </div>
+          </div>
+        </section>
+<!--  -->
+
+      </main>
+      </div>
+  </div>
+    <footer class="bottom-player">
+    <div class="bottom-player-content">
+      <img src="css/assets/images/Rectangle 6 (1).png" alt="Rectangle 6 (1)">
+      <div class="bottom-player-text">
+        <p class="slide-in">Get Lucky (feat. Pharrell Williams )</p>
+        <p class="artist-name">Daft punk</p>
+      </div>
+      <div class="player-controls">
+        <a href="#">
+          <img src="css/assets/images/add.png" alt="play">
+        </a>
+        <a href="#">
+          <img src="css/assets/images/play.png" alt="add">
+        </a>
+        </div>
+    </div>
+    <!-- Bottom nav for mobile-->
+     <nav class="bottom-menu">
+        <a href="index.html" class="nav-item">
+          <img src="css/assets/images/home.png" alt="home icon">
+          <span>Home</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="css/assets/images/discoverr.png" alt="home icon">
+          <span>Discover</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="css/assets/images/search.png" alt="search icon">
+          <span>Search</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="css/assets/images/library.png" alt="library icon">
+          <span>Library</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="css/assets/images/profile.png" alt="profile icon">
+          <span>Me</span>
+        </a>
+        </nav>
+  </footer>
+</body>
+</html>

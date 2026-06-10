@@ -1,0 +1,475 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// =============================================================================
+// LIKED SONGS PAGE — song table, action bar, filter dropdown
+// =============================================================================
+
+
+// =============================================================================
+// SONG TABLE
+// =============================================================================
+
+.song-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  color: $color-text-muted;        
+
+  // Empty row used as a visual gap between song rows
+  .spacer-row {
+    height: $spacing-md;             
+    pointer-events: none;
+  }
+
+  // Column header cells
+  th {
+    padding: $spacing-sm $spacing-md; 
+    font-weight: normal;
+    font-size: $font-md;              
+    border-bottom: 1px solid $color-border; 
+  }
+
+  // Data cells
+  td {
+    padding: $spacing-sm $spacing-md; 
+    vertical-align: middle;
+  }
+
+  // Column widths
+  .col-index {
+    width: 1%;
+    text-align: center;
+  }
+  .col-title    { width: 20%; }
+  .col-album    { width: 30%; font-size: $font-md; } 
+  .col-duration { width: 20%; }
+  .col-check    { width: 60px; text-align: right; }
+
+
+  // -------------------------------------------------------------------------
+  // INDEX CELL — row number + play icon (swap on hover)
+  // -------------------------------------------------------------------------
+
+  .song_index {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin: 0 auto;
+    @include flex-center;            
+
+    // Row number — fades out on hover
+    .number {
+      position: absolute;
+      font-size: $font-lg;          
+      transition: opacity 0.2s ease;
+    }
+
+    // Green play triangle — fades in on hover
+    .play-icon {
+      position: absolute;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+  }
+
+
+  // -------------------------------------------------------------------------
+  // TITLE CELL — album art + track name + artist name
+  // -------------------------------------------------------------------------
+
+  .song_banner {
+    display: flex;
+    align-items: center;
+    gap: 12px;                      
+
+    // Album art thumbnail
+    .song_img {
+      width: 40px;                  
+      height: 40px;                  
+      border-radius: $radius-sm;    
+      object-fit: cover;
+    }
+
+    // Track name + artist name
+    .song_title {
+
+       min-width: 0; 
+      overflow: hidden;
+      h3 {
+        color: $fg-primary;          
+        margin: 0;
+        font-size: $font-lg;         
+        font-weight: 500;
+         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      p {
+        margin: $spacing-xs 0 0 0;   
+        font-size: 13px;             
+        color: $color-text-muted; 
+         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;   
+      }
+    }
+  }
+
+
+  // -------------------------------------------------------------------------
+  // DURATION CELL — time + heart + add + three-dot (last two hidden until hover)
+  // -------------------------------------------------------------------------
+
+  .duration-content {
+    @include flex-center;            
+   
+    justify-content: flex-start;
+    gap: $spacing-md;                
+
+    p {
+      margin: 0;
+      font-size: $font-md;          
+    }
+
+    // ── Heart / like toggle ──
+    .green_check {
+      color: $color-primary;         
+      fill: $color-primary;          
+      cursor: pointer;
+      display: block;
+      transition: color 0.2s ease, fill 0.2s ease, transform 0.1s ease;
+
+      &:hover {
+        color: $color-primary;       
+        fill: $color-primary;
+        transform: scale(1.05);
+      }
+
+      // Un-liked state: outline only, grey
+      &.active {
+        color: $color-text-muted;    
+        fill: transparent;
+
+        &:hover {
+          color: $fg-primary;        
+          fill: transparent;
+        }
+      }
+
+      &:active { transform: scale(0.85); }
+    }
+
+    // ── Add to playlist icon ──
+    .add-icon {
+      width: 20px;                   
+      height: 22px;                  
+      color: $color-text-muted;      
+      cursor: pointer;
+      transition: color 0.2s ease;
+
+      &:hover { color: $fg-primary; } 
+    }
+
+    // ── Elements hidden until row hover (.hover_show) ──
+    // Visibility controlled by .liked_song-row:hover below
+    .hover_show {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+  }
+
+
+  // -------------------------------------------------------------------------
+  // CHECK COLUMN — circle checkbox (hidden until row hover, green when active)
+  // -------------------------------------------------------------------------
+
+  .check-container {
+    position: relative;
+    width: 22px;                    
+    height: 22px;                    
+    cursor: pointer;
+  
+    @include flex-center;           
+    margin-left: auto;
+    opacity: 0;                      
+    transition: opacity 0.2s ease, transform 0.1s ease;
+
+    // Outer circle
+    .checked-circle {
+      color: $color-text-muted;      
+      transition: color 0.2s ease, fill 0.2s ease;
+    }
+
+    // Inner checkmark — invisible until .active
+    .check-icon {
+      position: absolute;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    &:hover .checked-circle {
+      color: $fg-primary;            
+    }
+
+    // Checked state: green filled circle + visible checkmark
+    &.active {
+      opacity: 1 !important;         
+
+      .checked-circle {
+        color: $color-primary;       
+        fill: $color-primary;
+      }
+
+      .check-icon { opacity: 1; }
+
+      &:hover { transform: scale(1.1); }
+    }
+
+    &:active { transform: scale(0.85); }
+  }
+
+
+  // -------------------------------------------------------------------------
+  // SONG ROW — hover state reveals play icon, action buttons, checkbox
+  // -------------------------------------------------------------------------
+
+  .liked_song-row {
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-active-bg; 
+                                           
+                                           
+
+      // Round the left edge of the row on hover
+      td:first-child {
+        border-top-left-radius: $radius-md;    
+        border-bottom-left-radius: $radius-md;
+      }
+
+      // Round the right edge of the row on hover
+      td:last-child {
+        border-top-right-radius: $radius-md;   
+        border-bottom-right-radius: $radius-md;
+      }
+
+      // Swap row number for play icon
+      .song_index .number    { opacity: 0; }
+      .song_index .play-icon { opacity: 1; }
+
+      // Reveal hidden action icons and checkbox
+      .duration-content .hover_show { opacity: 1 !important; }
+      .check-container               { opacity: 1 !important; }
+    }
+  }
+
+}
+// END .song-table
+
+
+// =============================================================================
+// PLAYLIST ACTION BAR — add button (left) + view/sort/filter controls (right)
+// =============================================================================
+
+.playlist-action-bar {
+  @include flex-between;             
+  padding: $spacing-md 0;            
+  margin-bottom: $spacing-xl;       
+  color: $color-text-muted;          
+
+  // Base reset for all buttons inside the bar
+  button {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+    @include flex-center;           
+    transition: color 0.2s ease, transform 0.1s ease;
+
+    &:hover  { color: $fg-primary; } 
+    &:active { transform: scale(0.95); }
+  }
+
+  // Icon-only button — adds padding for click target
+  .icon-btn {
+    padding: $spacing-sm;            
+  }
+
+  // Right group: view toggle + sort + filter + search
+  .action-right {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xl;                
+  }
+
+  // View mode pill: list / grid buttons side by side
+  .view-toggle {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: $radius-md;       
+    padding: $spacing-xs;            
+    gap: $spacing-xs;                
+
+    .icon-btn {
+      padding: 6px 10px;            
+      border-radius: $radius-sm;     
+
+      // Active view: brighter background
+      &.active {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: $fg-primary;          
+      }
+    }
+  }
+
+  // Text + icon button (e.g. "Recent", "Filter: All")
+  .text-icon-btn {
+    gap: $spacing-sm;                
+    font-size: $font-md;            
+    font-weight: 400;
+  }
+}
+
+
+// =============================================================================
+// FILTER DROPDOWN CONTAINER — positioned relative so menu can use absolute
+// =============================================================================
+
+.filter-dropdown-container {
+  position: relative;
+
+  // ── Dropdown menu ──
+  .filter-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 12px;                
+    width: 220px;                    
+    background-color: $color-surface; 
+    border-radius: $radius-md;        
+    padding: $spacing-sm 0;           
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.3), 0 6px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+
+    // Hidden by default — animated in with .show
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+
+    // Shown state — toggled by JS
+    &.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    // Filter type listg
+    ul,
+    .filter-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li,
+      .filter-item {
+        padding: 12px $spacing-md;   
+        color: $color-text-muted;    
+        font-size: $font-md;         
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+          color: $fg-primary;        
+        }
+
+        &.active {
+          color: $fg-primary;        
+        }
+      }
+    }
+
+    // Horizontal divider between filter list and group toggle
+    .dropdown-divider {
+      height: 1px;
+      background-color: $color-border; 
+      margin: $spacing-sm $spacing-md; 
+
+    // "Group" label + toggle switch
+    .group-toggle,
+    .group-section {
+      @include flex-between;        
+      padding: 12px $spacing-md $spacing-sm $spacing-md; 
+      color: $color-text-muted;      
+      font-size: $font-md;           
+      font-weight: 500;
+
+      // Toggle switch component
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 32px;                 
+        height: 18px;                
+
+        // Hide native checkbox
+        input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+
+          // Checked: Spotify green track + slide thumb right
+          &:checked + .slider {
+            background-color: $color-primary; 
+          }
+          &:checked + .slider:before {
+            transform: translateX(14px);       
+          }
+        }
+
+        // Toggle track
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background-color: #555;    
+          transition: 0.4s;
+          border-radius: 34px;       
+
+          // Toggle thumb (white circle)
+          &:before {
+            position: absolute;
+            content: "";
+            height: 14px;            
+            width: 14px;             
+            left: 2px;
+            bottom: 2px;
+            background-color: $fg-primary; 
+            transition: 0.4s;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  // When "Group" checkbox is checked: dim all filter items except the first ("All")
+  &:has(input[type="checkbox"]:checked) {
+    ul li:not(:first-child),
+    .filter-list .filter-item:not(:first-child) {
+      color: #555;                  
+      pointer-events: none;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+}}
+// END .filter-dropdown-container

@@ -1,0 +1,32 @@
+
+
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.main-content .card-list-album{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1, minmax(180px, 1fr));
+    // grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+  
+}
+// .album-item{
+//     transition: scale 0.3s ease;
+//     &:hover{
+//         transform: scale(0.95);
+//     }
+// }
+
+.album-item-title{
+    display: flex;
+    gap: 8rem;
+    padding: 1rem 0;
+    
+}
+
+.artist-navigation-view{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

@@ -1,0 +1,223 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+
+body {
+    background-color: v.$bg-media;
+}
+
+.html {
+    scroll-behavior: smooth;
+}
+
+main {
+    main {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+.section-wrapper {
+    padding-bottom: 10rem;
+}
+
+@media (min-width: 991px) {
+    .section-wrapper {
+        height: calc(100vh - 17rem);
+        overflow: auto;
+        border: 0.1rem solid v.$border-radius;
+        border-radius: 1rem;
+        padding-bottom: 0;
+    }
+}
+
+@media (min-width: 991px) {
+    header,
+    main,
+    footer {
+        margin-left: 26rem;
+        width: calc(100% - 27.5rem);
+    }
+}
+
+main section {
+    animation: fadeIn 0.5s ease;
+    scroll-behavior: smooth;
+}
+
+#home,
+#discover,
+#search,
+#library,
+#profile,
+#pins,
+#playlists,
+#songs,
+#saves,
+#albums,
+#folders,
+#podcasts,
+#audiobooks,
+#artists {
+    display: none;
+}
+
+body:has(#tab-1:checked) #home,
+body:has(#tab-2:checked) #discover,
+body:has(#tab-3:checked) #search,
+body:has(#tab-4:checked) #library,
+body:has(#tab-5:checked) #profile {
+    @include m.flex-center($direction: column);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@media (max-width: 991px) {
+    body:has(
+            #tab-6:checked,
+            #tab-7:checked,
+            #tab-8:checked,
+            #tab-9:checked,
+            #tab-10:checked,
+            #tab-11:checked,
+            #tab-12:checked,
+            #tab-13:checked,
+            #tab-14:checked
+        )
+        #home {
+        @include m.flex-center($direction: column);
+        display: flex;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    body:has(
+            #tab-6:checked,
+            #tab-7:checked,
+            #tab-8:checked,
+            #tab-9:checked,
+            #tab-10:checked,
+            #tab-11:checked,
+            #tab-12:checked,
+            #tab-13:checked,
+            #tab-14:checked
+        )
+        .nav-item-home {
+        color: v.$primary;
+        svg,
+        img {
+            filter: none;
+            opacity: 1;
+        }
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+@media (min-width: 991px) {
+    body:has(#tab-6:checked) #pins,
+    body:has(#tab-7:checked) #playlists,
+    body:has(#tab-8:checked) #songs,
+    body:has(#tab-9:checked) #saves,
+    body:has(#tab-10:checked) #albums,
+    body:has(#tab-11:checked) #folders,
+    body:has(#tab-12:checked) #podcasts,
+    body:has(#tab-13:checked) #audiobooks,
+    body:has(#tab-14:checked) #artists {
+        @include m.flex-center($direction: column);
+        display: flex;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.like-btn {
+    cursor: pointer;
+    display: inline-flex;
+
+    .icon-filled {
+        display: none;
+    }
+
+    .icon-outline {
+        display: block;
+    }
+}
+
+.like-btn {
+    cursor: pointer;
+    display: inline-flex;
+
+    .icon-filled {
+        display: none;
+    }
+
+    &:has(input:checked) {
+        .icon-outline {
+            display: none;
+        }
+        .icon-filled {
+            display: block;
+        }
+    }
+}
+
+.header-btn {
+    cursor: pointer;
+    display: inline-flex;
+
+    .icon-filled {
+        display: none;
+        filter: brightness(0) saturate(100%) invert(71%) sepia(85%)
+            saturate(1436%) hue-rotate(86deg) brightness(118%) contrast(119%);
+    }
+    .icon-filled.friends {
+        margin: 0 auto;
+    }
+    &:has(input:checked) {
+        .icon-outline {
+            display: none;
+        }
+        .icon-filled {
+            display: block;
+        }
+    }
+}
+
+body:has(
+    #tab-4:checked,
+    #tab-6:checked,
+    #tab-7:checked,
+    #tab-8:checked,
+    #tab-9:checked,
+    #tab-10:checked,
+    #tab-11:checked,
+    #tab-12:checked,
+    #tab-13:checked,
+    #tab-14:checked
+) {
+    .sidebar-nav {
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 1rem;
+        width: 24rem;
+    }
+}
+
+.sidebar-nav {
+    background-color: transparent;
+}

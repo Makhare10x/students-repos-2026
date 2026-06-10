@@ -1,0 +1,31 @@
+@use "./scss/side-bar";
+@use "./scss/nav-bar";
+@use "./scss/main-bar";
+@use "./scss/category-bar";
+@use "./scss/different-colors";
+@use "./scss/search-bar";
+@use "./scss/search-music-grid";
+@use "./scss/left-side-bar";
+@use "./scss/discover-tab";
+
+@use "./scss/footer";
+@use "./scss/_mobile";
+
+@font-face {
+    font-family: "satoshi";
+    src: url(./assets/Fonts/Satoshi-Variable.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+  background-color: #060606;
+}
+
+
+
+
+
+/*# sourceMappingURL=style.css.map */

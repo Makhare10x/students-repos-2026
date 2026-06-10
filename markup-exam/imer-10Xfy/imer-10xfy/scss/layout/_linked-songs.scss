@@ -1,0 +1,98 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+@use "../base/reset";
+.liked-songs-page-header{
+    @include mixin.flex-center($J:space-between,$A:center);
+    width: 100%;
+    padding: 1rem 1rem 0 2rem;
+    right: 3rem;
+    position: sticky;
+    background-color: variables.$page-backgorund-color;
+    figure button{
+        background-color: transparent;
+        border: none;
+        border-radius: 50%;
+        &:hover{
+            background-color: #8989891A;
+        }
+        img:hover{
+            @include mixin.img-green-btn;
+        }
+    }
+    .liked-songs-page-add-button-container{
+        @include mixin.flex-center($J:center,$A:center);
+    }
+    .liked-songs-page-button-container{
+        @include mixin.flex-center($J:space-between,$A:center);
+        
+        div{
+            @include mixin.flex-center;
+            gap: 1rem;
+            width: auto;
+        }
+        p{
+            @include mixin.p-of-sidebar-header($font-size:1.4rem);
+            line-height: variables.$line-height;
+        }
+    }
+}
+.liked-song-grid-container{
+    margin-top: 2rem;
+    width: 100%;
+    // padding-bottom: 80rem;
+    // grid-template-rows: repeat(8, 1fr);  
+    max-height: 60vh;       // or a specific value like 40rem
+    overflow-y: auto;
+    overflow-x: hidden;
+    .grid-container-item{
+        display: grid;
+        justify-content: start;
+        grid-template-columns: 4.2fr 30fr 30fr 7fr 4fr;
+        //grid-template-columns:4.2rem 30rem 30rem 7rem 4rem; 
+        padding:0.8rem 1rem;
+        p{
+            @include mixin.p-of-sidebar-header(1.4rem);
+            color: variables.$p-color;
+        }
+        span{
+            @include mixin.p-of-sidebar-header(1.4rem);
+            color: variables.$p-color;          
+        }
+        .music-img-and-name{
+            @include mixin.flex-center(start,center);
+            gap:0.4rem ;           
+            img{
+                width:5.1rem ;
+            }
+            h2{
+                @include mixin.p-of-sidebar-header(1.6rem);
+                padding-bottom: 1rem;
+            }    
+        }
+    }
+    .border{
+        border-bottom: 0.2rem solid #89898926;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background-color: variables.$page-backgorund-color;
+    }
+}
+.liked-song-grid-container .grid-container-item .music-img-and-name {
+  min-width: 0;
+}
+
+.liked-song-grid-container .grid-container-item .music-img-and-name > div {
+  min-width: 0;
+}
+
+.liked-song-grid-container .grid-container-item .music-img-and-name > div h2,
+.liked-song-grid-container .grid-container-item .music-img-and-name > div p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.liked-song-grid-container::-webkit-scrollbar {
+    display: none;                // hides scroll-bar
+}

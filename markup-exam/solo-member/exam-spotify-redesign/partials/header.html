@@ -1,0 +1,542 @@
+
+<input
+  id="friends-panel-toggle"
+  class="friends-panel-toggle"
+  type="checkbox"
+  hidden
+/>
+<input
+  id="notifications-panel-toggle"
+  class="notifications-panel-toggle"
+  type="checkbox"
+  hidden
+/>
+<input
+  id="settings-panel-toggle"
+  class="settings-panel-toggle"
+  type="checkbox"
+  hidden
+/>
+  <!-- DESKTOP TOP NAVIGATION -->
+<header class="top-header" aria-label="Top Header">
+  <nav class="top-header-nav" aria-label="Main Navigation">
+    <ul class="top-header-nav-list">
+      <li class="top-header-nav-item">
+        <a class="top-header-item top-header-item--active" href="index.html">
+          <span class="icon-swap">
+            <img
+              class="icon-default"
+              src="./assets/icons/Name=Home, Filled=Yes.svg"
+              alt="Home icon"
+            />
+            <img
+              class="icon-filled"
+              src="./assets/icons/Name=Home, Filled=Yes.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </span>
+          <span>Home</span>
+        </a>
+      </li>
+
+      <li class="top-header-nav-item">
+        <a class="top-header-item" href="discover.html">
+          <span class="icon-swap">
+            <img
+              class="icon-default"
+              src="./assets/icons/Name=Discover, Filled=No.svg"
+              alt="Discover icon"
+            />
+            <img
+              class="icon-filled"
+              src="./assets/icons/Name=Discover, Filled=Yes.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </span>
+          <span>Discover</span>
+        </a>
+      </li>
+
+      <li class="top-header-nav-item">
+        <a class="top-header-item" href="search.html">
+          <span class="icon-swap">
+            <img
+              class="icon-default"
+              src="./assets/icons/Name=Search, Filled=No.svg"
+              alt="Search icon"
+            />
+            <img
+              class="icon-filled"
+              src="./assets/icons/Name=Search, Filled=Yes.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </span>
+          <span>Search</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="top-header-search" role="search" aria-label="Desktop search">
+    <input
+      id="header-search-input"
+      type="text"
+      placeholder="What do you want to play?"
+      aria-label="Desktop header search input"
+      data-search-input
+    />
+    <button type="button" aria-label="Search" data-search-button>
+      <img
+        src="./assets/icons/Name=Search, Filled=No.svg"
+        alt=""
+      />
+    </button>
+  </div>
+
+  <div class="top-header-actions" aria-label="Header Actions">
+    <label class="top-header-action top-header-theme" for="theme-toggle" aria-label="Toggle theme">
+      <i class="fa-solid fa-moon icon-moon"></i>
+      <i class="fa-solid fa-sun icon-sun"></i>
+    </label>
+
+    <label class="top-header-action top-header-action--notifications" for="notifications-panel-toggle" aria-label="Notifications">
+      <img
+        src="./assets/icons/Name=News, Filled=No.svg"
+        alt="Notifications icon"
+      />
+    </label>
+
+    <label class="top-header-action top-header-action--friends" for="friends-panel-toggle" aria-label="Friends">
+      <span class="icon-swap">
+        <img
+          class="icon-default"
+          src="./assets/icons/Name=Friends, Filled=No.svg"
+          alt="Friends icon"
+        />
+        <img
+          class="icon-filled"
+          src="./assets/icons/Name=Friends, Filled=Yes.svg"
+          alt=""
+          aria-hidden="true"
+        />
+      </span>
+    </label>
+
+    <label class="top-header-action top-header-action--settings" for="settings-panel-toggle" aria-label="Settings">
+      <img
+        src="./assets/icons/Name=Settings, Filled=No.svg"
+        alt="Settings icon"
+      />
+    </label>
+
+    <a class="top-header-action" href="profile.html" aria-label="Profile">
+      <span class="icon-swap">
+        <img
+          class="icon-default"
+          src="./assets/icons/Name=User, Filled=No.svg"
+          alt="Profile icon"
+        />
+        <img
+          class="icon-filled"
+          src="./assets/icons/Name=User, Filled=Yes.svg"
+          alt=""
+          aria-hidden="true"
+        />
+      </span>
+    </a>
+  </div>
+</header>
+<aside class="friends-panel" aria-label="Friends Activity">
+  <div class="friends-panel__inner">
+    <div class="friends-panel__head">
+      <h2>Friends Activity</h2>
+      <div class="friends-panel__controls">
+        <button class="friends-panel__invite" type="button" aria-label="Add friends">
+          <img src="./assets/icons/Name=Friends, Filled=No.svg" alt="" />
+          <span>+</span>
+        </button>
+        <label class="friends-panel__close" for="friends-panel-toggle" aria-label="Close friends panel">
+          <img src="./assets/icons/Name=Close, Filled=No.svg" alt="" />
+        </label>
+      </div>
+    </div>
+
+    <ul class="friends-panel__list">
+      <li class="friends-panel__item">
+        <span class="friends-panel__avatar friends-panel__avatar--red">
+          <img src="./assets/icons/Name=User, Filled=No.svg" alt="" />
+        </span>
+        <div class="friends-panel__meta">
+          <strong>FriendlyMusicListener</strong>
+          <div class="friends-panel__track">
+            <span class="friends-panel__time">1h</span>
+            <img src="./assets/icons/Name=Queue, Filled=No.svg" alt="" />
+            <span>Goosebumps</span>
+            <span class="friends-panel__dot"></span>
+            <span>Travis Scott</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="friends-panel__item">
+        <span class="friends-panel__avatar friends-panel__avatar--blue">
+          <img src="./assets/icons/Name=User, Filled=No.svg" alt="" />
+        </span>
+        <div class="friends-panel__meta">
+          <strong>AverageMusicEnjoyer</strong>
+          <div class="friends-panel__track">
+            <span class="friends-panel__time">1h</span>
+            <img src="./assets/icons/Name=Queue, Filled=No.svg" alt="" />
+            <span>Get Lucky</span>
+            <span class="friends-panel__dot"></span>
+            <span>Daft Punk</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="friends-panel__item">
+        <span class="friends-panel__avatar friends-panel__avatar--green">
+          <img src="./assets/icons/Name=User, Filled=No.svg" alt="" />
+        </span>
+        <div class="friends-panel__meta">
+          <strong>MusicEnthusiast</strong>
+          <div class="friends-panel__track">
+            <span class="friends-panel__time">1h</span>
+            <img src="./assets/icons/Name=Queue, Filled=No.svg" alt="" />
+            <span>would he</span>
+            <span class="friends-panel__dot"></span>
+            <span>joji</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="friends-panel__item">
+        <span class="friends-panel__avatar friends-panel__avatar--yellow">
+          <img src="./assets/icons/Name=User, Filled=No.svg" alt="" />
+        </span>
+        <div class="friends-panel__meta">
+          <strong>ListenToMusic56</strong>
+          <div class="friends-panel__track">
+            <span class="friends-panel__time">6h</span>
+            <img src="./assets/icons/Name=Queue, Filled=No.svg" alt="" />
+            <span>Rockstar</span>
+            <span class="friends-panel__dot"></span>
+            <span>Post Malone</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</aside>
+<aside class="notifications-panel" aria-label="Notifications">
+  <div class="notifications-panel__inner">
+    <div class="notifications-panel__head">
+      <h2>Notifications</h2>
+      <label class="notifications-panel__close" for="notifications-panel-toggle" aria-label="Close notifications panel">
+        <img src="./assets/icons/Name=Close, Filled=No.svg" alt="" />
+      </label>
+    </div>
+    <ul class="notifications-panel__list">
+      <li class="notifications-panel__item">
+        <strong>New Release</strong>
+        <p>New Daft Punk tracks were added to your recommendations.</p>
+        <span>5 min ago</span>
+      </li>
+      <li class="notifications-panel__item">
+        <strong>Podcast Update</strong>
+        <p>TED Radio Hour added a new episode about memory and language.</p>
+        <span>22 min ago</span>
+      </li>
+      <li class="notifications-panel__item">
+        <strong>Friend Activity</strong>
+        <p>FriendlyMusicListener is listening to Goosebumps again.</p>
+        <span>1 hour ago</span>
+      </li>
+      <li class="notifications-panel__item">
+        <strong>Saved For Later</strong>
+        <p>Your mix was updated with 12 new songs.</p>
+        <span>Today</span>
+      </li>
+    </ul>
+  </div>
+</aside>
+<aside class="settings-panel" aria-label="Settings">
+  <div class="settings-panel__inner">
+    <div class="settings-panel__head">
+      <h2>Settings</h2>
+      <label class="settings-panel__close" for="settings-panel-toggle" aria-label="Close settings panel">
+        <img src="./assets/icons/Name=Close, Filled=No.svg" alt="" />
+      </label>
+    </div>
+    <div class="settings-panel__list">
+      <article class="settings-panel__item">
+        <strong>Audio Quality</strong>
+        <p>Wi-Fi sound quality is set to Very High.</p>
+      </article>
+      <article class="settings-panel__item">
+        <strong>Autoplay</strong>
+        <p>Play similar songs after the queue ends.</p>
+      </article>
+      <article class="settings-panel__item">
+        <strong>Crossfade</strong>
+        <p>6 second transitions between tracks.</p>
+      </article>
+      <article class="settings-panel__item">
+        <strong>Privacy</strong>
+        <p>Only approved friends can see your listening activity.</p>
+      </article>
+    </div>
+  </div>
+</aside>
+
+<!-- MOBILE HEADER NAVIGATION -->
+      <header class="mobile-header" aria-label="Mobile Header">
+        <!-- LEFT: LOGO -->
+        <a class="mobile-header-logo" href="index.html" aria-label="Go to home">
+          <img
+            class="mobile-logo-img logo-dark"
+            src="./assets/logo-dark.svg"
+            alt="Spotify logo dark"
+          />
+          <img
+            class="mobile-logo-img logo-light"
+            src="./assets/logo-light.svg"
+            alt="Spotify logo light"
+          />
+        </a>
+
+        <!-- RIGHT: ACTIONS (3 icons) -->
+        <div class="mobile-header-actions" aria-label="Header actions">
+          <a
+            class="mobile-header-action mobile-header-discover"
+            href="discover.html"
+            aria-label="Open discover"
+          >
+            <span class="icon-swap">
+              <img class="icon-default" src="./assets/icons/Name=Discover, Filled=No.svg" alt="" />
+              <img class="icon-filled" src="./assets/icons/Name=Discover, Filled=Yes.svg" alt="" aria-hidden="true" />
+            </span>
+          </a>
+
+          <label
+            class="mobile-header-action mobile-header-theme"
+            for="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            <i class="fa-solid fa-moon icon-moon"></i>
+            <i class="fa-solid fa-sun icon-sun"></i>
+          </label>
+
+          <label
+            class="mobile-header-action mobile-header-burger"
+            for="mobile-menu-toggle"
+            aria-label="Toggle menu"
+          >
+            <img src="./assets/icons/Name=List, Filled=No.svg" alt="" />
+          </label>
+        </div>
+
+        <!-- Burger toggle (hidden checkbox) -->
+        <input
+          id="mobile-menu-toggle"
+          class="mobile-menu-toggle"
+          type="checkbox"
+        />
+
+        <!-- Overlay (click closes menu) -->
+        <label
+          class="mobile-menu-overlay"
+          for="mobile-menu-toggle"
+          aria-hidden="true"
+        ></label>
+
+        <!-- Burger menu panel -->
+        <nav class="mobile-burger-menu" aria-label="Burger menu">
+          <div class="mobile-burger-head">
+            <a
+              class="mobile-burger-logo"
+              href="index.html"
+              aria-label="Go to home"
+            >
+              <img
+                class="mobile-logo-img logo-dark"
+                src="./assets/logo-dark.svg"
+                alt="Spotify logo dark"
+              />
+              <img
+                class="mobile-logo-img logo-light"
+                src="./assets/logo-light.svg"
+                alt="Spotify logo light"
+              />
+            </a>
+
+            <label
+              class="mobile-burger-close"
+              for="mobile-menu-toggle"
+              aria-label="Close menu"
+            >
+              <img src="./assets/icons/Name=Close, Filled=No.svg" alt="" />
+            </label>
+          </div>
+
+          <a class="mobile-burger-search" href="search.html">
+            <span class="icon-swap">
+              <img class="icon-default" src="./assets/icons/Name=Search, Filled=No.svg" alt="" />
+              <img class="icon-filled" src="./assets/icons/Name=Search, Filled=Yes.svg" alt="" aria-hidden="true" />
+            </span>
+            <span>Search</span>
+          </a>
+
+          <div class="mobile-burger-actions" aria-label="Quick actions">
+            <a href="notifications.html" aria-label="Notifications">
+              <img src="./assets/icons/Name=News, Filled=No.svg" alt="" />
+            </a>
+            <a href="camera.html" aria-label="Camera">
+              <img src="./assets/icons/Name=Camera, Filled=No.svg" alt="" />
+            </a>
+            <a href="friends.html" aria-label="Friends">
+              <span class="icon-swap">
+                <img class="icon-default" src="./assets/icons/Name=Friends, Filled=No.svg" alt="" />
+                <img class="icon-filled" src="./assets/icons/Name=Friends, Filled=Yes.svg" alt="" aria-hidden="true" />
+              </span>
+            </a>
+            <a href="settings.html" aria-label="Settings">
+              <img src="./assets/icons/Name=Settings, Filled=No.svg" alt="" />
+            </a>
+            <a href="profile.html" aria-label="Profile">
+              <span class="icon-swap">
+                <img class="icon-default" src="./assets/icons/Name=User, Filled=No.svg" alt="" />
+                <img class="icon-filled" src="./assets/icons/Name=User, Filled=Yes.svg" alt="" aria-hidden="true" />
+              </span>
+            </a>
+          </div>
+
+          <ul class="mobile-burger-list">
+            <li>
+              <a class="mobile-burger-link" href="discover.html">
+                <span class="icon-swap">
+                  <img class="icon-default" src="./assets/icons/Name=Discover, Filled=No.svg" alt="" />
+                  <img class="icon-filled" src="./assets/icons/Name=Discover, Filled=Yes.svg" alt="" aria-hidden="true" />
+                </span>
+                <span>Discover</span>
+              </a>
+            </li>
+
+            <li>
+              <a class="mobile-burger-link" href="library.html">
+                <span class="icon-swap">
+                  <img class="icon-default" src="./assets/icons/Name=Library, Filled=No.svg" alt="" />
+                  <img class="icon-filled" src="./assets/icons/Name=Library, Filled=Yes.svg" alt="" aria-hidden="true" />
+                </span>
+                <span>My Library</span>
+              </a>
+            </li>
+
+            <li>
+              <a class="mobile-burger-link" href="notifications.html">
+                <img src="./assets/icons/Name=News, Filled=No.svg" alt="" />
+                <span>Notifications</span>
+              </a>
+            </li>
+
+            <li>
+              <a class="mobile-burger-link" href="profile.html">
+                <span class="icon-swap">
+                  <img class="icon-default" src="./assets/icons/Name=User, Filled=No.svg" alt="" />
+                  <img class="icon-filled" src="./assets/icons/Name=User, Filled=Yes.svg" alt="" aria-hidden="true" />
+                </span>
+                <span>Profile</span>
+              </a>
+            </li>
+
+            <li>
+              <a class="mobile-burger-link" href="playlist.html">
+                <img src="./assets/icons/Name=Playlist, Filled=No.svg" alt="" />
+                <span>Playlists</span>
+              </a>
+            </li>
+
+            <li class="mobile-burger-item-has-submenu">
+              <input
+                id="liked-songs-toggle"
+                class="mobile-burger-submenu-toggle"
+                type="checkbox"
+              />
+
+              <div class="mobile-burger-parent-row">
+                <a class="mobile-burger-link" href="song.html">
+                  <span class="icon-swap">
+                    <img class="icon-default" src="./assets/icons/Name=Like, Filled=No.svg" alt="" />
+                    <img class="icon-filled" src="./assets/icons/Name=Like, Filled=Yes.svg" alt="" aria-hidden="true" />
+                  </span>
+                  <span>Liked songs</span>
+                </a>
+
+                <label
+                  class="mobile-burger-arrow"
+                  for="liked-songs-toggle"
+                  aria-label="Toggle liked songs menu"
+                >
+                  <img src="./assets/icons/Name=Down, Filled=No.svg" alt="" />
+                </label>
+              </div>
+
+              <ul class="mobile-burger-submenu">
+                <li>
+                  <a class="mobile-burger-sublink" href="album.html"
+                    ><img
+                      src="./assets/icons/Name=Album, Filled=No.svg"
+                      alt=""
+                    /><span>Albums</span></a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-burger-sublink" href="library.html"
+                    ><img
+                      src="./assets/icons/Name=Folder, Filled=No.svg"
+                      alt=""
+                    /><span>Folders</span></a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-burger-sublink" href="podcast.html"
+                    ><img
+                      src="./assets/icons/Name=Podcast, Filled=No.svg"
+                      alt=""
+                    /><span>Podcasts</span></a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-burger-sublink" href="album.html"
+                    ><img
+                      src="./assets/icons/Name=Audiobook, Filled=No.svg"
+                      alt=""
+                    /><span>Audiobooks</span></a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-burger-sublink" href="artist.html"
+                    ><img
+                      src="./assets/icons/Name=Artist, Filled=No.svg"
+                      alt=""
+                    /><span>Artists</span></a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a class="mobile-burger-link" href="album.html">
+                <span class="icon-swap">
+                  <img class="icon-default" src="./assets/icons/Name=Save, Filled=No.svg" alt="" />
+                  <img class="icon-filled" src="./assets/icons/Name=Save, Filled=Yes.svg" alt="" aria-hidden="true" />
+                </span>
+                <span>Saves</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>

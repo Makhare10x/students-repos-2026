@@ -1,0 +1,39 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'layout';
+@use 'sidebar';
+@use 'header';
+@use 'player';
+@use 'search';
+@use 'library';
+@use 'home';
+@use 'home-mobile';
+@use 'friends';
+@use 'liked-songs';
+@use 'search-mobile';
+@use 'library-mobile';
+@use 'album-page';
+@use 'song';
+@use 'song-mobile';
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/Satoshi-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Satoshi', sans-serif;
+  overflow-x: hidden;
+  text-decoration: none;
+}

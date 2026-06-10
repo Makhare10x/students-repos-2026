@@ -1,0 +1,46 @@
+@use "./variables" as v;
+
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@500,700,400&display=swap");
+
+body {
+  background-color: v.$color-bg-primary;
+  font-family: "Satoshi";
+  font-weight: 400;
+  letter-spacing: 3%;
+  padding: 1rem 1rem 0 0.9rem;
+  @media (max-width: 1480px) {
+    padding: 0;
+  }
+
+  button {
+    font-family: "Satoshi";
+    font-weight: 400;
+    letter-spacing: 3%;
+  }
+}
+
+.content-wrapper {
+  display: grid;
+  padding-bottom: 1.2rem;
+  grid-template-columns: 26rem 1fr;
+  grid-template-rows: 5rem 1fr 8rem;
+  height: calc(100vh - 10px);
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main"
+    "sidebar footer";
+  column-gap: 0.7rem;
+
+  @media (max-width: 1480px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto 10rem;
+    grid-template-areas:
+      "main"
+      "footer"
+      "header";
+    padding: 6rem 0.8rem 0 0.8rem;
+  }
+}
+.primary-active-text {
+  color: v.$color-text-primary !important;
+}

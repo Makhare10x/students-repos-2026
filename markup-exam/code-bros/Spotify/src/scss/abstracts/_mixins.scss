@@ -1,0 +1,28 @@
+@mixin flex-center($gap-size: 1.6rem) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $gap-size;
+}
+
+@mixin marquee($duration: 7s) {
+    animation: marquee $duration linear infinite;
+    white-space: nowrap;
+}
+@mixin marquee-key{
+    @keyframes marquee {
+        from { transform: translateX(0); }
+        to { transform: translateX(-100%); }
+    }
+}
+@mixin grid-layout{
+    display: grid;
+    grid-template-columns: 24.8rem 1fr;  
+    grid-template-rows: 6rem 1fr 8rem; 
+    grid-template-areas:
+        "header  header"
+        "sidebar  main"
+        "sidebar   footer";
+    height: 100vh;
+    overflow: hidden;
+}

@@ -1,0 +1,229 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.main-wrapper {
+    width: 100%;
+    max-width: $max-width-main;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.not-active {
+    color: $color-text-secondary !important;
+    background-color: $color-bg !important;
+    
+    img {
+        filter: grayscale(100%);
+        opacity: 0.5;
+    }
+}
+
+.liked-songs {
+    background: $color-border-main;
+    border-radius: $radius-md;
+}
+
+.menu-button-library-liked {
+    @include flex-layout(flex-start, center, 16px);
+    padding: 20px;
+    list-style: none;
+    width: 100%;
+
+    .filters { width: 105px; }
+    .recent { width: 50px; }
+
+    .liked-add-icon {
+        margin-right: auto;
+        img {
+            @include square(40px);
+            opacity: 0.7;
+            @include exact-transition;
+            
+            &:hover { opacity: 1; }
+        }
+    }
+
+    li:not(.liked-add-icon) {
+        @include flex-center(flex-start, center);
+        cursor: pointer;
+
+        img {
+            height: 40px;
+            opacity: 0.6;
+            transition: all $transition-base;
+        }
+
+        &:hover img {
+            opacity: 1;
+            filter: brightness(1.2);
+        }
+    }
+}
+
+.song-table {
+    gap: 10px;
+    align-self: stretch;
+    width: 100%;
+    max-width: $max-width-table;
+    margin-left: 30px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    color: $color-text-secondary;
+    @include font-style;
+
+    .col-num {
+        width: 42px;
+        text-align: center;
+    }
+
+    .col-title, .col-album {
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-text-secondary;
+    }
+
+    .col-title { width: 40%; }
+    .col-album { width: 35%; }
+
+    .col-duration {
+        @include flex(center, start, 50px);
+        width: 150px;
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-text-secondary;
+
+        img { @include square(40px); }
+    }
+
+    thead {
+        tr {
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            text-align: left;
+            padding-bottom: 15px;
+            font-size: 14px;
+            font-weight: 400;
+            color: $color-text-secondary;
+        }
+    }
+
+    tbody {
+        tr {
+            @include row-hover;
+            
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1); // მიქსინში თუ არ გაქვს rgba, ვტოვებთ ასე
+            }
+        }
+
+        td {
+            padding: 10px 0;
+            vertical-align: middle;
+        }
+    }
+}
+
+.title-content {
+    @include flex-layout(flex-start, center, 12px);
+
+    img { @include square(40px, $radius-sm); }
+
+    .song-info {
+        @include flex-layout(center, flex-start);
+        flex-direction: column;
+
+        h3 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+            color: $color-text-primary;
+        }
+
+        a {
+            font-size: 14px;
+            color: $color-text-secondary;
+            font-weight: 400;
+            text-decoration: none;
+            &:hover { text-decoration: underline; }
+        }
+    }
+}
+
+.col-album a {
+    color: $color-text-secondary;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    &:hover { color: #fff; }
+}
+
+.col-duration {
+    span {
+        margin-right: 15px;
+        display: inline-block;
+        min-width: 35px;
+        color: $color-text-secondary;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    img {
+        width: 16px;
+        vertical-align: middle;
+    }
+}
+
+/* ============================
+   RESPONSIVE (Using Variables)
+   ============================ */
+
+@media (max-width: $breakpoint-md) {
+    body { @include flex-layout(center, stretch); flex-direction: column; }
+
+    .sidebar { @include hide-elements; }
+    
+    .menu-button-library-liked { @include hide-elements; }
+
+    .main-wrapper {
+        padding: 0 10px;
+        max-width: 100%;
+    }
+
+    .song-table {
+        margin-left: 0 !important;
+        width: 100%;
+        table-layout: auto;
+
+        .col-num, .col-album { @include hide-elements; }
+
+        thead th.col-num, thead th.col-album { @include hide-elements; }
+
+        .col-duration {
+            gap: 15px;
+            width: 80px;
+            justify-content: flex-end;
+
+            span {
+                margin-right: 5px;
+                min-width: unset;
+            }
+
+            img { @include square(20px); }
+        }
+
+        .col-title { width: auto; }
+    }
+
+    .navigation {
+        gap: 20px;
+        font-size: 12px;
+    }
+
+    .top-buttons { gap: 8px; }
+}

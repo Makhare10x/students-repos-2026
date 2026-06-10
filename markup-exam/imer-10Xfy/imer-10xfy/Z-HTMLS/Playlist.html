@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Play list</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../fonts/Satoshi_complete/Satoshi_complete/Fonts/WEB/css/satoshi.css">
+    </head>
+
+    <body>
+        <!-- mobile and desktop header and menu -->
+        <header>
+            <!-- desktop >1200px -->
+            <section class="desktop-menu">
+                <figure class="first-section-head">
+                    <div class="header-div">
+                        <a href="../Z-HTMLS/Library-HTML/Library.html">
+                            <img src="../assets/images/library.svg" alt="#">
+                            <p>Library</p>
+                        </a>
+                    </div>
+
+                    <div class="header-div">
+                        <a href="../index.html">
+                            <img src="../assets/images/home button.svg" alt="#">
+                            <p>Home</p>
+                        </a>
+                    </div>
+
+                    <div class="header-div">
+                        <a href="../Z-HTMLS/Discover.html">
+                            <img src="../assets/images/Star.svg" alt="#">
+                            <p>Discover</p>
+                        </a>
+                    </div>
+
+                    <div class="header-div">
+                        <a href="../Z-HTMLS/search.html">
+                            <img src="../assets/images/search.svg" alt="#">
+                            <p>Search</p>
+                        </a>
+                    </div>
+                </figure>
+                <figure class="second-section-head">
+                    <a href="#"><img src="../assets/images/News.svg" class="green-hover" alt="#"></a>
+                    <a href="#"><img src="../assets/images/private.svg" class="green-hover" alt="#"></a>
+
+                    <!-- მარჯვენა საიდბარის ღილაკი -->
+                    <label for="right-sidebar" class="right-sidebar-btn">
+                        <input type="checkbox" id="right-sidebar" hidden>
+                        <img src="../assets/images/friends.svg" alt="#" class="checked-color">
+                    </label>
+
+                    <a href="#"><img src="../assets/images/settings.svg" class="green-hover" alt="#"></a>
+                    <a href="#"><img src="../assets/images/profile image.png" class="profile-img" alt="#"></a>
+                </figure>
+            </section>
+            <!-- mobile 390px -->
+            <section class="mobile-menu">
+                <div class="header-div">
+                    <a href="../index.html">
+                        <img src="../assets/images/home button.svg" alt="#">
+                        <p>Home</p>
+                    </a>
+                </div>
+                <div class="header-div">
+                    <a href="../Z-HTMLS/Discover.html">
+                        <img src="../assets/images/Star.svg" alt="#">
+                        <p>Discover</p>
+                    </a>
+                </div>
+                <div class="header-div">
+                    <a href="../Z-HTMLS/search.html">
+                        <img src="../assets/images/search.svg" alt="#">
+                        <p>Search</p>
+                    </a>
+                </div>
+                <div class="header-div">
+                    <a href="../Z-HTMLS/Library-HTML/Library.html">
+                        <img src="../assets/images/library.svg" alt="#">
+                        <p>Library</p>
+                    </a>
+                </div>
+                <div class="header-div">
+                    <a href="#">
+                        <img src="../assets/images/profile.svg" alt="#">
+                        <p>Me</p>
+                    </a>
+                </div>
+            </section>
+        </header>
+
+        <main>
+            <!-- sidebar sections -->
+            <aside class="side-bar">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src=".././assets/images/Pins.svg" alt="#">
+                                <p>Pins</p>
+                            </a>
+                            <img class="arrow" src=".././assets/images/sidebar.svg" alt="#">
+                        </li>
+                        <li>
+                            <a href="../Z-HTMLS/Playlist.html">
+                                <img src=".././assets/images/Playlist.svg" alt="#">
+                                <p>Playlists</p>
+                            </a>
+                            <img class="arrow" src=".././assets/images/sidebar.svg" alt="#">
+                        </li>
+                        <li>
+                            <a href="../Z-HTMLS/Library-HTML/Linked-songs.html">
+                                <img src=".././assets/images/liked songs.svg" alt="#">
+                                <p>Liked songs</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src=".././assets/images/saves.svg" alt="#">
+                                <p>Saves</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../Z-HTMLS/Album.html">
+                                <img src=".././assets/images/Alboms.svg" alt="#">
+                                <p>Alboms</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src=".././assets/images/Folders.svg" alt="#">
+                                <p>Folders</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Podcasts/Podcast.html">
+                                <img src=".././assets/images/podcast.svg" alt="#">
+                                <p>Podcast</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src=".././assets/images/audiobook.svg" alt="#">
+                                <p>Audiobooks</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../Z-HTMLS/Artists-HTML/Artist-Home.html">
+                                <img src=".././assets/images/Artists.svg" alt="#">
+                                <p>Artsits</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            
+
+
+            <!-- ****************************************** -->
+
+            <!--  M O B I L E  -->
+            <section class="main-content">
+                <section class="playMainCont">
+                    <section class="playList">
+                        <div class="play-search">
+                            <label>
+                                <input type="search" name="play-search" placeholder="Search playlist">
+                                <img src="../assets/images/search.svg" class="Lib-search-Hov">
+                            </label>
+                            <img src="../assets/images/mobile-inf.png">
+                        </div>
+
+                        <div class="imgCenter">
+                            <img src="../assets/images/DaftPunkMix.png" alt="card" title="Daft Punk Mix">
+                        </div>
+
+
+                        <div class="play-main-center">
+                            <p>Daft Punk Mix</p>
+
+                            <div class="middle-cont">
+                                <p>By <span class="spotify">Spotify</span> </p>
+                                <div></div>
+                                <p> 50 songs </p>
+                                <div></div>
+                                <p> 3 hr 30 min</p>
+                            </div>
+
+                            <div class="Center-last">
+                                <div>
+                                    <img src="../assets/images/plusBag-icon.png" alt="icon">
+                                    <img src="../assets/images/snake-icon.png" alt="icon">
+                                    <img src="../assets/images/download-icon.png" alt="icon">
+                                    <img src="../assets/images/tree-dots.png" alt="icon">
+                                </div>
+                                <div>
+                                    <img src="../assets/images/doubleArrow-icon.png" alt="icon">
+                                    <img src="../assets/images/greenYoutub-icon.png" alt="icon">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="play-last-content">
+                            <div class="play-cont">
+                                <div>
+                                    <img src="../assets/images/JovanyJorjo.png" class="play-cont-img" alt="Jovany Jorjo" title="Jovany Jorjo">
+                                    <div>
+                                        <p>Get Lucky</p>
+                                        <p>Daft Punk</p>
+                                    </div>
+                                </div>
+                                <img src="../assets/images/tree-dots.png" class="tree-dots" alt="icon" title="three dots">
+                            </div>
+                            
+                            <div class="play-cont">
+                                <div>
+                                    <img src="../assets/images/JovanyJorjo.png" class="play-cont-img" alt="Jovany Jorjo" title="Jovany Jorjo">
+                                    <div>
+                                        <p>Instant Crush</p>
+                                        <p>Daft Punk, Julian Casablancas</p>
+                                    </div>
+                                </div>
+                                <img src="../assets/images/tree-dots.png" class="tree-dots" alt="icon" title="three dots">
+                            </div>
+
+                            <div class="play-cont">
+                                <div>
+                                    <img src="../assets/images/onMelancholy.png" class="play-cont-img" alt="Jovany Jorjo" title="Jovany Jorjo">
+                                    <div>
+                                        <p>On Melancholy Hill</p>
+                                        <p>Gorillaz</p>
+                                    </div>
+                                </div>
+                                <img src="../assets/images/tree-dots.png" class="tree-dots" alt="icon" title="three dots">
+                            </div>
+
+                            <div class="play-cont">
+                                <div>
+                                    <img src="../assets/images/Tained-love.png" class="play-cont-img" alt="Jovany Jorjo" title="Jovany Jorjo">
+                                    <div>
+                                        <p>Tainted Love</p>
+                                        <p>Soft Cell</p>
+                                    </div>
+                                </div>
+                                <img src="../assets/images/tree-dots.png" class="tree-dots" alt="icon" title="three dots">
+                            </div>
+
+                            <div class="play-cont">
+                                <div>
+                                    <img src="../assets/images/oneMoreTime.png" class="play-cont-img" alt="Jovany Jorjo" title="Jovany Jorjo">
+                                    <div>
+                                        <p>One More Time</p>
+                                        <p>Daft Punk</p>
+                                    </div>
+                                </div>
+                                <img src="../assets/images/tree-dots.png" class="tree-dots" alt="icon" title="three dots">
+                            </div>
+
+                            <div class="play-cont">
+                                <div>
+                                    <img src="../assets/images/ElectricFeel.png" class="play-cont-img" alt="Jovany Jorjo" title="Jovany Jorjo">
+                                    <div>
+                                        <p>Electric Feel</p>
+                                        <p>MGMT</p>
+                                    </div>
+                                </div>
+                                <img src="../assets/images/tree-dots.png" class="tree-dots" alt="icon" title="three dots">
+                            </div>
+
+                            <div class="play-cont">
+                                <div>
+                                    <img src="../assets/images/JovanyJorjo.png" class="play-cont-img" alt="Jovany Jorjo" title="Jovany Jorjo">
+                                    <div>
+                                        <p>Give Life Back to Music</p>
+                                        <p>Daft Punk</p>
+                                    </div>
+                                </div>
+                                <img src="../assets/images/tree-dots.png" class="tree-dots" alt="icon" title="three dots">
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+
+                <!--  D E S K T O P  -->
+
+                <section class="Play-color">
+                    <section class="PlayDeskCont">
+                        <div class="left-content">
+                            <div class="PlayDesk-head">
+                                <p>Daft Punk Mix</p>
+
+                                <div class="PlayDesk-middle">
+                                    <p>By <span class="spotify">Spotify</span> </p>
+                                    <div></div>
+                                    <p> 50 songs </p>
+                                    <div></div>
+                                    <p> 3 hr 30 min</p>
+                                </div>
+
+                                <div class="PlayDesk-last">
+                                    <div>
+                                        <img src="../assets/images/greenYoutub-icon.png" alt="icon">
+                                        <img src="../assets/images/doubleArrow-icon.png" alt="icon">
+                                        <img src="../assets/images/plus-circle-icon.png" alt="icon">
+                                        <img src="../assets/images/snake-icon.png" alt="icon">
+                                        <img src="../assets/images/download-icon.png" alt="icon">
+                                        <img src="../assets/images/upload-icon.png" alt="icon">
+                                        <img src="../assets/images/tree-dots.png" alt="icon">
+                                    </div>
+                                    <img src="../assets/images/search.svg" alt="icon">
+                                </div>
+                            </div>
+
+                            <div class="PlayDesk-main">
+                                <div class="Play-lists-head">
+                                    <div>
+                                        <p>#</p>
+                                        <p>Title</p>
+                                    </div>
+                                    <p>Album</p>
+                                    <p>Duration</p>
+                                </div>
+
+                                <hr>
+                                
+                                <div class="PlayDesk-main-inner">
+                                    <div class="PlayDesk-cont">
+                                        <p>1</p>
+                                        <div>
+                                            <img src="../assets/images/JovanyJorjo.png" class="play-cont-img" alt="Jovany Jorjo" title="Jovany Jorjo">
+                                            <div>
+                                                <p>Get Lucky</p>
+                                                <p>Daft Punk</p>
+                                            </div>
+                                        </div>
+                                        <p>Random Access Memories</p>
+                                        <p>4:35</p>
+                                        <img src="../assets/images/heart-icon.png" class="heart-icon" alt="icon">
+                                    </div>
+
+                                    <div class="PlayDesk-cont">
+                                        <p>2</p>
+                                        <div>
+                                            <img src="../assets/images/JovanyJorjo.png" class="play-cont-img" alt="Jovany Jorjo" title="Jovany Jorjo">
+                                            <div>
+                                                <p>Instant Crush</p>
+                                                <p>Daft Punk, Julian Casablancas</p>
+                                            </div>
+                                        </div>
+                                        <p>Random Access Memories</p>
+                                        <p>5:37</p>
+                                        <img src="../assets/images/heart-icon.png" class="heart-icon" alt="icon">
+                                    </div>
+
+                                    <div class="PlayDesk-cont">
+                                        <p>3</p>
+                                        <div>
+                                            <img src="../assets/images/onMelancholy.png" class="play-cont-img" alt="Jovany Jorjo" title="Jovany Jorjo">
+                                            <div>
+                                                <p>On Melancholy Hill</p>
+                                                <p>Gorillaz</p>
+                                            </div>
+                                        </div>
+                                        <p>Plastic Beach</p>
+                                        <p>3:53</p>
+                                        <img src="../assets/images/heart-icon.png" class="heart-icon" alt="icon">
+                                    </div>
+
+                                    <div class="PlayDesk-cont">
+                                        <p>4</p>
+                                        <div>
+                                            <img src="../assets/images/Tained-love.png" class="play-cont-img" alt="Jovany Jorjo" title="Jovany Jorjo">
+                                            <div>
+                                                <p>Tainted Love</p>
+                                                <p>Soft Cell</p>
+                                            </div>
+                                        </div>
+                                        <p>Non-Stop Erotic Cabaret</p>
+                                        <p>2:33</p>
+                                        <img src="../assets/images/heart-icon.png" class="heart-icon" alt="icon">
+                                    </div>
+
+                                    <div class="PlayDesk-cont">
+                                        <p>5</p>
+                                        <div>
+                                            <img src="../assets/images/oneMoreTime.png" class="play-cont-img" alt="Jovany Jorjo" title="Jovany Jorjo">
+                                            <div>
+                                                <p>One More Time</p>
+                                                <p>Daft Punk</p>
+                                            </div>
+                                        </div>
+                                        <p>Discovery</p>
+                                        <p>5:20</p>
+                                        <img src="../assets/images/heart-icon.png" class="heart-icon" alt="icon">
+                                    </div>
+
+                                    <div class="PlayDesk-cont">
+                                        <p>6</p>
+                                        <div>
+                                            <img src="../assets/images/ElectricFeel.png" class="play-cont-img" alt="Jovany Jorjo" title="Jovany Jorjo">
+                                            <div>
+                                                <p>Electric Feel</p>
+                                                <p>MGMT</p>
+                                            </div>
+                                        </div>
+                                        <p>Oracular Spectacular</p>
+                                        <p>3:49</p>
+                                        <img src="../assets/images/heart-icon.png" class="heart-icon" alt="icon">
+                                    </div>
+
+                                    <div class="PlayDesk-cont">
+                                        <p>7</p>
+                                        <div>
+                                            <img src="../assets/images/JovanyJorjo.png" class="play-cont-img" alt="Jovany Jorjo" title="Jovany Jorjo">
+                                            <div>
+                                                <p>Give Life Back to Music</p>
+                                                <p>Daft Punk</p>
+                                            </div>
+                                        </div>
+                                        <p>Random Access Memories</p>
+                                        <p>4:35</p>
+                                        <img src="../assets/images/heart-icon.png" class="heart-icon" alt="icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="right-content">
+                            <img src="../assets/images/DaftPunkMix.png" alt="img" title="Daft Punk Mix">
+
+                            <div class="right-content-btn">
+                                <div>Funk</div>
+                                <div>Electronic music</div>
+                                <div>Disco</div>
+                                <div>Soft Rock</div>
+                                <div>Progressive pop</div>
+                            </div>
+
+                            <div class="PlayLastRightDiv">
+                                <div>
+                                    <div class="Play-last-img Playimg1">
+                                        <img src="../assets/images/Daft-bleck.png" alt="image">
+                                    </div>
+                                    <p>Daft Punk</p>
+                                </div>
+                                <div>
+                                    <div class="Play-last-img  Playimg2">
+                                        <img src="../assets/images/Pharrell.png" alt="image">
+                                    </div>
+                                    <p>Pharrell Williams</p>
+                                </div>
+                                <div>
+                                    <div class="Play-last-img">
+                                        <img src="../assets/images/Nile.png" alt="image">
+                                    </div>
+                                    <p>Nile Rodgers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
+
+            <!-- ****************************************** -->
+
+
+
+            <!-- ********* rightb side bar ********** -->
+
+            <section class="right-sidebar-section">
+                <aside class="rightSidebar">
+                    <div class="right-bar-head">
+                        <p>Friends Activity</p>
+                        <img src="../assets/images/addFriends.png" class="addFriends-img">
+                    </div>
+
+
+                    <div class="right-main-divs">
+                        <img src=".././assets/images/friend1.png" class="friends-img">
+                        <div>
+                            <p>FriendlyMusicListener</p>
+                            <div class="friends-list1">
+                                <img src="../assets/images/iconsConection.png">
+                                <p>Goosebumps</p>
+                                <div></div>
+                                <p>Travis Scott</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right-main-divs">
+                        <img src=".././assets/images/friend2.png" class="friends-img">
+                        <div>
+                            <p>AverageMusicEnjoyer</p>
+                            <div class="friends-list1">
+                                <img src="../assets/images/iconsConection.png">
+                                <p>Get Lucky</p>
+                                <div></div>
+                                <p>Daft Punk</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right-main-divs">
+                        <img src=".././assets/images/friend3.png" class="friends-img">
+                        <div>
+                            <p>MusicEnthusiast</p>
+                            <div class="friends-list2">
+                                <p>1h</p>
+                                <p>would he</p>
+                                <div></div>
+                                <p>joji</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right-main-divs">
+                        <img src=".././assets/images/friend4.png" class="friends-img">
+                        <div>
+                            <p>IListenToMusic56</p>
+                            <div class="friends-list2">
+                                <p>6h</p>
+                                <p>Rockstar</p>
+                                <div></div>
+                                <p>Post Malone</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+        </main>
+
+        <footer>
+            <section class="player">
+                <nav class="mobile-player">
+                    <ul class="items-wrapper">
+                        <li class="song-player">
+                            <img class="mobile-player-photo" src=".././assets/player images/music-img.png" alt="">
+                            <article class="player-text-container">
+                                <p class="song-title">Get Lucky (feat. Pharrell Williams and Nile Rodgers)</p>
+                                <p>Daft Punk</p>
+                            </article>
+                        </li>
+                        <li class="buttons-container">
+                            <button><img src=".././assets/player images/add to playlits.svg" alt="#"></button>
+                            <button><img src=".././assets/player images/play simple.svg" alt="#"></button>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="desktop-player">
+                    <ul class="list-item-containers">
+                        <li><button class="pause-button"><img src=".././assets/desktop-player imagaes/desktop player -pouse button.svg" alt="#"></button></li>
+                        <li><button><img src=".././assets/desktop-player imagaes/player left.svg" alt="#"></button></li>
+                        <li><button><img src=".././assets/desktop-player imagaes/player right.svg" alt="#"></button></li>
+                        <li><button><img src=".././assets/desktop-player imagaes/shuffle.svg" alt="#"></button></li>
+                        <li><button><img src=".././assets/desktop-player imagaes/loop.svg" alt="#"></button></li>
+                        <li>
+                            <article class="player-time">
+                                <span>2:23</span>
+                                <input type="range" min="0" max="100" value="50" class="progress">
+                                <span>4:45</span>
+                            </article>
+                        </li>
+                        <li><button><img src=".././assets/desktop-player imagaes/volume.svg" alt="#"></button></li>
+                        <li>
+                            <figure>
+                                <img class="desktop-playe-image" src=".././assets/player images/music-img.png" alt="#">
+                                <figcaption>
+                                    <h1>Get Lucky</h1>
+                                    <p>Daft Punk</p>
+                                    <p>Random Access Memories</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+
+                    <ul class="list-item-containers">
+                        <li><button><img src=".././assets/desktop-player imagaes/pc-like.svg" alt="#"></button></li>
+                        <li><button><img src=".././assets/desktop-player imagaes/pc-playlist.svg" alt="#"></button></li>
+                        <li><button><img src=".././assets/desktop-player imagaes/pc-lyrics.svg" alt="#"></button></li>
+                        <li><button><img src=".././assets/desktop-player imagaes/pc-device.svg" alt="#"></button></li>
+                        <li><button><img src=".././assets/desktop-player imagaes/pc-playing-more.svg" alt="#"></button></li>
+                        <li><button class="line"><img src=".././assets/desktop-player imagaes/line.svg" alt="#"></button></li>
+                        <li><button class="profile-img"><img src=".././assets/desktop-player imagaes/DJ.svg" alt="#"></button></li>
+                        <li><button><img src=".././assets/desktop-player imagaes/pc-queue.svg" alt="#"></button></li>
+                    </ul>
+                </nav>
+            </section>
+        </footer>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

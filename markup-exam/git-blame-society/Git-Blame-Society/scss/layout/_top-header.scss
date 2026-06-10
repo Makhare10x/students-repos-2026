@@ -1,0 +1,61 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 5.4rem;
+}
+
+.main-navigation {
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;            
+        }
+}
+
+.actions {
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap:1.2rem;
+    }
+        img {
+            width: 2.4rem;
+            height: 2.5rem;
+            background-color: transparent;
+        }
+}
+
+.search:active {
+    width: 34rem;
+}
+
+.top-header{
+    @media (max-width:v.$bp-desktop){
+        display: none;
+    }
+}
+
+//styles for navigation
+.nav-row, .nav-list, .library-header {
+    @include m.nav-button;
+    color: v.$text-secondary;
+    
+    &:hover {
+    color: v.$text-primary;
+  }
+    &:active {
+    color: v.$text-primary;
+  }
+}
+
+.nav-list-active {
+    @include m.nav-button;
+    color: v.$text-primary;
+}

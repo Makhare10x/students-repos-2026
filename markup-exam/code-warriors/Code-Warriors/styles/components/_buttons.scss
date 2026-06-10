@@ -1,0 +1,44 @@
+/* BUTTONS */
+
+.control-btn,
+.play-btn {
+  background: none;
+  border: none;
+  padding: 0;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform $transition-base,
+              opacity $transition-base;
+}
+
+.control-btn:hover,
+.play-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* FILTER CHIPS */
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+
+  margin-bottom: $space-lg;
+
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .add-btn {
+  margin-left: auto;
+}
+}
+

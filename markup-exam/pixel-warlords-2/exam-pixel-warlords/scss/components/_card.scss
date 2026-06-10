@@ -1,0 +1,37 @@
+
+@use '../abstracts/variables';
+
+.card {
+  width: 18rem;
+  background: variables.$bg-black;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease, transform 0.3s ease;
+
+  &:hover { 
+    background: #282828;
+    scale: 0.95;
+    transform: translateY(-3px) translateX(-13px);
+  }
+
+  .card-image {
+    width: 100%;
+    aspect-ratio: 1;
+    // background-color:variables.$bg-dark;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    background-size: contain;
+  }
+
+  .card-title { font-weight: bold; margin-bottom: 8px; }
+  .card-desc { font-size: 0.8rem; color: variables.$text-muted; }
+}
+.cards-title{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: variables.$cards-title-color;
+
+}

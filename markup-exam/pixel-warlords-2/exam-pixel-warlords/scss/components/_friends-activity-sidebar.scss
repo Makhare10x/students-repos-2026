@@ -1,0 +1,28 @@
+@use '../abstracts/mixins';
+
+.hidden-sidebar {
+  background:none;
+  display: none; 
+  justify-content: flex-end;
+  position: absolute;
+  right: -100rem;
+  top: 0rem;
+  width: 100%; 
+  height: 100%;
+  transition: right 0.3s ease; 
+}
+
+.aside-hidden-sidebar {
+  @include mixins.flex();
+  width: 30rem;
+  height: 30rem;
+  background-color: rgba(5, 5, 5, 0.644);
+  border-radius: 0px 0px 0px 30px;
+}
+
+body:has(#toggle-theme:checked) {
+  .hidden-sidebar {
+    display: flex; 
+    right: 0; 
+  }
+}

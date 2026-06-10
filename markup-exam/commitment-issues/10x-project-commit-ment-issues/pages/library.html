@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <img src="../images/library-icon.svg" alt="My Library" class="library-icon" />
+                <span class="sidebar-title">My Library</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="sidebar-item">
+                        <a href="#">
+                            <div class="sidebar-item-icon-group">
+                                <img src="../images/pins-icon.svg" alt="Pins icon" class="sidebar-icon">
+                                <span class="sidebar-text">Pins</span>
+                            </div>
+                            <span><img src="../images/arrow-icon.svg" alt="Arrow Icon" class="sidebar-arrow"></span>
+                        </a>
+                    </li>
+                   
+                    <li class="sidebar-item">
+                        <a href="#">
+                            <div class="sidebar-item-icon-group">
+                                <img src="../images/playlists-icon.svg" alt="Playlists icon" class="sidebar-icon">
+                                <span class="sidebar-text">Playlists</span>
+                            </div>
+                            <span><img src="../images/arrow-icon.svg" alt="Arrow Icon" class="sidebar-arrow"></span>
+                        </a>
+                    </li>
+
+                   <li class="sidebar-item">
+                        <a href="./liked-songs.html">
+                            <div class="sidebar-item-icon-group">
+                                <img src="../images/liked-songs-icon.svg" alt="Liked Songs icon" class="sidebar-icon">
+                                <span class="sidebar-text">Liked Songs</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="#">
+                            <div class="sidebar-item-icon-group">
+                                <img src="../images/saves-icon.svg" alt="Saves icon" class="sidebar-icon">
+                                <span class="sidebar-text">Saves</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="#">
+                            <div class="sidebar-item-icon-group">
+                                <img src="../images/albums-icon.svg" alt="Albums icon" class="sidebar-icon">
+                                <span class="sidebar-text">Albums</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="#">
+                            <div class="sidebar-item-icon-group">
+                                <img src="../images/folders-icon.svg" alt="Folders icon" class="sidebar-icon">
+                                <span class="sidebar-text">Folders</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="#">
+                            <div class="sidebar-item-icon-group">
+                                <img src="../images/podcasts-icon.svg" alt="Podcasts icon" class="sidebar-icon">
+                                <span class="sidebar-text">Podcasts</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="#">
+                            <div class="sidebar-item-icon-group">
+                                <img src="../images/audiobooks-icon.svg" alt="Audiobooks icon" class="sidebar-icon">
+                                <span class="sidebar-text">Audiobooks</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="#">
+                            <div class="sidebar-item-icon-group">
+                                <img src="../images/artists-icon.svg" alt="Artists icon" class="sidebar-icon">
+                                <span class="sidebar-text">Artists</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="content-wrapper">
+            <header class="header">
+                <div class="header-left-container">
+                    <nav>
+                        <a href="../index.html" class="header-nav-link">
+                            <img src="../images/home-icon.svg" alt="Home Icon" class="home-icon">
+                            <span>Home</span>
+                        </a>
+                        <a href="#" class="header-nav-link">
+                            <img src="../images/discover-icon.svg" alt="Discover Icon" class="discover-icon">
+                            <span>Discover</span>
+                        </a>
+                    </nav>
+                    <a href="./search.html" class="header-search">
+                        <img src="../images/search-icon.svg" alt="" class="search-icon">
+                        <input type="text" placeholder="Search" class="search-input">
+                    </a>
+                </div>
+                <div class="header-right-container">
+                    <button class="header-icon-btn">
+                        <img src="../images/notification-icon.svg" alt="Notifications">
+                    </button>
+
+                    <button class="header-icon-btn">
+                        <img src="../images/lock-icon.svg" alt="Security">
+                    </button>
+
+                    <button class="header-icon-btn">
+                        <img src="../images/friends-icon.svg" alt="Friends">
+                    </button>
+
+                    <button class="header-icon-btn">
+                        <img src="../images/settings-icon.svg" alt="Settings">
+                    </button>
+
+                    <button class="header-icon-btn">
+                        <img src="../images/profile-icon.svg" alt="Profile" class="header-avatar">
+                    </button>
+                </div>
+            </header>
+                <!--main content starts here-->
+            <main class="main-content home-page">
+                <!--Search Bar (only visible in mobile view)-->
+                <div class="none search-container">
+                    <div class="search-bar">
+                        <input type="text" placeholder="What do you want to play?" />
+                        <span class="search-icon">
+                            <img src="../images/search-field-icon-mobile.svg" alt="search">
+                        </span>
+                    </div>
+                    <img src="../images/plus-sign-icon.svg" alt="add">
+                </div>
+                 <!--filters and buttons for switching between grid and list-->
+                <div class="library-button-wrapper">
+                    <div class="left-group">
+                        <div class="library-icon-btn">
+                            <a href="#list">
+                                <img src="../images/list-icon.svg" alt="list">
+                            </a>
+                            <a href="#grid">
+                                <img src="../images/grid-icon.svg" alt="grid">
+                            </a>
+                        </div>
+
+                        <button class="library-icon-btn">
+                            <img src="../images/sort-icon.svg" alt="sort">
+                            <span>Recent</span>
+                        </button>
+
+                        <button class="library-icon-btn">
+                            <img src="../images/filter-icon-2.svg" alt="filter">
+                            <span>Group</span>
+                        </button>
+
+                        <form class="library-icon-btn">
+                            <img src="../images/search-icon.svg" alt="search">
+                            <input type="text">
+                        </form>
+                            
+                    </div>
+                    <div class="right-group">
+                        <button class="library-icon-btn">
+                            <img src="../images/plus-sign-icon.svg" alt="add">
+                        </button>
+                    </div>
+                </div>
+                <!--buttons only visible in mobile view-->
+                <div class="buttons-wrapper none">
+                    <div class="button-group">
+                        <img src="../images/group-icon.svg" alt="group">
+                        <span>Group</span>
+                    </div>
+                    <div class="button-group">
+                        <span>Recents</span>
+                        <img src="../images/recents-icon.svg" alt="recents">
+                    </div>
+                </div>
+                <div class="grid-view" id="list">
+                    <!--grid content-->
+                        <div class="library-main-content"> 
+                            <div class="song-wrapper">
+                                <div class="song-image-wrapper">
+                                    <img src="../images/green-heart.png" alt="green-heart">
+                                </div>
+                                <div class="pin-image-wrapper"> 
+                                    <img src="../images/pin-icon.svg" alt="pin">
+                                </div>
+                                <div class="song-info">    
+                                    <div class="song-title-wrapper">
+                                        <div class="playlist-icon">
+                                            <div class="none list-icon">
+                                                <img src="../images/playlist-icon.svg" alt="playlist">
+                                            </div>
+                                            <h4>Liked songs</h4>
+                                        </div>
+                                        <div class="neon-green count">8</div>
+                                    </div>
+                                    <div class="box-description">Numb, Crawling, In the End, and more</div>
+                                </div>
+                                <div class="date none">2 weeks ago</div>
+                                <div class="date none">2 weeks ago</div>
+                            </div>
+
+                            <div class="song-wrapper">
+                                <div class="song-image-wrapper1">
+                                    <img src="../images/David-Bowie.png" alt="David-Bowie">
+                                </div>
+                                <div class="pin-image-wrapper"> 
+                                    <img src="../images/pin-icon.svg" alt="pin">
+                                </div>
+                                <div class="song-info">    
+                                    <div class="song-title-wrapper">
+                                        <div class="playlist-icon">
+                                            <div class="none list-icon">
+                                                <img src="../images/playlist-icon.svg" alt="playlist">
+                                            </div>
+                                            <h4>David Bowie</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="date none">2 weeks ago</div>
+                                <div class="date none">2 weeks ago</div>
+                            </div>
+
+                            <div class="song-wrapper">
+                                <div class="song-image-wrapper">
+                                    <img src="../images/daft-punk.png" alt="daft-punk">
+                                </div>
+                                <div class="pin-image-wrapper"> 
+                                    <img src="../images/pin-icon.svg" alt="pin">
+                                </div>
+                                <div class="song-info">    
+                                    <div class="song-title-wrapper">
+                                        <div class="playlist-icon">
+                                            <div class="none list-icon">
+                                                <img src="../images/playlist-icon.svg" alt="playlist">
+                                            </div>
+                                            <h4>Daft Punk</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="date none">2 weeks ago</div>
+                                <div class="date none">2 weeks ago</div>
+                            </div>
+
+                            <div class="song-wrapper">
+                                <div class="song-image-wrapper">
+                                    <img src="../images/music.png" alt="Chill-stuff">
+                                </div>
+                                <div class="pin-image-wrapper"> 
+                                    <img src="../images/pin-icon.svg" alt="pin">
+                                </div>
+                                <div class="song-info">    
+                                    <div class="song-title-wrapper">
+                                        <div class="playlist-icon">
+                                            <div class="none list-icon">
+                                                <img src="../images/playlist-icon.svg" alt="playlist">
+                                            </div>
+                                            <h4>Chill Stuff</h4>
+                                        </div>
+                                        <div class="light-gray count">152</div>
+                                    </div>
+                                    <div class="box-description">Simon and Garfunkel, Daft Punk, and more</div>
+                                </div>
+                                <div class="date none">2 weeks ago</div>
+                                <div class="date none">2 weeks ago</div>
+                            </div>
+
+                            <div class="song-wrapper">
+                                <div class="song-image-wrapper">
+                                    <img src="../images/music.png" alt="The-Jux-Box">
+                                </div>
+                                <div class="pin-image-wrapper"> 
+                                    <img src="../images/pin-icon.svg" alt="pin">
+                                </div>
+                                <div class="song-info">    
+                                    <div class="song-title-wrapper">
+                                        <div class="playlist-icon">
+                                            <div class="none list-icon">
+                                                <img src="../images/playlist-icon.svg" alt="playlist">
+                                            </div>
+                                            <h4>The Jux Box</h4>
+                                        </div>
+                                        <div class="light-gray count">50</div>
+                                    </div>
+                                    <div class="box-description">Simon and Garfunkel, Daft Punk, and more</div>
+                                </div>
+                                <div class="date none">2 weeks ago</div>
+                                <div class="date none">2 weeks ago</div>
+                            </div>
+
+                            <div class="song-wrapper">
+                                <div class="song-image-wrapper">
+                                    <img src="../images/music.png" alt="Vibe">
+                                </div>
+                                <div class="pin-image-wrapper"> 
+                                    <img src="../images/pin-icon.svg" alt="pin">
+                                </div>
+                                <div class="song-info">    
+                                    <div class="song-title-wrapper">
+                                        <div class="playlist-icon">
+                                            <div class="none list-icon">
+                                                <img src="../images/playlist-icon.svg" alt="playlist">
+                                            </div>
+                                            <h4>Vibe</h4>
+                                        </div>
+                                        <div class="light-gray count">30</div>
+                                    </div>
+                                    <div class="box-description">Blue Skies, No Heaven</div>
+                                </div>
+                                <div class="date none">2 weeks ago</div>
+                                <div class="date none">2 weeks ago</div>
+                            </div>
+                            
+                            <div class="song-wrapper">
+                                <div class="song-image-wrapper">
+                                    <img src="../images/music.png" alt="Selected-Linkin">
+                                </div>
+                                <div class="pin-image-wrapper"> 
+                                    <img src="../images/pin-icon.svg" alt="pin">
+                                </div>
+                                <div class="song-info">    
+                                    <div class="song-title-wrapper">
+                                        <div class="playlist-icon">
+                                            <div class="none list-icon">
+                                                <img src="../images/playlist-icon.svg" alt="playlist">
+                                            </div>
+                                            <h4>Selected Linkin...</h4>
+                                        </div>
+                                        <div class="light-gray count">30</div>
+                                    </div>
+                                    <div class="box-description">Numb, Crawling, In the End, and more</div>
+                                </div>
+                                <div class="date none">2 weeks ago</div>
+                                <div class="date none">2 weeks ago</div>
+                            </div>
+
+                            <div class="song-wrapper">
+                                <div class="song-image-wrapper">
+                                    <img src="../images/folder.png" alt="fav-bands">
+                                </div>
+                                <div class="pin-image-wrapper"> 
+                                    <img src="../images/pin-icon.svg" alt="pin">
+                                </div>
+                                <div class="song-info">    
+                                    <div class="song-title-wrapper">
+                                        <div class="playlist-icon">
+                                            <div class="none list-icon">
+                                                <img src="../images/playlist-icon.svg" alt="playlist">
+                                            </div>
+                                            <h4>Fav Bands</h4>
+                                        </div>
+                                        <div class="light-gray count">6</div>
+                                    </div>
+                                    <div class="box-description">Linkin Park, Muse and more</div>
+                                </div>
+                                <div class="date none">2 weeks ago</div>
+                                <div class="date none">2 weeks ago</div>
+                            </div>
+
+                            <div class="song-wrapper">
+                                <div class="song-image-wrapper">
+                                    <img src="../images/linkin-park.png" alt="linkin-park">
+                                </div>
+                                <div class="pin-image-wrapper"> 
+                                    <img src="../images/pin-icon.svg" alt="pin">
+                                </div>
+                                <div class="song-info">    
+                                    <div class="song-title-wrapper">
+                                        <div class="playlist-icon">
+                                            <div class="none list-icon">
+                                                <img src="../images/playlist-icon.svg" alt="playlist">
+                                            </div>
+                                            <h4>Meteora</h4>
+                                        </div>
+                                    </div>
+                                    <div class="box-description">Linkin Park</div>
+                                </div>
+                                <div class="date none">2 weeks ago</div>
+                                <div class="date none">2 weeks ago</div>
+                            </div>
+
+                            <div class="song-wrapper">
+                                <a  href="./album-page.html" song-image-wrapper">
+                                    <img src="../images/random.png" alt="random">
+                                </a>
+                                <div class="pin-image-wrapper"> 
+                                    <img src="../images/pin-icon.svg" alt="pin">
+                                </div>
+                                <div class="song-info">    
+                                    <div class="song-title-wrapper">
+                                        <div class="playlist-icon">
+                                            <div class="none list-icon">
+                                                <img src="../images/playlist-icon.svg" alt="playlist">
+                                            </div>
+                                            <h4>Random Access...</h4>
+                                        </div>
+                                        <div class="light-gray count">13</div>
+                                    </div>
+                                    <div class="box-description">Daft Punk</div>
+                                </div>
+                                <div class="date none">2 weeks ago</div>
+                                <div class="date none">2 weeks ago</div>
+                            </div>
+
+                            <div class="song-wrapper">
+                                <div class="song-image-wrapper">
+                                    <img src="../images/The-Beatles.png" alt="abbey-road">
+                                </div>
+                                <div class="song-info">    
+                                    <div class="song-title-wrapper">
+                                        <div class="playlist-icon">
+                                            <div class="none list-icon">
+                                                <img src="../images/playlist-icon.svg" alt="playlist">
+                                            </div>
+                                            <h4>Abbey Road</h4>
+                                        </div>
+                                        <div class="light-gray count">13</div>
+                                    </div>
+                                    <div class="box-description">The Beatles</div>
+                                </div>
+                                <div class="date none">2 weeks ago</div>
+                                <div class="date none">2 weeks ago</div>
+                            </div>
+
+                            <div class="song-wrapper">
+                                <div class="song-image-wrapper">
+                                    <img src="../images/muse.png" alt="muse">
+                                </div>
+                                <div class="song-info">    
+                                    <div class="song-title-wrapper">
+                                        <div class="playlist-icon">
+                                            <div class="none list-icon">
+                                                <img src="../images/playlist-icon.svg" alt="playlist">
+                                            </div>
+                                            <h4>Black Holes and...</h4>
+                                        </div>
+                                        <div class="light-gray count">13</div>
+                                    </div>
+                                    <div class="box-description">Muse</div>
+                                </div>
+                                <div class="date none">2 weeks ago</div>
+                                <div class="date none">2 weeks ago</div>
+                            </div>
+
+                            <div class="song-wrapper">
+                                <div class="song-image-wrapper">
+                                    <img src="../images/dailymix1.png" alt="mix">
+                                </div>
+                                <div class="song-info">    
+                                    <div class="song-title-wrapper">
+                                        <div class="playlist-icon">
+                                            <div class="none list-icon">
+                                                <img src="../images/playlist-icon.svg" alt="playlist">
+                                            </div>
+                                            <h4>Daily Mix 1</h4>
+                                        </div>
+                                        <div class="light-blue count">50</div>
+                                    </div>
+                                    <div class="box-description">Linkin Park, System Of A Down, Coal Chamber...</div>
+                                </div>
+                                <div class="date none">2 weeks ago</div>
+                                <div class="date none">2 weeks ago</div>
+                            </div>
+
+                            <div class="song-wrapper">
+                                <div class="song-image-wrapper">
+                                    <img src="../images/dailymix2.png" alt="mix">
+                                </div>
+                                <div class="song-info">    
+                                    <div class="song-title-wrapper">
+                                        <div class="playlist-icon">
+                                            <div class="none list-icon">
+                                                <img src="../images/playlist-icon.svg" alt="playlist">
+                                            </div>
+                                            <h4>Daily Mix 2</h4>
+                                        </div>
+                                        <div class="light-pink count">50</div>
+                                    </div>
+                                    <div class="box-description">Avril Lavigne, Lorde, Charli XCX and more</div>
+                                </div>
+                                <div class="date none">2 weeks ago</div>
+                                <div class="date none">2 weeks ago</div>
+                            </div>
+
+                            <div class="song-wrapper">
+                                <div class="song-image-wrapper">
+                                    <img src="../images/dailymix3.png" alt="mix">
+                                </div>
+                                <div class="song-info">    
+                                    <div class="song-title-wrapper">
+                                        <div class="playlist-icon">
+                                            <div class="none list-icon">
+                                                <img src="../images/playlist-icon.svg" alt="playlist">
+                                            </div>
+                                            <h4>Daily Mix 3</h4>
+                                        </div>
+                                        <div class="light-green count">50</div>
+                                    </div>
+                                    <div class="box-description">The Strokes, Martin Garrix, MGMT and more</div>
+                                </div>
+                                <div class="date none">2 weeks ago</div>
+                                <div class="date none">2 weeks ago</div>
+                            </div>
+
+                            <div class="song-wrapper">
+                                <div class="song-image-wrapper">
+                                    <img src="../images/Rockmix.png" alt="mix">
+                                </div>
+                                <div class="song-info">    
+                                    <div class="song-title-wrapper">
+                                        <div class="playlist-icon">
+                                            <div class="none list-icon">
+                                                <img src="../images/playlist-icon.svg" alt="playlist">
+                                            </div>
+                                            <h4>Daily Mix 4</h4>
+                                        </div>
+                                        <div class="neon-yellow count">50</div>
+                                    </div>
+                                    <div class="box-description">Red Hot Chili Peppers, R.E.M., Guns N' Roses...</div>
+                                </div>
+                                <div class="date none">2 weeks ago</div>
+                                <div class="date none">2 weeks ago</div>
+                            </div>
+
+                            <div class="song-wrapper">
+                                <div class="song-image-wrapper">
+                                    <img src="../images/chillmix.png" alt="mix">
+                                </div>
+                                <div class="song-info">    
+                                    <div class="song-title-wrapper">
+                                        <div class="playlist-icon">
+                                            <div class="none list-icon">
+                                                <img src="../images/playlist-icon.svg" alt="playlist">
+                                            </div>
+                                            <h4>Chill Mix</h4>
+                                        </div>
+                                        <div class="yellow count">50</div>
+                                    </div>
+                                    <div class="box-description">MF DOOM, Daft Punk, The Chainsmokers, and more</div>
+                                </div>
+                                <div class="date none">2 weeks ago</div>
+                                <div class="date none">2 weeks ago</div>
+                            </div>
+
+                            <div class="song-wrapper">
+                                <div class="song-image-wrapper">
+                                    <img src="../images/popmix.png" alt="mix">
+                                </div>
+                                <div class="song-info">    
+                                    <div class="song-title-wrapper">
+                                        <div class="playlist-icon">
+                                            <div class="none list-icon">
+                                                <img src="../images/playlist-icon.svg" alt="playlist">
+                                            </div>
+                                            <h4>Pop Mix</h4>
+                                        </div>
+                                        <div class="aqua count">50</div>
+                                    </div>
+                                    <div class="box-description">Red Hot Chili Peppers, R.E.M., Guns N' Roses...</div>
+                                </div>
+                                <div class="date none">2 weeks ago</div>
+                                <div class="date none">2 weeks ago</div>
+                            </div>    
+                        </div>
+                    </div>
+                <!--List View-->
+                <div class="list-view">
+                    <!--folders dropdown-->
+                    <details open>
+                        <summary>
+                            <span>Folders</span>
+                            <img src="../images/dropdown-arrow.svg" alt="see more" class="dropdown-arrow">
+                        </summary>
+                        <div class="list-item-container">
+                            <div class="list-item">
+                                <div class="item">
+                                    <img src="../images/folder.png" alt="fav bands" class="grid-img">
+                                    <img src="../images/folder-list-icon.png" alt="fav bands" class="list-img">
+                                    <img src="../images/pin-icon.svg" alt="pinned" class="pin-icon">
+                                    <div class="title">
+                                        <img src="../images/folder-icon.svg">
+                                        <div>Fav bands</div>
+                                        <div class="grid-count gray">5</div>
+                                    </div>
+                                    <div class="description-box">
+                                        Linkin Park, Muse, and more
+                                    </div>
+                                </div>
+                                <div class="white-space"></div>
+                                <div class="info">
+                                    <div>50</div>
+                                    <div>2 weeks ago</div>
+                                    <div>2 weeks ago</div>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                    <!--playlists dropdown-->
+                    <details open>
+                        <summary>
+                            <span>Playlists</span>
+                            <img src="../images/dropdown-arrow.svg" alt="see more" class="dropdown-arrow">
+                        </summary>
+                        <div class="list-item-container">
+                            <div class="list-item">
+                                <div class="item">
+                                    <img src="../images/green-heart.png" alt="liked songs" class="grid-img">
+                                    <img src="../images/liked-songs-list-icon.png" alt="liked songs" class="list-img">
+                                    <img src="../images/pin-icon.svg" alt="pinned" class="pin-icon">
+                                    <div class="title">
+                                        <img src="../images/playlist-icon.svg">
+                                        <div>Liked songs</div>
+                                        <div class="grid-count spotify-green">12</div>
+                                    </div>
+                                    <div class="description-box">
+                                        Get Lucky, Instant Crush, and more
+                                    </div>
+                                </div>
+                                <div class="white-space"></div>
+                                <div class="info">
+                                    <div>50</div>
+                                    <div>2 weeks ago</div>
+                                    <div>2 weeks ago</div>
+                                </div>
+                            </div>
+
+                            <div class="list-item">
+                                <div class="item">
+                                    <img src="../images/music.png" alt="chill stuff" class="grid-img">
+                                    <img src="../images/playlist-list-icon.png" alt="chill stuff" class="list-img">
+                                    <img src="../images/pin-icon.svg" alt="pinned" class="pin-icon">
+                                    <div class="title">
+                                        <img src="../images/playlist-icon.svg">
+                                        <div>Chill Stuff</div>
+                                        <div class="grid-count gray">152</div>
+                                    </div>
+                                    <div class="description-box">
+                                        Simon and Garfunkel, Daft Punk, and more
+                                    </div>
+                                </div>
+                                <div class="white-space"></div>
+                                <div class="info">
+                                    <div>50</div>
+                                    <div>2 weeks ago</div>
+                                    <div>2 weeks ago</div>
+                                </div>
+                            </div>
+
+                            <div class="list-item">
+                                <div class="item">
+                                    <img src="../images/music.png" alt="rock n roll" class="grid-img">
+                                    <img src="../images/playlist-list-icon.png" alt="rock n roll" class="list-img">
+                                    <img src="../images/pin-icon.svg" alt="pinned" class="pin-icon">
+                                    <div class="title">
+                                        <img src="../images/playlist-icon.svg">
+                                        <div>Rock n Roll</div>
+                                        <div class="grid-count gray">30</div>
+                                    </div>
+                                    <div class="description-box">
+                                        Metallica, Guns N’ Roses, and more
+                                    </div>
+                                </div>
+                                <div class="white-space"></div>
+                                <div class="info">
+                                    <div>50</div>
+                                    <div>2 weeks ago</div>
+                                    <div>2 weeks ago</div>
+                                </div>
+                            </div>
+
+                            <div class="list-item">
+                                <div class="item">
+                                    <img src="../images/music.png" alt="vibe" class="grid-img">
+                                    <img src="../images/playlist-list-icon.png" alt="vibe" class="list-img">
+                                    <img src="../images/pin-icon.svg" alt="pinned" class="pin-icon">
+                                    <div class="title">
+                                        <img src="../images/playlist-icon.svg">
+                                        <div>Vibe</div>
+                                        <div class="grid-count gray">2</div>
+                                    </div>
+                                    <div class="description-box">
+                                        Blue Skies, No Heaven
+                                    </div>
+                                </div>
+                                <div class="white-space"></div>
+                                <div class="info">
+                                    <div>50</div>
+                                    <div>2 weeks ago</div>
+                                    <div>2 weeks ago</div>
+                                </div>
+                            </div>
+
+                            <div class="list-item">
+                                <div class="item">
+                                    <img src="../images/music.png" alt="selected linkin park" class="grid-img">
+                                    <img src="../images/playlist-list-icon.png" alt="Selected Linkin Park" class="list-img">
+                                    <img src="../images/pin-icon.svg" alt="pinned" class="pin-icon">
+                                    <div class="title">
+                                        <img src="../images/playlist-icon.svg">
+                                        <div>Selected Linkin Park</div>
+                                        <div class="grid-count gray">2</div>
+                                    </div>
+                                    <div class="description-box">
+                                        Numb, Crawling, In the End, and more
+                                    </div>
+                                </div>
+                                <div class="white-space"></div>
+                                <div class="info">
+                                    <div>50</div>
+                                    <div>2 weeks ago</div>
+                                    <div>2 weeks ago</div>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                    <!--Playlists by Spotify dropdown-->
+                    <details open>
+                        <summary>
+                            <span>Playlists By Spotify</span>
+                            <img src="../images/dropdown-arrow.svg" alt="see more" class="dropdown-arrow">
+                        </summary>
+                        <div class="list-item-container">
+                            <div class="list-item">
+                                <div class="item">
+                                    <img src="../images/daily-mix-1.png" alt="daily mix 1" class="grid-img">
+                                    <img src="../images/daily-mix-1-list.png" alt="daily mix 1" class="list-img">
+                                    <img src="../images/pin-icon.svg" alt="pinned" class="pin-icon">
+                                    <div class="title">
+                                        <img src="../images/playlist-icon.svg">
+                                        <div>Daily Mix 1</div>
+                                        <div class="grid-count cyan">50</div>
+                                    </div>
+                                    <div class="description-box">
+                                        Linkin Park, System Of A Down, Coal Chamber...
+                                    </div>
+                                </div>
+                                <div class="white-space"></div>
+                                <div class="info">
+                                    <div>50</div>
+                                    <div>2 weeks ago</div>
+                                    <div>2 weeks ago</div>
+                                </div>
+                            </div>
+
+                            <div class="list-item">
+                                <div class="item">
+                                    <img src="../images/daily-mix-2.png" alt="daily mix 2" class="grid-img">
+                                    <img src="../images/daily-mix-2-list.png" alt="daily mix 2" class="list-img">
+                                    <img src="../images/pin-icon.svg" alt="pinned" class="pin-icon">
+                                    <div class="title">
+                                        <img src="../images/playlist-icon.svg">
+                                        <div>Daily Mix 2</div>
+                                        <div class="grid-count light-pink">32</div>
+                                    </div>
+                                    <div class="description-box">
+                                        Avril Lavigne, Lorde, Charli XCX and more
+                                    </div>
+                                </div>
+                                <div class="white-space"></div>
+                                <div class="info">
+                                    <div>50</div>
+                                    <div>2 weeks ago</div>
+                                    <div>2 weeks ago</div>
+                                </div>
+                            </div>
+
+                            <div class="list-item">
+                                <div class="item">
+                                    <img src="../images/daily-mix-3.png" alt="daily mix 3" class="grid-img">
+                                    <img src="../images/daily-mix-3-list.png" alt="daily mix 3" class="list-img">
+                                    <img src="../images/pin-icon.svg" alt="pinned" class="pin-icon">
+                                    <div class="title">
+                                        <img src="../images/playlist-icon.svg">
+                                        <div>Daily Mix 3</div>
+                                        <div class="grid-count light-green">50</div>
+                                    </div>
+                                    <div class="description-box">
+                                        The Strokes, Martin Garrix, MGMT and more
+                                    </div>
+                                </div>
+                                <div class="white-space"></div>
+                                <div class="info">
+                                    <div>50</div>
+                                    <div>2 weeks ago</div>
+                                    <div>2 weeks ago</div>
+                                </div>
+                            </div>
+
+                            <div class="list-item">
+                                <div class="item">
+                                    <img src="../images/rock-mix.png" alt="rock mix" class="grid-img">
+                                    <img src="../images/rock-mix-list.png" alt="rock mix" class="list-img">
+                                    <img src="../images/pin-icon.svg" alt="pinned" class="pin-icon">
+                                    <div class="title">
+                                        <img src="../images/playlist-icon.svg">
+                                        <div>Rock Mix</div>
+                                        <div class="grid-count lime">50</div>
+                                    </div>
+                                    <div class="description-box">
+                                        Red Hot Chili Peppers, R.E.M., Guns N’ Roses...
+                                    </div>
+                                </div>
+                                <div class="white-space"></div>
+                                <div class="info">
+                                    <div>50</div>
+                                    <div>2 weeks ago</div>
+                                    <div>2 weeks ago</div>
+                                </div>
+                            </div>
+
+                            <div class="list-item">
+                                <div class="item">
+                                    <img src="../images/chill-mix.png" alt="chill mix" class="grid-img">
+                                    <img src="../images/chill-mix-list.png" alt="chill mix" class="list-img">
+                                    <img src="../images/pin-icon.svg" alt="pinned" class="pin-icon">
+                                    <div class="title">
+                                        <img src="../images/playlist-icon.svg">
+                                        <div>Chill Mix</div>
+                                        <div class="grid-count yellow">32</div>
+                                    </div>
+                                    <div class="description-box">
+                                        MF DOOM, Daft Punk, The Chainsmokers, and more
+                                    </div>
+                                </div>
+                                <div class="white-space"></div>
+                                <div class="info">
+                                    <div>50</div>
+                                    <div>2 weeks ago</div>
+                                    <div>2 weeks ago</div>
+                                </div>
+                            </div>
+
+                            <div class="list-item">
+                                <div class="item">
+                                    <img src="../images/pop-mix.png" alt="pop mix" class="grid-img">
+                                    <img src="../images/pop-mix-list.png" alt="pop mix" class="list-img">
+                                    <img src="../images/pin-icon.svg" alt="pinned" class="pin-icon">
+                                    <div class="title">
+                                        <img src="../images/playlist-icon.svg">
+                                        <div>Pop Mix</div>
+                                        <div class="grid-count cyan">50</div>
+                                    </div>
+                                    <div class="description-box">
+                                        Red Hot Chili Peppers, R.E.M., Guns N’ Roses...
+                                    </div>
+                                </div>
+                                <div class="white-space"></div>
+                                <div class="info">
+                                    <div>50</div>
+                                    <div>2 weeks ago</div>
+                                    <div>2 weeks ago</div>
+                                </div>
+                            </div>        
+                        </div>
+                    </details>
+                    <!--Albums dropdown-->
+                    <details open>
+                        <summary>
+                            <span>Albums</span>
+                            <img src="../images/dropdown-arrow.svg" alt="see more" class="dropdown-arrow">
+                        </summary>
+                        <div class="list-item-container">
+                            <div class="list-item">
+                                <div class="item">
+                                    <img src="../images/linkin-park.png" alt="meteora" class="grid-img">
+                                    <img src="../images/meteora-list.png" alt="meteora" class="list-img">
+                                    <img src="../images/pin-icon.svg" alt="pinned" class="pin-icon">
+                                    <div class="title">
+                                        <img src="../images/album-icon.svg">
+                                        <div>Meteora</div>
+                                    </div>
+                                    <div class="description-box">
+                                        Linkin Park
+                                    </div>
+                                </div>
+                                <div class="white-space"></div>
+                                <div class="info">
+                                    <div>50</div>
+                                    <div>2 weeks ago</div>
+                                    <div>2 weeks ago</div>
+                                </div>
+                            </div>
+
+                            <div class="list-item">
+                                <div class="item">
+                                    <img src="../images/random.png" alt="random access memory" class="grid-img">
+                                    <img src="../images/ram-list.png" alt="random access memory" class="list-img">
+                                    <img src="../images/pin-icon.svg" alt="pinned" class="pin-icon">
+                                    <div class="title">
+                                        <img src="../images/album-icon.svg">
+                                        <div>Random Access Memory</div>
+                                    </div>
+                                    <div class="description-box">
+                                        Daft Punk
+                                    </div>
+                                </div>
+                                <div class="white-space"></div>
+                                <div class="info">
+                                    <div>50</div>
+                                    <div>2 weeks ago</div>
+                                    <div>2 weeks ago</div>
+                                </div>
+                            </div>
+
+                            <div class="list-item">
+                                <div class="item">
+                                    <img src="../images/The-Beatles.png" alt="abbey road" class="grid-img">
+                                    <img src="../images/abbey-road-list.png" alt="abbey road" class="list-img">
+                                    <img src="../images/pin-gray.svg" alt="pin" class="pin-icon pin-gray">
+                                    <div class="title">
+                                        <img src="../images/album-icon.svg">
+                                        <div>Abbey Road</div>
+                                    </div>
+                                    <div class="description-box">
+                                        The Beatles
+                                    </div>
+                                </div>
+                                <div class="white-space"></div>
+                                <div class="info">
+                                    <div>50</div>
+                                    <div>2 weeks ago</div>
+                                    <div>2 weeks ago</div>
+                                </div>
+                            </div>
+
+                            <div class="list-item">
+                                <div class="item">
+                                    <img src="../images/muse.png" alt="black holes and revelations" class="grid-img">
+                                    <img src="../images/black-holes-list.png" alt="black holes and revelations" class="list-img">
+                                    <img src="../images/pin-gray.svg" alt="pin" class="pin-icon pin-gray">
+                                    <div class="title">
+                                        <img src="../images/album-icon.svg">
+                                        <div>Black Holes and Revelations</div>
+                                    </div>
+                                    <div class="description-box">
+                                        Muse
+                                    </div>
+                                </div>
+                                <div class="white-space"></div>
+                                <div class="info">
+                                    <div>50</div>
+                                    <div>2 weeks ago</div>
+                                    <div>2 weeks ago</div>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                    <!--Artists dropdown-->
+                    <details open>
+                        <summary>
+                            <span>Artists</span>
+                            <img src="../images/dropdown-arrow.svg" alt="see more" class="dropdown-arrow">
+                        </summary>
+                        <div class="list-item-container">
+                            <div class="list-item">
+                                <div class="item">
+                                    <img src="../images/daft-punk.png" alt="chill stuff" class="grid-img grid-artist-img">
+                                    <img src="../images/daft-punk.png" alt="daft punk" class="list-img artist-img">
+                                    <img src="../images/pin-icon.svg" alt="pinned" class="pin-icon">
+                                    <div class="title">
+                                        <img src="../images/artist-icon.svg">
+                                        <div>Daft Punk</div>
+                                    </div>
+                                </div>
+                                <div class="white-space"></div>
+                                <div class="info">
+                                    <div>50</div>
+                                    <div>2 weeks ago</div>
+                                    <div>2 weeks ago</div>
+                                </div>
+                            </div>
+
+                            <div class="list-item">
+                                <div class="item">
+                                    <img src="../images/David-Bowie.png" alt="david bowie" class="grid-img grid-artist-img">
+                                    <img src="../images/David-Bowie.png" alt="david bowie" class="list-img artist-img">
+                                    <img src="../images/pin-icon.svg" alt="pinned" class="pin-icon">
+                                    <div class="title">
+                                        <img src="../images/artist-icon.svg">
+                                        <div>David Bowie</div>
+                                    </div>
+                                </div>
+                                <div class="white-space"></div>
+                                <div class="info">
+                                    <div>50</div>
+                                    <div>2 weeks ago</div>
+                                    <div>2 weeks ago</div>
+                                </div>
+                            </div>
+
+                            <div class="list-item">
+                                <div class="item">
+                                    <img src="../images/guns-n-roses.png" alt="guns n roses" class="grid-img grid-artist-img">
+                                    <img src="../images/guns-n-roses.png" alt="guns n roses" class="list-img artist-img">
+                                    <img src="../images/pin-gray.svg" alt="pin" class="pin-icon pin-gray">
+                                    <div class="title">
+                                        <img src="../images/artist-icon.svg">
+                                        <div>Guns N' Roses</div>
+                                    </div>
+                                </div>
+                                <div class="white-space"></div>
+                                <div class="info">
+                                    <div>50</div>
+                                    <div>2 weeks ago</div>
+                                    <div>2 weeks ago</div>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+            </main>
+            <!--main content ends here-->
+            <footer class="footer">
+                <a href="./song.html" class="footer-overlay"></a>
+                <div class="footer-left-group">
+                    <div class="player-controls">
+                        <img src="../images/play-icon.svg" alt="play/pause">
+                        <img src="../images/prev-icon.svg" alt="skip back">
+                        <img src="../images/next-icon.svg" alt="skip forward">
+                        <img src="../images/shuffle-icon.svg" alt="shuffle">
+                        <img src="../images/repeat-icon.svg" alt="repeat">
+                        <div class="play-progress">
+                            <div class="runtime">2:23</div>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <div class="duration">4:45</div>
+                        </div>
+                        <img src="../images/volume-icon.svg" alt="volume">
+                    </div>
+                    <div class="song-playing">
+                        <img src="../images/song-image-icon.png" alt="cover">
+                        <div class="song-info">
+                            <div class="song-title">Get Lucky<span class="none feat">(Feat. Pharrell Williams)</span></div>
+                            <div class="artist">Daft Punk</div>
+                            <div class="album">Random Access Memories</div>
+                        </div>
+                    </div>
+                    <div class="mobile-footer-icons none">
+                        <img src="../images/add-song.svg" alt="Add Song">
+                        <img src="../images/play-mobile-icon.svg" alt="Play/Pause">
+                    </div>
+                </div>
+                <div class="other-controls">
+                    <img src="../images/like-icon.svg" alt="Add to Liked Songs">
+                    <img src="../images/add-icon.svg" alt="Add to Playlist">
+                    <img src="../images/lyrics-icon.svg" alt="Song Lyrics">
+                    <img src="../images/pc-icon.svg" alt="Device">
+                    <img src="../images/more-icon.svg" alt="More Options">
+                    <div class="line"></div>
+                    <img src="../images/dj-icon.svg" alt="DJ">
+                    <img src="../images/queue-icon.svg" alt="Queue">
+                </div>
+                 <img src="../images/more-icon.svg" class="none more-menu" alt="More Options">
+                 <!--player progress bar for mobile view-->
+                 <div class="mobile-progress-bar none">
+                    <div class="progress"></div>
+                 </div>
+            </footer>
+            <!--Mobile Navigation-->
+            <nav class="mobile-nav none">
+                <div class="nav-item">
+                    <img src="../images/home-inactive-icon.svg" alt="Home">
+                    <a href="../index.html">Home</a>
+                </div>
+                <div class="nav-item">
+                    <img src="../images/discover-icon.svg" alt="Discover">
+                    <a href="">Discover</a>
+                </div>
+                <div class="nav-item">
+                    <img src="../images/search-icon.svg" alt="Search">
+                    <a href="./search.html">Search</a>
+                </div>
+                <div class="nav-item">
+                    <img src="../images/library-icon.svg" alt="Library">
+                    <a href="./library.html">Library</a>
+                </div>
+                <div class="nav-item">
+                    <img src="../images/user-icon.svg" alt="Profile">
+                    <a href="">Me</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>

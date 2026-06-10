@@ -1,0 +1,25 @@
+
+@use '../abstracts/variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    border: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+body { font-family: 'Satoshi-Regular', sans-serif !important; background: variables.$bg-black; color: variables.$text-main; }
+
+

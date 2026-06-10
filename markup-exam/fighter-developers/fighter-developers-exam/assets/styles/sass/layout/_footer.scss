@@ -1,0 +1,190 @@
+@use "../abstracts/mixins.scss" as *;
+@use "../abstracts/variables.scss" as *;
+
+footer {
+    position: fixed;
+    bottom: 1rem;
+    left: $aside-width;
+    right: 1rem;
+
+    // Desktop Player Bar
+    .player-wrapper {
+        background-color: #333842;
+        padding: 1.5rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 1rem;
+
+        // Left: transport controls + progress bar
+        .player-left {
+            @include flex-align();
+            gap: 2rem;
+
+            .time-current,
+            .time-total {
+                font-size: 1.2rem;
+                color: $gray-color;
+            }
+
+            .btn-volume {
+                @include flex-align();
+            }
+
+            .progress-bar {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 31.7rem;
+                height: 0.4rem;
+                background: transparent;
+                outline: none;
+                cursor: pointer;
+            }
+
+            /* Track (WebKit) */
+            .progress-bar::-webkit-slider-runnable-track {
+                height: 0.4rem;
+                background: #4d4d4d;
+                border-radius: 0.2rem;
+                overflow: hidden;
+            }
+
+            /* Thumb (WebKit) — invisible but casts a white shadow to the left */
+            .progress-bar::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 0;
+                height: 0.4rem;
+                box-shadow: -40rem 0 0 40rem #ffffff;
+            }
+
+            /* Firefox — has native progress styling */
+            .progress-bar::-moz-range-track {
+                height: 0.4rem;
+                background: #4d4d4d;
+                border-radius: 0.2rem;
+            }
+
+            .progress-bar::-moz-range-progress {
+                background: #ffffff;
+                height: 0.4rem;
+                border-radius: 0.2rem;
+            }
+
+            .progress-bar::-moz-range-thumb {
+                width: 0;
+                height: 0;
+                border: none;
+            }
+
+            @media (max-width: 390px) {
+                display: none;
+            }
+        }
+
+        // Center: song info
+        .player-center {
+            @include flex-align();
+            gap: 1rem;
+            padding: 0 2rem;
+
+            .player-song-info {
+                display: flex;
+                flex-direction: column;
+                gap: 0.2rem;
+
+                .song-title {
+                    color: $light-gray-color;
+                    font-size: 1.4rem;
+                }
+
+                .song-artist,
+                .song-album {
+                    color: $gray-color;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        // Right: action buttons
+        .player-right {
+            @include flex-align();
+
+            .player-actions {
+                @include flex-align();
+
+                // gap: 20px;
+                img {
+                    padding: 0.8rem;
+                }
+            }
+        }
+    }
+
+    // Mobile Nav
+    nav {
+        background: linear-gradient(to bottom, rgba(17, 17, 17, 0.85) 0%, #111111 43%);
+        padding: 1.5rem 0 2.4rem 0;
+        display: none;
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            li a {
+                color: #a0a0a0;
+                text-align: center;
+            }
+        }
+
+        img {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        figcaption {
+            font-size: 1.2rem;
+            letter-spacing: 0.3rem;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    footer {
+        left: 0.7rem;
+        right: 0.7rem;
+        bottom: 0;
+
+        nav {
+            display: block;
+        }
+
+        .player-wrapper {
+            .player-left {
+                display: none;
+            }
+
+            .player-center {
+                padding: 0;
+
+                .song-album {
+                    display: none;
+                }
+            }
+
+        }
+
+        .player-actions {
+
+            .btn-fav,
+            .btn-lyrics,
+            .btn-device,
+            .btn-more,
+            .btn-avatar,
+            .btn-menu {
+                display: none;
+            }
+        }
+    }
+}

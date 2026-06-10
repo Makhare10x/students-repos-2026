@@ -1,0 +1,25 @@
+@use "./homepage/header.scss";
+@use "./homepage/aside";
+@use "./homepage/mainbox.scss";
+@use "./homepage/player";
+@use "./friends-aside/friends";
+@use "./search/search";
+@use "./library/library.scss";
+@use "./library/library-likes.scss";
+@use "./discover/discover.scss";
+@use "./homepage/footer";
+@use "./albums/album.scss";
+@use "./artist/artist.scss";
+@use "./playlist/playlist.scss";
+@use "./song/song.scss";
+@use "./podcats/podcast.scss";
+@use "./episodes/episodes.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  ul {
+    list-style: none;
+  }
+}

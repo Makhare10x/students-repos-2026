@@ -1,0 +1,166 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+button,
+label {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn {
+    padding: 8px 15px;
+    background: variables.$bg-color-secondary;
+    border-radius: 8px;
+    color: variables.$text-color-primary;
+    @include mixins.font_14_bold;
+
+    &:hover {
+        color: variables.$bg-color-hover;
+        background: variables.$text-color-primary;
+    }
+
+    &--active {
+        color: variables.$bg-color-hover;
+        background: variables.$text-color-primary;
+    }
+
+    &_with_img {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: variables.$text-color-secondary;
+        @include mixins.font_14_regular;
+
+        &:hover {
+            color: variables.$text-color-primary;
+
+            path {
+                stroke: variables.$text-color-primary;
+            }
+
+            rect {
+                stroke: variables.$text-color-primary;
+            }
+
+            circle {
+                fill: variables.$text-color-primary;
+            }
+        }
+
+        &--active {
+            color: variables.$text-color-primary;
+            cursor: default;
+
+            path {
+                stroke: variables.$text-color-primary !important;
+            }
+
+            rect {
+                stroke: variables.$text-color-primary !important;
+            }
+
+            circle {
+                fill: variables.$text-color-primary !important;
+            }
+
+                &:hover {
+                    color: variables.$text-color-primary;
+    
+                    path {
+                        stroke: variables.$text-color-primary;
+                    }
+    
+                    rect {
+                        stroke: variables.$text-color-primary;
+                    }
+
+                    circle {
+                        fill: variables.$text-color-primary;
+                    }
+                }
+        }
+
+        &--disabled {
+            color: variables.$text-color-secondary;
+            opacity: 0.5;
+            cursor: not-allowed;
+
+            path {
+                stroke: variables.$text-color-secondary;
+            }
+
+            rect {
+                stroke: variables.$text-color-secondary;
+            }
+
+            circle {
+                fill: variables.$text-color-secondary;
+            }
+
+            &:hover {
+                color: variables.$text-color-secondary;
+                background-color: transparent !important;
+
+                path {
+                    stroke: variables.$text-color-secondary;
+                }
+
+                rect {
+                    stroke: variables.$text-color-secondary;
+                }
+
+                circle {
+                    fill: variables.$text-color-secondary;
+                }
+            }
+        }
+
+        &__icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+
+            path {
+                stroke: variables.$text-color-secondary;
+                transition: stroke 0.2s ease-in-out;
+            }
+
+            rect {
+                stroke: variables.$text-color-secondary;
+                transition: stroke 0.2s ease-in-out;
+            }
+
+            circle {
+                fill: variables.$text-color-secondary;
+                transition: fill 0.2s ease-in-out;
+            }
+        }
+
+        &_only {
+            @extend .btn_with_img__icon;
+
+            span{
+                display: none;
+            }
+
+            &:hover{
+                @extend .btn_with_img, :hover;
+                background-color: rgba(137, 137, 137, 0.1);
+            }
+
+            &--active{
+                @extend .btn_with_img--active;
+                background-color: rgba(137, 137, 137, 0.1);
+            }
+
+            &--disabled{
+                @extend .btn_with_img--disabled;
+            }
+        }
+    }
+}

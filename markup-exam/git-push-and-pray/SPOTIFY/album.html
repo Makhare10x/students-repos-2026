@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <section class="main_structure">
+            <!-- aside section -->
+        <aside class="side-nav">
+            <!-- side navigation -->
+            <nav class="aside_nav">
+                <ul class="aside_nav_items">
+                    <li class="main_pages">
+                        <div class="each_page">
+                            <img src="assets/images/aside/library.png" alt="library icon">
+                            <a href="my_library.html">My Library</a>
+                        </div>
+                        <div class="each_page">
+                            <img src="assets/images/aside/pin.png" alt="pin icon">
+                            <a href="#">Pins</a>
+                        </div>
+                        <div class="each_page">
+                            <img src="assets/images/aside/albums.png" alt="playlist icon">
+                            <a href="#">Playlists</a>
+                        </div>
+                        <div class="each_page">
+                            <img src="assets/images/aside/like.png" alt="like icon">
+                            <a href="librarypg2.html">Liked songs</a>
+                        </div>
+                        <div class="each_page">
+                            <img src="assets/images/aside/save.png" alt="save icon">
+                            <a href="#">Saves</a>
+                        </div>
+                        <div class="each_page" id="album">
+                            <img src="assets/images/aside/albums.png" alt="album icon">
+                            <a href="#">Albums</a>
+                        </div>
+                        <div class="each_page">
+                            <img src="assets/images/aside/folder.png" alt="folder icon">
+                            <a href="#">Folders</a>
+                        </div>
+                        <div class="each_page">
+                            <img src="assets/images/aside/podcast.png" alt="podcast icon">
+                            <a href="podcast.html">Podcasts</a>
+                        </div>
+                        <div class="each_page">
+                            <img src="assets/images/aside/audiobook.png" alt="audiobook icon">
+                            <a href="#">Audiobooks</a>
+                        </div>
+                        <div class="each_page">
+                            <img src="assets/images/aside/artist.png" alt="artist icon">
+                            <a href="#">Artists</a>
+                        </div>
+
+                    </li>
+                </ul>
+            </nav>
+
+        </aside>
+        <!-- page header -->
+        <section class="first_page">
+                <!-- header -->
+            <header class="header">
+                <nav class="nav_section">
+                    <!-- header's main navigation -->
+                    <section class="main_section">
+                        <div class="home" id="home">
+                            <img class="header_btn" src="assets/images/header/home.png" alt="home logo">
+                            <a href="index.html">Home</a>
+                        </div>
+                        <div class="discover">
+                            <img class="header_btn" src="assets/images/header/discover.png" alt="discover logo">
+                            <a href="discover.html">Discover</a>
+                        </div>
+                        <div class="search">
+                            <img class="header_btn" src="assets/images/header/search.png" alt="search">
+                            <input type="text" placeholder="search">
+                        </div>
+                    </section>
+                </nav>
+
+                <!-- action buttons -->
+                <section class="actions">
+                    <button><img src="assets/images/header/notification.png" alt="notification icon"></button>
+                    <button><img src="assets/images/header/lock.png" alt="lock icon"></button>
+                    <button><a href="friends.html"><img src="assets/images/header/friends.png" alt="friend icon"></a></button>
+                    <button><img src="assets/images/header/settings.png" alt="settings icon"></button>
+                    <img class="profile" src="assets/images/header/profile.png" alt="profile picture">
+                </section>
+
+            </header>
+            <hr>
+
+            <!-- main section -->
+            <main class="main_album">
+                <section class="playlist">
+                    <section class="intro">
+                        <h2>Random Access Memories</h2>
+                        <p><i>Daft Punk</i> . 2013 . 13 Songs . 1hr 14 min </p>
+                        <div class="act">
+                            <img src="assets/images/album/pause.png" alt="pause">
+                            <img src="assets/images/album/switch.png" alt="switch">
+                            <img src="assets/images/album/add.png" alt="add">
+                            <img src="assets/images/album/reply.png" alt="reply">
+                            <img src="assets/images/album/ofline.png" alt="ofline">
+                            <img src="assets/images/album/dots.png" alt="more">
+                        </div>
+                    </section>
+                    <!-- Tracklist Section -->
+                    <section class="list">
+                    <div class="track-item">
+                        <span class="track-number">1</span>
+                        <div class="track-info">
+                            <span class="track-title">Give Life Back to Music</span>
+                            <span class="track-artist">Daft Punk</span>
+                        </div>
+                        <span class="track-duration">4:35</span>
+                        <button class="track-like" aria-label="Like">
+                            <img src="assets/images/album/pc-like.png" alt="like">
+                        </button>
+                    </div>
+
+                    <div class="track-item">
+                        <span class="track-number">2</span>
+                        <div class="track-info">
+                            <span class="track-title">The Game of Love</span>
+                            <span class="track-artist">Daft Punk</span>
+                        </div>
+                        <span class="track-duration">5:22</span>
+                        <button class="track-like" aria-label="Like">
+                            <img src="assets/images/album/pc-like.png" alt="like">
+                        </button>
+                    </div>
+
+                    <div class="track-item">
+                        <span class="track-number">3</span>
+                        <div class="track-info">
+                            <span class="track-title">Giorgio by Moroder</span>
+                            <span class="track-artist">Daft Punk</span>
+                        </div>
+                        <span class="track-duration">9:04</span>
+                        <button class="track-like" aria-label="Like">
+                            <img src="assets/images/album/pc-like.png" alt="like">
+                        </button>
+                    </div>
+
+                    <div class="track-item">
+                        <span class="track-number">4</span>
+                        <div class="track-info">
+                            <span class="track-title">Within</span>
+                            <span class="track-artist">Daft Punk</span>
+                        </div>
+                        <span class="track-duration">3:48</span>
+                        <button class="track-like" aria-label="Like">
+                            <img src="assets/images/album/pc-like.png" alt="like">
+                        </button>
+                    </div>
+
+                    <div class="track-item">
+                        <span class="track-number">5</span>
+                        <div class="track-info">
+                            <span class="track-title">Instant Crush <span class="track-feat">(feat. Julian Casablancas)</span></span>
+                            <span class="track-artist">Daft Punk, Julian Casablancas</span>
+                        </div>
+                        <span class="track-duration">5:37</span>
+                        <button class="track-like" aria-label="Like">
+                            <img src="assets/images/album/pc-like.png" alt="like">
+                        </button>
+                    </div>
+
+                    <div class="track-item">
+                        <span class="track-number">6</span>
+                        <div class="track-info">
+                            <span class="track-title">Lose Yourself to Dance <span class="track-feat">(feat. Pharrell Williams)</span></span>
+                            <span class="track-artist">Daft Punk, Pharrell Williams</span>
+                        </div>
+                        <span class="track-duration">5:53</span>
+                        <button class="track-like" aria-label="Like">
+                            <img src="assets/images/album/pc-like.png" alt="like">
+                        </button>
+                    </div>
+
+                    <div class="track-item">
+                        <span class="track-number">7</span>
+                        <div class="track-info">
+                            <span class="track-title">Touch <span class="track-feat">(feat. Pharrell Williams)</span></span>
+                            <span class="track-artist">Daft Punk, Pharrell Williams</span>
+                        </div>
+                        <span class="track-duration">8:18</span>
+                        <button class="track-like" aria-label="Like">
+                            <img src="assets/images/album/pc-like.png" alt="like">
+                        </button>
+                    </div>
+
+                    <div class="track-item">
+                        <span class="track-number">8</span>
+                        <div class="track-info">
+                            <span class="track-title">Get Lucky <span class="track-feat">(feat. Pharrell Williams and Nile Rodgers)</span></span>
+                            <span class="track-artist">Daft Punk, Pharrell Williams, Nile Rodgers</span>
+                        </div>
+                        <span class="track-duration">6:09</span>
+                        <button class="track-like" aria-label="Like">
+                            <img src="assets/images/album/pc-like.png" alt="like">
+                        </button>
+                    </div>
+
+                    <div class="track-item">
+                        <span class="track-number">9</span>
+                        <div class="track-info">
+                            <span class="track-title">Beyond</span>
+                            <span class="track-artist">Daft Punk</span>
+                        </div>
+                        <span class="track-duration">4:50</span>
+                        <button class="track-like" aria-label="Like">
+                            <img src="assets/images/album/pc-like.png" alt="like">
+                        </button>
+                    </div>
+
+                    <div class="track-item">
+                        <span class="track-number">10</span>
+                        <div class="track-info">
+                            <span class="track-title">Motherboard</span>
+                            <span class="track-artist">Daft Punk</span>
+                        </div>
+                        <span class="track-duration">5:41</span>
+                        <button class="track-like" aria-label="Like">
+                            <img src="assets/images/album/pc-like.png" alt="like">
+                        </button>
+                    </div>
+
+                    <div class="track-item">
+                        <span class="track-number">11</span>
+                        <div class="track-info">
+                            <span class="track-title">Fragments of Time <span class="track-feat">(feat. Todd Edwards)</span></span>
+                            <span class="track-artist">Daft Punk, Todd Edwards</span>
+                        </div>
+                        <span class="track-duration">4:39</span>
+                        <button class="track-like" aria-label="Like">
+                            <img src="assets/images/album/pc-like.png" alt="like">
+                        </button>
+                    </div>
+
+                    <div class="track-item">
+                        <span class="track-number">12</span>
+                        <div class="track-info">
+                            <span class="track-title">Doin' it Right <span class="track-feat">(feat. Panda Bear)</span></span>
+                            <span class="track-artist">Daft Punk, Panda Bear</span>
+                        </div>
+                        <span class="track-duration">4:11</span>
+                        <button class="track-like" aria-label="Like">
+                            <img src="assets/images/album/pc-like.png" alt="like">
+                        </button>
+                    </div>
+
+                    <div class="track-item">
+                        <span class="track-number">13</span>
+                        <div class="track-info">
+                            <span class="track-title">Contact</span>
+                            <span class="track-artist">Daft Punk</span>
+                        </div>
+                        <span class="track-duration">6:21</span>
+                        <button class="track-like" aria-label="Like">
+                            <img src="assets/images/album/pc-like.png" alt="like">
+                        </button>
+                    </div>
+                    </section>
+
+                    
+                </section>
+                <section class="cover">
+                    <div class="cover_photo">
+                        <img src="assets/images/album/cover.png" alt="cover photo">
+                    </div>
+                    <div class="btns">
+                        <button>Funk</button>
+                        <button>Electronic Music</button>
+                        <button>Disco</button>
+                        <button>Soft Rock</button>
+                        <button>Progressive Pop</button>
+                    </div>
+                    <div class="authors">
+                        <div class="each">
+                            <img src="assets/images/album/punk.png" alt="Punk">
+                            <p>Daft Pank</p>
+                        </div>
+                        <div class="each">
+                            <img src="assets/images/album/williams.png" alt="williams">
+                            <p>Pharrell Williams</p>
+                        </div>
+                        <div class="each">
+                            <img src="assets/images/album/rodgers.png" alt="rodgers">
+                            <p>Nile Rodgers</p>
+                        </div>
+                    </div>
+
+                </section>
+
+            </main>
+
+            <footer class="player">
+            <!-- controls -->
+            <section class="player-controle">
+                <div class="controls">
+                    <img src="assets/images/footer/pause.png" alt="pause">
+                    <img src="assets/images/footer/left.png" alt="left">
+                    <img src="assets/images/footer/right.png" alt="right">
+                    <img src="assets/images/footer/switch.png" alt="switch">
+                    <img src="assets/images/footer/reply.png" alt=reply>
+                </div>
+                <div class="progress-section">
+                    <span>2:23</span>
+
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+
+                    <span>4:45</span>
+                </div>
+            </section>
+            <section class="music_and_buttons">
+                <!-- Track info -->
+                <section class="music">
+                    <div class="music_info">
+                        <img src="assets/images/footer/song.png" alt="album cover">
+                        <div class="track-info">
+                            <p class="track-title">Get Lucky</p>
+                            <p class="artist">Daft Punk</p>
+                            <p class="band">Random Access Memories</p>
+                        </div>
+                    </div>
+                    
+                    <div class="track-actions">
+                        <img src="assets/images/footer/like.png" alt="like">
+                        <img src="assets/images/footer/add.png" alt="add">
+                        <img src="assets/images/footer/lyrics.png" alt="playlist">
+                        <img src="assets/images/footer/queue.png" alt="queue">
+                    </div>
+                </section>
+
+
+                <!-- actions -->
+                <section class="player-right">
+
+                    <img src="assets/images/footer/DJ.png" alt="dj">
+                    <img src="assets/images/footer/pc-queue.png" alt="pc-queue">
+
+                </section>
+                <section class="mobile_icon">
+                    <img src="assets/images/footer/mob2.png" alt="add">
+                    <img src="assets/images/footer/mob1.png" alt="like">
+                </section>
+
+                <section class="footer_nav">
+                    <a><img src="assets/images/footer/home.png" alt="home"></a>
+                    <a href="#discover"><img src="assets/images/footer/discover.png" alt="discover"></a>
+                    <a><img src="assets/images/footer/search.png" alt="search"></a>
+                    <a href="mobile_library.html"><img src="assets/images/footer/library.png" alt="library"></a>
+                    <a><img src="assets/images/footer/me.png" alt="me"></a>
+                    
+                </section>
+            </section>
+
+            </footer>
+        </section>
+
+    </section>
+
+    
+    
+</body>
+</html>

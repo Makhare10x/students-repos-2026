@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Artist - Spotify Clone</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <nav class="sidebar__nav" aria-label="Sidebar navigation">
+          <ul class="sidebar__list">
+            <li class="sidebar__item sidebar__item--current">
+              <a href="library.html" class="sidebar__link"
+                ><span class="sidebar__icon"
+                  ><img src="../assets/icons/Library.svg" alt="Library" /></span
+                ><span class="sidebar__text">My Library</span></a
+              >
+            </li>
+            <li class="sidebar__item sidebar__item--active">
+              <a href="song.html" class="sidebar__link"
+                ><span class="sidebar__icon"
+                  ><img src="../assets/icons/pinside.svg" alt="Pinside" /></span
+                ><span class="sidebar__text">Pins</span>
+                <span class="sidebar__arrow"><img src="../assets/icons/right.svg" alt="Right" /></span></a
+              >
+            </li>
+            <li class="sidebar__item sidebar__item--active">
+              <a href="playlist.html" class="sidebar__link"
+                ><span class="sidebar__icon"
+                  ><img src="../assets/icons/playlist.svg" alt="Playlist" /></span
+                ><span class="sidebar__text">Playlists</span>
+                <span class="sidebar__arrow"><img src="../assets/icons/right.svg" alt="Right" /></span></a
+              >
+            </li>
+            <li class="sidebar__item sidebar__item--active">
+              <a href="likedsongs.html" class="sidebar__link"
+                ><span class="sidebar__icon"
+                  ><img src="../assets/icons/like.svg" alt="Like" /></span
+                ><span class="sidebar__text">Liked songs</span></a
+              >
+            </li>
+            <li class="sidebar__item sidebar__item--active">
+              <a href="aboutartist.html" class="sidebar__link"
+                ><span class="sidebar__icon"
+                  ><img src="../assets/icons/save.svg" alt="Save" /></span
+                ><span class="sidebar__text">Saves</span></a
+              >
+            </li>
+            <li class="sidebar__item sidebar__item--active">
+              <a href="gridalbums.html" class="sidebar__link"
+                ><span class="sidebar__icon"
+                  ><img src="../assets/icons/album.svg" alt="Album" /></span
+                ><span class="sidebar__text">Albums</span></a
+              >
+            </li>
+            <li class="sidebar__item sidebar__item--active">
+              <a href="aboutartist.html" class="sidebar__link"
+                ><span class="sidebar__icon"
+                  ><img src="../assets/icons/folder.svg" alt="Folder" /></span
+                ><span class="sidebar__text">Folders</span></a
+              >
+            </li>
+            <li class="sidebar__item sidebar__item--active">
+              <a href="podcast.html" class="sidebar__link"
+                ><span class="sidebar__icon"
+                  ><img src="../assets/icons/podcast.svg" alt="Podcast" /></span
+                ><span class="sidebar__text">Podcast</span></a
+              >
+            </li>
+            <li class="sidebar__item sidebar__item--active">
+              <a href="aboutartist.html" class="sidebar__link"
+                ><span class="sidebar__icon"
+                  ><img src="../assets/icons/audiobook.svg" alt="Audiobook" /></span
+                ><span class="sidebar__text">Audio books</span></a
+              >
+            </li>
+            <li class="sidebar__item sidebar__item--active">
+              <a href="aboutartist.html" class="sidebar__link"
+                ><span class="sidebar__icon"
+                  ><img src="../assets/icons/artist.svg" alt="Artist" /></span
+                ><span class="sidebar__text">Artist</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="content-area">
+        <header class="top-header">
+          <nav class="top-header__nav" aria-label="Main navigation">
+            <ul class="top-header__list">
+              <li class="top-header__item">
+                <a href="../index.html" class="top-header__link home-icon"
+                  ><span class="top-header__icon top-header__icon--active"
+                    ><img
+                      src="../assets/icons/homecc.svg"
+                      alt="Home icon" /></span
+                  ><span>Home</span></a
+                >
+              </li>
+              <li class="top-header__item">
+                <a href="discover.html" class="top-header__link discover-icon"
+                  ><span class="top-header__icon top-header__icon--active"
+                    ><img
+                      src="../assets/icons/Star 1.svg"
+                      alt="Discover icon" /></span
+                  ><span>Discover</span></a
+                >
+              </li>
+              <li class="top-header__item">
+                <a href="search.html" class="top-header__link search-icon"
+                  ><span class="top-header__icon top-header__icon--active"
+                    ><img
+                      src="../assets/icons/search.svg"
+                      alt="Search icon" /></span
+                  ><span>Search</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="top-header__actions" aria-label="Quick actions">
+            <button
+              class="top-header__action"
+              type="button"
+              aria-label="Notifications"
+            >
+              <span class="top-header__action-icon"
+                ><img src="../assets/icons/news.svg" alt="News"
+              /></span>
+            </button>
+            <button class="top-header__action" type="button" aria-label="Inbox">
+              <span class="top-header__action-icon"
+                ><img src="../assets/icons/private.svg" alt="Private"
+              /></span>
+            </button>
+            <button class="top-header__action" type="button" aria-label="Users">
+              <span class="top-header__action-icon"
+                ><img src="../assets/icons/friends.svg" alt="Friends"
+              /></span>
+            </button>
+            <button
+              class="top-header__action"
+              type="button"
+              aria-label="Settings"
+            >
+              <span class="top-header__action-icon"
+                ><img src="../assets/icons/setting.svg" alt="Setting"
+              /></span>
+            </button>
+            <button
+              class="top-header__action top-header__action--avatar"
+              type="button"
+              aria-label="Profile"
+            >
+              <span class="top-header__action-icon"
+                ><img src="../assets/icons/sprite.svg" alt="Sprite"
+              /></span>
+            </button>
+          </div>
+        </header>
+        <main class="main-content main-content--page">
+          <section class="artist-page">
+            <div class="artist-banner">
+              <div class="artist-banner__overlay">
+                <div class="artist-banner__info">
+                  <h1 class="artist-banner__title">Daft Punk</h1>
+                  <p class="artist-banner__meta">
+                    20,795,080 monthly listeners
+                  </p>
+                </div>
+                <div class="artist-banner__actions">
+                  <button class="play-pill" aria-label="Play artist">
+                    <img src="../assets/icons/play.svg" alt="Play" /></button
+                  ><button class="follow-pill" type="button">Follow</button
+                  ><button class="icon-button" aria-label="Add">
+                    <img src="../assets/icons/add.svg" alt="Add" /></button
+                  ><button class="icon-button" aria-label="Playlist">
+                    <img
+                      src="../assets/icons/addtoplaylist.svg"
+                      alt="Addtoplaylist"
+                    /></button
+                  ><button class="icon-button" aria-label="More">
+                    <img src="../assets/icons/more.svg" alt="More" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="page-shell">
+              <nav class="subnav-tabs subnav-tabs--artist">
+                <a class="subnav-tabs__item" href="artist.html">Home</a
+                ><a class="subnav-tabs__item" href="gridalbums.html">Albums</a
+                ><a class="subnav-tabs__item" href="#">Singles and EPs</a
+                ><a class="subnav-tabs__item" href="#">Compilations</a
+                ><a class="subnav-tabs__item" href="#">Merch</a
+                ><a
+                  class="subnav-tabs__item subnav-tabs__item--active"
+                  href="aboutartist.html"
+                  >About</a
+                ><a class="subnav-tabs__item" href="#">Features & More</a
+                ><button class="icon-button" aria-label="Search artist">
+                  <img src="../assets/icons/search.svg" alt="Search" />
+                </button>
+              </nav>
+              <div class="about-grid">
+                <div class="rank-badge">
+                  <strong>#292</strong><span>in the world</span>
+                </div>
+                <article class="about-copy">
+                  <p>
+                    As they evolved from ‘90s French house pioneers to 2000s
+                    dance tastemakers to mainstream heroes in the 2010s, Daft
+                    Punk remained one of dance music’s most iconic acts. With
+                    their early singles and 1997’s instant-classic debut album
+                    Homework, Guy-Manuel de Homem-Christo and Thomas Bangalter
+                    quickly won acclaim for their skill at blending beloved
+                    Chicago house and Detroit techno with pop, funk, indie rock,
+                    and hip-hop into nostalgic yet futuristic forms.
+                  </p>
+                  <p>
+                    Not content to just widen electronic music’s popularity, on
+                    2001’s Discovery they reinvented the then-unfashionable
+                    sounds of mid-’80s soft rock and R&B into stylish tracks
+                    that also had a childlike wonder. Despite their sizable
+                    popularity, Daft Punk were never afraid to challenge their
+                    listeners, which they did with 2005’s cold and dystopic
+                    Human After All.
+                  </p>
+                </article>
+                <aside class="artist-stats">
+                  <div><strong>9,868,787</strong><span>Followers</span></div>
+                  <div>
+                    <strong>22,430,353</strong><span>Monthly listeners</span>
+                  </div>
+                  <div>
+                    <strong>Paris, FR</strong><span>391,036 listeners</span>
+                  </div>
+                  <div>
+                    <strong>Mexico City, MX</strong
+                    ><span>367,878 listeners</span>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <footer class="player-bar">
+        <div class="player-bar__main">
+          <div class="player-bar__playback">
+            <div class="player-bar__controls">
+              <button
+                class="player-bar__control player-bar__control--play"
+                type="button"
+                aria-label="Pause"
+              >
+                <span class="player-bar__control-icon"
+                  ><img src="../assets/icons/stop.svg" alt="Stop"
+                /></span>
+              </button>
+              <button
+                class="player-bar__control"
+                type="button"
+                aria-label="Previous"
+              >
+                <span class="player-bar__control-icon"
+                  ><img src="../assets/icons/prev.svg" alt="Prev"
+                /></span>
+              </button>
+              <button
+                class="player-bar__control"
+                type="button"
+                aria-label="Next"
+              >
+                <span class="player-bar__control-icon"
+                  ><img src="../assets/icons/next.svg" alt="Next"
+                /></span>
+              </button>
+              <button
+                class="player-bar__control"
+                type="button"
+                aria-label="Shuffle"
+              >
+                <span class="player-bar__control-icon"
+                  ><img src="../assets/icons/shuffle.svg" alt="Shuffle"
+                /></span>
+              </button>
+              <button
+                class="player-bar__control"
+                type="button"
+                aria-label="Repeat"
+              >
+                <span class="player-bar__control-icon"
+                  ><img src="../assets/icons/repeat.svg" alt="Repeat"
+                /></span>
+              </button>
+            </div>
+            <div class="player-bar__timeline player-bar__timline--mobile">
+              <span class="player-bar__time">2:23</span>
+              <div class="player-bar__progress">
+                <div class="player-bar__progress-fill"></div>
+              </div>
+                      <span class="player-bar__time">4:45</span>
+        <button class="player-bar__control" type="button" aria-label="Volume"><span class="player-bar__control-icon"><img src="../assets/icons/volume.svg" alt="Volume"></span></button>
+            </div>
+          </div>
+          <div class="player-bar__track-block">
+            <div class="player-bar__cover">
+              <img src="../assets/images/playerbg.png" alt="Album cover" />
+            </div>
+            <div class="player-bar__track">
+              <p class="player-bar__track-title">Get Lucky</p>
+              <p class="player-bar__track-artist">Daft Punk</p>
+              <p class="player-bar__track-album">Random Access Memories</p>
+            </div>
+          </div>
+              <div class="player-bar__actions player-bar__actions--mobile">
+      <button class="player-bar__action" type="button" aria-label="Like"><span class="player-bar__action-icon"><img src="../assets/icons/like.svg" alt="Like"></span></button>
+      <button class="player-bar__action player-bar__actions--mobile" type="button" aria-label="Add"><span class="player-bar__action-icon"><img src="../assets/icons/playlistpc.svg" alt="Playlistpc"></span></button>
+      <button class="player-bar__action" type="button" aria-label="Queue"><span class="player-bar__action-icon"><img src="../assets/icons/lyrics.svg" alt="Lyrics"></span></button>
+      <button class="player-bar__action" type="button" aria-label="Devices"><span class="player-bar__action-icon"><img src="../assets/icons/device.svg" alt="Device"></span></button>
+      <button class="player-bar__action" type="button" aria-label="More"><span class="player-bar__action-icon"><img src="../assets/icons/more.svg" alt="More"></span></button>
+      <button class="player-bar__action" type="button" aria-label="Mini player"><span class="player-bar__action-icon"><img src="../assets/icons/line.svg" alt="Line"></span></button>
+      <button class="player-bar__action" type="button" aria-label="Mini player"><span class="player-bar__action-icon"><img src="../assets/icons/DJ.svg" alt="DJ"></span><span class="player-bar__action-icon--mobile"><img src="../assets/icons/playlistpc.svg" alt="Playlistpc"></span></button>
+      <button class="player-bar__action" type="button" aria-label="Menu"><span class="player-bar__action-icon"><img src="../assets/icons/queue.svg" alt="Queue"></span><span class="player-bar__action-icon--mobile"><img src="../assets/icons/playjm.svg" alt="Playjm"></span></button>
+    </div>
+        </div>
+      </footer>
+      <nav class="mobile-nav" aria-label="Mobile navigation">
+        <a href="../index.html" class="mobile-nav__item"
+          ><span class="mobile-nav__icon"
+            ><img src="../assets/icons/home.svg" alt="Home" /></span
+          ><span class="mobile-nav__text">Home</span></a
+        >
+        <a href="search.html" class="mobile-nav__item"
+          ><span class="mobile-nav__icon"
+            ><img src="../assets/icons/search.svg" alt="Search" /></span
+          ><span class="mobile-nav__text">Search</span></a
+        >
+        <a href="library.html" class="mobile-nav__item"
+          ><span class="mobile-nav__icon"
+            ><img src="../assets/icons/librarybg.svg" alt="Librarybg" /></span
+          ><span class="mobile-nav__text">Library</span></a
+        >
+        <a href="artist.html" class="mobile-nav__item"
+          ><span class="mobile-nav__icon"
+            ><img src="../assets/icons/artist.svg" alt="Artist" /></span
+          ><span class="mobile-nav__text">Artist</span></a
+        >
+      </nav>
+    </div>
+  </body>
+</html>

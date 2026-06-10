@@ -1,0 +1,153 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../base/base" as *;
+@use "../base/reset" as *;
+@use "../components/tags" as *;
+@use "../layout/aside" as *;
+
+main:has(.play-list-section) {
+    background: linear-gradient(180deg, rgba(59, 79, 182, 1) 0%, rgba(6, 6, 6, 1) 100%);
+    padding: 3.7rem;
+}
+
+.play-list-section {
+    @include flex-align(space-between, center);
+
+    .play-list-section__list-card {
+        max-width: 97.8rem;
+        width: 100%;
+        height: auto;
+
+        header {
+            width: 100%;
+            height: auto;
+            padding: 2.2rem 0.5rem 0 3.7rem;
+
+            h1 {
+                color: #e0e0e0;
+                font-size: 3.6rem;
+                font-weight: 700;
+                margin-bottom: 2rem;
+            }
+
+            ul {
+                display: flex;
+                margin-bottom: 2rem;
+                gap: 1rem;
+
+                li {
+                    font-size: 1.9rem;
+                    display: flex;
+                    align-items: center;
+                    color: #898989;
+                }
+            }
+
+            .Daft-Punk {
+                color: #e0e0e0;
+            }
+
+            .action-list {
+                gap: 1.4rem;
+
+                img {
+                    width: 4.041rem;
+                    height: 4.041rem;
+                    cursor: pointer;
+                }
+
+                img:last-child {
+                    margin-left: auto;
+                }
+            }
+        }
+
+        .track-list {
+            width: 100%;
+            height: auto;
+
+            >thead {
+                th {
+                    border-bottom: 2px solid rgba(137, 137, 137, 0.15);
+                }
+            }
+
+            padding: 0 1rem 0 2.5rem;
+            color: #898989;
+
+            .col-num,
+            .col-title,
+            .col-album,
+            .col-duration,
+            .col-fav {
+                padding: 1.6rem 0.8rem;
+                text-align: start;
+            }
+
+            .song-info {
+                display: flex;
+                flex-direction: column;
+
+                .song-name {
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    color: rgba(224, 224, 224, 1);
+                    margin-bottom: 0.4rem;
+                }
+            }
+
+            .col-fav {
+                cursor: pointer;
+            }
+
+            .col-title {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 5.1rem;
+                    height: 5.1rem;
+                    border-radius: 0.5rem;
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+    .albums-section__main-page {
+        width: auto;
+        height: auto;
+        margin: 2.2rem 3rem 8.6rem 3.8rem;
+
+        img {
+            width: 40rem;
+            height: 40rem;
+            border-radius: 1rem;
+        }
+
+        .singer-list {
+            border: none;
+            display: flex;
+            flex-direction: column;
+
+            li {
+                display: flex;
+                align-items: center;
+                color: rgba(137, 137, 137, 1);
+                font-size: 1.6rem;
+                font-weight: 400;
+                border-radius: 0;
+                padding: 1rem 0;
+                border: 0;
+
+                img {
+                    width: 6.1rem;
+                    height: 6.1rem;
+                    border-radius: 50%;
+                    margin-right: 2rem;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

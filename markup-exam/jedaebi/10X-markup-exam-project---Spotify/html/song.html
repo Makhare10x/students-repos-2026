@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <!-- App Wrapper -->
+    <div class="app-wrapper">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <a href="library.html" class="sidebar-header__left">
+            <img
+              src="../assets/icons/mylibrary.svg"
+              alt=""
+              class="sidebar-header__icon"
+            />
+            <span class="sidebar-title">My Library</span>
+          </a>
+          <div class="sidebar-header__actions">
+            <button class="sidebar-header__btn" aria-label="More">···</button>
+            <button class="sidebar-header__btn" aria-label="Add">+</button>
+          </div>
+        </div>
+        <nav class="sidebar-nav">
+          <ul class="sidebar-list">
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <img
+                  src="../assets/icons/pins.svg"
+                  alt=""
+                  class="sidebar-link__icon"
+                />
+                <span class="sidebar-link__text">Pins</span>
+                <span class="sidebar-link__arrow">›</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <details class="sidebar-dropdown">
+                <summary class="sidebar-link">
+                  <img
+                    src="../assets/icons/playlists.svg"
+                    alt=""
+                    class="sidebar-link__icon"
+                  />
+                  <span class="sidebar-link__text">Playlists</span>
+                  <span class="sidebar-link__arrow">›</span>
+                </summary>
+                <ul class="sidebar-sublist">
+                  <li class="sidebar-subitem">
+                    <a href="#" class="sidebar-sublink">
+                      <img
+                        src="../assets/icons/playlists.svg"
+                        alt=""
+                        class="sidebar-link__icon"
+                      />
+                      <span>Chill stuff</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-subitem">
+                    <a href="#" class="sidebar-sublink">
+                      <img
+                        src="../assets/icons/playlists.svg"
+                        alt=""
+                        class="sidebar-link__icon"
+                      />
+                      <span>Rock n Roll</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-subitem">
+                    <a href="#" class="sidebar-sublink">
+                      <img
+                        src="../assets/icons/playlists.svg"
+                        alt=""
+                        class="sidebar-link__icon"
+                      />
+                      <span>The Jux Box</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-subitem">
+                    <a href="#" class="sidebar-sublink">
+                      <img
+                        src="../assets/icons/playlists.svg"
+                        alt=""
+                        class="sidebar-link__icon"
+                      />
+                      <span>Selected Linkin Park</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-subitem">
+                    <a href="#" class="sidebar-sublink">
+                      <img
+                        src="../assets/icons/playlists.svg"
+                        alt=""
+                        class="sidebar-link__icon"
+                      />
+                      <span>Vibe</span>
+                    </a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li class="sidebar-item">
+              <a href="liked.songs.html" class="sidebar-link">
+                <img
+                  src="../assets/icons/likedsongs.svg"
+                  alt=""
+                  class="sidebar-link__icon"
+                />
+                <span class="sidebar-link__text">Liked songs</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <img
+                  src="../assets/icons/saves.svg"
+                  alt=""
+                  class="sidebar-link__icon"
+                />
+                <span class="sidebar-link__text">Saves</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <img
+                  src="../assets/icons/albums.svg"
+                  alt=""
+                  class="sidebar-link__icon"
+                />
+                <span class="sidebar-link__text">Albums</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <img
+                  src="../assets/icons/folders.svg"
+                  alt=""
+                  class="sidebar-link__icon"
+                />
+                <span class="sidebar-link__text">Folders</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <img
+                  src="../assets/icons/podcasts.svg"
+                  alt=""
+                  class="sidebar-link__icon"
+                />
+                <span class="sidebar-link__text">Podcasts</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <img
+                  src="../assets/icons/audiobooks.svg"
+                  alt=""
+                  class="sidebar-link__icon"
+                />
+                <span class="sidebar-link__text">Audiobooks</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <img
+                  src="../assets/icons/artists.svg"
+                  alt=""
+                  class="sidebar-link__icon"
+                />
+                <span class="sidebar-link__text">Artists</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Area -->
+      <div class="main-area">
+        <!-- Top Header -->
+        <header class="top-header">
+          <nav class="header-nav">
+            <a
+              href="../index.html"
+              class="header-nav__link header-nav__link--active"
+            >
+              <img
+                src="../assets/icons/home-active.svg"
+                alt=""
+                class="header-nav__icon"
+              />
+              <span class="header-nav__text">Home</span>
+            </a>
+            <a href="discover.html" class="header-nav__link">
+              <img
+                src="../assets/icons/discover.svg"
+                alt=""
+                class="header-nav__icon"
+              />
+              <span class="header-nav__text">Discover</span>
+            </a>
+            <a href="../html/search.html" class="header-nav__link">
+              <img
+                src="../assets/icons/search.svg"
+                alt=""
+                class="header-nav__icon"
+              />
+              <span class="header-nav__text">Search</span>
+            </a>
+          </nav>
+          <div class="header-actions">
+            <button class="header-actions__btn" aria-label="Notifications">
+              <img src="../assets/icons/notification.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__btn header-actions__btn--lock"
+              aria-label="Lock"
+            >
+              <img src="../assets/icons/lock.svg" alt="" />
+            </button>
+            <button class="header-actions__btn" aria-label="Friends">
+              <img src="../assets/icons/friends.svg" alt="" />
+            </button>
+            <button class="header-actions__btn" aria-label="Settings">
+              <img src="../assets/icons/settings.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__btn header-actions__btn--avatar"
+              aria-label="Profile"
+            >
+              <img
+                src="../assets/icons/avatar.png"
+                alt="Profile"
+                class="header-avatar"
+              />
+            </button>
+          </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+          <section class="main-sec-wrapper">
+            <section class="main-top-wrapper">
+              <div class="song-cover">
+                <img src="../assets/images/daftpunk.svg" alt="" />
+              </div>
+              <div class="song-details-wrapper">
+                <span class="song-title"
+                  >Get Lucky (feat. Pharrell Williams and Nile Rodgers)</span
+                >
+
+                <!-- -----------------------------------
+              აქ  დეტალებია თავისი აიქონებით
+              ----------------------------------- -->
+                <div class="song-details">
+                  <img src="../assets/icons/artists.svg" alt="" />
+                  <span>Daft Punk</span>
+
+                  <img src="../assets/icons/albums.svg" alt="" />
+                  <a href="">Random Access Memories</a>
+
+                  <span>2013</span>
+                  <span>6:09</span>
+                  <span>489,691,133</span>
+                </div>
+
+                <!-- ნავიგაციის აიქონები -->
+                <div class="song-icons">
+                  <button
+                    class="player-btn player-btn--play"
+                    aria-label="Pause"
+                  >
+                    <img src="../assets/icons/play.svg" alt="" />
+                  </button>
+
+                  <button class="player-btn" aria-label="Like">
+                    <img src="../assets/icons/pc-like.svg" alt="" />
+                  </button>
+
+                  <button class="player-btn" aria-label="Add">
+                    <img src="../assets/icons/pc-playlist.svg" alt="" />
+                  </button>
+
+                  <button class="player-btn" aria-label="Queue">
+                    <img src="../assets/icons/pc-queue.svg" alt="" />
+                  </button>
+
+                  <button class="player-btn" aria-label="Download">
+                    <img src="../assets/icons/icons big.svg" alt="" />
+                  </button>
+
+                  <button class="player-btn" aria-label="Share">
+                    <img src="../assets/icons/Frame 6.svg" alt="" />
+                  </button>
+
+                  <button class="player-btn" aria-label="Etc">
+                    <img src="../assets/icons/Frame 4.svg" alt="" />
+                  </button>
+                </div>
+                <!--// !ნავიგაციის აიქონები// -->
+
+                <!-- ------------------
+            ჟანრების პანელი
+            ------------------ -->
+
+                <div class="genres">
+                  <h3>Funk</h3>
+                  <h3>Electronic music</h3>
+                  <h3>Disco</h3>
+                  <h3>Soft Rock</h3>
+                  <h3>Progressive pop</h3>
+                </div>
+
+                <!-- ----------------
+              SIMILAR ARTISTS
+              ---------------- -->
+                <div class="similar-wrapper">
+                  <div class="similar-text">
+                    <img src="../assets/images/daftpunk3.svg" alt="" />
+
+                    <div>
+                      <h4>Daft Punk</h4>
+                      <h5>Main artist</h5>
+                    </div>
+                  </div>
+
+                  <div class="similar-text">
+                    <img
+                      src="../assets/images/20759958bfec0c16fcb3ae7d38746d687a96ed11.png"
+                      alt=""
+                    />
+
+                    <div>
+                      <h4>Pharrell Williams</h4>
+                      <h5>Main artist, Composer, Lyricist</h5>
+                    </div>
+                  </div>
+
+                  <div class="similar-text">
+                    <img src="../assets/images/nile-rodgers.png" alt="" />
+
+                    <div>
+                      <h4>Nile Rodgers</h4>
+                      <h5>Main artist, Composer, Lyricist</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- -----------------
+          main-top-wrapper END
+          ----------------- -->
+
+            <!-- -----------------
+          main-bottom-wrapper START
+          ----------------- -->
+
+            <section class="main-bottom-wrapper">
+              <div class="track-nav">
+                <span class="first-bot-nav">Lyrics</span>
+                <span>Credits</span>
+                <span>More like this</span>
+              </div>
+
+              <div class="bottom-icn">
+                <div class="bottom-icons-aside">
+                  <!-- აიქონებს ჩავსვავ და allign გავასწორებ -->
+                  <button class="button-icon">
+                    <img src="../assets/icons/synced-lyrics.png" alt="" />
+                  </button>
+                  <button class="button-icon">
+                    <img src="../assets/icons/translate.png" alt="" />
+                  </button>
+                  <button class="button-icon">
+                    <img src="../assets/icons/notes.png" alt="" />
+                  </button>
+                  <button class="button-icon">
+                    <img src="../assets/icons/font.png" alt="" />
+                  </button>
+                </div>
+
+                <div class="lyrics">
+                  <img src="../assets/images/lyrics.png" alt="" />
+                </div>
+              </div>
+            </section>
+          </section>
+        </main>
+      </div>
+    </div>
+    <!-- /.app-wrapper -->
+
+    <!-- DJ Panel Toggle (checkbox hack) -->
+    <input type="checkbox" id="dj-toggle" class="dj-toggle__input" />
+
+    <!-- Bottom Player -->
+    <footer class="player">
+      <!-- CENTER visually: Track Info -->
+      <div class="player-left">
+        <img
+          src="../assets/images/get-lucky.png"
+          alt="Get Lucky"
+          class="player-cover"
+        />
+        <div class="player-track">
+          <a href="#"><span class="player-track__title">Get Lucky</span></a>
+          <span class="player-track__artist">Daft Punk</span>
+          <span class="player-track__album">Random Access Memories</span>
+        </div>
+      </div>
+
+      <!-- LEFT visually: Controls + Progress -->
+      <div class="player-center">
+        <div class="player-controls">
+          <button class="player-btn player-btn--play" aria-label="Pause">
+            <img src="../assets/icons/pause.svg" alt="" />
+          </button>
+          <button class="player-btn" aria-label="Previous">
+            <img src="../assets/icons/previous-song.svg" alt="" />
+          </button>
+          <button class="player-btn" aria-label="Next">
+            <img src="../assets/icons/next-song.svg" alt="" />
+          </button>
+          <button class="player-btn" aria-label="Shuffle">
+            <img src="../assets/icons/shuffle.svg" alt="" />
+          </button>
+          <button class="player-btn" aria-label="Repeat">
+            <img src="../assets/icons/repeat.svg" alt="" />
+          </button>
+        </div>
+        <div class="player-progress">
+          <span class="player-progress__time">2:23</span>
+          <div class="player-progress__bar">
+            <div class="player-progress__fill"></div>
+          </div>
+          <span class="player-progress__time">4:45</span>
+          <button class="player-btn" aria-label="Volume">
+            <img src="../assets/icons/sound.svg" alt="" />
+          </button>
+        </div>
+      </div>
+
+      <!-- RIGHT visually: Actions -->
+      <div class="player-right">
+        <button class="player-btn" aria-label="Like">
+          <img src="../assets/icons/pc-like.svg" alt="" />
+        </button>
+        <button class="player-btn" aria-label="Add">
+          <img src="../assets/icons/pc-playlist.svg" alt="" />
+        </button>
+        <button class="player-btn" aria-label="Lyrics">
+          <img src="../assets/icons/pc-lyrics.svg" alt="" />
+        </button>
+        <button class="player-btn" aria-label="Device">
+          <img src="../assets/icons/speaker.svg" alt="" />
+        </button>
+        <button class="player-btn" aria-label="More">
+          <img src="../assets/icons/pc-playing-more.svg" alt="" />
+        </button>
+        <div class="dj-section">
+          <!-- Closed state: standalone DJ toggle -->
+          <label
+            for="dj-toggle"
+            class="player-btn dj-toggle__btn"
+            aria-label="DJ"
+          >
+            <img src="../assets/icons/DJ.png" alt="" />
+          </label>
+          <!-- Open state: panel with controls + DJ icon inside -->
+          <div class="dj-panel">
+            <button class="player-btn" aria-label="Skip">
+              <img src="../assets/icons/dj-skip.svg" alt="" />
+            </button>
+            <button class="player-btn" aria-label="Like">
+              <img src="../assets/icons/like.svg" alt="" />
+            </button>
+            <button class="player-btn" aria-label="Dislike">
+              <img src="../assets/icons/dislike.svg" alt="" />
+            </button>
+            <label for="dj-toggle" class="player-btn" aria-label="Disconnect">
+              <img src="../assets/icons/turn-off.svg" alt="" />
+            </label>
+            <img
+              src="../assets/icons/DJ.png"
+              alt=""
+              class="dj-panel__dj-icon"
+            />
+          </div>
+          <button class="player-btn" aria-label="Queue">
+            <img src="../assets/icons/pc-queue.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

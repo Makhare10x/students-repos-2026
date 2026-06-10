@@ -1,0 +1,50 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as *;
+
+
+/* Top Header */
+.top-header{
+        @include flex-center;
+        top:0;
+        gap:10px;
+        color:vars.$secondary-font-color;
+    }
+
+/* nav layout */
+.top-header nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+}
+/* Header-right list styles */
+.header-right-list{
+    display:flex;
+    gap:20px;
+.right-list-item{
+    @include flex-center;
+    @include hover{
+    color:white;
+    cursor:pointer;
+
+  }
+
+}
+}
+
+/* Header-left link styles */
+.header-left-list{
+  display:flex;
+  gap:13px;
+ @include hover{
+    cursor:pointer;
+  }
+
+}
+@media (min-width :1200px){
+    .top-header{
+        display:flex;
+        flex-direction: row;
+    }
+
+}

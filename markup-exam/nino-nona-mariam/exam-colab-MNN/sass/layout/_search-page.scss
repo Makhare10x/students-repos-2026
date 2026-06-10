@@ -1,0 +1,540 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.search-page-body{
+    background-color: rgba(17, 17, 17, 1);
+}
+.search-page-cont{
+    flex: 1;
+    overflow-y: auto;
+}
+// Main container for search page content
+.search-page {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 13px 15px;
+    padding-bottom: 13rem;
+}
+
+// ==============================
+// Mobile Search Header
+// Sticky header with search input and camera icon
+// ==============================
+
+.search-page-header-mobile {
+    position: sticky;
+    top: 0;
+    background-color: rgba(17, 17, 17, 1);
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    z-index: 10;
+    flex: 1
+}
+.search-container-mobile{
+    @include flex-center (row, 76px, center);
+    margin-top: 3px;
+    flex: 1;
+    min-width: 0;
+    min-height: 35.41px;
+    background-color: rgba(32, 32, 32, 0.5);
+    border-radius: $radius-main;
+
+    input {
+        color:rgba(137, 137, 137, 0.7) ;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-medium;
+        background: transparent;
+        border: none;
+        outline: none;
+    }
+
+    img {
+        width: 35.41px;
+        height: 35.41px;
+    }
+}
+.search-camera{
+    color: $secondary-text-color;
+   
+    &:hover {
+        color: $primary-text-color;
+    }
+}
+.recent-searches {display: none;}
+
+// Browse Section
+// Contains category cards like Discover, Genres, Mood etc.
+.search-browse-section {
+    display: flex;
+    flex-direction: column;
+
+    h3{
+        color:$primary-text-color ;
+        font-size:$font-size-large ;
+        font-weight:$font-weight-bold ;
+        margin-top:16.5px ;
+    }
+    .search-cards-row{
+        p {
+            margin: 14px 0;
+            color:$primary-text-color ;
+            font-size:18px ;
+            font-weight:$font-weight-medium ;
+        }
+    }
+}
+// Container holding category cards
+.search-card-cont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+.search-arrows{display: none;}
+
+// Discover Category Cards
+.discover-card-1{
+    @include search-card (rgba(30, 50, 100, 1))
+}
+.discover-card-2{
+    @include search-card (rgba(186, 93, 7, 1))
+}
+.discover-card-3{
+    @include search-card (rgba(30, 50, 100, 1))
+}
+.discover-card-4{
+    @include search-card (rgba(141, 103, 171, 1))
+}
+.discover-card-5{
+    @include search-card (rgba(176, 40, 151, 1))
+}
+.discover-card-6{
+    @include search-card (rgba(141, 103, 171, 1))
+}
+.discover-card-7{
+    @include search-card (rgba(119, 119, 119, 1))
+}
+.discover-card-8{
+    @include search-card (rgba(186, 93, 7, 1))
+}
+
+// Genre Category Cards
+.genre-card-1{
+    @include search-card (rgba(20, 138, 8, 1))
+}
+.genre-card-2{
+    @include search-card (rgba(216, 64, 0, 1))
+}
+.genre-card-3{
+    @include search-card (rgba(80, 55, 80, 1))
+}
+.genre-card-4{
+    @include search-card (rgba(0, 100, 80, 1))
+}
+.genre-card-5{
+    @include search-card (rgba(233, 20, 41, 1))
+}
+.genre-card-6{
+    @include search-card (rgba(30, 50, 100, 1))
+}
+.genre-card-7{
+    @include search-card (rgba(233, 20, 41, 1))
+}
+.genre-card-8{
+    @include search-card (rgba(83, 122, 161, 1))
+}
+
+// Mood Category Cards
+.mood-card-1{
+    @include search-card (rgba(30, 50, 100, 1))
+}
+.mood-card-2{
+    @include search-card (rgba(186, 93, 7, 1))
+}
+.mood-card-3{
+    @include search-card (rgba(30, 50, 100, 1))
+}
+.mood-card-4{
+    @include search-card (rgba(141, 103, 171, 1))
+}
+.mood-card-5{
+    @include search-card (rgba(176, 40, 151, 1))
+}
+.mood-card-6{
+    @include search-card (rgba(141, 103, 171, 1))
+}
+.mood-card-7{
+    @include search-card (rgba(119, 119, 119, 1))
+}
+.mood-card-8{
+    @include search-card (rgba(186, 93, 7, 1))
+}
+
+// Entertainment Category Cards
+.entertainment-card-1{
+    @include search-card (rgba(20, 138, 8, 1))
+}
+.entertainment-card-2{
+    @include search-card (rgba(216, 64, 0, 1))
+}
+.entertainment-card-3{
+    @include search-card (rgba(80, 55, 80, 1))
+}
+.entertainment-card-4{
+    @include search-card (rgba(0, 100, 80, 1))
+}
+
+// Podcasts Category Cards
+.Podcasts-card-1{
+    @include search-card (rgba(176, 40, 151, 1))
+}
+.Podcasts-card-2{
+    @include search-card (rgba(141, 103, 171, 1))
+}
+.Podcasts-card-3{
+    @include search-card (rgba(119, 119, 119, 1))
+}
+.Podcasts-card-4{
+    @include search-card (rgba(186, 93, 7, 1))
+}
+
+// Audiobooks Category Cards
+.Audiobooks-card-1{
+    @include search-card (rgba(20, 138, 8, 1))
+}
+.Audiobooks-card-2{
+    @include search-card (rgba(216, 64, 0, 1))
+}
+.Audiobooks-card-3{
+    @include search-card (rgba(80, 55, 80, 1))
+}
+.Audiobooks-card-4{
+    @include search-card (rgba(0, 100, 80, 1))
+}
+.Audiobooks-card-5{
+    @include search-card (rgba(233, 20, 41, 1))
+}
+
+//Desktop layout
+@media (min-width: 768px) {
+.search-page-body{
+
+    background-color: $primary-color;
+    
+   
+    main{
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        overflow: hidden;
+        .sidebar {
+            display: block;
+            width: 260px;    
+            flex-shrink: 0;
+            overflow-y: auto;
+        }
+    }
+}
+.search-page {
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    flex: 1;
+    overflow-y: auto;
+    border: 1px solid rgba(32, 32, 32, 1);
+    border-radius: $radius-main;
+    padding: 13px 25px;
+   
+
+    &::-webkit-scrollbar { display: none; }
+        scrollbar-width: none;
+}
+.search-page-header-mobile {display: none;}
+
+// Recent Searches
+.recent-searches {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.recent-searches-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    margin-top: 7px;
+
+    h3{
+        color:$primary-text-color;
+        font-size: $font-size-large;
+        font-weight: $font-weight-bold;
+    }
+
+    :last-child {
+        @include icon-btn;
+    }
+}
+.recent-search-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+// Artist card
+.search-daft-punk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .name {
+        width:169px ;
+        height: 169px;
+        border-radius: 121px;
+        z-index: 1;
+        margin-bottom: 17px
+    }
+    .search-close-icon {
+        @include icon-btn;
+        position: absolute;
+        top:-10px;
+        left: 12.5rem;
+        width: 41px;
+        height: 41px;
+        background-color: rgba(17, 17, 17, 1);
+        border-radius: 100px;
+        z-index: 2;
+    }
+    span {
+        color: $primary-text-color;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-regular;
+    }
+}
+.search-david-bowie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .name {
+        width:169px ;
+        height: 169px;
+        border-radius: 121px;
+        z-index: 1;
+        margin-bottom: 17px
+    }
+    .search-close-icon {
+        @include icon-btn;
+        position: absolute;
+        top:-10px;
+        left: 12.5rem;
+        width: 41px;
+        height: 41px;
+        background-color: rgba(17, 17, 17, 1);
+        border-radius: 100px;
+        z-index: 2;
+    }
+    span {
+        color: $primary-text-color;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-regular;
+    }
+}
+.search-black-holes{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 7px;
+    box-shadow: 0 -7px 0 rgba(98, 120, 177, 0.3);
+
+    .name {
+        width:171px ;
+        height: 171px;
+        border-radius: 7px;
+        z-index: 1;
+        margin-bottom: 17px
+    }
+    .search-close-icon {
+        @include icon-btn;
+        position: absolute;
+        top:-10px;
+        left: 12.5rem;
+        width: 41px;
+        height: 41px;
+        background-color: rgba(17, 17, 17, 1);
+        border-radius: 100px;
+        z-index: 2;
+    }
+    .album-title {
+        color: $primary-text-color;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-regular;
+        margin-bottom: 8px;
+    }
+    .song-title{
+        color: $secondary-text-color;
+        font-size: $font-size-small;
+        font-weight: $font-weight-regular;
+    }
+
+}
+.search-browse-section {
+    margin: 20px 0;
+}
+.search-cards-row {
+    display: flex;
+    flex-direction: column;
+}
+.search-cards-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+
+    .search-arrows{
+        display: block;
+        :first-child{
+            width: 41px;
+            height: 41px;
+            @include icon-btn;
+        }
+        :last-child{
+            width: 41px;
+            height: 41px;
+            @include icon-btn;
+        }
+    }
+}
+.search-card-cont {
+    gap: 15px;
+    margin: 5px 0;
+    flex-wrap: nowrap;
+}
+.discover-card-1{
+    @include search-card-desktop (rgba(30, 50, 100, 1))
+}
+.discover-card-2{
+    @include search-card-desktop  (rgba(186, 93, 7, 1))
+}
+.discover-card-3{
+    @include search-card-desktop  (rgba(30, 50, 100, 1))
+}
+.discover-card-4{
+    @include search-card-desktop  (rgba(141, 103, 171, 1))
+}
+.discover-card-5{
+    @include search-card-desktop  (rgba(176, 40, 151, 1))
+}
+.discover-card-6{
+    @include search-card-desktop  (rgba(141, 103, 171, 1))
+}
+.discover-card-7{
+    @include search-card-desktop  (rgba(119, 119, 119, 1))
+}
+.discover-card-8{
+    @include search-card-desktop  (rgba(186, 93, 7, 1))
+}
+
+
+.genre-card-1{
+    @include search-card-desktop  (rgba(20, 138, 8, 1))
+}
+.genre-card-2{
+    @include search-card-desktop  (rgba(216, 64, 0, 1))
+}
+.genre-card-3{
+    @include search-card-desktop  (rgba(80, 55, 80, 1))
+}
+.genre-card-4{
+    @include search-card-desktop  (rgba(0, 100, 80, 1))
+}
+.genre-card-5{
+    @include search-card-desktop  (rgba(233, 20, 41, 1))
+}
+.genre-card-6{
+    @include search-card-desktop  (rgba(30, 50, 100, 1))
+}
+.genre-card-7{
+    @include search-card-desktop  (rgba(233, 20, 41, 1))
+}
+.genre-card-8{
+    @include search-card-desktop  (rgba(83, 122, 161, 1))
+}
+
+
+
+.mood-card-1{
+    @include search-card-desktop  (rgba(30, 50, 100, 1))
+}
+.mood-card-2{
+    @include search-card-desktop  (rgba(186, 93, 7, 1))
+}
+.mood-card-3{
+    @include search-card-desktop  (rgba(30, 50, 100, 1))
+}
+.mood-card-4{
+    @include search-card-desktop  (rgba(141, 103, 171, 1))
+}
+.mood-card-5{
+    @include search-card-desktop  (rgba(176, 40, 151, 1))
+}
+.mood-card-6{
+    @include search-card-desktop  (rgba(141, 103, 171, 1))
+}
+.mood-card-7{
+    @include search-card-desktop  (rgba(119, 119, 119, 1))
+}
+.mood-card-8{
+    @include search-card-desktop  (rgba(186, 93, 7, 1))
+}
+
+
+.entertainment-card-1{
+    @include search-card-desktop  (rgba(20, 138, 8, 1))
+}
+.entertainment-card-2{
+    @include search-card-desktop  (rgba(216, 64, 0, 1))
+}
+.entertainment-card-3{
+    @include search-card-desktop  (rgba(80, 55, 80, 1))
+}
+.entertainment-card-4{
+    @include search-card-desktop  (rgba(0, 100, 80, 1))
+}
+
+
+.Podcasts-card-1{
+    @include search-card-desktop  (rgba(176, 40, 151, 1))
+}
+.Podcasts-card-2{
+    @include search-card-desktop  (rgba(141, 103, 171, 1))
+}
+.Podcasts-card-3{
+    @include search-card-desktop  (rgba(119, 119, 119, 1))
+}
+.Podcasts-card-4{
+    @include search-card-desktop  (rgba(186, 93, 7, 1))
+}
+
+
+.Audiobooks-card-1{
+    @include search-card-desktop  (rgba(20, 138, 8, 1))
+}
+.Audiobooks-card-2{
+    @include search-card-desktop  (rgba(216, 64, 0, 1))
+}
+.Audiobooks-card-3{
+    @include search-card-desktop  (rgba(80, 55, 80, 1))
+}
+.Audiobooks-card-4{
+    @include search-card-desktop  (rgba(0, 100, 80, 1))
+}
+.Audiobooks-card-5{
+    @include search-card-desktop  (rgba(233, 20, 41, 1))
+}
+}

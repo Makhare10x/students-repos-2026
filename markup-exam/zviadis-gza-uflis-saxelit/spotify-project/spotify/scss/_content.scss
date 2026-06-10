@@ -1,0 +1,147 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm; // Uniform spacing between chips
+  justify-content: space-between;
+  margin-bottom: $spacing-md;
+
+  .chip {
+    font-family: $font-primary;
+    
+    // Layout & Shape
+    padding: 8px 16px;
+    border-radius: $radius-md; // Creates rounded shape
+    font-size: $font-md;
+    transition: all 0.2s ease;
+
+    // Inactive State 
+    background-color:$color-secondary; 
+    color: $color-white;
+
+    // Active State
+    &.active {
+      background-color: $color-white; // High contrast
+      color: $color-background; 
+    }
+
+    // hover for inactive chips
+    &:hover:not(.active) {
+      background-color: lighten($color-secondary, 10%); // Slightly lighter on hover
+    }
+  }
+  .filter-settings {
+    @include btn-reset;
+    padding: 4px;
+  }
+}
+
+
+/*======made for you section======*/
+
+
+.made-for-you{
+  @include music-section-styles;
+
+  .music-card {
+    &:nth-child(1) .music-card__count { color: #f573a0; }
+    &:nth-child(2) .music-card__count { color: #63d1ab; } 
+    &:nth-child(3) .music-card__count { color: #f26d5b; } 
+    &:nth-child(4) .music-card__count { color: #4bf2ac; } 
+    &:nth-child(5) .music-card__count { color: #e33063; }
+    &:nth-child(6) .music-card__count { color: #47cee5; } 
+    &:nth-child(7) .music-card__count { color: #ecda39; } 
+    &:nth-child(8) .music-card__count { color: #ffc8da; }
+   
+  }
+}
+
+.your-top-mixes {
+  @include music-section-styles;
+
+  .music-card {
+    &:nth-child(1) .music-card__count { color: #CCF665; } 
+    &:nth-child(2) .music-card__count { color: #F9E72C; }  
+    &:nth-child(3) .music-card__count { color: #9BF0E2; } 
+    &:nth-child(4) .music-card__count { color: #6F86FF; }
+    &:nth-child(5) .music-card__count { color: #FFCBD4; }
+    &:nth-child(6) .music-card__count { color: #FFC668; } 
+    &:nth-child(7) .music-card__count { color: #27856B; } 
+    &:nth-child(8) .music-card__count { color: #DD138B; }
+    
+  }
+}
+
+
+// The Individual Card
+.music-card {
+  flex: 0 0 180px;      // Fixed width: don't grow, don't shrink, stay 180px
+  display: flex;
+  width: 180px;        // Explicitly set width 
+  max-width: 180px;
+  flex-direction: column;
+  text-decoration: none; 
+  color: inherit;
+  background-color: darken($color-secondary, 5%);  // Slightly lighter dark for card body
+  padding: 16px;
+  border-radius: $radius-md;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: darken($color-secondary, 20%); 
+  }
+
+  &__cover {
+    width: 100%;        // Matches the 180px (minus padding)
+    aspect-ratio: 1 / 1; // Ensures it stays a perfect square
+    margin-bottom: 16px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: $radius-sm;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between; // Pushes title left, 50 right
+    align-items: baseline;          // Aligns text bottoms 
+    gap: $spacing-sm;               // Prevents them from touching
+    margin-bottom: 8px;
+  }
+
+  &__content {
+    width: 100%; // Strictly locks content to the card's width
+  }
+
+ &__title {
+    font-size: 16px;
+    font-weight: 200;
+    margin: 0;                      // Removed margin-bottom to center with 50
+    @include truncate(100%);
+    flex: 1;                        // Allows title to grow/shrink
+  }
+
+  &__count {
+    font-size: $font-md;
+    font-weight: 400;
+    flex-shrink: 0;       // Keeps the 50 from getting squashed
+    
+  }
+
+  &__subtitle {
+    font-size: $font-md;
+    color: $color-text;
+    line-height: 1.4;
+    margin: 0;
+
+    // Two-Lines visible only
+     @include truncate(100%);
+
+  }
+}

@@ -1,0 +1,172 @@
+    @use "../abstracts/variables" as v;
+    @use "../abstracts/mixins" as m;
+    @use "sass:map";
+
+    .player-bar{
+        position: fixed;
+        bottom: 0;
+        left: calc(v.$sidebar-width + 2.1rem);
+        right:1.4rem;
+        width: auto;
+        background-color: v.$player-bg;
+        border-radius: 1rem;
+        padding: 1.2rem 1.83rem 1.2rem 2.1rem;
+        @include m.flex($justify:space-between);
+}
+
+    .player-left, .player-center, .timeline, .player-right{
+        @include m.flex();
+    }
+
+    .player-left {
+        gap:0.5rem;
+    }
+
+    .timeline {
+        padding: 0.4rem 0;
+        gap:0.9rem;
+    }
+    .progress{
+        width:clamp(16rem, 17.9vw, 31.7rem);
+        border-radius: 0.5rem;
+        height:0.3rem;
+        background-color:rgba(137, 137, 137, 0.27);
+        .progress-fill {
+            background-color:#D9D9D9;
+            height:100%;
+            width:45%;
+            border-radius: 0.5rem;
+        }
+    }
+
+    .player-center{
+        gap:1rem;
+
+        .card-title{
+            font-weight:map.get(v.$font-weight, regular);
+        }
+        .additional-info{
+            display: none;
+        }
+    }
+
+    .player-center a{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-decoration: none;
+        color: inherit;
+        min-width: 0;
+}
+    .divider-line{
+        height:3.6rem;
+        border:0.2rem solid rgba(137, 137, 137, 0.3);
+    }
+
+    .player-right {
+        gap:0.631rem;
+        .icon-btn:last-child {
+        display: none;
+    }
+    }
+
+
+@media(max-width:v.$bp-desktop){
+    .player-bar {
+        left:0;
+        right:0;
+        bottom:9rem;
+        margin-inline:0.8rem;
+        padding:0.8rem 1rem 1rem 0.8rem;
+        z-index: 20;
+    }
+
+    .player-left{
+        .icon-btn {
+            display: none;
+        }
+
+        .timeline .card-subtitle {
+            display: none;
+        }
+        .timeline {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: auto;
+            padding: 0 0.1rem;
+
+            .progress {
+            width: 96%;
+            }
+
+            .progress-fill {
+            width: 45%;
+            }
+        }
+
+    }
+
+    .player-center {
+    flex: 1;
+    min-width: 0;
+    justify-content: flex-start;
+    align-items: center;
+
+    .now-playing-info{
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.card-title{
+  display: block;
+  max-width: 100%;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+    .additional-info {
+        display: inline;
+    }
+
+    .card-subtitle:last-child {
+        display: none;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+    }
+
+
+    .player-right {
+        gap: 0.4rem;
+        flex-shrink: 0;
+
+        .icon-btn {
+        width: 4rem;
+        height: 4rem;
+        padding: 0;
+        }
+
+        .icon-btn:nth-child(1),
+        .icon-btn:nth-child(3),
+        .icon-btn:nth-child(4),
+        .icon-btn:nth-child(5),
+        .icon-btn:nth-child(7),
+        .icon-btn:nth-child(8) {
+            display: none;
+        }
+
+        .icon-btn:last-child{
+            display: block;
+        }
+        .divider-line {
+            display: none;
+        }
+    }
+}

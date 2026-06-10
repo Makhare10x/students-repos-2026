@@ -1,0 +1,107 @@
+/* Основная область страницы */
+.song-page {
+  background: linear-gradient(to bottom, #2a2a2a 0%, #121212 100%);
+  color: white;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+/* Шапка трека */
+.song-hero {
+  display: flex;
+  align-items: flex-end; /* Текст "прилипает" к низу обложки */
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.album-cover img {
+  width: 320px;
+  height: 320px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.8);
+}
+
+.song-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin: 10px 0;
+  letter-spacing: -2px;
+}
+
+.song-meta {
+  color: #b3b3b3;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+/* Управление и артисты */
+.song-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.play-btn {
+  background: #1db954;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.artist-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.artist-info h4 { font-size: 0.9rem; margin: 0; }
+.artist-info p { font-size: 0.75rem; color: #b3b3b3; margin: 0; }
+
+/* Секция текста */
+.lyrics-container {
+  display: flex;
+  gap: 60px; /* Отступ инструментов от текста */
+  margin-top: 30px;
+}
+
+.lyrics-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0.6;
+}
+
+.lyrics-content p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #a7a7a7;
+  transition: color 0.2s;
+}
+
+.lyrics-content p:hover {
+  color: #fff; /* Эффект подсветки при наведении */
+}
+
+.lyrics-tabs {
+  display: flex;
+  gap: 30px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 10px;
+}
+
+.lyrics-tabs a { color: #b3b3b3; text-decoration: none; font-weight: bold; }
+.lyrics-tabs a.active { color: #fff; }

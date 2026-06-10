@@ -1,0 +1,804 @@
+@use "../abstracts/variables" as *; 
+@use "../abstracts/mixins" as *; 
+
+/* =========================
+   BASE
+   ========================= */
+html,
+body {
+  height: 100%; // მთლიანი გვერდი იკავებს სრულ სიმაღლეს
+  margin: 0; // body-ის default დაშორება უქმდება
+  overflow: hidden; // page-level სკროლი ითიშება
+  background: #000; // გვერდის საერთო შავი ფონი
+  font-family: $font-main;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; // padding და border ზომაში ჩაჯდეს
+}
+
+img {
+  display: block; // სურათი აღარ იქცევა inline ელემენტად
+  max-width: 100%; // სურათი არ გაცდება მშობლის სიგანეს
+}
+
+button {
+  font: inherit; // ღილაკი მშობლის ფონტს იღებს
+}
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+.main-content {
+  position: relative;
+  margin-left: 259px;
+  margin-top: 60px;
+  width: calc(100% - 259px);
+  height: calc(100vh - 54px);
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #060606;
+  border: 1px solid #202020;
+  border-radius: 10px 0 0 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* =========================
+   FILTERS SECTION
+   ========================= */
+.filters-section {
+  position: sticky; // სკროლისას ზემოთ მიყვეს
+  top: 0; // ზედა კიდეზე მიეკრას
+  z-index: 20; // კონტენტის ზემოთ იყოს
+  display: flex; // ფილტრები და action ერთ ხაზზე
+  align-items: center; // ვერტიკალური ცენტრირება
+  justify-content: space-between; // მარცხენა და მარჯვენა განაწილება
+  gap: 16px; // შიდა ელემენტებს შორის დაშორება
+  min-height: 60px; // ფიგმასთან ახლო სიმაღლე
+  padding: 8px 20px 0; // შიდა დაშორებები
+  background: rgba(6, 6, 6, 0.92); // sticky ფონად მუქი გამჭვირვალე ფონი
+  backdrop-filter: blur(22px); // მსუბუქი blur
+}
+
+.filters {
+  display: inline-flex; // ღილაკები ერთ ხაზზე
+  align-items: center; // ვერტიკალური ცენტრირება
+  gap: 10px; // ღილაკებს შორის დაშორება
+  flex-wrap: wrap; // საჭიროებისას შემდეგ ხაზზე გადასვლა
+}
+
+.filter {
+  height: 35px; // ღილაკის სიმაღლე
+  padding: 0 12px; // შიდა დაშორებები
+  border: 0; // border გაუქმდეს
+  border-radius: 8px; // დამრგვალება
+  background: rgba(32, 32, 32, 0.5); // მუქი ფონი
+  color: rgba(224, 224, 224, 1); // ტექსტის ფერი
+  font-size: 14px; // ტექსტის ზომა
+  font-weight: 700; // ტექსტის სისქე
+  cursor: pointer; // ხელის კურსორი
+  transition: background 0.2s ease, color 0.2s ease; // smooth ცვლილება
+
+  &--active {
+    background: rgba(224, 224, 224, 1); // აქტიური თეთრი ფონი
+    color: rgba(32, 32, 32, 0.9); // მუქი ტექსტი
+  }
+}
+
+.filters button:nth-child(1) {
+  width: 48px; // All ღილაკის სიგანე
+}
+
+.filters button:nth-child(2) {
+  width: 68px; // Music ღილაკის სიგანე
+}
+
+.filters button:nth-child(3) {
+  width: 89px; // Podcasts ღილაკის სიგანე
+}
+
+.filters button:nth-child(4) {
+  width: 107px; // Audiobooks ღილაკის სიგანე
+}
+
+.filters-layout-action {
+  flex-shrink: 0; // არ ჩაიკუმშოს
+}
+
+.icon-action {
+  width: 28px; // ღილაკის სიგანე
+  height: 28px; // ღილაკის სიმაღლე
+  padding: 0; // default padding გაუქმდეს
+  border: 0; // default border გაუქმდეს
+  background: transparent; // ფონი გამჭვირვალე
+  display: inline-flex; // აიქონის ცენტრირებისთვის
+  align-items: center; // ვერტიკალური ცენტრირება
+  justify-content: center; // ჰორიზონტალური ცენტრირება
+  cursor: pointer; // ხელის კურსორი
+}
+
+.icon-action__icon {
+  width: 16px; // აიქონის სიგანე
+  height: 16px; // აიქონის სიმაღლე
+  object-fit: contain; // სწორად ჩაჯდეს
+}
+
+/* =========================
+   CONTENT WRAPPER
+   ========================= */
+.content-wrapper {
+  width: 100%; // სრული სიგანე
+  min-width: 0; // შიგთავსმა არ გაწელოს wrapper
+  display: flex; // შიდა section-ები flex-ად განლაგდება
+  flex-direction: column; // section-ები ქვემოთ-ქვემოთ დაეწყობა
+  gap: 40px; // სექციებს შორის დაშორება
+  padding: 16px 20px 140px; // შიდა სივრცე, ქვემოთ დიდი padding player-ისთვის
+}
+
+/* =========================
+   MOBILE SHORTCUTS
+   ========================= */
+.main-content .mobile-shortcuts {
+  display: none; // desktop/tablet-ზე ეს ბლოკი დამალულია
+}
+
+.mobile-shortcuts {
+  &__item {
+    display: flex; // სურათი და ტექსტი ერთ ხაზზე ეწყობა
+    align-items: center; // შიგთავსი ვერტიკალურად ცენტრში დგას
+    min-width: 0; // ტექსტმა არ გაწელოს ბლოკი
+    height: 56px; // თითო shortcut-ის სიმაღლე
+    overflow: hidden; // ზედმეტი ნაწილი დაიჭრას
+    text-decoration: none; // link underline გაუქმდეს
+    background: linear-gradient(90deg, #2a2a2a 0%, #1f1f1f 100%); // shortcut-ის gradient ფონი
+    border-radius: 8px; // კუთხეების დამრგვალება
+  }
+
+  &__image {
+    width: 56px; // shortcut image-ის სიგანე
+    height: 56px; // shortcut image-ის სიმაღლე
+    flex-shrink: 0; // სურათი არ ჩაიკუმშოს
+    object-fit: cover; // სურათი ჩარჩოში სწორად ჩაჯდეს
+  }
+
+  &__text {
+    min-width: 0; // ტექსტმა არ გაწელოს ელემენტი
+    display: flex; // შიდა ტექსტები flex განლაგებაში
+    flex-direction: column; // სათაური და subtitle სვეტურად
+    justify-content: center; // ტექსტი შუაში განთავსდეს
+    padding: 0 12px; // მარცხენა-მარჯვენა შიდა დაშორება
+  }
+
+  &__title {
+    margin: 0; // default margin გაუქმდეს
+    color: #fff; // თეთრი ტექსტი
+    font-size: 14px; // სათაურის ზომა
+    font-weight: 500; // სათაურის სისქე
+    line-height: 1.2; // ხაზებს შორის სიმაღლე
+    white-space: nowrap; // ტექსტი არ გადავიდეს მეორე ხაზზე
+    overflow: hidden; // ზედმეტი ტექსტი დაიმალოს
+    text-overflow: ellipsis; // ბოლოს დაემატოს ...
+  }
+
+  &__subtitle {
+    margin: 2px 0 0; // ზემოდან მცირე დაშორება
+    color: #b3b3b3; // უფრო ღია ნაცრისფერი ფერი
+    font-size: 12px; // subtitle-ის ზომა
+    line-height: 1.2; // ხაზებს შორის სიმაღლე
+    white-space: nowrap; // ერთ ხაზზე დარჩეს
+    overflow: hidden; // ზედმეტი დაიმალოს
+    text-overflow: ellipsis; // ბოლოს ellipsis გამოჩნდეს
+  }
+}
+
+/* =========================
+   CATALOGUE
+   ========================= */
+.catalogue {
+  width: 100%; // სექცია მთლიან სიგანეზეა
+  min-width: 0; // შიგთავსი არ გაწელავს სექციას
+  display: flex; // შიდა ელემენტები flex-ით ეწყობა
+  flex-direction: column; // ზედა ნაწილი და grid სვეტურად არის
+  gap: 30px; // სათაურსა და ქარდებს შორის დაშორება
+
+  &-top {
+    width: 100%; // ზედა ზოლი მთლიან სიგანეზეა
+    min-width: 0; // შიგთავსმა არ გაწელოს
+    display: flex; // სათაური და ღილაკები ერთ ხაზზე
+    align-items: center; // ვერტიკალური ცენტრირება
+    justify-content: space-between; // ერთი მარცხნივ, მეორე მარჯვნივ
+    gap: 12px; // შიდა ელემენტებს შორის დაშორება
+  }
+
+  &-title {
+    margin: 0; // default margin გაუქმდეს
+    color: #fff; // თეთრი სათაური
+    font-size: 18px; // ფიგმასთან ახლო ზომა
+    font-weight: 700; // bold heading
+    line-height: 1.2; // heading line-height
+  }
+}
+
+.catalogue-actions {
+  display: flex; // action ღილაკები ერთ ხაზზე
+  align-items: center; // ვერტიკალურად შუაში
+  gap: 8px; // ღილაკებს შორის დაშორება
+  flex-shrink: 0; // ეს ბლოკი არ ჩაიკუმშოს
+}
+
+.catalogue-btn {
+  width: 24px; // ღილაკის სიგანე
+  height: 24px; // ღილაკის სიმაღლე
+  padding: 0; // default padding გაუქმდეს
+  border: 0; // default border გაუქმდეს
+  border-radius: 50%; // ღილაკი მრგვალი გახდეს
+  cursor: pointer; // მაუსზე ხელის კურსორი
+  display: inline-flex; // აიქონის ცენტრირებისთვის inline-flex
+  align-items: center; // აიქონის ვერტიკალური ცენტრირება
+  justify-content: center; // აიქონის ჰორიზონტალური ცენტრირება
+  background: transparent; // ფონი არ ჰქონდეს
+
+  img {
+    width: 14px; // აიქონის სიგანე
+    height: 14px; // აიქონის სიმაღლე
+    object-fit: contain; // სწორად ჩაჯდეს
+  }
+}
+
+.catalogue-grid {
+  width: 100%; // სრული სიგანე
+  min-width: 0; // შიგთავსმა არ გაწელოს grid
+  display: grid; // grid layout
+  grid-template-columns: repeat(8, minmax(0, 1fr)); // 8 თანაბარი სვეტი
+  gap: 15px; // ბარათებს შორის დაშორება
+  margin-top: 6px; // სათაურის ქვემოთ მცირე დაშორება
+}
+
+/* =========================
+   MUSIC CARD / MIX CARD
+   ========================= */
+.music-card,
+.mix-card {
+  min-width: 0; // შიგთავსმა არ გაწელოს card
+
+  &__link {
+    display: flex; // card-ის შიდა ელემენტები flex-ით
+    flex-direction: column; // ზემოდან ქვემოთ ლაგდება
+    min-width: 0; // ტექსტმა არ გაწელოს card
+    text-decoration: none; // link underline არ ჰქონდეს
+    color: inherit; // ფერი მშობლისგან მემკვიდრეობით მიიღოს
+  }
+
+  &__image-wrap {
+    position: relative; // wrapper-ის საბაზო პოზიციონირება
+    width: 100%; // სრული სიგანე
+    aspect-ratio: 1 / 1; // კვადრატული ბლოკი
+    border-radius: 7.25px; // wrapper-ის კუთხეების დამრგვალება
+    overflow: visible; // ზედა ბარები გამოჩნდეს
+
+    &::before {
+      content: ""; // უკანა თხელი ბარი
+      position: absolute; // თავისუფალი პოზიციონირება
+      top: -18px; // სურათის ზემოთ
+      left: 50%; // შუიდან გასწორება
+      width: 133px; // ფიგმის ზომა
+      height: 3px; // ფიგმის ზომა
+      transform: translateX(-50%); // ზუსტად ცენტრში ჩაჯდეს
+      border-top-left-radius: 7.25px; // ზედა მარცხენა დამრგვალება
+      border-top-right-radius: 7.25px; // ზედა მარჯვენა დამრგვალება
+      background: rgba(206, 110, 154, 0.15); // დროებითი ფერი, მერე შეცვლი
+      z-index: 1; // ქვედა ბარზე უკან იყოს
+    }
+
+    &::after {
+      content: ""; // წინა მსხვილი ბარი
+      position: absolute; // თავისუფალი პოზიციონირება
+      top: -12px; // სურათის ზემოთ
+      left: 50%; // შუიდან გასწორება
+      width: 154px; // ფიგმის ზომა
+      height: 6px; // ფიგმის ზომა
+      transform: translateX(-50%); // ზუსტად ცენტრში ჩაჯდეს
+      border-top-left-radius: 7.25px; // ზედა მარცხენა დამრგვალება
+      border-top-right-radius: 7.25px; // ზედა მარჯვენა დამრგვალება
+      background: rgba(206, 110, 154, 0.3); // დროებითი ფერი, მერე შეცვლი
+      z-index: 2; // თხელ ბარზე ზემოთ იყოს
+    }
+  }
+
+  &__image {
+    width: 100%; // სურათი ავსებს wrapper-ს
+    height: 100%; // სურათი ავსებს wrapper-ს სიმაღლეში
+    object-fit: cover; // სურათი crop-ით სწორად ჩაჯდეს
+    border-radius: 7.25px; // სურათსაც ჰქონდეს დამრგვალება
+  }
+
+  &__meta {
+    min-width: 0; // ტექსტმა არ გაწელოს ბლოკი
+    display: flex; // სათაური და count ერთ ხაზზე
+    align-items: center; // ვერტიკალური ცენტრირება
+    justify-content: space-between; // ერთი მარცხნივ, ერთი მარჯვნივ
+    gap: 8px; // ელემენტებს შორის დაშორება
+    margin-top: 8px; // სურათის ქვემოთ დაშორება
+  }
+
+  &__type {
+    min-width: 0; // ტექსტმა არ გაწელოს სივრცე
+    color: rgba(224, 224, 224, 1); // თეთრი ტექსტი
+    font-size: 14px; // სათაურის ზომა
+    font-weight: 500; // საშუალო სისქე
+    white-space: nowrap; // ერთ ხაზზე დარჩეს
+    overflow: hidden; // ზედმეტი დაიმალოს
+    text-overflow: ellipsis; // ბოლოს ...
+  }
+
+  &__count {
+    flex-shrink: 0; // count არ ჩაიკუმშოს
+    font-size: 14px; // count-ის ზომა
+    font-weight: 400; // სისქე
+  }
+
+  &__desc {
+    margin: 4px 0 0; // ზემოდან მცირე დაშორება
+    color: rgba(137, 137, 137, 1); // ნაცრისფერი აღწერა
+    font-size: 12px; // ტექსტის ზომა
+    line-height: 1.35; // ხაზებს შორის დაშორება
+    display: -webkit-box; // multi-line clamp-ისთვის
+    -webkit-box-orient: vertical; // ტექსტი ვერტიკალურ ყუთში
+    -webkit-line-clamp: 2; // მაქსიმუმ 2 ხაზი
+    line-clamp: 2;
+    overflow: hidden; // ზედმეტი ნაწილი დაიმალოს
+  }
+}
+
+/* =========================
+   MUSIC CARD TOP BAR COLORS
+   ========================= */
+.catalogue .catalogue-grid > article:nth-child(1) .music-card__image-wrap::before {
+  background: rgba(206, 110, 154, 0.15); // პირველი music-card უკანა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(1) .music-card__image-wrap::after {
+  background: rgba(206, 110, 154, 0.3); // პირველი music-card წინა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(2) .music-card__image-wrap::before {
+  background: rgba(149, 230, 211, 0.15); // მეორე music-card უკანა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(2) .music-card__image-wrap::after {
+  background: rgba(149, 230, 211, 0.3); // მეორე music-card წინა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(3) .music-card__image-wrap::before {
+  background: rgba(244, 184, 189, 0.15); // მესამე music-card უკანა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(3) .music-card__image-wrap::after {
+  background: rgba(244, 184, 189, 0.3); // მესამე music-card წინა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(4) .music-card__image-wrap::before {
+  background: rgba(195, 231, 183, 0.15); // მეოთხე music-card უკანა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(4) .music-card__image-wrap::after {
+  background: rgba(195, 231, 183, 0.3); // მეოთხე music-card წინა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(5) .music-card__image-wrap::before {
+  background: rgba(243, 127, 166, 0.15); // მეხუთე music-card უკანა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(5) .music-card__image-wrap::after {
+  background: rgba(243, 127, 166, 0.3); // მეხუთე music-card წინა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(6) .music-card__image-wrap::before {
+  background: rgba(160, 190, 200, 0.15); // მეექვსე music-card უკანა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(6) .music-card__image-wrap::after {
+  background: rgba(160, 190, 200, 0.3); // მეექვსე music-card წინა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(7) .music-card__image-wrap::before {
+  background: rgba(253, 216, 125, 0.15); // მეშვიდე music-card უკანა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(7) .music-card__image-wrap::after {
+  background: rgba(253, 216, 125, 0.3); // მეშვიდე music-card წინა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(8) .music-card__image-wrap::before {
+  background: rgba(212, 178, 169, 0.15); // მერვე music-card უკანა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(8) .music-card__image-wrap::after {
+  background: rgba(212, 178, 169, 0.3); // მერვე music-card წინა ბარი
+}
+
+/* =========================
+   MIX CARD TOP BAR COLORS
+   ========================= */
+.catalogue .catalogue-grid > article:nth-child(1) .mix-card__image-wrap::before {
+  background: rgba(204, 246, 101, 0.15); // პირველი mix-card უკანა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(1) .mix-card__image-wrap::after {
+  background: rgba(204, 246, 101, 0.3); // პირველი mix-card წინა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(2) .mix-card__image-wrap::before {
+  background: rgba(249, 231, 44, 0.15); // მეორე mix-card უკანა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(2) .mix-card__image-wrap::after {
+  background: rgba(249, 231, 44, 0.3); // მეორე mix-card წინა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(3) .mix-card__image-wrap::before {
+  background: rgba(155, 240, 226, 0.15); // მესამე mix-card უკანა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(3) .mix-card__image-wrap::after {
+  background: rgba(155, 240, 226, 0.3); // მესამე mix-card წინა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(4) .mix-card__image-wrap::before {
+  background: rgba(111, 134, 255, 0.15); // მეოთხე mix-card უკანა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(4) .mix-card__image-wrap::after {
+  background: rgba(111, 134, 255, 0.3); // მეოთხე mix-card წინა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(5) .mix-card__image-wrap::before {
+  background: rgba(255, 203, 212, 0.15); // მეხუთე mix-card უკანა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(5) .mix-card__image-wrap::after {
+  background: rgba(255, 203, 212, 0.3); // მეხუთე mix-card წინა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(6) .mix-card__image-wrap::before {
+  background: rgba(255, 198, 104, 0.15); // მეექვსე mix-card უკანა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(6) .mix-card__image-wrap::after {
+  background: rgba(255, 198, 104, 0.3); // მეექვსე mix-card წინა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(7) .mix-card__image-wrap::before {
+  background: rgba(39, 133, 107, 0.15); // მეშვიდე mix-card უკანა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(7) .mix-card__image-wrap::after {
+  background: rgba(39, 133, 107, 0.3); // მეშვიდე mix-card წინა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(8) .mix-card__image-wrap::before {
+  background: rgba(221, 19, 139, 0.15); // მერვე mix-card უკანა ბარი
+}
+
+.catalogue .catalogue-grid > article:nth-child(8) .mix-card__image-wrap::after {
+  background: rgba(221, 19, 139, 0.3); // მერვე mix-card წინა ბარი
+}
+
+/* =========================
+   MUSIC CARD COUNT COLORS
+   ========================= */
+.catalogue .catalogue-grid > article:nth-child(1) .music-card__count {
+  color: rgba(206, 110, 154, 1); // პირველი music-card-ის 50
+}
+
+.catalogue .catalogue-grid > article:nth-child(2) .music-card__count {
+  color: rgba(149, 230, 211, 1); // მეორე music-card-ის 50
+}
+
+.catalogue .catalogue-grid > article:nth-child(3) .music-card__count {
+  color: rgba(244, 184, 189, 1); // მესამე music-card-ის 50
+}
+
+.catalogue .catalogue-grid > article:nth-child(4) .music-card__count {
+  color: rgba(195, 231, 183, 1); // მეოთხე music-card-ის 50
+}
+
+.catalogue .catalogue-grid > article:nth-child(5) .music-card__count {
+  color: rgba(243, 127, 166, 1); // მეხუთე music-card-ის 50
+}
+
+.catalogue .catalogue-grid > article:nth-child(6) .music-card__count {
+  color: rgba(160, 190, 200, 1); // მეექვსე music-card-ის 50
+}
+
+.catalogue .catalogue-grid > article:nth-child(7) .music-card__count {
+  color: rgba(253, 216, 125, 1); // მეშვიდე music-card-ის 50
+}
+
+.catalogue .catalogue-grid > article:nth-child(8) .music-card__count {
+  color: rgba(212, 178, 169, 1); // მერვე music-card-ის 50
+}
+
+/* =========================
+   MIX CARD COUNT COLORS
+   ========================= */
+.catalogue .catalogue-grid > article:nth-child(1) .mix-card__count {
+  color: rgba(204, 246, 101, 1); // პირველი mix-card-ის 50
+}
+
+.catalogue .catalogue-grid > article:nth-child(2) .mix-card__count {
+  color: rgba(249, 231, 44, 1); // მეორე mix-card-ის 50
+}
+
+.catalogue .catalogue-grid > article:nth-child(3) .mix-card__count {
+  color: rgba(155, 240, 226, 1); // მესამე mix-card-ის 50
+}
+
+.catalogue .catalogue-grid > article:nth-child(4) .mix-card__count {
+  color: rgba(111, 134, 255, 1); // მეოთხე mix-card-ის 50
+}
+
+.catalogue .catalogue-grid > article:nth-child(5) .mix-card__count {
+  color: rgba(255, 203, 212, 1); // მეხუთე mix-card-ის 50
+}
+
+.catalogue .catalogue-grid > article:nth-child(6) .mix-card__count {
+  color: rgba(255, 198, 104, 1); // მეექვსე mix-card-ის 50
+}
+
+.catalogue .catalogue-grid > article:nth-child(7) .mix-card__count {
+  color: rgba(39, 133, 107, 1); // მეშვიდე mix-card-ის 50
+}
+
+.catalogue .catalogue-grid > article:nth-child(8) .mix-card__count {
+  color: rgba(221, 19, 139, 1); // მერვე mix-card-ის 50
+}
+
+/* =========================
+   ARTISTS SECTION
+   ========================= */
+.catalogue-artists {
+  width: 100%; // სექცია სრულ სიგანეზე დარჩეს
+}
+
+.catalogue-top--artists {
+  justify-content: space-between;
+}
+
+.catalogue-artists .catalogue-title {
+  width: 210px; // ფიგმის width-ს ახლოს
+  height: 27px; // ფიგმის height-ს ახლოს
+  color: rgba(224, 224, 224, 1); // ფიგმის ფერი
+  font-size: 20px; // ფიგმის ზომა
+  font-weight: 700; // bold
+  line-height: 20px; // 100%
+  letter-spacing: 0.03em; // 3%
+}
+
+/* =========================
+   ARTISTS GRID
+   ========================= */
+.artists-grid {
+  width: 100%; // სრული სიგანე
+  display: flex; // ბარათები ერთ ხაზზე
+  align-items: flex-end; // ქვედა ხაზზე გასწორება
+  gap: 16px; // დაშორება ბარათებს შორის
+  margin-top: 6px; // სათაურის ქვემოთ მცირე დაშორება
+  overflow: hidden; // ზედმეტი დაიმალოს
+}
+
+/* =========================
+   ARTIST CARD (crop container)
+   ========================= */
+.artist-card {
+  position: relative;
+  width: 170px; // card სიგანე
+  height: 170px; // იგივე სიმაღლე რომ სრული წრე ჩანდეს
+  flex-shrink: 0;
+}
+
+/* =========================
+   LINK
+   ========================= */
+.artist-card__link {
+  display: block; // მთელი card clickable
+  width: 170px; // crop სიგანე
+  height: 170px; // სრული წრე
+  position: relative; // საჭიროების შემთხვევაში შიდა პოზიციონირებისთვის
+}
+
+/* =========================
+   IMAGE (circle)
+   ========================= */
+.artist-card__image {
+  width: 170px; // სურათის სიგანე
+  height: 170px; // სურათის სიმაღლე
+  object-fit: cover; // სურათი სწორად ჩაჯდეს
+  border-radius: 50%; // მრგვალი crop
+  display: block; // inline gap არ დარჩეს
+}
+
+/* =========================
+   TABLET
+   ========================= */
+@media (max-width: 1400px) {
+  .catalogue-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)); // tablet ზომაზე 8-ის ნაცვლად 4 სვეტი
+  }
+
+  .artists-grid {
+    flex-wrap: wrap; // თუ ადგილი არ ეყოფა, შემდეგ ხაზზე გადავიდეს
+  }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow: hidden; // მობილურზეც page-level სკროლი გამორთულია
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    background: #090909;
+  }
+
+  .filters {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .filter--active {
+    display: none;
+  }
+
+  .filters-section {
+    padding: 1px 1px 0; // მობილურის შიდა დაშორებები
+  }
+
+  .content-wrapper {
+    gap: 36px; // მობილურზე სექციებს შორის დაშორება
+    padding: 10px 12px 120px; // მობილურის შიდა დაშორებები
+  }
+
+  .main-content .mobile-shortcuts {
+    display: grid; // მობილურზე shortcuts ჩანს grid-ად
+    grid-template-columns: repeat(2, 1fr); // 2 სვეტი
+    gap: 10px; // ბარათებს შორის დაშორება
+    padding: 0 3px; // მცირე გვერდითი padding
+  }
+
+  .catalogue {
+    gap: 10px; // სექციის შიდა დაშორება მცირდება
+
+    &-title {
+      font-size: 18px; // მობილურზე პატარა სათაური
+      line-height: 1.2; // სწორი ხაზის სიმაღლე
+      width: auto; // ფიქსირებული width გაუქმდეს
+      height: auto; // ფიქსირებული height გაუქმდეს
+    }
+  }
+
+  .catalogue-actions .catalogue-btn:not(:last-child) {
+    display: none; // მობილურზე მხოლოდ ბოლო ღილაკი ჩანს
+  }
+
+  .catalogue-btn {
+    width: auto; // ღილაკი კონტენტის ზომაზე გადავა
+    height: auto; // ავტომატური სიმაღლე
+    padding: 4px; // შიდა სივრცე
+    background: transparent; // ფონი მოიხსნას
+    border-radius: 0; // მრგვალი ფორმა აღარ იყოს
+
+    img {
+      width: 18px; // აიქონი ოდნავ იზრდება
+      height: 18px; // აიქონის სიმაღლე
+    }
+  }
+
+  .catalogue-grid {
+    display: flex; // grid მობილურზე flex-row ხდება
+    gap: 12px; // ბარათებს შორის დაშორება
+    margin-top: 4px; // სათაურის ქვემოთ მობილურზე მცირე დაშორება
+    overflow-x: auto; // ჰორიზონტალური სკროლი ჩართულია
+    padding-top: 18px; // ზედა ბარებისთვის სივრცე
+    padding-bottom: 4px; // ქვემოთ მცირე დაშორება
+    scroll-snap-type: x mandatory; // სკროლზე ბარათები snap პოზიციაში ჩაჯდეს
+    scrollbar-width: none; // Firefox-ში სკროლი დაიმალოს
+
+    &::-webkit-scrollbar {
+      display: none; // Chrome/Safari-ში სკროლბარი დაიმალოს
+    }
+  }
+
+  .music-card,
+  .mix-card {
+    flex: 0 0 140px; // თითო ბარათს ფიქსირებული სიგანე აქვს
+    min-width: 140px; // მინიმალური სიგანეც იგივეა
+    scroll-snap-align: start; // snap დაწყებიდან მოხდეს
+
+    &__image-wrap {
+      &::before {
+        width: 110px; // მობილურზე უკანა ბარი დაპატარავდეს
+        top: -14px; // ოდნავ ახლოს მოვიდეს
+      }
+
+      &::after {
+        width: 126px; // მობილურზე წინა ბარი დაპატარავდეს
+        top: -10px; // ოდნავ ახლოს მოვიდეს
+      }
+    }
+
+    &__meta {
+      margin-top: 8px; // meta-ს დაშორება უცვლელია
+    }
+
+    &__type {
+      font-size: 15px; // სათაურის ზომა
+      font-weight: 600; // ოდნავ უფრო გამოკვეთილი ტექსტი
+    }
+
+    &__count {
+      font-size: 14px; // count-ის ზომა
+    }
+
+    &__desc {
+      margin-top: 4px; // ზემოდან დაშორება
+      font-size: 12px; // აღწერის ზომა
+    }
+  }
+
+  .catalogue-artists {
+    display: block; // artists სექცია ისევ გამოჩნდეს
+  }
+
+  .artists-grid {
+    display: flex; // ქარდები ერთ ხაზზე დალაგდეს
+    flex-wrap: nowrap; // შემდეგ ხაზზე არ გადავიდეს
+    align-items: flex-start; // ზემოდან გასწორდეს
+    gap: 12px; // ქარდებს შორის დაშორება
+    overflow-x: auto; // ჰორიზონტალური სქროლი ჩაირთოს
+    overflow-y: hidden; // ვერტიკალური სქროლი არ იყოს
+    padding-bottom: 4px; // ქვემოთ მცირე სივრცე
+    scroll-snap-type: x mandatory; // სქროლზე ლამაზად დაჯდეს
+    scrollbar-width: none; // Firefox-ში scrollbar დაიმალოს
+
+    &::-webkit-scrollbar {
+      display: none; // Chrome/Safari-ში scrollbar დაიმალოს
+    }
+  }
+
+  .artist-card {
+    flex: 0 0 120px; // თითო ქარდის ფიქსირებული სიგანე
+    width: 120px; // ქარდის სიგანე
+    height: 120px; // ქარდის სიმაღლე
+    scroll-snap-align: start; // snap დაწყებიდან
+  }
+
+  .artist-card__link {
+    width: 120px; // ლინკის სიგანე
+    height: 120px; // ლინკის სიმაღლე
+  }
+
+  .artist-card__image {
+    width: 120px; // სურათის სიგანე
+    height: 120px; // სურათის სიმაღლე
+  }
+}

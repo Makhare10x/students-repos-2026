@@ -1,0 +1,123 @@
+@import url("../../../css/styles.css");
+.library_nav_bar {
+  overflow: hidden;
+  padding: 10px 25px;
+}
+.library_nav_bar__items {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.library_nav_bar__items li:last-child {
+  margin-left: auto;
+}
+.library_nav_bar__buttons_view {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.library_nav_bar__buttons_filter {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.library_nav_bar--Liked_songs .library_nav_bar__items > li:last-child {
+  order: -1;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.library_cards {
+  padding: 10px 25px;
+}
+.library_cards__items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 11px;
+}
+
+.liked_songs {
+  padding: 10px 25px;
+}
+.liked_songs__table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  color: rgb(137, 137, 137);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 3%;
+}
+.liked_songs__header {
+  border-bottom: 3px solid rgba(32, 32, 32, 0.5);
+}
+.liked_songs__header_item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 3%;
+  padding-top: 2px;
+  padding-bottom: 14px;
+}
+.liked_songs__header_item:first-child {
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.liked_songs__content::before {
+  content: "";
+  display: block;
+  height: 20px;
+}
+.liked_songs__content_row:hover {
+  background-color: rgb(17, 17, 17);
+}
+.liked_songs__content_item {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.liked_songs__content_item:first-child {
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 3%;
+}
+.liked_songs__modes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.liked_songs__modes_main_items {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.liked_songs__modes_more {
+  display: flex;
+  align-items: center;
+}
+.liked_songs__modes_more span {
+  display: inline-block;
+  width: 77px;
+}
+.liked_songs__item:hover {
+  background-color: rgba(32, 32, 32, 0.5);
+}
+.liked_songs__item .recommendation__image {
+  width: 51px;
+  height: 51px;
+}
+.liked_songs__item .recommendation__info {
+  gap: 4px;
+}
+.liked_songs__item .recommendation__info-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 3%;
+}
+
+/*# sourceMappingURL=library.css.map */

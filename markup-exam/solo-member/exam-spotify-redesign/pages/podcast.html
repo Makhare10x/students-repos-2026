@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Podcast</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+<body class="page-podcast">
+  <input id="theme-toggle" type="checkbox" hidden />
+  <div class="app container">
+    <div id="header"></div>
+    <aside class="sidebar" aria-label="Sidebar">
+      <div class="sidebar-head"><a class="sidebar-head-link" href="library.html"><span class="icon-swap sidebar-icon"><img class="icon-default" src="../assets/icons/Name=Library, Filled=No.svg" alt="Library icon" /><img class="icon-filled" src="../assets/icons/Name=Library, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="sidebar-text">My Library</span></a></div>
+      <nav class="sidebar-nav" aria-label="My Library Navigation"><ul class="sidebar-list"><li class="sidebar-item"><a class="sidebar-link sidebar-link--has-arrow" href="playlist.html"><span class="icon-swap sidebar-icon"><img class="icon-default" src="../assets/icons/Name=Pin, Filled=No.svg" alt="Pins icon" /><img class="icon-filled" src="../assets/icons/Name=Pin, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="sidebar-text">Pins</span></a></li><li class="sidebar-item"><a class="sidebar-link sidebar-link--has-arrow" href="playlist.html"><img class="sidebar-icon" src="../assets/icons/Name=Playlist, Filled=No.svg" alt="Playlists icon" /><span class="sidebar-text">Playlists</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="song.html"><span class="icon-swap sidebar-icon"><img class="icon-default" src="../assets/icons/Name=Like, Filled=No.svg" alt="Liked songs icon" /><img class="icon-filled" src="../assets/icons/Name=Like, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="sidebar-text">Liked songs</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="album.html"><span class="icon-swap sidebar-icon"><img class="icon-default" src="../assets/icons/Name=Save, Filled=No.svg" alt="Saves icon" /><img class="icon-filled" src="../assets/icons/Name=Save, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="sidebar-text">Saves</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="album.html"><img class="sidebar-icon" src="../assets/icons/Name=Album, Filled=No.svg" alt="Albums icon" /><span class="sidebar-text">Albums</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="library.html"><img class="sidebar-icon" src="../assets/icons/Name=Folder, Filled=No.svg" alt="Folders icon" /><span class="sidebar-text">Folders</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="podcast.html"><img class="sidebar-icon" src="../assets/icons/Name=Podcast, Filled=No.svg" alt="Podcasts icon" /><span class="sidebar-text">Podcasts</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="episode.html"><img class="sidebar-icon" src="../assets/icons/Name=Audiobook, Filled=No.svg" alt="Audiobooks icon" /><span class="sidebar-text">Audiobooks</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="artist.html"><img class="sidebar-icon" src="../assets/icons/Name=Artist, Filled=No.svg" alt="Artists icon" /><span class="sidebar-text">Artists</span></a></li></ul></nav>
+    </aside>
+    <aside class="mobile-sidebar" aria-label="Mobile menu">
+      <nav class="mobile-nav" aria-label="Primary Mobile Navigation">
+        <ul class="mobile-nav-list">
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="../index.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=Home, Filled=No.svg" alt="Home icon" /><img class="icon-filled" src="../assets/icons/Name=Home, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Home</span></a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="discover.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=Discover, Filled=No.svg" alt="Discover icon" /><img class="icon-filled" src="../assets/icons/Name=Discover, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Discover</span></a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="search.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=Search, Filled=No.svg" alt="Search icon" /><img class="icon-filled" src="../assets/icons/Name=Search, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Search</span></a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="library.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=Library, Filled=No.svg" alt="Library icon" /><img class="icon-filled" src="../assets/icons/Name=Library, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Library</span></a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="profile.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=User, Filled=No.svg" alt="Profile icon" /><img class="icon-filled" src="../assets/icons/Name=User, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Me</span></a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main podcast-main" aria-label="Podcast page">
+      <section class="podcast-page">
+        <section class="podcast-hero">
+          <div class="podcast-hero__backdrop">
+            <picture>
+              <source media="(min-width: 64rem)" srcset="../assets/img/LeraBoroditsky_2017W-embed.jpg" />
+              <img src="../assets/img/LeraBoroditsky_2017W-embed.jpg" alt="TED Radio Hour banner" />
+            </picture>
+          </div>
+          <div class="podcast-hero__content">
+            <div class="podcast-hero__meta">
+              <p class="podcast-hero__eyebrow">A Spotify Podcast</p>
+              <h1>TED Radio Hour</h1>
+              <p class="podcast-hero__author">NPR and TED Audio Collective</p>
+              <p class="podcast-hero__summary">TED talks, stories and interesting topics in one place.</p>
+            </div>
+            <div class="podcast-hero__side">
+              <img class="podcast-hero__cover-art" src="../assets/img/Ted Talk.jpg" alt="TED Radio Hour cover art" />
+              <div class="podcast-hero__actions media-action-bar">
+                <button class="media-action media-action--play" type="button" aria-label="Play podcast"><i class="fa-solid fa-play"></i></button>
+                <button class="media-action media-action--pill" type="button">Follow</button>
+                <button class="media-action" type="button" aria-label="Add to library"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
+                <button class="media-action" type="button" aria-label="Queue"><img src="../assets/icons/Name=Queue, Filled=No.svg" alt="" /></button>
+                <button class="media-action" type="button" aria-label="More"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <nav class="podcast-tabs" aria-label="Podcast sections">
+          <button class="podcast-tabs__link podcast-tabs__link--active" type="button">Home</button>
+          <button class="podcast-tabs__link" type="button">Episodes</button>
+          <button class="podcast-tabs__link" type="button">About</button>
+          <button class="podcast-tabs__link" type="button">More Like This</button>
+          <button class="podcast-tabs__search" type="button" aria-label="Search podcast">
+            <img src="../assets/icons/Name=Search, Filled=No.svg" alt="" />
+          </button>
+        </nav>
+
+        <div class="podcast-content podcast-content--desktop">
+          <section class="podcast-section">
+            <div class="podcast-section__head">
+              <h2>All Episodes</h2>
+              <div class="podcast-section__tools" aria-label="Episode filters">
+                <button class="podcast-section__tool" type="button">
+                  <img src="../assets/icons/Name=Sort, Filled=No.svg" alt="" />
+                  <span>New</span>
+                </button>
+                <button class="podcast-section__tool" type="button">
+                  <img src="../assets/icons/Name=Filter, Filled=No.svg" alt="" />
+                  <span>All Episodes</span>
+                </button>
+                <button class="podcast-section__tool podcast-section__tool--icon" type="button" aria-label="Search episodes">
+                  <img src="../assets/icons/Name=Search, Filled=No.svg" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="podcast-episode-list" aria-label="TED Radio Hour episodes">
+              <article class="podcast-episode-row">
+                <img class="podcast-episode-row__cover" src="../assets/img/Future You _ TED Radio Hour.jpg" alt="Future You episode cover" />
+                <div class="podcast-episode-row__body">
+                  <h3>#2149 - Future You</h3>
+                  <p class="podcast-episode-row__meta">May 10 | 48 min</p>
+                  <p class="podcast-episode-row__excerpt">Episode about memory, identity and how people think about their future.</p>
+                  <div class="podcast-episode-row__actions media-action-bar media-action-bar--compact">
+                    <button class="media-action media-action--play media-action--compact" type="button" aria-label="Play Future You"><i class="fa-solid fa-play"></i></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Save Future You"><img src="../assets/icons/Name=Save, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Add Future You to library"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Download Future You"><img src="../assets/icons/Name=Download, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Share Future You"><img src="../assets/icons/Name=Share, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="More Future You"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="podcast-episode-row">
+                <img class="podcast-episode-row__cover" src="../assets/img/Ted Talk.jpg" alt="The shape of tomorrow episode cover" />
+                <div class="podcast-episode-row__body">
+                  <h3>#2148 - The Shape of Tomorrow</h3>
+                  <p class="podcast-episode-row__meta">May 9 | 52 min</p>
+                  <p class="podcast-episode-row__excerpt">Conversation about the future, technology and how life may change.</p>
+                  <div class="podcast-episode-row__actions media-action-bar media-action-bar--compact">
+                    <button class="media-action media-action--play media-action--compact" type="button" aria-label="Play The Shape of Tomorrow"><i class="fa-solid fa-play"></i></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Save The Shape of Tomorrow"><img src="../assets/icons/Name=Save, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Add The Shape of Tomorrow to library"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Download The Shape of Tomorrow"><img src="../assets/icons/Name=Download, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Share The Shape of Tomorrow"><img src="../assets/icons/Name=Share, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="More The Shape of Tomorrow"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="podcast-episode-row">
+                <img class="podcast-episode-row__cover" src="../assets/img/Future You _ TED Radio Hour.jpg" alt="The languages we speak episode cover" />
+                <div class="podcast-episode-row__body">
+                  <h3>#2147 - The Languages We Speak</h3>
+                  <p class="podcast-episode-row__meta">May 8 | 50 min</p>
+                  <p class="podcast-episode-row__excerpt">Talk about language, memory and how words change the way we see things.</p>
+                  <div class="podcast-episode-row__actions media-action-bar media-action-bar--compact">
+                    <button class="media-action media-action--play media-action--compact" type="button" aria-label="Play The Languages We Speak"><i class="fa-solid fa-play"></i></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Save The Languages We Speak"><img src="../assets/icons/Name=Save, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Add The Languages We Speak to library"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Download The Languages We Speak"><img src="../assets/icons/Name=Download, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Share The Languages We Speak"><img src="../assets/icons/Name=Share, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="More The Languages We Speak"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <aside class="podcast-side-panel">
+            <section class="podcast-side-card">
+              <h2>Pick</h2>
+              <article class="podcast-pick-card">
+                <img src="../assets/img/Ted Talk.jpg" alt="TED Talk cover" />
+                <div>
+                  <p>Now playing</p>
+                  <h3>Future You</h3>
+                </div>
+              </article>
+            </section>
+
+            <section class="podcast-side-card">
+              <img class="podcast-side-card__wide" src="../assets/img/Future You _ TED Radio Hour.jpg" alt="TED Radio Hour art" />
+            </section>
+
+            <section class="podcast-side-card podcast-side-card--about">
+              <h2>About</h2>
+              <p>TED Radio Hour brings together talks, stories and simple conversations about different topics.</p>
+              <div class="podcast-tags">
+                <span>Ideas</span>
+                <span>Culture</span>
+                <span>Society</span>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <div id="player"></div>
+  </div>
+  <script src="../js/header-load.js"></script>
+  <script src="../js/player-load.js"></script>
+</body>
+</html>

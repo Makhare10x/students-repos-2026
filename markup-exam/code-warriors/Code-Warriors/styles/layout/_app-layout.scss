@@ -1,0 +1,174 @@
+/* ================================
+   App Layout
+================================ */
+
+.app {
+  min-height: 100vh;
+  background-color: $color-bg-primary;
+  color: $color-text-primary;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* ================================
+   Header
+================================ */
+.header {
+  height: 6rem;
+  padding: 0 $space-lg;
+  @include flex-between;
+  background-color: $color-bg-primary;
+  border-bottom: 0.1rem solid $color-border;
+  flex-shrink: 0;
+}
+
+/* ================================
+   Main Wrapper
+================================ */
+ .layout {
+  display: flex;
+  flex: 1;
+  margin-top:$space-xxl;
+  height:calc(100vh - $space-xxl);
+  overflow: hidden;
+}
+
+
+/* ================================
+   Right Side Column
+================================ */
+.main {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top:$space-lg;
+}
+
+/* ================================
+   Scrollable Content
+================================ */
+.content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: $space-lg;
+  padding-bottom: calc(#{$player-height} + #{$space-xl});
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+// search html
+.browse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: $space-lg;
+}
+
+.browse-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+}
+
+.browse-subtitle {
+  font-size: 1.4rem;
+  color: $color-text-secondary;
+}
+
+.browse-scroll {
+  overflow-x: auto;
+}
+
+.browse-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.browse-grid {
+  display: flex;
+  gap: $space-md;
+  width: max-content;
+}
+
+.browse {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.slider-arrows {
+  display: flex;
+  gap: $space-sm;
+}
+
+.arrow {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  cursor: pointer;
+}
+
+// search bar for mobile
+
+.mobile-search{
+  display:none;
+}
+
+@media (max-width:768px){
+
+  .mobile-search{
+    display:block;
+    padding: $space-md;
+  }
+
+}
+
+.search-wrapper{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+.search-bar{
+  position:relative;
+  flex:1;
+}
+
+.search-input{
+  width:100%;
+  height:4.4rem;
+  border-radius:2.4rem;
+  border:none;
+  background:#1f1f1f;
+  color:white;
+  padding:0 $space-md 0 4rem;
+  font-size:1.4rem;
+}
+.search-icon{
+  position:absolute;
+  left:1.4rem;
+  top:50%;
+  transform:translateY(-50%);
+  width:2rem;
+  opacity:0.7;
+}
+.camera-btn{
+  width:4.4rem;
+  height:4.4rem;
+  border-radius:50%;
+  background:#1f1f1f;
+  border:none;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.camera-btn img{
+  width:2rem;
+}

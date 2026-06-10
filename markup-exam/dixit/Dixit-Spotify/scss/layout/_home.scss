@@ -1,0 +1,291 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+
+.home {
+    // display: none;
+    background-color: v.$bg-media;
+    padding-bottom: 5rem;
+    text-decoration: none;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 1;
+    @media (min-width: 991px) {
+        overflow-x: hidden;
+    }
+
+    @media (min-width: 991px) {
+        overflow-x: hidden;
+        // border: 0.1rem solid #202020;
+        // border-radius: 1rem;
+    }
+
+    &.active {
+        display: block;
+        z-index: 10;
+    }
+}
+
+.home-nav li:hover {
+    background-color: v.$secondary;
+    a {
+        color: v.$bg-primary;
+    }
+}
+
+.home-nav {
+    margin-top: 2.5rem;
+    font-weight: 400;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(1, auto);
+    .icon-toggle {
+        justify-self: end;
+        label {
+            @include m.btn-reset;
+            position: relative;
+            padding-left: 2rem;
+            cursor: pointer;
+            img {
+                position: relative;
+                bottom: 0.4rem;
+            }
+        }
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-left: 1rem;
+        li:first-child {
+            width: 6.3rem;
+        }
+        li {
+            background-color: #202020;
+            border-radius: 0.8rem;
+            height: 3.3rem;
+            width: 8rem;
+            @include m.flex-center($justify: center, $align: center);
+            a {
+                @include m.btn-reset;
+                color: v.$footer-text-active;
+                font-size: 1.2rem;
+                transition: color 0.1s ease-out;
+            }
+        }
+    }
+}
+
+.scroll-album-card {
+    display: flex;
+    column-gap: 1rem;
+    @include m.horizontal-scroll;
+    h3 {
+        font-weight: 500;
+        color: v.$primary;
+        font-size: map.get(v.$font-sizes, "body");
+    }
+    p:last-child {
+        font-weight: 400;
+        color: v.$second-primary;
+        font-size: map.get(v.$font-sizes, "body-sm");
+    }
+}
+
+.made-for-you {
+    @include m.album-cards;
+    @include m.grid-subtitle;
+
+    .scroll-album-card {
+        .album_cover_wrapper {
+            @include m.cover_wrapper;
+        }
+        article {
+            .album-card-subtitle > p:nth-of-type(1) {
+                color: v.$active-p-color;
+            }
+        }
+    }
+}
+
+.album-card-subtitle {
+    p {
+        @include m.text-wrap;
+    }
+}
+
+.your-top-mixes {
+    .scroll-album-card {
+        .album_cover_wrapper {
+            @include m.cover_wrapper;
+        }
+    }
+}
+
+.your-top-mixes {
+    @include m.grid-subtitle;
+    @include m.album-cards;
+    .scroll-album-card {
+        & > article {
+            .album-card-subtitle {
+                @include m.p-colors;
+                p {
+                    @include m.text-wrap;
+                }
+            }
+        }
+    }
+}
+.your-favorite-artists {
+    span {
+        margin-top: 2.5rem;
+    }
+    @include m.album-cards;
+    img {
+        border-radius: 50%;
+    }
+    .album-card-subtitle {
+        margin-top: 1.6rem;
+        @include m.flex-center($justify: center, $align: center);
+        @include m.p-colors;
+    }
+}
+.albums-for-you {
+    @include m.album-cards;
+}
+.album-card-subtitle {
+    display: grid;
+    h3 {
+        @include m.text-wrap;
+        font-size: map.get(v.$font-sizes, "body");
+    }
+    span {
+        color: v.$second-primary;
+        font-size: map.get(v.$font-sizes, "body-sm");
+    }
+}
+img {
+    z-index: 1;
+}
+.albums-for-you article .album-card-subtitle {
+    span:first-of-type {
+        justify-self: end;
+    }
+}
+.audiobooks-for-you {
+    span {
+        margin-top: 2rem;
+    }
+    @include m.album-cards;
+    .album-card-subtitle {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.8rem;
+        h3 {
+            margin-top: 0.8rem;
+            width: 10rem;
+        }
+        p {
+            width: 17rem;
+        }
+    }
+    .scroll-album-card {
+        article {
+            img {
+                object-fit: cover;
+                width: 17rem;
+                height: 21rem;
+                border-radius: 0.725rem;
+            }
+        }
+    }
+}
+.podcasts-for-you,
+.episodes-for-you {
+    @include m.album-cards;
+    span {
+        margin-top: 2rem;
+    }
+    @include m.album-cards;
+    .album-card-subtitle {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.8rem;
+    }
+    img {
+        margin-bottom: 0.5rem;
+        border-radius: 0.725rem;
+        z-index: 3;
+    }
+    .album-card-subtitle {
+        background-color: rgba(v.$backgroound-card-subtitle, 0.08);
+        height: 6rem;
+        border-radius: 0.725rem;
+        h3 {
+            padding-top: 1rem;
+            padding-left: 1.2rem;
+        }
+        p {
+            padding-left: 1.2rem;
+        }
+    }
+    .scroll-album-card {
+        article:last-child {
+            .album-card-subtitle {
+                background-color: rgba(
+                    v.$backgroound-card-subtitle-laschilde,
+                    0.06
+                );
+            }
+        }
+    }
+    .border-left article:first-child {
+        div {
+            border-left: 0.5rem solid rgba(#85c585, 0.6);
+        }
+    }
+    .border-left article:last-child {
+        div {
+            border-left: 0.5rem solid rgba(#f67d4d, 0.6);
+        }
+    }
+    .border-left article:nth-child(2) {
+        div {
+            border-left: 0.5rem solid rgba(#f1cebc, 0.6);
+        }
+    }
+    .first-card {
+        img:last-child {
+            border-radius: 0%;
+            margin-bottom: 0%;
+            padding-right: 1rem;
+        }
+    }
+}
+.arrow-scroll {
+    display: none;
+}
+.title-row {
+    img:last-child {
+        margin-right: 2rem;
+    }
+}
+@media (min-width: 991px) {
+    .title-row > img:last-child {
+        display: none;
+    }
+    .home-nav .icon-toggle label img {
+        margin-right: 2rem;
+    }
+
+    .arrow-scroll {
+        display: flex;
+        column-gap: 1.1rem;
+        justify-self: end;
+        margin-right: 2rem;
+        button {
+            @include m.btn-reset;
+            cursor: pointer;
+        }
+    }
+}

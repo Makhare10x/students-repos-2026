@@ -1,0 +1,56 @@
+@use "../abstracts/default" as d;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.artist-albums {
+  padding: 4rem 2.5rem;
+}
+
+.artist-albums__cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Card */
+.artist-album-card {
+  @include m.card;
+  margin: 0 1.1rem 5rem 1.1rem;
+}
+
+/* Image Block */
+.artist-album-card__image {
+  position: relative;
+  margin-bottom: 0.6rem;
+
+  img {
+    @include m.image-cover;
+    border-radius: v.$radius-lg;
+  }
+}
+
+/* text */
+.artist-album-card__header {
+  @include m.flex-between;
+  margin-bottom: 0.8rem;
+}
+
+.artist-album-card__title {
+  font-weight: 500;
+  font-size: v.$text-sm;
+  color: v.$color-text-primary;
+}
+
+.artist-album-card__count {
+  font-size: v.$text-sm;
+  color: v.$color-text-secondary;
+}
+
+.artist-album-card__description {
+  font-size: v.$text-xs;
+  color: v.$color-text-secondary;
+}
+
+.album-active,
+.artist-active {
+  background-color: v.$color-bg-hover;
+}

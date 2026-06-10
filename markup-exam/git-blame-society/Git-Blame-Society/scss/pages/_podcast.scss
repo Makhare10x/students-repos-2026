@@ -1,0 +1,86 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+
+
+.podcast-section-left {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.podcast-page{
+    background: linear-gradient(180deg, rgba(165, 96, 42, 0.45) 0%, rgba(6, 6, 6, 0.45) 100%);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem; 
+     @media (max-width:v.$bp-desktop){
+            flex-direction: column;
+        }
+}
+
+.about-podcast {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.6rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    padding: 3rem;
+}
+
+.pod, .p-about {
+    font-weight: map.get(v.$font-weight, regular);
+    color: v.$text-secondary;
+    display: block;
+    width: 70rem;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.by-pod{
+    display: flex;
+    gap: 1rem;
+}
+
+.podcast-btn {
+    background-color: transparent;
+}
+
+.podcasts-about {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.podcast-name {
+    display: flex;
+    gap: 1rem;
+        .section-subtitle {
+            color: v.$text-primary;
+        }
+}
+
+.joe {
+    margin:2rem 5rem 0 5.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+
+.follow{
+    background-color: rgba(v.$text-secondary, 0.25);
+    border: none;
+}
+
+.interactions {
+    display: flex;
+    gap: 1.4rem;
+}
+

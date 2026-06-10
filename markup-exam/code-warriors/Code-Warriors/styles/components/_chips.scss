@@ -1,0 +1,51 @@
+
+// Filter Chips
+
+.chip {
+  padding: 0.6rem 1.4rem;
+
+  border: none;
+  border-radius: 2rem;
+
+  background: $color-bg-elevated;
+
+  font-size: 1.3rem;
+  color: $color-text-secondary;
+
+  cursor: pointer;
+
+  transition: background $transition-base,
+              color $transition-base,
+              transform $transition-base;
+
+  white-space: nowrap;
+}
+
+.chip:hover {
+  background: $color-hover;
+  color: $color-text-primary;
+  transform: translateY(-1px);
+}
+
+/* active chip */
+
+.chip-active {
+  background: $color-text-primary;
+  color: $color-bg-primary;
+  transform: scale(0.96);
+}
+
+@media (max-width: 768px) {
+
+  .filters {
+    display: flex;
+    gap: $space-sm;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+}
+
+
+
+

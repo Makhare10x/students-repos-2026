@@ -1,0 +1,200 @@
+@use "../abstracts/mixins" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #060606;
+  font-family: "Satoshi", sans-serif;
+}
+
+// main container
+main {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 54px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* main sections  */
+
+.main_Content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 59px;
+  border-radius: 8px;
+  border: 1px solid #202020;
+  padding-inline: 15px;
+}
+
+.shelf {
+  min-height: 312px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.heading-area {
+  min-height: 41px;
+  width: 100%;
+  @include flex-between();
+}
+
+.heading-area h3 {
+  font-weight: 700;
+  @include text-style($size: 20px, $color: #e0e0e0);
+}
+
+.direction-carousel img {
+  cursor: pointer;
+}
+
+.made-for-you {
+  width: 100%;
+  min-height: 256px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 18px;
+}
+
+.made-for-you .music-card {
+  height: 253px;
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.music-card {
+  position: relative;
+}
+
+.music-card__img-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.music-card__img-wrapper img {
+  width: 100%;
+  height: 170px;
+  display: block;
+  border-radius: 8px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.music-card__img-wrapper:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(230, 230, 230, 0.507);
+}
+
+.music-card__img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 6px;
+  right: 6px;
+  height: 100%;
+  background: #56787e8e;
+  border-radius: 8px;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.music-card__img-wrapper::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 12px;
+  right: 12px;
+  height: 100%;
+  background: #c9caca8e;
+  border-radius: 8px;
+  z-index: -2;
+  opacity: 0.3;
+}
+
+.music-card p {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.discover-weekly h4,
+.discover-weekly span {
+  @include text-style($color: #e0e0e0);
+  font-weight: 500;
+}
+
+.discover-weekly span {
+  color: rgba(212, 141, 10, 0.562);
+  font-weight: bold;
+}
+
+.music-card p {
+  @include text-style($size: 12px);
+}
+
+.favourite-artists {
+  justify-content: flex-start;
+  gap: 18px;
+  .music-card {
+    h4 {
+      font-size: 10px;
+    }
+  }
+}
+.music-card--rounded {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.music-card--rounded img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.music-card--rounded::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #00ffcc;
+  animation: spin 2s linear infinite;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+  }
+}
+

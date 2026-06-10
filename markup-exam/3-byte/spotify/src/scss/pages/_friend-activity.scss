@@ -1,0 +1,93 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.friend-activity {
+  @include mixins.flex-column-start;
+  border: 1px solid variables.$border-soft;
+  color: var(--text-color);
+  border-radius: 1rem;
+  width: 35.8rem;
+  margin-right: 1rem;
+  height: 86vh;
+  padding: 1.5rem;
+  &.close {
+    display: none;
+  }
+}
+
+.friend-panel-open.active {
+  .friend-panel-closed-img {
+    display: none;
+  }
+
+  .friend-panel-opened-img {
+    display: block;
+  }
+}
+.friend-panel-opened-img {
+  display: none;
+  transition: opacity 0.25s;
+}
+
+.exit-friend-panel {
+  cursor: pointer;
+}
+.active-control-panel {
+  h2 {
+    color: var(--text-clicked-color);
+  }
+  @include mixins.flex-between();
+  width: 100%;
+  .add-exit {
+    @include mixins.flex-row;
+    gap: 0.5rem;
+  }
+}
+
+.friend-active-log {
+  @include mixins.flex-column-start;
+  gap: 2rem;
+}
+
+.friend-list-person {
+  @include mixins.flex-row;
+  gap: 1rem;
+  width: 100%;
+
+  .friend-info {
+    @include mixins.flex-column-start;
+    .active-log {
+      @include mixins.flex-row;
+      img {
+        margin-left: -0.6rem;
+        width: 3rem;
+        height: 3rem;
+      }
+      .active-ago {
+        width: 2rem;
+      }
+    }
+    .song-name {
+      color: var(--text-clicked-color);
+    }
+    .friend-name {
+      color: var(--text-clicked-color);
+    }
+    .active-log {
+      @include mixins.flex-between;
+
+      gap: 0.3rem;
+      .log {
+        @include mixins.flex-between;
+        gap: 0.5rem;
+      }
+    }
+  }
+}
+
+.circle-dot {
+  width: 3px;
+  height: 3px;
+  background-color: #898989;
+  border-radius: 50%;
+}

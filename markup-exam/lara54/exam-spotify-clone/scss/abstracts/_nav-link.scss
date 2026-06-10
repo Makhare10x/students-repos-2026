@@ -1,0 +1,106 @@
+@use "./variables" as var;
+@use "./mixins" as m;
+@use "../base/typography" as t;
+@use "../components/buttons" as bt;
+
+
+.main-content-navigation {
+    padding: 0 1.5rem;
+    @include m.flex-between;
+
+    ul {
+        display: flex;
+        gap: 1rem;
+
+        span {
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.8rem;
+            transition: 0.2s ease-in-out;
+
+            &:hover {
+                background-color: var.$font-activ;
+                color: var.$bg-btn-praymer;
+            }
+        }
+
+    }
+}
+
+.sidebar-nav__menu  {
+
+    a {
+        @include m.flex-box($align: center);
+        padding: 0.5rem;
+        border-radius: 0.8rem;
+        transition: background-color 0.2s ease-in-out;
+
+        img {
+            transition: filter 0.2s ease-in-out;
+        }
+
+        span {
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.8rem;
+            transition: color 0.2s ease-in-out;
+        }
+
+        &:hover {
+            background-color: var.$bg-btn-praymer;
+
+            span {
+                color: var.$font-activ;
+            }
+
+            img {
+                filter: brightness(0) invert(1) contrast(2) drop-shadow(0 0 1.5px var.$hover-color);
+            }
+        }
+    }
+}
+
+.nav-link {
+    @include m.flex-box($align: center);
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    transition: background-color 0.2s ease-in-out;
+
+    &__icon {
+        transition: filter 0.2s ease-in-out;
+    }
+
+    &__label {
+        padding: 0.8rem 1.5rem;
+        border-radius: 0.8rem;
+        transition: color 0.2s ease-in-out;
+    }
+
+    &:hover {
+        background-color: var.$bg-btn-praymer;
+
+        .nav-link__label {
+            color: var.$font-activ;
+        }
+
+        .nav-link__icon {
+            filter: brightness(0) invert(1) contrast(2) drop-shadow(0 0 1.5px var.$hover-color);
+        }
+    }
+}
+
+.link-active {
+    @include m.flex-box($align: center);
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.8rem;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+
+        strong {
+            color: var.$font-activ;
+        }
+
+        img {
+            filter: brightness(0) invert(1) contrast(2) drop-shadow(0 0 1.5px var.$hover-color);
+        }
+    }
+}

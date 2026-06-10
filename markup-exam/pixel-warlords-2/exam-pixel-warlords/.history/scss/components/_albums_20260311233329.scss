@@ -1,0 +1,28 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.main-content .card-grid-album{
+    display: grid;
+    justify-content: space-between;
+    // grid-template-columns: repeat(3, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+  
+}
+.album-item{
+    transition: scale 0.3s ease;
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+
+.album-item .title{
+    display: flex;
+    gap: 3rem;
+}
+
+.album-item-title{
+    display: inline-flex;
+}
+
+

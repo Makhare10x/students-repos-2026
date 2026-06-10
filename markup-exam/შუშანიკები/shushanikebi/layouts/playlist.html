@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles/style.css" />
+  <title>Spotify | Playlist</title>
+</head>
+
+<body>
+  <div class="content-wrapper content-wrapper-playlist">
+    <aside class="aside-wrapper active">
+      <nav>
+        <ul>
+          <li class="aside-library">
+            <a href="./library.html">
+              <img src="../asset/icons/Library.svg" alt="Library" />
+              My Library
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../asset/icons/Pins.svg" alt="Pins" />
+              Pins
+              <img class="pinned-music" src="../asset/icons/right-arrow.svg" />
+            </a>
+          </li>
+          <li>
+            <a href="./playlist.html" class="playlist-active">
+              <img src="../asset/icons/Playlist.svg" alt="Playlist" />
+              Playlist
+              <img class="pinned-music" src="../asset/icons/right-arrow.svg" />
+            </a>
+          </li>
+          <li>
+            <a href="./likedsongs.html">
+              <img src="../asset/icons/Liked songs.svg" alt="Liked songs" />
+              Liked songs
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../asset/icons/Saves.svg" alt="Saves" />
+              Saves
+            </a>
+          </li>
+          <li>
+            <a href="./album.html">
+              <img src="../asset/icons/Albums.svg" alt="Albums" />
+              Albums
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../asset/icons/Folders.svg" alt="Folders" />
+              Folders
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../asset/icons/Podcasts.svg" alt="Podcasts" />
+              Podcasts
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../asset/icons/Audiobooks.svg" alt="Audiobooks" />
+              Audiobooks
+            </a>
+          </li>
+          <li>
+            <a href="./artistpage.html">
+              <img src="../asset/icons/Artists.svg" alt="Artists" />
+              Artists
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <header class="header-section">
+      <nav>
+        <ul>
+          <li>
+            <a href="./home.html">
+              <img src="../asset/icons/Home.svg" alt="Home" />
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="./discover.html">
+              <img src="../asset/icons/Discover.svg" alt="Discover" />
+              Discover
+            </a>
+          </li>
+          <li>
+            <a href="./search.html">
+              <img src="../asset/icons/Search.svg" alt="Search" />
+              Search
+            </a>
+          </li>
+          <!-- header navigation mobile version start -->
+          <div class="mobile-version-list">
+            <li>
+              <a href="./library.html">
+                <img src="../asset/icons/Library.svg" alt="Library">
+                Library
+              </a>
+            </li>
+            <li>
+              <a href="./profile.html">
+                <img src="../asset/icons/profile.svg" alt="Profile">
+                Me
+              </a>
+            </li>
+          </div>
+          <!-- header navigation mobile version finish -->
+        </ul>
+
+        <!-- header navigation on left -->
+        <ul>
+          <li>
+            <a href="">
+              <img src="../asset/icons/Notification.svg" alt="Notification" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../asset/icons/block.svg" alt="block" />
+            </a>
+          </li>
+          <li id="friends">
+            <a href="#">
+              <img src="../asset/icons/Groups.svg" alt="Groups" />
+              <img src="../asset/icons/Groups-active.svg" alt="Friend List" class="friend-list-active" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../asset/icons/Settings.svg" alt="Settings" />
+            </a>
+          </li>
+          <li>
+            <a href="./profile.html">
+              <img src="../asset/icons/Sprite.svg" alt="Sprite" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- გვანცა იწყება აქ-->
+    <main class="main-container">
+      <section class="main-content main-content--background">
+        <!-- mobile version playlist search input start -->
+        <section class="playlist-search">
+          <div class="playlist-search__field">
+            <input 
+              type="text" 
+              class="playlist-search__input" 
+              placeholder="Search playlist"
+            >
+
+            <button class="playlist-search__icon-btn">
+              <img src="../asset/icons/Search.svg" alt="Search">
+            </button>
+          </div>
+
+          <button class="playlist-search__sort-btn">
+            <img src="../asset/icons/sort.svg" alt="Sort">
+          </button>
+        </section>
+        <!-- mobile version playlist search input finish -->
+
+        <section class="playlist">
+          <div class="playlist-layout">
+            <div class="playlist-left">
+              <!-- HERO SECTION -->
+              <section class="playlist-hero">
+                <div class="playlist-hero__inner">
+                  <div class="playlist-hero__info">
+                    <h1 class="playlist-hero__title">Daft Punk Mix</h1>
+                    <p class="playlist-hero__meta">
+                      By <span>Spotify</span> • 50 songs • 3 hr 30 min
+                    </p>
+                  </div>
+
+                  <!-- ACTIONS ROW -->
+                  <div class="playlist-hero__actions">
+                    <!-- LEFT SIDE BUTTONS -->
+                    <div class="playlist-hero__controls">
+                      <button class="playlist-hero__play">
+                        <img src="../asset/icons/play.svg" alt="Play" />
+                      </button>
+
+                      <button class="playlist-hero__button">
+                        <img src="../asset/icons/shuffle.svg" alt="Shuffle" />
+                      </button>
+
+                      <button class="playlist-hero__button">
+                        <img src="../asset/icons/plus-circule.svg" alt="Add" />
+                      </button>
+
+                      <button class="playlist-hero__button">
+                        <img src="../asset/icons/queue.svg" alt="Add to queue" />
+                      </button>
+
+                      <button class="playlist-hero__button">
+                        <img src="../asset/icons/download.svg" alt="Download" />
+                      </button>
+
+                      <button class="playlist-hero__button">
+                        <img src="../asset/icons/share.svg" alt="Share" />
+                      </button>
+
+                      <button class="playlist-hero__button">
+                        <img src="../asset/icons/threedots.svg" alt="More options" />
+                      </button>
+                    </div>
+
+                    <!-- RIGHT SIDE SEARCH -->
+                    <button class="playlist-hero__button playlist-hero__search">
+                      <img src="../asset/icons/search.svg" alt="Search" />
+                    </button>
+                  </div>
+              </section>
+
+              <section class="liked-songs">
+                <div class="liked-songs__header">
+                  <span class="liked-songs__col liked-songs__col--number">#</span>
+                  <span class="liked-songs__col liked-songs__col--title">Title</span>
+                  <span class="liked-songs__col liked-songs__col--album">Album</span>
+                  <span class="liked-songs__col liked-songs__col--duration">Duration</span>
+                </div>
+
+                <div class="liked-songs__divider-light"></div>
+
+                <!-- SONG LIST -->
+                <div id="liked-songs__generator" class="liked-songs__list">
+                   
+                </div>
+              </section>
+            </div>
+
+            <aside class="playlist-sidebar">
+
+              <!-- PLAYLIST CARD -->
+              <div class="playlist-sidebar__card">
+                <img src="../asset/images/Daft-Punk-Mix.svg" alt="Daft Punk Mix" />
+              </div>
+
+              <!-- GENRES -->
+              <div class="playlist-sidebar__genres">
+                <button class="playlist-sidebar__genre">Funk</button>
+                <button class="playlist-sidebar__genre">Electronic music</button>
+                <button class="playlist-sidebar__genre">Disco</button>
+                <button class="playlist-sidebar__genre">Soft Rock</button>
+                <button class="playlist-sidebar__genre">Progressive pop</button>
+              </div>
+
+              <!-- FEATURED ARTISTS -->
+              <div class="playlist-sidebar__artists">
+
+                <div class="playlist-sidebar__artist">
+                  <img src="../asset/images/daft punk pn.png" alt="Daft Punk" />
+                  <span class="playlist-sidebar__artist-name">
+                    Daft Punk
+                  </span>
+                </div>
+
+                <div class="playlist-sidebar__artist">
+                  <img src="../asset/images/Pharrell-Williams.png" alt="Pharrell Williams" />
+                  <span class="playlist-sidebar__artist-name">
+                    Pharrell Williams
+                  </span>
+                </div>
+
+                <div class="playlist-sidebar__artist">
+                  <img src="../asset/images/Nile Rodgers.png" alt="Nile Rodgers" />
+                  <span class="playlist-sidebar__artist-name">
+                    Nile Rodgers
+                  </span>
+                </div>
+
+              </div>
+
+            </aside>
+          </div>
+        </section>
+
+        <!-- <div id="music-container"></div>  -->
+        <!-- ეს კონტეინერი აგენერირებს ქარდებს -->
+      </section>
+      <section class="friend-list">
+        <div class="friend-list-action">
+          <p>Friends Activity</p>
+          <div class="action">
+            <img src="../asset/icons/add-friend.svg" alt="Add Friend" />
+            <img src="../asset/icons/close.svg" alt="Close" id="close-btn" />
+          </div>
+        </div>
+        <ul class="friend-list-wrapper">
+          <li>
+            <div class="friend-profile-image">
+              <img src="../asset/images/friend-image-red.svg" alt="Friend" />
+            </div>
+            <div class="info-about-friend">
+              <p class="friend-name">FriendlyMusicListener</p>
+              <span>
+                <img src="../asset/icons/vector-green.svg" alt="listening" />
+                <p class="music-name">Goosebumps</p>
+                <p class="music-style">&#8226; Travis Scott</p>
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="friend-profile-image">
+              <img src="../asset/images/friend-image-blue.svg" alt="Friend" />
+            </div>
+            <div class="info-about-friend">
+              <p class="friend-name">AverageMusicEnjoyer</p>
+              <span>
+                <img src="../asset/icons/vector-green.svg" alt="listening" />
+                <p class="music-name">Get Lucky</p>
+                <p class="music-style">&#8226; Daft Punk</p>
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="friend-profile-image">
+              <img src="../asset/images/friend-image-green.svg" alt="Friend" />
+            </div>
+            <div class="info-about-friend">
+              <p class="friend-name">MusicEnthusiast</p>
+              <span>
+                <!-- <img src="./asset/icons/vector-green.svg" alt="listening"> -->
+                <p class="music-style offline">1h</p>
+                <p class="music-name">would he</p>
+                <p class="music-style">&#8226; joji</p>
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="friend-profile-image">
+              <img src="../asset/images/friend-image-red.svg" alt="Friend" />
+            </div>
+            <div class="info-about-friend">
+              <p class="friend-name">IListenToMusic56</p>
+              <span>
+                <!-- <img src="./asset/icons/vector-green.svg" alt="listening"> -->
+                <p class="music-style offline">6h</p>
+                <p class="music-name">Rockstar</p>
+                <p class="music-style">&#8226; Post Malone</p>
+              </span>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-player">
+        <div class="spotify-player">
+          <div class="controls">
+            <button id="play-pause" class="control-btn">
+              <img src="../asset/icons/play.svg" alt="Play" class="play-btn">
+              <img src="../asset/icons/pause.svg" alt="Pause" class="pause-btn">
+            </button>
+            <div class="control-arrows">
+              <img src="../asset/icons/pervious-music-icon.svg" alt="Pervious Music">
+              <img src="../asset/icons/next-music-icon.svg" alt="Next Music">
+              <img src="../asset/icons/shuffle.svg" alt="Suffle Music">
+              <img src="../asset/icons/repeat-music-icon.svg" alt="Repeat Music">
+            </div>
+            <div class="progress-container">
+              <span id="current-time" class="player-current-time">0:00</span>
+              <input type="range" id="progress-bar" class="player-progress-bar" value="0" max="100">
+              <span id="duration-time" class="player-duration-time">0:00</span>
+              <div class="volume-container">
+                <img src="../asset/icons/volume.svg" alt="Volume" class="volume-icon" id="mute-btn">
+                <input type="range" id="volume-slider" class="volume-bar" min="0" max="1" step="0.1" value="1">
+              </div>
+            </div>
+            <audio id="audio-element">
+              <source src="../asset/music/Guns-N-Roses.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+        </div>
+      </div>
+      <div class="footer-player-music">
+          <a href="./song.html">
+          <div class="footer-music__music-info">
+            <div class="footer-music__image">
+              <img src="../asset/images/get-lucky.svg" alt="Get lucky">
+            </div>
+            <div class="footer-music__info">
+              <p class="footer-music__title">Get Lucky</p>
+              <p class="footer-music__author">Daft Punk</p>
+              <p class="footer-music__album">Random Access Memories</p>
+            </div>
+          </div>
+        </a>
+        <div class="music-controlers">
+          <div id="like-toggle">
+            <img src="../asset/icons/like.svg" alt="Like" class="heart-like">
+            <img src="../asset/icons/like-active.svg" alt="Like" class="heart-like-active">
+          </div>
+          <img src="../asset/icons/add.svg" alt="Add">
+          <img src="../asset/icons/music-list.svg" alt="List">
+          <img src="../asset/icons/music-icon.svg" alt="music">
+          <img src="../asset/icons/threedots.svg" alt="More">
+          <div class="vertical-line"></div>
+          <img src="../asset/icons/dj.svg" alt="DJ">
+          <img src="../asset/icons/music-set.svg" alt="More">
+        </div>
+      </div>
+       <!-- footer mobile version player -->
+      <a href="./playlist.html">
+        <div class="mobile-footer__music-info">
+          <div class="footer-music__image">
+            <img src="../asset/images/get-lucky.svg" alt="Get lucky">
+          </div>
+          <div class="footer-music__info">
+            <p class="footer-music__title">Get Lucky(feat. Pharrell Williams)</p>
+            <p class="footer-music__author">Daft Punk</p>
+          </div>
+        </div>
+      </a>
+
+      <div class="mobile-footer__music-controls">
+        <img src="../asset/icons/add.svg" alt="Add">
+        <div id="mobile-play-pause" class="mobile-footer__play-pause">
+          <img src="../asset/icons/mobile-play.svg" alt="Play" class="play-btn">
+          <img src="../asset/icons/mobile-pause.svg" alt="Play" class="pause-btn">
+        </div>
+      </div>
+      <!-- footer mobile version player -->
+    </footer>
+  </div>
+  <script src="../script.js"></script>
+  <script type="module" src="../data.js"></script>
+</body>
+
+</html>

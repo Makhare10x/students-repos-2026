@@ -1,0 +1,48 @@
+@use "../abstracts/variables.scss" as *;
+@use "../abstracts/mixins.scss" as *;
+
+.top-header {
+    @include flex-align(space-between);
+    margin-top: 1rem;
+    position: fixed;
+    top: 0;
+    left: $aside-width;
+    right: 0;
+
+    .main-nav ul.nav-buttons {
+        @include nav-list(row); // row for header
+    }
+
+    .search-input {
+        color: $gray-color;
+    }
+
+    .actions {
+        ul {
+            @include flex-align(center);
+            gap: 2rem;
+            margin-right: 1rem;
+
+            li.active {
+                img {
+                    opacity: 1;
+                }
+            }
+
+            a {
+                img {
+                    opacity: 0.5;
+                    transition: 0.3s;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 390px) {
+        display: none;
+    }
+}

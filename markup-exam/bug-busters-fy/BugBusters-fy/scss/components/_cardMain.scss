@@ -1,0 +1,71 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+@use "../abstracts/placeholders";
+
+//For vertical cards
+
+.card-main {
+  // you should use this mixin in your code under the .card-main class
+  // @include mixins.pinStyle
+  // use parameters: ex or pin
+
+  width: 14rem;
+
+  a {
+    @include mixins.flex-prop(0.6rem, $direction: column);
+  }
+
+  .img-container {
+    // you should use this mixin in your code under the .img-container class
+    // @@include mixins.cardBeforeEffect
+    // use parameters: one or two
+    border-radius: 0.6rem;
+
+    img {
+      // you should use this mixin in your code under the img tag to define img shape
+      // @include mixins.imageShaper
+      // use parameters: $brRadius, $shape or $ratio
+      @include mixins.imageShaper(0.6rem);
+      transition: transform 0.35s ease;
+    }
+  }
+
+  .text-container {
+    @include mixins.flex-prop($gap: 0.8rem, $direction: column);
+    padding-bottom: 0.6rem;
+
+    .heading {
+      @include mixins.flex-prop($justify: space-between);
+      font-size: 1.2rem;
+      color: variables.$color-active-desk;
+      font-family: variables.$ff-satoshi-medium;
+    }
+    .description {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 920px) {
+  .card-main {
+    width: 17rem;
+    .img-container {
+      border-radius: 0.7rem;
+      img {
+        @include mixins.imageShaper(0.7rem);
+      }
+    }
+    .text-container {
+      .heading {
+        font-size: 1.4rem;
+      }
+      .description {
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

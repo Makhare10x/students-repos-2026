@@ -1,0 +1,93 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+
+footer {
+    @include m.sticky-bar;
+    text-align: center;
+    pointer-events: auto;
+    width: 100%;
+
+    .footer-nav {
+        position: relative;
+        margin: 0 auto;
+        @include m.flex-center($justify: space-evenly, $align: center);
+        background: v.$bg-overlay;
+        min-height: 9.5rem;
+        background-color: v.$footer-bg;
+        pointer-events: auto;
+
+        @media (min-width: 991px) {
+            display: none;
+        }
+        > label {
+            cursor: pointer;
+            @include m.flex-center($direction: column, $align: center);
+        }
+    }
+}
+
+.icon {
+    @include m.icon-base($margin: 0 auto);
+}
+
+.icon-filled {
+    display: none;
+    max-width: 2.4rem;
+    min-height: 2.4rem;
+}
+
+.icon-outline,
+.icon-filled {
+    grid-area: 1 / 1;
+    transition: opacity 0.2s ease;
+}
+
+.caption {
+    @include m.caption-base($padding-top: 0.8rem);
+}
+
+footer label {
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+// active tab: hide outline, show filled  white caption
+@for $i from 1 through 5 {
+    body:has(#tab-#{$i}:checked) footer label[for="tab-#{$i}"] {
+        .icon-outline {
+            display: none;
+        }
+
+        .icon-filled {
+            @include m.flex-center($justify: center, $align: center);
+            filter: v.$green-hover;
+        }
+
+        .caption {
+            color: v.$primary;
+        }
+    }
+}
+
+body:has(#tab-1:checked) footer label[for="tab-1"] .icon-filled {
+    transform: scale(1.73);
+    margin-bottom: 0.15rem;
+}
+body:has(#tab-2:checked) footer label[for="tab-2"] .icon-filled {
+    transform: scale(1.02);
+    margin-bottom: 0.15rem;
+}
+body:has(#tab-3:checked) footer label[for="tab-3"] .icon-filled {
+    transform: scale(1.78);
+    margin-bottom: 0.15rem;
+}
+body:has(#tab-4:checked) footer label[for="tab-4"] .icon-filled {
+    transform: scale(1.025);
+    margin-bottom: 0.15rem;
+}
+body:has(#tab-5:checked) footer label[for="tab-5"] .icon-filled {
+    transform: scale(1);
+    margin-bottom: 0.1rem;
+}

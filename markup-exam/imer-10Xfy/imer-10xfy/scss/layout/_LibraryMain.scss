@@ -1,0 +1,343 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixin";
+
+@mixin LibPins {
+    .Lib-Pin {
+        @include mixin.flex-center;
+        width: 4rem;
+        height: 4rem;
+        background-color: #111111;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        .Lib-Pin > img {
+            width: 2.2rem;
+            height: 2.2rem;
+        }
+    }
+}
+
+@mixin Lib-cards ($num-color: #898989, $layer1: null, $lyer2: null, $opa: 1) {
+    .Lib-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Lib-card > div:nth-of-type(1) {
+        width: 13.3rem;
+        height: 0.3rem;
+        background-color: $layer1;
+        border-radius: 0.8rem 0.8rem 0 0;
+        border: 0.1rem solid black;
+        box-sizing: content-box;
+        opacity: $opa;
+    }
+    .Lib-card > div:nth-of-type(2) {
+        width: 15.4rem;
+        height: 0.6rem;
+        background-color: $lyer2;
+        border-radius: 0.8rem 0.8rem 0 0;
+    }
+    .Lib-card > a > img {
+        border-radius: 0.8rem;
+        border: 0.15rem solid black;
+    }
+    
+    .Lib-card-text {
+        font-weight: 500;
+        font-size: 1.4rem;
+        color: variables.$h-color;
+        width: 16.8rem;
+    }
+    .Lib-card-text div {
+        display: flex;
+        justify-content: space-between;
+        margin: 0.8rem 0 1.5rem 0;
+    }
+    .Lib-card-text > p {
+        font-weight: 400;
+        font-size: 1.2rem;
+        color: variables.$p-color;
+    }
+    .Lib-card-text > div > p:last-child {
+        color: $num-color;
+    }
+}
+// ************************************
+
+
+
+.main-Library {
+    display: block;
+    margin-top: 4rem;
+    padding: 0 2rem;
+}
+.Library-main {
+    display: none;
+}
+.Lib-Hov {
+    @include mixin.hover-active-green;
+}
+.Lib-search-Hov:hover {
+    @include mixin.img-green-btn;
+}
+
+.lib-search-head {
+    @include mixin.flex-center(space-between, start);
+}
+
+.lib-search-head > label {
+    width: 30.6rem;
+    height: 5rem;
+}
+
+.lib-search-head > label > input {
+    width: 30.6rem;
+    height: 3.5rem;
+    background-color: variables.$button-hover-backgorund-color;
+    border: none;
+    border-radius: 1rem;
+
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: variables.$p-color;
+    padding-left: 1rem;
+    padding-right: 5rem;
+}
+
+// აქრობს პატარა იქსს სერჩის ბოლოში
+.lib-search-head > label > input::-webkit-search-cancel-button {
+    display: none;
+}
+
+.lib-search-head > label > img {
+    transform: translate(27rem, -2.6rem);
+    width: 2rem;
+}
+
+.lib-search-head > img {
+    margin-left: 1rem;
+}
+
+
+.lib-head-icons {
+    @include mixin.flex-center(start);
+    gap: 4rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: variables.$p-color;
+}
+.lib-head-icons > div {
+    @include mixin.flex-center;
+    gap: 1rem;
+}
+.lib-head-icons div:last-child {
+    gap: 2rem;
+}
+
+
+.lib-main-cont div {
+    @include mixin.flex-center(space-between);
+    font-weight: 700;
+    font-size: 2rem;
+    height: 9rem;
+}
+.lib-main-cont > a > div {
+    color: variables.$h-color;
+}
+.lib-main-cont > hr {
+    border: 1px solid variables.$button-hover-backgorund-color;
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+    .main-Library {
+        display: none;  
+    }
+    .Library-main {
+        display: block;
+    }
+
+    .Library-main {
+        margin: 2rem 2rem;
+        height: 100vh;
+    }
+
+    .Lib-head-icons {
+        @include mixin.flex-center(space-between);
+        margin: 0 1rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: variables.$p-color;
+    }
+    .Lib-head-icons img {
+        @include mixin.hover-active-green;
+    }
+    .Lib-head-icons > div {
+        @include mixin.flex-center(space-between);
+        width: 41.3rem
+    }
+    .Lib-head-icons > div > div {
+        @include mixin.flex-center(space-between);
+    }
+
+
+
+    // Library:   C A R D S
+    .Lib-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 4rem;
+        width: 100%;
+    }
+
+    .Lib-cards-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 17rem;
+        height: 25.3rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+
+    .card-img {
+        width: 17rem;
+        height: 17rem;
+    }
+
+    .Lib-circle-img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.4rem;
+        font-weight: 500;
+        gap: 2rem;
+        position: relative;
+
+        img:nth-of-type(1) {
+            width: 17rem;
+            height: 17rem;
+        }
+        .Lib-Pin {
+            @include mixin.flex-center;
+            width: 4rem;
+            height: 4rem;
+            background-color: #111111;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .Lib-Pin > img {
+            width: 2.2rem;
+            height: 2.2rem;
+        }
+    }
+    
+    .Linkedsongs {
+        @include LibPins;
+        @include Lib-cards(#1ED760, #1ED76026, #1ED7604D);
+    }
+    
+    .note-card {
+        @include LibPins;
+        @include Lib-cards(#898989, #73737326, #7373734D);
+    }
+
+    .folder {
+        @include LibPins;
+        @include Lib-cards(#898989, #73737326, #7373734D);
+        .Lib-card > div:first-child {
+            opacity: 0;
+        }
+        .Lib-card > div:nth-of-type(2) {
+            height: 0.8rem;
+            width: 7.4rem;
+            transform: translateX(-4rem);
+        }
+    }
+
+    .meteora {
+        @include LibPins;
+        @include Lib-cards(null, null, #A691744D, 0);
+        .Lib-card > div:nth-of-type(2) {
+            height: 0.7rem;
+        }
+        
+        .Lib-card-text p:first-child {
+            color: variables.$h-color;
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 1rem 0;
+        }
+    }
+
+
+    .Random-Access {
+        @include LibPins;
+        @include Lib-cards(#898989, #73737326, #7373734D, 0);
+
+        .Lib-card > div:nth-of-type(2) {
+            height: 0.7rem;
+        }
+        .Lib-Pin > img{
+            width: 2.2rem;
+            height: 2.2rem;
+        }
+    }
+
+    .Abbey {
+        @include Lib-cards(#898989, #73737326, #75A4964D, 0);
+        .Lib-card > div:nth-of-type(2) {
+            height: 0.7rem;
+        }
+    }
+
+    .Hols {
+        @include Lib-cards(#898989, #73737326, #6278B14D, 0);
+        .Lib-card > div:nth-of-type(2) {
+            height: 0.7rem;
+        }
+    }
+
+
+    .Lib-cards > div:nth-of-type(13) {
+        @include Lib-cards(#95E6D3, #95E6D326, #95E6D34D);
+    }
+
+    .Lib-cards > div:nth-of-type(14)  {
+        @include Lib-cards(#F4B8BD, #F4B8BD26, #F4B8BD4D);
+    }
+
+    .Lib-cards > div:nth-of-type(15)  {
+        @include Lib-cards(#C3E7B7, #C3E7B726, #C3E7B74D);
+    }
+
+    .Lib-cards > div:nth-of-type(16)  {
+        @include Lib-cards(#CCF665, #CCF66526, #CCF6654D);
+    }
+
+    .Lib-cards > div:nth-of-type(17)  {
+        @include Lib-cards(#F9E72C, #F9E72C26, #F9E72C4D);
+    }
+
+    .Lib-cards > div:nth-of-type(18)  {
+        @include Lib-cards(#9BF0E2, #9BF0E226, #9BF0E24D);
+    }
+
+    .Lib-card:hover {
+        transform: scale(1.02);
+        transition: 0.1s;
+    }
+    .Lib-card:active {
+        transform: scale(1.03);
+        transition: 0.1s;
+    }
+}

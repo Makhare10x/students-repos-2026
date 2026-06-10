@@ -1,0 +1,352 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+// =============================================================================
+// SEARCH PAGE — Recent Searches + Browse All sections
+// =============================================================================
+
+
+// -----------------------------------------------------------------------------
+// RECENT SEARCHES — card row wrapper
+// -----------------------------------------------------------------------------
+
+.search_card-wrapper {
+    display: flex;
+    align-items: flex-start;
+    margin: $spacing-lg;        
+    gap: 30px;                  
+    overflow-x: auto;           
+    overflow-y: hidden;
+    padding: 20px;         
+    &::-webkit-scrollbar { display: none; } 
+}
+
+
+
+// -----------------------------------------------------------------------------
+// ROUND CARD — artist / profile type (circular image)
+// -----------------------------------------------------------------------------
+
+.search_card {
+    flex-shrink: 0;             
+    position: relative;
+    background-color: transparent;
+    width: 170px;               
+    height: 205px;              
+    text-align: center;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+
+        .search_card-banner {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+        }
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+// SQUARE CARD — album / playlist type (rectangular image)
+// -----------------------------------------------------------------------------
+
+.search_card-square {
+    flex-shrink: 0;             
+    position: relative;
+    width: 170px;               
+    height: 230px;              
+    background-color: transparent;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.03);
+
+        .search_card-rectangle {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+        }
+
+        .hover-square {
+            opacity: 1;
+        }
+    }
+}
+
+.recent{
+    margin-top: -10px;
+    .x-mark{
+        top: 10px;
+        right: -10px
+    }
+}
+// -----------------------------------------------------------------------------
+// CARD IMAGES
+// -----------------------------------------------------------------------------
+
+// Round image used in artist cards
+.search_card-banner {
+    width: 100%;               
+    height: 170px;              
+    border-radius: 50%;
+    object-fit: cover;          
+    transition: box-shadow 0.3s ease;
+}
+
+
+// -----------------------------------------------------------------------------
+// X (REMOVE) BUTTON — top-right corner of each card
+// -----------------------------------------------------------------------------
+
+.x-mark {
+    position: absolute;
+    top: 0;                    
+    right: 0;
+    width: 40px;               
+    height: 40px;               
+    background-color: $color-active-bg; 
+    border-radius: 50%;
+    @include flex-center;           
+    z-index: 2;                                
+    transition: opacity 0.2s ease;
+
+   
+    .search_card:hover &,
+    .search_card-square:hover & {
+        opacity: 1;
+    }
+}
+
+
+
+// -----------------------------------------------------------------------------
+// CARD TITLES
+// -----------------------------------------------------------------------------
+
+// Title block for round/artist cards — sits below the circular image
+.search_card-title {
+    margin-top: 13px;           
+    text-align: center;
+}
+
+// Artist name text
+.artist {
+    @include truncate;          
+    color: $fg-primary;         
+    font-weight: 400;
+}
+
+
+// =============================================================================
+// BROWSE ALL — scrollable category rows
+// =============================================================================
+
+
+// -----------------------------------------------------------------------------
+// SECTION WRAPPER — one row (Discover / Genres / Mood etc.)
+// -----------------------------------------------------------------------------
+
+.browse_all-section {           
+    margin-bottom: $spacing-xl; 
+}
+
+
+// -----------------------------------------------------------------------------
+// SECTION HEADER — title + left/right scroll arrows
+// -----------------------------------------------------------------------------
+
+.section-header {
+    @include flex-between;      
+    padding: 0 $spacing-lg;     
+}
+
+.section-title {
+    margin: $spacing-lg;        
+    color: $fg-primary;         
+    font-weight: 600;
+}
+
+// Arrow scroll buttons
+.section__controls {
+    @include flex-center;       
+    gap: $spacing-sm;           
+}
+
+.arrow {
+    @include flex-center;      
+    background: none;
+    border: none;
+    color: $fg-primary;         
+    cursor: pointer;
+    padding: $spacing-xs; 
+    width: 32px;       
+    height: 32px;      
+    font-size: 20px;      
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+// SCROLLABLE CARD ROW
+// -----------------------------------------------------------------------------
+
+.section-cards {
+    display: flex;
+    gap: 12px;                  
+    padding: 10px $spacing-md;  
+    overflow-x: auto;           
+    &::-webkit-scrollbar { display: none; }
+}
+
+
+// -----------------------------------------------------------------------------
+// BROWSE ALL CARD
+// -----------------------------------------------------------------------------
+
+.card_2-wrapper {
+    flex-shrink: 0;             
+    flex-grow: 0;               
+    position: relative;         
+    width: 170px;               
+    height: 170px;              
+    border-radius: $radius-md;  
+    overflow: hidden;           
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+}
+
+
+.card_2-header {
+    position: relative;         
+    z-index: 2;
+    padding: $spacing-md;      
+}
+
+
+.card_2-title {
+    @include truncate;          
+    color: $fg-primary;        
+    font-size: 20px;        
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+// Decorative corner image inside each card
+.card_2-banner {
+    position: absolute;
+    bottom: 0;
+    right: 0;                   
+    width: 104.27px;                
+    height: 104.27px;               
+    transform: rotate(25deg) translate(10%, 10%); 
+    pointer-events: none;      
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+// =====================
+// Mobile Search Header
+// =====================
+.search-mobile-header {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .search-mobile-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #060606;
+
+    &__field {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      background-color: #282828;
+      border-radius: 10px;
+      padding: 10px 15px;
+    }
+
+    &__input {
+      flex: 1;
+      background: none;
+      border: none;
+      outline: none;
+      color: #e0e0e0;
+      font-size: 14px;
+
+      &::placeholder {
+        color: #898989;
+      }
+    }
+
+    &__icon {
+      width: 18px;
+      height: 18px;
+      opacity: 0.6;
+      flex-shrink: 0;
+    }
+
+    &__camera {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+
+      img {
+        width: 26px;
+        height: 26px;
+        opacity: 0.7;
+      }
+
+      &:hover img {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) { 
+    
+   
+    .section-cards { 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 12px; 
+        padding: 16px; 
+        
+        
+        overflow-x: hidden; 
+        flex-wrap: wrap; 
+    }
+
+    
+    .card_2-wrapper {
+        width: 100%; 
+        height: 100px;
+    }
+
+    
+    .card_2-banner {
+        width: 75px;     
+        height: 75px;
+        bottom: -10px;
+        right: -10px;
+    }
+}

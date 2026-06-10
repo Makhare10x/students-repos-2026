@@ -1,0 +1,150 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.mobile-view{display: none;}
+@media screen and (max-width: 600px) {
+
+    body,
+    .mobile-view {
+        grid-template-columns: 1fr !important;
+        display: grid !important; // აუქმებს grid-template-columns-ს
+        width: 100%;
+        overflow-x: hidden; // მთლიანი გვერდი რომ არ სრიალებდეს
+        // display: inline-block !important;
+        background-color: #111111 !important;
+
+        .desktop-wrapper {
+            display: none;
+        }
+    }
+
+    .mobile-layout {
+        width: 100vw;
+        // width: 100%;
+        // padding: 0.9rem 1.5rem;
+
+        .mobileMain__content {
+
+            .mobileMain-hdr {
+                margin: 0.9rem 1.5rem;
+                @include display ($jus: space-between, $gap: 1rem);
+                @include text-style ($fs: 1.4rem, $weight: 400, $clr: #E0E0E0);
+
+                &__btn {
+                    @include btn (0.8rem, 0.8rem, 1rem, 1.2rem, #282828, #ffffff);
+                    margin-right: 0.8rem;
+                }
+
+                &__button {
+                    @include display ($jus: space-between);
+                }
+            }
+
+
+            .mobileCards {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                // padding: 0.8rem 0 0.7rem 0.8rem;
+                margin-left: 1.5rem;
+                width: 100%;
+
+                h1 {
+                    display: none;
+                }
+
+                .mobileCards__card {
+                    width: 17.5rem;
+
+                    @include display ($jus: start, $gap: 1rem);
+
+
+
+                    .mobileCards__content {
+                        min-width: 0;
+
+                        .mobileCards__title {
+                            @include text-style ($fs: 1.4rem, $weight: 400, $clr: #E0E0E0);
+                            display: block;
+                            width: 100%; // ან ნებისმიერი ფიქსირებული ზომა/პროცენტი
+                            white-space: nowrap; // ტექსტი არ გადავიდეს მეორე ხაზზე
+                            overflow: hidden; // რაც არ ეტევა, დაიმალოს
+                            text-overflow: ellipsis; // აი ეს აჩენს სამ წერტილს (...)
+                        }
+                    }
+                }
+            }
+
+            .MobileCat {
+                padding: 3rem 0 1.5rem 1.6rem;
+
+                &__title {
+                    @include text-style(2rem, 700, #E0E0E0);
+                }
+
+                &__body {
+
+                    @include display ($gap: 0.9rem);
+                    display: flex; // ბარათები ერთ ხაზზე
+                    overflow-x: auto; // ჰორიზონტალური სქროლი
+
+                    overflow-y: hidden; // 1. აუცილებელია! აკრძალე ვერტიკალური სქროლი ამ ბლოკში
+                    touch-action: pan-x; // 2. ბრაუზერს ეუბნება, რომ აქ მხოლოდ ჰორიზონტალური მოძრაობაა დაშვებული
+
+                    scroll-behavior: smooth; // რბილი გადასვლა ისრებზე
+                    scroll-snap-type: x mandatory; // მაგნიტის ეფექტი
+                    // // gap: 2.4rem; // დაშორება ბარათებს შორის
+                    padding-bottom: 1rem; // მცირე დაშორება ქვემოთ
+
+                    overscroll-behavior-x: contain;
+
+                    &::-webkit-scrollbar {
+                        display: none; // სქროლბარის დამალვა
+                    }
+
+                    .MobileCat__title-group {
+                        @include display ($jus: space-between);
+
+                        .MobileCat__card-title {
+                            @include text-style (1.2rem, 500, #E0E0E0);
+                            padding: 0.6rem 0 0.8rem 0;
+                        }
+
+                        .category__content {
+                            @include text-style (1.0rem, 400, #898989);
+                        }
+                    }
+                }
+
+                &__card {
+
+                    .MobileCat__cover_discovery {
+                        display: block;
+                        @include card-cover (14.1rem, 14.1rem, 0.6rem, '/assets/image/coverDiscoverWeekly.png');
+                    }
+
+                    .MobileCat__cover_DailyMix1 {
+                        @include card-cover (14.1rem, 14.1rem, 0.6rem, '/assets/image/DailyMix1.png');
+                    }
+
+                    .MobileCat__cover_DailyMix2 {
+                        @include card-cover (14.1rem, 14.1rem, 0.6rem, '/assets/image/DailyMix2.png');
+                    }
+
+                    .MobileCat__cover_RockMix {
+                        @include card-cover (14.1rem, 14.1rem, 0.6rem, '/assets/image/RockMix.png');
+                    }
+
+                    .MobileCat__cover_ChillMix {
+                        @include card-cover (14.1rem, 14.1rem, 0.6rem, '/assets/image/ChillMix.png');
+                    }
+
+                    .MobileCat__cover_PopMix {
+                        @include card-cover (14.1rem, 14.1rem, 0.6rem, '/assets/image/PopMix.png');
+                    }
+                }
+            }
+        }
+    }
+
+}

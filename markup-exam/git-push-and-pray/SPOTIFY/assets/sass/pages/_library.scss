@@ -1,0 +1,353 @@
+$bg:            #0F0F0F;
+$sidebar:       #0B0B0B;
+$surface:       #1A1A1A;
+$surface-hover: #242424;
+$border:        #2A2A2A;
+$text:          #FFFFFF;
+$muted:         #B3B3B3;
+$accent:        #1DB954;
+
+.first_page {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;   // let library_grid scroll instead
+}
+
+
+.library_page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    // leave room for fixed player
+    padding-bottom: 100px;
+}
+
+.library_toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px 10px;
+    flex-shrink: 0;
+}
+
+.toolbar_left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.library_heading {
+    font-size: 15px;
+    font-weight: 700;
+    color: $text;
+    white-space: nowrap;
+}
+
+.view_toggles {
+    display: flex;
+    gap: 2px;
+}
+
+.view_btn {
+    background: none;
+    border: none;
+    color: $muted;
+    padding: 5px 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s, background 0.15s;
+
+    &:hover {
+        color: $text;
+        background: $surface;
+    }
+
+    &--active,
+    &.view_btn--active {
+        color: $text;
+    }
+}
+
+.toolbar_right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter_btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: $surface;
+    border: none;
+    color: $muted;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+
+    svg {
+        flex-shrink: 0;
+    }
+
+    &:hover {
+        background: $surface-hover;
+        color: $text;
+    }
+
+    // active = white pill with dark text
+    &--active,
+    &.filter_btn--active {
+        background: $text;
+        color: $bg;
+
+        svg {
+            stroke: $bg;
+        }
+    }
+}
+
+.lib_search {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: $surface;
+    padding: 6px 12px;
+    border-radius: 20px;
+
+    img {
+        width: 13px;
+        opacity: 0.45;
+        flex-shrink: 0;
+    }
+
+    input {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: $text;
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 120px;
+
+        &::placeholder {
+            color: $muted;
+        }
+    }
+}
+
+
+.library_grid {
+    flex: 1;
+    overflow-y: auto;
+    padding: 4px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &::-webkit-scrollbar       { width: 5px; }
+    &::-webkit-scrollbar-track { background: transparent; }
+    &::-webkit-scrollbar-thumb { background: #3a3a3a; border-radius: 3px;
+        &:hover { background: #555; }
+    }
+}
+
+.lib_row {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+
+    &::-webkit-scrollbar       { height: 3px; }
+    &::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+
+    &--wide {
+        .lib_card {
+            flex: 1;
+            min-width: 220px;
+            width: auto;
+        }
+    }
+}
+
+
+.lib_card {
+    flex-shrink: 0;
+    width: 138px;
+    background: $surface;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.15s;
+
+    &:hover {
+        background: $surface-hover;
+    }
+
+    // wide variant (Chill Mix / Pop Mix)
+    &--wide {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        width: auto;
+        padding: 14px 16px;
+    }
+}
+
+
+.lib_thumb {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 8px;
+    background: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 38%;       // icon inside dark placeholder
+        height: auto;
+        opacity: 0.35;
+        display: block;
+        object-fit: cover;
+    }
+
+    // when it's a real cover image, fill the box
+    &.has_cover img {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        object-fit: cover;
+    }
+
+    // circle (artist)
+    &--round {
+        border-radius: 50%;
+    }
+
+    // dark grey placeholder
+    &--dark {
+        background: #222;
+    }
+
+    // liked songs – gradient
+    &--liked {
+        background: linear-gradient(135deg, #450af5, #c4efd9);
+
+        img {
+            width: 48%;
+            opacity: 0.9;
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    // artist card – just tint, icon small
+    &--artist {
+        img {
+            width: 42%;
+            opacity: 0.3;
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    // daily mix colour tints
+    &--mix1 { background: linear-gradient(145deg, #6a3d9a, #1a0a2e); }
+    &--mix2 { background: linear-gradient(145deg, #c0392b, #3d0000); }
+    &--mix3 { background: linear-gradient(145deg, #1a6b3a, #0a2218); }
+
+    // thumbnail for wide cards
+    &--wide {
+        width: 70px;
+        height: 70px;
+        aspect-ratio: unset;
+        flex-shrink: 0;
+        margin-bottom: 0;
+        border-radius: 8px;
+    }
+}
+
+.lib_badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--pink  { background: #c72b6e; }
+    &--green { background: $accent; }
+}
+
+
+.lib_title {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: $text;
+    margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lib_sub {
+    font-size: 11px;
+    color: $muted;
+    line-height: 1.45;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lib_meta {
+    font-size: 10.5px;
+    color: #777;
+    margin-top: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// wide-card text block
+.lib_wide_info {
+    flex: 1;
+    min-width: 0;
+
+    .lib_title { font-size: 14px; }
+}
+
+// =====================
+//   RESPONSIVE
+// =====================
+
+@media (max-width: 900px) {
+
+    .library_toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .toolbar_right {
+        flex-wrap: wrap;
+    }
+
+    .lib_row--wide {
+        flex-direction: column;
+
+        .lib_card {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+@mixin music-photo-size-grid {
+    width: 145px;
+    height: 145px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    }
+
+
+
+
+
+.search-grid-1 {
+    @include music-photo-size-grid;
+
+    background-image: url(../assets/seach-dicover/1.svg);
+}
+
+
+.search-grid-2 {
+    @include music-photo-size-grid;
+
+    background-image: url(../assets/seach-dicover/2.svg);
+}
+
+
+.search-grid-3 {
+    @include music-photo-size-grid;
+
+    background-image: url(../assets/seach-dicover/3.svg);
+}
+
+
+.search-grid-4 {
+    @include music-photo-size-grid;
+
+    background-image: url(../assets/seach-dicover/4.svg);
+}
+
+
+.search-grid-5 {
+    @include music-photo-size-grid;
+
+    background-image: url(../assets/seach-dicover/5.svg);
+}
+
+
+.search-grid-6 {
+    @include music-photo-size-grid;
+
+    background-image: url(../assets/seach-dicover/6.svg);
+}
+
+
+.search-grid-7 {
+    @include music-photo-size-grid;
+
+    background-image: url(../assets/seach-dicover/7.svg);
+}
+
+
+.search-grid-8 {
+    @include music-photo-size-grid;
+
+    background-image: url(../assets/seach-dicover/8.svg);
+}
+
+
+.search-grid-9 {
+    @include music-photo-size-grid;
+
+    background-image: url(../assets/search-genres/9.svg);
+}
+
+
+.search-grid-10 {
+    @include music-photo-size-grid;
+
+    background-image: url(../assets/search-genres/10.svg);
+}
+
+
+.search-grid-11 {
+    @include music-photo-size-grid;
+
+    background-image: url(../assets/search-genres/11.svg);
+}
+
+
+.search-grid-12 {
+    @include music-photo-size-grid;
+
+    background-image: url(../assets/search-genres/12.svg);
+}
+
+
+.search-grid-13 {
+    @include music-photo-size-grid;
+
+    background-image: url(../assets/search-genres/13.svg);
+}
+
+
+.search-grid-14 {
+    @include music-photo-size-grid;
+
+    background-image: url(../assets/search-genres/14.svg);
+}
+
+
+.search-grid-15 {
+    @include music-photo-size-grid;
+
+    background-image: url(../assets/search-genres/15.svg);
+}
+
+
+.search-grid-16 {
+    @include music-photo-size-grid;
+
+    background-image: url(../assets/search-genres/16.svg);
+}
+
+

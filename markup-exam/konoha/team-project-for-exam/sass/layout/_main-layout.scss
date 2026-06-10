@@ -1,0 +1,169 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/fonts' ;
+    
+body {
+  font-family: "SatoshiBold", sans-serif;
+  font-size:1rem;
+}
+.media-tab{
+    display:flex;
+    gap:10px;
+    padding:0.9rem;
+   
+    .media-button{ 
+        flex: 0 0 auto; 
+        padding:0.8rem;
+        border:none;
+        border-radius:.5rem;
+        background-color:vars.$secondary-color;
+        color:vars.$font-color;
+          &:hover {
+        cursor: pointer;
+        color:vars.$secondary-font-color;
+        background-color:vars.$font-color; 
+    }
+}
+}
+
+
+.playlist{
+    padding:0.9rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.6rem;
+    margin-bottom:1.8rem;
+    color:vars.$font-color;
+&-card{
+    @include flex-center;
+    padding-left:0.5rem;
+    background-color: vars.$secondary-color;
+    border-radius:0.6rem;
+}
+
+.playlist-descr{
+    font-size:0.8rem;
+    padding-left:0.5rem;
+    .song-title{
+        color:vars.$font-color;
+        
+}
+.artist-name{
+    color:vars.$secondary-font-color;
+}
+}
+}
+
+.main-layout{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    padding-bottom: 120px;
+}
+
+.main-content{
+    width: 100%;
+    max-width: 1200px;
+    border:1px solid rgba(32, 32, 32, 1);
+    border-radius:10px;
+    grid-column:2;
+}
+
+
+/* Recommended Content */
+.recommended-content{
+   font-family:"SatoshiMedium",sans-serif;
+   padding-left:1rem;
+   margin-bottom:1.8rem;
+   &-header{
+   @include flex-between;
+   color:vars.$font-color;
+}
+}
+
+.cards{
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+    
+}
+
+.card:hover {
+  cursor:pointer;
+  transform: translateY(-10px);  
+}
+
+
+.card-content{
+    display:flex;
+}
+
+.card-content h3{
+    font-size: 13px;
+    color:vars.$font-color;
+}
+.card-content{
+    @include flex-between;
+}
+
+.card p{
+    font-size: 9px;
+    color:vars.$secondary-font-color;
+}
+
+/* Top Mixes Content */
+.top-mixes{
+   padding-left:vars.$layout-padding;
+   margin-bottom:vars.$heading-margin-bottom;
+.top-mixes-heading{
+    display:flex;
+    padding-bottom:1rem;
+    color:vars.$font-color;
+}
+
+}
+
+/* Favorite-artists styles */
+
+.favorite-artists{
+    font-family:"SatoshiMedium",sans-serif;
+    font-size:1rem;
+    padding-left: vars.$layout-padding;
+    .favorite-artists-heading{
+        color:vars.$font-color;
+        margin-bottom: vars.$heading-margin-bottom;
+
+    }
+}
+.artist{
+    color:vars.$font-color;
+    font-size:0.7rem;
+    text-align: center;
+.bowiepic{
+   
+    border-radius: 50%;
+}
+
+}
+
+
+/* Desktop Version */
+
+@media (min-width :481px){
+  
+    .playlist{
+        display:none;
+    }
+
+ .recommended-content-header{
+   @include flex-between;
+   
+ }
+
+}
+
+
+

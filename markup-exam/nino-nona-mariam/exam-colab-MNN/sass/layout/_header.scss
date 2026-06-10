@@ -1,0 +1,163 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as m;
+
+.desktop-version{
+    display: none;
+}
+/* =====================
+   Mobile Navigation Bar
+===================== */
+
+.mobile-version {
+   position: fixed;   
+    bottom: 0;         
+    left: 0;
+    width: 100%;       
+    z-index: 9999;     
+    background-color: rgba(17, 17, 17, 0.9);
+    display: flex;     
+    justify-content: space-around;
+    align-items: center;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    .mobile-icon {
+        background: transparent;
+        border: none;
+        padding: 5px;
+        
+        img {
+            width: 40px;
+            height: 40px;  
+        }
+    }
+}
+
+
+
+
+@media (min-width: 768px){
+    .mobile-version{
+        display: none;
+    }
+
+
+.navbar {
+    grid-area: nav;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    z-index: 100;
+   
+    
+   
+    .navbar-container {
+    @include m.flex-center($justify: space-between);
+    width: 100%;
+}
+
+    .nav-group {
+    @include m.flex-center($gap: 20px);
+    flex-shrink: 0; // Keep this manual as it's not in your mixin
+}
+}
+
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 105px 0 15px;
+    border-radius: v.$radius-small;
+    color: v.$secondary-text-color;
+    transition: background-color 0.3s ease; 
+
+  &:hover, 
+    &.active { 
+        background-color: v.$secondary-color;
+        color :v.$primary-text-color;
+    }
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding-right: 227px;
+    transition: background-color 0.3s ease, outline 0.2s ease;
+    
+
+    
+    &:focus-within {
+        background-color: v.$secondary-color;
+    }
+
+    &:hover {
+        background-color: v.$secondary-color;
+    }
+
+
+    .search-icon {
+       @include m.flex-center($justify: center);
+        margin-right: 10px;
+        cursor: pointer;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+   
+
+    .search-input {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: v.$primary-text-color;
+        width: 100%;
+        font-size: 14px;
+
+        &::placeholder {
+            color: v.$secondary-text-color;
+        }
+    }
+}
+
+.icon-section {
+    display: flex;
+    align-items: center;
+    gap: 8px; // Space between icons
+
+    .tool-btn {
+        @include m.flex-center($justify: center);
+        width: 41px;
+        height: 41px;
+        border-radius: 50%;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+            background-color: #202020;
+        }
+
+        img {
+            width: 41px;
+            height: 41px;
+        }
+    }
+    .profile-pic{
+    width: 32px;
+}
+
+}
+
+    
+}
+
+
+    
+   

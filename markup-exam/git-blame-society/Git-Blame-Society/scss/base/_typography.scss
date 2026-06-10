@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as v;
+@use "sass:map";
+
+body, button {
+    font-family: v.$font-base;
+    letter-spacing: 0.03em;
+}
+
+.section-title, .section-subtitle, .card-title, .music-list-title {
+    color:v.$text-primary;
+}
+
+// section title (h2)
+.section-title {
+    font-size: map.get(v.$font-size, heading);
+    font-weight: map.get(v.$font-weight, bold);
+}
+
+//section title (use with h3 if needed)
+.section-subtitle {
+    font-size: map.get(v.$font-size, small-heading);
+    font-weight: map.get(v.$font-weight, medium);
+}
+
+//card title (usually h3 inside a card)
+.card-title {
+    font-size: map.get(v.$font-size, subtitle);
+    font-weight: map.get(v.$font-weight, medium);
+}
+
+//text under card title (use with p/span)
+.card-subtitle {
+    font-size: map.get(v.$font-size, caption);
+    color:v.$text-secondary;
+}
+
+//text for navigations,small titles
+.secondary-text{
+    font-size: map.get(v.$font-size, subtitle);
+    color:v.$text-secondary;
+}
+
+.music-list-title{
+    font-size: map.get(v.$font-size, paragraph);
+    font-weight: map.get(v.$font-weight, medium);
+}

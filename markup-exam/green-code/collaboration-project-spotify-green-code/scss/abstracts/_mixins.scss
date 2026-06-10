@@ -1,0 +1,20 @@
+@mixin font_14_regular ($font-size: 14px) {
+    font-weight: 400;
+    font-size: $font-size;
+    line-height: 100%;
+    letter-spacing: 3%;
+}
+
+@mixin font_14_medium ($font-size: 14px) {
+    font-weight: 500;
+    font-size: $font-size;
+    line-height: 100%;
+    letter-spacing: 3%;
+}
+
+@mixin font_14_bold ($font-size: 14px) {
+    font-weight: 700;
+    font-size: $font-size;
+    line-height: 100%;
+    letter-spacing: 3%;
+}

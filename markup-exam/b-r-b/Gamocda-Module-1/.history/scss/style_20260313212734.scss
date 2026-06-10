@@ -1,0 +1,79 @@
+@use './reset';
+@use './sections/header-section';
+@use './sections/sidebar-section';
+@use './sections/home-section';
+@use './sections/search-section';
+
+@use './sections/playlist-section';
+@use './sections/song-section';
+@use './sections/album-section';
+@use './sections/artist-section';
+@use './sections/about-artist-section';
+@use './sections/grid-albums-section';
+@use './sections/list-albums-section';
+
+
+@use './sections/discover-section';
+@use './sections/footer-section';
+@use './sections/_friends-sidebar-section.scss';
+@use './abstract/variables' as *;
+@use './abstract/mixins' as *;
+@use './abstract/responsive' as *;
+@use './sections/libraryList-section' as *;
+
+
+
+
+
+
+body {
+  overflow-x: hidden;
+  background-color: black;
+  margin: 0;
+  display: grid;
+  grid-template-areas: 
+    "header"
+    "main"
+    "control-bar";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto; 
+  height: 100dvh;
+  background-color: $main-bg-dark;
+      
+  @include desktop {
+
+      grid-template-areas:
+      "sidebar header"
+      "sidebar main"
+      "sidebar control-bar";
+      grid-template-columns: $sidebar-w 1fr;
+      grid-template-rows: $header-h 1fr 10px;
+      height: 100vh;
+      overflow: hidden;
+    }
+  }
+
+main {
+  grid-area: main;
+  
+  @include desktop {
+  overflow-y: auto;
+  min-height: 0;
+    // padding-bottom: 12rem;
+  border: 1px solid #202020;
+  border-radius: 10px;
+  // margin-left: 25px;
+  margin-bottom: 9.5rem;
+  }
+}
+
+
+
+
+
+
+
+// class="ac"
+// class="title"
+// class="band-name"
+

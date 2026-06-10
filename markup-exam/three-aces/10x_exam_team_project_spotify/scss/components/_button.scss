@@ -1,0 +1,6 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.main-hdr__btn{
+    @include btn(0.8rem, 0.8rem, 1.5rem, 1.4rem,	#202020, $primary-txt-color)
+}

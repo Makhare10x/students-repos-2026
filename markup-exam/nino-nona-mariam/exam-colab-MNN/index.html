@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page-home">
+    <div class="app-container">
+        
+
+     <!-- Header Section  -->
+    <header class="navbar">
+        <div class="navbar-container desktop-version">
+
+           <nav class="nav-group center-section">
+        
+            <a href="#" class="nav-link active ">
+                <img src="./assets/icons/nav-library/home-active.svg" alt="" >
+                <span class="label">Home</span>
+            </a>
+
+            <a href="#" class="nav-link ">
+                <img src="./assets/icons/nav-library/discover.svg" alt="">
+                <span class="label">Discover</span>
+            </a>
+        
+            <form class="search-container" role="search" action="search.html" method="GET">
+                
+                <label for="nav-search" class="search-icon">
+                    <a href="search.html" class="search-link">
+                <img src="./assets/icons/nav-library/search.svg" alt="Search">
+                </a>
+                </label>
+                <input type="text" id="nav-search" placeholder="Search" class="search-input">
+                
+            </form>
+
+    </nav>
+        
+       
+        <section class="nav-group right icon-section">
+            <button class="tool-btn " aria-label="News">
+                <img src="./assets/icons/nav-library/notification.svg" alt="">
+            </button>
+
+            <button class="tool-btn " aria-label="Private">
+                <img src="./assets/icons/nav-library/lock.svg" alt="">
+            </button>
+
+            <button class="tool-btn for-desktop" aria-label="Friends">
+                <img src="./assets/icons/nav-library/friends.svg" alt="">
+            </button>
+
+            <button class="tool-btn " aria-label="Settings">
+                <img src="./assets/icons/nav-library/settings.svg" alt="">
+            </button>
+
+            <button class="tool-btn " aria-label="profile-pic">
+                <img src="./assets/icons/nav-library/pofile-pic.svg" alt="">
+            </button>
+
+    </section>
+         </div>
+
+         <section class="mobile-version">
+            
+            
+
+            <a class="mobile-icon active" role="button" aria-label="home">
+                <img src="./assets/icons/nav-library/home-active.svg" alt="Profile avatar">
+            </a>
+            
+             <a class="mobile-icon" role="button" aria-label="Profile">
+                <img src="./assets/icons/nav-library/discover.svg" alt="Profile avatar">
+            </a>
+
+             <a class="mobile-icon" role="button" aria-label="Profile">
+                <img src="./assets/icons/nav-library/search.svg" alt="Profile avatar">
+            </a>
+
+             <a href="mobile-library.html" class="mobile-icon" role="button" aria-label="Profile">
+                <img src="./assets/icons/sidebar-library/library.png" alt="Profile avatar">
+            </a>
+            
+             <a class="mobile-icon" role="button" aria-label="Profile">
+                <img src="./assets/icons/nav-library/me-prof.png" alt="Profile avatar">
+            </a>
+         </section>
+
+    </header>
+
+      
+    
+
+
+    <!--this is a sidebar library for desktop-->
+    <aside class="sidebar">
+
+        
+                <a href="desktop-library.html" class="sidebar-link library-header"> 
+                         <img src="./assets/icons/sidebar-library/library.png" alt="library icon">
+                     <span class="label">My Library</span>
+                </a>
+            
+
+        <nav class="sidebar-nav">
+            
+            <ul class="sidebar-nav-list">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/pin.png" alt="pin">
+                        <span>Pins</span>
+                    </a>
+                    <img src="assets/icons/sidebar-library/arrow.png" alt="arrow">
+                </li>
+
+                <li class="sidebar-item">
+                    
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/playlists.png" alt="pin">
+                        <span>Playlists</span>
+                    </a>
+                    <img src="assets/icons/sidebar-library/arrow.png" alt="arrow">
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/likedSongs.png" alt="liked">
+                        <span>Liked songs</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/saves.png" alt="saves">
+                        <span>Saves</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/albums.png" alt="albums">
+                        <span>Albums</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/folders.png" alt="foldrs">
+                        <span>Folders</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/podcasts.png" alt="podcasts">
+                        <span>Podcasts</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/audiobooks.png" alt="audiobooks">
+                        <span>Audiobooks</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/artists.png" alt="ARTISTS">
+                        <span>Artists</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+
+   
+
+      <!--this the main content/scroll-content-->
+    
+    <main class="main-content">
+        <section class="filters">
+            <div class="filter-wrapper">
+                <div class="filter-btn-wrapper">
+                <button class="filter-btn filter-all">All</button>
+                <button class="filter-btn">Music</button>
+                <button class="filter-btn">Podcasts</button>
+                <button class="filter-btn">Audiobooks</button>
+                </div>
+
+                <a href="#" class="filter-icon">
+                    <img src="assets/icons/main-cont/filter-icon.png" alt="icon">
+                </a>
+                
+            </div>
+        </section>
+
+         <!--this the main btn for playlists for moibile-->
+        <section class="playlist-btns-mobile">
+            <div class="playlist-grid-container" >
+            <button class="playlist-btn">
+                <div class="btn-cont-wrapper">
+                    <img src="assets/pictures/main/daft-punk.png" alt="">
+                    <div class="btn-txt-wrapper">
+                        <p class="btn-head">Get Lucky (feat. Pharrell Williams and Nile Rodgers)</p>
+                        <p class="btn-txt">Daft Punk</p>
+                    </div>
+                </div>
+            </button>
+
+            <button class="playlist-btn">
+                <div class="btn-cont-wrapper">
+                    <img src="assets/pictures/main/daily-mix-2.png" alt="">
+                    <div class="btn-txt-wrapper">
+                        <p class="btn-head">Daily Mix 2</p>
+                    </div>
+                </div>
+            </button>
+
+            <button class="playlist-btn">
+                <div class="btn-cont-wrapper">
+                    <img src="assets/pictures/main/daily-mix-1.png" alt="">
+                    <div class="btn-txt-wrapper">
+                        <p class="btn-head">Daily Mix 1</p>
+                    </div>
+                </div>
+            </button>
+
+            <button class="playlist-btn">
+                 <div class="btn-cont-wrapper">
+                    <img src="assets/pictures/main/daft-punk.png" alt="">
+                    <div class="btn-txt-wrapper">
+                        <p class="btn-head">Instant Crush</p>
+                        <p class="btn-txt">Daft Punk</p>
+                    </div>
+                </div>
+
+            </button>
+
+            <button class="playlist-btn">
+                 <div class="btn-cont-wrapper">
+                    <img src="assets/pictures/main/daft-punk.png" alt="">
+                    <div class="btn-txt-wrapper">
+                        <p class="btn-head">Around the world</p>
+                        <p class="btn-txt">Daft Punk</p>
+                    </div>
+                </div>
+            </button>
+
+            <button class="playlist-btn">
+                <div class="btn-cont-wrapper">
+                    <img src="assets/pictures/main/rock-mix.png" alt="">
+                    <div class="btn-txt-wrapper">
+                        <p class="btn-head">Rock Mix</p>
+                    </div>
+                </div>
+            </button>
+
+            </div>
+
+        </section>
+
+    
+     <section class="main-content-container">
+
+        <section class="content-section made-for-you">
+            <div class="header-with-arrows">
+                <h3>Made For You</h3>
+
+                <div class="controls-container">
+                
+                    <div class="arrow-controls">
+                    <button class="scroll-btn left"><img src="assets/icons/main-cont/arrow-left.png" alt=""></button>
+                    <button class="scroll-btn right"><img src="assets/icons/main-cont/arrow-right.png" alt=""></button>
+                </div>
+                <span class="mobile-dots">• • •</span>
+                </div>
+            </div>
+            <div class="cards-wrapper-grid" id="scroll-container">
+
+                <div class="card card-stacked-pink">
+                
+                    <img src="assets/pictures/main/Frame 8.png" alt="picture">
+
+                    <div class="card-txt-wrap">
+                    <div class="card-title-cont num-red">
+                        <span>Discover Weekly</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">Your weekly mixtape of fresh music.</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-green"> 
+                    <img src="assets/pictures/made-for-u/dailymix1.png" alt="picture">
+
+                    <div class="card-txt-wrap">
+                    <div class="card-title-cont num-green">
+                        <span>Daily Mix 1</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">Linkin Park, System Of A Down, Coal Chamber...</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-babypink">
+                    <img src="assets/pictures/made-for-u/dailymix2.png" alt="picture">
+
+                    <div class="card-txt-wrap">
+                    <div class="card-title-cont num-pink">
+                        <span>Daily Mix 2</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">Avril Lavigne, Lorde, Charli XCX and more</p>
+                    </div>
+                </div>
+            
+                <div class="card card-stacked-saladgreen">
+                    <img src="assets/pictures/made-for-u/dailymix3.png" alt="picture">
+
+                    <div class="card-txt-wrap">
+                    <div class="card-title-cont num-neon">
+                        <span>Daily Mix 3</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">The Strokes, Martin Garrix, MGMT and more</p>
+                    </div>
+                </div>
+               
+                <div class="card card-stacked-rouge">
+                    <img src="assets/pictures/made-for-u/dailymix4.png" alt="picture">
+
+                    <div class="card-txt-wrap">
+                    <div class="card-title-cont num-hotpink">
+                        <span>Daily Mix 4</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">Frank Sinatra, Gerhard Trede, Dean Martin and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-blue">
+                    <img src="assets/pictures/made-for-u/dailymix5.png" alt="picture">
+
+                    <div class="card-txt-wrap">
+                    <div class="card-title-cont num-blue">
+                        <span>Daily Mix 5</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt"> Frank Sinatra, Gerhard Trede, Dean Martin and more</p>
+                    </div>
+                </div>
+               
+                <div class="card card-stacked-yellow">
+                    <img src="assets/pictures/made-for-u/nirvana.png" alt="picture">
+
+                    <div class="card-txt-wrap">
+                    <div class="card-title-cont num-yellow">
+                        <span>Nirvana Radio</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">The Strokes, Martin Garrix, MGMT and more</p>
+                    </div>
+                </div>
+              
+                <div class="card card-stacked-olive">
+                    <img src="assets/pictures/made-for-u/falloutboy.png" alt="picture">
+
+                    <div class="card-txt-wrap">
+                    <div class="card-title-cont num-pink">
+                        <span>Fall Out Boy Radio</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt"> With Panic! At The Disco, The All-American Rejects,...</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-darkyellow">
+                    <img src="assets/pictures/made-for-u/adele.png" alt="picture">
+
+                    <div class="card-txt-wrap">
+                    <div class="card-title-cont num-darkyellow">
+                        <span>Adele Radio</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">With Sia, Sam Smith, P!nk and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-darkgreen">
+                    <img src="assets/pictures/made-for-u/daftpunk.png" alt="picture">
+
+                    <div  class="card-txt-wrap">
+                    <div class="card-title-cont num-cyan">
+                        <span>Daft Punk Radio</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">With Justice, The Chemical Brothers, ...</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-purple">
+                    <img src="assets/pictures/made-for-u/abba.png" alt="picture">
+
+                    <div class="card-txt-wrap" >
+                    <div class="card-title-cont num-purple">
+                        <span>ABBA Radio</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">With Honey M., Bee Gees, Bonnie Tyler, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-neongreen">
+                    <img src="assets/pictures/made-for-u/dailymix6.png" alt="picture">
+
+                    <div class="card-txt-wrap">
+                    <div class="card-title-cont num-neon">
+                        <span>Daily Mix 6</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">One Direction, Avril Lavigne, Lorde, and more</p>
+                    </div>
+                </div>
+            </div>
+         </section>  
+        
+        <section class="content-section your-top-mixins">
+            <div class="header-with-arrows">
+                <h3>Your top mixes</h3>
+
+                <div class="controls-container">
+                
+                    <div class="arrow-controls">
+                    <button class="scroll-btn left"><img src="assets/icons/main-cont/arrow-left.png" alt=""></button>
+                    <button class="scroll-btn right"><img src="assets/icons/main-cont/arrow-right.png" alt=""></button>
+                </div>
+                <span class="mobile-dots">• • •</span>
+                </div>
+            </div>
+
+            <div class="cards-wrapper-grid">
+                
+                <div class="card card-stacked-electricgreen">
+                    <img src="assets/pictures/made-for-u/rockmix.png" alt="picture">
+
+                    <div class="card-txt-wrap">
+                    <div class="card-title-cont num-brightgreen">
+                        <span>Rock Mix</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-electricyellow"> 
+                    <img src="assets/pictures/made-for-u/chilimix.png" alt="picture">
+
+                    <div class="card-txt-wrap">
+                    <div class="card-title-cont num-brightyellow">
+                        <span>Chill Mix</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">MF DOOM, Daft Punk, The Chainsmokers, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-cyan">
+                    <img src="assets/pictures/made-for-u/popmix.png" alt="picture">
+
+                    <div class="card-txt-wrap">
+                    <div class="card-title-cont num-babyblue">
+                        <span>Pop Mix</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+                    </div>
+                </div>
+            
+                <div class="card card-stacked-deeppurple">
+                    <img src="assets/pictures/made-for-u/daftounkmix.png" alt="picture">
+
+                    <div class="card-txt-wrap">
+                    <div class="card-title-cont num-electropurple">
+                        <span>Daft Punk Mix</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">Daft Punk, MGMT, Muse, and more</p>
+                    </div>
+                </div>
+               
+                <div class="card card-stacked-whitepink">
+                    <img src="assets/pictures/made-for-u/happymix.png" alt="picture">
+
+                    <div class="card-txt-wrap">
+                    <div class="card-title-cont num-pink">
+                        <span>Happy Mix</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">The Turtles, Van Morrison, ABBA and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-babyyellow">
+                    <img src="assets/pictures/made-for-u/bowiemix.png" alt="picture">
+
+                    <div class="card-txt-wrap">
+                    <div class="card-title-cont num-yellow">
+                        <span>David Bowie Mix</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">Soft Cell, The Who and The Clash</p>
+                    </div>
+                </div>
+               
+                <div class="card card-stacked-deepgreen">
+                    <img src="assets/pictures/made-for-u/upbeatmix.png" alt="picture">
+
+                    <div class="card-txt-wrap">
+                    <div class="card-title-cont num-darkgreen">
+                        <span>Upbeat Mix</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">Kylie Minogue, Charli XCX, Cage The Elephant and...</p>
+                    </div>
+                </div>
+              
+                <div class="card card-stacked-hotpink">
+                    <img src="assets/pictures/made-for-u/60s.png" alt="picture">
+
+                    <div class="card-txt-wrap">
+                    <div class="card-title-cont num-fiusa">
+                        <span>60s Mix</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">Chuck Berry, Skeeter David, Van Morrison and...</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="content-section your-fav-artists" >
+            <div class="header-with-arrows">
+                <h3>Your favorite artists</h3>
+
+                <div class="controls-container">
+                
+                    <div class="arrow-controls">
+                    <button class="scroll-btn left"><img src="assets/icons/main-cont/arrow-left.png" alt=""></button>
+                    <button class="scroll-btn right"><img src="assets/icons/main-cont/arrow-right.png" alt=""></button>
+                </div>
+                <span class="mobile-dots">• • •</span>
+                </div>
+            </div>
+            <div class="cards-wrapper-grid">
+
+                <div class="card">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                    <div class="card-txt-wrap">
+                        <p class="card-title">Guns N’ Roses</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                    <div class="card-txt-wrap">
+                        <p class="card-title">Daft Punk</p>
+                    </div>
+                </div>
+              
+                <div class="card">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                    <div class="card-txt-wrap">
+                        <p class="card-title">David Bowie</p>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+        <section class="content-section albums-for-you">
+           <div class="header-with-arrows">
+                <h3>Albums for You</h3>
+
+                <div class="controls-container">
+                
+                    <div class="arrow-controls">
+                    <button class="scroll-btn left"><img src="assets/icons/main-cont/arrow-left.png" alt=""></button>
+                    <button class="scroll-btn right"><img src="assets/icons/main-cont/arrow-right.png" alt=""></button>
+                </div>
+                <span class="mobile-dots">• • •</span>
+                </div>
+            </div>
+           <div class="cards-wrapper-grid">
+                
+                <div class="card">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                    <div class="card-txt-wrap">
+                        <div class="card-title-cont">
+                            <span>Meteora</span>
+                            <span>13</span>
+                        </div>
+                        <p class="card-main-txt">Linkin Park</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                    <div class="card-txt-wrap">
+                        <div class="card-title-cont">
+                            <span>Random Access Memories</span>
+                            <span>13</span>
+                        </div>
+                        <p class="card-main-txt">Daft Punk</p>
+                    </div>
+                </div>
+              
+                <div class="card">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                    <div class="card-txt-wrap">
+                        <div class="card-title-cont">
+                            <span>Abbey Road</span>
+                            <span>13</span>
+                        </div>
+                        <p class="card-main-txt">The Beatles</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                    <div class="card-txt-wrap">
+                        <div class="card-title-cont">
+                            <span>Black Holes and Revelations</span>
+                            <span>13</span>
+                        </div>
+                        <p class="card-main-txt">Muse</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="content-section audiobooks-for-you">
+           <div class="header-with-arrows">
+                <h3>Audiobooks for you</h3>
+
+                <div class="controls-container">
+                
+                    <div class="arrow-controls">
+                    <button class="scroll-btn left"><img src="assets/icons/main-cont/arrow-left.png" alt=""></button>
+                    <button class="scroll-btn right"><img src="assets/icons/main-cont/arrow-right.png" alt=""></button>
+                </div>
+                <span class="mobile-dots">• • •</span>
+                </div>
+            </div>
+           <div class="cards-wrapper-grid">
+                
+                <div class="card">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                    <div class="card-txt-wrap">
+                        <div class="card-title-cont">
+                            <span>Halo: The Flood</span>
+                        </div>
+                        <p class="card-main-txt">William C. Dietz</p>
+                    </div>
+                </div>
+              
+                <div class="card">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                    <div class="card-txt-wrap">
+                        <div class="card-title-cont">
+                            <span>Halo: The Flood</span>
+                        </div>
+                        <p class="card-main-txt">William C. Dietz</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                    <div class="card-txt-wrap">
+                        <div class="card-title-cont">
+                            <span>Halo: Ghosts of Onyx</span>
+                        </div>
+                        <p class="card-main-txt">Eric Nylund</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section podcasts-for-you">
+           <div class="header-with-arrows">
+                <h3>Podcasts for you</h3>
+
+                <div class="controls-container">
+                
+                    <div class="arrow-controls">
+                    <button class="scroll-btn left"><img src="assets/icons/main-cont/arrow-left.png" alt=""></button>
+                    <button class="scroll-btn right"><img src="assets/icons/main-cont/arrow-right.png" alt=""></button>
+                </div>
+                <span class="mobile-dots">• • •</span>
+                </div>
+            </div>
+            
+           <div class="cards-wrapper-grid">
+                
+                <div class="card">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+
+                    <div class="card-txt-wrap card-color-green">
+                        <div class="card-title-cont">
+                            <span>anything goes...</span>
+                        </div>
+                        <p class="card-main-txt">emma chamberlain</p>
+                    </div>
+                </div>
+              
+                <div class="card">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                    <div class="card-txt-wrap card-color-yellow">
+                        <div class="card-title-cont">
+                            <span>The Joe Rogan...</span>
+                        </div>
+                        <p class="card-main-txt">Joe Rogan</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                    <div class="card-txt-wrap card-color-orange">
+                        <div class="card-title-cont">
+                            <span>The Journal</span>
+                        </div>
+                        <p class="card-main-txt">The Wall Street Journal</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="content-section episodes-for-you">
+             <div class="header-with-arrows">
+                <h3>Episodes for you</h3>
+
+                <div class="controls-container">
+                
+                    <div class="arrow-controls">
+                    <button class="scroll-btn left"><img src="assets/icons/main-cont/arrow-left.png" alt=""></button>
+                    <button class="scroll-btn right"><img src="assets/icons/main-cont/arrow-right.png" alt=""></button>
+                </div>
+                <span class="mobile-dots">• • •</span>
+                </div>
+            </div>
+
+           <div class="cards-wrapper-grid">
+                
+                <div class="card">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                    <div class="card-txt-wrap title-bg-green">
+                        <div class="card-title-cont ">
+                            <span>anything goes...</span>
+                        </div>
+                        <p class="card-main-txt">Apr 28 . 53 min</p>
+                    </div>
+                </div>
+              
+                <div class="card">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                    <div class="card-txt-wrap title-bgt-yellow">
+                        <div class="card-title-cont ">
+                            <span>The Joe Rogan...</span>
+                        </div>
+                        <p class="card-main-txt">Apr 28 . 53 min</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                    <div class="card-txt-wrap title-bgt-orange">
+                        <div class="card-title-cont ">
+                            <span>The Journal</span>
+                        </div>
+                        <p class="card-main-txt">Apr 28 . 53 min</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--only appears on the mobile version-->
+        <section class="content-section popular-almubs">
+             <div class="header-with-arrows">
+                  <h3>Popular Albums</h3>
+            </div>
+            <div class="cards-wrapper-grid">
+                
+                <div class="card">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                    <div class="card-txt-wrap title-bg-green">
+                        <div class="card-title-cont ">
+                            <span>Random Access Memories</span>
+                        </div>
+                        <p class="card-main-txt">Daft Punk</p>
+                    </div>
+                </div>
+              
+                <div class="card">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                    <div class="card-txt-wrap title-bgt-yellow">
+                        <div class="card-title-cont ">
+                            <span>Abbey Road</span>
+                        </div>
+                        <p class="card-main-txt">The Beatles</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                    <div class="card-txt-wrap title-bgt-orange">
+                        <div class="card-title-cont ">
+                            <span>Black Holes...</span>
+                        </div>
+                        <p class="card-main-txt">Muse</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        
+        </section>
+
+    </main>
+
+     </div>
+
+    
+    
+
+    
+                <!-- ================================
+                    PLAYER SECTION
+                    Main wrapper for the entire player
+                ================================ -->
+    <section class="player">
+
+                <!-- ================================
+                    Left Side — Playback Controls
+                    Contains: play/pause, prev, next,
+                    shuffle, repeat, progress bar, volume
+                ================================ -->
+        <div class="left-cont">
+
+        <!-- Play / Pause button -->
+            <input class="btn-playback" type="checkbox"  id="playback-toggle">
+            <label for="playback-toggle">
+                <img id="start" src="./assets/icons/player/Name=Play, Filled=No.svg" alt="Start">
+                <img id="pause" src="./assets/icons/player/Name=Pause, Filled=No.svg" alt="Pause">
+            </label>
+
+        <!--Previous button-->
+            <button class="player-prev">
+                <svg class="prev" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.154 15.1523V25.255" stroke="currentColor" stroke-width="2.52568" stroke-linecap="round"/>
+                    <path d="M17.1624 21.4925C16.2235 20.8902 16.2235 19.5181 17.1624 18.9157L24.1623 14.4253C25.1811 13.7717 26.5196 14.5033 26.5196 15.7137V24.6946C26.5196 25.905 25.1811 26.6365 24.1623 25.983L17.1624 21.4925Z" fill="currentColor"/>
+                </svg>
+            </button>
+
+        <!--Next button-->      
+            <button class="player-next">
+                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.2567 15.1523V25.255" stroke="currentColor" stroke-width="2.52568" stroke-linecap="round"/>
+                    <path d="M23.2483 18.9157C24.1872 19.518 24.1872 20.8901 23.2483 21.4925L16.2484 25.9829C15.2296 26.6365 13.8912 25.9049 13.8912 24.6945L13.8912 15.7136C13.8912 14.5032 15.2296 13.7717 16.2484 14.4252L23.2483 18.9157Z" fill="currentColor"/>
+                </svg>
+            </button>
+
+        <!--Shuffle button-->
+            <button class="shuffle">
+                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.1027 12.6271C11.6824 12.6271 13.1592 13.4102 14.0456 14.7177L14.8812 15.9503L16.0077 17.612M28.7491 25.92H23.8242C22.5038 25.92 21.236 25.4031 20.2921 24.4798L19.3635 23.5716M28.7491 25.92L25.2568 29.4648M28.7491 25.92L25.2568 22.3752" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.1027 27.9503C11.6863 27.9503 13.1708 27.18 14.0826 25.8853L20.2554 17.1194C21.2016 15.7758 22.7422 14.9764 24.3855 14.9764H28.7491M28.7491 14.9764L25.2568 11.4316M28.7491 14.9764L25.2568 18.5213" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+        <!-- Repeat button -->
+            <button class="repeat">
+                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.996 26.0972H13.4703C11.6104 26.0972 10.1027 24.5895 10.1027 22.7297V15.9945C10.1027 14.1347 11.6104 12.627 13.4703 12.627H26.9406C28.8004 12.627 30.3081 14.1347 30.3081 15.9945V22.7297C30.3081 24.5895 28.8004 26.0972 26.9406 26.0972H20.2054M20.2054 26.0972L23.573 22.7297M20.2054 26.0972L23.573 29.4648" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+        <!--Progress bar-->
+            <span class="left-time">2:23</span>
+            <button class="playback-bar">
+                <svg width="320" height="32" viewBox="0 0 320 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.5 1.5L318.5 1.50003" stroke="#898989" stroke-opacity="0.27" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M1.5 1.5H143.881" stroke="#E0E0E0" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <img class="bar-hover" src="./assets/icons/player/Property 1=Hover.svg" alt="player">
+            </button>
+            <span class="left-time">4:45</span>
+
+        <!-- Volume slider -->
+            <label class="volume">
+                <input type="range" name="volume" id="volume">
+                <svg class="vol-icon" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_24_424)">
+                    <path d="M12.8558 23.8203C9.87736 22.3311 9.87736 18.081 12.8558 16.5918L21.5883 12.2256C22.0359 12.0018 22.5625 12.3268 22.5629 12.8271L22.5629 27.584C22.5629 28.0846 22.036 28.4102 21.5883 28.1865L12.8558 23.8203Z" stroke="currentcolor" stroke-width="2.02054"/>
+                    <path d="M26.9406 25.2578C27.7294 25.0427 28.4588 24.5653 29.04 23.8699C29.852 22.8983 30.3082 21.5805 30.3082 20.2065C30.3082 18.8324 29.852 17.5146 29.04 16.543C28.4588 15.8476 27.7294 15.3703 26.9406 15.1551" stroke="currentcolor" stroke-width="1.68378" stroke-linecap="round"/>
+                    <path d="M26.0987 19.6957C26.0987 19.5131 26.2522 19.3593 26.4208 19.4291C26.523 19.4714 26.6158 19.5335 26.694 19.6116C26.7722 19.6898 26.8342 19.7826 26.8765 19.8848C26.9188 19.9869 26.9406 20.0964 26.9406 20.2069C26.9406 20.3175 26.9188 20.427 26.8765 20.5291C26.8342 20.6313 26.7722 20.7241 26.694 20.8022C26.6158 20.8804 26.523 20.9424 26.4208 20.9847C26.2522 21.0546 26.0987 20.9008 26.0987 20.7182L26.0987 20.2069L26.0987 19.6957Z" fill="#898989" stroke="currentcolor" stroke-width="0.841892"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_24_424">
+                    <rect width="23.573" height="23.573" fill="white" transform="translate(8.41895 8.41992)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </label>
+        </div>
+
+        <!-- END left-cont -->
+
+                <!-- ================================
+                CENTER — Album cover + song info + mobile controls
+                ================================ -->
+        <div class="center">
+
+        <!-- Album cover -->
+                <a class="cover" href="song.html">
+                    <img src="./assets/photo/player/Rectangle 6.svg" alt="cover">
+                </a>
+        
+        <!-- Song title, artist, album links -->
+                <div class="song-info">
+                    <div class="song-name">
+                        <div class="marquee">
+                            <a class="song" href="song.html">Get Lucky <span>(feat. Pharrell Williams and Nile Rodgers)</span></a>
+                        </div>
+                    </div>
+                    <a class="artist" href="song.html">Daft Punk</a>
+                    <a class="album" href="song.html">Random Access Memories</a>
+                </div>
+
+        <!-- Phone buttons-->
+                <button class="add-sm">
+                    <svg class="add-sm"width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="20" height="20" rx="3" transform="matrix(1 0 0 -1 9.82703 31.3301)" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M11.827 11.3301H27.827C27.827 9.67322 26.4839 8.33008 24.827 8.33008H14.827C13.1702 8.33008 11.827 9.67322 11.827 11.3301Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M15.827 21.3301H19.827M23.827 21.3301H19.827M19.827 21.3301V17.3301M19.827 21.3301V25.3301" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="play-sm">
+                    <svg class="play-sm" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M28.0942 18.2343C29.3511 18.9599 29.3511 20.774 28.0942 21.4997L18.1966 27.2141C16.9398 27.9397 15.3687 27.0327 15.3687 25.5814L15.3687 14.1526C15.3687 12.7013 16.9398 11.7943 18.1966 12.5199L28.0942 18.2343Z" fill="currentColor"/>
+                    </svg>
+                </button>
+
+        <!--progress-bar for phone-->            
+                <svg class="progress-bar" width="320" height="17" viewBox="0 0 320 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.5 15.3047L318.5 15.3047" stroke="#898989" stroke-opacity="0.27" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M1.5 15.3047H143.881" stroke="#E0E0E0" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <!-- ================================
+                Right Side —favoritess, add button,
+                lyrics, devices,
+                more options, like, queue
+            ================================ -->
+            <div class="right-cont">
+
+        <!-- Favorite button -->
+                <input class="favorite" type="checkbox"  id="favorite-toggle">
+                <label for="favorite-toggle">
+                    <img class="fav" src="./assets/icons/player/Name=Like, Filled=No.svg" alt="Favorite">
+                    <img class="fav-hover" src="./assets/icons/player/Name=Like, Filled=Yes.svg" alt="Favorite">
+                </label>
+            
+                    <!-- ================================
+                    ADD TO PLAYLIST
+                    Checkbox toggle opens the window
+                    ================================ -->
+
+                <div class="add-btn">
+                    <input type="checkbox" id="add-toggle" class="toogle-input">
+                    <label for="add-toggle" class="add-btn">
+                        <svg class="add-desktop"width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="20" height="20" rx="3" transform="matrix(1 0 0 -1 9.82703 31.3301)" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M11.827 11.3301H27.827C27.827 9.67322 26.4839 8.33008 24.827 8.33008H14.827C13.1702 8.33008 11.827 9.67322 11.827 11.3301Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                            <path d="M15.827 21.3301H19.827M23.827 21.3301H19.827M19.827 21.3301V17.3301M19.827 21.3301V25.3301" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </label>
+                    <label for="add-toggle" class="add-backdrop"></label>
+                    
+        <!-- Add to playlist window -->
+                    <div class="add-window">
+                        <div class="add-header">
+                            <span>Add to playlist</span>
+                        </div>
+
+        <!-- Search bar inside the window -->
+                        <div class="add-search">
+                            <input type="text" placeholder="Search for a playlist/folder">
+                            <img class="search" src="./assets/icons/player/Name=Search, Filled=No.svg" alt="Search">
+                        </div>
+
+        <!-- Create new playlist button -->
+                        <button class="new-list">
+                            <img src="./assets/icons/player/Name=Add Simple, Filled=No.svg" alt="New Playlist">
+                            <span>New Playlist</span>
+                        </button>
+            
+        <!-- Playlist items -->
+                        <div class="album-list">
+                            <div class="playlists">
+                                <img class="playlist" src="./assets/icons/player/Name=Playlist, Filled=No.svg" alt="Playlist">
+                                <span>Chill stuff</span>
+                                <input class="check-btn" type="checkbox"  id="check-toggle-1">
+                                <label for="check-toggle-1">
+                                    <img class="check" src="./assets/icons/player/Name=Check, Filled=No.svg" alt="Favorite">
+                                    <img class="check-hover" src="./assets/icons/player/Name=Check, Filled=Yes.svg" alt="Favorite">
+                                </label>
+                            </div>
+                            <div class="playlists">
+                                <img class="playlist" src="./assets/icons/player/Name=Playlist, Filled=No.svg" alt="Playlist">
+                                <span>Chill stuff</span>
+                                <input class="check-btn" type="checkbox"  id="check-toggle-2">
+                                <label for="check-toggle-2">
+                                    <img class="check" src="./assets/icons/player/Name=Check, Filled=No.svg" alt="Favorite">
+                                    <img class="check-hover" src="./assets/icons/player/Name=Check, Filled=Yes.svg" alt="Favorite">
+                                </label>
+                            </div>
+
+            <!-- Playlist item (with more options) -->
+                            <div class="playlists">
+                                <img class="folder" src="./assets/icons/player/Name=Folder, Filled=No.svg" alt="Playlist">
+                                <span>Chill stuff</span>
+                                <button class="right-btn">
+                                    <img src="./assets/icons/player/Property 1=Right.svg" alt="More">
+                                </button>
+                            </div>
+                            
+            <!-- Playlist items -->
+                            <div class="playlists">
+                                <img class="playlist" src="./assets/icons/player/Name=Playlist, Filled=No.svg" alt="Playlist">
+                                <span>Chill stuff</span>
+                                <input class="check-btn" type="checkbox"  id="check-toggle-3">
+                                <label for="check-toggle-3">
+                                    <img class="check" src="./assets/icons/player/Name=Check, Filled=No.svg" alt="Favorite">
+                                    <img class="check-hover" src="./assets/icons/player/Name=Check, Filled=Yes.svg" alt="Favorite">
+                                </label>
+                            </div>
+                        </div>
+
+        <!-- Cancel / Done buttons -->
+                        <div class="playlist-actions">
+                            <button class="Cancel">Cancel</button>
+                            <button class="Done">Done</button>
+                        </div>
+                    </div>
+                </div>
+
+        <!-- END add-btn -->
+
+                <!-- ================================
+                    LYRICS
+                    Checkbox toggle opens the window
+                ================================ -->
+
+                <div class="lyrics-btn">
+                    <input type="checkbox" id="lyrics-toggle" class="toogle-input">
+                    <label for="lyrics-toggle" class="lyrics-btn">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.0864 14.0762H23.0864" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M11.0864 21.0762H19.0864" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M11.0864 28.0762H19.0864" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M29.0864 13.0762V22.01M29.0864 22.01V26.6757C29.0864 27.4256 28.5537 28.0748 27.8037 28.0762C26.3223 28.0789 24.0864 27.6431 24.0864 24.9879C24.0864 21.0173 29.0864 22.01 29.0864 22.01Z" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </label>
+
+        <!-- Backdrop — click to close -->
+                    <label for="lyrics-toggle" class="lyrics-backdrop"></label>
+                    
+        <!-- Lyrics window -->
+                    <div class="lyrics-window">
+                        <div class="lyrics-header">
+                            <span>Lyrics</span>
+                            <img class="arrow" src="./assets/icons/player/Frame 93.svg" alt="Lyrics">
+                            
+        <!-- Sync lyrics button, Share lyrics icon -->
+                            <input class="sync-btn" type="checkbox"  id="sync-toggle">
+                            <label for="sync-toggle">
+                                <img class="sync" src="./assets/icons/player/Name=Synced Lyrics, Filled=No.svg" alt="Sync">
+                                <img class="sync-hover" src="./assets/icons/player/Name=Synced Lyrics, Filled=Yes.svg" alt="sync">
+                            </label>
+                            <input class="share-btn" type="checkbox"  id="share-toggle">
+                            <label for="share-toggle">
+                                <img class="share" src="./assets/icons/player/Name=Share, Filled=No.svg" alt="Share">
+                                <img class="share-hover" src="./assets/icons/player/Name=Share, Filled=No (1).svg" alt="share">
+                            </label>
+                        </div>
+
+        <!-- Lyrics text content -->
+                        <div class="lyrics-content">
+                            <div class="upper">
+                                <p>Like the legend of the phoenix, huh</p>
+                                <p>All ends with beginnings</p>
+                                <p>What keeps the planet spinning, ah</p>
+                                <p>The force from the beginning, hm, look</p>
+                            </div>
+                            <div class="bottom">
+                                <span>We've come too far</span>
+                                <p>To give up who we are</p>
+                                <p>So let's raise the bar</p>
+                                <p>And our cups to the stars</p>
+                                <p>She's up all night 'til the sun</p>
+                                <p>'m up all night to get some</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        <!-- END lyrics-btn -->
+
+         <!-- Connect to a device button -->
+                <button class="devices">
+                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="17.2587" y="11.3672" width="11.7865" height="17.6797" rx="2.94662" stroke="currentcolor" stroke-width="2.06263"/>
+                    <circle cx="23.152" cy="23.1537" r="2.94662" fill="currentcolor"/>
+                    <circle cx="23.152" cy="15.7858" r="1.47331" fill="currentcolor"/>
+                    <circle cx="12.8389" cy="27.5729" r="1.47331" fill="currentcolor"/>
+                    <path d="M13.5755 22.4157H12.8389C12.0252 22.4157 11.3655 21.7561 11.3655 20.9424V15.7858C11.3655 14.9721 12.0252 14.3125 12.8389 14.3125H13.5755" stroke="currentcolor" stroke-width="2.06263" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <!-- ================================
+                    MORE OPTIONS
+                    Button opens a dropdown menu
+                ================================ -->
+
+                <div class="more-button">
+                    <input type="checkbox" id="more-toggle" class="more-input">
+            
+        <!-- More button -->
+                    <label for="more-toggle" class="more-btn">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11.7866" cy="20.2072" r="1.68378" fill="currentcolor"/>
+                        <circle cx="20.2055" cy="20.2072" r="1.68378" fill="currentcolor"/>
+                        <circle cx="28.6242" cy="20.2072" r="1.68378" fill="currentcolor"/>
+                        </svg>
+                    </label>
+                    <label for="more-toggle" class="more-backdrop"></label>
+                    
+        <!-- More options window -->
+
+                    <div class="more-window">
+                        <div class="more-list">
+                            <img src="./assets/icons/player/Name=Download, Filled=No.svg" alt="list">
+                            <p>Download song</p>
+                        </div>
+                        <div class="more-list">
+                            <img src="./assets/icons/player/Name=Timer, Filled=Yes.svg" alt="list">
+                            <p>Sleep timer</p>
+                        </div>
+                        <div class="more-list">
+                            <img src="./assets/icons/player/Name=Hide, Filled=No.svg" alt="list">
+                            <p>Hide song</p>
+                        </div>
+                        <div class="more-list">
+                            <img src="./assets/icons/player/Name=Share, Filled=No.svg" alt="list">
+                            <p>Share song</p>
+                        </div>
+                        <div class="more-list">
+                            <img src="./assets/icons/player/Name=Add to Library, Filled=No.svg" alt="list">
+                            <p>Add to library</p>
+                            <img class="forward-1" src="./assets/icons/player/Property 1=Right.svg" alt="icon">
+                        </div>
+                        <div class="more-list">
+                            <img src="./assets/icons/player/Name=Add to Queue, Filled=No.svg" alt="list">
+                            <p>Add song to queue</p>
+                            <img class="forward-2" src="./assets/icons/player/Property 1=Right.svg" alt="icon">
+                        </div>
+                        <div class="more-list">
+                            <img src="./assets/icons/player/Name=Radio, Filled=No.svg" alt="list">
+                            <p>Go to song radio</p>
+                        </div>
+                        <div class="more-list">
+                            <img src="./assets/icons/player/Name=Album, Filled=No.svg" alt="list">
+                            <p>View album</p>
+                        </div>
+                        <div class="more-list">
+                            <img src="./assets/icons/player/Name=Artist, Filled=No.svg" alt="list">
+                            <p>Vieb artist</p>
+                            <img class="forward-3" src="./assets/icons/player/Property 1=Right.svg" alt="icon">
+                        </div>
+                        <div class="more-list">
+                            <img src="./assets/icons/player/Name=Miniplayer, Filled=No.svg" alt="list">
+                            <p>Miniplayer</p>
+                        </div>
+                        <div class="more-list">
+                            <img src="./assets/icons/player/Name=Full Screen, Filled=No.svg" alt="list">
+                            <p>Fullscreen</p>
+                        </div>
+                    </div>
+                </div>
+
+        <!-- END more options-->
+
+        <!-- vertical line -->
+                <img class="vertical-line" src="./assets/icons/player/Frame 62.svg" alt="line">
+
+                <!-- ================================
+                    Reactions Checkbox toggle expands the box
+                ================================ -->
+                <div class="reaction-cont">
+                
+            <!-- Hidden checkbox toggle -->
+                    <input type="checkbox" id="reaction-toggle" class="reaction-input">
+
+                <!-- Open button (Close expanded box) -->
+                    <label for="reaction-toggle" class="open-btn">
+                        <img class="open" src="./assets/icons/player/Property 1=Default (4).svg" alt="open">
+                    </label>
+
+                <!-- EXPAND BOX-->
+                    <div class="expand-box">
+                        <img class="like-next" src="./assets/icons/player/icons big (2).svg" alt="next">
+                        <img class="like" src="./assets/icons/player/icons big.svg" alt="like">
+                        <img class="dislike" src="./assets/icons/player/icons big (1).svg" alt="dislike">
+                        
+                <!-- Close button -->
+                        <label for="reaction-toggle" class="close-btn">
+                            <img class="close-btn" src="./assets/icons/player/Group 84.svg" alt="close">
+                        </label>
+                    </div>
+                </div>
+
+        <!-- END reaction-cont -->
+
+                <!-- ================================
+                    QUEUE
+                    Checkbox toggle opens the window
+                ================================ -->
+
+                <div class="queue-container">
+                    <input type="checkbox" id="queue-toggle" class="queue-input">
+                    <label for="queue-toggle" class="queue-btn">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.7866 14.5915C11.7866 13.0416 13.043 11.7852 14.5929 11.7852H25.8182C27.368 11.7852 28.6245 13.0416 28.6245 14.5915C28.6245 16.1413 27.368 17.3978 25.8182 17.3978H14.5929C13.043 17.3978 11.7866 16.1413 11.7866 14.5915Z" stroke="currentcolor" stroke-width="2.3573"/>
+                        <path d="M11.7866 23.0117L28.6245 23.0117" stroke="currentcolor" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11.7866 28.623L28.6245 28.623" stroke="currentcolor" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </label>
+
+        <!-- Backdrop — click to close -->
+                    <label for="queue-toggle" class="queue-backdrop"></label>
+                    <div class="queue-window">
+                    
+        <!-- Queue header with tabs -->
+                        <div class="queue-header">
+                            <span>Queue</span>
+                            <span>Recent</span>
+                        </div>
+
+        <!-- List of queued songs -->
+                        <div class="queue-list">
+                        
+        <!-- Currently playing song -->
+                            <div class="queue-song-1">
+                                <div class="cover">
+                                    <img class="cover" src="./assets/photo/player/Rectangle 7.svg" alt="cover">
+                                    <img class="line-bar" src="./assets/icons/player/icons big (3).svg" alt="lines">
+                                </div>
+                                <div class="name">
+                                    <span>Get Lucky (feat. ...</span>
+                                    <small>Daft Punk</small>
+                                </div>
+                                <button class="dots">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 29.5781)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 29.5781)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 21.9785)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 14.3789)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 21.9785)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 14.3789)" fill="currentcolor"/>
+                                    </svg>
+                                </button>
+                                <button class="close">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+        <!-- label Next up -->
+                            <span class="next-up">Next up:</span>
+
+        <!-- Playback controls inside queue -->
+                            <div class="album-functions">
+                                <img class="album-icon" src="./assets/icons/player/Property 1=Album.svg" alt="album-icon">
+                                <span>Random Access Memories</span>
+                                <button class="shuffle">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.1027 12.6271C11.6824 12.6271 13.1592 13.4102 14.0456 14.7177L14.8812 15.9503L16.0077 17.612M28.7491 25.92H23.8242C22.5038 25.92 21.236 25.4031 20.2921 24.4798L19.3635 23.5716M28.7491 25.92L25.2568 29.4648M28.7491 25.92L25.2568 22.3752" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10.1027 27.9503C11.6863 27.9503 13.1708 27.18 14.0826 25.8853L20.2554 17.1194C21.2016 15.7758 22.7422 14.9764 24.3855 14.9764H28.7491M28.7491 14.9764L25.2568 11.4316M28.7491 14.9764L25.2568 18.5213" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                               <button class="repeat">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.996 26.0972H13.4703C11.6104 26.0972 10.1027 24.5895 10.1027 22.7297V15.9945C10.1027 14.1347 11.6104 12.627 13.4703 12.627H26.9406C28.8004 12.627 30.3081 14.1347 30.3081 15.9945V22.7297C30.3081 24.5895 28.8004 26.0972 26.9406 26.0972H20.2054M20.2054 26.0972L23.573 22.7297M20.2054 26.0972L23.573 29.4648" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                                <button class="close">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+        <!-- Queue song items -->
+                            <div class="queue-song">
+                                <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
+                                <div class="name">
+                                    <span>Get Lucky (feat. ...</span>
+                                    <small>Daft Punk</small>
+                                </div>
+                                <button class="dots">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 29.5781)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 29.5781)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 21.9785)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 14.3789)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 21.9785)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 14.3789)" fill="currentcolor"/>
+                                    </svg>
+                                </button>
+                                <button class="close">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="queue-song">
+                                <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
+                                <div class="name">
+                                    <span>Get Lucky (feat. ...</span>
+                                    <small>Daft Punk</small>
+                                </div>
+                                <button class="dots">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 29.5781)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 29.5781)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 21.9785)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 14.3789)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 21.9785)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 14.3789)" fill="currentcolor"/>
+                                    </svg>
+                                </button>
+                                <button class="close">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="queue-song">
+                                <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
+                                <div class="name">
+                                    <span>Get Lucky (feat. ...</span>
+                                    <small>Daft Punk</small>
+                                </div>
+                                <button class="dots">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 29.5781)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 29.5781)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 21.9785)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 14.3789)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 21.9785)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 14.3789)" fill="currentcolor"/>
+                                    </svg>
+                                </button>
+                                <button class="close">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="queue-song">
+                                <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
+                                <div class="name">
+                                    <span>Get Lucky (feat. ...</span>
+                                    <small>Daft Punk</small>
+                                </div>
+                                <button class="dots">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 29.5781)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 29.5781)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 21.9785)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 14.3789)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 21.9785)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 14.3789)" fill="currentcolor"/>
+                                    </svg>
+                                </button>
+                                <button class="close">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+            <!-- Second playlist -->
+                            <div class="album-functions-2">
+                                <img class="album-icon" src="./assets/icons/player/Property 1=Playlist.svg" alt="album-icon">
+                                <span>Chill Playlist</span>
+                                <button class="shuffle">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.1027 12.6271C11.6824 12.6271 13.1592 13.4102 14.0456 14.7177L14.8812 15.9503L16.0077 17.612M28.7491 25.92H23.8242C22.5038 25.92 21.236 25.4031 20.2921 24.4798L19.3635 23.5716M28.7491 25.92L25.2568 29.4648M28.7491 25.92L25.2568 22.3752" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10.1027 27.9503C11.6863 27.9503 13.1708 27.18 14.0826 25.8853L20.2554 17.1194C21.2016 15.7758 22.7422 14.9764 24.3855 14.9764H28.7491M28.7491 14.9764L25.2568 11.4316M28.7491 14.9764L25.2568 18.5213" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                                <button class="repeat">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.996 26.0972H13.4703C11.6104 26.0972 10.1027 24.5895 10.1027 22.7297V15.9945C10.1027 14.1347 11.6104 12.627 13.4703 12.627H26.9406C28.8004 12.627 30.3081 14.1347 30.3081 15.9945V22.7297C30.3081 24.5895 28.8004 26.0972 26.9406 26.0972H20.2054M20.2054 26.0972L23.573 22.7297M20.2054 26.0972L23.573 29.4648" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                                <button class="close">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+            <!-- Queue song items -->
+                            <div class="queue-song">
+                                <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
+                                <div class="name">
+                                    <span>Get Lucky (feat. ...</span>
+                                    <small>Daft Punk</small>
+                                </div>
+                                <button class="dots">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 29.5781)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 29.5781)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 21.9785)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 14.3789)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 21.9785)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 14.3789)" fill="currentcolor"/>
+                                    </svg>
+                                </button>
+                                <button class="close">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="queue-song">
+                                <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
+                                <div class="name">
+                                    <span>Get Lucky (feat. ...</span>
+                                    <small>Daft Punk</small>
+                                </div>
+                                <button class="dots">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 29.5781)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 29.5781)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 21.9785)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 14.3789)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 21.9785)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 14.3789)" fill="currentcolor"/>
+                                    </svg>
+                                </button>
+                                <button class="close">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="queue-song">
+                                <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
+                                <div class="name">
+                                    <span>Get Lucky (feat. ...</span>
+                                    <small>Daft Punk</small>
+                                </div>
+                                <button class="dots">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 29.5781)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 29.5781)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 21.9785)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 14.8271 14.3789)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 21.9785)" fill="currentcolor"/>
+                                        <circle cx="1.9" cy="1.9" r="1.9" transform="matrix(1 0 0 -1 22.4272 14.3789)" fill="currentcolor"/>
+                                    </svg>
+                                </button>
+                                <button class="close">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+            <!-- Queue footer -->
+                        <div class="queue-footer">
+                            <span>Auto-Play Similar Tracks</span>
+                            <img src="./assets/icons/player/Group 62.svg" alt="icon">
+                        </div>
+                    </div>
+            <!-- END queue -->
+
+            </div>
+        <!--END desktop-cont-->
+
+        </div>
+        <!-- END right-cont -->
+
+    </section>
+    <!-- END player -->
+
+
+    <script src="script.js"></script>
+</body>
+</html>

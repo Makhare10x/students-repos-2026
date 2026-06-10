@@ -1,0 +1,93 @@
+@use "../abstracts/mixins" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #060606;
+  font-family: "Satoshi", sans-serif;
+}
+main {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+.pins-header{
+  padding-left: 10px;
+}
+.pins-header ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 35px;
+}
+.pins-header li {
+  display: flex;
+  align-items: center;
+}
+.library {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 21px;
+  gap: 11px;
+  flex-wrap: wrap;
+}
+
+.library p {
+  @include text-style();
+}
+.spinned {
+  width: 170px;
+  min-height: 170px;
+  position: relative;
+}
+.pin-icon {
+  position: absolute;
+  top: -1.01px;
+  left: 130px;
+}
+.img-radius {
+  border-radius: 50%;
+}
+.liked-songs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.rank {
+  display: flex;
+  justify-content: space-between;
+}
+.green-color-number {
+  @include text-style($color: #1ed760);
+}
+.mixed-color {
+  @include text-style($color: #95e6d3);
+}
+.pink-color {
+  @include text-style($color: #f4b8bd);
+}
+.light-green {
+  @include text-style($color: #c3e7b7);
+}
+.dark-green {
+  @include text-style($color: #ccf665);
+}
+.yellow-color {
+  @include text-style($color: #f9e72c);
+}
+.blue-color {
+  @include text-style($color: #9bf0e2);
+}
+.spinned h5 {
+  @include text-style();
+  text-align: center;
+}

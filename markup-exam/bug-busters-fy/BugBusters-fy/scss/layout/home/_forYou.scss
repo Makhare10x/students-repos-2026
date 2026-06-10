@@ -1,0 +1,76 @@
+@use "../../components/cardMain";
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+@use "../../abstracts/placeholders";
+
+.forYou-container {
+  @include mixins.flex-prop($direction: column);
+  padding: 0 1.5rem;
+  margin-bottom: 3rem;
+  .title-group {
+    @include mixins.flex-prop($align: center, $justify: space-between);
+    width: 100%;
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      text-transform: capitalize;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .navigation-controls {
+      display: flex;
+      gap: 0.8rem;
+
+      .control-btn {
+        border: none;
+        color: #fff;
+        width: 3.2rem;
+        height: 3.2rem;
+        background-color: transparent;
+        cursor: pointer;
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        &.more {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  .forYou-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    overflow-x: auto;
+    overflow-y: visible;
+    scrollbar-width: none;
+    padding-top: 2rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .card-main {
+      @include mixins.flex-prop($direction: column, $gap: 0.5rem);
+      .img-container {
+        @include mixins.cardBeforeEffect;
+      }
+
+      @include mixins.card-badges(variables.$foryou-colors);
+    }
+  }
+}
+
+@media (min-width: 920px) {
+  .forYou-container {
+    padding: 0 2.5rem;
+    .title-group .navigation-controls .control-btn {
+      display: flex;
+    }
+  }
+}

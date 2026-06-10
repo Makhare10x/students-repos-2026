@@ -1,0 +1,206 @@
+@use '../abstract/variables' as *;
+@mixin flex-center($direction: row, $gap: 0px, $justify: flex-start) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: $justify;
+    gap: $gap;
+}
+// style for icon buttons (changes color on hover and slightly scales up)
+@mixin icon-btn {
+    color: $secondary-text-color;
+    transition: color 0.02s, transform 0.1s;
+
+    &:hover {
+        color: $primary-text-color;
+        transform: scale(1.04);
+    }
+}
+
+// Toggle button — hides checkbox, adds hover + active color to label
+@mixin toggle-btn($default-color: $secondary-text-color, $active-color: $primary-text-color) {
+    input[type="checkbox"] {
+        display: none;
+    }
+    label {
+        cursor: pointer;
+        color: $default-color;
+
+        &:hover {
+        color: $active-color;
+        }
+    }
+
+    input:checked ~ label {
+        color: $active-color;
+    }
+}
+
+// Toggle window — shows/hides a popup window and its backdrop
+@mixin toggle-window($window, $backdrop) {
+    #{$window} {
+        display: none;
+        z-index: 2;
+    }
+
+    #{$backdrop} {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+    }
+
+    input:checked ~ #{$backdrop} {
+        display: block;
+    }
+
+    input:checked ~ #{$window} {
+        display: block;
+    }
+}
+
+// Checkbox toggle for playlist check buttons
+@mixin check-btn {
+    display: none;
+    & ~ label .check {display: block;}
+    & ~ label .check-hover {display: none;}
+    &:checked ~ label .check {display: none;}
+    &:checked ~ label .check-hover {display: block;}
+}
+
+//for card text container on podcats for tou
+@mixin accent-card($color) {
+    background-color: rgba($color, 0.05); // 5% opacity
+    border-left: 3px solid rgba($color, 0.6); // 60% opacity
+    border-radius: 6px;
+    padding: 4px 0 7px 6px;
+}
+
+
+//for eoisodes for u text conainer
+@mixin bg-only($color) {
+    background-color: rgba($color, 0.05);
+    border-radius: 6px;
+    padding: 4px 6px 7px 6px;
+    border-left: none; // Explicitly ensures no border exists
+}
+
+
+//card number colors
+@mixin num-color($color) {
+  span:last-child {
+    color: $color;
+  }
+}
+
+
+
+//search card visual mobile 
+@mixin search-card($background-color) {
+    width: 170px;
+    height: 100px;
+    border-radius:$radius-main ;
+    background-color: $background-color;
+    overflow: hidden;
+    position: relative;
+
+    h4 {
+        position: absolute;
+        width: 95px;
+        height: 54px;
+        top: 20px;
+        left: 20px;
+        color:rgba(255, 255, 255, 1) ;
+        font-size:$font-size-large ;
+        font-weight:900px ;
+        z-index: 2;
+    }
+    img {
+        position: absolute;
+        width: 104.27px;
+        height: 104.27px;
+        top: 45px;
+        left: 80px;
+        border-radius: 5px;
+        rotate: 30deg;
+        z-index: 1;
+    }
+}
+
+//search card visual Desktop
+@mixin search-card-desktop($background-color) {
+    width: 170px;
+    height: 170px;
+    border-radius:$radius-main ;
+    background-color: $background-color;
+    overflow: hidden;
+    position: relative;
+
+    &:hover {
+        transform: scale(1.04);
+    }
+    
+    h4 {
+        position: absolute;
+        width: 95px;
+        height: 54px;
+        top: 20px;
+        left: 20px;
+        color:rgba(255, 255, 255, 1) ;
+        font-size:$font-size-large ;
+        font-weight:900px ;
+        z-index: 2;
+    }
+    img {
+        position: absolute;
+        width: 104.27px;
+        height: 104.27px;
+        top: 80px;
+        right: 10px;
+        border-radius: 5px;
+        rotate: 30deg;
+        z-index: 1;
+    }
+}
+
+//card stacked on top
+@mixin stacked-card($color) {
+    position: relative;
+    z-index: 1;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        left: 5%;
+        width: 90%;
+        height: 50%; // Keep it to the top half of the card only
+        border-radius: 12px; // Slightly more round than the image to show the curve
+        background-color: $color;
+        pointer-events: none;
+    }
+
+    // The furthest back layer
+    &::before {
+        top: -20px; 
+        opacity: 0.15;
+        transform: scale(0.85); // Shrink it more to show the "shoulders" of the curve
+        z-index: -2;
+    }
+
+    // The middle layer
+    &::after {
+        top: -6px;
+        opacity: 0.30;
+        transform: scale(0.92);
+        z-index: -1;
+    }
+
+    img {
+        position: relative;
+        z-index: 3;
+        border-radius: 8px;
+        display: block;
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,143 @@
+@use '../abstract/mixins' as *;
+@use '../universal components/components' as *;
+@use '../abstract/responsive' as *;
+@use '../abstract/variables' as *;
+
+// artist page
+
+
+
+
+// Artist Header
+.artist-image-header {
+    @include desktop {
+        @include artist-image-header();
+    }
+}
+
+
+
+// Artist navbar
+.artist-navbar {
+    @include desktop {
+        display: flex;
+        align-items: center;
+        // padding: 0 4.6rem;
+        height: 6rem;
+        border-bottom: 2px solid $Bg-Primary;
+        padding-left: 4.6rem;
+        padding-right: 1.6rem;
+        
+    }
+    
+}
+
+
+
+// Artist Navbar List
+.artist-navbar-list {
+
+        @include desktop {
+            display: flex;
+            column-gap: 5rem;
+            padding-right: 5rem;
+
+
+            a {
+            text-decoration: none;
+            }
+
+            button {
+            padding: 2.3rem 0.6rem;
+            color: $font-fg-secondary;
+            font-size: 1.4rem;
+            font-weight: 500;
+            }
+
+            .marked-artist-button {
+                border-bottom: 0.2rem solid #1ED760;
+            }
+        }
+        
+    }
+    
+    
+.most-played-list {
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+        width: 100%;
+         h2 {
+           color: $font-fg-primary;
+           font-size: 20px;
+           font-weight: 700; 
+           padding-top: 4rem;
+           padding-bottom: 2rem;
+        }
+    }
+   
+}   
+
+.artist-homepage-main-content {
+     @include desktop {
+        display: flex;
+        column-gap: 4.7rem;
+        padding-left: 2.5rem;
+        padding-right: 3.8rem; 
+     }
+}
+
+// Most Played Song
+.most-played-song {
+    @include desktop {
+        @include most-played-song ();
+    }
+}
+
+
+.artist-pick {
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        h2 {
+            color: $font-fg-primary;
+            font-size: 2rem;
+            font-weight: 700;
+            padding-top: 4rem;
+            padding-bottom: 1rem;
+        }
+        img {
+            width: 320px;
+        }
+    }
+}
+
+.artist-pick-card-container {
+    @include desktop {
+        display: flex;
+        
+        background-color: #18191E4D;
+        padding: 1.5rem 1.5rem 1rem 1.5rem;
+        column-gap: 1.5rem;
+        border-radius: 1rem;
+        h3 {
+            color: $font-fg-primary;
+            font-weight: 500;
+            font-size: 1.4rem;
+        }
+        .search-card-pin-doublelayer-container {
+            img {
+                height: 140px;
+                width: 140px;
+            }
+            .pin-card-layer1 {
+                height: 145px;
+                width: 130px;
+            }
+        }   
+        
+    }
+}
+

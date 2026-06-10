@@ -1,0 +1,91 @@
+@use "../abstracts/variables";
+@use "../base/reset";
+@use "../abstracts/mixins";
+@use "../layout/grid";
+
+
+
+.desktop-nav {
+    display: none;
+}
+
+.mobile-nav {
+    @include mixins.navbar;
+    height: 9.5rem;
+    justify-content: space-evenly;
+    background-color: lighten(variables.$background-color, 15%);
+    bottom: 0;
+
+    ul {
+        display: flex;
+        gap: 3.1rem;
+    }
+
+    li {
+        padding: 1.6rem 0.8rem;
+    }
+
+    img {
+        width: 100%;
+        max-width: 4.8rem;
+        height: auto;
+    }
+}
+
+@media (min-width: 39rem) {
+    .mobile-nav {
+        display: none;
+    }
+
+    .desktop-nav {
+        @include mixins.navbar;
+        height: 5.4rem;
+        justify-content: space-between;
+        background-color: variables.$background-color;
+        left: 0;
+        top: 0;
+        padding: 0rem 1rem;
+    }
+
+    ul {
+        display:flex;
+        gap: 1.5rem;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.1rem 0.8rem;
+
+      &:hover {
+        background-color: #202020;
+        border-radius: 1.2rem;
+      }
+    }
+
+    .leftnav {
+        gap: 11rem;
+    }
+
+    .search {
+        max-width: 12rem;
+        
+        input[type="search"] {
+            border: none;
+            outline: none;
+            background: none;
+            background-image: url(../../assets/icons/icons\ big.png);
+        }
+    }
+
+    img {
+        width: 100%;
+        max-width: 30rem;
+        height: auto;
+    }
+
+    img:hover {
+        filter: brightness(1.5);
+    }
+}

@@ -1,0 +1,296 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  
+}
+#podcast {
+  background-color: variables.$active_color;
+}
+#home {
+  background-color: black;
+}
+
+.podcast_sec {
+  background: linear-gradient(180deg, rgba(165, 96, 42, 0.47) 0%, rgba(6, 6, 6, 0.47) 100%);
+  display: flex;
+  gap: 10px;
+
+  .podcast_main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 30px;
+
+    .main_podcast_title {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      h1 {
+        color: variables.$primary_color;
+        letter-spacing: variables.$primary_spacing;
+        font-weight: 700;
+        font-size: 36px;
+      }
+      p {
+        color: variables.$primary_color;
+        letter-spacing: variables.$primary_spacing;
+        font-weight: 500;
+        font-size: 14px;
+      }
+      .podcast_btns {
+        display: flex;
+        gap: variables.$secondary_gap;
+
+        button {
+          border-radius: variables.$secondary_border_radius;
+          background-color: transparent;
+          border: 2px solid #89898940;
+          color: variables.$primary_color;
+          letter-spacing: variables.$primary_spacing;
+          font-weight: 400;
+          font-size: 14px;
+
+       }
+      }
+    }
+    .podcast_filters {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+
+        .title_pod p{
+          color: variables.$primary_color;
+          letter-spacing: variables.$primary_spacing;
+          font-weight: 700;
+          font-size: 20px;
+        }
+        .filters {
+          display: flex;
+          gap: 10px;
+          text-align: center;
+          align-items: center;
+          p {
+            color: variables.$primary_color;
+            letter-spacing: variables.$primary_spacing;
+            font-weight: 400;
+            font-size: 14px;
+          }
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+
+    .podcasts {
+      background: transparent;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .podcast {
+        display: flex;
+        gap: 16px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid variables.$border;
+
+        img {
+          width: 120px;
+          height: 120px;
+          object-fit: cover;
+          border-radius: 6px;
+        }
+        .podcast-info {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          color: variables.$text-main;
+        }
+        .podcast-header {
+
+          h3 {
+            font-size: 18px;
+            margin-bottom: 4px;
+          }
+
+          .date {
+            font-size: 14px;
+            color: variables.$text-secondary;
+          }
+        }
+      .description {
+        font-size: 14px;
+        color: variables.$text-secondary;
+        max-width: 700px;
+      }
+      .podcast-actions {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 10px;
+
+        button {
+          background: transparent;
+          border: none;
+          cursor: pointer;
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        .play {
+          background: variables.$accent;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            width: 16px;
+          }
+        }
+      }
+        }
+      }
+  
+
+  }
+    .cover {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 40px;
+      margin: 30px;
+
+      .cover_photo img {
+        width: 320px;
+        height: 320px;
+        border-radius: 10px;
+      }
+      .cover_info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h3 {
+            color: variables.$primary_color;
+            letter-spacing: variables.$primary_spacing;
+            font-weight: 700;
+            font-size: 20x;
+        }
+        .desc {
+          width: 320px;
+              p {
+                color: variables.$primary_color;
+                letter-spacing: variables.$primary_spacing;
+                font-weight: 200;
+                font-size: 10px;
+            }
+          }
+        }
+      .btns {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 350px;
+        gap: 20px;
+        button {
+          padding: 8px 16px;
+          border-radius: 999px;
+          border: 1px solid #2a2a2a;
+          background: transparent;
+          color: #b3b3b3;
+          font-size: 14px;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          &:hover {
+            border-color: #fff;
+            color: #fff;
+          }
+        }
+      }
+    }
+@media (max-width: 1210px) {
+  .cover {
+    display: none;
+  }
+} 
+@media (max-width: 768px) {
+  .podcast {
+    img {
+      width: 70px;
+      height: 70px;
+    }
+  }
+} 
+@media (max-width: 650px) {
+
+  .podcast_sec {
+    flex-direction: column;
+  }
+
+  .podcast_main {
+    margin: 15px !important;
+  }
+
+  .main_podcast_title {
+    h1 {
+      font-size: 26px !important;
+    }
+    p {
+      font-size: 13px;
+    }
+    .podcast_btns {
+      flex-wrap: wrap;
+    }
+  }
+  .podcast_filters {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .podcasts {
+    .podcast {
+      gap: 10px;
+      img {
+        max-width: 80px;
+        max-height: 80px;
+      }
+      .podcast-header {
+        h3 {
+          font-size: 10px;
+        }
+        .date {
+          font-size: 12px;
+        }
+      }
+      .description {
+        font-size: 10px;
+      }
+      .podcast-actions {
+        flex-wrap: wrap;
+        gap: 10px;
+        button img {
+          width: 18px;
+          height: 18px;
+        }
+        .play {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
+
+}
+}

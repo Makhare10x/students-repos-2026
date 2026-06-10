@@ -1,0 +1,82 @@
+@use "../abstracts/variables";
+
+@mixin auto-grid($min-width, $gap: 2.4rem) {
+    display: grid;
+    gap: $gap;
+    grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+}
+
+@mixin flex-col-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@mixin fluid-text($min-size, $max-size, $min-vw: 39rem, $max-vw: 120rem) {
+    $slope: ($max-size - $min-size) / ($max-vw - $min-vw);
+    $intersection: -1 * $min-vw * $slope + $min-size;
+    font-size: clamp(
+        #{$min-size},
+        calc(#{$intersection} + #{$slope * 100}vw),
+        #{$max-size}
+    );
+}
+
+
+// <!-- This is my section, JULIE-->
+@mixin fixed-layout ($bottom: 0, $left: 0, $right: 0) {
+    position: fixed;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+    z-index: 1000;
+}
+@mixin player-text-style ($color, $size: 1.4rem, $weight: 400, $lh: 100%) {
+        font-family: Satoshi;
+        font-weight: $weight;
+        color: $color;
+        font-size: $size;
+        line-height: $lh;
+        // letter-spacing: 3%;
+
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin icon-hover ($opacity: 0.6, $time: 0.3s) {
+    filter:grayscale(1);
+    opacity: $opacity;
+    transition: $time;
+    &:hover {
+        filter: grayscale(0);
+        opacity: 1;
+    }
+}
+
+// Search mixins
+
+@mixin card-text-style {
+    color: variables.$card-text-col;
+    font-weight: variables.$crd-txt-fnt-wght;
+    font-size: variables.$crd-fnt-size;
+    font-family: variables.$all-txt-font;
+    line-height: 1.2;
+    letter-spacing: -0.02em; 
+}
+@mixin main-title-style {
+    color: variables.$main-titl-col;
+    font-weight: variables.$main-titl-fnt-wght;
+    font-family: variables.$all-txt-font;
+    font-size: variables.$crd-fnt-size;
+    margin-bottom: 2rem;
+}
+@mixin section-text-style {
+    font-family: variables.$all-txt-font;
+    font-weight: variables.$section-titl-wght;
+    font-size: variables.$section-titl-font-size;
+    color: variables.$main-titl-col;
+}

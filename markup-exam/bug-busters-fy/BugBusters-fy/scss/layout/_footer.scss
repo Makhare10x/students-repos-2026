@@ -1,0 +1,198 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+@use "../components/cardRecent";
+
+.player {
+  padding-inline: 0.8rem;
+  button {
+    width: 4rem;
+    height: 4rem;
+  }
+  .card-recent {
+    background-color: transparent;
+    // white-space: wrap;
+  }
+  .player-wrapper,
+  .controllers,
+  .actions,
+  .metadata,
+  .utilities,
+  .track,
+  .track-control,
+  .volume-control {
+    @include mixins.flex-prop($align: center);
+  }
+
+  .player-container {
+    padding-inline: 0.8rem;
+    border-radius: 1rem;
+    background-color: variables.$bg-secondary-light;
+    .player-wrapper {
+      position: relative;
+    }
+  }
+  /*=================
+      Controlers
+  ==================*/
+  .controllers {
+    order: 1;
+    button {
+      display: none;
+      @include mixins.interactiveIcon(
+        $hoverColor: #1ed760,
+        $activeColor: variables.$bg-primary-desk
+      );
+    }
+    #play.show,
+    #pause.show {
+      display: block;
+    }
+    #pause,
+    #play {
+      color: variables.$bg-primary-desk;
+      background-color: #1ed760;
+      border-radius: 50%;
+    }
+  }
+  /*=================
+      Actions
+  ==================*/
+  .actions {
+    margin-left: auto;
+    button {
+      display: none;
+      @include mixins.interactiveIcon(
+        $hoverColor: #1ed760,
+        $activeColor: #1ed760
+      );
+    }
+    #add-to-playlist {
+      display: block;
+    }
+  }
+
+  /*=================
+      Media
+  ==================*/
+
+  .track {
+    .volume-control {
+      .item {
+        display: none;
+      }
+      #volumeIcon {
+        @include mixins.interactiveIcon(
+          $hoverColor: #1ed760,
+          $activeColor: variables.$bg-primary-desk
+        );
+      }
+    }
+    .track-control {
+      gap: 0.7rem;
+      .item {
+        display: none;
+      }
+      .current-time,
+      .duration {
+        width: 7rem;
+        text-align: center;
+      }
+      #progress {
+        display: block;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      // style input type range
+      .track-slider {
+        height: 0.2rem;
+        appearance: none;
+        background: #89898945;
+        border-radius: 0.3rem;
+        cursor: pointer;
+      }
+
+      .track-slider::-webkit-slider-thumb {
+        opacity: 0;
+      }
+    }
+  }
+  .media-info {
+    overflow: hidden;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 920px) {
+  .player {
+    padding-inline: 0;
+
+    .player-wrapper {
+      // position: relative;
+    }
+
+    /*=================
+      Controlers
+  ==================*/
+    .controllers {
+      order: -1;
+      button {
+        display: block;
+      }
+      #pause {
+        display: none;
+      }
+      #play {
+        display: none;
+      }
+    }
+    /*=================
+      Actions
+  ==================*/
+    .actions {
+      button {
+        // display: block;
+      }
+      #like {
+        display: block;
+      }
+    }
+
+    /*=================
+      Media
+  ==================*/
+    .track {
+      flex: 1;
+      min-width: 0;
+      .volume-control {
+        #volumeIcon {
+          display: block;
+        }
+      }
+      .track-control {
+        width: 100%;
+        .item {
+          display: block;
+        }
+        #progress {
+          position: static;
+        }
+      }
+    }
+    .media-info {
+      min-width: 23rem;
+      // width: inherit;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .player {
+    .actions {
+      button {
+        display: block;
+      }
+    }
+  }
+}

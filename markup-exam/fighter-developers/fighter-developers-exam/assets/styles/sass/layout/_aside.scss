@@ -1,0 +1,134 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../base/base" as *;
+@use "../base/reset" as *;
+@use "../components/tags" as *;
+@use "../components/nav-buttons" as *;
+
+.toggle-checkbox {
+    display: none;
+
+    &:checked+.aside {
+        width: 7.5rem;
+        max-width: 7.5rem;
+        padding: 1.1rem;
+
+        .aside__nav__list {
+
+            li:hover,
+            li.active {
+                background-color: transparent;
+            }
+
+            .nav-item {
+                opacity: 0;
+                max-width: 0;
+                overflow: hidden;
+            }
+        }
+    }
+
+    &:checked~header,
+    &:checked~main,
+    &:checked~footer {
+        left: $aside-width-m;
+    }
+}
+
+.aside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: $aside-width;
+    padding: 1.1rem;
+
+    .aside__nav__list {
+        a {
+            padding: 1rem 0 1rem 2rem;
+        }
+    }
+
+    &__nav {
+        width: 100%;
+        height: 100vh;
+    }
+
+    @media (max-width: 390px) {
+        display: none;
+    }
+}
+
+.right-aside {
+    position: fixed;
+    right: 1rem;
+    top: $header-height;
+    bottom: calc($footer-height + 1rem);
+    width: calc($right-aside-width - 1.5rem);
+    padding: 2rem;
+    border: 1px solid $tag-bg;
+    border-radius: 1rem;
+    display: none;
+
+    h4 {
+        @include layout-title-h4();
+    }
+
+    &__nav {
+        @include flex-align(space-between, center);
+        margin-bottom: 4.4rem;
+    }
+
+    &__buttons {
+        @include flex-align(flex-start, center);
+        gap: 3rem;
+
+        img {
+            transition: 0.3s;
+            cursor: pointer;
+            opacity: 0.5;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+#right-aside:target {
+    transition: 0.3s;
+    display: block;
+}
+
+#right-aside:target~header a[href="#right-aside"] img {
+    opacity: 1;
+}
+
+#right-aside:target~main {
+    right: $right-aside-width;
+}
+
+.friends-activity__list {
+    .friend-item {
+        @include flex-align(flex-start);
+        margin-bottom: 2.4rem;
+        cursor: pointer;
+
+        &__info {
+            margin-left: 1.2rem;
+        }
+
+        &__username {
+            @include layout-title-h5();
+            margin-bottom: 0.5rem;
+        }
+
+        &__status {
+            @include layout-title-h4();
+        }
+
+        &__artist {
+            color: $gray-color;
+        }
+    }
+}

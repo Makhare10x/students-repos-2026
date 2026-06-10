@@ -1,0 +1,77 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/* Page Layout */
+body {
+  display: grid;
+  grid-template-columns: 25.8rem 1fr;
+  grid-template-rows: 6.4rem 1fr 7.2rem;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main"
+    "sidebar  player";
+  height: calc(100vh - 2.3rem);
+  background-color: $color-bg-sidebar;
+  color: $color-text-primary;
+  font-family: $font-family-base;
+  overflow: hidden;
+  margin: 0.3rem 0.7rem 1rem 0.7rem;
+}
+
+/* Sidebar Zone */
+.sidebar {
+  grid-area: sidebar;
+  padding: 0.8rem;
+}
+
+/* Header Zone */
+.top-header {
+  grid-area: header;
+}
+
+/* Main Content Zone */
+.main-content {
+  grid-area: main;
+  overflow-y: auto;
+  border-radius: 1rem;
+  border: 1px solid $color-bg-player;
+  padding: 0.7rem;
+}
+
+/* Player Zone */
+
+.player-bar {
+  grid-area: player;
+  border-radius: 1rem;
+  margin-top: 0.4rem;
+  background-color: #333842;
+}
+
+@media (max-width: 1240px) {
+  html,
+  body {
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  .main-content {
+    border: none;
+    border-radius: 0;
+    padding: 1rem;
+    padding-bottom: 12rem;
+    height: 100vh;
+    height: 100dvh;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .player-bar {
+    margin-top: 0;
+    border-radius: 0.8rem;
+  }
+}

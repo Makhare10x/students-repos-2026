@@ -1,0 +1,23 @@
+@use '../abstract/variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body { font-family: "Satoshi", sans-serif; background-color: variables.$bg-main; }
+
+ul, ol { list-style: none; }
+
+a {
+  text-decoration: none;
+  font-style: inherit;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}

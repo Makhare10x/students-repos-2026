@@ -1,0 +1,45 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as m;
+
+.cards-wrapper{
+     display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-left: 16px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+    
+   
+    overflow-y: visible; 
+
+    &::-webkit-scrollbar { display: none; }
+}
+
+
+.card-title-wrap {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    font-size: v.$font-size-small;
+
+    span:first-child {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex: 1; 
+    }
+
+   
+    span:last-child {
+        flex-shrink: 0; 
+    }
+}
+
+.card-title-wrap span {
+   font-size: v.$font-size-small;
+   font-weight: v.$font-weight-regular;
+}

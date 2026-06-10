@@ -1,0 +1,249 @@
+// Sidebar Styles for Spotify Clone
+
+// Common Sidebar Properties (Left & Right)
+.sidebar-left,
+.sidebar-right {
+  &__library {
+    padding: $spacing-md $spacing-md;
+  }
+
+  &__library-title {
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+    color: $fg-primary;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: $fg-primary;
+    }
+  }
+}
+
+// Sidebar Navigation
+.sidebar-nav {
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: $spacing-xs;
+  }
+
+  &__item {
+    border-radius: $radius-sm;
+    transition: background-color $transition-fast;
+
+    &:hover {
+      background-color: $bg-hover;
+      .sidebar-nav__text {
+        color: $fg-primary;
+      }
+    }
+
+    &--active {
+      background-color: $bg-hover;
+
+      .sidebar-nav__text {
+        color: $fg-primary;
+        font-weight: $font-weight-bold;
+      }
+
+      .sidebar-nav__icon svg {
+        stroke: $fg-primary;
+        stroke-width: 3;
+      }
+
+      .sidebar-nav__icon--fill svg {
+        fill: $fg-primary;
+        stroke: none;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    padding: 12px $spacing-md;
+    color: $fg-secondary;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: currentColor;
+    }
+
+    &--fill svg {
+      fill: currentColor;
+      stroke: none;
+    }
+  }
+
+  &__text {
+    font-size: $font-size-md;
+    font-weight: $font-weight-medium;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__chevron {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: #898989;
+    opacity: 0.5;
+  }
+
+  &__link:hover &__chevron {
+    opacity: 1;
+  }
+}
+
+// Right Sidebar - Friends Activity
+.friends-activity {
+  padding: $spacing-md;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__title {
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+    color: $fg-primary;
+  }
+
+  &__icons {
+    display: flex;
+    gap: $spacing-xs;
+  }
+
+  .friends-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+
+  .friend-item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    cursor: pointer;
+
+    &:hover .friend-item__name {
+      text-decoration: underline;
+    }
+
+    &__avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      background-color: $bg-hover;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__info {
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    &__name {
+      font-size: $font-size-sm;
+      font-weight: $font-weight-bold;
+      color: $fg-primary;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &__track {
+      font-size: $font-size-xs;
+      color: $fg-secondary;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+// Friend avatar border colors
+.friend-item__avatar--red {
+  border: 2px solid #ed5a5a !important;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.friend-item__avatar--blue {
+  border: 2px solid #5aaced !important;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.friend-item__avatar--green {
+  border: 2px solid #5aed7b !important;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.friend-item__avatar--yellow {
+  border: 2px solid #ede85a !important;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.friend-item {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.friend-item__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.friend-item__time {
+  font-size: $font-size-xs;
+  color: $fg-tertiary;
+  flex-shrink: 0;
+}

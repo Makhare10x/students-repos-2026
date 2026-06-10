@@ -1,0 +1,410 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.main-content-home {
+  background-color: #060606;
+  padding: 15px 33px 46px 25px;
+  .top-nav {
+    margin-bottom: 28px;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  ul {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    list-style: none;
+  }
+  a {
+    padding: 8px 15px;
+    text-decoration: none;
+    color: rgba(224, 224, 224, 1);
+    background-color: rgba(32, 32, 32, 0.5);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  a:hover {
+    background: rgba(224, 224, 224, 1);
+    color: #111111;
+  }
+  .active-button a {
+    background-color: rgba(224, 224, 224, 1);
+    color: rgba(17, 17, 17, 1);
+    cursor: no-drop;
+  }
+
+  .icon-btn {
+    width: 21px;
+    height: 19px;
+    background-color: transparent;
+    cursor: pointer;
+    &:hover {
+      filter: brightness(60%);
+    }
+  }
+  .made-for-you {
+    width: 100%;
+    .content__nav {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 22px;
+      h2 {
+        font-size: 20px;
+        font-weight: 700;
+        color: rgba(224, 224, 224, 1);
+        &:hover {
+          @include mixins.title-hover;
+        }
+      }
+      &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        &__link img {
+          cursor: pointer;
+          &:hover {
+            @include mixins.title-hover;
+          }
+        }
+        &__link__item {
+          filter: brightness(50%);
+          margin-right: 15px;
+        }
+      }
+    }
+
+    .card-grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      gap: 11px;
+      margin-bottom: 32px;
+      overflow-y: auto;
+      scrollbar-width: none;
+    }
+    .card {
+      width: 170px;
+      height: 254px;
+      transition: all 0.2s ease-out;
+      p {
+        font-size: 12px;
+        font-weight: 400;
+
+        color: rgba(137, 137, 137, 1);
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        line-clamp: 2;
+        overflow: hidden;
+        &:hover {
+          @include mixins.title-hover;
+        }
+      }
+    }
+
+    .card__shadow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1px;
+      height: 181px;
+      margin-bottom: 6px;
+      &:hover {
+        @include mixins.title-hover;
+      }
+
+      &__smallrct {
+        @include mixins.light-shadow;
+        background: rgba(206, 110, 154, 0.15);
+        &__mix1 {
+          @include mixins.light-shadow;
+          background: rgba(149, 230, 211, 0.15);
+        }
+        &__mix2 {
+          @include mixins.light-shadow;
+          background: rgba(244, 184, 189, 0.15);
+        }
+        &__mix3 {
+          @include mixins.light-shadow;
+          background: rgba(195, 231, 183, 0.15);
+        }
+        &__mix4 {
+          @include mixins.light-shadow;
+          background: rgba(243, 127, 166, 0.15);
+        }
+        &__mix6 {
+          @include mixins.light-shadow;
+          background: rgba(160, 190, 200, 0.15);
+        }
+        &__nirvana {
+          @include mixins.light-shadow;
+          background: rgba(253, 216, 125, 0.15);
+        }
+        &__fallout {
+          @include mixins.light-shadow;
+          background: rgba(212, 178, 169, 0.15);
+        }
+        &__rockmix {
+          @include mixins.light-shadow;
+          background: rgba(204, 246, 101, 0.15);
+        }
+        &__chillmix {
+          @include mixins.light-shadow;
+          background: rgba(249, 231, 44, 0.15);
+        }
+        &__popmix {
+          @include mixins.light-shadow;
+          background: rgba(155, 240, 226, 0.15);
+        }
+        &__punkmix {
+          @include mixins.light-shadow;
+          background: rgba(111, 134, 255, 0.15);
+        }
+        &__happymix {
+          @include mixins.light-shadow;
+          background: rgba(255, 203, 212, 0.15);
+        }
+        &__topmix {
+          @include mixins.light-shadow;
+          background: rgba(255, 198, 104, 0.15);
+        }
+        &__upbeatmix {
+          @include mixins.light-shadow;
+          background: rgba(39, 133, 107, 0.15);
+        }
+        &__60smix {
+          @include mixins.light-shadow;
+          background: rgba(221, 19, 139, 0.15);
+        }
+      }
+
+      &__bigrct {
+        @include mixins.dark-shadow;
+        background: rgba(206, 110, 154, 0.3);
+        &__mix1 {
+          @include mixins.dark-shadow;
+          background: rgba(149, 230, 211, 0.3);
+        }
+        &__mix2 {
+          @include mixins.dark-shadow;
+          background: rgba(244, 184, 189, 0.3);
+        }
+        &__mix3 {
+          @include mixins.dark-shadow;
+          background: rgba(195, 231, 183, 0.3);
+        }
+        &__mix4 {
+          @include mixins.dark-shadow;
+          background: rgba(243, 127, 166, 0.3);
+        }
+        &__mix6 {
+          @include mixins.dark-shadow;
+          background: rgba(160, 190, 200, 0.3);
+        }
+        &__nirvana {
+          @include mixins.dark-shadow;
+          background: rgba(253, 216, 125, 0.3);
+        }
+        &__fallout {
+          @include mixins.dark-shadow;
+          background: rgba(212, 178, 169, 0.3);
+        }
+        &__rockmix {
+          @include mixins.dark-shadow;
+          background: rgba(204, 246, 101, 0.3);
+        }
+        &__chillmix {
+          @include mixins.dark-shadow;
+          background: rgba(249, 231, 44, 0.3);
+        }
+        &__popmix {
+          @include mixins.dark-shadow;
+          background: rgba(155, 240, 226, 0.3);
+        }
+        &__punkmix {
+          @include mixins.dark-shadow;
+          background: rgba(111, 134, 255, 0.3);
+        }
+        &__happymix {
+          @include mixins.dark-shadow;
+          background: rgba(255, 203, 212, 0.3);
+        }
+        &__topmix {
+          @include mixins.dark-shadow;
+          background: rgba(255, 198, 104, 0.3);
+        }
+        &__upbeatmix {
+          @include mixins.dark-shadow;
+          background: rgba(39, 133, 107, 0.3);
+        }
+        &__60smix {
+          @include mixins.dark-shadow;
+          background: rgba(221, 19, 139, 0.3);
+        }
+      }
+
+      img {
+        width: 170px;
+        border-radius: 7.25px;
+      }
+    }
+    .title-number {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      h3 {
+        width: 19px;
+        color: rgba(224, 224, 224, 1);
+        font-size: 14px;
+        font-weight: 500;
+        width: 100px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &:hover {
+          @include mixins.title-hover;
+        }
+      }
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        &:hover {
+          @include mixins.title-hover;
+        }
+      }
+    }
+    .number-color-red {
+      color: rgba(206, 110, 154, 1);
+    }
+    .number-color-green {
+      color: rgba(149, 230, 211, 1);
+    }
+    .color-number-lightred {
+      color: rgba(244, 184, 189, 1);
+    }
+    .color-number-lightgreen {
+      color: rgba(195, 231, 183, 1);
+    }
+    .color-number-darkred {
+      color: rgba(243, 127, 166, 1);
+    }
+    .color-number-darkgreen {
+      color: rgba(160, 190, 200, 1);
+    }
+    .color-number-yellow {
+      color: rgba(253, 216, 125, 1);
+    }
+    .color-number-lightyellow {
+      color: rgba(212, 178, 169, 1);
+    }
+    .number-color-21 {
+      color: rgba(204, 246, 101, 1);
+    }
+    .number-color-22 {
+      color: rgba(249, 231, 44, 1);
+    }
+    .number-color-23 {
+      color: rgba(155, 240, 226, 1);
+    }
+    .number-color-24 {
+      color: rgba(111, 134, 255, 1);
+    }
+    .number-color-25 {
+      color: rgba(255, 203, 212, 1);
+    }
+    .number-color-26 {
+      color: rgba(255, 198, 104, 1);
+    }
+    .number-color-27 {
+      color: rgba(39, 133, 107, 1);
+    }
+    .number-color-28 {
+      color: rgba(221, 19, 139, 1);
+    }
+    .card-slide {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      overflow-y: auto;
+      scrollbar-width: none;
+      flex-wrap: nowrap;
+      gap: 11px;
+      img {
+        border-radius: 50%;
+        &:hover {
+          @include mixins.title-hover;
+        }
+      }
+    }
+  }
+  .mobile-content {
+    display: none;
+  }
+  @media (max-width: 576px) {
+    .mobile-hide {
+      display: none;
+    }
+    .mobile-content {
+      display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+      align-items: center;
+
+      .mobile-card {
+        width: 175px;
+        height: 58px;
+        background: rgba(32, 32, 32, 1);
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        cursor: pointer;
+        img {
+          border-radius: 3px;
+          padding: 8px 6px 7px 8px;
+          &:hover {
+            @include mixins.title-hover;
+          }
+        }
+      }
+      .mobile-card-text {
+        align-items: center;
+        gap: 1px;
+      }
+      .mobile-card-text h4 {
+        width: 120px;
+        height: 19px;
+        color: rgba(224, 224, 224, 1);
+        font-size: 14px;
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &:hover {
+          @include mixins.title-hover;
+        }
+      }
+      .mobile-card-text p {
+        width: 64px;
+        height: 19px;
+        font-size: 14px;
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:hover {
+          transform: scale(1.1);
+          color: aqua;
+        }
+      }
+    }
+  }
+}

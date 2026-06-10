@@ -1,0 +1,42 @@
+/* =====================
+  App Layout
+===================== */
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../layout/top-bar" as *;
+@use "../layout/side-bar" as *;
+
+@use "../abstracts/variables" as *;
+
+/* =====================
+  App Layout
+===================== */
+
+.app {
+  display: grid;
+  grid-template-columns: $sidebar-width 1fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+    overflow: hidden;
+}
+
+.content-area {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+ overflow: hidden;
+}
+
+@include mobile {
+  .app {
+    display: block;
+    height: 100dvh;
+   
+  }
+
+  .content-area {
+    height: 100dvh;
+    
+  }
+}

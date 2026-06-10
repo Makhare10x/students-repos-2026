@@ -1,0 +1,53 @@
+@use 'variables' as *;
+
+.sidebar {
+    background-color: $primary-background;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    color: $light-font-color;
+    font-family: "Satoshi", sans-serif;
+    font-size: 14px;
+}
+
+.sidebar-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-item {
+  margin-bottom: 10px;
+}
+
+.sidebar-item a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-item a:hover, .sidebar-top:hover{
+  background-color: rgba(255, 255, 255, 0.08); 
+}
+
+.sidebar-item-icon-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+

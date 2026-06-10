@@ -1,0 +1,57 @@
+@mixin grid-font {
+    font-family: "satoshi", "sans-sarif";
+    color: #E0E0E0;
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+$gray-color: #202020;
+
+
+
+
+
+.main-container {
+    position: relative;
+}
+
+
+.left-side-bar {
+    width: 320px;
+    height: 100%;
+    background-color: #060606;
+
+    position: absolute;
+    right: 0;
+    z-index: 1;
+
+    @include grid-font;
+
+    border: 1px solid $gray-color;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.player {
+    z-index: 2;
+}
+
+
+
+.left-bar-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.left-side-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.left-side-bar-img {
+    padding: 5px 15px;
+}

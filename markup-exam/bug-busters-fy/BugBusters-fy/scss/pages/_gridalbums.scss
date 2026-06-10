@@ -1,0 +1,263 @@
+@use "../layout/pageLayout";
+@use "../layout/header";
+@use "../layout/sideNavbar";
+@use "../layout/sidePopup";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+@use "../components/cardMain";
+
+.hero-section {
+  z-index: 1;
+  position: sticky;
+  @include mixins.flex-prop($justify: space-between, $align: flex-end);
+  max-width: 100%;
+  height: 50%;
+  position: sticky;
+  top: 0;
+  width: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #000 -15%, transparent 90%);
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center 20%;
+    top: 0rem;
+  }
+
+  .hero-heading {
+    @include mixins.flex-prop(2rem, $direction: column);
+    color: variables.$color-active-desk;
+    z-index: 2;
+    margin: 0 0 3.4rem 3.7rem;
+
+    h1 {
+      font-size: 5rem;
+      font-weight: 900;
+    }
+  }
+
+  .hero-nav {
+    button {
+      display: none;
+      &:first-child,
+      &:last-child {
+        display: flex;
+      }
+    }
+    @include mixins.flex-prop(1.4rem);
+    z-index: 2;
+    margin: 0 3.4rem 3.3rem 0;
+
+    .follow-btn {
+      color: variables.$color-active-desk;
+      transition: 0.3s ease;
+      padding: 1rem 2.5rem;
+
+      &:hover {
+        color: white;
+        background-color: rgba(137, 137, 137, 25%);
+        border-radius: 4.4rem;
+      }
+    }
+
+    .play-btn {
+      @include mixins.flex-prop($align: center, $justify: center);
+      width: 3.8rem;
+      height: 3.8rem;
+      border: none;
+      border-radius: 50%;
+      background-color: #1ed760;
+
+      svg {
+        margin-left: 0.3rem;
+      }
+    }
+  }
+}
+.artist-home {
+  position: relative;
+
+  .library-main-desk {
+    position: relative;
+    z-index: -1;
+  }
+  .card-wrapper {
+    position: relative;
+    z-index: -1;
+    row-gap: 2rem;
+    padding-top: 4rem;
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 50%;
+    position: sticky;
+    background: #060606;
+
+    border-bottom: 0.1rem solid #646464bd;
+    padding: 1rem 1.6rem 1rem 4.6rem;
+    .navigation {
+      li:nth-child(4),
+      li:nth-child(5),
+      li:nth-child(6),
+      li:nth-child(7) {
+        display: none;
+      }
+      justify-content: space-around;
+      @include mixins.flex-prop(
+        $gap: clamp(1rem, -0.075rem + 4.585vw, 5rem),
+        $align: center,
+        $direction: row
+      );
+      font-size: 1.4rem;
+      svg {
+        width: 4rem;
+        height: 4rem;
+      }
+
+      li {
+        position: relative;
+        a {
+          display: inline-block;
+          text-decoration: none;
+          color: #898989;
+          font-size: 1.4rem;
+          font-weight: 700;
+          padding: 1.5rem 0;
+          border-bottom: 0.3rem solid transparent;
+          margin-bottom: -0.1rem;
+          transition:
+            color 0.4s,
+            border-color 0.2s;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -1.1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: #1ed760;
+            transition: width 0.3s;
+          }
+
+          &:hover::after,
+          &.active::after {
+            width: 100%;
+            box-shadow:
+              0 0 6px #1ed760,
+              0 0 14px #1ed760,
+              0 0 30px #1ed760;
+          }
+        }
+      }
+
+      .searchbox {
+        @include mixins.flex-prop(1rem, $direction: row-reverse);
+
+        input {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .menu-view {
+    align-content: center;
+    display: none;
+  }
+
+  .most-played,
+  .popular-played {
+    padding: 4rem 0 4rem 2.5rem;
+    h2 {
+      margin-bottom: 1rem;
+      color: variables.$color-active-desk;
+      font-size: 2rem;
+    }
+  }
+
+  .main-content-wrapper {
+    padding: 1.5rem;
+    @include mixins.flex-prop($justify: space-between);
+    gap: 3rem;
+  }
+}
+
+// *==============media============================
+
+@media (min-width: 768px) {
+  .hero-section {
+    .hero-nav button {
+      display: flex;
+    }
+  }
+  .artist-home {
+    .main-content-wrapper {
+      .badge {
+        display: flex;
+      }
+    }
+
+    .main-nav {
+      .navigation {
+        justify-content: flex-start;
+
+        li:nth-child(4),
+        li:nth-child(5),
+        li:nth-child(6),
+        li:nth-child(7) {
+          display: flex;
+        }
+
+        @include mixins.flex-prop(5rem, $align: center, $direction: row);
+      }
+      .menu-view {
+        button {
+          position: relative;
+        }
+
+        align-content: center;
+        display: block;
+        button::after {
+          content: "";
+          position: absolute;
+          bottom: -1.8rem;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 2px;
+          background: #1ed760;
+          transition: width 0.3s;
+        }
+        button:hover::after,
+        button.active::after {
+          width: 100%;
+          box-shadow:
+            0 0 6px #1ed760,
+            0 0 14px #1ed760,
+            0 0 30px #1ed760;
+        }
+      }
+    }
+  }
+}

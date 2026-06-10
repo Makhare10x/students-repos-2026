@@ -1,0 +1,261 @@
+@use "../abstracts/default" as d;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+/* Wrapper */
+.library-page__topbar {
+  @include m.flex-between;
+  margin-bottom: 3rem;
+}
+
+/* Left Controls */
+.library-page {
+  &__controls {
+    @include m.flex-align(2rem);
+  }
+  @media (max-width: 1480px) {
+    &__sort {
+      order: 4;
+    }
+    &__group {
+      order: 3;
+    }
+    &__icon-btn {
+      order: 5;
+    }
+  }
+}
+
+/* Sort & Group (icon + text) */
+.library-page__sort,
+.library-page__group {
+  @include m.flex-align(0.6rem);
+  cursor: pointer;
+}
+.library-page {
+  &__icon-btn {
+    @include m.icon-btn;
+  }
+  &__icon-btn.btn-hide-desktop {
+    display: none;
+    @media (max-width: 1480px) {
+      display: block;
+    }
+  }
+  &__icon-btn.btn-hide-mobile {
+    @media (max-width: 1480px) {
+      display: none;
+    }
+  }
+  &__add-btn {
+    @media (max-width: 1480px) {
+      display: none;
+    }
+  }
+}
+.library-page__sort-label,
+.library-page__group-label {
+  font-size: v.$text-sm;
+  color: v.$color-text-secondary;
+}
+
+/* Active View Button */
+.library-page__view-btn.is-active {
+  background-color: v.$color-bg-hover;
+  border-radius: v.$radius-sm;
+}
+
+/*** library-section starts here ***/
+
+.library-section {
+  @media (max-width: 1480px) {
+    display: none;
+  }
+}
+.library-section__cards {
+  display: flex;
+  flex-wrap: wrap;
+  // gap: 1.1rem;
+}
+
+/* Card */
+.library-card {
+  @include m.card;
+  margin: 0 1.1rem 5rem 1.1rem;
+  min-width: 17rem;
+}
+
+/* Image Block */
+.library-card__image {
+  position: relative;
+  margin-bottom: 0.6rem;
+
+  img {
+    @include m.image-cover;
+    border-radius: v.$radius-lg;
+  }
+}
+
+/* Pin */
+.library-card__pin {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: v.$color-bg-secondary;
+
+  @include m.flex-center;
+
+  img {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+/* text */
+.library-card__header {
+  @include m.flex-between;
+  margin-bottom: 0.8rem;
+}
+
+.library-card__title {
+  font-weight: 500;
+  font-size: v.$text-sm;
+  color: v.$color-text-primary;
+}
+
+.library-card__count {
+  font-size: v.$text-sm;
+  color: v.$color-text-secondary;
+}
+
+.library-card__description {
+  font-size: v.$text-xs;
+  color: v.$color-text-secondary;
+}
+.aside-wrapper.active {
+  background-color: v.$color-bg-library;
+}
+.mobile-version-search-page {
+  display: none;
+}
+.mobile-version-library-section {
+  display: none;
+}
+
+// media >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+@media (max-width: 1480px) {
+  .mobile-version-search-page {
+    display: flex;
+  }
+  .mobile-version-library-section {
+    display: block;
+  }
+
+  .playlist-dropbox {
+    &__dropdown-wrapper {
+      margin-bottom: 2.7rem;
+    }
+    &__dropdown-wrapper.active &__arrow {
+      transform: rotate(90deg);
+    }
+    &__music-list {
+      display: flex;
+      position: relative;
+      z-index: 10;
+      overflow: scroll;
+      .library-card {
+        display: block;
+      }
+    }
+    &__music-list.hidden {
+      display: none;
+    }
+    &__music-list.mobile-list-position {
+      flex-direction: column;
+      overflow-x: hidden !important;
+
+      .library-card {
+        display: none;
+      }
+    }
+    &__dropdown-wrapper.active &__music-list {
+      display: flex;
+      overflow-x: scroll;
+    }
+    &__dropbox-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid v.$color-border;
+      padding-bottom: 2.7rem;
+      cursor: pointer;
+    }
+    &__dropbox-wrapper.active &__music-list {
+      display: none;
+    }
+    &__arrow {
+      transition: transform 0.3s ease;
+    }
+
+    &__box-name {
+      h3 {
+        @include m.important-text;
+      }
+    }
+  }
+  .library-page {
+    &__icon-btn.btn-hide-desktop {
+      display: flex;
+      .menu-btn {
+        display: none;
+      }
+    }
+    &__icon-btn.btn-hide-desktop.active {
+      .grid-btn {
+        display: none;
+      }
+      .menu-btn {
+        display: block;
+      }
+    }
+  }
+  .music-lists-wrapper {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.7rem;
+    div {
+      margin-right: 2.5rem;
+    }
+    .music-image {
+      border-radius: v.$radius-md;
+      overflow: hidden;
+      img {
+        width: 8rem;
+      }
+    }
+    p {
+      font-size: 1.4rem;
+      color: v.$color-text-primary;
+    }
+  }
+
+  .mark-icon {
+    cursor: pointer;
+    .pin-passive {
+      display: none;
+    }
+  }
+  .mark-icon.active {
+    .pin-passive {
+      display: block;
+    }
+    .pin-active {
+      display: none;
+    }
+  }
+}

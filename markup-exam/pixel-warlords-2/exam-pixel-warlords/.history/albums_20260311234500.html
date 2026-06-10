@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>artist-albums</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="spotify-container">
+  <!-- sidebar -->
+  <aside class="sidebar">
+    <nav class="nav-links">
+      <div class="nav-item active"><a href="library.html" class="icon-home"><img src="assets/img/MyLibrary.png" alt="MyLibrary">My Library</a></div>
+      <div class="nav-item"><a href="#" class="icon-search"><img src="assets/img/Pins.png" alt="Pins">Pins</a></div>
+      <div class="nav-item"><a href="song.html" class="icon-library"><img src="assets/img/Playlists.png" alt="Playlists">Playlists</a></div>
+      <div class="nav-item active"><a href="#" class="icon-home"><img src="assets/img/Likedsongs.png" alt="Likedsongs">Liked songs</a></div>
+      <div class="nav-item"><a href="#" class="icon-search"><img src="assets/img/Saves.png" alt="Saves">Saves</a></div>
+      <div class="nav-item"><a href="albums.html" class="icon-library"><img src="assets/img/Albums.png" alt="Albums">Albums</a></div>
+      <div class="nav-item active"><a href="#" class="icon-home"><img src="assets/img/Folders.png" alt="Folders">Folders</a></div>
+      <div class="nav-item"><a href="#" class="icon-search"><img src="assets/img/Podcasts.png" alt="Podcasts">Podcasts</a></div>
+      <div class="nav-item"><a href="#" class="icon-library"><img src="assets/img/Audiobooks.png" alt="Audiobooks">Audiobooks</a></div>
+      <div class="nav-item"><a href="artist.html" class="icon-library"><img src="assets/img/Artists.png" alt="Artists">Artists</a></div>
+      
+    </nav>
+  </aside>
+
+  <!-- main content -->
+  <main class="main-content">
+    <header class="header">
+      <div class="top-nav-links">
+        <ul class="top-left-nav-list">
+          <li><a href="index.html"><img src="assets/img/home.png" alt="home">Home</a></li>
+          <li><img src="assets/img/Discover.png" alt="Discover">Discover</li>
+          <li><a href="search.html"><img src="assets/img/Search.png" alt="Search">Search</a></li>
+        </ul>
+        <input type="checkbox" id="toggle-theme" style="display: none;">
+        <ul class="top-right-nav-list">
+          <li><img src="assets/img/iconsbig.png" alt="iconsbig"></li>
+          <li><img src="assets/img/lock.png" alt="lock"></li>
+          <li><label for="toggle-theme"><img src="assets/img/friends.png" alt="friends"></label></li>
+          <li><img src="assets/img/settings.png" alt="settings"></li>
+          <li><img src="assets/img/Sprite-eyes.png" alt="Sprite"></li>
+        </ul>
+      </div>
+      <!-- <div class="top-nav-links">
+        <ul class="bottom-left-nav-list">
+          <li><a href="#">All</a></li>
+          <li><a href="#">Music</a></li>
+          <li><a href="#">Podcasts</a></li>
+          <li><a href="#">Audiobooks</a></li>
+        </ul>
+        <div class="bottom-right-nav-list">
+          <a href="#"><img src="assets/img/pc-home-add.png" alt="pc-home-add"></a>
+        </div>
+      </div> -->
+    </header>
+    <section class="grid-section">
+      <div class="made-for-you-action">
+        <!-- <h2>Recent searches</h2> -->
+        <ul>
+          <!-- <li><a href="#"><img src="assets/img/arrow-left.png" alt="arrow-left"></a></li>
+          <li><a href="#"><img src="assets/img/arrow-right.png" alt="arrow-right"></a></li> -->
+          <!-- <li><a href="#"><img src="assets/img/icons-dots.png" alt="icons-dots"></a></li> -->
+        </ul>
+      </div>
+
+      <!-- aside bar friends activity -->
+      <div class="hidden-sidebar">
+        <div class="aside-hidden-sidebar">
+          <aside class="friends-sidebar" id="friends-sidebar">
+            <div class="friends-header">
+              <h3>Friends Activity</h3>
+              <div class="header-icons">
+                <img src="assets/img/lock.png" alt="Add" class="icon-small">
+                <span id="close-friends" class="close-icon">&times;</span>
+              </div>
+            </div>
+      
+            <div class="friends-list">
+              <!-- friends active equalizer animation -->
+              <div class="friend-card">
+                <div class="avatar-container">
+                  <img src="assets/img/P1.png" alt="Avatar" class="pixel-avatar">
+                </div>
+                <div class="friend-details">
+                  <span class="username">FriendlyMusicListener</span>
+                  <div class="status">
+                    <div class="playing-icon"><span></span><span></span><span></span></div>
+                    <span class="track">Goosebumps • Travis Scott</span>
+                  </div>
+                </div>
+              </div>
+              <div class="friend-card">
+                <div class="avatar-container">
+                  <img src="assets/img/P2.png" alt="Avatar" class="pixel-avatar">
+                </div>
+                <div class="friend-details">
+                  <span class="username">FriendlyMusicListener</span>
+                  <div class="status">
+                    <div class="playing-icon"><span></span><span></span><span></span></div>
+                    <span class="track">Goosebumps • Travis Scott</span>
+                  </div>
+                </div>
+              </div>
+              <div class="friend-card">
+                <div class="avatar-container">
+                  <img src="assets/img/P3.png" alt="Avatar" class="pixel-avatar">
+                </div>
+                <div class="friend-details">
+                  <span class="username">FriendlyMusicListener</span>
+                  <div class="status">
+                    <div class="playing-icon"><span></span><span></span><span></span></div>
+                    <span class="track">Goosebumps • Travis Scott</span>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- friends active 1h ago -->
+              <div class="friend-card">
+                <div class="avatar-container">
+                  <img src="assets/img/P6.png" alt="Avatar" class="pixel-avatar">
+                </div>
+                <div class="friend-details">
+                  <span class="username">MusicEnthusiast</span>
+                  <div class="status">
+                    <span class="time-ago">1h</span>
+                    <span class="track">would he • joji</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- <div class="cover-artist">
+        <img src="assets/img/artist/cover-artist.avif" alt="" style="width: 100%">
+      </div> -->
+      <div class="artist-banner">
+        <!-- left side name and listeners -->
+        <div class="artist-info">
+          <span></span>
+          <h1>Daft Punk</h1>
+          <p>20,795,080 monthly listeners</p>
+        </div>
+      
+        <!-- section action -->
+        <div class="artist-actions">
+          <!-- <button class="play-btn">▶</button> -->
+          <button class="play-btn"><img src="assets/img/artist/play.png" alt="play"></button>
+          <button class="follow-btn">Follow</button>
+          <button class="add-btn"><img src="assets/img/artist/add.png" alt="add"></button>
+          <button class="plus-btn"><img src="assets/img/artist/plus.png" alt="plus"></button>
+          <button class="dot"><img src="assets/img/artist/dot.png" alt="dot"></button>
+        </div>
+      </div>
+
+      <div class="artist-navigation">
+        <!-- <h2>
+          Browse all
+        </h2>
+        <h3>Discover</h3> -->
+        <ul class="artist-navigation-links">
+          <li><a href="artist.html">Home</a></li>
+          <li><a href="albums.html">Albums</a></li>
+          <li><a href="#">Singles and EPs</a></li>
+          <li><a href="#">Compilattions</a></li>
+          <li><a href="#">Merch</a></li>
+          <li><a href="artist-about.html">About</a></li>
+          <li><a href="#">Features & More</a></li>
+          <li><a href="#"><img src="assets/img/artist/search.png" alt="search"></a></li>
+          <!-- <div class="album-action">
+            <img src="assets/img/artist-album/show-icon1.png" alt="show-icon1">
+            <img src="assets/img/artist-album/show-icon2.png" alt="show-icon2">
+          </div> -->
+        </ul>
+        <div class="hr">
+          <div class="hr-line"></div>
+        </div>    
+      </div>
+      <div class="card-grid-album">
+        <div class="album-item">
+            <img src="assets/img/artist-album/art-album-1.png" alt="art-album-1">
+            <div class="album-item-title">
+              <strong>Random Access...</strong>
+              <span>22</span>
+          </div>
+          <p>2023</p>
+        </div>
+
+        <div class="album-item">
+          <img src="assets/img/artist-album/art-album-2.png" alt="art-album-2">
+          <div class="album-item-title">
+              <strong>Random Access...</strong>
+              <span>22</span>
+          </div>
+          <p>2013</p>
+        </div>
+
+        <div class="album-item">
+          <img src="assets/img/artist-album/art-album-3.png" alt="art-album-3">
+          <div class="album-item-title">
+              <strong>Random Access...</strong>
+              <span>22</span>
+          </div>
+          <p>2023</p>
+        </div>
+        <div class="album-item">
+          <img src="assets/img/artist-album/art-album-4.png" alt="art-album-4"></div>
+        <div class="album-item"><img src="assets/img/artist-album/art-album-5.png" alt="art-album-5">
+        </div>
+        <div class="album-item">
+          <img src="assets/img/artist-album/art-album-6.png" alt="art-album-6"></div>
+        <div class="album-item"><img src="assets/img/artist-album/art-album-7.png" alt="art-album-7">
+        </div>
+        <div class="album-item">
+          <img src="assets/img/artist-album/art-album-8.png" alt="art-album-8"></div>
+        <div class="album-item"><img src="assets/img/artist-album/art-album-5.png" alt="art-album-5">
+        </div>
+        <div class="album-item">
+          <img src="assets/img/artist-album/art-album-5.png" alt="art-album-5">
+        </div>
+        <div class="album-item">
+          <img src="assets/img/artist-album/art-album-5.png" alt="art-album-5">
+        </div>
+        <div class="album-item">
+          <img src="assets/img/artist-album/art-album-5.png" alt="art-album-5">
+        </div>
+      </div>
+      
+    </section>
+  </main>
+  <!-- player -->
+  <footer class="player-bar">
+    <div class="now-playing">
+      <ul>
+        <li><img src="assets/img/playericons/pl1.png" alt="pl1"></li>
+        <li><img src="assets/img/playericons/pl2.png" alt="pl2"></li>
+        <li><img src="assets/img/playericons/pl3.png" alt="pl3"></li>
+        <li><img src="assets/img/playericons/pl4.png" alt="pl4"></li>
+        <li><img src="assets/img/playericons/pl5.png" alt="pl5"></li>
+        <li><span>2:23</span></li>
+        <li><img src="assets/img/playericons/pl6.png" alt="pl6"></li>
+        <li><span>4:45</span></li>
+        <li><img src="assets/img/playericons/pl7.png" alt="pl7"></li>
+        <li><img src="assets/img/playericons/pl8.png" alt="pl8"></li>
+        <li><img src="assets/img/playericons/pl9.png" alt="pl9"></li>
+        <li><img src="assets/img/playericons/pl10.png" alt="pl10"></li>
+        <li><img src="assets/img/playericons/pl11.png" alt="pl11"></li>
+        <li><img src="assets/img/playericons/pl12.png" alt="pl12"></li>
+        <li><img src="assets/img/playericons/pl13.png" alt="pl13"></li>
+        <li><img src="assets/img/playericons/pl14.png" alt="pl14"></li>
+        <li><img src="assets/img/playericons/pl15.png" alt="pl15"></li>
+        <li><img src="assets/img/playericons/pc-queue.png" alt="pc-queu"></li>
+      </ul>
+    </div>
+    <!-- <div class="controls"><img src="assets/img/player2.png" alt="player2"></div> -->
+    <!-- <div class="volume"><img src="assets/img/player3.png" alt="player3"></div> -->
+    <!-- <div class="tmp" style="display: flex; justify-content: space-between; align-items:center;">
+      <div class="">Current Song</div>
+      <div class="">Play / Pause</div>
+      <div class="">Volume</div>
+    </div> -->
+  </footer>
+</div>
+  
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "spotify_ana",
+  "version": "1.0.0",
+  "description": "front end task",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "yes",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
+}

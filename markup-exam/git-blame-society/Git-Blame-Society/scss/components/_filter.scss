@@ -1,0 +1,167 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+
+// Home Filter
+
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 1.1rem 0 1.6rem 0 ;
+}
+
+.filter-btn {
+@include m.filter-chip;
+}
+
+.filters {
+display: flex;
+gap: 1rem;
+
+@media (max-width:v.$bp-desktop){
+    .filter-btn:first-child{
+        display:none;
+    }
+}
+}
+
+// Filter checkbox menu
+
+#filter-menu {
+    display: none;
+}
+
+.customize-feed {
+    background: linear-gradient(
+        150deg, 
+        rgba(73, 73, 73, 0.92) 0%, 
+        rgba(15, 15, 15, 0.98) 100% );;
+    backdrop-filter: blur(10px);
+    width: 39rem;
+    border-radius:0.5rem;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    display: none;
+    z-index: 10;
+
+    svg:active {
+    color: v.$primary-accent;
+    }
+}
+
+
+.customize {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.7rem 2.2rem;
+            span {
+                color: v.$text-primary;
+                font-size: 1.4rem;
+            }       
+}
+
+.select {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.7rem 2.2rem;
+    gap: 1rem;
+            span {
+                color: v.$text-primary;
+                font-size: 1.4rem;
+            }
+                span:active {
+                    color: #333842;
+                }
+                
+}
+
+.customize-title {
+    border-bottom: 1px solid #323232;
+    text-align: center;
+    padding: 1.5rem;
+        h4{
+            font-size: 1.6rem;
+            color: v.$text-primary;
+        }
+}
+
+.selection {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.selection-action {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+#filter-menu:checked + label + .customize-feed {
+    display: block;
+}
+
+
+.icon-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: v.$text-secondary; 
+    transition: color 0.2s ease;
+}
+
+.eye-closed {
+    display: none;
+}
+
+.icon-toggle.active .eye-open {
+    display: none;
+}
+
+.icon-toggle.active .eye-closed {
+    display: block;
+}
+
+
+
+// My Library Filter
+
+
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 1.1rem 0 1.6rem 0 ;
+}
+
+.list-style {
+    display: flex;
+    gap: 1rem;
+}
+
+.left-filter {
+    display: flex;
+    gap: 3.5rem;
+}
+
+.by {
+    display: flex;
+    gap: 3.5rem;
+}
+
+.library-btn {
+    @include m.filter-chip;
+    background-color: transparent;
+    &:active {
+        background-color: v.$text-secondary;
+    }
+}

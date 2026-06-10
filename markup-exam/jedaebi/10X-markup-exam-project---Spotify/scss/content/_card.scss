@@ -1,0 +1,141 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// =============================================================================
+// BROWSE ALL CARDS — card_2 styles, mobile grid, nested card fix
+// =============================================================================
+
+
+// -----------------------------------------------------------------------------
+// CARD WRAPPER — coloured category tile (Discover, Genres, Mood etc.)
+// -----------------------------------------------------------------------------
+
+.card_2-wrapper {
+  width: 170px;                       
+  height: 170px;                      
+  border-radius: 8px;          
+  position: relative;
+  overflow: hidden;                   
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 1;
+
+  &:hover {
+    transform: scale(1.03);
+    background-color: #243d8a;        
+
+    // Tilt the banner image further on hover for a parallax feel
+    .card_2-banner {
+      transform: rotate(20deg) scale(1.08);
+    }
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// CARD HEADER — category label text (e.g. "Pop", "Trending")
+// -----------------------------------------------------------------------------
+
+.card_2-header {
+  padding: 10px;                      
+  font-size: 24px;               
+                                     
+  color: #FFFFFF;                 
+  position: relative;
+  z-index: 2;                        
+}
+
+
+// -----------------------------------------------------------------------------
+// CARD BANNER — decorative tilted thumbnail in the bottom-right corner
+// -----------------------------------------------------------------------------
+
+.card_2-banner {
+  width: 104.27px;                    
+  height: 104.27px;                   
+  border-radius: 8px;          
+                                     
+  object-fit: cover;
+  overflow: hidden;
+  position: absolute;
+  bottom: -10px;                     
+  right: -10px;                       
+  transform: rotate(30deg);          
+  box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease;
+  z-index: 1;                         
+}
+
+
+// =============================================================================
+// MOBILE — 2-column grid layout for browse-all cards (≤768px)
+// =============================================================================
+
+@include mobile {
+
+  // 1. Switch card rows from horizontal scroll to a 2-column grid
+  .section-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-md;                 
+    padding: 0 $spacing-md;          
+    overflow-x: hidden;              
+  }
+
+  // 2. Hide desktop scroll arrows — not needed in grid layout
+  .section__controls {
+    display: none;
+  }
+
+  // 3. Card fills its grid cell width; reduced height for smaller screens
+  .card_2-wrapper {
+    width: 100%;                     
+    height: 100px;                  
+  }
+
+  // 4. Slightly smaller label text on mobile
+  .card_2-header {
+    font-size: $font-lg;            
+  }
+
+  // 5. Scale down the banner thumbnail proportionally
+  .card_2-banner {
+    width: 75px;                    
+    height: 75px;                    
+    bottom: -10px;
+    right: -10px;
+  }
+
+  // 6. Hide the recent-search cards section entirely on mobile
+  .recent_search-wrapper {
+    display: none;
+  }
+
+}
+// END @include mobile
+
+
+// =============================================================================
+// NESTED CARD FIX — prevents double-scale when card_wrapper sits inside
+// search_card-square (e.g. library pinned cards)
+// =============================================================================
+
+.search_card-square {
+
+  // 1. Cancel the inner card_wrapper hover scale so only the outer
+  //    search_card-square scales (avoids stacked transform: scale × 2)
+  .card_wrapper {
+    &:hover {
+      transform: none !important;
+    }
+  }
+
+  // 2. When hovering the outer card, still reveal the .second and .third
+  //    decorative background layers (opacity fade-in)
+  &:hover {
+    .second,
+    .third {
+      opacity: 1;
+    }
+  }
+
+}

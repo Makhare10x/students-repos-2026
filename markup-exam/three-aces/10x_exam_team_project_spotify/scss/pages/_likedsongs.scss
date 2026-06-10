@@ -1,0 +1,48 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+@use '../base/typography' as *;
+
+.bg-color-library {
+    background-color:  #111111;
+
+}
+ .main-hdr {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 1.5rem;
+
+}
+
+table {
+    width: 70%;
+    border-collapse: separate;
+    // border-spacing: 0;
+    margin: 1rem;
+}
+th {
+    padding: 1rem;
+    text-align: left;
+    // border-bottom: 1px solid #ffff;
+}
+td {
+    padding: 1rem;
+}
+.song-item__main {
+    display: flex;
+    gap: 2rem;
+
+}
+.song-item__img {
+   width: 5.1rem;
+   height: 5.1rem;
+}
+.song-item__name {
+font-family: $main-font;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+color: #E0E0E0;
+margin-bottom: 1rem;
+}
+ 

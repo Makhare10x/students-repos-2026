@@ -1,0 +1,421 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+.main {
+    margin: 20px;
+    margin-bottom: 150px;
+// filters
+    .filters {
+        display: flex;
+        gap: 10px;
+
+        button {
+            width: 88px;
+            height: 35px;
+            border-radius: 8px;
+            border-style: none;
+            background-color: #20202080;
+            color: #E0E0E0;
+            font-weight: 400;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .full_btn {
+            background-color: #E0E0E0;
+            color: #111111;
+        }
+
+    }
+    .scroll {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin: 20px;
+
+        h2 {
+        @include mixins.title_code;
+        }
+
+    }
+    .mobile_first_section {
+        display: none;
+    }
+// made for you section
+    .made_for_you {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+
+        .scroll {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin: 20px;
+
+        h2 {
+        @include mixins.title_code;
+        }
+
+    }
+
+        .each_pl {
+            display: flex;
+            flex-direction: column;
+            .pl_photo img {
+                width: 141px;
+                height: 150px;
+            }
+            .pl_info {
+                display: flex;
+                flex-direction: column;
+                width: 141px;
+                gap: 5px;
+
+                .pl_name {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 5px;
+
+                    .pl_title {
+                        color: #E0E0E0;
+                        font-weight: 500;
+                        font-size: 14px;
+                        letter-spacing: 3%;
+                    }
+                    .pl_num {
+                        font-weight: 500;
+                        font-size: 14px;
+                        letter-spacing: 3%;
+                    }
+                    #green {
+                        color: #95E6D3;
+                    }
+                    #pink {
+                        color: #CE6E9A;
+                    }
+                    #yellow {
+                        color: #C3E7B7;
+                    }
+
+                }
+                p {
+                    color: #898989;
+                    font-weight: 500;
+                    font-size: 12px;
+                    letter-spacing: 3%;
+                }
+            }
+        }
+    }
+
+// your top mixes
+    .your_top_mixes {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+
+        .each_pl {
+            display: flex;
+            flex-direction: column;
+            .pl_photo img {
+                width: 141px;
+                height: 150px;
+            }
+            .pl_info {
+                display: flex;
+                flex-direction: column;
+                width: 141px;
+                gap: 5px;
+
+                .pl_name {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 5px;
+
+                    .pl_title {
+                        color: #E0E0E0;
+                        font-weight: 500;
+                        font-size: 14px;
+                        letter-spacing: 3%;
+                    }
+
+                    .pl_num {
+                        font-weight: 500;
+                        font-size: 14px;
+                        letter-spacing: 3%;
+                    }
+                    #green {
+                        color: #95E6D3;
+                    }
+                    #pink {
+                        color: #CE6E9A;
+                    }
+                    #yellow {
+                        color: #C3E7B7;
+                    }
+
+                }
+                p {
+                    color: #898989;
+                    font-weight: 500;
+                    font-size: 12px;
+                    letter-spacing: 3%;
+                }
+            }
+        }
+        
+    }
+
+    .recent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+
+        h2 {
+        @include mixins.title_code;
+        }
+
+
+    }
+
+    .searches {
+        display: flex;
+        gap: 10px;
+
+        .each_search{
+            position: relative;
+            width: 180px;
+            .artist {
+                width: 100%;
+                border-radius: 10px;
+                display: block;
+            }
+            .close{
+                position: absolute;
+                top: 8px;
+                right: 8px;
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+            }
+
+        }
+
+    }
+    .browse {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+
+        h2 {
+        @include mixins.title_code;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            color: #E0E0E0;
+            letter-spacing: 3%;
+        }
+
+
+    }
+    .discover_ls {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+
+
+        .each_discover_box {
+            padding: 15px;
+            position: relative;
+            overflow: hidden;
+            .discover_title {
+                color: white;
+                font-size: 15px;
+                font-weight: 900;
+            }
+            img {
+                width: 90px;
+                position: absolute;
+                top: 65px;
+                left: 65px;
+                transform: rotate(30deg);
+            }
+        }
+        #madeforu {
+            @include mixins.discover_box_style(120px,120px, #1e3264,15px);
+        }
+        #releases {
+            @include mixins.discover_box_style(120px,120px, #BA5D07,15px);
+        }
+        #classics {
+            @include mixins.discover_box_style(120px,120px, #1E3264,15px);
+        }
+        #charts {
+            @include mixins.discover_box_style(120px,120px, #8D67AB,15px);
+        }
+        #trending {
+            @include mixins.discover_box_style(120px,120px, #B02897,15px);
+        }
+        #discover {
+            @include mixins.discover_box_style(120px,120px, #8D67AB,15px);
+        }
+        #singles {
+            @include mixins.discover_box_style(120px,120px, #777777,15px);
+        }
+        #decades {
+            @include mixins.discover_box_style(120px,120px, #BA5D07,15px);
+        }
+
+
+
+
+    }
+    .ganres_title {
+        padding: 15px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #E0E0E0;
+        letter-spacing: 3%;
+    }
+
+    .ganres {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+
+        .each_ganres_box {
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            .ganres_title {
+                color: white;
+                font-size: 15px;
+                font-weight: 900;
+            }
+            img {
+                width: 90px;
+                position: absolute;
+                top: 60px;
+                left: 60px;
+                transform: rotate(30deg);
+            }
+        }
+        #pop {
+            @include mixins.ganres_box_style(120px,120px, #148A08,15px);
+        }
+        #country {
+            @include mixins.ganres_box_style(120px,120px, #D84000,15px);
+        }
+        #hip-hop {
+            @include mixins.ganres_box_style(120px,120px, #503750,15px);
+        }
+        #rock {
+            @include mixins.ganres_box_style(120px,120px, #006450,15px);
+        }
+        #indie {
+            @include mixins.ganres_box_style(120px,120px,#E91429,15px);
+        }
+        #punk {
+            @include mixins.ganres_box_style(120px,120px, #1E3264,15px);
+        }
+        #metal {
+            @include mixins.ganres_box_style(120px,120px, #E91429,15px);
+        }
+        #instrumental {
+            @include mixins.ganres_box_style(120px,120px, #537AA1,15px);
+        }
+        
+       
+
+
+
+
+    }
+@media (max-width: 1240px) {
+    .made_for_you, .your_top_mixes {
+      overflow-x: hidden;
+      margin-top: 20px;
+    }
+    .discover_ls, .ganres{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+  }
+
+@media (max-width: 768px) {
+    .scroll {
+        display: none;
+    }
+    .discover {
+        .each_discover_box {
+            width: 100px !important;
+            height: 100px !important;
+        }
+    }
+
+    .ganres {
+        flex-wrap: wrap;
+
+        .each_ganres_box {
+            width: 100px !important;
+            height: 100px !important;
+        }
+    }
+}
+} 
+
+@media(max-width: 650px){
+    .main{
+        .mobile_first_section {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5px;
+
+            .each_mobile {
+                display: flex;
+                justify-content: flex-start;
+                gap: 15px;
+                align-items: center;
+                width: 135px;
+                height: 38px;
+                background-color:#202020;
+                gap: 1px;
+
+                .photo img{
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 5px;
+                }
+                .texts h3{
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #E0E0E0;
+
+                }
+                .texts p {
+                    font-size: 12px;
+                    color: #898989;
+                }
+            }
+
+        }
+    }
+    
+}
+    
+    
+
+
+
+    
+
+
+

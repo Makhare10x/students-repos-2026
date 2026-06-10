@@ -1,0 +1,60 @@
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 174.5rem;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
+}
+
+body {
+  font-family: "Satoshi", sans-serif;
+  background-color: #060606;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 26.7rem 1fr;
+  grid-template-rows: 5.4rem 1fr auto;
+
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main"
+    "sidebar footer";
+
+  column-gap: 0;
+  row-gap: 0;
+  margin-top: 0.3rem;
+}
+
+/* grid items */
+.layout__sidebar {
+  grid-area: sidebar;
+}
+.layout__header {
+  grid-area: header;
+}
+.layout__main {
+  grid-area: main;
+  display: flex;
+  gap: 1rem;
+}
+.layout__footer {
+  grid-area: footer;
+}
+
+@keyframes bodyFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: bodyFade 0.1s linear forwards;
+}

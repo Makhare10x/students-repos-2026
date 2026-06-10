@@ -1,0 +1,66 @@
+@use "../abstracts/variables.scss" as *;
+@use "../abstracts/mixins.scss" as *;
+.sidebar {
+  background-color: $bg-main;
+  width: 15vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 30;
+
+  li {
+    height: 45px;
+    display: flex;
+    align-items: center;
+
+    padding: 5px 10px;
+
+    img {
+      transition: filter 0.3s linear;
+    }
+
+    &:hover {
+      a {
+        color: $menu-text-hover;
+      }
+
+      img {
+        filter: brightness(1.5);
+      }
+    }
+    .arrow-icon {
+      justify-self: end;
+    }
+    a {
+      transition: color 0.3s linear;
+      width: calc(15vw - 10px);
+      @include font-style;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: $menu-text-primary;
+    }
+  }
+}
+.sidebar-wrapper {
+  height: 98vh;
+  border-radius: 5px;
+  margin: 5px 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: background-color 0.3s linear;
+}
+.sidebar-wrapper:hover {
+  .library {
+    img {
+      content: url("/assets/icons/header/hovers/library.png");
+    }
+  }
+
+  background-color: $hover-background-color;
+}
+@media (max-width: 500px) {
+  aside {
+    display: none;
+  }
+}

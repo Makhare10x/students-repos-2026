@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify – My Library</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/library.css">
+</head>
+<body>
+
+<section class="main_structure">
+
+    <!-- ASIDE -->
+    <aside class="side-nav">
+        <nav class="aside_nav">
+            <ul class="aside_nav_items">
+                <li class="each_page active_page">
+                    <img src="assets/images/aside/library.png" alt="library icon">
+                    <a href="#">My Library</a>
+                </li>
+                <li class="each_page">
+                    <img src="assets/images/aside/pin.png" alt="pin icon">
+                    <a href="#">Pins</a>
+                </li>
+                <li class="each_page">
+                    <img src="assets/images/aside/albums.png" alt="playlist icon">
+                    <a href="">Playlists</a>
+                </li>
+                <li class="each_page">
+                    <img src="assets/images/aside/like.png" alt="like icon">
+                    <a href="librarypg2.html">Liked songs</a>
+                </li>
+                <li class="each_page">
+                    <img src="assets/images/aside/save.png" alt="save icon">
+                    <a href="#">Saves</a>
+                </li>
+                <li class="each_page">
+                    <img src="assets/images/aside/albums.png" alt="album icon">
+                    <a href="#">Albums</a>
+                </li>
+                <li class="each_page">
+                    <img src="assets/images/aside/folder.png" alt="folder icon">
+                    <a href="#">Folders</a>
+                </li>
+                <li class="each_page">
+                    <img src="assets/images/aside/podcast.png" alt="podcast icon">
+                    <a href="podcast.html">Podcasts</a>
+                </li>
+                <li class="each_page">
+                    <img src="assets/images/aside/audiobook.png" alt="audiobook icon">
+                    <a href="#">Audiobooks</a>
+                </li>
+                <li class="each_page">
+                    <img src="assets/images/aside/artist.png" alt="artist icon">
+                    <a href="#">Artists</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- MAIN PAGE -->
+    <section class="first_page">
+
+        <!-- HEADER -->
+        <header class="header">
+            <nav class="nav_section">
+                <section class="main_section">
+                    <div class="home">
+                        <img class="header_btn" src="assets/images/header/home.png" alt="home logo">
+                        <a href="index.html">Home</a>
+                    </div>
+                    <div class="discover">
+                        <img class="header_btn" src="assets/images/header/discover.png" alt="discover logo">
+                        <a href="discover.html">Discover</a>
+                    </div>
+                    <div class="search">
+                        <img class="header_btn" src="assets/images/header/search.png" alt="search icon">
+                        <input type="text" placeholder="Search">
+                    </div>
+                </section>
+            </nav>
+            <section class="actions">
+                <button><img src="assets/images/header/notification.png" alt="notification icon"></button>
+                <button><img src="assets/images/header/lock.png" alt="lock icon"></button>
+                <button>
+                    <a href="friends.html">
+                        <img src="assets/images/header/friends.png" alt="friend icon">
+                    </a>
+                </button>
+                <button><img src="assets/images/header/settings.png" alt="settings icon"></button>
+                <img class="profile" src="assets/images/header/profile.png" alt="profile picture">
+            </section>
+        </header>
+
+        <hr>
+
+        <!-- LIBRARY PAGE CONTENT -->
+        <div class="library_page">
+
+            <!-- TOOLBAR -->
+            <div class="library_toolbar">
+                <div class="toolbar_left">
+                    <h2 class="library_heading">My Library</h2>
+                    <div class="view_toggles">
+                        <button class="view_btn view_btn--active">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M3 3h7v7H3V3zm0 11h7v7H3v-7zm11-11h7v7h-7V3zm0 11h7v7h-7v-7z"/>
+                            </svg>
+                        </button>
+                        <button class="view_btn">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="8" y1="6" x2="21" y2="6"/>
+                                <line x1="8" y1="12" x2="21" y2="12"/>
+                                <line x1="8" y1="18" x2="21" y2="18"/>
+                                <line x1="3" y1="6" x2="3.01" y2="6"/>
+                                <line x1="3" y1="12" x2="3.01" y2="12"/>
+                                <line x1="3" y1="18" x2="3.01" y2="18"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="toolbar_right">
+                    <button class="filter_btn filter_btn--active">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                        </svg>
+                        Recent
+                    </button>
+                    <button class="filter_btn">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        Group
+                    </button>
+                    <div class="lib_search">
+                        <img src="assets/images/header/search.png" alt="search">
+                        <input type="text" placeholder="Search in library">
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD GRID -->
+            <div class="library_grid">
+
+                <!-- ROW 1 -->
+                <div class="lib_row">
+
+                    <!-- Liked Songs -->
+                    <div class="lib_card">
+                        <div class="lib_thumb lib_thumb--liked">
+                            <img src="assets/images/aside/like.png" alt="liked songs">
+                        </div>
+                        <div class="lib_badge lib_badge--pink">
+                            <svg width="10" height="10" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </div>
+                        <p class="lib_title">Liked songs</p>
+                        <p class="lib_sub">Playlist · 248 songs</p>
+                    </div>
+
+                    <!-- David Bowie -->
+                    <div class="lib_card">
+                        <div class="lib_thumb has_cover">
+                            <img src="assets/images/main/14.png" alt="David Bowie">
+                        </div>
+                        <div class="lib_badge lib_badge--green">
+                            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <p class="lib_title">David Bowie</p>
+                        <p class="lib_sub">Artist · Following</p>
+                    </div>
+
+                    <!-- Daft Punk -->
+                    <div class="lib_card">
+                        <div class="lib_thumb lib_thumb--round has_cover">
+                            <img src="assets/images/main/12.png" alt="Daft Punk">
+                        </div>
+                        <div class="lib_badge lib_badge--green">
+                            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <p class="lib_title">Daft Punk</p>
+                        <p class="lib_sub">Artist · Following</p>
+                    </div>
+
+                    <!-- Chill Stuff -->
+                    <div class="lib_card">
+                        <div class="lib_thumb lib_thumb--dark">
+                            <img src="assets/images/aside/albums.png" alt="Chill Stuff">
+                        </div>
+                        <p class="lib_title">Chill Stuff</p>
+                        <p class="lib_sub">Playlist · by you</p>
+                    </div>
+
+                    <!-- The Jazz Box -->
+                    <div class="lib_card">
+                        <div class="lib_thumb lib_thumb--dark">
+                            <img src="assets/images/aside/albums.png" alt="The Jazz Box">
+                        </div>
+                        <p class="lib_title">The Jazz Box</p>
+                        <p class="lib_sub">Playlist · Mix</p>
+                    </div>
+
+                    <!-- Vibe -->
+                    <div class="lib_card">
+                        <div class="lib_thumb lib_thumb--dark">
+                            <img src="assets/images/aside/albums.png" alt="Vibe">
+                        </div>
+                        <p class="lib_title">Vibe</p>
+                        <p class="lib_sub">Playlist · by you</p>
+                    </div>
+
+                    <!-- Saturated Online -->
+                    <div class="lib_card">
+                        <div class="lib_thumb lib_thumb--dark">
+                            <img src="assets/images/aside/albums.png" alt="Saturated Online">
+                        </div>
+                        <p class="lib_title">Saturated Online…</p>
+                        <p class="lib_sub">Playlist · by you</p>
+                    </div>
+
+                    <!-- For Bands -->
+                    <div class="lib_card">
+                        <div class="lib_thumb lib_thumb--dark">
+                            <img src="assets/images/aside/folder.png" alt="For bands">
+                        </div>
+                        <p class="lib_title">For bands</p>
+                        <p class="lib_sub">Folder · by you</p>
+                    </div>
+
+                </div>
+                <!-- end row 1 -->
+
+                <!-- ROW 2 -->
+                <div class="lib_row">
+
+                    <!-- Meteora -->
+                    <div class="lib_card">
+                        <div class="lib_thumb has_cover">
+                            <img src="assets/images/main/bowie.png" alt="Meteora">
+                        </div>
+                        <p class="lib_title">Meteora</p>
+                        <p class="lib_sub">Linkin Park</p>
+                    </div>
+
+                    <!-- Harder Better (Daft Punk round) -->
+                    <div class="lib_card">
+                        <div class="lib_thumb lib_thumb--round has_cover">
+                            <img src="assets/images/main/12.png" alt="Harder Better">
+                        </div>
+                        <p class="lib_title">Harder, Better…</p>
+                        <p class="lib_sub">Daft Punk</p>
+                    </div>
+
+                    <!-- Abbey Road -->
+                    <div class="lib_card">
+                        <div class="lib_thumb has_cover">
+                            <img src="assets/images/main/13.png" alt="Abbey Road">
+                        </div>
+                        <p class="lib_title">Abbey Road</p>
+                        <p class="lib_sub">The Beatles</p>
+                    </div>
+
+                    <!-- Black Holes -->
+                    <div class="lib_card">
+                        <div class="lib_thumb has_cover">
+                            <img src="assets/images/main/black_holes.png" alt="Black Holes">
+                        </div>
+                        <p class="lib_title">Black Holes and…</p>
+                        <p class="lib_sub">Muse</p>
+                    </div>
+
+                    <!-- Daily Mix 1 -->
+                    <div class="lib_card">
+                        <div class="lib_thumb lib_thumb--mix1">
+                            <img src="assets/images/aside/albums.png" alt="Daily Mix 1">
+                        </div>
+                        <p class="lib_title">Daily Mix 1</p>
+                        <p class="lib_sub">XO &amp; more</p>
+                    </div>
+
+                    <!-- Daily Mix 2 -->
+                    <div class="lib_card">
+                        <div class="lib_thumb lib_thumb--mix2">
+                            <img src="assets/images/aside/albums.png" alt="Daily Mix 2">
+                        </div>
+                        <p class="lib_title">Daily Mix 2</p>
+                        <p class="lib_sub">XO &amp; more</p>
+                    </div>
+
+                    <!-- Daily Mix 3 -->
+                    <div class="lib_card">
+                        <div class="lib_thumb lib_thumb--mix3">
+                            <img src="assets/images/aside/albums.png" alt="Daily Mix 3">
+                        </div>
+                        <p class="lib_title">Daily Mix 3</p>
+                        <p class="lib_sub">XO &amp; more</p>
+                    </div>
+
+                    <!-- Rock Mix -->
+                    <div class="lib_card">
+                        <div class="lib_thumb has_cover">
+                            <img src="assets/images/main/9.png" alt="Rock Mix">
+                        </div>
+                        <p class="lib_title">Rock Mix</p>
+                        <p class="lib_sub">Playlist · 02</p>
+                    </div>
+
+                </div>
+                <!-- end row 2 -->
+
+                <!-- ROW 3: Wide cards -->
+                <div class="lib_row lib_row--wide">
+
+                    <div class="lib_card lib_card--wide">
+                        <div class="lib_thumb lib_thumb--wide has_cover">
+                            <img src="assets/images/main/10.png" alt="Chill Mix">
+                        </div>
+                        <div class="lib_wide_info">
+                            <p class="lib_title">Chill Mix</p>
+                            <p class="lib_sub">Mr. Good · Dan Funk · The This…</p>
+                            <p class="lib_meta">XO with more · 1hr 3min 37sec</p>
+                        </div>
+                    </div>
+
+                    <div class="lib_card lib_card--wide">
+                        <div class="lib_thumb lib_thumb--wide has_cover">
+                            <img src="assets/images/main/11.png" alt="Pop Mix">
+                        </div>
+                        <div class="lib_wide_info">
+                            <p class="lib_title">Pop Mix</p>
+                            <p class="lib_sub">Top 40 · Plastic Planets &amp; AC…</p>
+                            <p class="lib_meta">XO with more · 1hr 1min 22sec</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end row 3 -->
+
+            </div>
+            <!-- end library_grid -->
+
+        </div>
+        <!-- end library_page -->
+
+        <!-- FOOTER PLAYER -->
+        <footer class="player">
+            <section class="player-controle">
+                <div class="controls">
+                    <img src="assets/images/footer/pause.png" alt="pause">
+                    <img src="assets/images/footer/left.png" alt="left">
+                    <img src="assets/images/footer/right.png" alt="right">
+                    <img src="assets/images/footer/switch.png" alt="switch">
+                    <img src="assets/images/footer/reply.png" alt="reply">
+                </div>
+                <div class="progress-section">
+                    <span>2:23</span>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <span>4:45</span>
+                </div>
+            </section>
+
+            <section class="music_and_buttons">
+                <section class="music">
+                    <div class="music_info">
+                        <img src="assets/images/footer/song.png" alt="album cover">
+                        <div class="track-info">
+                            <p class="track-title">Get Lucky</p>
+                            <p class="artist">Daft Punk</p>
+                            <p class="band">Random Access Memories</p>
+                        </div>
+                    </div>
+                    <div class="track-actions">
+                        <img src="assets/images/footer/like.png" alt="like">
+                        <img src="assets/images/footer/add.png" alt="add">
+                        <img src="assets/images/footer/lyrics.png" alt="lyrics">
+                        <img src="assets/images/footer/queue.png" alt="queue">
+                    </div>
+                </section>
+                <section class="player-right">
+                    <img src="assets/images/footer/DJ.png" alt="dj">
+                    <img src="assets/images/footer/pc-queue.png" alt="pc-queue">
+                </section>
+                <section class="mobile_icon">
+                    <img src="assets/images/footer/mob2.png" alt="add">
+                    <img src="assets/images/footer/mob1.png" alt="like">
+                </section>
+                <section class="footer_nav">
+                    <a href="index.html"><img src="assets/images/footer/home.png" alt="home"></a>
+                    <a href="#"><img src="assets/images/footer/discover.png" alt="discover"></a>
+                    <a href="#"><img src="assets/images/footer/search.png" alt="search"></a>
+                    <a href="library.html"><img src="assets/images/footer/library.png" alt="library"></a>
+                    <a href="#"><img src="assets/images/footer/me.png" alt="me"></a>
+                </section>
+            </section>
+        </footer>
+
+    </section>
+    <!-- end first_page -->
+
+</section>
+<!-- end main_structure -->
+
+</body>
+</html>

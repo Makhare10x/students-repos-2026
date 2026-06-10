@@ -1,0 +1,202 @@
+
+// COLORS (DARK BASE)
+
+$color-bg-primary: #111111;
+$color-bg-secondary: #202020;
+
+$color-text-primary: #E0E0E0;
+$color-text-secondary: #898989;
+
+// ACCENT COLORS
+$color-accent-green: #85C585;
+$color-accent-blue: #6F86FF;
+$color-accent-teal: #27856B;
+$color-accent-purple: #9BF0E2;
+
+
+// OVERLAYS
+
+$overlay-dark-85: rgba(17, 17, 17, 0.85);
+$overlay-dark-60: rgba(0, 0, 0, 0.6);
+$overlay-dark-30: rgba(17, 17, 17, 0.3);
+$overlay-dark-15: rgba(17, 17, 17, 0.15);
+
+
+// GRADIENTS
+
+$bg-sidebar-gradient: linear-gradient(
+  180deg,
+  $overlay-dark-85 0%,
+  $color-bg-primary 42.62%
+);
+
+
+// TYPOGRAPHY (MOBILE)
+
+$font-family-primary: "Satoshi", sans-serif;
+
+$font-size-label-small: 1.2rem;   // 12px
+$font-size-body-small: 1.4rem;    // 14px
+$font-size-heading-section: 2rem; // 20px
+$font-size-caption: 1.2rem;       // 12px
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$letter-spacing-small: 0.04rem;    // 0.4px
+$letter-spacing-medium: 0.04rem;   // 0.4px
+$letter-spacing-heading: 0.06rem;  // 0.6px
+$letter-spacing-caption: 0.04rem;  // 0.4px
+
+// SPACING
+$space-2xs: 0.4rem;
+$space-xs: 0.8rem;
+$space-sm: 1rem;
+$space-md: 1.2rem;
+$space-lg: 1.6rem;
+$space-xl: 2rem;
+
+// RADIUS
+$radius-sm: 0.8rem;
+$radius-md: 1rem;
+$radius-lg: 1.2rem;
+$radius-round: 999px;
+
+// ICON SIZES
+$icon-size-sm: 1.8rem;
+$icon-size-md: 2rem;
+$icon-size-lg: 2.4rem;
+$icon-size-xl: 3rem;
+
+// LAYOUT
+$container-max-width: 1771px;
+$container-min-width: 390px;
+
+$container-padding-desktop: $space-sm; // 10px
+$container-padding-mobile: 1.5rem; // 15px
+
+
+// BREAKPOINTS
+
+$bp-mobile: 39rem;        // 390px
+$bp-tablet: 76.8rem;      // 768px
+$bp-desktop: 102.4rem;    // 1024px
+$bp-wide: 117.1rem;       // 1171px
+
+
+// MOBILE BOTTOM SIDEBAR 
+$mobile-nav-height: 9.5rem;        // 95px
+$mobile-nav-padding: $space-sm;    // 10px
+$mobile-nav-gap: 3.1rem;           // 31px
+$mobile-nav-icon-w: $icon-size-xl; // 30px
+$mobile-nav-icon-h: $icon-size-xl; // 30px
+
+$mobile-header-action-size: 4rem;   // 40px
+$mobile-header-icon-size: $icon-size-xl; // 30px
+$mobile-theme-icon-size: 2.1rem;    // 21px
+$mobile-logo-width: 10rem;          // 100px
+
+// BOTTOM PLAYER
+$player-mobile-width: 37.5rem; // 375
+$player-mobile-height: 6.1rem; // 61 (figma mini)
+$player-mobile-radius: $radius-md;
+$player-mobile-cover: 4.3rem;  // 43
+$player-mobile-icon: $icon-size-md; // 20
+$player-mobile-action: 4rem; // 40px
+$player-mobile-gap: $space-md;
+$player-mobile-bottom-gap: $space-xs;
+
+// PLAYER (DESKTOP)
+$player-bg: #333842; // figma desktop bar bg
+$player-track-height: 0.4rem; // 4px
+
+$player-desktop-target-width: 149rem; // 1490px
+$player-desktop-height: 6.8rem; // tighter desktop dock
+$player-desktop-radius: $radius-lg;
+$player-desktop-bottom: 0rem; // 10px
+
+$player-desktop-cover: 5rem;  // 51
+$player-desktop-icon-btn: 3rem;
+$player-desktop-play: 3.8rem; // 38px
+$player-desktop-padding-x: $space-xl;
+$player-desktop-gap: $space-lg;
+$player-desktop-controls-gap: $space-md;
+$player-desktop-progress-gap: $space-xs;
+$player-desktop-left-max: 26rem;
+$player-desktop-divider: rgba(137, 137, 137, 0.27);
+$player-desktop-status-blue: #6d9ed7;
+$player-desktop-status-green: #1ed760;
+
+$sidebar-desktop-width: 25rem; // 250px
+$layout-desktop-gap: 1.1rem; // 11px
+
+// DESKTOP SIDEBAR ITEMS
+$sidebar-item-icon-size: $icon-size-md; // 20px
+$sidebar-item-font-size: 1.4rem; // 14px
+$sidebar-item-font-weight: 400;
+$sidebar-item-letter-spacing: $letter-spacing-medium;
+$sidebar-item-chevron-size: $icon-size-md; // 20px
+
+// DESKTOP HOME LAYOUT
+$home-desktop-header-height: 5.2rem;
+$home-desktop-sidebar-width: $sidebar-desktop-width;
+$home-desktop-page-gap: 1.1rem; // 11px
+$home-desktop-main-radius: $radius-md; // 10px
+$home-desktop-main-border: #202020;
+$home-desktop-main-bg: #060606;
+$home-desktop-main-padding-x: clamp(1.2rem, 1.6vw, 2.4rem);
+$home-desktop-main-padding-y: clamp(0.8rem, 1vw, 1.2rem);
+
+// PAGE SIZES
+$page-side-panel-width: 19rem;
+$search-recent-card-size: 17rem;
+$search-browse-column-width: 17rem;
+$search-browse-art-size: 17rem;
+$discover-reel-mobile-offset: 5.8rem;
+$discover-reel-desktop-media-width: 22rem;
+$discover-reel-desktop-media-height: 39rem;
+$discover-reel-desktop-track-cover: 14rem;
+$profile-friends-empty-height: 9rem;
+$song-surface-dark: #050608;
+$song-text-light: #fff;
+$song-remove-bg: #c24646;
+$song-slider-thumb: #d8d8dc;
+$song-play-bg: #ececf0;
+$song-play-color: #111318;
+$song-accent-green: #1ed760;
+$song-button-text-dark: #0d1117;
+$song-desktop-panel-start: #202532;
+$song-desktop-panel-end: #191d28;
+$search-tile-blue: #243a79;
+$search-tile-orange: #c76b00;
+$search-tile-purple: #8f67b8;
+$search-tile-pink: #bd2aa6;
+$search-tile-lilac: #8d6cb0;
+$search-tile-gray: #8f8f8f;
+$search-tile-navy: #2d4376;
+$search-tile-green: #20a500;
+$search-tile-orange-red: #e55f00;
+$search-tile-mauve: #70506f;
+$search-tile-teal: #006f5d;
+$search-tile-red: #ef1830;
+$search-tile-cobalt: #243b90;
+$search-tile-crimson: #ff2635;
+$search-tile-slate: #6d8fb4;
+
+// DESKTOP HOME FILTERS
+$home-chip-height: 3.2rem;
+$home-chip-radius: $radius-sm;
+$home-chip-font-size: 1.4rem;
+$home-chip-padding-x: 1.4rem;
+
+// DESKTOP HOME CARDS
+$home-card-min-width: 15.2rem;
+$home-card-cover-height: 13.2rem;
+$home-card-gap: 1rem;
+$home-section-title-size: 4.2rem;
+$home-section-sub-size: 1.4rem;
+$library-sub-color: var(--Fg-Secondary, #898989);
+$library-sub-font-size: 1.4rem;
+$library-sub-font-weight: 400;
+$library-sub-letter-spacing: 0.042rem;

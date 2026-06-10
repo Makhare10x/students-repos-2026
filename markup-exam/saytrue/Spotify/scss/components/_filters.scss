@@ -1,0 +1,87 @@
+// Filters / Chips Styles for Spotify Clone - Figma Design
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-md 0;
+  gap: $spacing-md;
+
+  &__chips {
+    display: flex;
+    gap: $spacing-sm;
+  }
+
+  &__view-toggle {
+    @include button-reset;
+    width: 32px;
+    height: 32px;
+    border-radius: $radius-sm;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color $transition-fast;
+
+    &:hover {
+      background-color: $bg-hover;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: $fg-secondary;
+    }
+  }
+  @include respond-to(mobile) {
+    padding: 8px 0;
+    
+    &__view-toggle {
+      // Icon from image (settings glyph)
+      svg {
+        stroke: currentColor;
+        stroke-width: 2;
+        fill: none;
+      }
+    }
+  }
+}
+
+// Chip / Pill Button
+.chip {
+  @include button-reset;
+  padding: $spacing-sm $spacing-md;
+  background-color: $bg-hover;
+  color: $fg-primary;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  border-radius: $radius-pill;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background-color $transition-fast,
+    transform $transition-fast;
+
+  @include respond-to(mobile) {
+    padding: 6px 12px;
+    font-size: 11px;
+    background-color: #2b2b2b;
+  }
+
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.02);
+  }
+
+  &--active {
+    background-color: $fg-primary;
+    color: $bg-primary;
+
+    &:hover {
+      background-color: $fg-primary;
+      transform: scale(1.02);
+    }
+  }
+}

@@ -1,0 +1,153 @@
+@use '../abstract/mixins' as *;
+@use '../universal components/components' as *;
+@use '../abstract/responsive' as *;
+@use '../abstract/variables' as *;
+
+
+
+
+.search-card-x-doublelayer-container {
+    @include search-card-x-doublelayer();
+    @include desktop {
+        @include search-card-x-doublelayer();
+    }
+    
+}
+
+
+
+@each $card-name, $color in $inside-image-card-colors {
+    .card-inside-image-container.#{$card-name} {
+        @include inside-image-card($theme-color:$color);
+     }
+    @include desktop {
+        .card-inside-image-container.#{$card-name} {
+        @include inside-image-card($theme-color:$color);
+     }
+    }
+    
+}
+
+
+
+.search-card-pin-container {
+    @include desktop {
+       @include search-card-pin(); 
+    }
+    
+}
+
+
+.search-card-pin-tripplelayer-container {
+    @include desktop {
+        @include search-card-pin-tripplelayer();
+    }
+    
+}
+
+.search-card-pin-doublelayer-container {
+    @include desktop {
+        @include search-card-pin-doublelayer();
+    }
+    
+}
+
+.search-X-card-list {
+    @include desktop {
+        display: flex;
+        margin-bottom: 3rem;
+        column-gap: 1.1rem;
+
+        .search-card-x-doublelayer-container:nth-child(1) {
+            .doublelayer-x-card-text-header {
+                justify-content: center;
+            }
+        }
+
+        .search-card-x-doublelayer-container:nth-child(2) {
+            img {
+                border-radius: 50%;
+            }
+            .doublelayer-x-card-text-header {
+                justify-content: center;
+            }
+        }
+    }
+    
+}
+
+
+
+
+.image-cards-list {
+    @include desktop {
+        display: flex;
+        margin-bottom: 3rem;
+        column-gap: 1.143rem;
+    }
+}
+
+
+
+
+
+.pin-cards-list {
+    @include desktop {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 1.1rem;
+        row-gap: 2rem;
+    }
+}
+
+
+.search-card-pin-tripplelayer-container:first-child {
+    @include desktop {
+        @include search-card-pin-tripplelayer();
+        .pin-card-image-cont {
+            background-color: #0C391C;
+        }
+        .pin-card-layer1 {
+            background-color: #0a2e16;
+        }
+        .pin-card-layer2 {
+            background-color: #082713;
+        }
+        .tripplelayer-pin-card-text-header{
+            span {
+            color: #1ED760;
+            }
+        }
+        
+    }
+}
+
+
+
+.search-card-pin-container:nth-child(2) {
+    @include desktop {
+        .pin-image {
+        border-radius: 50%;
+        }
+    }
+}
+
+.search-card-pin-tripplelayer-container:nth-child(8) {
+    @include desktop {
+        .pin-card-layer1 {
+            width: 74px;
+            transform: translateX(-4.3rem) translateY(-0.7rem) ;
+        }
+    }
+}
+
+
+@each $card-name, $color in $doublelayered-card {
+    @include desktop {
+        .search-card-pin-doublelayer-container.#{$card-name} {
+            @include search-card-pin-doublelayer($theme-color: $color);
+      }
+    }
+}
+
+

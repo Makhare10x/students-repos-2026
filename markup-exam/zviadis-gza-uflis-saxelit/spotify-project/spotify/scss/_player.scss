@@ -1,0 +1,153 @@
+@use "variables" as *;
+
+.player {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  background-color: $color-footer;
+  height: 70px; 
+  
+  // FIXED POSITIONING
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 240px; 
+  z-index: 100;
+  border-radius: $radius-lg;
+  margin: $spacing-sm;
+ 
+
+  button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: transform 0.1s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+    
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  // Zone 1: Playback & Seek (Left)
+  &-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1; // Takes up more space for the seek bar
+    flex-basis:0;
+
+    .player-container {
+      display: flex;
+      align-items: center;
+      gap: $spacing-sm;
+    }
+
+    .progress-container {
+      display: flex;
+      align-items: center;
+      gap: $spacing-xs;
+      flex-grow: 1;
+      max-width: 400px;
+      
+      .time-stamp {
+        font-size: $font-sm;
+        color: $color-text;
+        min-width: 35px;
+      }
+
+      .progress-bar {
+        width: 100%;
+        accent-color: $color-white; 
+      }
+      .btn-control{
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  // Zone 2: Album Info (Center)
+  &-center {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    flex-basis: 0;     // Forces the math to start from 0
+    
+    
+    .album-info {
+      display: flex;
+      align-items: center;
+      
+      .cover-art {
+        width: 56px;
+        height: 56px;
+        border-radius: $radius-sm;
+        margin-right: 15px;
+      }
+
+      .song-details {
+        .song-title {
+          font-size: $font-md;
+          font-family: $font-primary;
+          font-weight: 500;
+          margin: 0;
+          color: $color-white;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; 
+          max-width: 150px;
+        }
+        .artist-name, .album-name {
+          font-size: $font-sm;
+          margin: 0;
+          color: $color-text;
+        }
+      }
+    }
+  }
+
+  // Zone 3: Actions (Right)
+  &-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    flex: 1;
+    flex-basis: 0; // Forces the math to start from 0
+
+    .divider {
+      width: 2px;
+      height: 30px;
+      background-color: $color-text;
+      margin: 0 10px;
+      border-radius: $radius-sm;
+    }
+    .btn-icon{
+      flex-shrink: 0;
+    }
+    .btn-special img {
+       width: 35px; // The blue circle is slightly larger
+    }
+  }
+}
+@media (max-width: 768px) {
+  .player-right {
+    display: none; // Hides volume and extra actions on smaller screens
+  }
+  
+  .album-name {
+    display: none; // Hides the album name, keeps just the song/artist
+  }
+
+  .player {
+    padding: 0 10px; // Tightens padding
+  }
+}

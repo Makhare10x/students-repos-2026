@@ -1,0 +1,179 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.main-container-library-list {
+  min-height: 100vh;
+  padding: 1.2rem 2.76rem 0rem 2.5rem;
+
+  // main container header
+
+  .library-nav-wrapper,
+  .library-actions-wrapper,
+  .display-icons,
+  .alligment-icons {
+    @include mixins.actions-flex;
+  }
+
+  .library-nav-wrapper {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    margin-bottom: 2.1rem;
+  }
+
+  .library-actions-wrapper {
+    gap: 3.5rem;
+  }
+
+  .display-icons {
+    gap: 1rem;
+  }
+  .alligment-icons {
+    gap: 3.5rem;
+  }
+
+  .icon-flex {
+    display: flex;
+
+    p {
+      align-self: center;
+
+      color: variables.$color-text-secondary;
+      @include mixins.small-font;
+    }
+  }
+
+  // list-title-section
+  .playlist-container-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .divider {
+    grid-area: title;
+    display: grid;
+    grid-template-columns: 1fr 7.5fr 7.5fr 1.6fr 7.5fr;
+    color: variables.$color-text-secondary;
+    @include mixins.small-font;
+    column-gap: 1rem;
+    border-bottom: 2px solid variables.$color-text-secondary;
+    padding-bottom: 1.2rem;
+  }
+  // playlist-grid
+  .playlist-container {
+    grid-area: list;
+    display: grid;
+    grid-template-columns: 1fr 7.4fr 7.5fr 2fr 7fr;
+
+    column-gap: 1rem;
+    align-items: center;
+  }
+
+  // numbers-column
+  .list {
+    @include mixins.mid-font;
+    color: variables.$color-text-secondary;
+
+    height: 6.5rem;
+    align-content: center;
+    justify-self: center;
+  }
+
+  .divider-numb {
+    justify-self: center;
+  }
+
+  // song-titles-colums
+  .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    img {
+      width: 5.1rem;
+      height: 5.1rem;
+      border-radius: 0.3rem;
+    }
+  }
+
+  .song-title {
+    @include mixins.mid-font;
+    color: #fff;
+  }
+
+  .artist-title {
+    @include mixins.small-font;
+    color: variables.$color-text-secondary;
+  }
+
+  .album-name,
+  .duration {
+    @include mixins.small-font;
+    color: #898989;
+  }
+
+  #heart-icon-1,
+  #heart-icon-2,
+  #heart-icon-3,
+  #heart-icon-4,
+  #heart-icon-5,
+  #heart-icon-6,
+  #heart-icon-7 {
+    display: none;
+  }
+
+  .heart-label {
+    background-image: url(../../assets/icons/heart-svg.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 20.5px;
+
+    cursor: pointer;
+  }
+
+  #heart-icon-1:checked + .heart-label {
+    background-image: url("../../assets/icons/green-heart.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #heart-icon-2:checked + .heart-label {
+    background-image: url("../../assets/icons/green-heart.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #heart-icon-3:checked + .heart-label {
+    background-image: url("../../assets/icons/green-heart.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #heart-icon-4:checked + .heart-label {
+    background-image: url("../../assets/icons/green-heart.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #heart-icon-5:checked + .heart-label {
+    background-image: url("../../assets/icons/green-heart.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #heart-icon-6:checked + .heart-label {
+    background-image: url("../../assets/icons/green-heart.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #heart-icon-7:checked + .heart-label {
+    background-image: url("../../assets/icons/green-heart.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

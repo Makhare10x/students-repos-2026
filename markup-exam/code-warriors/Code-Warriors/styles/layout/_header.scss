@@ -1,0 +1,224 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+  background: $color-sidebar;
+  height: 6rem;
+  padding: 0 $space-lg;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid $color-border;
+   z-index: 30;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+  gap: $space-lg;
+}
+
+.header-button {
+  width: 18rem;
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: $space-sm $space-md;
+  background: none;
+  border: none;
+  border-radius: $radius-sm;
+  color: $color-text-secondary;
+  transition: $transition-base;
+}
+
+.header-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.header-button:hover {
+  background: $color-hover;
+  color: $color-text-primary;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+}
+
+.icon-button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: none;
+  background: $color-bg-secondary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: $transition-base;
+}
+.icon-button svg,
+.icon-button img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.icon-button:hover {
+  background: $color-hover;
+}
+
+.lock-btn.active {
+  background: $color-accent;
+}
+
+.lock-btn.active svg {
+  stroke: $color-text-primary;
+}
+
+
+//  discover-ისთვის
+//  ზედა ნაწილი კატეგორიების
+.discover-header {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  background-color: $color-bg-primary; 
+  border-radius: 1.2rem;
+}
+
+
+.discover-header .category {
+  color: $color-text-primary;
+  background: transparent;
+  border: 0.1rem solid $color-text-primary;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+  //  ტექსტის ჰოვერისთვის
+.discover-header .category:hover {
+  background-color: $color-text-secondary;
+  border-color: $color-text-primary;
+}
+ 
+  // music ფერისთვის
+.discover-header .category.active {
+  background-color: $color-text-secondary;
+  border-color: $color-text-primary;
+}
+
+  // card-ებისთვის
+.discover {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem 4rem;
+  background-color: $color-discover;
+}
+
+.discover-card {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  padding: 4rem 0;
+}
+.discover-image img {
+  width: 36rem;
+  border-radius: 1.6rem;
+}
+.playlist {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cover {
+  width: 16rem;
+  border-radius: 1.2rem;
+}
+
+.text h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.text p {
+  color: $color-text-secondary;
+  font-size: 1.4rem;
+}
+
+//  spotify-ის გასამუქებლად
+.bold-text {
+  font-weight: 700;
+  color: $color-text-primary;      
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.tags {
+  margin-top: 1rem;
+}
+
+.tags span {
+  border: 0.1rem solid $color-bg-elevated;
+  padding: 0.4rem 1.2rem;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  margin-right: 0.8rem;
+}
+
+//  სურათის ქვედა ნაწილის აიქონი
+.discover-image {
+  position: relative; 
+}
+
+.line-icon {
+  position: absolute;
+  bottom: 1.6rem;       
+  left: 50%;           
+  transform: translateX(-50%);
+  width: 6rem;       
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.line-icon:hover {
+  transform: translateX(-50%) scale(1.1); 
+}
+
+//  hover ეფექტი სურათებს და აიქონებს
+.discover-image img,
+.discover-info .cover,
+.actions img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.discover-image img:hover,
+.discover-info .cover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 1rem 3rem $color-hover;
+}
+
+.actions img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+
+  .discover-image {
+    display: none;
+  }
+  .discover-header{
+    display: none;
+  }
+}

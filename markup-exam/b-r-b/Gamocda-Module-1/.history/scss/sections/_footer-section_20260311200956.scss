@@ -1,0 +1,101 @@
+@use '../abstract/mixins' as *;
+@use '../universal components/components' as *;
+@use '../abstract/responsive' as *;
+@use '../abstract/variables' as *;
+
+
+button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+// Control bar 
+.control-bar {
+    
+    grid-area: control-bar;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem;
+    padding-bottom: 1.6rem; 
+    cursor: pointer;
+    background-color: $control-bar-bg;
+    border-radius: 1rem;
+    // I changed the position to "fixed" to make it fixed to the bottom of the screen when scrolling
+    position: fixed;
+    z-index: 100;
+    bottom: 9.5rem;
+    // I changed the witdh to 97vw 
+    width: 94vw;
+    justify-self: center;
+    // centers the item
+    margin: 0 auto;
+    
+    @include desktop {
+        position: fixed;
+        padding: 2rem;
+        margin: 0;
+        width: calc(100% - 30rem);
+        bottom: 0;
+        right: 0;
+    }
+}
+
+// Progress-bar 
+.progress-bar {
+    flex: 1;
+    height: 0.4rem;
+    background: $font-fg-secondary;
+    border-radius: 10rem;
+    position: relative;
+    cursor: pointer;
+    
+    
+    @include desktop { width: 15vw; min-width: 5rem; }
+    
+
+    &--mobile {
+        position: absolute;
+        bottom: 0.1rem;
+        left: 0.9rem;
+        right: 0.9rem;
+        height: 0.3rem;
+        width: 96%;
+        @include desktop { display: none; }
+    }
+
+    &__fill {
+        height: 100%;
+        width: 35%;
+        background: #E0E0E0;
+        border-radius: 10rem;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: -0.5rem;  top: 50%;
+            transform: translateY(-50%);
+            width: 1rem;
+            height: 1rem;
+            background: white;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+    }
+
+    &:hover &__fill::after { opacity: 1; }
+}
+
+// Left side 
+.control-left {
+    display: flex;
+    align-items: center;
+    // flex: 1;
+    gap: 1rem;
+
+    
+... (164 lines left)

@@ -1,0 +1,159 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.episode_main {
+  background: linear-gradient(180deg, rgba(165, 96, 42, 0.47) 0%, rgba(6, 6, 6, 0.47) 100%);
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  .episode_intro {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 30px;
+
+    .episode-header {
+      h3 {
+        color: variables.$primary_color;
+        letter-spacing: variables.$primary_spacing;
+        font-weight: 700;
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: variables.$primary_color;
+        letter-spacing: variables.$primary_spacing;
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+
+    .episode-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 10px;
+
+      button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+
+    .episode_img img {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+    }
+  }
+
+  .about_episode {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 30px;
+
+    .playlist_img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+    }
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      h4 {
+        color: variables.$primary_color;
+        letter-spacing: variables.$primary_spacing;
+        font-weight: 700;
+        font-size: 20px;
+      }
+
+      p {
+        color: variables.$primary_color;
+        letter-spacing: variables.$primary_spacing;
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1224px) {
+  .episode_main {
+    flex-direction: column;
+    gap: 30px;
+
+    .episode_intro {
+      margin: 20px;
+
+      .episode-header h3 {
+        font-size: 30px;
+      }
+    }
+    .about_episode {
+      width: 100%;
+      margin: 20px;
+
+      .playlist_img {
+        max-width: 200px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .episode_main {
+    padding: 10px;
+
+    .episode_intro {
+      margin: 10px;
+      gap: 20px;
+
+      .episode-header {
+        h3 {
+          font-size: 24px;
+        }
+        p {
+          font-size: 13px;
+        }
+      }
+
+      .episode-actions {
+        gap: 10px;
+        button img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+
+    .about_episode {
+      gap: 20px;
+      .playlist_img {
+        max-width: 150px;
+      }
+      .description {
+        gap: 20px;
+        h4 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

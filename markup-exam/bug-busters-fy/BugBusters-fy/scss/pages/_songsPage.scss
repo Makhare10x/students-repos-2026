@@ -1,0 +1,173 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+@use "../components/tracklist";
+
+.song-detail {
+  padding: 4rem;
+  background: linear-gradient(
+    to bottom,
+    #060606 0%,
+    #8a9dbb2e 15%,
+    #060606 100%
+  );
+  .song-hero {
+    display: grid;
+    grid-template-columns: 50rem 1fr;
+    gap: 4rem;
+
+    .song-cover {
+      overflow: hidden;
+
+      img {
+        @include mixins.imageShaper($brRadius: 1rem);
+      }
+    }
+
+    .song-info {
+      @include mixins.flex-prop($direction: column, $gap: 1.6rem);
+      padding-top: 1rem;
+
+      .song-title {
+        font-size: 3.6rem;
+        font-weight: 800;
+        color: variables.$color-active-desk;
+        margin: 0;
+      }
+
+      .song-meta {
+        @include mixins.flex-prop($align: center, $gap: 1rem);
+        list-style: none;
+        font-size: 1.4rem;
+        color: variables.$color-primary;
+
+        li + li::before {
+          content: ".";
+          margin-right: 1rem;
+        }
+      }
+
+      .song-controls {
+        @include mixins.flex-prop($align: center, $gap: 1rem);
+        padding-top: 0.25rem;
+      }
+
+      .song-tags {
+        @include mixins.flex-prop($gap: 1rem);
+        list-style: none;
+
+        .tag {
+          padding: 0.3rem 0.9rem;
+          border: 1px solid variables.$color-primary;
+          border-radius: 4rem;
+          font-size: 1.4rem;
+          color: variables.$color-primary;
+          cursor: pointer;
+          white-space: nowrap;
+          transition:
+            border-color 0.2s,
+            color 0.2s;
+
+          &:hover {
+            border-color: variables.$color-accent;
+            color: variables.$color-active-desk;
+          }
+        }
+      }
+
+      .song-artists {
+        @include mixins.flex-prop($direction: column, $gap: 1.6rem);
+        padding-top: 0.25rem;
+
+        .artist-item {
+          @include mixins.flex-prop($align: center, $gap: 1rem);
+
+          img {
+            flex-shrink: 0;
+          }
+
+          .artist-name {
+            display: block;
+            font-size: 1.4rem;
+            color: variables.$color-active-desk;
+          }
+
+          .artist-role {
+            display: block;
+            font-size: 1.4rem;
+            color: variables.$color-primary;
+          }
+        }
+      }
+    }
+  }
+
+  .song-tabs {
+    border-bottom: 0.2rem solid variables.$bg-secondary-dark;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+
+    .tab {
+      background: transparent;
+      border: none;
+      color: variables.$color-primary;
+      font-size: 1.4rem;
+      padding: 0.8rem 1.2rem;
+      cursor: pointer;
+      transition: color 0.2s;
+
+      &:hover {
+        color: variables.$color-accent;
+      }
+    }
+  }
+
+  .tab-content {
+    @include mixins.flex-prop($gap: 2rem, $align: flex-start);
+
+    .sidebar-tools {
+      @include mixins.flex-prop($direction: column, $gap: 0.6rem);
+      flex-shrink: 0;
+      padding-top: 0.25rem;
+
+      .tool-btn {
+        width: 34px;
+        height: 34px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        @include mixins.flex-prop($align: center, $justify: center);
+        color: variables.$color-primary;
+        border-radius: 0.4rem;
+        transition:
+          color 0.2s,
+          background-color 0.2s;
+
+        &:hover {
+          color: variables.$color-accent;
+          background-color: variables.$color-active-desk;
+        }
+
+        &.active {
+          color: variables.$color-accent;
+        }
+      }
+    }
+
+    .lyrics {
+      @include mixins.flex-prop($direction: column);
+      width: 100%;
+
+      .lyric-line {
+        font-size: 2.4rem;
+        line-height: 2;
+        color: variables.$color-primary;
+        cursor: pointer;
+        transition: color 0.2s;
+
+        &:hover {
+          color: variables.$color-accent;
+        }
+      }
+    }
+  }
+}

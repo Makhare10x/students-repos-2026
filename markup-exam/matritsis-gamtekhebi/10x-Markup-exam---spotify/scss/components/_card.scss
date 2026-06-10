@@ -1,0 +1,480 @@
+@use "../base" as *;
+
+.mix-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  overflow: visible;
+}
+
+.mix-card {
+  cursor: pointer;
+  overflow: visible;
+  padding-top: 14px;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+  width: 170px;
+  height: 253px;
+}
+
+.mix-card__art {
+  position: relative;
+  border-radius: 12px;
+  overflow: visible;
+}
+
+.mix-card__art img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  z-index: 3;
+}
+.mix-card__art::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 12px;
+  right: 12px;
+  height: 6px;
+  border-radius: 6px 6px 0 0;
+  z-index: 2;
+}
+
+.mix-card__art::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 24px;
+  right: 24px;
+  height: 6px;
+  border-radius: 6px 6px 0 0;
+  z-index: 1;
+}
+
+.mix-card__title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.mix-card__title {
+  font-size: 14px;
+  color: $color-text-primary;
+  font-weight: normal;
+}
+
+.mix-card__liked {
+  color: $color-brand-green;
+}
+
+.mix-card__secondary {
+  color: $color-text-secondary;
+}
+
+.mix-card__desc {
+  font-size: 12px;
+  color: $color-text-secondary;
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+.artist-card {
+  text-align: center;
+  cursor: pointer;
+  overflow: visible;
+  padding-top: 14px;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+  width: 170px;
+  height: 253px;
+}
+
+.artist-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.artist-img img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: $color-bg-secondary;
+  color: $color-text-secondary;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.artist-card__desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: $color-text-primary;
+  margin-top: 15px;
+}
+
+// Made For You
+.mix-grid--made-for-you .mix-card:nth-child(1) .mix-card__count {
+  color: #ce6e9a;
+}
+.mix-grid--made-for-you .mix-card:nth-child(1) .mix-card__art::before {
+  background: #ce6e9a;
+  opacity: 0.3;
+}
+.mix-grid--made-for-you .mix-card:nth-child(1) .mix-card__art::after {
+  background: #ce6e9a;
+  opacity: 0.15;
+}
+
+.mix-grid--made-for-you .mix-card:nth-child(2) .mix-card__count {
+  color: #50e3c2;
+}
+.mix-grid--made-for-you .mix-card:nth-child(2) .mix-card__art::before {
+  background: #50e3c2;
+  opacity: 0.3;
+}
+.mix-grid--made-for-you .mix-card:nth-child(2) .mix-card__art::after {
+  background: #50e3c2;
+  opacity: 0.15;
+}
+
+.mix-grid--made-for-you .mix-card:nth-child(3) .mix-card__count {
+  color: #f4b8bd;
+}
+.mix-grid--made-for-you .mix-card:nth-child(3) .mix-card__art::before {
+  background: #f4b8bd;
+  opacity: 0.3;
+}
+.mix-grid--made-for-you .mix-card:nth-child(3) .mix-card__art::after {
+  background: #f4b8bd;
+  opacity: 0.15;
+}
+
+.mix-grid--made-for-you .mix-card:nth-child(4) .mix-card__count {
+  color: #c3e7b7;
+}
+.mix-grid--made-for-you .mix-card:nth-child(4) .mix-card__art::before {
+  background: #c3e7b7;
+  opacity: 0.3;
+}
+.mix-grid--made-for-you .mix-card:nth-child(4) .mix-card__art::after {
+  background: #c3e7b7;
+  opacity: 0.15;
+}
+
+.mix-grid--made-for-you .mix-card:nth-child(5) .mix-card__count {
+  color: #f37fa6;
+}
+.mix-grid--made-for-you .mix-card:nth-child(5) .mix-card__art::before {
+  background: #f37fa6;
+  opacity: 0.3;
+}
+.mix-grid--made-for-you .mix-card:nth-child(5) .mix-card__art::after {
+  background: #f37fa6;
+  opacity: 0.15;
+}
+
+.mix-grid--made-for-you .mix-card:nth-child(6) .mix-card__count {
+  color: #a0bec8;
+}
+.mix-grid--made-for-you .mix-card:nth-child(6) .mix-card__art::before {
+  background: #a0bec8;
+  opacity: 0.3;
+}
+.mix-grid--made-for-you .mix-card:nth-child(6) .mix-card__art::after {
+  background: #a0bec8;
+  opacity: 0.15;
+}
+
+.mix-grid--made-for-you .mix-card:nth-child(7) .mix-card__count {
+  color: #fdd87d;
+}
+.mix-grid--made-for-you .mix-card:nth-child(7) .mix-card__art::before {
+  background: #fdd87d;
+  opacity: 0.3;
+}
+.mix-grid--made-for-you .mix-card:nth-child(7) .mix-card__art::after {
+  background: #fdd87d;
+  opacity: 0.15;
+}
+
+.mix-grid--made-for-you .mix-card:nth-child(8) .mix-card__count {
+  color: #d4b2a9;
+}
+.mix-grid--made-for-you .mix-card:nth-child(8) .mix-card__art::before {
+  background: #d4b2a9;
+  opacity: 0.3;
+}
+.mix-grid--made-for-you .mix-card:nth-child(8) .mix-card__art::after {
+  background: #d4b2a9;
+  opacity: 0.15;
+}
+
+// Your Top Mixes
+.mix-grid--top-mixes .mix-card:nth-child(1) .mix-card__count {
+  color: #ccf665;
+}
+.mix-grid--top-mixes .mix-card:nth-child(1) .mix-card__art::before {
+  background: #ccf665;
+  opacity: 0.3;
+}
+.mix-grid--top-mixes .mix-card:nth-child(1) .mix-card__art::after {
+  background: #ccf665;
+  opacity: 0.15;
+}
+
+.mix-grid--top-mixes .mix-card:nth-child(2) .mix-card__count {
+  color: #f9e72c;
+}
+.mix-grid--top-mixes .mix-card:nth-child(2) .mix-card__art::before {
+  background: #f9e72c;
+  opacity: 0.3;
+}
+.mix-grid--top-mixes .mix-card:nth-child(2) .mix-card__art::after {
+  background: #f9e72c;
+  opacity: 0.15;
+}
+
+.mix-grid--top-mixes .mix-card:nth-child(3) .mix-card__count {
+  color: #9bf0e2;
+}
+.mix-grid--top-mixes .mix-card:nth-child(3) .mix-card__art::before {
+  background: #9bf0e2;
+  opacity: 0.3;
+}
+.mix-grid--top-mixes .mix-card:nth-child(3) .mix-card__art::after {
+  background: #9bf0e2;
+  opacity: 0.15;
+}
+
+.mix-grid--top-mixes .mix-card:nth-child(4) .mix-card__count {
+  color: #6f86ff;
+}
+.mix-grid--top-mixes .mix-card:nth-child(4) .mix-card__art::before {
+  background: #6f86ff;
+  opacity: 0.3;
+}
+.mix-grid--top-mixes .mix-card:nth-child(4) .mix-card__art::after {
+  background: #6f86ff;
+  opacity: 0.15;
+}
+
+.mix-grid--top-mixes .mix-card:nth-child(5) .mix-card__count {
+  color: #ffcbd4;
+}
+.mix-grid--top-mixes .mix-card:nth-child(5) .mix-card__art::before {
+  background: #ffcbd4;
+  opacity: 0.3;
+}
+.mix-grid--top-mixes .mix-card:nth-child(5) .mix-card__art::after {
+  background: #ffcbd4;
+  opacity: 0.15;
+}
+
+.mix-grid--top-mixes .mix-card:nth-child(6) .mix-card__count {
+  color: #ffc668;
+}
+.mix-grid--top-mixes .mix-card:nth-child(6) .mix-card__art::before {
+  background: #ffc668;
+  opacity: 0.3;
+}
+.mix-grid--top-mixes .mix-card:nth-child(6) .mix-card__art::after {
+  background: #ffc668;
+  opacity: 0.15;
+}
+
+.mix-grid--top-mixes .mix-card:nth-child(7) .mix-card__count {
+  color: #27856b;
+}
+.mix-grid--top-mixes .mix-card:nth-child(7) .mix-card__art::before {
+  background: #27856b;
+  opacity: 0.3;
+}
+.mix-grid--top-mixes .mix-card:nth-child(7) .mix-card__art::after {
+  background: #27856b;
+  opacity: 0.15;
+}
+
+.mix-grid--top-mixes .mix-card:nth-child(8) .mix-card__count {
+  color: #dd138b;
+}
+.mix-grid--top-mixes .mix-card:nth-child(8) .mix-card__art::before {
+  background: #dd138b;
+  opacity: 0.3;
+}
+.mix-grid--top-mixes .mix-card:nth-child(8) .mix-card__art::after {
+  background: #dd138b;
+  opacity: 0.15;
+}
+.discover-banner {
+  margin-top: 40px;
+}
+.discover-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.discover-header h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #e0e0e0;
+}
+.discover-arrows {
+  display: flex;
+  gap: 10px;
+}
+.discover-arrows img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.discover-banner h2 {
+  margin-bottom: 20px;
+}
+.discover-content {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  width: 100%;
+  gap: 10px;
+}
+.discover-content .square {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  border-radius: 10px;
+}
+
+.discover-content .square:nth-child(1) {
+  background-color: #1e3264;
+}
+.discover-content .square:nth-child(2) {
+  background-color: #ba5d07;
+}
+.discover-content .square:nth-child(3) {
+  background-color: #1e3264;
+}
+.discover-content .square:nth-child(4) {
+  background-color: #8d67ab;
+}
+.discover-content .square:nth-child(5) {
+  background-color: #b02897;
+}
+.discover-content .square:nth-child(6) {
+  background-color: #8d67ab;
+}
+.discover-content .square:nth-child(7) {
+  background-color: #777777;
+}
+.discover-content .square:nth-child(8) {
+  background-color: #ba5d07;
+}
+
+.discover-content h2 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-transform: capitalize;
+  font-size: 20px;
+  line-height: 100%;
+  height: 54px;
+  width: 95px;
+  letter-spacing: 3%;
+  font-weight: 900;
+  color: #fff;
+}
+.discover-content img {
+  position: absolute;
+  top: 61px;
+  left: 83px;
+}
+.genres-content {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  width: 100%;
+  gap: 10px;
+}
+.genres-content .square {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  border-radius: 10px;
+}
+.genres-content h2 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-transform: capitalize;
+  font-size: 20px;
+  line-height: 100%;
+  height: 54px;
+  width: 95px;
+  letter-spacing: 3%;
+  font-weight: 900;
+  color: #fff;
+}
+
+.genres-content .square img {
+  position: absolute;
+  top: 61px;
+  left: 83px;
+}
+
+.genres-content .square:nth-child(1) {
+  background-color: #148a08;
+}
+.genres-content .square:nth-child(2) {
+  background-color: #d84000;
+}
+.genres-content .square:nth-child(3) {
+  background-color: #503750;
+}
+.genres-content .square:nth-child(4) {
+  background-color: #006450;
+}
+.genres-content .square:nth-child(5) {
+  background-color: #e91429;
+}
+.genres-content .square:nth-child(6) {
+  background-color: #1e3264;
+}
+.genres-content .square:nth-child(7) {
+  background-color: #e91429;
+}
+.genres-content .square:nth-child(8) {
+  background-color: #537aa1;
+}
+
+.mix-card__count-lightblue {
+  color: #95e6d3;
+}
+.mix-card__count-red {
+  color: #f4b8bd;
+}
+
+.mix-card__count-green {
+  color: #c3e7b7;
+}
+
+.mix-card__count-lime {
+  color: #ccf665;
+}
+
+.mix-card__count-yellow {
+  color: #f9e72c;
+}
+
+.mix-card__count-brightblue {
+  color: #9bf0e2;
+}

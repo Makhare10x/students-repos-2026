@@ -1,0 +1,63 @@
+@use "sass:map";
+@use "./variables" as v;
+
+@mixin card-rank($color: v.$text-primary) {
+  font-size: map.get(v.$font-size, subtitle);
+  font-weight: map.get(v.$font-weight, regular);
+  color: $color;
+}
+
+
+// navigation button
+
+@mixin nav-button {
+  background-color: rgba(v.$bg-main, 0.5);
+  color: v.$text-secondary;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: map.get(v.$font-size, subtitle);
+  font-family: v.$font-base;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  cursor: pointer;
+  width: 19.6rem;
+    &:active {
+      background-color:v.$bg-primary;
+      color: v.$text-primary;
+      font-weight: map.get(v.$font-weight,bold);
+      transition: 0.3s;
+    }
+}
+
+// filter chip
+
+@mixin filter-chip {
+  background-color: v.$bg-secondary;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  color: v.$text-secondary;
+  font-size: map.get(v.$font-size, subtitle);
+  border: none;
+  border-radius: 0.8rem;
+  padding: 0.8rem 1.5rem;
+  gap: 0.9rem ;
+  cursor: pointer;
+      &:hover {
+          color: v.$text-primary;
+      }
+          &:active {
+              background-color:v.$nav-active-button;
+              color:#060606;
+          }
+}
+
+@mixin flex($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}

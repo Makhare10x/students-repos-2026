@@ -1,0 +1,161 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+@use "sass:map";
+
+.footer-nav label {
+    @include m.footer-animation;
+}
+
+.caption {
+    label {
+        @include m.apply-icon-hover(1.15);
+    }
+}
+
+.mini-player__button label {
+    @include m.apply-icon-hover(1.1);
+}
+
+.player-controls__container div[class^="player-controls__"] {
+    @include m.flex-center($align: center, $justify: center);
+    @include m.apply-icon-hover(1.15);
+}
+
+.controls__label {
+    @include m.apply-icon-hover(1.1);
+}
+
+.player-bottom__container {
+    div,
+    label {
+        display: flex;
+        @include m.apply-icon-hover(1.1);
+    }
+}
+
+.music-playlist__toggle {
+    @include m.flex-center($align: center);
+    gap: 1rem;
+
+    .playlist-header__back {
+        @include m.apply-icon-hover(1.1);
+        display: flex;
+    }
+
+    .music-playlist__info {
+        @include m.flex-center($align: center);
+        gap: 0.5rem;
+        @include m.apply-icon-hover(1.02);
+
+        span {
+            transition: color 0.3s ease;
+        }
+
+        &:hover span {
+            color: #b3ffb3;
+        }
+    }
+}
+
+.randomizer {
+    @include m.flex-center($align: center);
+    gap: 1rem;
+
+    img {
+        @include m.apply-icon-hover(1.15);
+
+        transition: all 0.3s ease;
+
+        &:hover {
+            filter: #{v.$green-hover};
+            transform: scale(1.15);
+        }
+    }
+}
+
+.header-top {
+    @include m.flex-center($align: center, $justify: space-between);
+
+    .list-icon {
+        @include m.apply-icon-hover(1.1);
+    }
+
+    .album-info {
+        @include m.flex-center($align: center);
+        gap: 0.5rem;
+        cursor: pointer;
+
+        @include m.apply-icon-hover(1.02);
+
+        span {
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        &:hover span {
+            color: #b3ffb3;
+        }
+    }
+}
+
+.drag-handle {
+    @include m.flex-center($align: center, $justify: center);
+    padding: 0.5rem;
+
+    img {
+        @include m.apply-icon-hover(1.1);
+
+        opacity: 0.4;
+        transition:
+            transform 0.3s ease,
+            filter 0.3s ease,
+            opacity 0.3s ease;
+    }
+
+    &:hover img {
+        opacity: 1;
+    }
+}
+
+.remove-btn {
+    @include m.flex-center($align: center);
+    gap: 0.5rem;
+    background: v.$bg-secondary;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+
+    img {
+        @include m.apply-icon-hover(1.1);
+        opacity: 0.7;
+        transition: all 0.3s ease;
+    }
+
+    span {
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        background: lighten(v.$bg-secondary, 5%);
+
+        img {
+            opacity: 1;
+
+            transform: scale(1.15);
+        }
+
+        span {
+            color: v.$primary;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+            transform: scale(1.05);
+        }
+    }
+
+    &:active {
+        transform: translateY(0) scale(0.96);
+    }
+}

@@ -1,0 +1,303 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+// library page styling
+
+.main-container-library {
+  min-height: 100vh;
+  padding: variables.$page-padding;
+
+  // main container header
+
+  .library-nav-wrapper,
+  .library-actions-wrapper,
+  .display-icons,
+  .alligment-icons {
+    @include mixins.actions-flex;
+  }
+
+  .library-nav-wrapper {
+    justify-content: space-between;
+
+    margin-bottom: 3.1rem;
+  }
+
+  .library-actions-wrapper {
+    gap: 3.5rem;
+  }
+
+  .display-icons {
+    gap: 1rem;
+  }
+  .alligment-icons {
+    gap: 3.5rem;
+  }
+
+  .icon-flex {
+    display: flex;
+
+    p {
+      align-self: center;
+      color: variables.$color-text-secondary;
+      @include mixins.small-font;
+    }
+  }
+
+  // main content albums
+  // grid structure
+  .library-cards-wrapper {
+    gap: 2rem 1.1rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 17rem;
+    gap: 0.2rem;
+    position: relative;
+    img {
+      border-radius: 0.725rem;
+    }
+  }
+
+  article:hover {
+    @include mixins.title-hover;
+  }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  // cards styling
+  figcaption {
+    @include mixins.flex-between;
+  }
+
+  .library-cards-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  .library-cards-quantity {
+    @include mixins.small-font;
+    color: variables.$color-text-secondary;
+  }
+
+  .library-cards-description {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: variables.$color-text-secondary;
+  }
+
+  // shadows
+  // article 1
+  .article-shadow-light-1 {
+    @include mixins.light-shadow;
+    background: #1ed76026;
+  }
+
+  .article-shadow-dark-1 {
+    @include mixins.dark-shadow;
+    background: #1ed7604d;
+  }
+
+  // article 2
+  .article-shadow-light-2 {
+    @include mixins.light-shadow;
+    background: #ffffff26;
+  }
+
+  .article-shadow-dark-2 {
+    @include mixins.dark-shadow;
+    background: #ffffff4d;
+  }
+
+  // article 3
+  .article-shadow-light-3 {
+    @include mixins.light-shadow;
+    background: #3f60ac26;
+  }
+
+  .article-shadow-dark-3 {
+    @include mixins.dark-shadow;
+    background: #3f60ac4d;
+  }
+
+  // article 4
+  .article-shadow-light-4 {
+    @include mixins.light-shadow;
+    background: #73737326;
+  }
+
+  .article-shadow-dark-4 {
+    @include mixins.dark-shadow;
+    background: #7373734d;
+  }
+
+  // article 5
+  .article-shadow-light-5 {
+    @include mixins.light-shadow;
+    background: #a6917426;
+  }
+
+  .article-shadow-dark-5 {
+    @include mixins.dark-shadow;
+    background: #a691744d;
+  }
+
+  // article 6
+  .article-shadow-light-6 {
+    @include mixins.light-shadow;
+    background: #75a49626;
+  }
+
+  .article-shadow-dark-6 {
+    @include mixins.dark-shadow;
+    background: #75a4964d;
+  }
+
+  // article 7
+  .article-shadow-light-7 {
+    @include mixins.light-shadow;
+    background: #6278b126;
+  }
+
+  .article-shadow-dark-7 {
+    @include mixins.dark-shadow;
+    background: #6278b14d;
+  }
+
+  // article 8
+  .article-shadow-light-8 {
+    @include mixins.light-shadow;
+    background: #95e6d326;
+  }
+
+  .article-shadow-dark-8 {
+    @include mixins.dark-shadow;
+    background: #95e6d34d;
+  }
+
+  // article 9
+  .article-shadow-light-9 {
+    @include mixins.light-shadow;
+    background: #f4b8bd26;
+  }
+
+  .article-shadow-dark-9 {
+    @include mixins.dark-shadow;
+    background: #f4b8bd4d;
+  }
+  // article 10
+  .article-shadow-light-10 {
+    @include mixins.light-shadow;
+    background: #c3e7b726;
+  }
+
+  .article-shadow-dark-10 {
+    @include mixins.dark-shadow;
+    background: #c3e7b74d;
+  }
+  // article 11
+  .article-shadow-light-11 {
+    @include mixins.light-shadow;
+    background: #ccf66526;
+  }
+
+  .article-shadow-dark-11 {
+    @include mixins.dark-shadow;
+    background: #ccf6654d;
+  }
+
+  // article 12
+  .article-shadow-light-12 {
+    @include mixins.light-shadow;
+    background: #f9e72c26;
+  }
+
+  .article-shadow-dark-12 {
+    @include mixins.dark-shadow;
+    background: #f9e72c4d;
+  }
+
+  // article 13
+  .article-shadow-light-13 {
+    @include mixins.light-shadow;
+    background: #9bf0e226;
+  }
+
+  .article-shadow-dark-13 {
+    @include mixins.dark-shadow;
+    background: #9bf0e24d;
+  }
+
+  // quantity colors
+  // daily mix 1
+
+  .library-cards-quantity-daily-1 {
+    @include mixins.small-font;
+    color: #95e6d3;
+  }
+
+  // daily mix 2
+  .library-cards-quantity-daily-2 {
+    @include mixins.small-font;
+    color: #f4b8bd;
+  }
+
+  // daily mix 3
+  .library-cards-quantity-daily-3 {
+    @include mixins.small-font;
+    color: #c3e7b7;
+  }
+  // rock mix
+  .library-cards-quantity-rock {
+    @include mixins.small-font;
+    color: #ccf665;
+  }
+  // chill mix
+  .library-cards-quantity-chill {
+    @include mixins.small-font;
+    color: #f9e72c;
+  }
+  // pop mix
+  .library-cards-quantity-pop {
+    @include mixins.small-font;
+    color: #9bf0e2;
+  }
+
+  // pins
+
+  .pin-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .pin-circle {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    background-color: variables.$color-text-chip-active;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1240px) {
+  .main-container-library {
+    padding: 0;
+
+    .alligment-icons,
+    .add-button {
+      display: none;
+    }
+  }
+}

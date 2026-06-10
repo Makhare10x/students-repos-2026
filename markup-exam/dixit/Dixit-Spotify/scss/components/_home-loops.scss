@@ -1,0 +1,82 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+
+.made-for-you {
+    .scroll-album-card {
+        article {
+            $album-p-colors:
+                v.$p-purple, v.$p-mint, v.$p-soft-pink, v.$p-pale-green,
+                v.$p-pink, v.$p-lightblue, v.$p-yellow-gold, v.$p-dusty-rose,
+                v.$p-bronze, v.$p-teal, v.$p-sky-grey, v.$p-lightyellow;
+            @for $i from 1 through length($album-p-colors) {
+                $current-color: nth($album-p-colors, $i);
+                &:nth-child(#{$i}) .album-card-subtitle > p:nth-of-type(1) {
+                    color: $current-color;
+                }
+            }
+               $mix-stack-colors: v.$p-purple v.$p-mint v.$p-soft-pink v.$p-pale-green
+            v.$p-pink v.$p-lightblue v.$p-yellow-gold v.$p-dusty-rose
+            v.$p-bronze v.$p-teal v.$p-sky-grey v.$p-lightyellow v.$p-yellow
+            v.$p-green v.$p-blue v.$p-dark-green v.$p-magenta v.$active-p-color;
+        @for $i from 1 through length($mix-stack-colors) {
+            $current-color: nth($mix-stack-colors, $i);
+            &:nth-child(#{$i}) .album_cover_wrapper {
+                div:nth-child(1) {
+                    background-color: $current-color;
+                    opacity: 0.15;
+                }
+                div:nth-child(2) {
+                    background-color: $current-color;
+                    opacity: 0.3;
+                }
+            }
+        }
+     
+        }
+    }
+}
+
+.your-top-mixes {
+    .scroll-album-card {
+        article {
+              $album-p-colors:
+                v.$p-purple, v.$p-mint, v.$p-soft-pink, v.$p-pale-green,
+                v.$p-pink, v.$p-lightblue, v.$p-yellow-gold, v.$p-dusty-rose,
+                v.$p-bronze, v.$p-teal, v.$p-sky-grey, v.$p-lightyellow;
+            @for $i from 1 through length($album-p-colors) {
+                $current-color: nth($album-p-colors, $i);
+                &:nth-child(#{$i}) .album-card-subtitle > p:nth-of-type(1) {
+                    color: $current-color;
+                }
+            }
+            $mix-stack-colors:
+                v.$p-pale-green, v.$p-dusty-rose, v.$p-soft-pink, v.$p-bronze,
+                v.$active-p-color, v.$p-yellow-gold, v.$p-mint, v.$p-purple;
+            @for $i from 1 through length($mix-stack-colors) {
+                $current-color: nth($mix-stack-colors, $i);
+                &:nth-child(#{$i}) .album_cover_wrapper {
+                    div:nth-child(1) {
+                        background-color: $current-color;
+                        opacity: 0.15;
+                    }
+                    div:nth-child(2) {
+                        background-color: $current-color;
+                        opacity: 0.3;
+                        $top-mix-colors:
+                            v.$p-lightyellow, v.$p-yellow, v.$p-green,
+                            v.$p-blue, v.$p-soft-pink, v.$p-yellow-gold,
+                            v.$p-magenta;
+                        @for $i from 1 through length($top-mix-colors) {
+                            $current-color: nth($top-mix-colors, $i);
+
+                            &:nth-child(#{$i}) .album-card-subtitle {
+                                @include m.p-colors($color: $current-color);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

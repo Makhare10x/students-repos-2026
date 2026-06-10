@@ -1,0 +1,113 @@
+@use "../abstracts/default" as d;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+/* Wrapper */
+.library-page__topbar {
+  @include m.flex-between;
+  margin-bottom: 3rem;
+}
+
+/* Right Controls */
+.library-page__controls {
+  @include m.flex-align(2rem);
+}
+
+/* Sort & Group (icon + text) */
+.library-page__sort,
+.library-page__group {
+  @include m.flex-align(0.6rem);
+  cursor: pointer;
+}
+
+
+.library-page__sort-label,
+.library-page__group-label {
+  font-size: v.$text-sm;
+  color: v.$color-text-secondary;
+}
+
+/* Active View Button */
+.library-page__view-btn.is-active {
+  background-color: v.$color-bg-hover;
+  border-radius: v.$radius-sm;
+}
+
+/*** liked songs section starts here ***/
+
+.liked-songs__header,
+.song-row {
+  display: grid;
+  grid-template-columns: 40px 300px 300px 90px 18px;
+  align-items: center;
+  justify-content: start;
+}
+
+.liked-songs__header {
+  font-size: v.$text-sm;
+  color: v.$color-text-secondary;
+  padding: 1.2rem;
+}
+
+.liked-songs__divider {
+  height: 2px;
+  background-color: v.$color-border-soft;
+  margin-bottom: 2rem;
+}
+
+.song-row {
+  padding: 1rem;
+  border-radius: v.$radius-sm;
+  transition: background-color v.$transition-base;
+  cursor: pointer;
+  @media (max-width: 1480px) {
+    grid-template-columns: 325px 1fr;
+    padding: 0;
+  }
+}
+
+.song-row:hover {
+  background-color: v.$color-bg-hover;
+
+  .song-row__album {
+    color: v.$color-text-primary;
+  }
+}
+
+.song-row__title-group {
+  @include m.flex-align(1rem);
+}
+
+.song-row__title-group img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  object-fit: cover;
+}
+
+.song-row__title {
+  margin-bottom: 0.4rem;
+  font-size: v.$text-md;
+  color: v.$color-text-primary;
+}
+
+.song-row__number {
+  font-weight: 500;
+  font-size: v.$text-md;
+  color: v.$color-text-secondary;
+}
+.song-row__album,
+.song-row__duration,
+.song-row__artist {
+  font-size: v.$text-sm;
+  color: v.$color-text-secondary;
+}
+
+.song-row__like img {
+  width: 18px;
+  height: 18px;
+}
+
+.liked-active {
+  background-color: v.$color-bg-hover;
+}

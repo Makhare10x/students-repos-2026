@@ -1,0 +1,436 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins";
+
+@media screen and (max-width: 400px) {
+  .home-content {
+    padding: 1.3rem 1.5rem;
+
+    .disappeared {
+      display: none !important;
+    }
+    .filter-btn {
+      @include m.filter-button;
+      font-size: 1.2rem !important;
+    }
+  }
+
+  .recently-played {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    justify-content: center;
+
+    > div {
+      width: 48%;
+      display: flex;
+      overflow: hidden;
+      gap: 0.8rem;
+      align-items: center;
+      background-color: v.$border-soft;
+      border-radius: 1rem;
+      padding: 0.8rem;
+
+      > div {
+        width: 70%;
+        p,
+        span {
+          font-size: 1.4rem;
+          color: v.$main-title-color;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        span {
+          color: v.$main-subTitle-color;
+        }
+      }
+    }
+    // get lucky page
+    .home-section{
+      display: none !important;
+    }
+  }
+
+  .home-section__row {
+    .media-card {
+      .card__img--wrapper {
+        max-width: 14.1rem !important;
+        height: 15rem;
+      }
+      .media-card__meta {
+        margin-top: 3rem;
+        justify-content: space-around !important;
+        width: 100% !important;
+        height: 5.7rem;
+        overflow: hidden;
+
+        h4 {
+          font-size: 1.2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .browse__row {
+    gap: 2rem;
+    overflow-y: hidden !important;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .recent__Search--wrapper {
+    display: none;
+  }
+
+  .browse-card {
+    width: 45%;
+
+    .media-card__img {
+      height: 10rem !important;
+      width: 100% !important;
+    }
+
+    img {
+      bottom: -3rem !important;
+    }
+
+    span {
+      font-size: 2rem !important;
+      font-weight: 900 !important;
+      width: 60% !important;
+    }
+  }
+}
+
+@media (max-width: 485px) {
+  .search-btn,
+  .pluse-btn {
+    display: none !important;
+  }
+
+  .penned__filters--wrapper {
+    > div {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+
+  .liked__filter--wrapper {
+    justify-content: center;
+  }
+  .mobile__cover {
+    display: flex !important;
+  }
+
+  .delete-button {
+    display: none;
+  }
+  // Get Lucky pages only 
+  .page-get-lucky {
+    .home-section {
+      display: none !important;
+    }
+  }
+}
+
+@media (max-width: 1060px) {
+  .home-content {
+    border: none;
+  }
+
+  .layout__footer {
+    margin-top: 10rem;
+
+    > div {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: calc(var(--mobile-nav-h));
+      width: 98%;
+      margin: 0 auto;
+      z-index: 9999;
+      padding: 1rem 1.4rem;
+      border-radius: 1rem;
+    }
+
+    .Playback__controls--Progress-bar {
+      display: none !important;
+    }
+
+    .Track-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 93vw !important;
+    }
+
+    .Track__info--container {
+      display: flex !important;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.8rem 1rem 1rem 0.8rem;
+      min-width: 0;
+
+      img {
+        width: 4.8rem;
+        height: 4.8rem;
+        object-fit: cover;
+        border-radius: 0.4rem;
+        flex-shrink: 0;
+      }
+
+      div {
+        min-width: 0;
+
+        h4,
+        span,
+        p {
+          width: auto;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+
+    .mobile__actions {
+      display: flex !important;
+    }
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      "main"
+      "footer";
+    min-height: 100vh;
+  }
+
+  .layout__sidebar {
+    display: none;
+  }
+
+  .layout__header {
+    display: block;
+  }
+
+  .header {
+    height: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .mobile-navigation {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .hero {
+    display: block;
+  }
+
+  .cards {
+    width: 100%;
+  }
+
+  .layout__main {
+    padding-bottom: 10.5rem;
+  }
+
+  .search__filter--wrapper {
+    display: none !important;
+  }
+
+  .friend-activity {
+    display: none;
+  }
+
+  .songs-table {
+    display: none;
+  }
+  .table__section--header {
+    display: none;
+  }
+
+  .table__section--header--mobile,
+  .playlist-table-mobile {
+    display: flex;
+  }
+  .playlist-table-mobile {
+    display: flex;
+  }
+  .mobile__cover {
+    display: none;
+  }
+  // get lucky page
+
+  .artists__section--header,
+  .artist__table {
+    display: flex !important;
+  }
+
+  .songs-list {
+    width: 100%;
+  }
+  .artis__content-mobile {
+    display: none !important;
+  }
+  .album__section--header {
+    display: flex;
+  }
+}
+
+@media (min-width: 1061px) {
+  .header {
+    height: 5.4rem;
+    background-color: var(--main-bg);
+    color: var(--text-color);
+    padding: 0.6rem 1rem 1rem 0;
+    overflow: visible;
+  }
+
+  .header > div {
+    width: 100%;
+  }
+
+  .navigation {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+      .nav-item {
+        .nav-link {
+          @include mixins.flex-row();
+          gap: 1rem;
+          font-size: var(--normal-text-size);
+          font-weight: var(--regular-weight);
+        }
+      }
+
+      .nav-item:first-child {
+        width: 26.2rem;
+        background-color: var(--header-nav-clikced-bg);
+        border-radius: 1rem;
+        width: 19.5rem;
+        color: var(--text-clicked-color);
+      }
+
+      .nav-item:nth-child(2) {
+        width: 19.5rem;
+      }
+
+      .nav-item:nth-child(3) {
+        width: 21rem;
+      }
+    }
+
+    .user-menu {
+      display: flex;
+      gap: 1.3rem;
+      align-items: center;
+    }
+  }
+
+  .mobile-navigation {
+    display: none;
+  }
+
+  .sidebar {
+    display: block;
+  }
+
+  .search__filter--wrapper--mobile {
+    display: none;
+  }
+
+  .liked__song--actions,
+  .liked__song--mobile-content {
+    display: none;
+  }
+  .playlist__mobile--wrapper {
+    display: none;
+  }
+  // get lucky page
+}
+
+@media (max-width: 1141px) {
+  .action__wrapper {
+    display: none !important;
+  }
+  .artist__nav nav {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+@media (max-width: 1230px) {
+  .cover__section {
+    display: none !important;
+  }
+
+  .plalist__table-section {
+    width: 100%;
+  }
+  .playlist-table {
+    width: 100%;
+  }
+
+  // get lucky page
+  .artist__music-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .artis__content-mobile {
+    display: flex !important;
+  }
+
+  .artists__section--header,
+  .artist__table,
+  .artist__pick,
+  .artist__nav,
+  .artist__cover-wrapper,
+  .artist__music-wrapper {
+    display: none !important;
+    background-color: salmon;
+  }
+
+  .artist__about-section {
+    display: none !important;
+  }
+
+  .albums__section-column,
+  .album__nav {
+    display: none !important;
+  }
+
+  .artist__albums-column-section,
+  .artist__albums-section {
+    border: none;
+  }
+  .artist__albums-column-section {
+    margin-top: -5rem;
+  }
+}

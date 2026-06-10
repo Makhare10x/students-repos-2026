@@ -1,0 +1,63 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.mix-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $container-padding-mobile;
+}
+
+.mix-card {
+  @include flex-center(row, 1rem, flex-start, center);
+  padding: 0.8rem 0 0.7rem 0.6rem;
+  border-radius: 1rem;
+  background: $color-bg-secondary;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: $overlay-dark-15;
+  }
+}
+
+.mix-cover {
+  @include fluid-size(width, 4rem, 4vw, 4.3rem);
+  @include fluid-size(height, 4rem, 4vw, 4.3rem);
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.mix-text {
+  min-width: 0;
+  @include flex-center(column, 0.2rem, center, flex-start);
+}
+
+.mix-title {
+  color: $color-text-primary;
+  font-family: $font-family-primary;
+  font-size: $font-size-body-small;
+  font-weight: $font-weight-regular;
+  letter-spacing: $letter-spacing-medium;
+  @include text-truncate;
+}
+
+.mix-sub {
+  color: $color-text-secondary;
+  font-family: $font-family-primary;
+  font-size: $font-size-body-small;
+  font-weight: $font-weight-regular;
+  letter-spacing: $letter-spacing-medium;
+  @include text-truncate;
+}
+
+@include respond(tablet) {
+  .mix-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@include respond(desktop) {
+  .mix-grid {
+    display: none;
+  }
+}

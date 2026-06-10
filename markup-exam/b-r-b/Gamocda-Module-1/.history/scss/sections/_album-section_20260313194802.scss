@@ -1,0 +1,91 @@
+@use '../abstract/mixins' as *;
+@use '../universal components/components' as *;
+@use '../abstract/responsive' as *;
+@use '../abstract/variables' as *;
+
+.album__container {
+    padding: 2.2rem 5rem 2.2rem 3.7rem;
+    display: flex;
+    background: linear-gradient(180deg, #333842, #060606)
+}
+
+.album__main {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.album__title {
+    @include primary-title;
+    font-weight: 700;
+    font-size: 3.6rem;
+}
+
+.album__info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    @include primary-text;
+}
+
+.album__artist {
+    color: $header-text-color;
+}
+
+.album__nav {
+    @include flex-between;
+}
+
+.album__player {
+    display: flex;
+    align-items: center;
+}
+
+.album__right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 30%;
+    padding: 2.2rem 3.8rem;
+}
+
+.album__cover {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.album__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 80%;
+}
+
+.album__tag {
+    @include primary-text;
+    border: 2px solid #89898940;
+    border-radius: 44px;
+    padding: 10px 20px;
+}
+
+.album__last-artists {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.album__last-artist {
+    display: flex;
+    align-items: center;
+    @include primary-title;
+    color: $font-fg-secondary;
+
+    &-cover {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+}

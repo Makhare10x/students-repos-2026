@@ -1,0 +1,111 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.main-content-episode {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 100vh;
+  gap: 11.5rem;
+  border-radius: 1rem;
+
+  background: linear-gradient(
+    180deg,
+    rgba(165, 96, 42, 0.47) 0%,
+    rgba(6, 6, 6, 0.47) 100%
+  );
+  min-height: 100vh;
+  padding: variables.$page-padding;
+
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .left-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  // title
+
+  h1 {
+    @include mixins.page-title-font;
+    color: #e0e0e0;
+  }
+
+  // episode info
+  .episode-meta-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    @include mixins.small-font;
+  }
+
+  .episode-date,
+  .episode-duration {
+    color: variables.$color-text-secondary;
+  }
+
+  .dot {
+    @extend %dot;
+  }
+
+  // actions container
+  .episode-header-actions {
+    @extend %actions-container;
+  }
+
+  // actions hover effect
+  .button-hovers {
+    opacity: 0.7;
+    &:hover {
+      opacity: 1;
+      filter: brightness(1.5);
+    }
+  }
+
+  .episode-video {
+    background-image: url(../../assets/images/the-joe-rogan-photo.png);
+    background-size: 100%;
+    background-position: center;
+    width: min(96.9rem, 98%);
+    height: min(54.6rem, 47%);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: min(7.2rem, 7.4%);
+      cursor: pointer;
+    }
+  }
+
+  // right section
+
+  .right-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .episode-about {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &-description,
+    &-link {
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: variables.$color-text-secondary;
+    }
+  }
+
+  .episode-about-link {
+    a:visited {
+      color: #ff7101;
+    }
+  }
+}

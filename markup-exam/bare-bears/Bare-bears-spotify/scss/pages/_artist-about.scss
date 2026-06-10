@@ -1,0 +1,137 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.daft-punk-about {
+  margin-top: -15px;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: clamp(20px, 50px, 103px);
+  margin-right: 0px;
+  padding-left: 10px;
+  overflow-y: auto;
+  //scrollbar-: none;
+
+  &-left {
+    .eclips-relative {
+      width: 131px;
+      aspect-ratio: 1;
+      clip-path: polygon(
+        98.11% 63.61%,
+        89.61% 69.15%,
+        90.55% 79.25%,
+        80.68% 81.54%,
+        78.1% 91.35%,
+        68.04% 90.13%,
+        62.27% 98.47%,
+        53.22% 93.88%,
+        44.95% 99.74%,
+        38.02% 92.34%,
+        28.24% 95.02%,
+        24.26% 85.69%,
+        14.15% 84.86%,
+        13.61% 74.73%,
+        4.39% 70.5%,
+        7.34% 60.79%,
+        0.13% 53.66%,
+        6.23% 45.55%,
+        1.89% 36.39%,
+        10.39% 30.85%,
+        9.45% 20.75%,
+        19.32% 18.46%,
+        21.9% 8.65%,
+        31.96% 9.87%,
+        37.73% 1.53%,
+        46.78% 6.12%,
+        55.05% 0.26%,
+        61.98% 7.66%,
+        71.76% 4.98%,
+        75.74% 14.31%,
+        85.85% 15.14%,
+        86.39% 25.27%,
+        95.61% 29.5%,
+        92.66% 39.21%,
+        99.87% 46.34%,
+        93.77% 54.45%
+      );
+      //position: relative;
+      background-color: rgb(25, 137, 65);
+
+      .eclips-absolute {
+        text-align: center;
+        padding-top: 30px;
+        color: rgb(224, 224, 224);
+
+        h3 {
+          font-size: 30px;
+          font-weight: 700;
+          letter-spacing: 3%;
+          &:hover {
+            @include mixins.pointer-opacity;
+          }
+        }
+        p {
+          font-size: 14px;
+          font-weight: 700;
+          &:hover {
+            @include mixins.pointer-opacity;
+          }
+        }
+      }
+    }
+  }
+
+  &-middle {
+    width: 100%;
+    max-width: 750px;
+    height: 100%;
+    max-height: 330px;
+    text-align: left;
+    overflow-y: clip;
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 175%;
+      letter-spacing: 0.03em;
+      //max-height: 400px;
+      //overflow-y: auto;
+      color: rgb(224, 224, 224);
+      &:hover {
+        @include mixins.pointer-opacity;
+      }
+    }
+  }
+  &-right {
+    width: 100%;
+    max-width: 230px;
+    overflow-y: clip;
+
+    ul li {
+      list-style: none;
+      margin-bottom: clamp(5px, 10px, 15px);
+      h3 {
+        color: rgba(224, 224, 224);
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 175%;
+        letter-spacing: 0.03em;
+        &:hover {
+          @include mixins.pointer-opacity;
+        }
+      }
+      span {
+        color: rgba(137, 137, 137);
+        font-size: 14.13px;
+        font-weight: 400;
+        line-height: 175%;
+        letter-spacing: 0.03em;
+        margin-top: -20px;
+        &:hover {
+          @include mixins.pointer-opacity;
+        }
+      }
+    }
+  }
+}

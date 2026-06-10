@@ -1,0 +1,151 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+//========SIDEBAR=========
+.sidebar {
+  width: $sidebar-width;
+  flex-shrink: 0;
+  margin-left: 0.7rem;
+  border-radius: $spacing-base;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    padding: 0.5rem 0 0 1.6rem;
+    margin-bottom: $spacing-md;
+    a {
+      @include flex();
+      gap: $spacing-base;
+      font-size: $font-size-base;
+      color: $color-text-subtle;
+      transition: background-color 0.2s ease, color 0.2s ease, filter 0.2s ease;
+      padding: 0.2rem;
+      &:hover{
+        background-color: $color-surface-active;
+        border-radius: 0.8rem;
+        span{
+             color:$color-text;
+        }
+        img{
+          filter: brightness(2)
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  &__item {
+
+    a {
+      @include flex();
+      gap: $spacing-base;
+      width: 100%;
+      transition: background-color 0.2s ease, color 0.2s ease, filter 0.2s ease;
+      border-radius: 0.8rem;
+      &:hover{
+        background-color: $color-surface-active;
+        span{
+          color:$color-text;
+        }
+        img{
+          filter: brightness(2)
+        }
+      }
+      span {
+        font-size: $font-size-base;
+        color: $color-text-subtle;
+        letter-spacing: $letter-spacing-base;
+      }
+    }
+    &--arrow a {
+      justify-content: space-between;
+    }
+
+    &--accordion {
+      &.is-open {
+        .sidebar__accordion-label {
+          color: $color-text;
+        }
+        .sidebar__arrow img {
+          transform: rotate(90deg);
+        }
+        .sidebar__dropdown {
+          max-height: 20rem;
+        }
+      }
+     
+    }
+  }
+
+  &__accordion-trigger {
+    @include flex($justify: space-between, $gap: $spacing-base);
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: $color-surface-hover-solid;
+      span { color: $color-text; }
+      img { filter: brightness(2); }
+    }
+  }
+
+  &__accordion-label {
+    font-size: $font-size-base;
+    color: $color-text-subtle;
+    letter-spacing: $letter-spacing-base;
+    transition: color 0.2s ease;
+  }
+
+  &__arrow img {
+    transition: transform 0.3s ease;
+  }
+
+  &__dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-base;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-left: $spacing-base;
+    padding-top: $spacing-base;
+  }
+
+  &__dropdown-item a {
+    @include flex();
+    gap: $spacing-base;
+    width: 100%;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: $color-surface-hover-solid;
+      span { color: $color-text; }
+      img { filter: brightness(2); }
+    }
+
+    span {
+      font-size: $font-size-base;
+      color: $color-text-subtle;
+      letter-spacing: $letter-spacing-base;
+    }
+  }
+
+  &__link-left {
+    @include flex();
+    gap: $spacing-md;
+  }
+
+  &__nav {
+    padding-left: $spacing-md;
+  }
+}
+

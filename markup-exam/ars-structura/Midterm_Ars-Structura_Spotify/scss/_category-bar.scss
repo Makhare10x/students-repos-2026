@@ -1,0 +1,41 @@
+$light-color: #E0E0E0;
+$dark-color: #111111;
+
+
+.category-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.category-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: $light-color;
+    
+    display: flex;
+    gap: 20px;
+    
+    font-family: "satoshi", "sans-serif";
+    margin: 8px 15px;
+}
+
+.category {
+    padding: 8px 15px;
+    background-color: $dark-color;
+    border-radius: 8px;
+}
+
+.category-span {
+    background-color: none;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.category:hover {
+    background-color: $light-color;
+    color: $dark-color;
+    font-weight: bold;
+}

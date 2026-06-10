@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="sass/style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/library.png" alt="library">
+              <span>My Library</span>
+            </a>
+          </li>
+
+           <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/pins.png" alt="Pins">
+              <span>Pins</span>
+            </a>
+          </li>
+
+           <li class="sidebar-link">
+            <input type="checkbox" id="playlist-toggle">
+            <label for="playlist-toggle" class="playlist-btn">
+              <img src="css/assets/images/playlists.png" alt="playlist">
+                     <span>Playlists</span>
+              <img src="css/assets/images/arrow.png" alt="arrow icon" class="dropdown-img">
+            </label>
+            <ul class="dropdown-playlist">
+              <li>Chill Stuff</li>
+              <li>Rock n Roll</li>
+              <li>The Jux Box</li>
+              <li>Selected Linkin Park</li>
+              <li>Vibe</li>
+            </ul>
+          </li>
+
+           <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/liked songs.png" alt="liked songs">
+              <span>Liked Songs</span>
+            </a>
+          </li>
+
+           <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/save.png" alt="saves">
+              <span>Saves</span>
+            </a>
+          </li>
+
+          <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/folders.png" alt="folders">
+              <span>Folders</span>
+            </a>
+          </li>
+
+          <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/podcasts.png" alt="podcasts">
+              <span>Podcasts</span>
+            </a>
+          </li>
+
+          <li class="sidebar-link">
+              
+            <a href="#">
+
+              <img src="css/assets/images/audiobooks.png" alt="audiobooks">
+              <span>Audiobooks</span>
+            </a>
+          </li>
+
+           <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/artists.png" alt="artists">
+              <span>Artists</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+
+      </aside>
+    <div class="main-layout">
+      <header class="top-header">
+          <!-- Header-->
+          <nav>
+            <ul class="header-right-list">
+              <li class="right-list-item">
+                <img src="css/assets/images/home.png" alt="home">
+                <span>Home</span>
+              </li>
+
+              <li class="right-list-item">
+              <img src="css/assets/images/discoverr.png" alt="discoverr">
+              <span>Discover</span>
+              </li>
+
+              <li class="right-list-item">
+              <img src="css/assets/images/search.png" alt="search">
+              <span>Search</span>
+              </li>
+            </ul>
+   <!-- Header-left list-->
+            <ul class="header-left-list">
+              <li class="left-list-item">
+                <img src="css/assets/images/bell.png" alt="bell">
+              </li>
+
+              <li class="left-list-item">
+                <img src="css/assets/images/lock.png" alt="lock">
+              </li>
+
+              <li class="left-list-item">
+                <img src="css/assets/images/activity.png" alt="activity">
+              </li>
+
+              <li class="left-list-item">
+                <img src="css/assets/images/settings.png" alt="settings">
+              </li>
+
+              <li class="left-list-item">
+                <img src="css/assets/images/sprite.png" alt="sprite">
+              </li>
+
+            </ul>
+          </nav>
+          
+        </header>
+      <main class="main-content">
+        <section class="playlist-section">
+          <div class="playlist-layout">
+            <div class="playlist-main">
+              <h2 class="playlist-title">Daft Punk Mix</h2>
+              <p class="playlist-meta">
+                <span>By</span>
+                <span class="playlist-meta-strong">Spotify</span>
+                <span>·</span>
+                <span>50 songs</span>
+                <span>·</span>
+                <span>3 hr 30 min</span>
+              </p>
+
+              <div class="playlist-actions">
+                <button class="playlist-play" aria-label="Play playlist">
+                  <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20.2054" cy="20.2054" r="20.2054" fill="#1ED760"/>
+                    <path d="M26.328 18.8797C27.3484 19.4688 27.3484 20.9418 26.328 21.5309L18.2917 26.1707C17.2712 26.7598 15.9956 26.0234 15.9956 24.845L15.9956 15.5656C15.9956 14.3872 17.2712 13.6508 18.2917 14.2399L26.328 18.8797Z" fill="black"/>
+                  </svg>
+                </button>
+                <button class="playlist-shuffle" aria-label="Shuffle">
+                  <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.1025 12.6284C11.6822 12.6284 13.1591 13.4115 14.0454 14.719L16.0075 17.6133M28.7489 25.9214H23.824C22.5037 25.9214 21.2358 25.4044 20.2919 24.4812L19.3633 23.5729M28.7489 25.9214L25.2566 29.4662M28.7489 25.9214L25.2566 22.3766" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.1025 27.9508C11.6861 27.9508 13.1707 27.1805 14.0824 25.8858L20.2552 17.1199C21.2014 15.7763 22.742 14.9769 24.3853 14.9769H28.7489M28.7489 14.9769L25.2566 11.4321M28.7489 14.9769L25.2566 18.5217" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <button class="playlist-add" aria-label="Add">
+                  <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24.5011 20.1881H20.1885M15.8758 20.1881H20.1885M20.1885 20.1881L20.1885 15.8755M20.1885 20.1881V24.5008" stroke="#898989" stroke-width="1.68378" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="20.2052" cy="20.2055" r="9.26081" stroke="#898989" stroke-width="1.68378"/>
+                  </svg>
+                </button>
+                <button class="playlist-queue" aria-label="Queue">
+                  <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.3632 11.7866H14.5924C13.0426 11.7866 11.7861 13.043 11.7861 14.5929C11.7861 16.1428 13.0426 17.3992 14.5924 17.3992H19.3632" stroke="#898989" stroke-width="2.3573" stroke-linecap="round"/>
+                    <path d="M11.7861 23.0118L28.624 23.0118" stroke="#898989" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.7861 28.6244L28.624 28.6244" stroke="#898989" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M23.5732 14.3123H26.0989M28.6246 14.3123H26.0989M26.0989 14.3123V11.7866M26.0989 14.3123V16.838" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <button class="playlist-add-mobile" aria-label="Add">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="20" height="20" rx="3" transform="matrix(1 0 0 -1 9.82715 31.3296)" stroke="#898989" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M11.8271 11.3296H27.8271C27.8271 9.67274 26.484 8.32959 24.8271 8.32959H14.8271C13.1703 8.32959 11.8271 9.67274 11.8271 11.3296Z" stroke="#898989" stroke-width="1.5" stroke-linejoin="round"/>
+                    <path d="M15.8271 21.3296H19.8271M23.8271 21.3296H19.8271M19.8271 21.3296V17.3296M19.8271 21.3296V25.3296" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <button class="playlist-download" aria-label="Download">
+                  <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.2047 15.1539V25.0161M20.2047 25.0161L23.5723 21.6485M20.2047 25.0161L16.8371 21.6485" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="20.2052" cy="20.2055" r="9.26081" stroke="#898989" stroke-width="1.68378"/>
+                  </svg>
+                </button>
+                <button class="playlist-share" aria-label="Share">
+                  <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.6897 22.0167V10.7406M20.6897 10.7406L16.0466 15.3837M20.6897 10.7406L25.3328 15.3837M28.981 20.3585V25.0016C28.981 26.4669 27.7931 27.6548 26.3278 27.6548L15.0516 27.6548C13.5863 27.6548 12.3984 26.4669 12.3984 25.0016V20.3585" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <button class="playlist-more" aria-label="More">
+                  <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11.7863" cy="20.2056" r="1.68378" fill="#898989"/>
+                    <circle cx="20.2053" cy="20.2056" r="1.68378" fill="#898989"/>
+                    <circle cx="28.6242" cy="20.2056" r="1.68378" fill="#898989"/>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="playlist-head">
+                <span>#</span>
+                <span>Title</span>
+                <span>Album</span>
+                <span>Duration</span>
+                <span></span>
+              </div>
+
+              <ul class="playlist-list">
+                <li><span>1</span><div class="playlist-track"><img class="playlist-thumb" src="assets/song_cover.png" alt="Get Lucky"><div><strong><a class="playlist-song-link" href="song.html">Get Lucky</a></strong><p>Daft Punk</p></div></div><span class="playlist-album-cell">Random Access Memories</span><span>4:35</span><label class="playlist-like playlist-like-toggle"><input type="checkbox" class="playlist-like-input"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.0693 13.5678L20.2054 15.3738L18.3416 13.5678C16.3872 11.6741 13.2521 11.7787 11.4282 13.7984C9.65847 15.7581 9.41482 18.6936 11.0174 20.7923C11.2143 21.0502 11.408 21.2972 11.5922 21.5232C12.7587 22.9542 15.3037 25.4531 16.5788 26.7942C17.5209 27.785 18.3677 28.6113 19.0057 29.2132C19.6794 29.8488 20.7194 29.835 21.3944 29.2007C22.5707 28.0954 24.3747 26.3736 25.6453 25.0372C26.9205 23.6961 27.6522 22.9542 28.8186 21.5232C29.0029 21.2972 29.1965 21.0502 29.3935 20.7923C30.996 18.6936 30.7524 15.7581 28.9826 13.7984C27.1588 11.7787 24.0236 11.6741 22.0693 13.5678Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/></svg></label><button class="playlist-row-more" aria-label="More options"><svg width="24" height="24" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11.7863" cy="20.2056" r="1.68378" fill="#898989"/><circle cx="20.2053" cy="20.2056" r="1.68378" fill="#898989"/><circle cx="28.6242" cy="20.2056" r="1.68378" fill="#898989"/></svg></button></li>
+                <li><span>2</span><div class="playlist-track"><img class="playlist-thumb" src="assets/song_cover.png" alt="Instant Crush"><div><strong>Instant Crush</strong><p>Daft Punk, Julian Casablancas</p></div></div><span class="playlist-album-cell">Random Access Memories</span><span>5:37</span><label class="playlist-like playlist-like-toggle"><input type="checkbox" class="playlist-like-input"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.0693 13.5678L20.2054 15.3738L18.3416 13.5678C16.3872 11.6741 13.2521 11.7787 11.4282 13.7984C9.65847 15.7581 9.41482 18.6936 11.0174 20.7923C11.2143 21.0502 11.408 21.2972 11.5922 21.5232C12.7587 22.9542 15.3037 25.4531 16.5788 26.7942C17.5209 27.785 18.3677 28.6113 19.0057 29.2132C19.6794 29.8488 20.7194 29.835 21.3944 29.2007C22.5707 28.0954 24.3747 26.3736 25.6453 25.0372C26.9205 23.6961 27.6522 22.9542 28.8186 21.5232C29.0029 21.2972 29.1965 21.0502 29.3935 20.7923C30.996 18.6936 30.7524 15.7581 28.9826 13.7984C27.1588 11.7787 24.0236 11.6741 22.0693 13.5678Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/></svg></label><button class="playlist-row-more" aria-label="More options"><svg width="24" height="24" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11.7863" cy="20.2056" r="1.68378" fill="#898989"/><circle cx="20.2053" cy="20.2056" r="1.68378" fill="#898989"/><circle cx="28.6242" cy="20.2056" r="1.68378" fill="#898989"/></svg></button></li>
+                <li><span>3</span><div class="playlist-track"><img class="playlist-thumb" src="assets/p_3.png" alt="On Melancholy Hill"><div><strong>On Melancholy Hill</strong><p>Gorillaz</p></div></div><span class="playlist-album-cell">Plastic Beach</span><span>3:53</span><label class="playlist-like playlist-like-toggle"><input type="checkbox" class="playlist-like-input"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.0693 13.5678L20.2054 15.3738L18.3416 13.5678C16.3872 11.6741 13.2521 11.7787 11.4282 13.7984C9.65847 15.7581 9.41482 18.6936 11.0174 20.7923C11.2143 21.0502 11.408 21.2972 11.5922 21.5232C12.7587 22.9542 15.3037 25.4531 16.5788 26.7942C17.5209 27.785 18.3677 28.6113 19.0057 29.2132C19.6794 29.8488 20.7194 29.835 21.3944 29.2007C22.5707 28.0954 24.3747 26.3736 25.6453 25.0372C26.9205 23.6961 27.6522 22.9542 28.8186 21.5232C29.0029 21.2972 29.1965 21.0502 29.3935 20.7923C30.996 18.6936 30.7524 15.7581 28.9826 13.7984C27.1588 11.7787 24.0236 11.6741 22.0693 13.5678Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/></svg></label><button class="playlist-row-more" aria-label="More options"><svg width="24" height="24" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11.7863" cy="20.2056" r="1.68378" fill="#898989"/><circle cx="20.2053" cy="20.2056" r="1.68378" fill="#898989"/><circle cx="28.6242" cy="20.2056" r="1.68378" fill="#898989"/></svg></button></li>
+                <li><span>4</span><div class="playlist-track"><img class="playlist-thumb" src="assets/p_4.png" alt="Tainted Love"><div><strong>Tainted Love</strong><p>Soft Cell</p></div></div><span class="playlist-album-cell">Non-Stop Erotic Cabaret</span><span>2:33</span><label class="playlist-like playlist-like-toggle"><input type="checkbox" class="playlist-like-input"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.0693 13.5678L20.2054 15.3738L18.3416 13.5678C16.3872 11.6741 13.2521 11.7787 11.4282 13.7984C9.65847 15.7581 9.41482 18.6936 11.0174 20.7923C11.2143 21.0502 11.408 21.2972 11.5922 21.5232C12.7587 22.9542 15.3037 25.4531 16.5788 26.7942C17.5209 27.785 18.3677 28.6113 19.0057 29.2132C19.6794 29.8488 20.7194 29.835 21.3944 29.2007C22.5707 28.0954 24.3747 26.3736 25.6453 25.0372C26.9205 23.6961 27.6522 22.9542 28.8186 21.5232C29.0029 21.2972 29.1965 21.0502 29.3935 20.7923C30.996 18.6936 30.7524 15.7581 28.9826 13.7984C27.1588 11.7787 24.0236 11.6741 22.0693 13.5678Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/></svg></label><button class="playlist-row-more" aria-label="More options"><svg width="24" height="24" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11.7863" cy="20.2056" r="1.68378" fill="#898989"/><circle cx="20.2053" cy="20.2056" r="1.68378" fill="#898989"/><circle cx="28.6242" cy="20.2056" r="1.68378" fill="#898989"/></svg></button></li>
+                <li><span>5</span><div class="playlist-track"><img class="playlist-thumb" src="assets/p_5.png" alt="One More Time"><div><strong>One More Time</strong><p>Daft Punk</p></div></div><span class="playlist-album-cell">Discovery</span><span>5:20</span><label class="playlist-like playlist-like-toggle"><input type="checkbox" class="playlist-like-input"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.0693 13.5678L20.2054 15.3738L18.3416 13.5678C16.3872 11.6741 13.2521 11.7787 11.4282 13.7984C9.65847 15.7581 9.41482 18.6936 11.0174 20.7923C11.2143 21.0502 11.408 21.2972 11.5922 21.5232C12.7587 22.9542 15.3037 25.4531 16.5788 26.7942C17.5209 27.785 18.3677 28.6113 19.0057 29.2132C19.6794 29.8488 20.7194 29.835 21.3944 29.2007C22.5707 28.0954 24.3747 26.3736 25.6453 25.0372C26.9205 23.6961 27.6522 22.9542 28.8186 21.5232C29.0029 21.2972 29.1965 21.0502 29.3935 20.7923C30.996 18.6936 30.7524 15.7581 28.9826 13.7984C27.1588 11.7787 24.0236 11.6741 22.0693 13.5678Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/></svg></label><button class="playlist-row-more" aria-label="More options"><svg width="24" height="24" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11.7863" cy="20.2056" r="1.68378" fill="#898989"/><circle cx="20.2053" cy="20.2056" r="1.68378" fill="#898989"/><circle cx="28.6242" cy="20.2056" r="1.68378" fill="#898989"/></svg></button></li>
+                <li><span>6</span><div class="playlist-track"><img class="playlist-thumb" src="assets/p_6.png" alt="Electric Feel"><div><strong>Electric Feel</strong><p>MGMT</p></div></div><span class="playlist-album-cell">Oracular Spectacular</span><span>3:49</span><label class="playlist-like playlist-like-toggle"><input type="checkbox" class="playlist-like-input"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.0693 13.5678L20.2054 15.3738L18.3416 13.5678C16.3872 11.6741 13.2521 11.7787 11.4282 13.7984C9.65847 15.7581 9.41482 18.6936 11.0174 20.7923C11.2143 21.0502 11.408 21.2972 11.5922 21.5232C12.7587 22.9542 15.3037 25.4531 16.5788 26.7942C17.5209 27.785 18.3677 28.6113 19.0057 29.2132C19.6794 29.8488 20.7194 29.835 21.3944 29.2007C22.5707 28.0954 24.3747 26.3736 25.6453 25.0372C26.9205 23.6961 27.6522 22.9542 28.8186 21.5232C29.0029 21.2972 29.1965 21.0502 29.3935 20.7923C30.996 18.6936 30.7524 15.7581 28.9826 13.7984C27.1588 11.7787 24.0236 11.6741 22.0693 13.5678Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/></svg></label><button class="playlist-row-more" aria-label="More options"><svg width="24" height="24" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11.7863" cy="20.2056" r="1.68378" fill="#898989"/><circle cx="20.2053" cy="20.2056" r="1.68378" fill="#898989"/><circle cx="28.6242" cy="20.2056" r="1.68378" fill="#898989"/></svg></button></li>
+                <li><span>7</span><div class="playlist-track"><img class="playlist-thumb" src="assets/song_cover.png" alt="Give Life Back to Music"><div><strong>Give Life Back to Music</strong><p>Daft Punk</p></div></div><span class="playlist-album-cell"><a class="playlist-album-link" href="album.html">Random Access Memories</a></span><span>4:35</span><label class="playlist-like playlist-like-toggle"><input type="checkbox" class="playlist-like-input"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.0693 13.5678L20.2054 15.3738L18.3416 13.5678C16.3872 11.6741 13.2521 11.7787 11.4282 13.7984C9.65847 15.7581 9.41482 18.6936 11.0174 20.7923C11.2143 21.0502 11.408 21.2972 11.5922 21.5232C12.7587 22.9542 15.3037 25.4531 16.5788 26.7942C17.5209 27.785 18.3677 28.6113 19.0057 29.2132C19.6794 29.8488 20.7194 29.835 21.3944 29.2007C22.5707 28.0954 24.3747 26.3736 25.6453 25.0372C26.9205 23.6961 27.6522 22.9542 28.8186 21.5232C29.0029 21.2972 29.1965 21.0502 29.3935 20.7923C30.996 18.6936 30.7524 15.7581 28.9826 13.7984C27.1588 11.7787 24.0236 11.6741 22.0693 13.5678Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/></svg></label><button class="playlist-row-more" aria-label="More options"><svg width="24" height="24" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11.7863" cy="20.2056" r="1.68378" fill="#898989"/><circle cx="20.2053" cy="20.2056" r="1.68378" fill="#898989"/><circle cx="28.6242" cy="20.2056" r="1.68378" fill="#898989"/></svg></button></li>
+              </ul>
+            </div>
+
+            <aside class="playlist-side">
+              <img class="playlist-side-cover" src="assets/playlist_cover.png" alt="Daft Punk Mix cover">
+
+              <div class="playlist-tags">
+                <span>Funk</span>
+                <span>Electronic music</span>
+                <span>Disco</span>
+                <span>Soft Rock</span>
+                <span>Progressive pop</span>
+              </div>
+
+              <ul class="playlist-artists">
+                <li><img src="assets/d.png" alt="Daft Punk"><span>Daft Punk</span></li>
+                <li><img src="assets/ph.png" alt="Pharrell Williams"><span>Pharrell Williams</span></li>
+                <li><img src="assets/n.png" alt="Nile Rodgers"><span>Nile Rodgers</span></li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <footer class="bottom-player">
+    <div class="bottom-player-content">
+      <img src="css/assets/images/Rectangle 6 (1).png" alt="Rectangle 6 (1)">
+      <div class="bottom-player-text">
+        <p class="slide-in">Get Lucky (feat. Pharrell Williams )</p>
+        <p class="artist-name">Daft punk</p>
+      </div>
+      <div class="player-controls">
+        <a href="#">
+          <img src="css/assets/images/add.png" alt="play">
+        </a>
+        <a href="#">
+          <img src="css/assets/images/play.png" alt="add">
+        </a>
+        </div>
+    </div>
+    <!-- Bottom nav for mobile-->
+     <nav class="bottom-menu">
+        <a href="index.html" class="nav-item">
+          <img src="css/assets/images/home.png" alt="home icon">
+          <span>Home</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="css/assets/images/discoverr.png" alt="home icon">
+          <span>Discover</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="css/assets/images/search.png" alt="search icon">
+          <span>Search</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="css/assets/images/library.png" alt="library icon">
+          <span>Library</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="css/assets/images/profile.png" alt="profile icon">
+          <span>Me</span>
+        </a>
+        </nav>
+  </footer>
+</body>
+</html>

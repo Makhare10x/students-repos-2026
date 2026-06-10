@@ -1,0 +1,279 @@
+
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+
+
+.main-content {
+    padding: 1.2rem 2.5rem;
+    background-color: rgba(06, 06, 06, 1);
+
+    // vertical scroll
+    flex: 1; // დაიკავებს მთელ თავისუფალ ადგილს ჰედერსა და ფუტერს შორის
+    overflow-y: auto; // ვერტიკალური სქროლი ჩაირთვება მხოლოდ აქ
+    scroll-behavior: smooth; // რომ ისრებმა რბილად ასრიალონ კონტენტი
+
+    &::-webkit-scrollbar {
+        display: none; // სქროლბარის დამალვა
+    }
+
+    .main-hdr {
+        @include display ($jus: space-between, $gap: 1rem);
+        padding-bottom: 1.6rem;
+        @include display ($jus: space-between);
+
+        &__btn {
+            // მაგალითად: რადიუსი 30px, პადინგი 0.8rem და 1.5rem, ფონტი 1.4rem
+            // ფონი: მუქი ნაცრისფერი, ტექსტი: თეთრი
+            @include btn (0.8rem, 0.8rem, 1.5rem, 1.4rem, #282828, #ffffff);
+
+
+            &:first-child {
+                @include btn (0.8rem, 0.8rem, 1.5rem, 1.4rem, #E0E0E0, #000000);
+            }
+        }
+    }
+
+
+ 
+     .category {
+        padding-bottom: 3rem;
+        &__hdr {
+            @include display ($jus: space-between);
+
+            .category__title {
+                @include text-style (2rem, 700, #E0E0E0)
+            }
+        }
+
+        // scroll functional 
+        &__body {
+            display: flex; // ბარათები ერთ ხაზზე
+            overflow-x: auto; // ჰორიზონტალური სქროლი
+
+            overflow-y: hidden; // 1. აუცილებელია! აკრძალე ვერტიკალური სქროლი ამ ბლოკში
+            touch-action: pan-x; // 2. ბრაუზერს ეუბნება, რომ აქ მხოლოდ ჰორიზონტალური მოძრაობაა დაშვებული
+
+            scroll-behavior: smooth; // რბილი გადასვლა ისრებზე
+            scroll-snap-type: x mandatory; // მაგნიტის ეფექტი
+            gap: 2.4rem; // დაშორება ბარათებს შორის
+            padding-bottom: 1rem; // მცირე დაშორება ქვემოთ
+
+            overscroll-behavior-x: contain;
+
+            &::-webkit-scrollbar {
+                display: none; // სქროლბარის დამალვა
+            }
+        }
+
+
+        &__action {
+            display: flex;
+            gap: 0.8rem;
+            align-items: center;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        // scroll functional 
+        &__card {
+            flex-shrink: 0; // ბარათები არ დაპატარავდეს
+            width: 170px; // ან შენი მიქსინის ზომა
+            scroll-snap-align: start; // ბარათი გასწორდეს კუთხეში
+            position: relative;
+
+            .category__cover {
+                display: flex;
+                transform: scale(1.1);
+                justify-content: end;
+                align-items: end;
+
+                .play {
+                    opacity: 0;
+                }
+            }
+
+            &:hover {
+                transform: scale(1.04);
+                transition: all 0.3s ease;
+                cursor: pointer;
+
+                .play {
+                    opacity: 1;
+                    transform: translateX(-2rem) translateY(-2rem);
+                    transition: all 0.3s ease;
+                }
+
+            }
+
+
+
+
+
+            .category__cover_discover  {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/coverDiscoverWeekly.png');
+
+            }
+
+            .category__cover_DailyMix1 {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix1.png');
+                box-shadow: 
+                    0 -1rem 0 -0.4rem rgba(28, 116, 81, 0.671),   // პირველი ფენა (მუქი, 30% opacity)
+                    0 -2rem 0 -0.8rem #1ED76026; // მეორე ფენა (გამჭვირვალე ნაცრისფერი) background: rgba(244, 184, 189, 0.3);
+
+            }
+
+            .category__cover_DailyMix2 {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix2.png');
+                box-shadow: 
+                    0 -1rem 0 -0.4rem  rgba(244, 184, 189, 0.3),   // პირველი ფენა (მუქი, 30% opacity)
+                    0 -2rem 0 -0.8rem #1ED76026; // მეორე ფენა (გამჭვირვალე ნაცრისფერი) background: background: ;
+
+            }
+
+            .category__cover_DailyMix3 {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix3.png');
+                 box-shadow: 
+                    0 -1rem 0 -0.4rem rgba(195, 231, 183, 0.3),   // პირველი ფენა (მუქი, 30% opacity)
+                    0 -2rem 0 -0.8rem #1ED76026; // 
+            }
+
+            .category__cover_DailyMix4 {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix4.png'); 
+                
+
+            }
+
+            .category__cover_DailyMix6 {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix6.png');
+                box-shadow: 
+                    0 -1rem 0 -0.4rem  rgba(160, 190, 200, 0.3),   // პირველი ფენა (მუქი, 30% opacity)
+                    0 -2rem 0 -0.8rem #1ED76026; //
+            }
+
+            .category__cover_Nirvana {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/Nirvana.png');
+            }
+
+            .category__cover_MixOutBoy {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/FallOutBoy.png');
+            }
+
+            // Your top mixes category covers
+
+            .category__cover_RockMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/RockMix.png');
+                box-shadow: 
+                    0 -1rem 0 -0.4rem rgba(204, 246, 101, 0.3),   // პირველი ფენა (მუქი, 30% opacity)background: rgba(249, 231, 44, 0.3);
+
+                    0 -2rem 0 -0.8rem #1ED76026; // 
+                
+
+            }
+
+            .category__cover_ChillMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/ChillMix.png');
+                box-shadow: 
+                    0 -1rem 0 -0.4rem rgba(249, 231, 44, 0.3),   // პირველი ფენა (მუქი, 30% opacity)background: 
+
+                    0 -2rem 0 -0.8rem #1ED76026; // 
+            }
+
+            .category__cover_PopMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/PopMix.png');
+            }
+
+            .category__cover_DraftPunkMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DraftPunkMix.png');
+                box-shadow: 
+                    0 -1rem 0 -0.4rem rgba(111, 134, 255, 0.3),   // პირველი ფენა (მუქი, 30% opacity)background: 
+
+                    0 -2rem 0 -0.8rem #1ED76026; // 
+
+            }
+
+            .category__cover_HappyMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/HappyMix.png');
+            }
+
+            .category__cover_DavidBowieMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DavidBowieMix.png');
+                box-shadow: 
+                    0 -1rem 0 -0.4rem rgba(255, 198, 104, 0.3),   // პირველი ფენა (მუქი, 30% opacity)background: 
+
+                    0 -2rem 0 -0.8rem #1ED76026; // 
+
+            }
+
+            .category__cover_UpbeatMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/UpbeatMix.png');
+            }
+
+            .category__cover_60sMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/60sMix.png');
+            }
+
+
+            // Your top mixes covers
+            .category__cover_GunsnRoses-YTM {
+                @include card-cover (17rem, 17rem, 50%, '/assets/image/GunsnRoses.png');
+                box-shadow: none;
+            }
+
+            .category__cover_DraftPunkMix-YTM {
+                @include card-cover (17rem, 17rem, 50%, '/assets/image/DraftPunkMix.png');
+                box-shadow: none;
+            }
+
+            .category__cover_DavidBowieMix-YTM {
+                @include card-cover (17rem, 17rem, 50%, '/assets/image/DavidBowieMix.png');
+                box-shadow: none;
+            }
+
+
+            .category__title-group {
+                @include display ($jus: space-between);
+
+                .category__card-title {
+                    @include text-style (1.4rem, 500, #E0E0E0);
+                    padding: 0.6rem 0 0.8rem 0;
+                }
+            }
+
+            .category__content {
+                @include text-style (1.2rem, 400, #898989);
+            }
+        }
+
+    }
+
+    .category__cover {
+        width: 17rem;
+        height: 17rem;
+        border-radius: 0.725rem;
+        background-size: cover;
+        position: relative;
+        margin-top: 2rem; // აუცილებელია, რომ ზედა "ფენებისთვის" ადგილი დარჩეს
+
+        // 💡 აი აქ ხდება მაგია:
+        // ფორმატი: x y blur spread color
+        // blur-ს ვსვამთ 0-ზე, რომ მკვეთრი ხაზები მივიღოთ
+        box-shadow:
+            0 -1rem 0 -0.4rem #3d223d, // პირველი ფენა (ოდნავ ვიწრო და მაღლა)
+            0 -2rem 0 -0.8rem #1a121a; // მეორე ფენა (კიდევ უფრო ვიწრო და მაღლა)
+
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-0.5rem); // ჰოვერზე ოდნავ "ამოიწევა"
+        }
+    }
+
+    
+}
+
+.mobile-view{display: none;}

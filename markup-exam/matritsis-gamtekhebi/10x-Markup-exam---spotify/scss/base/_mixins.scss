@@ -1,0 +1,28 @@
+@mixin flex-row($justify: flex-start, $align: center) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-col($justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin text-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin hover-transition($props...) {
+  transition: $props 0.2s;
+}

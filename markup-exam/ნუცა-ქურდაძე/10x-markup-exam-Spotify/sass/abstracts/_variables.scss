@@ -1,0 +1,76 @@
+// Colors
+
+// Background Colors
+$bg-black: #060606;      // Main background 
+$bg-dark-grey: #111111;  // Active elements
+$bg-light-grey: #202020; // Cards, navbar, aside and elements background on Hover
+
+// Text Colors
+$text-primary: #898989;   // Regular text, artist names, descriptions
+$text-active: #E0E0E0;   // Headings
+$text-muted: #DBDBDB;   // Muted text
+
+// Accent Color
+
+$brand-color: #13BF51; //brand's iconic accent green
+
+// Additional Colors 
+
+$footer-col: #333842;
+$border-col: #6E6E6E;
+$color: #1A1A1A;         
+
+
+
+// Fonts
+
+$font-family-base: 'Satoshi-Light';
+
+$font-size-base: 14px; 
+$font-size-small: 12px; 
+$font-size-basic: 16px; 
+$font-size-medium: 18px;
+$font-size-large: 20px;  
+$font-size-larger: 22px; 
+
+$spacing-xs: 2px;
+
+
+
+
+$border-radius-base: 7.25px; 
+$border-radius-small: 6.02px; 
+$border-radius-large: 10px; 
+
+
+
+
+// Font Weights
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold:   700;
+
+$padding-base: 5.5px;
+
+
+
+// Breackpoints
+
+// Desktop
+
+@media (max-width: 1440px) {
+
+}
+
+// Tablet
+
+@media (max-width: 1024px) {
+    
+}
+
+// Mobile
+
+@media (max-width: 600px) {
+    
+}

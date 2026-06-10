@@ -1,0 +1,4310 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dixit's Spotify</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link
+   href="https://fonts.fontshare.com/css?f[]=satoshi&display=swap"
+   rel="stylesheet"
+  />
+ </head>
+ <body>
+  <!-- Input/Label Logic -->
+
+  <input type="radio" name="spotify-nav" id="tab-1" checked hidden />
+  <input type="radio" name="spotify-nav" id="tab-2" hidden />
+  <input type="radio" name="spotify-nav" id="tab-3" hidden />
+  <input type="radio" name="spotify-nav" id="tab-4" hidden />
+  <input type="radio" name="spotify-nav" id="tab-5" hidden />
+  <input type="radio" name="spotify-nav" id="tab-6" hidden />
+  <input type="radio" name="spotify-nav" id="tab-7" hidden />
+  <input type="radio" name="spotify-nav" id="tab-8" hidden />
+  <input type="radio" name="spotify-nav" id="tab-9" hidden />
+  <input type="radio" name="spotify-nav" id="tab-10" hidden />
+  <input type="radio" name="spotify-nav" id="tab-11" hidden />
+  <input type="radio" name="spotify-nav" id="tab-12" hidden />
+  <input type="radio" name="spotify-nav" id="tab-13" hidden />
+  <input type="radio" name="spotify-nav" id="tab-14" hidden />
+  <input type="checkbox" id="friends-toggle" hidden />
+
+  <!-- Header Part -->
+
+  <header>
+   <nav class="header-nav">
+    <label for="tab-1">
+     <figure class="header-nav__figure">
+      <img
+       class="header-icon icon-outline"
+       src="./assets/icons/home.svg"
+       alt="Home Icon"
+      />
+      <img
+       class="header-icon icon-filled"
+       src="./assets/icons/home-filled.svg"
+       alt="Home Icon"
+      />
+      <figcaption class="header-caption">Home</figcaption>
+     </figure>
+    </label>
+    <label for="tab-2">
+     <figure class="header-nav__figure">
+      <img
+       class="header-icon icon-outline"
+       src="./assets/icons/discover.svg"
+       alt="Discover Icon"
+      />
+      <img
+       class="header-icon icon-filled"
+       src="./assets/icons/discover-filled.svg"
+       alt="Discover Icon"
+      />
+      <figcaption class="header-caption">Discover</figcaption>
+     </figure>
+    </label>
+    <label for="tab-3">
+     <figure class="header-nav__figure">
+      <img
+       class="header-icon icon-outline"
+       src="./assets/icons/search.svg"
+       alt="Search Icon"
+      />
+      <img
+       class="header-icon icon-filled"
+       src="./assets/icons/search-filled.svg"
+       alt="Search Icon"
+      />
+      <figcaption class="header-caption">Search</figcaption>
+     </figure>
+    </label>
+
+    <section class="header-nav__right">
+     <figure>
+      <label class="header-btn">
+       <input type="checkbox" hidden />
+       <img
+        src="./assets/icons/notification.svg"
+        alt="notification"
+        class="icon-outline"
+       />
+       <img
+        src="./assets/icons/notification.svg"
+        alt="notification"
+        class="icon-filled"
+       />
+      </label>
+     </figure>
+
+     <figure>
+      <label class="header-btn">
+       <input type="checkbox" hidden />
+       <img
+        src="./assets/icons/lock.svg"
+        alt="Lock Icon"
+        class="icon-outline"
+       />
+       <img
+        src="./assets/icons/locked.svg"
+        alt="Locked Icon"
+        class="icon-filled"
+       />
+      </label>
+     </figure>
+
+     <figure>
+      <label class="header-btn" for="friends-toggle">
+       <input type="checkbox" hidden />
+       <img
+        src="./assets/icons/friends.svg"
+        alt="Friends Icon"
+        class="icon-outline"
+       />
+       <img
+        src="./assets/icons/friends-filled.svg"
+        alt="Friends Icon"
+        class="icon-filled friends"
+       />
+      </label>
+     </figure>
+     <figure>
+      <label class="header-btn">
+       <input type="checkbox" hidden />
+       <img
+        src="./assets/icons/settings.svg"
+        alt="Setthings Icon"
+        class="icon-outline"
+       />
+       <img
+        src="./assets/icons/settings.svg"
+        alt="Settings Icon"
+        class="icon-filled"
+       />
+      </label>
+     </figure>
+     <figure>
+      <img src="./assets/sprite.png" class="sprite" alt="album Icon" />
+     </figure>
+    </section>
+   </nav>
+  </header>
+
+  <!--  Sidebar Navigation -->
+
+  <aside class="sidebar-nav">
+   <label for="tab-4">
+    <figure class="sidebar-nav__figure">
+     <img
+      class="aside-icon icon-outline"
+      src="./assets/icons/library.svg"
+      alt="Library Icon"
+     />
+     <img
+      class="aside-icon icon-filled"
+      src="./assets/icons/library-filled.svg"
+      alt="Library Icon"
+     />
+     <figcaption class="aside-caption">My Library</figcaption>
+    </figure>
+   </label>
+   <details class="sidebar-dropdown">
+    <summary>
+     <label for="tab-6">
+      <figure class="sidebar-nav__figure">
+       <img
+        class="aside-icon icon-outline"
+        src="./assets/icons/pin.svg"
+        alt="Pin Icon"
+       />
+       <img
+        class="aside-icon icon-filled"
+        src="./assets/icons/pin.svg"
+        alt="Pins Icon"
+       />
+       <figcaption class="aside-caption">Pins</figcaption>
+      </figure>
+     </label>
+     <figure class="dropdown-content__figure">
+      <img
+       src="./assets/icons/dropdown-arrow.svg"
+       alt="Dropdown Icon"
+       class="arrow-icon"
+      />
+     </figure>
+    </summary>
+    <div class="dropdown-content">
+     <figure class="dropdown-content__figure">
+      <img src="./assets/icons/playlist-album.svg" alt="Playlist Album" />
+      <figcaption class="dropdown-content__content">Chill Stuff</figcaption>
+     </figure>
+     <figure class="dropdown-content__figure">
+      <img src="./assets/icons/playlist-album.svg" alt="Playlist Album" />
+      <figcaption class="dropdown-content__content">Rock n Roll</figcaption>
+     </figure>
+     <figure class="dropdown-content__figure">
+      <img src="./assets/icons/playlist-album.svg" alt="Playlist Album" />
+      <figcaption class="dropdown-content__content">The Jux Box</figcaption>
+     </figure>
+     <figure class="dropdown-content__figure">
+      <img src="./assets/icons/playlist-album.svg" alt="Playlist Album" />
+      <figcaption class="dropdown-content__content">
+       Selected Linkin Park
+      </figcaption>
+     </figure>
+     <figure class="dropdown-content__figure">
+      <img src="./assets/icons/playlist-album.svg" alt="Playlist Album" />
+      <figcaption class="dropdown-content__content">Indie Rock</figcaption>
+     </figure>
+    </div>
+   </details>
+   <details class="sidebar-dropdown">
+    <summary>
+     <label for="tab-7">
+      <figure class="sidebar-nav__figure">
+       <img
+        class="aside-icon icon-outline"
+        src="./assets/icons/playlist.svg"
+        alt="Playlist Icon"
+       />
+       <img
+        class="aside-icon icon-filled"
+        src="./assets/icons/playlist.svg"
+        alt="Playlist Icon"
+       />
+       <figcaption class="aside-caption">Playlist</figcaption>
+      </figure>
+     </label>
+     <figure class="dropdown-content__figure">
+      <img
+       src="./assets/icons/dropdown-arrow.svg"
+       alt="Dropdown Icon"
+       class="arrow-icon"
+      />
+     </figure>
+    </summary>
+    <div class="dropdown-content">
+     <figure class="dropdown-content__figure">
+      <img src="./assets/icons/playlist-album.svg" alt="Playlist Album" />
+      <figcaption class="dropdown-content__content">Chill Stuff</figcaption>
+     </figure>
+     <figure class="dropdown-content__figure">
+      <img src="./assets/icons/playlist-album.svg" alt="Playlist Album" />
+      <figcaption class="dropdown-content__content">Rock n Roll</figcaption>
+     </figure>
+     <figure class="dropdown-content__figure">
+      <img src="./assets/icons/playlist-album.svg" alt="Playlist Album" />
+      <figcaption class="dropdown-content__content">The Jux Box</figcaption>
+     </figure>
+     <figure class="dropdown-content__figure">
+      <img src="./assets/icons/playlist-album.svg" alt="Playlist Album" />
+      <figcaption class="dropdown-content__content">
+       Selected Linkin Park
+      </figcaption>
+     </figure>
+     <figure class="dropdown-content__figure">
+      <img src="./assets/icons/playlist-album.svg" alt="Playlist Album" />
+      <figcaption class="dropdown-content__content">Indie Rock</figcaption>
+     </figure>
+    </div>
+   </details>
+   <label for="tab-8">
+    <figure class="sidebar-nav__figure">
+     <img
+      class="aside-icon icon-outline"
+      src="./assets/icons/like.svg"
+      alt="Liked Songs Icon"
+     />
+     <img src="./assets/icons/liked.svg" alt="Like Icon" class="icon-filled" />
+     <figcaption class="aside-caption">Liked Songs</figcaption>
+    </figure>
+   </label>
+   <label for="tab-9">
+    <figure class="sidebar-nav__figure">
+     <img
+      class="aside-icon icon-outline"
+      src="./assets/icons/saves.svg"
+      alt="Saves Icon"
+     />
+     <img
+      class="aside-icon icon-filled"
+      src="./assets/icons/saves-filled.svg"
+      alt="Saves Icon"
+     />
+     <figcaption class="aside-caption">Saves</figcaption>
+    </figure>
+   </label>
+   <label for="tab-10">
+    <figure class="sidebar-nav__figure">
+     <img
+      class="aside-icon icon-outline"
+      src="./assets/icons/albums.svg"
+      alt="Albums Icon"
+     />
+
+     <img
+      class="aside-icon icon-filled"
+      src="./assets/icons/albums.svg"
+      alt="Albums Icon"
+     />
+     <figcaption class="aside-caption">Albums</figcaption>
+    </figure>
+   </label>
+   <label for="tab-11">
+    <figure class="sidebar-nav__figure">
+     <img
+      class="aside-icon icon-outline"
+      src="./assets/icons/folders.svg"
+      alt="Folders Icon"
+     />
+     <img
+      class="aside-icon icon-filled"
+      src="./assets/icons/folders.svg"
+      alt="Folders Icon"
+     />
+     <figcaption class="aside-caption">Folders</figcaption>
+    </figure>
+   </label>
+   <label for="tab-12">
+    <figure class="sidebar-nav__figure">
+     <img
+      class="aside-icon icon-outline"
+      src="./assets/icons/podcast.svg"
+      alt="Podcasts Icon"
+     />
+     <img
+      class="aside-icon icon-filled"
+      src="./assets/icons/podcast.svg"
+      alt="Podcast Icon"
+     />
+     <figcaption class="aside-caption">Podcasts</figcaption>
+    </figure>
+   </label>
+   <label for="tab-13">
+    <figure class="sidebar-nav__figure">
+     <img
+      class="aside-icon icon-outline"
+      src="./assets/icons/audio.svg"
+      alt="Audiobooks Icon"
+     />
+     <img
+      class="aside-icon icon-filled"
+      src="./assets/icons/audio.svg"
+      alt="Audiobooks Icon"
+     />
+     <figcaption class="aside-caption">Audiobooks</figcaption>
+    </figure>
+   </label>
+   <label for="tab-14">
+    <figure class="sidebar-nav__figure">
+     <img
+      class="aside-icon icon-outline"
+      src="./assets/icons/artists.svg"
+      alt="Artists Songs Icon"
+     />
+     <img
+      class="aside-icon icon-filled"
+      src="./assets/icons/artists.svg"
+      alt="Artists Icon"
+     />
+     <figcaption class="aside-caption">Artists</figcaption>
+    </figure>
+   </label>
+  </aside>
+
+  <!-- Main Content -->
+
+  <main>
+   <!-- Home Section -->
+   <section class="section-wrapper">
+    <section id="home" class="home">
+     <nav class="home-nav">
+      <ul>
+       <li>
+        <a href="#music">Music</a>
+       </li>
+       <li>
+        <a href="#podcasts">Podcasts</a>
+       </li>
+       <li class="filter-list__item">
+        <a class="filter-btn" href="#audiobooks">Audiobooks</a>
+       </li>
+      </ul>
+      <div class="icon-toggle">
+       <input type="checkbox" id="queue-check" class="icon-toggle__input" />
+       <label for="queue-check" class="icon-toggle__btn">
+        <img
+         src="./assets/icons/mobile-home-add.svg"
+         alt="settings"
+         class="icon-ui"
+        />
+       </label>
+       <aside class="customize-feed">
+        <ul class="customize-feed__list">
+         <li>
+          <div class="drag-indicator"></div>
+          <h2>Customize Feed</h2>
+         </li>
+         <li>
+          <figure class="feed-option">
+           <img src="./assets/icons/add.svg" alt="Add to library icon" />
+           <figcaption>Select from Library</figcaption>
+          </figure>
+         </li>
+         <li>
+          <figure class="feed-option">
+           <img src="./assets/icons/pingr.svg" alt="Pinned icon" />
+           <figcaption>New Releases</figcaption>
+          </figure>
+          <div class="customize-feed__actions">
+           <img src="./assets/icons/more.svg" alt="Reorder" />
+           <img src="./assets/icons/view.svg" alt="Hide" />
+          </div>
+         </li>
+         <li>
+          <figure class="feed-option">
+           <img src="./assets/icons/pingr.svg" alt="Pinned icon" />
+           <figcaption>Made For You</figcaption>
+          </figure>
+          <div class="customize-feed__actions">
+           <img src="./assets/icons/more.svg" alt="Reorder" />
+           <img src="./assets/icons/view.svg" alt="Hide" />
+          </div>
+         </li>
+         <li>
+          <figure class="feed-option">
+           <img src="./assets/icons/pingr.svg" alt="Pinned icon" />
+           <figcaption>Recently Played</figcaption>
+          </figure>
+          <div class="customize-feed__actions">
+           <img src="./assets/icons/more.svg" alt="Reorder" />
+           <img src="./assets/icons/view.svg" alt="Hide" />
+          </div>
+         </li>
+         <li>
+          <figure class="feed-option">
+           <img src="./assets/icons/pingr.svg" alt="Pinned icon" />
+           <figcaption>Recently Played</figcaption>
+          </figure>
+          <div class="customize-feed__actions">
+           <img src="./assets/icons/more.svg" alt="Reorder" />
+           <img src="./assets/icons/view.svg" alt="Hide" />
+          </div>
+         </li>
+         <li>
+          <figure class="feed-option">
+           <img src="./assets/icons/pingr.svg" alt="Pinned icon" />
+           <figcaption>Recently Played</figcaption>
+          </figure>
+          <div class="customize-feed__actions">
+           <img src="./assets/icons/more.svg" alt="Reorder" />
+           <img src="./assets/icons/view.svg" alt="Hide" />
+          </div>
+         </li>
+         <li>
+          <figure class="feed-option">
+           <img src="./assets/icons/pingr.svg" alt="Pinned icon" />
+           <figcaption>Your Favorite Artists</figcaption>
+          </figure>
+          <div class="customize-feed__actions">
+           <img src="./assets/icons/more.svg" alt="Reorder" />
+           <img src="./assets/icons/view.svg" alt="Hide" />
+          </div>
+         </li>
+         <li>
+          <figure class="feed-option">
+           <img src="./assets/icons/pingr.svg" alt="Pinned icon" />
+           <figcaption>Albums For You</figcaption>
+          </figure>
+          <div class="customize-feed__actions">
+           <img src="./assets/icons/more.svg" alt="Reorder" />
+           <img src="./assets/icons/view.svg" alt="Hide" />
+          </div>
+         </li>
+         <li>
+          <figure class="feed-option">
+           <img src="./assets/icons/pingr.svg" alt="Pinned icon" />
+           <figcaption>Spotify original podcasts</figcaption>
+          </figure>
+          <div class="customize-feed__actions">
+           <img src="./assets/icons/more.svg" alt="Reorder" />
+           <img src="./assets/icons/view.svg" alt="Hide" />
+          </div>
+         </li>
+         <li>
+          <figure class="feed-option">
+           <img src="./assets/icons/pingr.svg" alt="Pinned icon" />
+           <figcaption>Episodes for you</figcaption>
+          </figure>
+          <div class="customize-feed__actions">
+           <img src="./assets/icons/more.svg" alt="Reorder" />
+           <img src="./assets/icons/view.svg" alt="Hide" />
+          </div>
+         </li>
+         <li>
+          <figure class="feed-option">
+           <img src="./assets/icons/pingr.svg" alt="Pinned icon" />
+           <figcaption>Your Top mixes</figcaption>
+          </figure>
+          <div class="customize-feed__actions">
+           <img src="./assets/icons/more.svg" alt="Reorder" />
+           <img src="./assets/icons/view.svg" alt="Hide" />
+          </div>
+         </li>
+         <li>
+          <figure class="feed-option">
+           <img src="./assets/icons/pingr.svg" alt="Pinned icon" />
+           <figcaption>Audiobooks For you</figcaption>
+          </figure>
+          <div class="customize-feed__actions">
+           <img src="./assets/icons/more.svg" alt="Reorder" />
+           <img src="./assets/icons/view.svg" alt="Hide" />
+          </div>
+         </li>
+        </ul>
+       </aside>
+      </div>
+     </nav>
+     <section class="recent-played">
+      <article>
+       <img src="./assets/covers/thumbs/Rectangle.svg" alt="get-lucky" />
+       <div class="recent-played__info">
+        <h2>Get Lucky (feat. Pharrell Williams and Nile Rodgers)</h2>
+        <p>Daft Punk</p>
+       </div>
+      </article>
+      <article>
+       <img src="./assets/covers/thumbs/image-8.svg" alt="DailyMix2" />
+       <div class="recent-played__info">
+        <h2>Daily Mix 2</h2>
+       </div>
+      </article>
+      <article>
+       <img src="./assets/covers/thumbs/image-6.svg" alt="get-lucky" />
+       <div>
+        <h2>Daily Mix 1</h2>
+       </div>
+      </article>
+      <article>
+       <img src="./assets/covers/thumbs/Rectangle.svg" alt="get-lucky" />
+       <div class="recent-played__info">
+        <h2>Instant Crush</h2>
+        <p>Daft Punk</p>
+       </div>
+      </article>
+      <article>
+       <img src="./assets/covers/thumbs/Rectangle.svg" alt="get-lucky" />
+       <div class="recent-played__info">
+        <h2>Around the world</h2>
+        <p>Daft Punk</p>
+       </div>
+      </article>
+      <article>
+       <img src="./assets/covers/thumbs/image.svg" alt="get-lucky" />
+       <div class="recent-played__info">
+        <h2>Rock Mix</h2>
+       </div>
+      </article>
+     </section>
+     <section class="made-for-you">
+      <div class="title-row">
+       <h2>Made For You</h2>
+       <nav class="arrow-scroll" aria-label="Artist navigation">
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-left.svg" alt="Previous" />
+        </button>
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-right.svg" alt="Next" />
+        </button>
+        <button>
+         <img src="./assets/icons/load.svg" alt="see more" />
+        </button>
+       </nav>
+       <img src="./assets/icons/load.svg" alt="see more" />
+      </div>
+      <section class="scroll-album-card">
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/made-for-you/discover-weekly.svg"
+          alt="discover weekly"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>Discover Weekly</h3>
+         <p>50</p>
+         <p>Your weekly mixtape of fresh music.</p>
+        </div>
+       </article>
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/made-for-you/daily-mix1.svg"
+          alt="daily mix1"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>Daily Mix 1</h3>
+         <p>50</p>
+         <p>Linkin Park, System Of A Down, Coal Chamber...</p>
+        </div>
+       </article>
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/made-for-you/daily-mix2.svg"
+          alt="daily mix1"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>Daily Mix 2</h3>
+         <p>50</p>
+         <p>Avril Lavigne, Lorde, Charli XCX and more</p>
+        </div>
+       </article>
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/made-for-you/daily-mix3.svg"
+          alt="daily mix1"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>Daily Mix 3</h3>
+         <p>50</p>
+         <p>The Strokes, Martin Garrix, MGMT and more</p>
+        </div>
+       </article>
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/made-for-you/daily-mix4.svg"
+          alt="daily mix4"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>Daily Mix 4</h3>
+         <p>50</p>
+         <p>Chuck Berry, Elvis Presley, Roy Orbison and more</p>
+        </div>
+       </article>
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/made-for-you/daily-mix5.svg"
+          alt="daily mix 6"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>Daily Mix 5</h3>
+         <p>50</p>
+         <p>Chuck Berry, Elvis Presley, Roy Orbison and more</p>
+        </div>
+       </article>
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/made-for-you/nirvana.svg"
+          alt="nirvana"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>Nirvana Radio</h3>
+         <p>50</p>
+         <p>The Strokes, Martin Garrix, MGMT and more</p>
+        </div>
+       </article>
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/made-for-you/fall-out-boy.svg"
+          alt="fall out boy"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>Fall Out Boy Radio</h3>
+         <p>50</p>
+         <p>With Panic! At The Disco, The All-American Rejects,...</p>
+        </div>
+       </article>
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/made-for-you/adele.svg"
+          alt="adele"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>Adele Radio</h3>
+         <p>50</p>
+         <p>With Sia, Sam Smith, P!nk and more</p>
+        </div>
+       </article>
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/made-for-you/daftpunk.svg"
+          alt="Daft Punk Radio"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>Daft Punk Radio</h3>
+         <p>50</p>
+         <p>With Justice, The Chemical Brothers, ...</p>
+        </div>
+       </article>
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/made-for-you/abba.svg"
+          alt="ABBA Radio"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>ABBA Radio</h3>
+         <p>50</p>
+         <p>With Honey M., Bee Gees, Bonnie Tyler, and more</p>
+        </div>
+       </article>
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/made-for-you/daily-mix6.svg"
+          alt="Daily Mix 6"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>Daily Mix 6</h3>
+         <p>50</p>
+         <p>One Direction, Avril Lavigne, Lorde, and more</p>
+        </div>
+       </article>
+      </section>
+     </section>
+     <section class="your-top-mixes">
+      <div class="title-row">
+       <h2>Your top mixes</h2>
+       <nav class="arrow-scroll" aria-label="Artist navigation">
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-left.svg" alt="Previous" />
+        </button>
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-right.svg" alt="Next" />
+        </button>
+        <button>
+         <img src="./assets/icons/load.svg" alt="see more" />
+        </button>
+       </nav>
+       <img src="./assets/icons/load.svg" alt="see more" />
+      </div>
+      <section class="scroll-album-card">
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/your-top-mix/rock-mix.svg"
+          alt="rock mix"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>Rock Mix</h3>
+         <p>50</p>
+         <p>Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+        </div>
+       </article>
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/your-top-mix/chillmix.svg"
+          alt="chill mix"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>Chill Mix</h3>
+         <p>50</p>
+         <p>MF DOOM, Daft Punk, The Chainsmokers, and more</p>
+        </div>
+       </article>
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/your-top-mix/pop-mix.svg"
+          alt="pop mix"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>Pop Mix</h3>
+         <p>50</p>
+         <p>Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+        </div>
+       </article>
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/your-top-mix/daft-punk-mix.svg"
+          alt="dft punk mix"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>Daft Punk Mix</h3>
+         <p>50</p>
+         <p>Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+        </div>
+       </article>
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/your-top-mix/happy-mix.svg"
+          alt="daily mix4"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>Happy Mix</h3>
+         <p>50</p>
+         <p>The Turtles, Van Morrison, ABBA and more</p>
+        </div>
+       </article>
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/your-top-mix/david-bowie-mix.svg"
+          alt="ddavid bowie mix"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>David Bowie Mix</h3>
+         <p>50</p>
+         <p>Soft Cell, The Who and The Clash</p>
+        </div>
+       </article>
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/your-top-mix/upbeat-mix.svg"
+          alt="upbeat mix"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>Upbeat Mix</h3>
+         <p>50</p>
+         <p>Kylie Minogue, Charli XCX, Cage The Elephant and...</p>
+        </div>
+       </article>
+       <article>
+        <div class="album_cover_wrapper">
+         <div></div>
+         <div></div>
+         <img
+          src="./assets/covers/full-covers/your-top-mix/60mix.svg"
+          alt="60s mix"
+         />
+        </div>
+        <div class="album-card-subtitle">
+         <h3>60s Mix</h3>
+         <p>50</p>
+         <p>Chuck Berry, Skeeter David, Van Morrison and...</p>
+        </div>
+       </article>
+      </section>
+      <section class="your-favorite-artists">
+       <div class="title-row">
+        <h2>Your favorite artists</h2>
+        <nav class="arrow-scroll" aria-label="Artist navigation">
+         <button type="button" class="btn-scroll">
+          <img src="./assets/icons/arrow-left.svg" alt="Previous" />
+         </button>
+         <button type="button" class="btn-scroll">
+          <img src="./assets/icons/arrow-right.svg" alt="Next" />
+         </button>
+         <button>
+          <img src="./assets/icons/load.svg" alt="see more" />
+         </button>
+        </nav>
+        <img src="./assets/icons/load.svg" alt="see more" />
+       </div>
+       <section class="scroll-album-card">
+        <article>
+         <img
+          src="./assets/covers/full-covers/favorite/guns-rose.svg"
+          alt="Guns N-Roses"
+         />
+         <div class="album-card-subtitle">
+          <h3>Guns N’ Roses</h3>
+         </div>
+        </article>
+        <article>
+         <img
+          src="./assets/covers/full-covers/favorite/daft-punk.svg"
+          alt="Daft Punk"
+         />
+         <div class="album-card-subtitle">
+          <h3>Daft Punk</h3>
+         </div>
+        </article>
+        <article>
+         <img
+          src="./assets/covers/full-covers/favorite/david-bowie.svg"
+          alt="David Bowie"
+         />
+         <div class="album-card-subtitle">
+          <h3>David Bowie</h3>
+         </div>
+        </article>
+       </section>
+      </section>
+      <section class="albums-for-you" id="music">
+       <span class="title-row">
+        <h2>Albums for you</h2>
+        <nav class="arrow-scroll" aria-label="Artist navigation">
+         <button type="button" class="btn-scroll">
+          <img src="./assets/icons/arrow-left.svg" alt="Previous" />
+         </button>
+         <button type="button" class="btn-scroll">
+          <img src="./assets/icons/arrow-right.svg" alt="Next" />
+         </button>
+         <button>
+          <img src="./assets/icons/load.svg" alt="see more" />
+         </button>
+        </nav>
+        <img src="./assets/icons/load.svg" alt="see more" />
+       </span>
+       <section class="scroll-album-card">
+        <article>
+         <div class="album_cover_wrapper">
+          <div></div>
+          <img
+           src="./assets/covers/full-covers/albums-for-you/linkin-park.svg"
+           alt="meteora-linkinpark"
+          />
+         </div>
+         <div class="album-card-subtitle">
+          <h3>Meteora</h3>
+          <span>13</span>
+          <span>Linkin Park</span>
+         </div>
+        </article>
+        <article>
+         <div class="album_cover_wrapper">
+          <div></div>
+          <img
+           src="./assets/covers/full-covers/albums-for-you/daft-punk.svg"
+           alt="daft punk"
+          />
+         </div>
+         <div class="album-card-subtitle">
+          <h3>Random Access Memories</h3>
+          <span>13</span>
+          <span>Daft Punk</span>
+         </div>
+        </article>
+        <article>
+         <div class="album_cover_wrapper">
+          <div></div>
+          <img
+           src="./assets/covers/full-covers/albums-for-you/abbey-road.svg"
+           alt="Abbey Road"
+          />
+         </div>
+         <div class="album-card-subtitle">
+          <h3>Abbey Road</h3>
+          <span>13</span>
+          <span>The Beatles</span>
+         </div>
+        </article>
+        <article>
+         <div class="album_cover_wrapper">
+          <div></div>
+          <img
+           src="./assets/covers/full-covers/albums-for-you/muse.svg"
+           alt="muse black holes"
+          />
+         </div>
+         <div class="album-card-subtitle">
+          <h3>Black Holes and Revelations</h3>
+          <span>13</span>
+          <span>Muse</span>
+         </div>
+        </article>
+       </section>
+      </section>
+     </section>
+     <section class="audiobooks-for-you">
+      <div class="title-row">
+       <h2>Audiobooks for you</h2>
+       <nav class="arrow-scroll" aria-label="Artist navigation">
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-left.svg" alt="Previous" />
+        </button>
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-right.svg" alt="Next" />
+        </button>
+        <button>
+         <img src="./assets/icons/load.svg" alt="see more" />
+        </button>
+       </nav>
+       <img src="./assets/icons/load.svg" alt="see more" />
+      </div>
+      <section class="scroll-album-card">
+       <article>
+        <img
+         src="./assets/covers/full-covers/audiobook-cover/Now-for-some-music.jpg"
+         alt="boston-public-library-kgsGqrarRpc-unsplash"
+        />
+        <div class="album-card-subtitle">
+         <h3>Now for some music</h3>
+         <p>Soldier with helmet</p>
+        </div>
+       </article>
+       <article>
+        <img
+         src="./assets/covers/full-covers/audiobook-cover/tasha-kostyuk.jpg"
+         alt="Jane Eyre: The Animated Journey"
+        />
+        <div class="album-card-subtitle">
+         <h3>The Animated Journey</h3>
+         <p>A gothic classic reimagined with stunning anime visuals</p>
+        </div>
+       </article>
+       <article>
+        <img
+         src="./assets/covers/full-covers/audiobook-cover/money.jpg"
+         alt="money pschology"
+        />
+        <div class="album-card-subtitle">
+         <h3>Pschology Money</h3>
+         <p>MORGAN HOUSEL</p>
+        </div>
+       </article>
+      </section>
+     </section>
+     <section class="podcasts-for-you">
+      <div class="title-row">
+       <h2>Podcasts for you</h2>
+       <nav class="arrow-scroll" aria-label="Artist navigation">
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-left.svg" alt="Previous" />
+        </button>
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-right.svg" alt="Next" />
+        </button>
+        <button>
+         <img src="./assets/icons/load.svg" alt="see more" />
+        </button>
+       </nav>
+       <img src="./assets/icons/load.svg" alt="see more" />
+      </div>
+      <section class="scroll-album-card border-left">
+       <article>
+        <img
+         src="./assets/covers/full-covers/Episodes-for-you/anything-goes.svg"
+         alt="emma chamberlain"
+        />
+        <div class="album-card-subtitle">
+         <h3>anything goes...</h3>
+         <p>emma chamberlain</p>
+        </div>
+       </article>
+       <article>
+        <img
+         src="./assets/covers/full-covers/Episodes-for-you/joe-rogan.svg"
+         alt="podcasts"
+        />
+        <div class="album-card-subtitle border-left">
+         <h3>The Joe Rogan...</h3>
+         <p>Joe Rogan</p>
+        </div>
+       </article>
+       <article>
+        <img
+         src="./assets/covers/full-covers/Episodes-for-you/the-journal.svg"
+         alt="Joe Rogan"
+        />
+        <div class="album-card-subtitle border-left">
+         <h3>Joe Rogan</h3>
+         <p>The Wall Street Journal</p>
+        </div>
+       </article>
+      </section>
+     </section>
+
+     <section class="episodes-for-you">
+      <div class="title-row">
+       <h2>Episodes for you</h2>
+       <nav class="arrow-scroll" aria-label="Artist navigation">
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-left.svg" alt="Previous" />
+        </button>
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-right.svg" alt="Next" />
+        </button>
+        <button>
+         <img src="./assets/icons/load.svg" alt="see more" />
+        </button>
+       </nav>
+       <img src="./assets/icons/load.svg" alt="see more" />
+      </div>
+      <section class="scroll-album-card">
+       <article class="first-card">
+        <img
+         src="./assets/covers/full-covers/Episodes-for-you/anything-goes.svg"
+         alt="emma chamberlain"
+        />
+        <div class="album-card-subtitle">
+         <h3>
+          <img src="./assets/icons/youtube.svg" alt="youtube-icon" />
+         </h3>
+         <p>emma chamberlain</p>
+        </div>
+       </article>
+       <article>
+        <img
+         src="./assets/covers/full-covers/Episodes-for-you/joe-rogan.svg"
+         alt="Joe Rogan"
+        />
+        <div class="album-card-subtitle">
+         <h3>The Joe Rogan...</h3>
+         <p>Joe Rogan</p>
+        </div>
+       </article>
+       <article>
+        <img
+         src="./assets/covers/full-covers/Episodes-for-you/the-journal.svg"
+         alt="the journal"
+        />
+        <div class="album-card-subtitle">
+         <h3>Joe Rogan</h3>
+         <p>The Wall Street Journal</p>
+        </div>
+       </article>
+      </section>
+     </section>
+    </section>
+
+    <!-- Search Section -->
+
+    <section id="search" class="search">
+     <nav class="search-navigation">
+      <form action="#" class="search-container" role="search">
+       <input type="text" placeholder="What do you want to play?" />
+       <img src="./assets/icons/search-loop.svg" alt="search-icon" />
+       <img
+        src="./assets/icons/search-photo.svg"
+        alt="search-with-photos-icon"
+       />
+      </form>
+     </nav>
+     <section class="your-favorite-artists recent-searches">
+      <div class="title-row">
+       <h1>Recent searches</h1>
+       <nav class="arrow-scroll" aria-label="Artist navigation">
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-left.svg" alt="Previous" />
+        </button>
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-right.svg" alt="Next" />
+        </button>
+        <button>
+         <img src="./assets/icons/load.svg" alt="see more" />
+        </button>
+       </nav>
+       <img src="./assets/icons/load.svg" alt="see more" />
+      </div>
+      <section class="scroll-album-card">
+       <article>
+        <img
+         src="./assets/covers/full-covers/favorite/guns-rose.svg"
+         alt="Guns N-Roses"
+        />
+        <div class="album-card-subtitle">
+         <h3>Guns N’ Roses</h3>
+        </div>
+       </article>
+       <article>
+        <img
+         src="./assets/covers/full-covers/favorite/daft-punk.svg"
+         alt="Daft Punk"
+        />
+        <div class="album-card-subtitle">
+         <h3>Daft Punk</h3>
+        </div>
+       </article>
+       <article>
+        <img
+         src="./assets/covers/full-covers/favorite/david-bowie.svg"
+         alt="David Bowie"
+        />
+        <div class="album-card-subtitle">
+         <h3>David Bowie</h3>
+        </div>
+       </article>
+      </section>
+     </section>
+     <section class="discover">
+      <section class="title-row search-title">
+       <h2>Browse all</h2>
+       <h3>Discover</h3>
+       <div class="arrow-scroll" aria-label="Artist navigation">
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-left.svg" alt="Previous" />
+        </button>
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-right.svg" alt="Next" />
+        </button>
+        <button>
+         <img src="./assets/icons/load.svg" alt="see more" />
+        </button>
+       </div>
+      </section>
+
+      <section class="search-cards">
+       <article class="playlist-card">
+        <h4>made for you</h4>
+        <img
+         src="./assets/covers/thumbs/discover/red-hot-chil.svg"
+         alt="red-hot-chil"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>New Releases</h4>
+        <img
+         src="./assets/covers/thumbs/discover/ariana-grande.svg"
+         alt="ariana-grande"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>Spotify Classics</h4>
+        <img
+         src="./assets/covers/thumbs/discover/classics.svg"
+         alt="Spotify-Classics"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>Charts</h4>
+        <img
+         src="./assets/covers/thumbs/discover/top-songs-global.svg"
+         alt="top-songs-global"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>Trending</h4>
+        <img
+         src="./assets/covers/thumbs/discover/bigon-them-internet.svg"
+         alt="bts"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>Discover</h4>
+        <img
+         src="./assets/covers/thumbs/discover/your-discovery.svg"
+         alt="red-hot-chil"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>Spotify Singles</h4>
+        <img src="./assets/covers/thumbs/discover/hits.svg" alt="hits" />
+       </article>
+       <article class="playlist-card">
+        <h4>Decades</h4>
+        <img src="./assets/covers/thumbs/discover/all-out.svg" alt="Decades" />
+       </article>
+      </section>
+     </section>
+     <section class="discover">
+      <section class="title-row search-title">
+       <h3>Genres</h3>
+       <div class="arrow-scroll" aria-label="Artist navigation">
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-left.svg" alt="Previous" />
+        </button>
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-right.svg" alt="Next" />
+        </button>
+        <button>
+         <img src="./assets/icons/load.svg" alt="see more" />
+        </button>
+       </div>
+      </section>
+
+      <section class="search-cards">
+       <article class="playlist-card">
+        <h4>pop</h4>
+        <img
+         src="./assets/covers/thumbs/discover/top-hits.svg"
+         alt="pop-music"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>country</h4>
+        <img
+         src="./assets/covers/thumbs/discover/hot-country.svg"
+         alt="hot-country"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>Hip-Hop</h4>
+        <img
+         src="./assets/covers/thumbs/discover/rapcaviar.svg"
+         alt="hip-hops"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>Rock</h4>
+        <img src="./assets/covers/thumbs/discover/marrow.svg" alt="marrow" />
+       </article>
+       <article class="playlist-card">
+        <h4>lindie</h4>
+        <img
+         src="./assets/covers/thumbs/discover/all-new-indie.svg"
+         alt="lndie"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>Punk</h4>
+        <img
+         src="./assets/covers/thumbs/discover/punl-essentials.svg"
+         alt="Punk"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>metal</h4>
+        <img
+         src="./assets/covers/thumbs/discover/metal-kickass.svg"
+         alt="metal-kickass"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>instrumental</h4>
+        <img
+         src="./assets/covers/thumbs/discover/peaceful-guitar-instrumental.svg"
+         alt="instrumental"
+        />
+       </article>
+      </section>
+     </section>
+     <section class="mood-activity">
+      <section class="title-row search-title">
+       <h3>Mood & Activity</h3>
+       <div class="arrow-scroll" aria-label="Artist navigation">
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-left.svg" alt="Previous" />
+        </button>
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-right.svg" alt="Next" />
+        </button>
+        <button>
+         <img src="./assets/icons/load.svg" alt="see more" />
+        </button>
+       </div>
+      </section>
+
+      <section class="search-cards">
+       <article class="playlist-card">
+        <h4>In the car</h4>
+        <img
+         src="./assets/covers/thumbs/discover/dailly-drive.svg"
+         alt="dailly-drive"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>Mood</h4>
+        <img
+         src="./assets/covers/thumbs/discover/mood-booster.svg"
+         alt="mood"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>Workout</h4>
+        <img
+         src="./assets/covers/thumbs/discover/workout-beast-mode.svg"
+         alt="workout-beast-mode"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>Chill</h4>
+        <img
+         src="./assets/covers/thumbs/discover/chill-vibes.svg"
+         alt="chill"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>Sleep</h4>
+        <img src="./assets/covers/thumbs/discover/sleep.svg" alt="sleep" />
+       </article>
+       <article class="playlist-card">
+        <h4>Party</h4>
+        <img src="./assets/covers/thumbs/discover/party-hits.svg" alt="Party" />
+       </article>
+       <article class="playlist-card">
+        <h4>At home</h4>
+        <img
+         src="./assets/covers/thumbs/discover/at-home-stress-relief.svg"
+         alt="metal-kickass"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>Focus</h4>
+        <img
+         src="./assets/covers/thumbs/discover/deep-focus.svg"
+         alt="deep-focus"
+        />
+       </article>
+      </section>
+     </section>
+     <section class="entertainment">
+      <section class="title-row search-title">
+       <h3>Entertainment</h3>
+       <div class="arrow-scroll" aria-label="Artist navigation">
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-left.svg" alt="Previous" />
+        </button>
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-right.svg" alt="Next" />
+        </button>
+        <button>
+         <img src="./assets/icons/load.svg" alt="see more" />
+        </button>
+       </div>
+      </section>
+
+      <section class="search-cards">
+       <article class="playlist-card">
+        <h4>Netflix</h4>
+        <img src="./assets/covers/thumbs/discover/netflix.svg" alt="netflix" />
+       </article>
+       <article class="playlist-card">
+        <h4>anime</h4>
+        <img src="./assets/covers/thumbs/discover/anime.svg" alt="anime" />
+       </article>
+       <article class="playlist-card">
+        <h4>Disney</h4>
+        <img src="./assets/covers/thumbs/discover/disney.svg" alt="disney" />
+       </article>
+       <article class="playlist-card">
+        <h4>Gaming</h4>
+        <img src="./assets/covers/thumbs/discover/gaming.svg" alt="chill" />
+       </article>
+      </section>
+     </section>
+
+     <section class="podcasts">
+      <section class="title-row search-title">
+       <h3>Podcasts</h3>
+       <div class="arrow-scroll" aria-label="Artist navigation">
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-left.svg" alt="Previous" />
+        </button>
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-right.svg" alt="Next" />
+        </button>
+        <button>
+         <img src="./assets/icons/load.svg" alt="see more" />
+        </button>
+       </div>
+      </section>
+      <section class="search-cards">
+       <article class="playlist-card">
+        <h4>Podcast</h4>
+        <img
+         src="./assets/covers/thumbs/discover/scince-podcasts.svg"
+         alt="Podcast"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>Podcast Charts</h4>
+        <img src="./assets/covers/thumbs/discover/charts.svg" alt="Charts" />
+       </article>
+       <article class="playlist-card">
+        <h4>Podcast New Releases</h4>
+        <img
+         src="./assets/covers/thumbs/discover/dear-felicity-pocast.svg"
+         alt="Podcast New Releases"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>Video</h4>
+        <img
+         src="./assets/covers/thumbs/discover/challher-daddy-vide.svg"
+         alt="Video"
+        />
+       </article>
+      </section>
+     </section>
+     <section class="audiobooks">
+      <section class="title-row search-title">
+       <h3>Audiobooks</h3>
+       <div class="arrow-scroll" aria-label="Artist navigation">
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-left.svg" alt="Previous" />
+        </button>
+        <button type="button" class="btn-scroll">
+         <img src="./assets/icons/arrow-right.svg" alt="Next" />
+        </button>
+        <button>
+         <img src="./assets/icons/load.svg" alt="see more" />
+        </button>
+       </div>
+      </section>
+      <section class="search-cards">
+       <article class="playlist-card">
+        <h4>Audiobooks</h4>
+        <img
+         src="./assets/covers/thumbs/discover/audiobooks.svg"
+         alt="Audiobooks"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>Sci-Fi & Fantasy Essentials</h4>
+        <img
+         src="./assets/covers/thumbs/discover/sci-fi-maiden.svg"
+         alt="Sci-Fi & Fantasy Essentials"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>Fiction & Literature</h4>
+        <img
+         src="./assets/covers/thumbs/discover/fiction-lessons-chemistry.svg"
+         alt="Fiction & Literature"
+        />
+       </article>
+       <article class="playlist-card">
+        <h4>Mystery & Thriller</h4>
+        <img
+         src="./assets/covers/thumbs/discover/mystery-whriller.svg"
+         alt="Mystery & Thriller"
+        />
+       </article>
+      </section>
+     </section>
+    </section>
+
+    <!-- Discover Section -->
+    <section id="discover" class="discover"></section>
+
+    <!-- Library Section -->
+
+    <section id="library" class="library">
+     <nav class="library-navigation">
+      <form action="#" class="search-container" role="search">
+       <input type="text" placeholder="Search library" />
+       <img src="./assets/icons/search-loop.svg" alt="search-icon" />
+       <img src="./assets/icons/clus.svg" alt="clus" />
+      </form>
+      <div class="action-Bar">
+       <div class="group-list">
+        <input type="checkbox" id="group-toggle" class="toggle-input" />
+        <label for="group-toggle" class="toggle-label">
+         <h3>
+          <img src="./assets/icons/Group(1).svg" alt="group" />
+          Goup
+         </h3>
+        </label>
+        <ul class="list-to-show">
+         <li>All</li>
+         <li>Songs</li>
+         <li>Playlists</li>
+         <li>Albums</li>
+         <li>Artists</li>
+         <li>Folders</li>
+         <li>POdcasts</li>
+         <li>Audiobooks</li>
+         <li>
+          <input type="checkbox" id="on-of" class="toggle-input" />
+          <label for="on-of" class="toggle-label">
+           <h3>Recents</h3>
+           <img
+            src="./assets/icons/of.svg"
+            alt="recents-icon"
+            class="icon-first"
+           />
+           <img src="./assets/icons/on.svg" alt="list-icon" class="icon-last" />
+          </label>
+         </li>
+        </ul>
+       </div>
+       <div class="recents-toggle">
+        <input type="checkbox" id="recents-switch" class="toggle-input" />
+        <label for="recents-switch" class="toggle-label">
+         <h3>Recents</h3>
+         <img
+          src="./assets/icons/recents.svg"
+          alt="recents-icon"
+          class="icon-first"
+         />
+         <img
+          src="./assets/icons/lista.svg"
+          alt="list-icon"
+          class="icon-last"
+         />
+        </label>
+       </div>
+      </div>
+     </nav>
+
+     <section class="accordion-item">
+      <section class="playlists">
+       <section class="title-accordion-items">
+        <input type="checkbox" id="toggle-playlists" class="title-toggle" />
+        <label for="toggle-playlists" class="cards-item-show">
+         <h2>Playlists</h2>
+         <img src="./assets/icons/light-vector.svg" alt="right" />
+        </label>
+        <article class="accordion-item-cards">
+         <article>
+          <div class="cards-img-library">
+           <div class="pin">
+            <img src="./assets/icons/pins.svg" alt="pin-icon" />
+           </div>
+           <div></div>
+           <img
+            src="./assets/covers/full-covers/library/liked-songs.svg"
+            alt="liked-sogns"
+           />
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Liked songs</h3>
+           <p>8</p>
+           <span>Kendrick Lamar, Fula, Bedford Falls, and more</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div class="pin">
+            <img src="./assets/icons/pins.svg" alt="pin-icon" />
+           </div>
+           <div></div>
+             <div onclick="const current = document.getElementById('Falls');
+                      document.querySelectorAll('audio').forEach(audio => {
+                      if (audio !== current) audio.pause();}); current.paused ? current.play() : current.pause();">
+                   <audio id="Falls" src="./assets/covers/full-covers/library/audio/Bedford Falls - Thrill is Gone.mp3"></audio>
+                   <img src="./assets/covers/full-covers/library/bedfordfalls.png" alt="bedfordfalls">
+             </div> 
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Bedford Falls</h3>
+           <p>152</p>
+           <span>Playlist • Bedford Falls</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div class="pin">
+            <img src="./assets/icons/pins.svg" alt="pin-icon" />
+           </div>
+           <div></div>
+           <div onclick="const current = document.getElementById('erekle');
+                      document.querySelectorAll('audio').forEach(audio => {
+                      if (audio !== current) audio.pause();}); current.paused ? current.play() : current.pause();">
+                   <audio id="erekle" src="./assets/covers/full-covers/library/audio/Erekle Deisadze - Sheni Panjridan.mp3"></audio>
+                   <img src="./assets/covers/full-covers/library/iare-erecle.png" alt="erecle">
+             </div> 
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Vibe</h3>
+           <p>50</p>
+           <span>song • Erekle Desadze</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div class="pin">
+            <img src="./assets/icons/pins.svg" alt="pin-icon" />
+           </div>
+           <div></div>
+             <div onclick="const current = document.getElementById('lamar');
+                      document.querySelectorAll('audio').forEach(audio => {
+                      if (audio !== current) audio.pause();}); current.paused ? current.play() : current.pause();">
+                   <audio id="lamar" src="./assets/covers/full-covers/library/audio/Kendrick Lamar - luther Official Audio.mp3"></audio>
+                   <img  src="./assets/covers/full-covers/library/kendirck-lamar.png" alt="kendirck-lamar">
+             </div> 
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Kendrick Lamar</h3>
+           <p>40</p>
+           <span>75,382,282 monthly listeners</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div class="pin">
+            <img src="./assets/icons/pins.svg" alt="pin-icon" />
+           </div>
+           <div></div>
+            <div onclick="const current = document.getElementById('fula');
+                      document.querySelectorAll('audio').forEach(audio => {
+                      if (audio !== current) audio.pause();}); current.paused ? current.play() : current.pause();">
+                   <audio id="fula" src="./assets/covers/full-covers/library/audio/FuLA -  .mp3"></audio>
+                   <img src="./assets/covers/full-covers/library/fula.png" alt="fula" />
+             </div> 
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Fula Calypse</h3>
+           <p>10</p>
+           <span>19,268 monthly listeners</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div class="pin">
+            <img src="./assets/icons/pins.svg" alt="pin-icon" />
+           </div>
+           <div></div>
+           <img
+            src="./assets/covers/full-covers/library/folders.svg"
+            alt="folders"
+           />
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Fav bands</h3>
+           <p>6</p>
+           <span>Linkin Park, Muse, and more</span>
+          </div>
+         </article>
+        </article>
+       </section>
+      </section>
+
+      <section class="playlists-by-spotify">
+       <section class="title-accordion-items">
+        <input type="checkbox" id="toggle-spotify" class="title-toggle" />
+        <label for="toggle-spotify" class="cards-item-show">
+         <h2>Playlists by spotify</h2>
+         <img src="./assets/icons/light-vector.svg" alt="right" />
+        </label>
+        <article class="accordion-item-cards">
+         <article>
+          <div class="cards-img-library">
+           <div></div>
+           <div></div>
+           <div onclick="const current = document.getElementById('backtofriends');
+                      document.querySelectorAll('audio').forEach(audio => {
+                      if (audio !== current) audio.pause();}); current.paused ? current.play() : current.pause();">
+                   <audio id="backtofriends" src="./assets/covers/full-covers/library/audio/sombr - back to friends official audio.mp3"></audio>
+                   <img src="./assets/covers/full-covers/library/sombr.png" alt="back to friends"/>
+             </div> 
+          </div>
+          <div class="album-card-subtitle">
+           <h3>back to friends</h3>
+           <p>6</p>
+           <span>sombr</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div></div>
+           <div></div>
+              <div onclick="const current = document.getElementById('happen');
+                      document.querySelectorAll('audio').forEach(audio => {
+                      if (audio !== current) audio.pause();}); current.paused ? current.play() : current.pause();">
+                   <audio id="happen" src="./assets/covers/full-covers/library/audio/Tame Impala - Let It Happen.mp3"></audio>
+                   <img src="./assets/covers/full-covers/library/let-it-happen.png" alt="let-it-happen" />
+             </div> 
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Let It Happen</h3>
+           <p>2</p>
+           <span>Tame impala</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div></div>
+           <div></div>
+            <div onclick="const current = document.getElementById('macedonia');
+                      document.querySelectorAll('audio').forEach(audio => {
+                      if (audio !== current) audio.pause();}); current.paused ? current.play() : current.pause();">
+                   <audio id="macedonia" src="./assets/covers/full-covers/library/audio/Bedford falls-macedonialyrics.mp3"></audio>
+                   <img src="./assets/covers/full-covers/library/macedonia.png" alt="macedonia"/>
+             </div> 
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Macedonia</h3>
+           <p>2</p>
+           <span>Bedford Falls</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div></div>
+           <div></div>
+             <div onclick="const current = document.getElementById('luna');
+                      document.querySelectorAll('audio').forEach(audio => {
+                      if (audio !== current) audio.pause();}); current.paused ? current.play() : current.pause();">
+                   <audio id="luna" src="./assets/covers/full-covers/library/audio/Iare.mp3"></audio>
+                   <img src="./assets/covers/full-covers/library/luna.png" alt="luna" />
+             </div> 
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Iare</h3>
+           <p>2</p>
+           <span>Luna997</span>
+          </div>
+         </article>
+        </article>
+       </section>
+      </section>
+
+      <section class="albums-library">
+       <section class="title-accordion-items">
+        <input type="checkbox" id="toggle-albums" class="title-toggle" />
+        <label for="toggle-albums" class="cards-item-show">
+         <h2>Albums</h2>
+         <img src="./assets/icons/light-vector.svg" alt="right" />
+        </label>
+        <article class="accordion-item-cards">
+         <article>
+          <div class="cards-img-library">
+           <div>
+             <div onclick="const current = document.getElementById('radiohade');
+                      document.querySelectorAll('audio').forEach(audio => {
+                      if (audio !== current) audio.pause();}); current.paused ? current.play() : current.pause();">
+                   <audio id="radiohade" src="./assets/covers/full-covers/library/audio/Radiohead - Let Down.mp3"></audio>
+                   <img src="./assets/covers/full-covers/library/radiohade.png" alt="radiohade"/>
+             </div> 
+           </div>
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Let Down</h3>
+           <p>5</p>
+           <span>Radiohead</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+            <div onclick="const current = document.getElementById('shors');
+                      document.querySelectorAll('audio').forEach(audio => {
+                      if (audio !== current) audio.pause();}); current.paused ? current.play() : current.pause();">
+                   <audio id="shors" src="./assets/covers/full-covers/library/audio/Luka Kveliashvili - Shors  შორს.mp3"></audio>
+                  <img src="./assets/covers/full-covers/library/shors.png" alt="shors" />
+             </div>      
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Shors</h3>
+           <p>7</p>
+           <span>Luka Kveliashvili</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+               <div onclick="const current = document.getElementById('ataris');
+                      document.querySelectorAll('audio').forEach(audio => {
+                      if (audio !== current) audio.pause();}); current.paused ? current.play() : current.pause();">
+                   <audio id="ataris" src="./assets/covers/full-covers/library/audio/Kayakata - Ataris [ Nikakoi Rework ].mp3"></audio>
+                    <img src="./assets/covers/full-covers/library/kayakata.png" alt="kayakata"/>
+                </div>
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Ataris</h3>
+           <p>20</p>
+           <span>Kayakata</span>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div>
+              <div onclick="const current = document.getElementById('mamu');document.querySelectorAll('audio').forEach(audio => {
+                      if (audio !== current) audio.pause();}); current.paused ? current.play() : current.pause();">
+                   <audio id="mamu" src="./assets/covers/full-covers/library/audio/Mamu - ესკიზი.mp3"></audio>
+                    <img src="./assets/covers/full-covers/library/mamu.png" alt="mamu"/>
+                </div>
+           </div>
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Sketch</h3>
+           <p>10</p>
+           <span>Mamu</span>
+          </div>
+         </article>
+        </article>
+       </section>
+      </section>
+
+      <section class="folders-library">
+       <section class="title-accordion-items">
+        <input type="checkbox" id="toggle-folders" class="title-toggle" />
+        <label for="toggle-folders" class="cards-item-show">
+         <h2>Folders</h2>
+         <img src="./assets/icons/light-vector.svg" alt="right" />
+        </label>
+        <article class="accordion-item-cards">
+         <article>
+          <div class="cards-img-library">
+           <div></div>
+           <img
+            src="./assets/covers/full-covers/library/folders.svg"
+            alt="folders"
+           />
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Fav bands</h3>
+           <p>6</p>
+           <span>Linkin Park, Muse, and more</span>
+          </div>
+         </article>
+        </article>
+       </section>
+      </section>
+
+      <section class="artists-library">
+       <section class="title-accordion-items">
+        <input type="checkbox" id="toggle-artists" class="title-toggle" />
+        <label for="toggle-artists" class="cards-item-show">
+         <h2>Artists</h2>
+         <img src="./assets/icons/light-vector.svg" alt="right" />
+        </label>
+        <article class="accordion-item-cards">
+         <article>
+          <div class="cards-img-library">
+           <div>
+             <div onclick="const current = document.getElementById('charkviani');
+                      document.querySelectorAll('audio').forEach(audio => {
+                      if (audio !== current) audio.pause();}); current.paused ? current.play() : current.pause();">
+                   <audio id="charkviani" src="./assets/covers/full-covers/library/audio/Irakli Charkviani - zgvas gavxar ირაკლი ჩარკვიანი - ზღვას გავხარ (მეფე).mp3"></audio>
+                  <img src="./assets/covers/full-covers/library/charkviani.png" alt="charkviani" />
+             </div> 
+           </div>
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Irakli Charkviani</h3>
+          </div>
+         </article>
+         <article>
+          <div class="cards-img-library">
+           <div>
+             <div onclick="const current = document.getElementById('Kancheli');
+                      document.querySelectorAll('audio').forEach(audio => {
+                      if (audio !== current) audio.pause();}); current.paused ? current.play() : current.pause();">
+                   <audio id="Kancheli" src="./assets/covers/full-covers/library/audio/გია ყანჩელი - ის აქ არის (before you go to sleep).mp3"></audio>
+                 <img src="./assets/covers/full-covers/library/revaz.png" alt="Kancheli" />
+             </div> 
+           </div>
+          </div>
+          <div class="album-card-subtitle">
+           <h3>Gia Kancheli</h3>
+          </div>
+         </article>
+        </article>
+       </section>
+      </section>
+     </section>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="profile">
+     <div class="user-card">
+      <div class="user-card-avatar">
+       <img src="./assets/profile-playlist/userpfp.svg" alt="Avatar" />
+      </div>
+      <div class="user-info">
+       <div class="user-card-actions">
+        <h1 class="user-card-name">Jux</h1>
+        <div class="user-card-actions-2">
+         <button class="icon-btn">
+          <img src="./assets/profile-playlist/editicon.svg" alt="Edit" />
+         </button>
+         <button class="icon-btn">
+          <img src="./assets/profile-playlist/shareiconsvg.svg" alt="Share" />
+         </button>
+        </div>
+       </div>
+       <div class="user-card-info">
+        <div class="user-card-stats">
+         <span>3 followers</span>
+         •
+         <span>30 following</span>
+        </div>
+        <p class="user-card-id">31z6y5ynbcaogtsjzzpinxeue6xu</p>
+       </div>
+      </div>
+     </div>
+
+     <div class="friends">
+      <div class="friends-section">
+       <div class="friends-section-header">
+        <h2>Friends</h2>
+        <button class="icon-btn">
+         <img src="./assets/profile-playlist/addfriendsicon.svg" alt="Add" />
+        </button>
+       </div>
+       <ul class="friends-list">
+        <li class="friend-item">
+         <div class="friend-item-avatar">
+          <img src="./assets/profile-playlist/friendredsvg.svg" alt="Friend" />
+         </div>
+         <div class="friend-item-details">
+          <p class="friend-item-name">FriendlyMusicListener</p>
+          <div class="friend-item-song">
+           <img
+            src="./assets/profile-playlist/greenlines.svg"
+            alt="green-icon"
+           />
+           <p>
+            <span>Goosebumps</span>
+            • Travis Scott
+           </p>
+          </div>
+         </div>
+        </li>
+        <li class="friend-item">
+         <div class="friend-item-avatar">
+          <img src="./assets/profile-playlist/friendblue.svg" alt="Friend" />
+         </div>
+         <div class="friend-item-details">
+          <p class="friend-item-name">AverageMusicEnjoyer</p>
+          <div class="friend-item-song">
+           <img
+            src="./assets/profile-playlist/greenlines.svg"
+            alt="green-icon"
+           />
+           <p>
+            <span>Get Lucky</span>
+            • Daft Punk
+           </p>
+          </div>
+         </div>
+        </li>
+       </ul>
+      </div>
+     </div>
+
+     <div class="plan-card plan-card-premium">
+      <div class="plan-card-header">
+       <img src="./assets/profile-playlist/logo.svg" alt="Spotify" />
+       <span>Current Plan</span>
+      </div>
+      <h2 class="plan-card-title">Premium - Individual</h2>
+      <p class="plan-card-price">$10.99 / month</p>
+     </div>
+
+     <nav class="settings-menu">
+      <ul class="settings-menu-list">
+       <li class="settings-menu-item border-bottom">
+        <a href="#">
+         <img
+          src="./assets/profile-playlist/historyicon.svg"
+          alt="History"
+          class="settings-menu__icon"
+         />
+         Listening history
+         <span class="arrow-right">
+          <img src="./assets/icons/dropdown-arrow.svg" alt="right-arrow" />
+         </span>
+        </a>
+       </li>
+       <li class="settings-menu-item border-bottom">
+        <a href="#">
+         <img
+          src="./assets/profile-playlist/settingsicon.svg"
+          alt="Settings"
+          class="settings-menu__icon"
+         />
+         Settings and privacy
+         <span class="arrow-right">
+          <img src="./assets/icons/dropdown-arrow.svg" alt="right-arrow" />
+         </span>
+        </a>
+       </li>
+       <li class="settings-menu-item">
+        <a href="#">
+         <img
+          src="./assets/profile-playlist/notificon.svg"
+          alt="Notifications"
+          class="settings-menu__icon"
+         />
+         What's new
+         <span class="arrow-right">
+          <img src="./assets/icons/dropdown-arrow.svg" alt="right-arrow" />
+         </span>
+        </a>
+       </li>
+      </ul>
+     </nav>
+    </section>
+
+    <!-- Here starts Sidebar Navigation sections -->
+    <section id="pins" class="pins"></section>
+    <section id="playlists" class="playlist-album">
+     <div class="playlist-wrapper">
+      <div class="playlist-main">
+       <!-- Mobile Search Header -->
+       <div class="playlist-header hide-on-desktop">
+        <label for="search">
+         <input type="search" id="search" />
+         <img src="./assets/icons/search.svg" alt="search-icon" />
+        </label>
+        <button>
+         <img src="./assets/icons/shuffle.svg" alt="sort-icon" />
+        </button>
+       </div>
+
+       <!-- Top info block -->
+       <article class="playlist-info">
+        <figure class="hide-on-desktop">
+         <img src="./assets/profile-playlist/daftpunkmix.svg" alt="music-img" />
+        </figure>
+        <div class="playlist-title-info">
+         <h3>Daft Punk Mix</h3>
+         <p>
+          By
+          <span>Spotify</span>
+          • 50 songs • 3 hr 30 min
+         </p>
+        </div>
+       </article>
+
+       <div class="playlist-controllers">
+        <div class="playlist-leftctrl">
+         <button class="hide-on-mobile play-btn-desktop">
+          <img
+           class="playlist-icon"
+           src="./assets/profile-playlist/playicon.svg"
+           alt="play-btn"
+          />
+         </button>
+         <button class="hide-on-mobile">
+          <img
+           class="playlist-icon"
+           src="./assets/profile-playlist/shuffleicon.svg"
+           alt="shuffle-btn"
+          />
+         </button>
+         <button>
+          <img
+           class="playlist-icon"
+           src="./assets/icons/plus.svg"
+           alt="next-btn"
+          />
+         </button>
+         <button>
+          <img
+           class="playlist-icon"
+           src="./assets/icons/favourite.svg"
+           alt="add-btn"
+          />
+         </button>
+         <button>
+          <img
+           class="playlist-icon"
+           src="./assets/icons/download.svg"
+           alt="download-btn"
+          />
+         </button>
+         <button class="hide-on-desktop">
+          <img
+           class="playlist-icon"
+           src="./assets/profile-playlist/moreicon.svg"
+           alt="see-more"
+          />
+         </button>
+         <button class="hide-on-mobile">
+          <img
+           class="playlist-icon"
+           src="./assets/icons/share.svg"
+           alt="upload"
+          />
+         </button>
+         <button class="hide-on-mobile">
+          <img class="playlist-icon" src="./assets/icons/more.svg" alt="more" />
+         </button>
+        </div>
+        <div class="playlist-rightctrl">
+         <button class="hide-on-desktop">
+          <img
+           class="playlist-icon"
+           src="./assets/playlist-section/playlist-nav-shuffle-icon.svg"
+           alt="shuffle-btn"
+          />
+         </button>
+         <button class="hide-on-desktop">
+          <img
+           class="playlist-icon"
+           src="./assets/playlist-section/playlist-play-icon.svg"
+           alt="play-btn"
+          />
+         </button>
+         <button class="hide-on-mobile">
+          <img
+           class="playlist-icon"
+           src="./assets/icons/search.svg"
+           onerror="this.src = './assets/playlist-section/searcho-icon.svg'"
+           alt="search"
+          />
+         </button>
+        </div>
+       </div>
+
+       <div class="playlist-songs">
+        <!-- Desktop Table Header -->
+        <div class="playlist-table-header hide-on-mobile">
+         <span class="th-index">#</span>
+         <span class="th-title">Title</span>
+         <span class="th-album">Album</span>
+         <span class="th-duration">Duration</span>
+         <span class="th-like"></span>
+        </div>
+
+        <article>
+         <span class="song-index hide-on-mobile">1</span>
+         <figure>
+          <img src="./assets/images/Get-Lucky.png" alt="daft-punk" />
+          <figcaption>
+           <p>Get Lucky</p>
+           <span>Daft Punk</span>
+          </figcaption>
+         </figure>
+         <span class="song-album hide-on-mobile">Random Access Memories</span>
+         <span class="song-duration hide-on-mobile">4:35</span>
+         <button class="song-like hide-on-mobile">
+          <img
+           src="./assets/icons/like.svg"
+           onerror="this.style.display = 'none'"
+           alt="like"
+          />
+         </button>
+         <button class="song-more">
+          <img src="./assets/icons/playlist-seemorebtn.svg" alt="see-more" />
+         </button>
+        </article>
+        <article>
+         <span class="song-index hide-on-mobile">2</span>
+         <figure>
+          <img src="./assets/images/Get-Lucky.png" alt="daft-punk" />
+          <figcaption>
+           <p>Instant Crush</p>
+           <span>Daft Punk, Julian Casablancas</span>
+          </figcaption>
+         </figure>
+         <span class="song-album hide-on-mobile">Random Access Memories</span>
+         <span class="song-duration hide-on-mobile">5:37</span>
+         <button class="song-like hide-on-mobile">
+          <img
+           src="./assets/icons/like.svg"
+           onerror="this.style.display = 'none'"
+           alt="like"
+          />
+         </button>
+         <button class="song-more">
+          <img src="./assets/icons/playlist-seemorebtn.svg" alt="see-more" />
+         </button>
+        </article>
+        <article>
+         <span class="song-index hide-on-mobile">3</span>
+         <figure>
+          <img src="./assets/images/Gorillaz.png" alt="on-melancholy-hill" />
+          <figcaption>
+           <p>On Melancholy Hill</p>
+           <span>Gorillaz</span>
+          </figcaption>
+         </figure>
+         <span class="song-album hide-on-mobile">Plastic Beach</span>
+         <span class="song-duration hide-on-mobile">3:53</span>
+         <button class="song-like hide-on-mobile">
+          <img
+           src="./assets/icons/like.svg"
+           onerror="this.style.display = 'none'"
+           alt="like"
+          />
+         </button>
+         <button class="song-more">
+          <img src="./assets/icons/playlist-seemorebtn.svg" alt="see-more" />
+         </button>
+        </article>
+        <article>
+         <span class="song-index hide-on-mobile">4</span>
+         <figure>
+          <img src="./assets/images/Soft-Cell.png" alt="tainted-love" />
+          <figcaption>
+           <p>Tainted Love</p>
+           <span>Soft Cell</span>
+          </figcaption>
+         </figure>
+         <span class="song-album hide-on-mobile">Non-Stop Erotic Cabaret</span>
+         <span class="song-duration hide-on-mobile">2:33</span>
+         <button class="song-like hide-on-mobile">
+          <img
+           src="./assets/icons/like.svg"
+           onerror="this.style.display = 'none'"
+           alt="like"
+          />
+         </button>
+         <button class="song-more">
+          <img src="./assets/icons/playlist-seemorebtn.svg" alt="see-more" />
+         </button>
+        </article>
+        <article>
+         <span class="song-index hide-on-mobile">5</span>
+         <figure>
+          <img src="./assets/images/Daft-punk-songs.png" alt="one-more-time" />
+          <figcaption>
+           <p>One More Time</p>
+           <span>Daft Punk</span>
+          </figcaption>
+         </figure>
+         <span class="song-album hide-on-mobile">Discovery</span>
+         <span class="song-duration hide-on-mobile">5:20</span>
+         <button class="song-like hide-on-mobile">
+          <img
+           src="./assets/icons/like.svg"
+           onerror="this.style.display = 'none'"
+           alt="like"
+          />
+         </button>
+         <button class="song-more">
+          <img src="./assets/icons/playlist-seemorebtn.svg" alt="see-more" />
+         </button>
+        </article>
+        <article>
+         <span class="song-index hide-on-mobile">6</span>
+         <figure>
+          <img src="./assets/images/MGMT.png" alt="electric-feel" />
+          <figcaption>
+           <p>Electric Feel</p>
+           <span>MGMT</span>
+          </figcaption>
+         </figure>
+         <span class="song-album hide-on-mobile">Oracular Spectacular</span>
+         <span class="song-duration hide-on-mobile">3:49</span>
+         <button class="song-like hide-on-mobile">
+          <img
+           src="./assets/icons/like.svg"
+           onerror="this.style.display = 'none'"
+           alt="like"
+          />
+         </button>
+         <button class="song-more">
+          <img src="./assets/icons/playlist-seemorebtn.svg" alt="see-more" />
+         </button>
+        </article>
+        <article>
+         <span class="song-index hide-on-mobile">7</span>
+         <figure>
+          <img src="./assets/images/daft-punk.svg" alt="give-life-back" />
+          <figcaption>
+           <p>Give Life Back to Music</p>
+           <span>Daft Punk</span>
+          </figcaption>
+         </figure>
+         <span class="song-album hide-on-mobile">Random Access Memories</span>
+         <span class="song-duration hide-on-mobile">4:35</span>
+         <button class="song-like hide-on-mobile">
+          <img
+           src="./assets/icons/like.svg"
+           onerror="this.style.display = 'none'"
+           alt="like"
+          />
+         </button>
+         <button class="song-more">
+          <img src="./assets/icons/playlist-seemorebtn.svg" alt="see-more" />
+         </button>
+        </article>
+       </div>
+      </div>
+
+      <!-- Desktop Right Sidebar -->
+      <!-- <aside class="playlist-sidebar hide-on-mobile">
+       <div class="sidebar-cover">
+        <img
+         src="./assets/profile-playlist/daftpunkmix.svg"
+         alt="Daft Punk Mix"
+        />
+        <div class="sidebar-cover-title">Daft Punk Mix</div>
+       </div>
+
+       <div class="sidebar-tags">
+        <span>Funk</span>
+        <span>Electronic music</span>
+        <span>Disco</span>
+        <span>Soft Rock</span>
+        <span>Progressive pop</span>
+       </div>
+
+       <div class="sidebar-related">
+        <figure>
+         <img src="./assets/images/daft-punk.svg" alt="Daft Punk" />
+         <figcaption>Daft Punk</figcaption>
+        </figure>
+        <figure>
+         <img
+          src="./assets/images/Pharrell-Williams.png"
+          class="default-avatar"
+          style="filter: hue-rotate(90deg)"
+          alt="Pharrell Williams"
+         />
+         <figcaption>Pharrell Williams</figcaption>
+        </figure>
+        <figure>
+         <img
+          src="./assets/images/Nile-Rodgers.png"
+          class="default-avatar"
+          style="filter: hue-rotate(180deg)"
+          alt="Nile Rodgers"
+         />
+         <figcaption>Nile Rodgers</figcaption>
+        </figure>
+       </div>
+      </aside> -->
+     </div>
+    </section>
+    <section id="songs" class="songs">
+     <figure class="filter__icons">
+      <div class="filter__plus-icon">
+       <img src="./assets/icons/plus-noframe.svg" alt="Plus Icon" />
+      </div>
+      <figure class="filter__right-icons">
+       <div><img src="./assets/icons/song-list.svg" alt="Song List" /></div>
+       <div><img src="./assets/icons/sort.svg" alt="Sort Icon" /></div>
+       <figure class="recent">
+        <img src="./assets/icons/upside-down.svg" alt="Arrows Icon" />
+        <figcaption>Recent</figcaption>
+       </figure>
+       <figure>
+        <img src="./assets/icons/filter.svg" alt="Filter Icon" />
+        <figcaption>Filter: All</figcaption>
+       </figure>
+       <div><img src="./assets/icons/search.svg" alt="Search Icon" /></div>
+      </figure>
+     </figure>
+
+     <table class="song-table">
+      <thead>
+       <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th></th>
+        <th>Album</th>
+        <th>Duration</th>
+        <th></th>
+       </tr>
+      </thead>
+      <tbody class="song-tbody">
+       <tr>
+        <td class="track-number">1</td>
+        <td class="cover">
+         <img
+          src="./assets/images/Get-Lucky.png"
+          alt="Daft Punk Cover"
+          class="cover-img"
+         />
+        </td>
+        <td class="album-tracklist">
+         <p class="tracklist-info__title">Get Lucky</p>
+         <p class="tracklist-info__artist">Daft Punk</p>
+        </td>
+        <td class="table-album">Random Access Memories</td>
+        <td class="nav-home-table__duration">4:35</td>
+        <td class="track-actions">
+         <label class="like-btn">
+          <input type="checkbox" hidden />
+          <img
+           src="./assets/icons/like.svg"
+           alt="Like Icon"
+           class="icon-outline"
+          />
+          <img
+           src="./assets/icons/liked.svg"
+           alt="Like Icon"
+           class="icon-filled"
+          />
+         </label>
+        </td>
+       </tr>
+       <tr>
+        <td class="track-number">2</td>
+        <td class="cover">
+         <img
+          src="./assets/images/Get-Lucky.png"
+          alt="Daft Punk Cover"
+          class="cover-img"
+         />
+        </td>
+        <td class="home-tracklist">
+         <p class="tracklist-info__title">Instant Crush</p>
+         <p class="tracklist-info__artist">Daft Punk, Julian Casablancas</p>
+        </td>
+        <td class="table-album">Random Access Memories</td>
+        <td class="nav-home-table__duration">5:37</td>
+
+        <td class="track-actions">
+         <label class="like-btn">
+          <input type="checkbox" hidden />
+          <img
+           src="./assets/icons/like.svg"
+           alt="Like Icon"
+           class="icon-outline"
+          />
+          <img
+           src="./assets/icons/liked.svg"
+           alt="Like Icon"
+           class="icon-filled"
+          />
+         </label>
+        </td>
+       </tr>
+       <tr>
+        <td class="track-number">3</td>
+        <td class="cover">
+         <img
+          src="./assets/images/Gorillaz.png"
+          alt="Gorillaz Cover"
+          class="cover-img"
+         />
+        </td>
+        <td class="home-tracklist">
+         <p class="tracklist-info__title">On Melancholy Hill</p>
+         <p class="tracklist-info__artist">Gorillaz</p>
+        </td>
+        <td class="table-album">Plastic Beach</td>
+        <td class="nav-home-table__duration">3:53</td>
+        <td class="track-actions">
+         <label class="like-btn">
+          <input type="checkbox" hidden />
+          <img
+           src="./assets/icons/like.svg"
+           alt="Like Icon"
+           class="icon-outline"
+          />
+          <img
+           src="./assets/icons/liked.svg"
+           alt="Like Icon"
+           class="icon-filled"
+          />
+         </label>
+        </td>
+       </tr>
+       <tr>
+        <td class="track-number">4</td>
+        <td class="cover">
+         <img
+          src="./assets/images/Soft-Cell.png"
+          alt="Soft Cell"
+          class="cover-img"
+         />
+        </td>
+        <td class="home-tracklist">
+         <p class="tracklist-info__title">Tainted Love</p>
+         <p class="tracklist-info__artist">Soft Cell</p>
+        </td>
+        <td class="table-album">Non-Stop Erotic Cabaret</td>
+        <td class="nav-home-table__duration">2:33</td>
+        <td class="track-actions">
+         <label class="like-btn">
+          <input type="checkbox" hidden />
+          <img
+           src="./assets/icons/like.svg"
+           alt="Like Icon"
+           class="icon-outline"
+          />
+          <img
+           src="./assets/icons/liked.svg"
+           alt="Like Icon"
+           class="icon-filled"
+          />
+         </label>
+        </td>
+       </tr>
+       <tr>
+        <td class="track-number">5</td>
+        <td class="cover">
+         <img
+          src="./assets/images/Daft-punk-songs.png"
+          alt="Cover Image"
+          class="cover-img"
+         />
+        </td>
+        <td class="home-tracklist">
+         <p class="tracklist-info__title">One More Time</p>
+         <p class="tracklist-info__artist">Daft Punk</p>
+        </td>
+        <td class="table-album">Discovery</td>
+        <td class="nav-home-table__duration">5:20</td>
+        <td class="track-actions">
+         <label class="like-btn">
+          <input type="checkbox" hidden />
+          <img
+           src="./assets/icons/like.svg"
+           alt="Like Icon"
+           class="icon-outline"
+          />
+          <img
+           src="./assets/icons/liked.svg"
+           alt="Like Icon"
+           class="icon-filled"
+          />
+         </label>
+        </td>
+       </tr>
+       <tr>
+        <td class="track-number">6</td>
+        <td class="cover">
+         <img
+          src="./assets/images/MGMT.png"
+          alt="Cover Image"
+          class="cover-img"
+         />
+        </td>
+        <td class="home-tracklist">
+         <p class="tracklist-info__title">Electric Feel</p>
+         <p class="tracklist-info__artist">MGMT</p>
+        </td>
+        <td class="table-album">Oracular Spectacular</td>
+        <td class="nav-home-table__duration">3:49</td>
+        <td class="track-actions">
+         <label class="like-btn">
+          <input type="checkbox" hidden />
+          <img
+           src="./assets/icons/like.svg"
+           alt="Like Icon"
+           class="icon-outline"
+          />
+          <img
+           src="./assets/icons/liked.svg"
+           alt="Like Icon"
+           class="icon-filled"
+          />
+         </label>
+        </td>
+       </tr>
+       <tr>
+        <td class="track-number">7</td>
+        <td class="cover">
+         <img
+          src="./assets/images/Daft-punk-songs.png"
+          alt="Cover Image"
+          class="cover-img"
+         />
+        </td>
+        <td class="home-tracklist">
+         <p class="tracklist-info__title">Give Life Back to Music</p>
+         <p class="tracklist-info__artist">Daft Punk</p>
+        </td>
+        <td class="table-album">Random Access Memories</td>
+        <td class="nav-home-table__duration">4:35</td>
+        <td class="track-actions">
+         <label class="like-btn">
+          <input type="checkbox" hidden />
+          <img
+           src="./assets/icons/like.svg"
+           alt="Like Icon"
+           class="icon-outline"
+          />
+          <img
+           src="./assets/icons/liked.svg"
+           alt="Like Icon"
+           class="icon-filled"
+          />
+         </label>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </section>
+    <section id="albums" class="albums">
+     <article class="albums-wrapper">
+      <article class="albums-header">
+       <h1 class="albums__title">Random Access Memories</h1>
+       <ul class="albums-info">
+        <li class="albums-info__artist">
+         <img src="./assets/icons/artists.svg" alt="Artist Icon" />
+         <a href="#">Daft Punk</a>
+        </li>
+        <li class="albums-info__dot"></li>
+        <li>2013</li>
+        <li class="albums-info__dot"></li>
+        <li>13 songs</li>
+        <li class="albums-info__dot"></li>
+        <li>1 hr 14 min</li>
+       </ul>
+       <article class="icons-container">
+        <figure class="icons-container__icons">
+         <div class="icons-container__play-icon">
+          <img src="./assets/icons/play.svg" alt="Play Icon" />
+         </div>
+         <div>
+          <img src="./assets/icons/shuffle.svg" alt="Shuffle Icon" />
+         </div>
+         <div><img src="./assets/icons/plus.svg" alt="Add Icon" /></div>
+         <div>
+          <img src="./assets/icons/favourite.svg" alt="Music add Icon" />
+         </div>
+         <div>
+          <img src="./assets/icons/download.svg" alt="Download Icon" />
+         </div>
+         <div>
+          <img src="./assets/icons/share.svg" alt="Share Icon" />
+         </div>
+         <div>
+          <img src="./assets/icons/load.svg" alt="More Icon" />
+         </div>
+         <div class="search-icon">
+          <img src="./assets/icons/search.svg" alt="Search Icon" />
+         </div>
+        </figure>
+       </article>
+      </article>
+      <article class="tracklist-table">
+       <table class="tracklist-table__tracklist">
+        <thead>
+         <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Duration</th>
+          <th></th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td class="track-number">1</td>
+          <td class="tracklist-info">
+           <p class="tracklist-info__title">Give Life Back to Music</p>
+           <p class="tracklist-info__artist">Daft Punk</p>
+          </td>
+          <td class="track-duration">4:35</td>
+          <td class="track-actions">
+           <label class="like-btn">
+            <input type="checkbox" hidden />
+            <img
+             src="./assets/icons/like.svg"
+             alt="Like Icon"
+             class="icon-outline"
+            />
+            <img
+             src="./assets/icons/liked.svg"
+             alt="Like Icon"
+             class="icon-filled"
+            />
+           </label>
+          </td>
+         </tr>
+         <tr>
+          <td class="track-number">2</td>
+          <td class="tracklist-info">
+           <p class="tracklist-info__title">The Game of Love</p>
+           <p class="tracklist-info__artist">Daft Punk</p>
+          </td>
+          <td class="track-duration">5:22</td>
+          <td class="track-actions">
+           <label class="like-btn">
+            <input type="checkbox" hidden />
+            <img
+             src="./assets/icons/like.svg"
+             alt="Like Icon"
+             class="icon-outline"
+            />
+            <img
+             src="./assets/icons/liked.svg"
+             alt="Like Icon"
+             class="icon-filled"
+            />
+           </label>
+          </td>
+         </tr>
+         <tr>
+          <td class="track-number">3</td>
+          <td class="tracklist-info">
+           <p class="tracklist-info__title">Giorgio by Moroder</p>
+           <p class="tracklist-info__artist">Daft Punk</p>
+          </td>
+          <td class="track-duration">9:04</td>
+          <td class="track-actions">
+           <label class="like-btn">
+            <input type="checkbox" hidden />
+            <img
+             src="./assets/icons/like.svg"
+             alt="Like Icon"
+             class="icon-outline"
+            />
+            <img
+             src="./assets/icons/liked.svg"
+             alt="Like Icon"
+             class="icon-filled"
+            />
+           </label>
+          </td>
+         </tr>
+         <tr>
+          <td class="track-number">4</td>
+          <td class="tracklist-info">
+           <p class="tracklist-info__title">Whithin</p>
+           <p class="tracklist-info__artist">Daft Punk</p>
+          </td>
+          <td class="track-duration">3:48</td>
+          <td class="track-actions">
+           <label class="like-btn">
+            <input type="checkbox" hidden />
+            <img
+             src="./assets/icons/like.svg"
+             alt="Like Icon"
+             class="icon-outline"
+            />
+            <img
+             src="./assets/icons/liked.svg"
+             alt="Like Icon"
+             class="icon-filled"
+            />
+           </label>
+          </td>
+         </tr>
+         <tr>
+          <td class="track-number">5</td>
+          <td class="tracklist-info">
+           <p class="tracklist-info__title">
+            Instant Crush(feat. Julian Casablancas)
+           </p>
+           <p class="tracklist-info__artist">Daft Punk</p>
+          </td>
+          <td class="track-duration">5:37</td>
+          <td class="track-actions">
+           <label class="like-btn">
+            <input type="checkbox" hidden />
+            <img
+             src="./assets/icons/like.svg"
+             alt="Like Icon"
+             class="icon-outline"
+            />
+            <img
+             src="./assets/icons/liked.svg"
+             alt="Like Icon"
+             class="icon-filled"
+            />
+           </label>
+          </td>
+         </tr>
+         <tr>
+          <td class="track-number">6</td>
+          <td class="tracklist-info">
+           <p class="tracklist-info__title">
+            Lose yourself to dance(feat. Pharrell Williams)
+           </p>
+           <p class="tracklist-info__artist">Daft Punk</p>
+          </td>
+          <td class="track-duration">5:53</td>
+          <td class="track-actions">
+           <label class="like-btn">
+            <input type="checkbox" hidden />
+            <img
+             src="./assets/icons/like.svg"
+             alt="Like Icon"
+             class="icon-outline"
+            />
+            <img
+             src="./assets/icons/liked.svg"
+             alt="Like Icon"
+             class="icon-filled"
+            />
+           </label>
+          </td>
+         </tr>
+         <tr>
+          <td class="track-number">7</td>
+          <td class="tracklist-info">
+           <p class="tracklist-info__title">Touch (feat. Pharrell Williams)</p>
+           <p class="tracklist-info__artist">Daft Punk</p>
+          </td>
+          <td class="track-duration">8:18</td>
+          <td class="track-actions">
+           <label class="like-btn">
+            <input type="checkbox" hidden />
+            <img
+             src="./assets/icons/like.svg"
+             alt="Like Icon"
+             class="icon-outline"
+            />
+            <img
+             src="./assets/icons/liked.svg"
+             alt="Like Icon"
+             class="icon-filled"
+            />
+           </label>
+          </td>
+         </tr>
+         <tr>
+          <td class="track-number">8</td>
+          <td class="tracklist-info">
+           <p class="tracklist-info__title">
+            Get Lucky (feat. Pharrell Williams andNile Rodgers)
+           </p>
+           <p class="tracklist-info__artist">Daft Punk</p>
+          </td>
+          <td class="track-duration">6:09</td>
+          <td class="track-actions">
+           <label class="like-btn">
+            <input type="checkbox" hidden />
+            <img
+             src="./assets/icons/like.svg"
+             alt="Like Icon"
+             class="icon-outline"
+            />
+            <img
+             src="./assets/icons/liked.svg"
+             alt="Like Icon"
+             class="icon-filled"
+            />
+           </label>
+          </td>
+         </tr>
+         <tr>
+          <td class="track-number">9</td>
+          <td class="tracklist-info">
+           <p class="tracklist-info__title">Beyond</p>
+           <p class="tracklist-info__artist">Daft Punk</p>
+          </td>
+          <td class="track-duration">4:50</td>
+          <td class="track-actions">
+           <label class="like-btn">
+            <input type="checkbox" hidden />
+            <img
+             src="./assets/icons/like.svg"
+             alt="Like Icon"
+             class="icon-outline"
+            />
+            <img
+             src="./assets/icons/liked.svg"
+             alt="Like Icon"
+             class="icon-filled"
+            />
+           </label>
+          </td>
+         </tr>
+         <tr>
+          <td class="track-number">10</td>
+          <td class="tracklist-info">
+           <p class="tracklist-info__title">Veridis Quo</p>
+           <p class="tracklist-info__artist">Daft Punk</p>
+          </td>
+          <td class="track-duration">5:45</td>
+          <td class="track-actions">
+           <label class="like-btn">
+            <input type="checkbox" hidden />
+            <img
+             src="./assets/icons/like.svg"
+             alt="Like Icon"
+             class="icon-outline"
+            />
+            <img
+             src="./assets/icons/liked.svg"
+             alt="Like Icon"
+             class="icon-filled"
+            />
+           </label>
+          </td>
+         </tr>
+         <tr>
+          <td class="track-number">11</td>
+          <td class="tracklist-info">
+           <p class="tracklist-info__title">Around The world</p>
+           <p class="tracklist-info__artist">Daft Punk</p>
+          </td>
+          <td class="track-duration">7:10</td>
+          <td class="track-actions">
+           <label class="like-btn">
+            <input type="checkbox" hidden />
+            <img
+             src="./assets/icons/like.svg"
+             alt="Like Icon"
+             class="icon-outline"
+            />
+            <img
+             src="./assets/icons/liked.svg"
+             alt="Like Icon"
+             class="icon-filled"
+            />
+           </label>
+          </td>
+         </tr>
+         <tr>
+          <td class="track-number">12</td>
+          <td class="tracklist-info">
+           <p class="tracklist-info__title">Something About Us</p>
+           <p class="tracklist-info__artist">Daft Punk</p>
+          </td>
+          <td class="track-duration">3:53</td>
+          <td class="track-actions">
+           <label class="like-btn">
+            <input type="checkbox" hidden />
+            <img
+             src="./assets/icons/like.svg"
+             alt="Like Icon"
+             class="icon-outline"
+            />
+            <img
+             src="./assets/icons/liked.svg"
+             alt="Like Icon"
+             class="icon-filled"
+            />
+           </label>
+          </td>
+         </tr>
+         <tr>
+          <td class="track-number">13</td>
+          <td class="tracklist-info">
+           <p class="tracklist-info__title">End of Line</p>
+           <p class="tracklist-info__artist">Daft Punk</p>
+          </td>
+          <td class="track-duration">2:36</td>
+          <td class="track-actions">
+           <label class="like-btn">
+            <input type="checkbox" hidden />
+            <img
+             src="./assets/icons/like.svg"
+             alt="Like Icon"
+             class="icon-outline"
+            />
+            <img
+             src="./assets/icons/liked.svg"
+             alt="Like Icon"
+             class="icon-filled"
+            />
+           </label>
+          </td>
+         </tr>
+         <tr>
+          <td class="track-number">14</td>
+          <td class="tracklist-info">
+           <p class="tracklist-info__title">Da Funk</p>
+           <p class="tracklist-info__artist">Daft Punk</p>
+          </td>
+          <td class="track-duration">5:29</td>
+          <td class="track-actions">
+           <label class="like-btn">
+            <input type="checkbox" hidden />
+            <img
+             src="./assets/icons/like.svg"
+             alt="Like Icon"
+             class="icon-outline"
+            />
+            <img
+             src="./assets/icons/liked.svg"
+             alt="Like Icon"
+             class="icon-filled"
+            />
+           </label>
+          </td>
+         </tr>
+         <tr>
+          <td class="track-number">15</td>
+          <td class="tracklist-info">
+           <p class="tracklist-info__title">Something About Us</p>
+           <p class="tracklist-info__artist">Daft Punk</p>
+          </td>
+          <td class="track-duration">3:51</td>
+          <td class="track-actions">
+           <label class="like-btn">
+            <input type="checkbox" hidden />
+            <img
+             src="./assets/icons/like.svg"
+             alt="Like Icon"
+             class="icon-outline"
+            />
+            <img
+             src="./assets/icons/liked.svg"
+             alt="Like Icon"
+             class="icon-filled"
+            />
+           </label>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </article>
+      <aside class="genres-sidebar">
+       <figure class="album-cover">
+        <img src="./assets/images/Get-Lucky.png" alt="Album Cover" />
+       </figure>
+       <div class="genres">
+        <span>Funk</span>
+        <span>Electronic music</span>
+        <span>Disco</span>
+        <span>Soft Rock</span>
+        <span>Progressive pop</span>
+       </div>
+       <figure class="genres__artists">
+        <img src="./assets/images/Daft-Punk.png" alt="Daft Punk" />
+        <figcaption class="genres__caption">Daft Punk</figcaption>
+       </figure>
+       <figure class="genres__artists">
+        <img
+         src="./assets/images/Pharrell-Williams.png"
+         alt="Pharrell Williams"
+        />
+        <figcaption class="genres__caption">Pharrell Williams</figcaption>
+       </figure>
+       <figure class="genres__artists">
+        <img src="./assets/images/Nile-Rodgers.png" alt="Nile Rodgers" />
+        <figcaption class="genres__caption">Nile Rodgers</figcaption>
+       </figure>
+      </aside>
+     </article>
+    </section>
+    <section id="folders" class="folders"></section>
+    <section id="artists" class="artists">
+     <article class="hero">
+      <figure class="hero-cover">
+       <img src="./assets/images/Daft-Punk-Cover.png" alt="" />
+      </figure>
+     </article>
+     <article class="hero-content">
+      <h1>Daft Punk</h1>
+      <p>20,795,080 monthly listeners</p>
+     </article>
+
+     <article class="right-content">
+      <figure class="right-content__menu">
+       <div class="menu-icon">
+        <img
+         src="./assets/icons/play.svg"
+         alt="Play Icon"
+         class="menu-icon__play"
+        />
+       </div>
+       <button class="menu-icon__btn">Follow</button>
+       <div class="menu-icon__icon">
+        <img src="./assets/icons/add.svg" alt="Add Icon" />
+       </div>
+       <div class="menu-icon__icon">
+        <img src="./assets/icons/song-add.svg" alt="Add Icon" />
+       </div>
+       <div class="menu-icon__icon">
+        <img src="./assets/icons/load.svg" alt="More Icon" />
+       </div>
+      </figure>
+     </article>
+
+     <nav class="artist-nav">
+      <ul class="artist-nav__ul">
+       <li><a href="#nav-home">Home</a></li>
+       <li><a href="#nav-albums">Albums</a></li>
+       <li>
+        <a href="#singles">Singles and EPs</a>
+       </li>
+       <li>
+        <a href="#compilattions">Compilattions</a>
+       </li>
+       <li><a href="#merch">Merch</a></li>
+       <li><a href="#about">About</a></li>
+       <li>
+        <a href="#features">Features and More</a>
+       </li>
+       <li>
+        <a href="#search">
+         <img
+          src="./assets/icons/search.svg"
+          alt="Search Icon"
+          class="search-icon"
+         />
+        </a>
+       </li>
+      </ul>
+     </nav>
+     <article id="nav-home" class="nav-home">
+      <div class="home-wrapper">
+       <div class="home-left-column">
+        <h2 class="nav-home__title">Your most played</h2>
+
+        <article class="nav-home-table">
+         <table class="nav-home-table__tracklist">
+          <tbody>
+           <tr>
+            <td class="track-number">1</td>
+            <td class="cover">
+             <img
+              src="./assets/images/Daft-punk-songs.png"
+              alt=""
+              class="cover-img"
+             />
+            </td>
+            <td class="home-tracklist">
+             <p class="tracklist-info__title">One More Time</p>
+             <p class="tracklist-info__artist">Daft Punk</p>
+            </td>
+            <td class="nav-home-table__duration">5:20</td>
+            <td class="track-actions">
+             <label class="like-btn">
+              <input type="checkbox" hidden />
+              <img
+               src="./assets/icons/like.svg"
+               alt="Like Icon"
+               class="icon-outline"
+              />
+              <img
+               src="./assets/icons/liked.svg"
+               alt="Like Icon"
+               class="icon-filled"
+              />
+             </label>
+            </td>
+           </tr>
+           <tr>
+            <td class="track-number">2</td>
+            <td class="cover">
+             <img
+              src="./assets/images/Get-Lucky.png"
+              alt=""
+              class="cover-img"
+             />
+            </td>
+            <td class="home-tracklist">
+             <p class="tracklist-info__title">Get Lucky</p>
+             <p class="tracklist-info__artist">Daft Punk</p>
+            </td>
+            <td class="nav-home-table__duration">4:35</td>
+            <td class="track-actions">
+             <label class="like-btn">
+              <input type="checkbox" hidden />
+              <img
+               src="./assets/icons/like.svg"
+               alt="Like Icon"
+               class="icon-outline"
+              />
+              <img
+               src="./assets/icons/liked.svg"
+               alt="Like Icon"
+               class="icon-filled"
+              />
+             </label>
+            </td>
+           </tr>
+           <tr>
+            <td class="track-number">3</td>
+            <td class="cover">
+             <img
+              src="./assets/images/Get-Lucky.png"
+              alt=""
+              class="cover-img"
+             />
+            </td>
+            <td class="home-tracklist">
+             <p class="tracklist-info__title">Give Life Back to Music</p>
+             <p class="tracklist-info__artist">Daft Punk</p>
+            </td>
+            <td class="nav-home-table__duration">4:35</td>
+            <td class="track-actions">
+             <label class="like-btn">
+              <input type="checkbox" hidden />
+              <img
+               src="./assets/icons/like.svg"
+               alt="Like Icon"
+               class="icon-outline"
+              />
+              <img
+               src="./assets/icons/liked.svg"
+               alt="Like Icon"
+               class="icon-filled"
+              />
+             </label>
+            </td>
+           </tr>
+           <tr>
+            <td class="track-number">4</td>
+            <td class="cover">
+             <img
+              src="./assets/images/Get-Lucky.png"
+              alt=""
+              class="cover-img"
+             />
+            </td>
+            <td class="home-tracklist">
+             <p class="tracklist-info__title">Instant Crush</p>
+             <p class="tracklist-info__artist">Daft Punk. Julian Casablancas</p>
+            </td>
+            <td class="nav-home-table__duration">5:37</td>
+            <td class="track-actions">
+             <label class="like-btn">
+              <input type="checkbox" hidden />
+              <img
+               src="./assets/icons/like.svg"
+               alt="Like Icon"
+               class="icon-outline"
+              />
+              <img
+               src="./assets/icons/liked.svg"
+               alt="Like Icon"
+               class="icon-filled"
+              />
+             </label>
+            </td>
+           </tr>
+           <tr>
+            <td class="track-number">5</td>
+            <td class="cover">
+             <img
+              src="./assets/images/Get-Lucky.png"
+              alt=""
+              class="cover-img"
+             />
+            </td>
+            <td class="home-tracklist">
+             <p class="tracklist-info__title">Around The World</p>
+             <p class="tracklist-info__artist">Daft Punk</p>
+            </td>
+            <td class="nav-home-table__duration">4:35</td>
+            <td class="track-actions">
+             <label class="like-btn">
+              <input type="checkbox" hidden />
+              <img
+               src="./assets/icons/like.svg"
+               alt="Like Icon"
+               class="icon-outline"
+              />
+              <img
+               src="./assets/icons/liked.svg"
+               alt="Like Icon"
+               class="icon-filled"
+              />
+             </label>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </article>
+        <h2 class="nav-home__title">Popular</h2>
+        <article class="nav-home-table">
+         <table class="nav-home-table__tracklist">
+          <tbody>
+           <tr>
+            <td class="track-number">1</td>
+            <td class="cover">
+             <img
+              src="./assets/images/Daft-punk-songs.png"
+              alt=""
+              class="cover-img"
+             />
+            </td>
+            <td class="home-tracklist">
+             <p class="tracklist-info__title">One More Time</p>
+             <p class="tracklist-info__artist">Daft Punk</p>
+            </td>
+            <td class="nav-home-table__duration">5:20</td>
+            <td class="track-actions">
+             <label class="like-btn">
+              <input type="checkbox" hidden />
+              <img
+               src="./assets/icons/like.svg"
+               alt="Like Icon"
+               class="icon-outline"
+              />
+              <img
+               src="./assets/icons/liked.svg"
+               alt="Like Icon"
+               class="icon-filled"
+              />
+             </label>
+            </td>
+           </tr>
+           <tr>
+            <td class="track-number">2</td>
+            <td class="cover">
+             <img
+              src="./assets/images/Get-Lucky.png"
+              alt=""
+              class="cover-img"
+             />
+            </td>
+            <td class="home-tracklist">
+             <p class="tracklist-info__title">Get Lucky</p>
+             <p class="tracklist-info__artist">Daft Punk</p>
+            </td>
+            <td class="nav-home-table__duration">4:35</td>
+            <td class="track-actions">
+             <label class="like-btn">
+              <input type="checkbox" hidden />
+              <img
+               src="./assets/icons/like.svg"
+               alt="Like Icon"
+               class="icon-outline"
+              />
+              <img
+               src="./assets/icons/liked.svg"
+               alt="Like Icon"
+               class="icon-filled"
+              />
+             </label>
+            </td>
+           </tr>
+           <tr>
+            <td class="track-number">3</td>
+            <td class="cover">
+             <img
+              src="./assets/images/Get-Lucky.png"
+              alt=""
+              class="cover-img"
+             />
+            </td>
+            <td class="home-tracklist">
+             <p class="tracklist-info__title">Give Life Back to Music</p>
+             <p class="tracklist-info__artist">Daft Punk</p>
+            </td>
+            <td class="nav-home-table__duration">4:35</td>
+            <td class="track-actions">
+             <label class="like-btn">
+              <input type="checkbox" hidden />
+              <img
+               src="./assets/icons/like.svg"
+               alt="Like Icon"
+               class="icon-outline"
+              />
+              <img
+               src="./assets/icons/liked.svg"
+               alt="Like Icon"
+               class="icon-filled"
+              />
+             </label>
+            </td>
+           </tr>
+           <tr>
+            <td class="track-number">4</td>
+            <td class="cover">
+             <img
+              src="./assets/images/Get-Lucky.png"
+              alt=""
+              class="cover-img"
+             />
+            </td>
+            <td class="home-tracklist">
+             <p class="tracklist-info__title">Instant Crush</p>
+             <p class="tracklist-info__artist">Daft Punk. Julian Casablancas</p>
+            </td>
+            <td class="nav-home-table__duration">5:37</td>
+            <td class="track-actions">
+             <label class="like-btn">
+              <input type="checkbox" hidden />
+              <img
+               src="./assets/icons/like.svg"
+               alt="Like Icon"
+               class="icon-outline"
+              />
+              <img
+               src="./assets/icons/liked.svg"
+               alt="Like Icon"
+               class="icon-filled"
+              />
+             </label>
+            </td>
+           </tr>
+           <tr>
+            <td class="track-number">5</td>
+            <td class="cover">
+             <img
+              src="./assets/images/Get-Lucky.png"
+              alt=""
+              class="cover-img"
+             />
+            </td>
+            <td class="home-tracklist">
+             <p class="tracklist-info__title">Around The World</p>
+             <p class="tracklist-info__artist">Daft Punk</p>
+            </td>
+            <td class="nav-home-table__duration">4:35</td>
+            <td class="track-actions">
+             <label class="like-btn">
+              <input type="checkbox" hidden />
+              <img
+               src="./assets/icons/like.svg"
+               alt="Like Icon"
+               class="icon-outline"
+              />
+              <img
+               src="./assets/icons/liked.svg"
+               alt="Like Icon"
+               class="icon-filled"
+              />
+             </label>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </article>
+       </div>
+
+       <div class="home-righ-column">
+        <aside class="artist-pick-sidebar">
+         <h3 class="sidebar-title">Artist Pick</h3>
+         <div class="artist-pick-card">
+          <img src="./assets/images/artist-pick.svg" alt="Artist image" />
+          <p>Listen to the Best of Daft Punk</p>
+         </div>
+        </aside>
+        <aside class="home-sidebar">
+         <figure class="home-cover">
+          <img src="./assets/images/daft-punk.svg" alt="Album Cover" />
+
+          <figcaption class="cover-caption">
+           As they evolved from '90s French house pioneers to 2000s dance
+           tastemakers to mainstream heroes in the 2010s, Daft Punk remained one
+           of dance music's most iconic acts...
+          </figcaption>
+         </figure>
+
+         <div class="genres">
+          <span>Funk</span>
+          <span>Electronic music</span>
+          <span>Disco</span>
+          <span>Soft Rock</span>
+          <span>Progressive pop</span>
+         </div>
+         <figure class="genres__artists">
+          <img src="./assets/images/Daft-Punk.png" alt="Daft Punk" />
+          <figcaption class="genres__caption">Daft Punk</figcaption>
+         </figure>
+         <figure class="genres__artists">
+          <img
+           src="./assets/images/Pharrell-Williams.png"
+           alt="Pharrell Williams"
+          />
+          <figcaption class="genres__caption">Pharrell Williams</figcaption>
+         </figure>
+         <figure class="genres__artists">
+          <img src="./assets/images/Nile-Rodgers.png" alt="Nile Rodgers" />
+          <figcaption class="genres__caption">Nile Rodgers</figcaption>
+         </figure>
+        </aside>
+       </div>
+      </div>
+     </article>
+    </section>
+   </section>
+  </main>
+
+  <!-- Footer (Media Player and Mobile Footer Navigation) -->
+  <footer>
+   <input type="checkbox" id="toggle-player" class="player-checkbox" />
+   <input type="checkbox" name="footer-icon" id="icon-add" hidden />
+   <input type="checkbox" name="footer-icon" id="icon-play" hidden />
+   <input type="checkbox" name="footer-icon" id="icon-like" hidden />
+   <input type="checkbox" name="footer-icon" id="icon-added" hidden />
+
+   <section class="mini-player">
+    <label for="toggle-player" class="mini-player__wrapper">
+     <figure class="mini-player__album">
+      <img
+       src="./assets/images/Get-Lucky.png"
+       alt="Daft Punk - Random Access Memories"
+      />
+
+      <figcaption class="mini-player__track">
+       <header class="mini-player__title-shell">
+        <span class="mini-player__title">
+         Get Lucky (feat. Pharrell Williams and Nile Rodgers)
+        </span>
+       </header>
+       <address class="mini-player__artist">Daft Punk</address>
+      </figcaption>
+     </figure>
+
+     <section class="mini-player__controls">
+      <div aria-label="Play/Pause" class="mini-player__button">
+       <figure>
+        <label for="icon-add">
+         <img
+          src="./assets/icons/add.svg"
+          class="icon-outline icon-add-outline"
+          alt="Add Icon"
+         />
+         <img
+          src="./assets/icons/added.svg"
+          class="icon-filled icon-add"
+          alt="Checked"
+         />
+        </label>
+        <label class="play-pause-btn">
+         <input type="checkbox" hidden />
+         <img
+          src="./assets/icons/player.svg"
+          class="icon-outline icon-play"
+          alt="Play Icon"
+         />
+         <img
+          src="./assets/icons/paused.svg"
+          class="icon-filled icon-pause"
+          alt="Pause Icon"
+         />
+        </label>
+       </figure>
+      </div>
+      <input
+       type="range"
+       min="0"
+       max="100"
+       value="70"
+       class="player-bar"
+       id="playback-slider"
+       aria-valuemin="0"
+       aria-valuemax="100"
+       aria-valuenow="70"
+      />
+     </section>
+    </label>
+   </section>
+
+   <section class="player">
+    <section class="media-player">
+     <article class="media-player__container">
+      <figure class="media-player__icons">
+       <div class="media-player__play">
+        <label class="play-pause-btn">
+         <input type="checkbox" hidden />
+         <img src="./assets/icons/play.svg" alt="Play Icon" class="icon-play" />
+         <img
+          src="./assets/icons/pause.svg"
+          alt="Pause Icon"
+          class="icon-pause"
+         />
+        </label>
+       </div>
+       <div>
+        <img src="./assets/icons/previous.svg" alt="Previous Icon" />
+       </div>
+       <div><img src="./assets/icons/next.svg" alt="Next Icon" /></div>
+       <div>
+        <img src="./assets/icons/shuffle.svg" alt="Shuffle Icon" />
+       </div>
+       <div class="repeat-icon">
+        <img src="./assets/icons/repeat.svg" alt="Reapet Icon" />
+       </div>
+      </figure>
+     </article>
+     <section class="media-control" aria-label="Media Playback Slider">
+      <div class="media-wrapper">
+       <time datetime="PT2M23S" class="current-time">2:23</time>
+      </div>
+      <div class="media-wrapper">
+       <input
+        type="range"
+        min="0"
+        max="100"
+        value="70"
+        class="media-bar"
+        id="playback-slider"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="70"
+       />
+      </div>
+      <div class="media-wrapper">
+       <time datetime="PT45S" class="remain-time">-0:45</time>
+      </div>
+     </section>
+     <div class="media-wrapper">
+      <img src="./assets/icons/volume.svg" alt="Volume Icon" />
+     </div>
+    </section>
+
+    <label for="toggle-player" class="player__wrapper">
+     <figure class="player__album">
+      <img
+       src="./assets/images/Get-Lucky.png"
+       alt="Daft Punk - Random Access Memories"
+      />
+      <figcaption class="player__track">
+       <span class="player__title">
+        Get Lucky (feat. Pharrell Williams and Nile Rodgers)
+       </span>
+       <span class="player__artist">Daft Punk</span>
+       <span class="player__artist">Random Access Memories</span>
+      </figcaption>
+     </figure>
+    </label>
+
+    <article class="media-player__container">
+     <figure class="media-player__icons">
+      <div class="media-player__right-sidebar">
+       <img src="./assets/icons/like.svg" alt="Like Icon" />
+      </div>
+      <div>
+       <img src="./assets/icons/add.svg" alt="Add Icon" />
+      </div>
+      <div><img src="./assets/icons/lyrics.svg" alt="Lyrics Icon" /></div>
+      <div>
+       <img src="./assets/icons/connect.svg" alt="Connect Icon" />
+      </div>
+      <div>
+       <img src="./assets/icons/load.svg" alt="Load Icon" />
+      </div>
+      <div>
+       <img src="./assets/icons/vertical.svg" alt="Vector Icon" />
+      </div>
+      <div>
+       <img src="./assets/icons/player-icon.svg" alt="Player Icon" />
+      </div>
+      <div>
+       <img src="./assets/icons/queue.svg" alt="Queue Icon" />
+      </div>
+     </figure>
+    </article>
+   </section>
+
+   <section class="player-panel" aria-label="Expanded player">
+    <aside class="player-panel__backdrop">
+     <label
+      for="toggle-player"
+      class="player-panel__backdrop-close"
+      aria-label="Close player"
+     ></label>
+    </aside>
+
+    <article class="player-panel__sheet">
+     <input type="checkbox" id="toggle-playlist" hidden />
+     <div class="panel-header">
+      <label
+       for="toggle-player"
+       class="panel-header__handle"
+       aria-label="Close player"
+      ></label>
+     </div>
+
+     <div class="header-top">
+      <img src="./assets/icons/list.svg" alt="list" class="list-icon" />
+      <div class="album-info">
+       <img src="./assets/icons/albums.svg" alt="Album" class="album-icon" />
+       <h4 class="info">Random Access Memories</h4>
+      </div>
+     </div>
+
+     <section class="content">
+      <figure class="content__album">
+       <img
+        src="./assets/images/Get-Lucky.png"
+        alt="Daft Punk - Random Access Memories"
+       />
+       <figcaption class="track-info">
+        <header class="track-info__title-shell">
+         <span class="track-info__title">
+          Get Lucky (feat. Pharrell Williams and Nile Rodgers)
+         </span>
+        </header>
+        <address class="track-info__artist">Daft Punk</address>
+       </figcaption>
+      </figure>
+
+      <section class="controls">
+       <figure class="controls__icon">
+        <label for="icon-like" class="controls__label">
+         <img
+          src="./assets/icons/like.svg"
+          class="icon-outline like-icon"
+          alt="Like Icon"
+          aria-hidden="true"
+         />
+         <img
+          src="./assets/icons/liked.svg"
+          class="icon-filled liked-icon"
+          alt="Like Icon"
+         />
+        </label>
+        <label for="icon-added" class="controls__label">
+         <img
+          src="./assets/icons/add.svg"
+          class="icon-outline"
+          alt="Add Icon"
+         />
+         <img
+          src="./assets/icons/added.svg"
+          class="icon-filled"
+          alt="Checked"
+         />
+        </label>
+       </figure>
+       <section class="playback-control" aria-label="Media Playback Slider">
+        <input
+         type="range"
+         min="0"
+         max="100"
+         value="70"
+         class="progress-bar"
+         id="playback-slider"
+         aria-valuemin="0"
+         aria-valuemax="100"
+         aria-valuenow="70"
+        />
+        <div class="slider-wrapper">
+         <time datetime="PT2M23S" class="current-time">2:23</time>
+
+         <time datetime="PT45S" class="remaining-time">-0:45</time>
+        </div>
+       </section>
+      </section>
+     </section>
+
+     <section class="player-controls">
+      <figure class="player-controls__container">
+       <div class="player-controls__shuffle">
+        <img src="./assets/icons/shuffle.svg" alt="Shuffle" />
+       </div>
+       <div class="player-controls__prev">
+        <img src="./assets/icons/previous.svg" alt="Previous" />
+       </div>
+
+       <div class="player-controls__pause">
+        <label class="play-pause-btn">
+         <input type="checkbox" hidden />
+         <img src="./assets/icons/play.svg" alt="Play Icon" class="icon-play" />
+         <img
+          src="./assets/icons/pause.svg"
+          alt="Pause Icon"
+          class="icon-pause"
+         />
+        </label>
+       </div>
+
+       <div class="player-controls__next">
+        <img src="./assets/icons/next.svg" alt="Next Icon" />
+       </div>
+       <div class="player-controls__repeat">
+        <img src="./assets/icons/repeat.svg" alt="Repeat" />
+       </div>
+      </figure>
+     </section>
+
+     <section class="player-bottom">
+      <figure class="player-bottom__container">
+       <div class="player-bottom__connect">
+        <img src="./assets/icons/connect.svg" alt="Connect Icon" />
+       </div>
+       <div class="player-bottom__share">
+        <img src="./assets/icons/share.svg" alt="Share Icon" />
+       </div>
+       <div class="player-bottom__lyrics">
+        <img src="./assets/icons/lyrics.svg" alt="Lyrics Icon" />
+       </div>
+       <label for="toggle-playlist" class="player-bottom__queue">
+        <img src="./assets/icons/queue.svg" alt="Queue Icon" />
+       </label>
+       <div class="player-bottom__load">
+        <img src="./assets/icons/load.svg" alt="Load Icon" />
+       </div>
+      </figure>
+     </section>
+
+     <section class="music-playlist">
+      <div class="music-playlist__top">
+       <div class="music-playlist__toggle">
+        <label for="toggle-playlist" class="playlist-header__back">
+         <img
+          src="./assets/icons/arrow-left.svg"
+          alt="arrow left"
+          class="list-icon"
+         />
+        </label>
+        <div class="music-playlist__info">
+         <img src="./assets/icons/albums.svg" alt="Album" class="info-icon" />
+         <span>Random Access Memories</span>
+        </div>
+       </div>
+       <div class="randomizer">
+        <img src="./assets/icons/shuffle.svg" alt="Shuffle Icon" />
+
+        <img src="./assets/icons/repeat.svg" alt="Repeat Icon" />
+       </div>
+      </div>
+
+      <div class="playlist-scroll-area">
+       <article class="list-item">
+        <figure class="playlist-content">
+         <img
+          class="playlist-img"
+          src="./assets/images/Get-Lucky.png"
+          alt="Cover"
+         />
+         <div class="info">
+          <h3 class="title">Get Lucky (feat. ...)</h3>
+          <p class="artist">Daft Punk</p>
+         </div>
+         <aside class="drag-handle">
+          <img src="./assets/icons/lists.svg" alt="Reorder" />
+         </aside>
+        </figure>
+        <button class="remove-btn">
+         <img src="./assets/icons/remove.svg " alt="Remove Icon" />
+         <span>Remove</span>
+        </button>
+       </article>
+
+       <article class="list-item">
+        <figure class="playlist-content">
+         <img src="./assets/images/Get-Lucky.png" alt="Cover" />
+         <div class="info">
+          <h3 class="title">Get Lucky (feat. ...)</h3>
+          <p class="artist">Daft Punk</p>
+         </div>
+         <aside class="drag-handle">
+          <img src="./assets/icons/lists.svg" alt="Reorder" />
+         </aside>
+        </figure>
+        <button class="remove-btn">
+         <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+         <span>Remove</span>
+        </button>
+       </article>
+       <article class="list-item">
+        <figure class="playlist-content">
+         <img src="./assets/images/Get-Lucky.png" alt="Cover" />
+         <div class="info">
+          <h3 class="title">Get Lucky (feat. ...)</h3>
+          <p class="artist">Daft Punk</p>
+         </div>
+         <aside class="drag-handle">
+          <img src="./assets/icons/lists.svg" alt="Reorder" />
+         </aside>
+        </figure>
+        <button class="remove-btn">
+         <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+         <span>Remove</span>
+        </button>
+       </article>
+       <article class="list-item">
+        <figure class="playlist-content">
+         <img src="./assets/images/Get-Lucky.png" alt="Cover" />
+         <div class="info">
+          <h3 class="title">Get Lucky (feat. ...)</h3>
+          <p class="artist">Daft Punk</p>
+         </div>
+         <aside class="drag-handle">
+          <img src="./assets/icons/lists.svg" alt="Reorder" />
+         </aside>
+        </figure>
+        <button class="remove-btn">
+         <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+         <span>Remove</span>
+        </button>
+       </article>
+       <article class="list-item">
+        <figure class="playlist-content">
+         <img src="./assets/images/Get-Lucky.png" alt="Cover" />
+         <div class="info">
+          <h3 class="title">Get Lucky (feat. ...)</h3>
+          <p class="artist">Daft Punk</p>
+         </div>
+         <aside class="drag-handle">
+          <img src="./assets/icons/lists.svg" alt="Reorder" />
+         </aside>
+        </figure>
+        <button class="remove-btn">
+         <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+         <span>Remove</span>
+        </button>
+       </article>
+       <article class="list-item">
+        <figure class="playlist-content">
+         <img src="./assets/images/Get-Lucky.png" alt="Cover" />
+         <div class="info">
+          <h3 class="title">Get Lucky (feat. ...)</h3>
+          <p class="artist">Daft Punk</p>
+         </div>
+         <aside class="drag-handle">
+          <img src="./assets/icons/lists.svg" alt="Reorder" />
+         </aside>
+        </figure>
+        <button class="remove-btn">
+         <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+         <span>Remove</span>
+        </button>
+       </article>
+       <article class="list-item">
+        <figure class="playlist-content">
+         <img src="./assets/images/Get-Lucky.png" alt="Cover" />
+         <div class="info">
+          <h3 class="title">Get Lucky (feat. ...)</h3>
+          <p class="artist">Daft Punk</p>
+         </div>
+         <aside class="drag-handle">
+          <img src="./assets/icons/lists.svg" alt="Reorder" />
+         </aside>
+        </figure>
+        <button class="remove-btn">
+         <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+         <span>Remove</span>
+        </button>
+       </article>
+       <article class="list-item">
+        <figure class="playlist-content">
+         <img src="./assets/images/Get-Lucky.png" alt="Cover" />
+         <div class="info">
+          <h3 class="title">Get Lucky (feat. ...)</h3>
+          <p class="artist">Daft Punk</p>
+         </div>
+         <aside class="drag-handle">
+          <img src="./assets/icons/lists.svg" alt="Reorder" />
+         </aside>
+        </figure>
+        <button class="remove-btn">
+         <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+         <span>Remove</span>
+        </button>
+       </article>
+       <article class="list-item">
+        <figure class="playlist-content">
+         <img src="./assets/images/Get-Lucky.png" alt="Cover" />
+         <div class="info">
+          <h3 class="title">Get Lucky (feat. ...)</h3>
+          <p class="artist">Daft Punk</p>
+         </div>
+         <aside class="drag-handle">
+          <img src="./assets/icons/lists.svg" alt="Reorder" />
+         </aside>
+        </figure>
+        <button class="remove-btn">
+         <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+         <span>Remove</span>
+        </button>
+       </article>
+       <article class="list-item">
+        <figure class="playlist-content">
+         <img src="./assets/images/Get-Lucky.png" alt="Cover" />
+         <div class="info">
+          <h3 class="title">Get Lucky (feat. ...)</h3>
+          <p class="artist">Daft Punk</p>
+         </div>
+         <aside class="drag-handle">
+          <img src="./assets/icons/lists.svg" alt="Reorder" />
+         </aside>
+        </figure>
+        <button class="remove-btn">
+         <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+         <span>Remove</span>
+        </button>
+       </article>
+       <article class="list-item">
+        <figure class="playlist-content">
+         <img src="./assets/images/Get-Lucky.png" alt="Cover" />
+         <div class="info">
+          <h3 class="title">Get Lucky (feat. ...)</h3>
+          <p class="artist">Daft Punk</p>
+         </div>
+         <aside class="drag-handle">
+          <img src="./assets/icons/lists.svg" alt="Reorder" />
+         </aside>
+        </figure>
+        <button class="remove-btn">
+         <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+         <span>Remove</span>
+        </button>
+       </article>
+       <article class="list-item">
+        <figure class="playlist-content">
+         <img src="./assets/images/Get-Lucky.png" alt="Cover" />
+         <div class="info">
+          <h3 class="title">Get Lucky (feat. ...)</h3>
+          <p class="artist">Daft Punk</p>
+         </div>
+         <aside class="drag-handle">
+          <img src="./assets/icons/lists.svg" alt="Reorder" />
+         </aside>
+        </figure>
+        <button class="remove-btn">
+         <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+         <span>Remove</span>
+        </button>
+       </article>
+       <article class="list-item">
+        <figure class="playlist-content">
+         <img src="./assets/images/Get-Lucky.png" alt="Cover" />
+         <div class="info">
+          <h3 class="title">Get Lucky (feat. ...)</h3>
+          <p class="artist">Daft Punk</p>
+         </div>
+         <aside class="drag-handle">
+          <img src="./assets/icons/lists.svg" alt="Reorder" />
+         </aside>
+        </figure>
+        <button class="remove-btn">
+         <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+         <span>Remove</span>
+        </button>
+       </article>
+       <article class="list-item">
+        <figure class="playlist-content">
+         <img src="./assets/images/Get-Lucky.png" alt="Cover" />
+         <div class="info">
+          <h3 class="title">Get Lucky (feat. ...)</h3>
+          <p class="artist">Daft Punk</p>
+         </div>
+         <aside class="drag-handle">
+          <img src="./assets/icons/lists.svg" alt="Reorder" />
+         </aside>
+        </figure>
+        <button class="remove-btn">
+         <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+         <span>Remove</span>
+        </button>
+       </article>
+       <article class="list-item">
+        <figure class="playlist-content">
+         <img src="./assets/images/Get-Lucky.png" alt="Cover" />
+         <div class="info">
+          <h3 class="title">Get Lucky (feat. ...)</h3>
+          <p class="artist">Daft Punk</p>
+         </div>
+         <aside class="drag-handle">
+          <img src="./assets/icons/lists.svg" alt="Reorder" />
+         </aside>
+        </figure>
+        <button class="remove-btn">
+         <img src="./assets/icons/remove.svg" alt="Remove Icon" />
+         <span>Remove</span>
+        </button>
+       </article>
+      </div>
+     </section>
+    </article>
+   </section>
+
+   <aside class="friends-aside">
+    <div class="friends-aside__header">
+     <h2>Friends Activity</h2>
+     <div class="friends-aside__actions">
+      <label for="friends-toggle">
+       <img src="./assets/icons/add-friend.svg" alt="Add Friend" />
+      </label>
+      <label for="friends-toggle">
+       <img src="./assets/icons/remove.svg" alt="Close" />
+      </label>
+     </div>
+    </div>
+    <ul class="friends-aside__list">
+     <li class="friends-aside__item">
+      <img
+       src="./assets/icons/music-listener.svg"
+       alt="Friend"
+       class="friends-aside__avatar"
+      />
+      <div class="friends-aside__info">
+       <p class="friends-aside__name">FriendlyMusicListener</p>
+       <div class="friends-aside__song">
+        <img src="./assets/icons/equalizer.svg" alt="Playing" />
+        <p>
+         <strong>Goosebumps</strong>
+         • Travis Scott
+        </p>
+       </div>
+      </div>
+     </li>
+     <li class="friends-aside__item">
+      <img
+       src="./assets/icons/friend-blue.svg"
+       alt="Friend"
+       class="friends-aside__avatar"
+      />
+      <div class="friends-aside__info">
+       <p class="friends-aside__name">AverageMusicEnjoyer</p>
+       <div class="friends-aside__song">
+        <img src="./assets/icons/equalizer.svg" alt="Playing" />
+        <p>
+         <strong>Get Lucky</strong>
+         • Daft Punk
+        </p>
+       </div>
+      </div>
+     </li>
+     <li class="friends-aside__item">
+      <img
+       src="./assets/icons/friend-green.svg"
+       alt="Friend"
+       class="friends-aside__avatar"
+      />
+      <div class="friends-aside__info">
+       <p class="friends-aside__name">MusicEnthusiast</p>
+       <div class="friends-aside__song">
+        <p>
+         1h
+         <strong>would he</strong>
+         • joji
+        </p>
+       </div>
+      </div>
+     </li>
+     <li class="friends-aside__item">
+      <img
+       src="./assets/icons/friend-yellow.svg"
+       alt="Friend"
+       class="friends-aside__avatar"
+      />
+      <div class="friends-aside__info">
+       <p class="friends-aside__name">IListenToMusic56</p>
+       <div class="friends-aside__song">
+        <p>
+         6h
+         <strong>Rockstar</strong>
+         • Post Malone
+        </p>
+       </div>
+      </div>
+     </li>
+    </ul>
+   </aside>
+
+   <!-- Footer Navigation -->
+
+   <nav class="footer-nav">
+    <label for="tab-1">
+     <figure>
+      <img
+       class="icon icon-outline"
+       src="./assets/icons/home.svg"
+       alt="Home Icon"
+      />
+      <img
+       class="icon icon-filled"
+       src="./assets/icons/home-filled.svg"
+       alt="Home Icon"
+      />
+      <figcaption class="caption">Home</figcaption>
+     </figure>
+    </label>
+    <label for="tab-2">
+     <figure>
+      <img
+       class="icon icon-outline"
+       src="./assets/icons/discover.svg"
+       alt="Discover Icon"
+      />
+      <img
+       class="icon icon-filled"
+       src="./assets/icons/discover-filled.svg"
+       alt="Discover Icon"
+      />
+      <figcaption class="caption">Discover</figcaption>
+     </figure>
+    </label>
+    <label for="tab-3">
+     <figure>
+      <img
+       class="icon icon-outline"
+       src="./assets/icons/search.svg"
+       alt="Search Icon"
+      />
+      <img
+       class="icon icon-filled"
+       src="./assets/icons/search-filled.svg"
+       alt="Search Icon"
+      />
+      <figcaption class="caption">Search</figcaption>
+     </figure>
+    </label>
+    <label for="tab-4">
+     <figure>
+      <img
+       class="icon icon-outline"
+       src="./assets/icons/library.svg"
+       alt="Library Icon"
+      />
+      <img
+       class="icon icon-filled"
+       src="./assets/icons/library-filled.svg"
+       alt="Library Icon"
+      />
+      <figcaption class="caption">Library</figcaption>
+     </figure>
+    </label>
+    <label for="tab-5">
+     <figure>
+      <img
+       class="icon icon-outline"
+       src="./assets/icons/profile.svg"
+       alt="Profile Icon"
+      />
+      <img
+       class="icon icon-filled"
+       src="./assets/icons/profile-filled.svg"
+       alt="Profile Icon"
+      />
+      <figcaption class="caption">Me</figcaption>
+     </figure>
+    </label>
+   </nav>
+  </footer>
+ </body>
+</html>

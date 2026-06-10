@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>10X Markup Exam | Spotify Clone</title>
+  </head>
+  <body class="page-get-lucky">
+    <div class="layout container">
+      <div class="layout__header">
+        <header class="header">
+          <div>
+            <nav class="navigation">
+              <!-- Left Navigation -->
+              <ul class="nav-links">
+                <li class="nav-item pinned_home-btn">
+                  <a href="./index.html" class="nav-link">
+                    <img
+                      src="./assets/images/header icons/home.png"
+                      alt="Home icon"
+                      class="nav-icon"
+                    />
+                    <span>Home</span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <img
+                      src="./assets/images/header icons/star_discover.png"
+                      alt="Discover icon"
+                      class="nav-icon"
+                    />
+                    <span>Discover</span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="./search.html" class="nav-link">
+                    <img
+                      src="./assets/images/header icons/search.png"
+                      alt="Search icon"
+                      class="nav-icon"
+                    />
+                    <input
+                      type="text"
+                      name="search"
+                      id="search_input"
+                      placeholder="Search"
+                      class="search"
+                    />
+                  </a>
+                </li>
+              </ul>
+              <ul class="user-menu">
+                <li>
+                  <a href="#" aria-label="Notifications">
+                    <img
+                      src="./assets/images/header icons/notifycation.png"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" aria-label="Security">
+                    <img
+                      src="./assets/images/header icons/lock.png"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" aria-label="Friends">
+                    <img
+                      src="./assets/images/header icons/friend.png"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" aria-label="Settings">
+                    <img
+                      src="./assets/images/header icons/setting.png"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </a>
+                </li>
+
+                <li class="profile-item">
+                  <a href="#" aria-label="Profile">
+                    <img
+                      src="./assets/images/header icons/profile-img.png"
+                      alt="User profile"
+                      class="profile-img"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- Mobile Navigation -->
+            <nav class="mobile-navigation">
+              <ul class="mobile-nav-links">
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link">
+                    <img
+                      src="./assets/images/header icons/home.png"
+                      alt="Home icon"
+                      class="nav-icon"
+                    />
+                    <span>Home</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <img
+                      src="./assets/images/header icons/star_discover.png"
+                      alt="Discover icon"
+                      class="nav-icon"
+                    />
+                    <span>Discover</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./search.html" class="nav-link">
+                    <img
+                      src="./assets/images/header icons/search.png"
+                      alt="Search icon"
+                      class="nav-icon"
+                    />
+                    <span>Search</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <img
+                      src="./assets/images/liked-song-page/library.svg"
+                      alt="My Library icon"
+                      class="nav-icon"
+                    />
+                    <span>Library</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <img
+                      src="./assets/images/header icons/me.png"
+                      alt="My Library icon"
+                      class="nav-icon"
+                    />
+                    <span>Me</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+      </div>
+      <div class="layout__sidebar">
+        <section class="hero">
+          <!-- side bar -->
+          <aside class="sidebar pinned__sidebar">
+            <nav class="sidebar-nav">
+              <ul class="sidebar-list">
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <img
+                      src="./assets/images/header icons/libary.png"
+                      alt="My Library icon"
+                      class="sidebar-icon"
+                    />
+                    <span>My Library</span>
+                  </a>
+                </li>
+                <li class="sidebar-item has-arrow">
+                  <a href="./pinned.html" class="sidebar-link">
+                    <div class="link-name">
+                      <img
+                        src="./assets/images/aside icons/pin.png"
+                        alt="Pins icon"
+                        class="sidebar-icon"
+                      />
+                      <span>Pins</span>
+                    </div>
+                    <img
+                      src="./assets/images/aside icons/right arrow.png"
+                      alt=""
+                      class="arrow-icon"
+                    />
+                  </a>
+                </li>
+
+                <li class="sidebar-item has-arrow">
+                  <a href="./playlist.html" class="sidebar-link">
+                    <div class="link-name">
+                      <img
+                        src="./assets/images/aside icons/playlist.png"
+                        alt="Playlists icon"
+                        class="sidebar-icon"
+                      />
+                      <span>Playlists</span>
+                    </div>
+                    <img
+                      src="./assets/images/aside icons/right arrow.png"
+                      alt=""
+                      class="arrow-icon"
+                    />
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link liked-link">
+                    <img
+                      src="./assets/images/aside icons/liked.png"
+                      alt="Liked songs icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Liked Songs</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <img
+                      src="./assets/images/aside icons/saves.png"
+                      alt="Saves icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Saves</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <img
+                      src="./assets/images/aside icons/albums.png"
+                      alt="Albums icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Albums</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <img
+                      src="./assets/images/aside icons/folders.png"
+                      alt="Folders icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Folders</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <img
+                      src="./assets/images/aside icons/podcasts.png"
+                      alt="Podcasts icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Podcasts</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <img
+                      src="./assets/images/aside icons/audibooks.png"
+                      alt="Audiobooks icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Audiobooks</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-item">
+                  <a href="./artist.html" class="sidebar-link">
+                    <img
+                      src="./assets/images/aside icons/artists.png"
+                      alt="Artists icon"
+                      class="sidebar-icon"
+                    />
+                    <span>Artists</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+        </section>
+      </div>
+      <div class="layout__main">
+        <!-- main page main content -->
+        <section class="home-content">
+          <div class="home-section">
+            <div class="song-info-suggestion">
+              <div class="album-photo">
+                <img
+                  style="width: 100%; height: 100%"
+                  src="./assets/images/song-get-lucky/song album photo.png"
+                  alt="song album photo get lucky"
+                />
+              </div>
+              <div class="info">
+                <div class="music-title">
+                  <h1>Get Lucky (feat. Pharrell Williams and Nile Rodgers)</h1>
+                </div>
+                <div class="music-release-info">
+                  <img
+                    src="./assets/images/song-get-lucky/mini-artist.png"
+                    alt=""
+                  />
+                  <h3>Daft Punk</h3>
+                  <span class="circle-dot"></span>
+                  <img
+                    src="./assets/images/song-get-lucky/music-disk.png"
+                    alt=""
+                  />
+                  <h3>Random Access Memories</h3>
+                  <span class="circle-dot"></span>
+                  <p>2013</p>
+                  <span class="circle-dot"></span>
+                  <p>6:09</p>
+                  <span class="circle-dot"></span>
+                  <p>489,691,133</p>
+                </div>
+                <div class="control-play">
+                  <img src="./assets/images/song-get-lucky/playy.png" alt="" />
+                  <img
+                    src="./assets/images/song-get-lucky/favortie.png"
+                    alt=""
+                  />
+                  <img
+                    src="./assets/images/song-get-lucky/add-playlist.png"
+                    alt=""
+                  />
+                  <img
+                    src="./assets/images/song-get-lucky/add-list.png"
+                    alt=""
+                  />
+                  <img
+                    src="./assets/images/song-get-lucky/downloadd.png"
+                    alt=""
+                  /><img
+                    src="./assets/images/song-get-lucky/share.png"
+                    alt=""
+                  /><img
+                    src="./assets/images/song-get-lucky/others.png"
+                    alt=""
+                  />
+                </div>
+                <div class="music-style">
+                  <p>Funk</p>
+                  <p>Electronic music</p>
+                  <p>Disco</p>
+                  <p>Soft Rock</p>
+                  <p>Progressive pop</p>
+                </div>
+                <div class="feat-artists">
+                  <div class="feat-artist">
+                    <div class="artist-img">
+                      <img
+                        src="./assets/images/song-get-lucky/daftpunk.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="name-role">
+                      <h2>Daft Punk</h2>
+                      <h3>Main artist</h3>
+                    </div>
+                  </div>
+                  <div class="feat-artist">
+                    <div class="artist-img">
+                      <img
+                        src="./assets/images/song-get-lucky/paralell williams.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="name-role">
+                      <h2>Pharrell Williams</h2>
+                      <h3>Main artist, Composer, Lyricist</h3>
+                    </div>
+                  </div>
+                  <div class="feat-artist">
+                    <div class="artist-img">
+                      <img
+                        src="./assets/images/song-get-lucky/nile rodges.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="name-role">
+                      <h2>Nile Rodgers</h2>
+                      <h3>Main artist, Composer, Lyricist</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lyrics">
+              <nav class="lyrics-nav">
+                <ul class="nav-list">
+                  <li class="nav-item opened"><a href="">Lyrics</a></li>
+                  <li class="nav-item"><a href="">Credits</a></li>
+                  <li class="nav-item"><a href="">More like this</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="lyrics-control">
+              <ul class="nav-control-list">
+                <li>
+                  <a href=""
+                    ><img
+                      src="./assets/images/song-get-lucky/history.png"
+                      alt=""
+                  /></a>
+                </li>
+                <li class="nav-control-item">
+                  <a href=""
+                    ><img
+                      src="./assets/images/song-get-lucky/language.png"
+                      alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href=""
+                    ><img
+                      src="./assets/images/song-get-lucky/comment.png"
+                      alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href=""
+                    ><img
+                      src="./assets/images/song-get-lucky/font-control.png"
+                      alt=""
+                  /></a>
+                </li>
+              </ul>
+              <div class="lyrics-text">
+                <p>Like the legend of the phoenix, huh</p>
+                <p>All ends with beginnings</p>
+                <p>What keeps the planet spinning, ah</p>
+                <p>The force from the beginning, hm, look</p>
+              </div>
+            </div>
+          </div>
+          <!-- mobile content -->
+            <!-- lyrics mobile opened -->
+            <section class="lyrics-mobile-opened">
+              <div class="head-mobile-section-lyrics-opened">
+                <div class="album-control">
+                  <div class="arrow-list">
+                    <img
+                      src="./assets/images/song-get-lucky//mobile/down-arrow.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="album-name">
+                    <img
+                      src="./assets/images/friedn-activity-icons/active.png"
+                      alt=""
+                    />
+                    <p class="lyrics-opened-p-name">
+                      Get Lucky (feat. Pharrell Williams and Nile Rodgers)
+                    </p>
+                  </div>
+                </div>
+                <div class="lyric-div">
+                  <p>
+                    Like the legend of the phoenix, huh <br />
+                    All ends with beginnings<br />
+                    What keeps the planet spinning, ah<br />
+                    The force from the beginning, hm, look<br />
+                    We've come too far<br />
+                    To give up who we are<br />
+                    So let's raise the bar<br />
+                    And our cups to the stars<br />
+                    She's up all night 'til the sun<br />
+                    I'm up all night to get some<br />
+                    She’s up all night for good fun<br />
+                    I’m up all night to get lucky<br />
+                    We’re up all night ‘til the sun<br />
+                    We’re up all night to get some<br />
+                    We’re up all night for good fun<br />
+                    We’re up all night to get lucky<br />
+                    We’re up all night to get lucky<br />
+                    We’re up all night to get lucky<br />
+                    We’re up all night to get lucky<br />
+                    We’re up all night to get lucky<br />
+                    The present has no rhythm<br />
+                    Your gift keeps on giving<br />
+                    What is this I’m feeling?<br />
+                    If you want to leave, I’m with it<br />
+                    We’ve come too far<br />
+                    To give up who we are<br />
+                    So let’s raise the bar<br />
+                    And our cups to the stars<br />
+                    She's up all night 'til the sun<br />
+                    I'm up all night to get some<br />
+                    She’s up all night for good fun<br />
+                    I’m up all night to get lucky<br />
+                    We’re up all night ‘til the sun<br />
+                    We’re up all night to get some<br />
+                    We’re up all night for good fun<br />
+                    We’re up all night to get lucky<br />
+                    We’re up all night to get lucky<br />
+                    We’re up all night to get lucky<br />
+                    We’re up all night to get lucky<br />
+                    We’re up all night to get lucky
+                  </p>
+                </div>
+              </div>
+              <!-- lyrics mobile opened -->
+            </section>
+            <!-- next up  -->
+            
+            <section class="full-control">
+              <div class="Playback-controls">
+                <div class="Playback__controls--Progress-bar">
+                  <div class="audio-slider-container">
+                    <div class="time-line">
+                      <input
+                        type="range"
+                        class="custom-range"
+                        min="0"
+                        max="100"
+                        value="50"
+                      />
+                    </div>
+                    <div class="time-show">
+                      <span class="time-display">2:23</span>
+
+                      <span class="time-display">4:45</span>
+                    </div>
+                  </div>
+                  <div class="control-music">
+                    <button>
+                      <img
+                        src="./assets/images/footer-icons/Shuffle.svg"
+                        alt="Shuffle img"
+                      />
+                    </button>
+                    <button>
+                      <img
+                        src="./assets/images/footer-icons/Previous-track.svg"
+                        alt="Previous-track img"
+                      />
+                    </button>
+                    <button class="play-button">
+                      <img
+                        src="./assets/images/song-get-lucky/mobile/mobile-play.png"
+                        alt="Play-Pause img"
+                      />
+                    </button>
+                    <button>
+                      <img
+                        src="./assets/images/footer-icons/Next-Track.svg"
+                        alt="Next-Track img"
+                      />
+                    </button>
+
+                    <button>
+                      <img
+                        src="./assets/images/footer-icons/player-nowplaying.svg"
+                        alt="player-nowplaying img"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="control-page">
+                <div class="control-list">
+                  <img
+                    src="./assets/images/song-get-lucky/mobile/proflie-list.png"
+                    alt=""
+                  />
+                  <img
+                    src="./assets/images/song-get-lucky/mobile/mobile-share.png"
+                    alt=""
+                  />
+                  <a href="./get-lucky.html" class="lyrics-page-mobile">
+                    
+                    <img
+                      class="lyrics-icon"
+                      src="./assets/images/song-get-lucky/mobile/lyrics.png"
+                      alt=""
+                    />
+                  </a>
+                  <a href="./get-lucly-next-up.html">
+
+                      <img
+                      class="next-track "
+                      src="./assets/images/song-get-lucky/mobile/list.png"
+                      alt=""
+                      />
+                    </a>
+                  <img
+                    src="./assets/images/song-get-lucky/mobile/song-more.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </section>
+          </section>
+        </section>
+      </div>
+      <!-- main page main content -->
+      <!-- footer section -->
+      <div class="layout__footer">
+        <div>
+          <div class="Playback-controls">
+            <div class="Playback__controls--Progress-bar">
+              <a href="./get-lucky.html" class="play-button">
+                <img
+                  src="./assets/images/footer-icons/Play-Pause.svg"
+                  alt="Play-Pause img"
+                />
+              </a>
+              <button>
+                <img
+                  src="./assets/images/footer-icons/Previous-track.svg"
+                  alt="Previous-track img"
+                />
+              </button>
+              <button>
+                <img
+                  src="./assets/images/footer-icons/Next-Track.svg"
+                  alt="Next-Track img"
+                />
+              </button>
+              <button>
+                <img
+                  src="./assets/images/footer-icons/Shuffle.svg"
+                  alt="Shuffle img"
+                />
+              </button>
+              <button>
+                <img
+                  src="./assets/images/footer-icons/player-nowplaying.svg"
+                  alt="player-nowplaying img"
+                />
+              </button>
+
+              <div class="audio-slider-container">
+                <span class="time-display">2:23</span>
+                <input
+                  type="range"
+                  class="custom-range"
+                  min="0"
+                  max="100"
+                  value="50"
+                />
+                <span class="time-display">4:45</span>
+              </div>
+              <button>
+                <img
+                  src="./assets/images/footer-icons/volume.svg"
+                  alt="volume"
+                />
+              </button>
+            </div>
+            <div class="Track-info">
+              <div class="Track__info--container">
+                <img
+                  src="./assets/images/footer-icons/music-cover.png"
+                  alt="music cover img"
+                />
+                <div>
+                  <h4>Get Lucky</h4>
+                  <span>Daft Punk</span>
+                  <p>Random Access Memories</p>
+                </div>
+              </div>
+              <div class="mobile__actions">
+                <button>
+                  <img
+                    src="./assets/images/footer-icons/player-add.svg"
+                    alt="player-add"
+                  />
+                </button>
+                <button>
+                  <img src="./assets/images/footer-icons/play.svg" alt="play" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="action__wrapper">
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-like.svg"
+                alt="player-like"
+              />
+            </button>
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-add.svg"
+                alt="player-add"
+              />
+            </button>
+
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-queue.svg"
+                alt="player-queue"
+              />
+            </button>
+
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-device.svg"
+                alt="player-device"
+              />
+            </button>
+
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-more.svg"
+                alt="player-more"
+              />
+            </button>
+            <span></span>
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-profile.svg"
+                alt="player-profile"
+              />
+            </button>
+
+            <button>
+              <img
+                src="./assets/images/footer-icons/player-menu.svg"
+                alt="player-menu"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- footer section -->
+    </div>
+  </body>
+</html>

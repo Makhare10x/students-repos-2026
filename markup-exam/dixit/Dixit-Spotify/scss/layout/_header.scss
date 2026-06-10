@@ -1,0 +1,125 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+
+header {
+    display: none;
+}
+
+@media (min-width: 991px) {
+    header {
+        display: flex;
+        position: sticky;
+        top: 0;
+        width: auto;
+        z-index: 1000;
+        background-color: v.$bg-media;
+    }
+
+    // active tab: hide outline, show filled + white caption
+    // // Tab 1 - Home
+
+    @for $i from 1 through 3 {
+        body:has(#tab-#{$i}:checked) header label[for="tab-#{$i}"] {
+            .icon-outline {
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+            }
+
+            .icon-filled {
+                opacity: 1;
+                visibility: visible;
+                @include m.flex-center($justify: center, $align: center);
+                filter: v.$green-hover;
+                margin-bottom: 0.15rem;
+            }
+
+            .header-caption {
+                color: v.$primary;
+            }
+
+            figure {
+                background-color: #202020;
+            }
+        }
+    }
+
+    body:has(#tab-1:checked) header label[for="tab-1"] .icon-filled {
+        transform: scale(1.73);
+    }
+    body:has(#tab-2:checked) header label[for="tab-2"] .icon-filled {
+        transform: scale(1.02);
+    }
+    body:has(#tab-3:checked) header label[for="tab-3"] .icon-filled {
+        transform: scale(1.78);
+    }
+
+    header label .icon-filled,
+    header label .icon-outline {
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    .header-icon {
+        @include m.icon-base;
+    }
+
+    .header-nav {
+        @include m.flex-center($align: center);
+        gap: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 0.7rem;
+        width: 100%;
+        margin-right: 2.5rem;
+
+        &__figure {
+            @include m.figure-base;
+            cursor: pointer;
+
+            &:hover {
+                @include m.nav-hover;
+            }
+
+            .header-caption {
+                @include m.caption-base;
+            }
+        }
+
+        &__right {
+            @include m.flex-center($justify: flex-end);
+            gap: 3.2rem;
+            margin-left: auto;
+            cursor: pointer;
+
+            figure:hover {
+                @include m.nav-hover;
+                background: transparent;
+            }
+        }
+
+        figure:not(.header-nav__figure) {
+            @include m.flex-center($align: center);
+            max-width: 4.041rem;
+            min-height: 4.041rem;
+        }
+
+        .header-btn {
+            @include m.flex-center($align: center);
+            max-width: 4.041rem;
+            min-height: 4.041rem;
+        }
+
+        .friends {
+            max-width: 4.041rem;
+            min-height: 4.041rem;
+            object-fit: contain;
+        }
+
+        .sprite {
+            max-width: 3.2rem;
+            min-height: 3.2rem;
+        }
+    }
+}

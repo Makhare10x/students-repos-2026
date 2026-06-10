@@ -1,0 +1,139 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+
+.pin {
+    background-color: v.$bg-primary;
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -0.5rem;
+    right: -1rem;
+    z-index: 5;
+}
+
+.artist-image-wrapper {
+    position: relative; 
+    width: 100%;
+}
+
+.library-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1.1rem;
+}
+
+.half {
+    width: 7.4rem;
+}
+
+.group-filter-container {
+    position: relative;
+}
+
+#group-checkbox {
+    display: none;        
+}
+
+#group-checkbox:checked ~ .group-menu {
+    display: block;
+}
+
+#switch {
+    display: none;
+}
+
+
+.group-menu {
+    display: none;
+    position: absolute;
+    width: 19rem;
+    background-color:v.$bg-secondary;
+    border-radius: 1rem;
+    padding: 1.8rem 2.4rem;
+    z-index: 10;
+    transition: all 0.2s ease; 
+    gap: 1rem; 
+      &:has(#switch:checked) {
+        li a {
+        color: v.$text-secondary;
+        }
+    }
+
+}
+
+.menu-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column ;
+    gap: 2.8rem;
+
+    li a {
+        display: block;
+        color: v.$text-primary;
+        text-decoration: none;
+        font-size: map.get(v.$font-size,paragraph);
+    }
+}
+
+.group-switch{
+    display: flex;
+    justify-content: space-between;
+    color: v.$text-primary;
+    text-decoration: none;
+    font-size: map.get(v.$font-size,paragraph);
+    margin-top: 2.8rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid v.$bg-primary;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 5rem;
+    height: 2.5rem;
+}
+
+
+.switch-button {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: v.$bg-primary;
+    transition: 0.3s;
+    border-radius: 3.2rem;
+
+    &:before {
+        width: 1.6rem;
+        height: 1.6rem;
+        position: absolute;
+        content: "";
+        left: 0.3rem;
+        bottom: 0.5rem;
+        background-color: v.$nav-active-button;
+        transition: 0.3s;
+        border-radius: 50%;
+    }
+}
+
+input:checked + .switch-button {
+    background-color: v.$bg-primary;
+}
+
+input:checked + .switch-button:before  {
+    transform: translateX(2.8rem);
+    background-color: v.$primary-accent;
+}
+
+input:checked + .group-menu {
+    color: v.$text-secondary;
+}
+
+
+    
+

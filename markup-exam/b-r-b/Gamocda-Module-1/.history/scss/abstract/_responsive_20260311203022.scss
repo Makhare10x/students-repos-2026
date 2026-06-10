@@ -1,0 +1,30 @@
+@mixin desktop {
+  @media (min-width: 500px) {
+    @content;
+  }
+}
+
+// @mixin tablet {
+//   @media (min-width: ???px) {
+//     @content;
+//   }
+// }
+
+
+@mixin player-md {
+  @media (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin player-s {
+  @media (max-width: 1150px) {
+    @content;
+  }
+}
+
+@mixin player-btn-off {
+  @media (max-width: 1140px) and (min-width: 500px) {
+    @content;
+  }
+}

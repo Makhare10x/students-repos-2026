@@ -1,0 +1,39 @@
+//colors
+$bg-main: #060606;
+$bg-primary: #111111;
+$bg-secondary:#202020;
+$text-primary: #E0E0E0;
+$text-secondary: #898989; 
+$nav-active-text: #FFFFFF; 
+$nav-active-button: #E0E0E0;
+$btn-bg:rgba(#202020, 0.5);
+$player-bg: #333842;
+$primary-accent: #1ED760;
+$btn-remove-bg: #B63F3F; 
+$linear-premium:linear-gradient(180deg, #8A354A 0%, #111111 92%);
+$linear-account: linear-gradient(to bottom, #10301B 0%, #111111 100%);
+
+//typography
+$font-base: "Satoshi", sans-serif;
+$font-size: (
+    heading: 2rem,
+    small-heading: 1.8rem,
+    paragraph: 1.6rem,
+    subtitle: clamp(1.162rem, 1.095rem + 0.276vw, 1.4rem),
+    caption: clamp(0.996rem, 0.938rem + 0.236vw, 1.2rem),
+);
+
+$font-weight: (
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    black: 900,
+);
+
+//breakpoint
+$bp-desktop: 1200px;
+
+//layout variables
+$sidebar-width: clamp(20rem, 18vw, 25.9rem);
+$layout-gap: 0.7rem;

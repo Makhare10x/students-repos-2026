@@ -1,0 +1,34 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap');
+
+$primary-bg:#111111;
+$primary-bt: rgba(30, 215, 96, 1);
+$primary-bt-icon: rgba(137, 137, 137, 1);
+
+$primary-txt-color: rgba(224, 224, 224, 1);
+$primary-txt-color: rgba(224, 224, 224, 1);
+
+$genre-list: (
+    "pop": #11641e,
+    "rock":  #006450,
+    "country":  #D84000,
+    "indie":  #E91429,
+    "hiphop": #503750,
+    "punk": #1E3264,
+    "metal": #E91429,
+    "instrumental": #537AA1,
+    "made": #1E3264,
+    "new": #BA5D07,
+    "spotyclas":#1E3264,
+    "charts":#8D67AB,
+    "trending":#B02897,
+    "spotysingles":#777777,
+);
+@each $name, $color in $genre-list {
+    .text-color_#{$name} {
+        color: $color;
+    }
+}
+$primary-bar-color: rgba(51, 56, 66, 1);
+
+
+$main-font: 'Satoshi', sans-serif;

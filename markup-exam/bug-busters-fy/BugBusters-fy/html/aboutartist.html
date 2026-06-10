@@ -1,0 +1,1605 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>BugBusters-fy</title>
+  </head>
+  <body>
+    <div class="pageLayout">
+      <!-- *========header content start======= -->
+      <header class="header">
+        <nav class="header-wrapper">
+          <div class="header-nav">
+            <a class="active" href="../index.html">
+              <svg
+                width="41"
+                height="41"
+                viewBox="0 0 41 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M25.2567 28.6251H28.6243C29.5542 28.6251 30.308 27.8713 30.308 26.9414V19.4329C30.308 18.9376 30.09 18.4674 29.7119 18.1475L21.293 11.0238C20.6652 10.4926 19.7455 10.4926 19.1177 11.0238L10.6988 18.1475C10.3207 18.4674 10.1026 18.9376 10.1026 19.4329V26.9414C10.1026 27.8713 10.8565 28.6251 11.7864 28.6251H15.154"
+                  stroke="currentColor"
+                  stroke-width="2.3573"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>Home</span>
+            </a>
+            <a href="#">
+              <svg
+                width="41"
+                height="41"
+                viewBox="0 0 41 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.5903 10.8229C21.8159 15.1881 25.2271 18.5993 29.5923 19.8249L31.3872 20.3288L29.5923 20.8327C25.2271 22.0583 21.8159 25.4695 20.5903 29.8346L20.0864 31.6296L19.5825 29.8346C18.357 25.4695 14.9457 22.0583 10.5806 20.8327L8.78564 20.3288L10.5806 19.8249C14.9457 18.5993 18.357 15.1881 19.5825 10.8229L20.0864 9.028L20.5903 10.8229Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+              <span>Discover</span>
+            </a>
+            <a id="searchbar" class="searchbar" href="./search.html">
+              <svg
+                width="41"
+                height="41"
+                viewBox="0 0 41 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M24.7356 24.3607C26.2732 22.7923 27.2213 20.6437 27.2213 18.2738C27.2213 13.4713 23.3281 9.57812 18.5256 9.57812C13.7232 9.57812 9.82999 13.4713 9.82999 18.2738C9.82999 23.0763 13.7232 26.9694 18.5256 26.9694C20.9582 26.9694 23.1574 25.9706 24.7356 24.3607ZM24.7356 24.3607L29.83 29.5781"
+                  stroke="currentColor"
+                  stroke-width="2.02054"
+                  stroke-linecap="round"
+                />
+              </svg>
+
+              <span class="mobile-search">Search</span>
+            </a>
+
+            <a id="searchbar-deskt" class="searchbar-deskt" href="./search.html">
+              <input
+                id="search"
+                name="search"
+                type="search"
+                placeholder="Search..."
+              />
+              <button class="search-button" type="button">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24.7356 24.3607C26.2732 22.7923 27.2213 20.6437 27.2213 18.2738C27.2213 13.4713 23.3281 9.57812 18.5256 9.57812C13.7232 9.57812 9.82999 13.4713 9.82999 18.2738C9.82999 23.0763 13.7232 26.9694 18.5256 26.9694C20.9582 26.9694 23.1574 25.9706 24.7356 24.3607ZM24.7356 24.3607L29.83 29.5781"
+                    stroke="currentColor"
+                    stroke-width="2.02054"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </a>
+          </div>
+
+          <div class="user-menu">
+            <a class="library" href="#">
+              <svg
+                width="41"
+                height="41"
+                viewBox="0 0 41 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.562 11.5625V28.8493"
+                  stroke="currentColor"
+                  stroke-width="2.02054"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M17.3242 11.5625V28.8493"
+                  stroke="currentColor"
+                  stroke-width="2.02054"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M23.0865 28.8493V11.5625L28.8488 15.5518V28.8493H23.0865Z"
+                  stroke="currentColor"
+                  stroke-width="2.02054"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>library</span>
+            </a>
+
+            <a href="#">
+              <svg
+                class="mobile-svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14 8C14 9.10457 13.1046 10 12 10C10.8954 10 10 9.10457 10 8C10 6.89543 10.8954 6 12 6C13.1046 6 14 6.89543 14 8Z"
+                  stroke="currentColor"
+                  stroke-width="1.2"
+                />
+                <path
+                  d="M7.8906 13.4063L8.3359 13.1094C9.42098 12.386 10.6959 12 12 12C13.3041 12 14.579 12.386 15.6641 13.1094L16.1094 13.4063C16.6658 13.7772 17 14.4017 17 15.0704V16.0667C17 16.5821 16.5821 17 16.0667 17H12H7.93333C7.41787 17 7 16.5821 7 16.0667V15.0704C7 14.4017 7.3342 13.7772 7.8906 13.4063Z"
+                  stroke="currentColor"
+                  stroke-width="1.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>Me</span>
+            </a>
+          </div>
+
+          <div class="user-menu-deskt">
+            <ul>
+              <li class="navbar-notifications">
+                <a href="#">
+                  <svg
+                    width="41"
+                    height="41"
+                    viewBox="0 0 41 41"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M27.8736 24.2741H12.8179C11.6282 24.2741 10.9784 22.8866 11.74 21.9727L12.9945 20.4673C13.2098 20.2088 13.3174 19.882 13.3141 19.5456C13.2934 17.4262 13.6655 9.54102 20.3457 9.54102C27.0259 9.54102 27.398 17.4262 27.3774 19.5456C27.3741 19.882 27.4816 20.2088 27.697 20.4673L28.9515 21.9727C29.7131 22.8866 29.0632 24.2741 27.8736 24.2741Z"
+                      stroke="currentColor"
+                      stroke-width="1.6838"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M16.8379 27.0801C16.8379 27.0801 17.5395 29.1848 20.3458 29.1848C23.1521 29.1848 23.8536 27.0801 23.8536 27.0801"
+                      stroke="currentColor"
+                      stroke-width="1.6838"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    width="41"
+                    height="41"
+                    viewBox="0 0 41 41"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M24.7338 12.4639C24.9425 12.9074 25.4713 13.0978 25.9148 12.889C26.3583 12.6803 26.5487 12.1515 26.3399 11.708L24.7338 12.4639ZM13.8048 16.1865C14.6809 16.0443 14.6809 16.0447 14.681 16.0451C14.681 16.0452 14.6811 16.0456 14.6811 16.0457C14.6812 16.0461 14.6812 16.0464 14.6812 16.0465C14.6813 16.0468 14.6813 16.0467 14.6812 16.0462C14.681 16.0451 14.6806 16.0424 14.68 16.0382C14.6787 16.0296 14.6766 16.0148 14.674 15.9941C14.6687 15.9526 14.6611 15.8877 14.6536 15.8029C14.6385 15.6328 14.6236 15.3846 14.6263 15.0851C14.6318 14.4798 14.7089 13.6967 14.9783 12.9307C15.2453 12.1715 15.6926 11.4504 16.4326 10.914C17.1704 10.3793 18.2742 9.97351 19.9514 9.97351V8.19836C17.9791 8.19836 16.4899 8.68016 15.3908 9.47676C14.2941 10.2717 13.661 11.3258 13.3037 12.3418C12.9488 13.3509 12.8578 14.3429 12.8512 15.069C12.8479 15.4352 12.866 15.7418 12.8854 15.96C12.8951 16.0693 12.9052 16.157 12.9132 16.2195C12.9172 16.2508 12.9207 16.2758 12.9234 16.2941C12.9247 16.3033 12.9259 16.3108 12.9267 16.3166C12.9272 16.3195 12.9276 16.3219 12.9279 16.324C12.9281 16.325 12.9282 16.3259 12.9283 16.3267C12.9284 16.3271 12.9285 16.3276 12.9285 16.3278C12.9286 16.3282 12.9287 16.3287 13.8048 16.1865ZM19.9514 9.97351C21.4562 9.97351 22.4981 10.3005 23.2263 10.7507C23.9524 11.1996 24.4245 11.8067 24.7338 12.4639L26.3399 11.708C25.9085 10.7913 25.2234 9.89837 24.1597 9.24076C23.0981 8.58443 21.7176 8.19836 19.9514 8.19836V9.97351Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M26.1644 16.6309H13.7384C12.2678 16.6309 11.0757 17.823 11.0757 19.2936V28.6131C11.0757 30.0837 12.2678 31.2758 13.7384 31.2758H26.1644C27.635 31.2758 28.8271 30.0837 28.8271 28.6131V19.2936C28.8271 17.823 27.635 16.6309 26.1644 16.6309Z"
+                      stroke="currentColor"
+                      stroke-width="1.77515"
+                    />
+                    <circle
+                      cx="19.9514"
+                      cy="24.1744"
+                      r="2.66272"
+                      stroke="currentColor"
+                      stroke-width="1.77515"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    width="41"
+                    height="41"
+                    viewBox="0 0 41 41"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M29.4 14.3129C29.4 16.1727 27.8923 17.6804 26.0324 17.6804C24.1726 17.6804 22.6649 16.1727 22.6649 14.3129C22.6649 12.453 24.1726 10.9453 26.0324 10.9453C27.8923 10.9453 29.4 12.453 29.4 14.3129Z"
+                      stroke="currentColor"
+                      stroke-width="2.02054"
+                    />
+                    <path
+                      d="M19.1131 23.4167L19.8629 22.9168C21.6899 21.6988 23.8366 21.0488 26.0324 21.0488C28.2282 21.0488 30.3749 21.6988 32.202 22.9168L32.9518 23.4167C33.8886 24.0412 34.4513 25.0927 34.4513 26.2187V27.8962C34.4513 28.7641 33.7477 29.4677 32.8798 29.4677H26.0324H19.185C18.3171 29.4677 17.6135 28.7641 17.6135 27.8962V26.2187C17.6135 25.0927 18.1762 24.0412 19.1131 23.4167Z"
+                      stroke="currentColor"
+                      stroke-width="2.02054"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17.9811 14.3129C17.9811 16.1727 16.4734 17.6804 14.6135 17.6804C12.7537 17.6804 11.246 16.1727 11.246 14.3129C11.246 12.453 12.7537 10.9453 14.6135 10.9453C16.4734 10.9453 17.9811 12.453 17.9811 14.3129Z"
+                      stroke="currentColor"
+                      stroke-width="2.02054"
+                    />
+                    <path
+                      d="M14.6135 21.0488C12.4177 21.0488 10.271 21.6988 8.44398 22.9168L7.69419 23.4167C6.75734 24.0412 6.19461 25.0927 6.19461 26.2187V27.8962C6.19461 28.7641 6.89821 29.4677 7.76614 29.4677H13.8271"
+                      stroke="currentColor"
+                      stroke-width="2.02054"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    width="41"
+                    height="41"
+                    viewBox="0 0 41 41"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22.4407 31.5846H18.208C17.9258 31.5846 17.6812 31.493 17.4743 31.3096C17.2674 31.1263 17.1451 30.8971 17.1075 30.6221L16.7688 28.0646C16.5243 27.973 16.294 27.863 16.0781 27.7346C15.8613 27.6063 15.6495 27.4688 15.4426 27.3221L12.9876 28.3121C12.7242 28.4038 12.4608 28.413 12.1975 28.3396C11.9341 28.2663 11.7272 28.1105 11.5767 27.8721L9.48852 24.3246C9.33802 24.0863 9.29099 23.8296 9.34743 23.5546C9.40387 23.2796 9.54496 23.0596 9.7707 22.8946L11.8871 21.3271C11.8683 21.1988 11.8589 21.0749 11.8589 20.9553V20.2128C11.8589 20.094 11.8683 19.9705 11.8871 19.8421L9.7707 18.2746C9.54496 18.1096 9.40387 17.8896 9.34743 17.6146C9.29099 17.3396 9.33802 17.083 9.48852 16.8446L11.5767 13.2971C11.7084 13.0405 11.9104 12.8799 12.1828 12.8153C12.456 12.7515 12.7242 12.7655 12.9876 12.8571L15.4426 13.8471C15.6495 13.7005 15.8659 13.563 16.0916 13.4346C16.3173 13.3063 16.5431 13.1963 16.7688 13.1046L17.1075 10.5471C17.1451 10.2721 17.2674 10.043 17.4743 9.85964C17.6812 9.67631 17.9258 9.58464 18.208 9.58464H22.4407C22.7229 9.58464 22.9675 9.67631 23.1744 9.85964C23.3813 10.043 23.5036 10.2721 23.5412 10.5471L23.8798 13.1046C24.1244 13.1963 24.355 13.3063 24.5718 13.4346C24.7877 13.563 24.9992 13.7005 25.2061 13.8471L27.6611 12.8571C27.9245 12.7655 28.1878 12.7563 28.4512 12.8296C28.7146 12.903 28.9215 13.0588 29.072 13.2971L31.1602 16.8446C31.3107 17.083 31.3577 17.3396 31.3013 17.6146C31.2448 17.8896 31.1037 18.1096 30.878 18.2746L28.7616 19.8421C28.7804 19.9705 28.7898 20.094 28.7898 20.2128V20.9553C28.7898 21.0749 28.771 21.1988 28.7334 21.3271L30.8498 22.8946C31.0755 23.0596 31.2166 23.2796 31.273 23.5546C31.3295 23.8296 31.2824 24.0863 31.1319 24.3246L29.0438 27.8446C28.8933 28.083 28.6818 28.2436 28.4094 28.3264C28.1363 28.4086 27.868 28.4038 27.6047 28.3121L25.2061 27.3221C24.9992 27.4688 24.7828 27.6063 24.5571 27.7346C24.3313 27.863 24.1056 27.973 23.8798 28.0646L23.5412 30.6221C23.5036 30.8971 23.3813 31.1263 23.1744 31.3096C22.9675 31.493 22.7229 31.5846 22.4407 31.5846Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                    <circle
+                      cx="20.3243"
+                      cy="20.5848"
+                      r="3.34783"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="../assets/images/Sprite-0002 1.png"
+                    alt="profile logo"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <!-- *header section end -->
+
+      <!-- *Main navigation section start -->
+
+      <aside class="sideNavbar">
+        <nav>
+          <ul>
+            <li>
+              <a href="./library.html" class="my-library">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.562 11.5625V28.8493"
+                    stroke="currentColor"
+                    stroke-width="2.02054"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.3242 11.5625V28.8493"
+                    stroke="currentColor"
+                    stroke-width="2.02054"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M23.0865 28.8493V11.5625L28.8488 15.5518V28.8493H23.0865Z"
+                    stroke="currentColor"
+                    stroke-width="2.02054"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>My library</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="Pins">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M29.3209 16.4258L30.8388 17.9436M29.3209 16.4258L22.6206 23.1262C22.4974 23.2493 22.4191 23.4101 22.3981 23.5829L22.0634 26.3362C21.9851 26.9808 21.1987 27.2521 20.7395 26.7929L16.811 22.8644M29.3209 16.4258L23.2496 10.3544M21.7318 8.8366L23.2496 10.3544M23.2496 10.3544L16.5492 17.0548C16.4261 17.1779 16.2653 17.2562 16.0925 17.2773L13.3392 17.6119C12.6946 17.6903 12.4233 18.4767 12.8824 18.9358L16.811 22.8644M16.811 22.8644L11.6432 28.0322"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Pins</span>
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18.5216 25.2578L23.5729 20.2065L18.5216 15.1551"
+                    stroke="currentColor"
+                    stroke-width="2.3573"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="playlists">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    width="20"
+                    height="20"
+                    rx="3"
+                    transform="matrix(1 0 0 -1 10.0757 31.3301)"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12.0757 11.3301H28.0757C28.0757 9.67322 26.7325 8.33008 25.0757 8.33008H15.0757C13.4188 8.33008 12.0757 9.67322 12.0757 11.3301Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M20.5883 22.286V16.9551C20.5883 16.6099 20.8681 16.3301 21.2133 16.3301H23.3297M20.5883 22.286V25.303C20.5883 25.8578 20.1944 26.3413 19.6397 26.3289C18.6777 26.3075 17.3297 25.9738 17.3297 24.2713C17.3297 21.6242 20.5883 22.286 20.5883 22.286Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Playlists</span>
+
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18.5216 25.2578L23.5729 20.2065L18.5216 15.1551"
+                    stroke="currentColor"
+                    stroke-width="2.3573"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="liked-songs">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.0692 13.5685L20.2054 15.3745L18.3415 13.5685C16.3872 11.6749 13.252 11.7794 11.4282 13.7991C9.65841 15.7589 9.41476 18.6943 11.0173 20.793C11.2143 21.0509 11.4079 21.2979 11.5922 21.524C12.7586 22.9549 15.3036 25.4539 16.5788 26.7949C17.5209 27.7857 18.3677 28.6121 19.0057 29.214C19.6794 29.8496 20.7193 29.8357 21.3943 29.2014C22.5707 28.0961 24.3746 26.3743 25.6453 25.0379C26.9204 23.6969 27.6521 22.9549 28.8186 21.524C29.0028 21.2979 29.1965 21.0509 29.3934 20.793C30.996 18.6943 30.7523 15.7589 28.9826 13.7991C27.1587 11.7794 24.0236 11.6749 22.0692 13.5685Z"
+                    stroke="currentColor"
+                    stroke-width="2.02054"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Liked songs</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="saves">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.3243 12.4017V28.7055C12.3243 29.6489 13.3907 30.1977 14.1583 29.6493L19.095 26.1232C19.9016 25.5471 20.985 25.5471 21.7916 26.1232L26.7283 29.6493C27.4959 30.1977 28.5623 29.6489 28.5623 28.7055V12.4017C28.5623 11.1206 27.5237 10.082 26.2426 10.082H14.644C13.3629 10.082 12.3243 11.1206 12.3243 12.4017Z"
+                    stroke="currentColor"
+                    stroke-width="2.3197"
+                  />
+                </svg>
+                <span>Saves</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="albums">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="20.2054"
+                    cy="20.2065"
+                    r="2.75528"
+                    stroke="currentColor"
+                    stroke-width="2.02054"
+                  />
+                  <path
+                    d="M20.2053 30.3089C14.6257 30.3089 10.1026 25.7858 10.1026 20.2062C10.1026 14.6267 14.6257 10.1035 20.2053 10.1035C23.1179 10.1035 25.7427 11.3361 27.5864 13.3081"
+                    stroke="currentColor"
+                    stroke-width="2.02054"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M29.2959 17.5801V25.1571M29.2959 25.1571V28.9201C29.2959 29.6692 28.7624 30.3226 28.0136 30.299C26.7754 30.26 25.0864 29.8159 25.0864 27.6828C25.0864 24.3152 29.2959 25.1571 29.2959 25.1571Z"
+                    stroke="currentColor"
+                    stroke-width="1.68378"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Albums</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="folders">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M30.8324 26.3301C30.8324 27.9869 29.4893 29.3301 27.8324 29.3301H11.8324C10.1755 29.3301 8.8324 27.9869 8.8324 26.3301V14.1301V13.8301C8.8324 12.1732 10.1755 10.8301 11.8324 10.8301H16.192C17.2142 10.8301 18.166 11.3505 18.7177 12.2111L19.0625 12.7491C19.6142 13.6096 20.566 14.1301 21.5882 14.1301H27.8324C29.4893 14.1301 30.8324 15.4732 30.8324 17.1301V26.3301Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Folders</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="podcasts">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.9314 13.7771V19.7066C19.9314 22.1626 21.9224 24.1536 24.3785 24.1536C26.8345 24.1536 28.8255 22.1626 28.8255 19.7066V18.7183V13.7771C28.8255 11.3211 26.8345 9.33008 24.3785 9.33008C21.9224 9.33008 19.9314 11.3211 19.9314 13.7771Z"
+                    stroke="currentColor"
+                    stroke-width="2.016"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M15.9784 20.2012C15.9784 20.2012 16.9666 28.1071 24.3784 28.1071M24.3784 28.1071C31.7902 28.1071 32.7784 20.2012 32.7784 20.2012M24.3784 28.1071V31.5659"
+                    stroke="currentColor"
+                    stroke-width="2.016"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M7.57837 14.3711H13.4584"
+                    stroke="currentColor"
+                    stroke-width="2.016"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M7.57837 21.0898H11.7784"
+                    stroke="currentColor"
+                    stroke-width="2.016"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M7.57837 27.8105H13.4584"
+                    stroke="currentColor"
+                    stroke-width="2.016"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <span>Podcasts</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="audiobooks">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.3297 30.3301L11.7921 27.9475C10.9276 27.7062 10.3297 26.9186 10.3297 26.0211V12.8486C10.3297 11.561 11.5286 10.6089 12.7827 10.9006L18.7827 12.2959C19.6886 12.5066 20.3297 13.3139 20.3297 14.2439V30.3301ZM20.3297 30.3301L28.8673 27.9475C29.7318 27.7062 30.3297 26.9186 30.3297 26.0211V12.9126C30.3297 11.6049 29.0954 10.649 27.8294 10.9762L23.1297 12.1905"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Audiobooks</span>
+              </a>
+            </li>
+            <li>
+              <a href="./artist.html" class="artists">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M23.573 13.4691C23.573 15.329 22.0653 16.8367 20.2055 16.8367C18.3456 16.8367 16.8379 15.329 16.8379 13.4691C16.8379 11.6093 18.3456 10.1016 20.2055 10.1016C22.0653 10.1016 23.573 11.6093 23.573 13.4691Z"
+                    stroke="currentColor"
+                    stroke-width="2.02054"
+                  />
+                  <path
+                    d="M16.8379 20.2051L13.2861 22.5729C12.3493 23.1975 11.7866 24.249 11.7866 25.3749V27.0525C11.7866 27.9204 12.4902 28.624 13.3581 28.624H20.2055"
+                    stroke="currentColor"
+                    stroke-width="2.02054"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M27.7825 13.4688V21.0458M27.7825 21.0458V24.8088C27.7825 25.5579 27.249 26.2113 26.5003 26.1877C25.262 26.1487 23.5731 25.7046 23.5731 23.5715C23.5731 20.2039 27.7825 21.0458 27.7825 21.0458Z"
+                    stroke="currentColor"
+                    stroke-width="1.68378"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Artists</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- *Main navigation section end -->
+
+      <!-- *library page start -->
+
+      <main class="main">
+        <div class="main-container">
+          <section class="hero-section">
+            <img
+              src="../assets/images/artist page files/main background.png"
+              alt="background image"
+            />
+            <div class="hero-heading">
+              <h1>Daft Punk</h1>
+              <p>20,795,080 monthly listeners</p>
+            </div>
+            <div class="hero-nav">
+              <button class="play-btn">
+                <svg
+                  width="12"
+                  height="13"
+                  viewBox="0 0 12 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.3319 4.84719C11.3523 5.43636 11.3523 6.90929 10.3319 7.49846L2.29562 12.1382C1.27514 12.7274 -0.000448849 11.9909 -0.000448798 10.8126L-0.000448392 1.5331C-0.000448341 0.354755 1.27515 -0.381708 2.29562 0.207463L10.3319 4.84719Z"
+                    fill="black"
+                  />
+                </svg>
+              </button>
+              <button class="follow-btn">Follow</button>
+              <button class="plus-btn">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    width="20"
+                    height="20"
+                    rx="3"
+                    transform="matrix(1 0 0 -1 9.82715 31.3298)"
+                    stroke="#E0E0E0"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M11.8271 11.3298H27.8271C27.8271 9.67298 26.484 8.32983 24.8271 8.32983H14.8271C13.1703 8.32983 11.8271 9.67298 11.8271 11.3298Z"
+                    stroke="#E0E0E0"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15.8271 21.3298H19.8271M23.8271 21.3298H19.8271M19.8271 21.3298V17.3298M19.8271 21.3298V25.3298"
+                    stroke="#E0E0E0"
+                    stroke-width="2.02054"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button class="queue-btn">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.3632 11.7866H14.5924C13.0426 11.7866 11.7861 13.043 11.7861 14.5929C11.7861 16.1428 13.0426 17.3992 14.5924 17.3992H19.3632"
+                    stroke="#E0E0E0"
+                    stroke-width="2.3573"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M11.7861 23.0117L28.624 23.0117"
+                    stroke="#E0E0E0"
+                    stroke-width="2.3573"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M11.7861 28.6245L28.624 28.6245"
+                    stroke="#E0E0E0"
+                    stroke-width="2.3573"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M23.5732 14.3123H26.0989M28.6246 14.3123H26.0989M26.0989 14.3123V11.7866M26.0989 14.3123V16.838"
+                    stroke="#E0E0E0"
+                    stroke-width="2.02054"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button class="more-btn">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="11.7865"
+                    cy="20.2072"
+                    r="1.68378"
+                    fill="#E0E0E0"
+                  />
+                  <circle
+                    cx="20.2054"
+                    cy="20.2072"
+                    r="1.68378"
+                    fill="#E0E0E0"
+                  />
+                  <circle
+                    cx="28.6242"
+                    cy="20.2072"
+                    r="1.68378"
+                    fill="#E0E0E0"
+                  />
+                </svg>
+              </button>
+            </div>
+          </section>
+
+          <!-- ! Hero section content end -->
+          <!-- ! main navigation section start -->
+          <section class="artist-home">
+            <nav class="main-nav">
+              <ul class="navigation">
+                <li>
+                  <a href="./artist.html"><span>Home</span></a>
+                </li>
+                <li><a href="./gridalbums.html" class="">Albums</a></li>
+                <li><a href="#" class="">About</a></li>
+                <li><a href="#" class="">Singles and EPs</a></li>
+                <li><a href="#" class="">Compilations</a></li>
+                <li><a href="#" class="">Merch</a></li>
+
+                <li><a href="#" class="">Features & More</a></li>
+                <li class="searchbox">
+                  <input
+                    type="text"
+                    id="searching"
+                    name="search"
+                    placeholder=""
+                  />
+                  <svg
+                    width="41"
+                    height="41"
+                    viewBox="0 0 41 41"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M24.7357 24.361C26.2733 22.7925 27.2214 20.644 27.2214 18.274C27.2214 13.4715 23.3282 9.57837 18.5257 9.57837C13.7233 9.57837 9.83008 13.4715 9.83008 18.274C9.83008 23.0765 13.7233 26.9697 18.5257 26.9697C20.9582 26.9697 23.1575 25.9709 24.7357 24.361ZM24.7357 24.361L29.8301 29.5784"
+                      stroke="#898989"
+                      stroke-width="2.02054"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </li>
+              </ul>
+            </nav>
+
+            <!--!track list container with tables starts here -->
+
+            <div class="main-content-wrapper">
+              <div class="badge">
+                <div class="badge-text">
+                  <h2>#292</h2>
+                  <p>in the world</p>
+                </div>
+                <img
+                  src="../assets/images/artist page files/Star 3.png"
+                  alt="badge image"
+                />
+              </div>
+
+              <div class="info">
+                <p>
+                  As they evolved from '90s French house pioneers to 2000s dance
+                  tastemakers to mainstream heroes in the 2010s, Daft Punk
+                  remained one of dance music's most iconic acts. With their
+                  early singles and 1997's instant-classic debut album Homework,
+                  Guy-Manuel de Homem-Christo and Thomas Bangalter quickly won
+                  acclaim for their skill at blending their beloved Chicago
+                  house and Detroit techno with pop, funk, indie rock, and
+                  hip-hop into nostalgic yet futuristic forms. Not content to
+                  just widen electronic music's popularity, on 2001's Discovery
+                  they reinvented the then-unfashionable sounds of mid-'80s soft
+                  rock and R&B into stylish tracks that also had a childlike
+                  wonder. Despite their sizable popularity, Daft Punk were never
+                  afraid to challenge their listeners, which they did with
+                  2005's cold and dystopic Human After All. Even when they
+                  polarized their audience, there was never any doubt that they
+                  staged groundbreaking concerts, and the tour captured on Alive
+                  2007 helped pave the way for arena-sized EDM, particularly in
+                  the U.S. With 2013's Random Access Memories, the duo once
+                  again looked to the past to create the future, borrowing from
+                  prog, disco, and a laid-back West Coast vibe that bucked the
+                  predominant trends in electronic music but still resonated
+                  with a wide audience. Daft Punk's influence reached further
+                  into the mainstream through collaborations with Kanye
+                  West and the Weeknd, and the duo's music was sampled by
+                  artists ranging from Missy Elliott to the Fall. Though they
+                  reinvented themselves continually, wherever Daft Punk went,
+                  the rest of pop music followed. After meeting in 1987 as
+                  students at Paris' Lycée Carnot secondary
+                  school, Bangalter and de Homem-Christo became friends and soon
+                  started making music together. In 1992, they formed the band
+                  Darlin'. Named after a Beach Boys song, the group
+                  featured Bangalter on bass, de Homem-Christo on guitar, and
+                  additional guitarist Laurent Brancowitz. Darlin's career was
+                  brief: The trio recorded a cover of their namesake song that
+                  appeared, along with an original song, on a various artists EP
+                  released by Stereolab's label Duophonic (the band also invited
+                  Darlin' to play some U.K. shows with them). Following a Melody
+                  Maker review that described Darlin's music as "a daft punky
+                  thrash," the band broke up. Bangalter and de Homem-Christo
+                  began experimenting with electronic music, taking their new
+                  project's name from that review and drawing inspiration from
+                  pioneers such as Todd Edwards, Juan Atkins, Kraftwerk, Frankie
+                  Knuckles, and many more. By September 1993, Daft Punk had
+                  readied a demo tape, which they gave to Soma co-founder Stuart
+                  MacMillan at a rave at EuroDisney. The label released the
+                  duo's debut single, "The New Wave," in April 1994. Instantly
+                  hailed by the dance music press as the work of a new breed of
+                  house innovators, it was followed by May 1995's "Da Funk," the
+                  band's first true hit (the record sold 30,000 copies worldwide
+                  and saw thorough rinsings by everyone from Kris Needs to the
+                  Chemical Brothers). In 1996, the buzz around Daft Punk led
+                  them to sign with Virgin, and the label released the single
+                  "Da Funk"/"Musique" that year. Recorded and mixed at the duo's
+                  Paris studio Daft House, January 1997's debut album Homework
+                  -- named for Daft Punk's D.I.Y. aesthetic -- was a critical
+                  and commercial success. The album reached number three in
+                  France and stayed on the chart for over a year, while the
+                  singles "Da Funk," "Around the World," "Burnin'," and
+                  "Revolution 909" charted in France, the U.K., the U.S., and
+                  Australia. The duo supported the record with the Daftendirekt
+                  tour, while the Homework video collection D.A.F.T.: A Story
+                  about Dogs, Androids, Firemen and Tomatoes followed in 1999
+                  and featured clips directed by Roman Coppola, Michel Gondry,
+                  and Spike Jonze. To follow their breakthrough debut album, de
+                  Homem-Christo and Bangalter reached back to their childhoods
+                  in the '70s and '80s and sought to fuse technology with
+                  humanity. Once again recorded at Daft House, March 2001's
+                  Discovery incorporated disco and synth pop as well as house,
+                  garage, and R&B into a sleek, retro-futuristic sound that
+                  matched the robotic helmets and gloves the duo introduced with
+                  the release of the album. Featuring contributions from heroes
+                  such as Romanthony, Edwards, and DJ Sneak, Discovery was an
+                  even bigger hit than its predecessor. The album peaked at
+                  number two in France and the U.K., while the singles "One More
+                  Time," "Digital Love," "Harder, Faster, Better, Stronger," and
+                  "Face to Face" also charted in the U.K. and the U.S. That
+                  November saw the release of Alive 1997, an edit of the duo's
+                  Birmingham, England stop on the Daftendirekt tour. Daft Punk
+                  capped the Discovery era in 2003 with Interstella 5555: The
+                  5tory of the 5ecret 5tar 5ystem, an animated film they
+                  produced with anime and manga creator Leiji Matsumoto that
+                  used the album as its soundtrack. For Daft Punk's third album,
+                  the duo took a drastically different approach. Created in six
+                  weeks -- as opposed to the two years they spent making
+                  Discovery -- with a handful of gear that included an
+                  eight-track machine, March 2005's Human After All was a
+                  deliberately raw, stark set of songs inspired by George
+                  Orwell's Nineteen Eighty-Four. Though its cold, repetitive
+                  feel drew polarized reactions, the album fared well
+                  commercially: Human After All reached number three in France,
+                  was a Top Ten hit in the U.K., and hit number one on the
+                  Billboard Top Dance/Electronic Albums chart in the U.S. The
+                  set was also nominated for Best Electronic/Dance Album at the
+                  2006 Grammy Awards. Shortly after its release, Human After All
+                  [Remixes] collected reworkings by Soulwax, Digitalism,
+                  and Erol Alkan among others. April 2006 saw the arrival of
+                  Musique, Vol. 1: 1993-2005, a compilation of the duo's
+                  best-known songs and remixes accompanied by the videos for
+                  Human After All's singles. That May, Daft Punk premiered their
+                  film Electroma at the Director's Fortnight at that year's
+                  Cannes Film Festival. An experimental sci-fi film about a pair
+                  of robots seeking to become human, it began as the video for
+                  Human After All's title track before expanding into a feature
+                  film (unlike Interstella 5555, the movie did not feature any
+                  of Daft Punk's music). Initially earning mixed reviews, over
+                  time Electroma won a cult audience. That year, the duo
+                  embarked on the Alive tour, which lasted through 2007 and
+                  featured some of Daft Punk's most ambitiously staged live
+                  sets. Appearing in November 2007, Alive 2007 documented the
+                  tour. Early in 2009, the album and its single "Harder, Better,
+                  Faster, Stronger" won Grammy Awards. Daft Punk returned with
+                  new music in November 2010 in the form of the score to Joseph
+                  Kosinski's feature film Tron: Legacy. A collaboration
+                  with Joseph Trapanese, who arranged and orchestrated the
+                  pair's compositions, it featured an 85-piece orchestra as well
+                  as Daft Punk's signature electronics. Bangalter and de
+                  Homem-Christo also appeared in the film in a brief cameo. The
+                  soundtrack eventually reached number four on the Billboard 200
+                  Albums chart in the U.S. and was nominated for a Best Score
+                  Soundtrack Album for Visual Media Grammy Award. Also in 2010,
+                  the duo were admitted into the Ordre des Arts et des Lettres,
+                  with de Homem-Christo and Bangalter each receiving the rank of
+                  Chevalier. The following year saw the April release of the
+                  remix album Tron: Legacy Reconfigured, while that September's
+                  compilation Soma Records: 20 Years featured the track "Drive,"
+                  an early recording that was believed to be lost. For their
+                  fourth album, Daft Punk once again took a different creative
+                  tack. Seeking a breezy feel informed by Fleetwood Mac, the
+                  Eagles, and Jean Michel Jarre, the duo emphasized live
+                  instrumentation and collaborated with artists including Nile
+                  Rodgers, Paul Williams, Giorgio Moroder, and Panda
+                  Bear. Pharrell Williams appeared on the single "Get Lucky,"
+                  which preceded the release of the full-length Random Access
+                  Memories in May 2013. Recorded in California, New York City,
+                  and Paris and spanning disco, prog, and indie influences, the
+                  album became one of Daft Punk's biggest successes. It topped
+                  the charts in over 20 countries including the U.S., where it
+                  became the duo's first number one album and was eventually
+                  certified platinum. It also won Grammy Awards for Best
+                  Dance/Electronica Album, Album of the Year, and Best
+                  Engineered Album, Non-Classical. "Get Lucky" hit number one in
+                  over 30 countries and earned Grammys for Best Pop Duo/Group
+                  Performance and Record of the Year. That year, Daft Punk also
+                  co-produced Kanye West's critically acclaimed album Yeezus,
+                  and worked on tracks including the single "Black Skinhead." In
+                  2014, the duo appeared on Pharrell's album G I R L and
+                  collaborated with Jay-Z on the song "Computerized." A 2015
+                  documentary titled Daft Punk Unchained charted their history
+                  from the '90s into the 2010s, featuring interviews
+                  with Rodgers, Pharrell, and West, among others. In turn, the
+                  duo appeared in that year's Rodgers documentary Nile Rodgers:
+                  From Disco to Daft Punk. During the latter half of the 2010s,
+                  Daft Punk remained active. They teamed up with the
+                  Weeknd's Abel Tesfaye on a pair of songs from his 2016 album
+                  Starboy, including the chart-topping title track. The
+                  following year, the duo performed with the Weeknd at the 59th
+                  Annual Grammy Awards; later in 2017, they co-wrote and
+                  produced Parcels' "Overnight." During this time, Daft Punk's
+                  members also worked on separate
+                  projects. Bangalter co-produced Arcade Fire's 2017 album
+                  Everything Now and contributed pieces to the soundtrack to
+                  Gaspar Noé's 2018 film Climax, while de Homem-Christo co-wrote
+                  and produced tracks for Charlotte Gainsbourg's 2017 album Rest
+                  and the Weeknd's 2018 EP My Dear Melancholy,. In 2019, Daft
+                  Punk were featured in the Philharmonie de Paris' exhibition
+                  Electro, which traced the history of electronic music and its
+                  influence on visual arts. In February 2021, the duo disbanded,
+                  spreading the news with a YouTube video that featured scenes
+                  from the end of Electroma. To commemorate the tenth
+                  anniversary of Random Access Memories in 2023, Daft Punk
+                  issued a pair of re-releases of the album. In May, a deluxe
+                  edition of the album featuring unreleased demos (including
+                  "Infinity Repeating," which featured Julian Casablancas & the
+                  Voidz), outtakes and the version of "Touch" that soundtracked
+                  the duo's breakup announcement appeared. The reissue topped
+                  the Billboard Dance/Electronic Albums Chart and reached the
+                  Top Ten of the Billboard 200 Albums Chart. That November saw
+                  the release of a drumless version of the album. ~ Heather
+                  Phares & Sean Cooper, Rovi
+                </p>
+              </div>
+
+              <div class="statistics">
+                <div class="stat-block">
+                  <h2 class="stat-number">9,868,787</h2>
+                  <p class="stat-label">Followers</p>
+                </div>
+
+                <div class="stat-block">
+                  <h2 class="stat-number">22,430,353</h2>
+                  <p class="stat-label">Monthly Listeners</p>
+                </div>
+
+                <div class="top-cities">
+                  <div class="city">
+                    <h3 class="city-name">Paris, FR</h3>
+                    <p class="listeners">391,036 listeners</p>
+                  </div>
+
+                  <div class="city">
+                    <h3 class="city-name">Mexico City, MX</h3>
+                    <p class="listeners">367,878 listeners</p>
+                  </div>
+
+                  <div class="city">
+                    <h3 class="city-name">Santiago, CL</h3>
+                    <p class="listeners">327,816 listeners</p>
+                  </div>
+
+                  <div class="city">
+                    <h3 class="city-name">London, GB</h3>
+                    <p class="listeners">274,515 listeners</p>
+                  </div>
+
+                  <div class="city">
+                    <h3 class="city-name">Bogotá, CO</h3>
+                    <p class="listeners">251,175 listeners</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--!=======track list container with tables END's here -->
+          </section>
+        </div>
+      </main>
+
+      <!-- *library page end -->
+
+      <!-- * popup menu section -->
+
+      <aside class="sidePopup">
+        <div class="sidePopup-wrapper">
+          <div class="sidePopup-heading">
+            <p>Friends Activity</p>
+            <div class="button-wrapper">
+              <button class="btn-addfriends">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M23.573 13.4691C23.573 15.329 22.0653 16.8367 20.2054 16.8367C18.3455 16.8367 16.8378 15.329 16.8378 13.4691C16.8378 11.6093 18.3455 10.1016 20.2054 10.1016C22.0653 10.1016 23.573 11.6093 23.573 13.4691Z"
+                    stroke="currentColor"
+                    stroke-width="2.02054"
+                  />
+                  <path
+                    d="M16.8378 20.2051L13.286 22.5729C12.3492 23.1975 11.7864 24.249 11.7864 25.3749V27.0525C11.7864 27.9204 12.49 28.624 13.358 28.624H26.0986"
+                    stroke="currentColor"
+                    stroke-width="2.02054"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M23.573 21.0472H26.0987M28.6244 21.0472H26.0987M26.0987 21.0472V18.5215M26.0987 21.0472V23.5728"
+                    stroke="currentColor"
+                    stroke-width="2.02054"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+
+              <button class="btn-close">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M25.2568 15.1543L20.2055 20.2056M15.1541 25.257L20.2055 20.2056M20.2055 20.2056L15.1541 15.1543M20.2055 20.2056L25.2568 25.257"
+                    stroke="currentColor"
+                    stroke-width="2.02054"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="friendly-music">
+            <article>
+              <a href="#" class="card-recent">
+                <div class="img-container">
+                  <img
+                    src="../assets/images/sidepopup/friend4.png"
+                    alt="Fiends logo red"
+                  />
+                </div>
+                <div class="text-container">
+                  <div class="heading">
+                    <h5>FriendlyMusicListener</h5>
+                  </div>
+                  <div class="now-listening">
+                    <ul>
+                      <li>
+                        <img
+                          src="../assets/images/sidepopup/Vector.png"
+                          alt="vector image"
+                        />
+                      </li>
+                      <li class="song-name">Goosebumps</li>
+                      <li class="artist">Travis Scott</li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <div class="friendly-music">
+            <article>
+              <a href="#" class="card-recent">
+                <div class="img-container">
+                  <img
+                    src="../assets/images/sidepopup/friend1.png"
+                    alt="Fiends logo blue"
+                  />
+                </div>
+                <div class="text-container">
+                  <div class="heading">
+                    <h5>AverageMusicEnjoyer</h5>
+                  </div>
+                  <div class="now-listening">
+                    <ul>
+                      <li>
+                        <img
+                          src="../assets/images/sidepopup/Vector.png"
+                          alt="vector image"
+                        />
+                      </li>
+                      <li class="song-name">Get Lucky</li>
+                      <li class="artist">Daft Punk</li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <div class="friendly-music">
+            <article>
+              <a href="#" class="card-recent">
+                <div class="img-container">
+                  <img
+                    src="../assets/images/sidepopup/friend2.png"
+                    alt="Fiends logo green"
+                  />
+                </div>
+                <div class="text-container">
+                  <div class="heading">
+                    <h5>MusicEnthusiast</h5>
+                  </div>
+                  <div class="now-listening">
+                    <ul>
+                      <li class="time-playing">1h</li>
+                      <li class="song-name">would he</li>
+                      <li class="artist">joji</li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <div class="friendly-music">
+            <article>
+              <a href="#" class="card-recent">
+                <div class="img-container">
+                  <img
+                    src="../assets/images/sidepopup/friend3.png"
+                    alt="Fiends logo red"
+                  />
+                </div>
+                <div class="text-container">
+                  <div class="heading">
+                    <h5>IListenToMusic56</h5>
+                  </div>
+                  <div class="now-listening">
+                    <ul>
+                      <li class="time-playing">6H</li>
+                      <li class="song-name">Rockstar</li>
+                      <li class="artist">Post Malone</li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </aside>
+
+      <footer class="footer">
+        <!---- Player ---->
+        <section class="player">
+          <div class="player-container">
+            <div class="player-wrapper">
+              <!---- Control section ---->
+
+              <div class="controllers">
+                <button id="play" class="play-btn">
+                  <svg
+                    width="41"
+                    height="41"
+                    viewBox="0 0 41 41"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M28.0942 18.2343C29.3511 18.9599 29.3511 20.774 28.0942 21.4997L18.1966 27.2141C16.9398 27.9397 15.3687 27.0327 15.3687 25.5814L15.3687 14.1526C15.3687 12.7013 16.9398 11.7943 18.1966 12.5199L28.0942 18.2343Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+                <button id="pause" class="pause-btn">
+                  <svg
+                    width="41"
+                    height="41"
+                    viewBox="0 0 41 41"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.2046 14.2949V26.8681"
+                      stroke="currentColor"
+                      stroke-width="4.19106"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M24.5867 14.2949V26.8681"
+                      stroke="currentColor"
+                      stroke-width="4.19106"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+                <button id="prev" class="prev-btn">
+                  <svg
+                    width="41"
+                    height="41"
+                    viewBox="0 0 41 41"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.154 15.1523V25.255"
+                      stroke="currentColor"
+                      stroke-width="2.52568"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M17.1624 21.4925C16.2235 20.8902 16.2235 19.5181 17.1624 18.9157L24.1623 14.4253C25.1811 13.7717 26.5196 14.5033 26.5196 15.7137V24.6946C26.5196 25.905 25.1811 26.6365 24.1623 25.983L17.1624 21.4925Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+                <button id="next" class="next-btn">
+                  <svg
+                    width="41"
+                    height="41"
+                    viewBox="0 0 41 41"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M25.2567 15.1523V25.255"
+                      stroke="currentColor"
+                      stroke-width="2.52568"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M23.2483 18.9157C24.1872 19.518 24.1872 20.8901 23.2483 21.4925L16.2484 25.9829C15.2296 26.6365 13.8912 25.9049 13.8912 24.6945L13.8912 15.7136C13.8912 14.5032 15.2296 13.7717 16.2484 14.4252L23.2483 18.9157Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+                <button id="shaffle" class="shaffle-btn">
+                  <svg
+                    width="41"
+                    height="41"
+                    viewBox="0 0 41 41"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.1027 12.6271C11.6824 12.6271 13.1592 13.4102 14.0456 14.7177L14.8812 15.9503L16.0077 17.612M28.7491 25.92H23.8242C22.5038 25.92 21.236 25.4031 20.2921 24.4798L19.3635 23.5716M28.7491 25.92L25.2568 29.4648M28.7491 25.92L25.2568 22.3752"
+                      stroke="currentColor"
+                      stroke-width="2.02054"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10.1027 27.9503C11.6863 27.9503 13.1708 27.18 14.0826 25.8853L20.2554 17.1194C21.2016 15.7758 22.7422 14.9764 24.3855 14.9764H28.7491M28.7491 14.9764L25.2568 11.4316M28.7491 14.9764L25.2568 18.5213"
+                      stroke="currentColor"
+                      stroke-width="2.02054"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <button id="loop" class="loop-btn">
+                  <svg
+                    width="41"
+                    height="41"
+                    viewBox="0 0 41 41"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.996 26.0972H13.4703C11.6104 26.0972 10.1027 24.5895 10.1027 22.7297V15.9945C10.1027 14.1347 11.6104 12.627 13.4703 12.627H26.9406C28.8004 12.627 30.3081 14.1347 30.3081 15.9945V22.7297C30.3081 24.5895 28.8004 26.0972 26.9406 26.0972H20.2054M20.2054 26.0972L23.573 22.7297M20.2054 26.0972L23.573 29.4648"
+                      stroke="currentColor"
+                      stroke-width="2.02054"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <!---- Audio section ---->
+              <div class="track">
+                <div class="track-control">
+                  <span id="currentTime" class="item current-time">2:23</span>
+                  <input
+                    type="range"
+                    id="progress"
+                    class="item track-slider"
+                    value="0"
+                  />
+                  <span id="duration" class="item duration">4:45</span>
+                </div>
+                <audio id="audio"></audio>
+                <div class="volume-control">
+                  <button id="volumeIcon" class="item volume-icon">
+                    <svg
+                      width="41"
+                      height="41"
+                      viewBox="0 0 41 41"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_24_424)">
+                        <path
+                          d="M12.8558 23.8203C9.87736 22.3311 9.87736 18.081 12.8558 16.5918L21.5883 12.2256C22.0359 12.0018 22.5625 12.3268 22.5629 12.8271L22.5629 27.584C22.5629 28.0846 22.036 28.4102 21.5883 28.1865L12.8558 23.8203Z"
+                          stroke="currentColor"
+                          stroke-width="2.02054"
+                        />
+                        <path
+                          d="M26.9406 25.2578C27.7294 25.0427 28.4588 24.5653 29.04 23.8699C29.852 22.8983 30.3082 21.5805 30.3082 20.2065C30.3082 18.8324 29.852 17.5146 29.04 16.543C28.4588 15.8476 27.7294 15.3703 26.9406 15.1551"
+                          stroke="currentColor"
+                          stroke-width="1.68378"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M26.0987 19.6957C26.0987 19.5131 26.2522 19.3593 26.4208 19.4291C26.523 19.4714 26.6158 19.5335 26.694 19.6116C26.7722 19.6898 26.8342 19.7826 26.8765 19.8848C26.9188 19.9869 26.9406 20.0964 26.9406 20.2069C26.9406 20.3175 26.9188 20.427 26.8765 20.5291C26.8342 20.6313 26.7722 20.7241 26.694 20.8022C26.6158 20.8804 26.523 20.9424 26.4208 20.9847C26.2522 21.0546 26.0987 20.9008 26.0987 20.7182L26.0987 20.2069L26.0987 19.6957Z"
+                          fill="#898989"
+                          stroke="currentColor"
+                          stroke-width="0.841892"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_24_424">
+                          <rect
+                            width="23.573"
+                            height="23.573"
+                            fill="white"
+                            transform="translate(8.41895 8.41992)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                  <input
+                    type="range"
+                    id="volumeSlider"
+                    class="item volume-slider"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    value="1"
+                  />
+                </div>
+              </div>
+              <article class="media-info">
+                <a href="#" class="card-recent">
+                  <div class="img-container">
+                    <img id="cover" src="" alt="" />
+                  </div>
+                  <div class="text-container">
+                    <div class="heading">
+                      <h3 id="title"></h3>
+                    </div>
+                    <div class="description">
+                      <p id="author"></p>
+                      <p id="album"></p>
+                    </div>
+                  </div>
+                </a>
+              </article>
+
+              <!---- Action section ---->
+              <div class="actions">
+                <div class="metadata">
+                  <button id="like" class="like-btn active">
+                    <svg
+                      width="41"
+                      height="41"
+                      viewBox="0 0 41 41"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M22.0692 13.5685L20.2054 15.3745L18.3415 13.5685C16.3872 11.6749 13.252 11.7794 11.4282 13.7991C9.65841 15.7589 9.41476 18.6943 11.0173 20.793C11.2143 21.0509 11.4079 21.2979 11.5922 21.524C12.7586 22.9549 15.3036 25.4539 16.5788 26.7949C17.5209 27.7857 18.3677 28.6121 19.0057 29.214C19.6794 29.8496 20.7193 29.8357 21.3943 29.2014C22.5707 28.0961 24.3746 26.3743 25.6453 25.0379C26.9204 23.6969 27.6521 22.9549 28.8186 21.524C29.0028 21.2979 29.1965 21.0509 29.3934 20.793C30.996 18.6943 30.7523 15.7589 28.9826 13.7991C27.1587 11.7794 24.0236 11.6749 22.0692 13.5685Z"
+                        stroke="currentColor"
+                        stroke-width="2.02054"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <button id="add-to-playlist" class="add-to-playlist-btn">
+                    <svg
+                      width="41"
+                      height="41"
+                      viewBox="0 0 41 41"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        width="20"
+                        height="20"
+                        rx="3"
+                        transform="matrix(1 0 0 -1 9.82703 31.3301)"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.827 11.3301H27.827C27.827 9.67322 26.4839 8.33008 24.827 8.33008H14.827C13.1702 8.33008 11.827 9.67322 11.827 11.3301Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15.827 21.3301H19.827M23.827 21.3301H19.827M19.827 21.3301V17.3301M19.827 21.3301V25.3301"
+                        stroke="currentColor"
+                        stroke-width="2.02054"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <button id="lirics" class="lirics-btn">
+                    <svg
+                      width="41"
+                      height="41"
+                      viewBox="0 0 41 41"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.0864 14.0762H23.0864"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M11.0864 21.0762H19.0864"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M11.0864 28.0762H19.0864"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M29.0864 13.0762V22.01M29.0864 22.01V26.6757C29.0864 27.4256 28.5537 28.0748 27.8037 28.0762C26.3223 28.0789 24.0864 27.6431 24.0864 24.9879C24.0864 21.0173 29.0864 22.01 29.0864 22.01Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <button id="device" class="device-btn">
+                    <svg
+                      width="41"
+                      height="41"
+                      viewBox="0 0 41 41"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="17.2587"
+                        y="11.3672"
+                        width="11.7865"
+                        height="17.6797"
+                        rx="2.94662"
+                        stroke="currentColor"
+                        stroke-width="2.06263"
+                      />
+                      <circle
+                        cx="23.152"
+                        cy="23.1537"
+                        r="2.94662"
+                        fill="#898989"
+                      />
+                      <circle
+                        cx="23.152"
+                        cy="15.7858"
+                        r="1.47331"
+                        fill="#898989"
+                      />
+                      <circle
+                        cx="12.8389"
+                        cy="27.5729"
+                        r="1.47331"
+                        fill="#898989"
+                      />
+                      <path
+                        d="M13.5755 22.4157H12.8389C12.0252 22.4157 11.3655 21.7561 11.3655 20.9424V15.7858C11.3655 14.9721 12.0252 14.3125 12.8389 14.3125H13.5755"
+                        stroke="currentColor"
+                        stroke-width="2.06263"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <button id="more" class="more-btn">
+                    <svg
+                      width="41"
+                      height="41"
+                      viewBox="0 0 41 41"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="11.7865"
+                        cy="20.2072"
+                        r="1.68378"
+                        fill="currentColor"
+                      />
+                      <circle
+                        cx="20.2054"
+                        cy="20.2072"
+                        r="1.68378"
+                        fill="currentColor"
+                      />
+                      <circle
+                        cx="28.6242"
+                        cy="20.2072"
+                        r="1.68378"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="utilities">
+                  <button id="hide" class="hide-btn">
+                    <svg
+                      width="41"
+                      height="41"
+                      viewBox="0 0 41 41"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M20.2052 10.9453C25.3197 10.9453 29.4658 15.0915 29.4659 20.2061C29.4659 22.5553 28.5928 24.699 27.1515 26.332C25.4533 28.256 22.971 29.4668 20.2052 29.4668C15.0906 29.4667 10.9444 25.3206 10.9444 20.2061C10.9445 17.8337 11.8359 15.6712 13.3028 14.0322C14.9997 12.1365 17.4628 10.9454 20.2052 10.9453Z"
+                        stroke="currentColor"
+                        stroke-width="1.68378"
+                      />
+                    </svg>
+                  </button>
+                  <button id="queue" class="queue-btn">
+                    <svg
+                      width="41"
+                      height="41"
+                      viewBox="0 0 41 41"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.7865 14.5915C11.7865 13.0416 13.0429 11.7852 14.5928 11.7852H25.818C27.3679 11.7852 28.6243 13.0416 28.6243 14.5915C28.6243 16.1413 27.3679 17.3978 25.818 17.3978H14.5928C13.0429 17.3978 11.7865 16.1413 11.7865 14.5915Z"
+                        stroke="currentColor"
+                        stroke-width="2.3573"
+                      />
+                      <path
+                        d="M11.7865 23.0117L28.6243 23.0117"
+                        stroke="currentColor"
+                        stroke-width="2.3573"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.7865 28.623L28.6243 28.623"
+                        stroke="currentColor"
+                        stroke-width="2.3573"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer>
+    </div>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

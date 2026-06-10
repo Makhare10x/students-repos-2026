@@ -1,0 +1,278 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+
+.no-padding {
+  padding-inline: 0;
+}
+
+.about-artist {
+  h1,
+  p {
+    color: v.$text-primary;
+  }
+
+  h1 {
+    font-weight: map.get(v.$font-weight, black);
+    font-size: 5rem;
+  }
+
+  p {
+    font-weight: map.get(v.$font-weight, medium);
+    font-size: map.get(v.$font-size, subtitle);
+  }
+}
+
+.artist-hero {
+  position: relative;
+  height: 42.5rem;
+  overflow: hidden;
+}
+
+.artist-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(7, 7, 7, 0) 0%,
+    rgba(7, 7, 7, 1) 100%
+  );
+}
+
+.artist-hero-content {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  right: 3rem;
+  @media (max-width:v.$bp-desktop){
+    bottom: 3rem;
+    left: 1.5rem;
+  }
+}
+
+.artist-meta-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width:v.$bp-desktop){
+    flex-direction: column;
+    align-items: flex-start;
+    gap:1rem;
+  }
+}
+
+.artist-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+
+  .icon-btn {
+    width: 4.041rem;
+    height: 4.041rem;
+    @include m.flex();
+  }
+}
+
+//radio buttons//
+.artist-tabs input[type="radio"] {
+  display: none;
+}
+
+.artist-navigation {
+  background-color: v.$bg-main;
+  padding: 1rem 1rem 1rem 4.6rem;
+  border-bottom: 1px solid rgba(137, 137, 137, 0.2);
+  @include m.flex($justify:space-between);
+  @media (max-width:v.$bp-desktop){
+    padding:1rem;
+  }
+
+  .artist-nav {
+    @include m.flex($justify: flex-start);
+    gap: 5rem;
+  }
+  
+
+  .artist-menu {
+    @include m.flex($justify: flex-start);
+    gap: 5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    @media (max-width:v.$bp-desktop){
+      li:nth-child(3), li:nth-child(4), li:nth-child(5),li:nth-child(7){
+        display: none;
+      }
+    }
+  }
+
+  li {
+    display: flex;
+  }
+
+  label {
+    display: inline-flex;
+    align-items: center;
+    padding: 1.6rem 0 1.4rem;
+    margin-bottom: -1rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: map.get(v.$font-size, subtitle);
+    font-weight: map.get(v.$font-weight, medium);
+    color: v.$text-secondary;
+    border-bottom: 0.2rem solid transparent;
+    transition: 0.3s;
+  }
+}
+
+.follow-btn {
+  background-color: rgba(v.$text-secondary, 0.25);
+  border: 0.2rem solid rgba(v.$text-secondary, 0.25);
+  border-radius: 4.4rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: map.get(v.$font-size, subtitle);
+  color: v.$text-primary;
+  &:hover{
+    background-color: v.$nav-active-button;
+    color:v.$bg-main;
+  }
+}
+
+//tabs
+.artist-tab-content {
+  display: none;
+}
+
+#artist-home:checked ~ #panel-home,
+#artist-albums:checked ~ #panel-albums,
+#artist-singles:checked ~ #panel-singles,
+#artist-compilations:checked ~ #panel-compilations,
+#artist-merch:checked ~ #panel-merch,
+#artist-about:checked ~ #panel-about,
+#artist-features:checked ~ #panel-features {
+  display: block;
+}
+
+#artist-home:checked ~ .artist-navigation .artist-menu label[for="artist-home"],
+#artist-albums:checked ~ .artist-navigation .artist-menu label[for="artist-albums"],
+#artist-singles:checked ~ .artist-navigation .artist-menu label[for="artist-singles"],
+#artist-compilations:checked ~ .artist-navigation .artist-menu label[for="artist-compilations"],
+#artist-merch:checked ~ .artist-navigation .artist-menu label[for="artist-merch"],
+#artist-about:checked ~ .artist-navigation .artist-menu label[for="artist-about"],
+#artist-features:checked ~ .artist-navigation .artist-menu label[for="artist-features"] {
+  color: v.$text-primary;
+  border-bottom-color: v.$primary-accent;
+}
+
+.artist-content {
+  padding: 3.2rem 1.6rem 0;
+}
+
+.track-placeholder, .track-placeholder-icon {
+  visibility: hidden;
+}
+
+.artist-pick{
+  @include m.flex($align:flex-start,$direction:column);
+  gap:3rem;
+}
+
+.artist-pick-card{
+  @include m.flex($justify:flex-start, $align:flex-start);
+  border-radius: 1rem;
+  padding-inline:1.2rem;
+  gap:1.3rem;
+  position:relative;
+  margin:3rem 2.6rem 0 0;
+
+  .shadow-card{
+    background-color: #18191E;
+    width:10.1rem;
+    height: 0.5rem;
+    border-top-left-radius: 0.725rem;
+    border-top-right-radius: 0.725rem;
+    position: absolute;
+    top: -0.5rem;
+    left: 2rem;
+  }
+}
+
+.artist-pick-overview {
+  @include m.flex($direction:column);
+  gap: 3rem;
+  
+}
+
+.artist-overview {
+  font-size: map.get(v.$font-size, paragraph);
+  color: v.$text-secondary;
+  @media (max-width: v.$bp-desktop) {
+      padding:1rem;
+    }
+}
+
+.artist-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  @media (max-width: v.$bp-desktop) {
+      justify-content: center;
+    }
+
+.artist-button {
+  padding: 1rem 2rem;
+  border-radius: 4.4rem;
+  border: 0.2rem solid rgba(137, 137, 137, 0.25);
+  color: v.$text-secondary;
+  width: fit-content;
+
+&:hover{
+    background-color: v.$nav-active-button;
+    color:v.$bg-main;
+  }
+}
+}
+
+.artist-content-main {
+  display: flex;
+  gap: 4rem;
+
+   table{
+    width: auto;  
+  }
+
+  @media (max-width:v.$bp-desktop){
+    flex-direction: column;
+  }
+
+}
+
+.top-tracks {
+  flex: 1;
+  min-width: 0;
+}
+
+.artist-pick {
+  @include m.flex($direction:column,$justify:flex-start);
+  width: 32rem;
+  flex-shrink: 0;
+  gap: 3rem;
+  @media (max-width:v.$bp-desktop){
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.tracks-section{
+  margin-top: 2rem;
+}

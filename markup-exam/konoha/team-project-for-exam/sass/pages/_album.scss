@@ -1,0 +1,308 @@
+.main-layout {
+  padding-bottom: 0;
+}
+
+.main-content {
+  width: 100%;
+  max-width: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+
+.album-section {
+  padding-bottom: 110px;
+  margin-bottom: 0;
+  margin-top: 0;
+  background: linear-gradient(180deg, rgba(51, 56, 66, 0.47) 0%, rgba(6, 6, 6, 0.47) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.album-layout {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 40px;
+  padding: 28px 30px 0 37px;
+}
+
+.album-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.album-title-main {
+  color: #e7ebf5;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 3%;
+  line-height: 100%;
+}
+
+.album-meta-line {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 3%;
+  line-height: 100%;
+}
+
+.album-meta-artist {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #e7ebf5;
+}
+
+.album-artist-link {
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.album-meta-muted {
+  color: #898989;
+}
+
+.album-actions-row {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.album-actions-row button {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  line-height: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.92;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.album-actions-row button:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.album-actions-row button svg [stroke]:not([stroke="none"]) {
+  transition: stroke 0.2s ease;
+}
+
+.album-actions-row button svg [fill]:not([fill="none"]) {
+  transition: fill 0.2s ease;
+}
+
+.album-actions-row button:hover:not(.album-play) svg [stroke]:not([stroke="none"]) {
+  stroke: #fff;
+}
+
+.album-actions-row button:hover:not(.album-play) svg [fill]:not([fill="none"]) {
+  fill: #fff;
+}
+
+.album-actions-row .album-play {
+  opacity: 1;
+}
+
+.track-head {
+  margin-top: 24px;
+  padding: 0 14px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  display: grid;
+  grid-template-columns: 46px minmax(0, 450px) 94px 36px;
+  color: #898989;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 3%;
+}
+
+.track-list {
+  margin-top: 10px;
+}
+
+.track-list li {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 450px) 94px 36px;
+  align-items: center;
+  gap: 0;
+  padding: 10px 14px;
+  color: #E0E0E0;
+  position: relative;
+  border-radius: 20px;
+  transition: background 0.2s ease;
+}
+
+.track-list li > span:first-child {
+  color: #898989;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.track-list li::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 16px;
+  background: #1ED760;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.track-list li:hover {
+  background: linear-gradient(90deg, rgba(33, 36, 42, 0.95) 0%, rgba(24, 27, 32, 0.95) 100%);
+  cursor: pointer;
+}
+
+.track-list li:hover::before {
+  opacity: 1;
+}
+
+.track-list li:hover > span:first-child {
+  color: transparent;
+}
+
+.track-list li:hover strong {
+  color: #fff;
+}
+
+.track-list strong {
+  color: #E0E0E0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 3%;
+}
+
+.track-list strong:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.track-song-link {
+  color: inherit;
+}
+
+.track-song-link:hover {
+  color: #fff;
+}
+
+.track-list p {
+  margin-top: 6px;
+  color: #898989;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 3%;
+}
+
+.track-list li > span:nth-child(3),
+.track-list li > span:last-child {
+  color: #898989;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 3%;
+}
+
+.track-like {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.track-like svg {
+  width: 40px;
+  height: 40px;
+}
+
+.track-like-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.track-like-input:checked + svg path {
+  stroke: #1ED760;
+  fill: #1ED760;
+}
+
+.album-side-cover {
+  width: 370px;
+  height: 370px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.album-side {
+  justify-self: end;
+}
+
+.album-side-tags {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.album-side-tags span {
+  border: 2px solid rgba(137, 137, 137, 0.25);
+  border-radius: 44px;
+  padding: 8px 16px;
+  color: #898989;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 3%;
+}
+
+.album-side-artists {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.album-side-artists li {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.album-side-artists img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.album-side-artists span {
+  color: #898989;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 3%;
+}
+

@@ -1,0 +1,31 @@
+
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.main-content .card-grid-artist-about{
+    display: flex;
+    justify-content:space-around;
+    // grid-template-columns: repeat(3, minmax(180px, 1fr));
+    // grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap:10rem;
+    margin: 3rem;
+  
+}
+.main-content .card-grid-artist-about .artist-about-like p{
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: variables.$cards-title;
+  transition: color 0.3s ease;
+  &:hover{
+    color: #817e7e;
+  }
+}
+
+.in-the-world img{
+  transition:rotate 0.3s ease;
+  &:hover{
+    transform:rotate(10deg);
+
+  }
+  
+}

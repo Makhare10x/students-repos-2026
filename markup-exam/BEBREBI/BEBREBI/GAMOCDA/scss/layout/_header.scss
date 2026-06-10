@@ -1,0 +1,108 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 54px;
+  width: 100%;
+  background-color: variables.$primary-color;
+  border-bottom: 1px solid rgba(32, 32, 32, 1);
+}
+
+.header-left {
+  display: flex;
+  gap: 100px;
+  margin-left: variables.$main-padding;
+
+  .people-icon:last-child {
+    display: none;
+  }
+  .search {
+    display: none;
+  }
+}
+.header-left input {
+  background-color: variables.$primary-color;
+  border: none;
+  color: rgba(137, 137, 137, 1);
+}
+.header-left input:focus {
+  outline: none;
+}
+.header-left input:hover {
+  background-color: variables.$primary-hover-color;
+}
+
+.header-left div {
+  display: flex;
+  width: 210px;
+  align-items: center;
+  gap: 10px;
+  @include mixins.paragraph-header-aside();
+}
+.header-left div:hover {
+  background-color: variables.$primary-hover-color;
+  border-radius: 4px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: variables.$main-gap;
+  margin-right: variables.$main-padding;
+}
+
+@media (max-width: 768px) {
+  .header {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 410px;
+    height: 95px;
+    background: linear-gradient(
+      to top,
+      rgba(6, 6, 6, 1) 50%,
+      rgba(17, 17, 17, 0)
+    );
+  }
+  .header-left {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding-left: 10px;
+    .people-icon {
+      display: inline;
+      text-align: center;
+    }
+
+    .people-icon:last-child {
+      display: inline;
+      p {
+        position: relative;
+        top: 8px;
+      }
+    }
+    span {
+      display: none;
+    }
+    .search {
+      display: inline;
+    }
+  }
+  .header-right {
+    display: none;
+  }
+
+  .header-left input {
+    display: none;
+  }
+
+  .header-left div {
+    width: 40.41px;
+  }
+}

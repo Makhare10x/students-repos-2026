@@ -1,0 +1,65 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+@use "sass:map";
+
+// styles for album sections
+.recommendations-section, .favorite-artists-section, .for-you-section, .audiobooks-section, .recommendations-section, .podcasts-section, .episodes-section {
+    margin-top: 3rem;
+    flex: 0 0 auto;
+}
+
+.album-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: v.$text-primary;
+    .section-title{
+            margin-bottom: 1.5rem;
+    }
+}
+
+.icons-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    position: relative;
+       img {
+            padding: 1rem 0.7rem;
+        }
+}
+
+.right {
+    transform: rotate(180deg);
+}
+
+.albums-container {
+    display: flex;
+    gap: 1.1rem;
+    width: clamp(39rem, calc(39rem + 105 * ((100vw - 39rem) / 138.1)), 144rem);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none; 
+}
+
+.artists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform (0.3s);
+    img {
+        width: clamp(14rem, 12.8rem + 4.8vw, 17rem);
+        border-radius: 50%; 
+        position: relative;
+    }
+        span {
+            font-size: map.get(v.$font-size, subtitle);
+            color: v.$text-primary;
+        }
+            //&:hover {
+           //     transform: scale(1.05);
+          //  }
+
+}

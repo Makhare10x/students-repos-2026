@@ -1,0 +1,284 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../base/base";
+@use "../base/reset";
+
+.main-content {
+  background: $color-bg-main;
+  color: $color-fg-primary;
+  padding: 16px 0px;
+  margin-bottom: 81px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+}
+
+.yourtopmixes-card,
+.madeforyou-card {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-cover {
+
+  width: 170px;
+  height: 170px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.main-content-btns {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  overflow-x: auto;
+  padding: 4px 14px;
+
+
+  button {
+    flex: 0 0 auto;
+    font-size: $font-size-sub;
+    color: $color-fg-primary;
+    background: $color-bg-secondary;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background .15s ease, border-color .15s ease;
+
+    &:hover {
+      background: rgba(146, 138, 138, 0.1);
+      border-color: rgba(189, 174, 174, 0.16);
+    }
+  }
+
+  
+  .all-btn {
+    display: none;
+    }
+}
+
+.mobile-picks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 8px 15px;
+}
+
+.mobile-picks-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 10px;
+
+  min-height: 64px;
+}
+
+.mobile-picks-cover {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex: 0 0 auto;
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.mobile-picks-content {
+  min-width: 0;
+
+  h4 {
+    font-size: $font-size-p;
+    font-weight: 700;
+    margin: 0;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  p {
+    font-size: $font-size-small;
+    color: $color-fg-secondary;
+    margin: 4px 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.madeforyou-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px;
+}
+
+h2 {
+        font-size: $font-size-h3;
+        color: $color-fg-primary;
+    }
+
+.arrow-left {
+        display: none;
+    }
+
+.arrow-right {
+        display: none;
+    }
+    
+.madeforyou-card-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0px 14px;
+
+
+  overflow-x: auto;          
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory; 
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+
+  .madeforyou-card {
+    height: 100%;
+  }
+}
+
+
+.card-content{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 10px 0px;
+        
+        h3, span {
+            font-size: $font-size-sub;
+            color: $color-fg-primary;
+        }
+
+        P {
+           font-size: $font-size-small;
+           color: $color-fg-secondary;
+        }
+
+    }
+
+
+.yourtopmixes-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px;
+}
+
+.yourtopmixes-card-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0px 14px;
+
+  overflow-x: auto;          
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory; 
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+
+  .yourtopmixes-card {
+    height: 100%;
+  }
+}
+
+
+.Yourfavoriteartists-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px;
+}
+
+.Yourfavoriteartists-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0px 14px;
+
+  overflow-x: auto;          
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory; 
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+
+  img {
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+  }
+
+  .card-content {
+    display: flex;
+    justify-content: center;
+
+    h3 {
+      color: $color-fg-primary;
+    }
+  }
+}
+
+
+
+.Yourfavoriteartists-card {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;     
+  flex-wrap: nowrap;       
+  width: 170px;
+}
+@media (min-width: 500px) {
+  
+    .main-content-btns {
+    .all-btn {
+      display: unset; 
+      background: $color-fg-primary;
+      color: $color-bg-primary;
+
+      &:hover {
+        background: $color-fg-primary;
+        border-color: transparent;
+        cursor: default;
+      }
+    }
+  }
+
+  .mobile-picks {
+    display: none;
+  }
+
+.arrow-left {
+      display: unset;
+    }
+
+    .arrow-right {
+      display: unset;
+    }
+
+}

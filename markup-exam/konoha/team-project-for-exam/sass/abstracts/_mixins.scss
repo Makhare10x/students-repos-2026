@@ -1,0 +1,32 @@
+
+//Flex-center
+@mixin flex-center {
+  display:flex;
+  align-items:center;
+}
+
+// Hover effects
+@mixin hover {
+  &:hover {
+    @content;
+  }
+}
+
+//Flex-between
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+// Icon button base
+@mixin icon-button($opacity: 0.92) {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  line-height: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: $opacity;
+}

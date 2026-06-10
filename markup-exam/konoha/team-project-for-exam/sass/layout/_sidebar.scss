@@ -1,0 +1,75 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as *;
+
+.sidebar{
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  color: vars.$secondary-font-color;
+
+  & a{
+    @include flex-center; 
+    gap: 10px;
+    color: inherit;
+  }
+}
+
+.sidebar-link {
+  display: flex;
+
+
+  .playlist-btn {
+    @include flex-center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px 0;
+
+    .dropdown-img {
+      transition: transform 0.3s ease;
+    }
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .dropdown-playlist {
+    display: none;
+    list-style: none;
+    padding-left: 30px;
+    margin: 5px 0;
+
+    li {
+    align-items: center;
+    gap: 5px; 
+    padding: 2px 0;
+    }
+  }
+
+  input[type="checkbox"]:checked ~ .dropdown-playlist {
+    display: block;
+  }
+
+  input[type="checkbox"]:checked + .playlist-btn .dropdown-img {
+    transform: rotate(90deg);
+  }
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 259px 1fr;
+  gap: 20px;
+  width: 100%;
+  min-height: 100vh;
+  align-items: start;
+}
+
+@media (max-width: 1200px) {
+  .sidebar{
+    display: none;
+  }
+
+  .container{
+    grid-template-columns: 1fr;
+  }
+}

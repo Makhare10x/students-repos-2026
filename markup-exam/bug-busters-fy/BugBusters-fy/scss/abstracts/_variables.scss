@@ -1,0 +1,86 @@
+@use "../abstracts/fonts";
+
+// Font
+$ff-satoshi: "Satoshi-Regular";
+$ff-satoshi-black: "Satoshi-Black";
+$ff-satoshi-medium: "Satoshi-Medium";
+$ff-satoshi-bold: "Satoshi-Bold";
+// Font size
+$fs-primary: 1.4rem;
+
+// Colors
+$bg-primary-desk: #060606;
+$bg-primary-mob: #111111;
+
+$bg-secondary-dark: #202020;
+$bg-secondary-light: #333848;
+
+// color for text, svg and bg-color
+$color-primary: #898989;
+
+$color-active-desk: #e0e0e0;
+$color-active-mob: #898989;
+
+$color-active: #111111;
+
+$color-accent: #1ed760;
+
+$library-colors: (
+  "dark-green": #0c391c,
+  "grey": #898989,
+  "darccream": #a69174,
+  "midblue": rgb(98, 120, 177),
+  "saladgreen": rgb(117, 164, 150),
+  "lightgreen": rgb(149, 230, 211),
+  "pink": rgb(244, 184, 189),
+  "grassgreen": #c3e7b7,
+  "leafgreen": #8fd478,
+  "yellow": #cfc128,
+  "oceanblue": #64a399,
+);
+
+$topmixes-colors: (
+  "lime": #ccf665,
+  "sunlight": #f9e72c,
+  "mint": #9bf0e2,
+  "indigo": #6f86ff,
+  "rose-petal": #ffcbd4,
+  "apricot": #ffc668,
+  "forest": #27856b,
+  "raspberry": #dd138b,
+);
+
+$foryou-colors: (
+  "magenta": #ce6e9a,
+  "pink": #f4b8bd,
+  "pink2": #f37fa6,
+  "cyan": #95e6d3,
+  "red": #e91429,
+  "green": #c3e7b7,
+  "blue": #a0bec8,
+  "yellow": #fdd87d,
+  "linen": #d4b2a9,
+  "cream": #deb075,
+  "azura": #8dc3b5,
+  "purple": #a6bad3,
+  "salad": #c3e7b7,
+);
+
+$search-colors: (
+  "dark-blue": #1e3264,
+  "orange": #ba5d07,
+  "light-purple": #8d67ab,
+  "dark-purple": #503750,
+  "dark-pink": #b02897,
+  "dark-grey": #777777,
+  "light-green": #148a08,
+  "darkgreen": #006450,
+  "red": #e91429,
+  "light-blue": #537aa1,
+);
+$albums-colors: (
+  "alb-cream": #a69174,
+  "alb-green": #75a496,
+  "alb-grey": #bbb4d8,
+  "alb-blu": #6278b1,
+);

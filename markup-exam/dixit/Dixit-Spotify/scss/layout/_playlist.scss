@@ -1,0 +1,392 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+
+.playlist-album {
+    padding: 2rem 1.6rem;
+    padding-bottom: 12rem;
+    background: linear-gradient(180deg, #1f253d 0%, v.$bg-media 40%, v.$bg-media 100%);
+    min-height: 100vh;
+    color: v.$primary;
+    
+    .hide-on-mobile {
+        @media (max-width: 990px) {
+            display: none !important;
+        }
+    }
+
+    .hide-on-desktop {
+        @media (min-width: 991px) {
+            display: none !important;
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        @media (min-width: 991px) {
+            display: grid;
+            grid-template-columns: 1fr 34rem;
+            gap: 4rem;
+        }
+    }
+
+    .playlist-main {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    .playlist-header {
+        @include m.flex-center($direction: row, $justify: space-between, $align: center);
+        gap: 1.6rem;
+
+        .label-search {
+            position: relative;
+            flex-grow: 1;
+
+            input[type="search"] {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.1);
+                border: none;
+                border-radius: 0.5rem;
+                padding: 0.8rem 1.2rem 0.8rem 3.6rem;
+                color: v.$primary;
+                font-family: v.$font-base;
+                font-size: map.get(v.$font-sizes, "body-sm");
+                outline: none;
+
+                &::placeholder {
+                    color: v.$second-primary;
+                }
+            }
+
+            img {
+                position: absolute;
+                left: 1.2rem;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 1.6rem;
+                height: 1.6rem;
+                opacity: 0.7;
+            }
+        }
+
+        > button {
+            @include m.btn-reset;
+            cursor: pointer;
+
+            img {
+                width: 1.8rem;
+                height: 1.8rem;
+                opacity: 0.8;
+                @include m.apply-icon-hover;
+            }
+        }
+    }
+
+    .playlist-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        @media (min-width: 991px) {
+            margin-bottom: 2rem;
+        }
+
+        figure {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+
+            img {
+                width: 100%;
+                max-width: 26rem; 
+                height: auto;
+                margin: 0 auto;
+                border-radius: 0.8rem;
+                box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.5);
+            }
+        }
+        
+        .playlist-title-info {
+            h3 {
+                font-size: map.get(v.$font-sizes, "title");
+                font-weight: map.get(v.$font-weights, "bold");
+                color: v.$primary;
+
+                @media (min-width: 991px) {
+                    font-size: 5.6rem;
+                    line-height: 1.1;
+                    margin-bottom: 1.6rem;
+                }
+            }
+            p {
+                font-size: map.get(v.$font-sizes, "body-sm");
+                color: v.$second-primary;
+                display: flex;
+                align-items: center;
+                gap: 0.4rem;
+
+                @media (min-width: 991px) {
+                    font-size: map.get(v.$font-sizes, "body");
+                }
+
+                span {
+                    color: v.$primary;
+                    font-weight: map.get(v.$font-weights, "regular");
+                }
+            }
+        }
+    }
+
+    .playlist-controllers {
+        @include m.flex-center($direction: row, $justify: space-between, $align: center);
+        margin-top: 0.4rem;
+
+        button {
+            @include m.btn-reset;
+            cursor: pointer;
+            @include m.apply-icon-hover;
+        }
+
+        .playlist-leftctrl {
+            display: flex;
+            gap: 2.2rem;
+            align-items: center;
+
+            .playlist-icon {
+                width: 2.4rem;
+                height: 2.4rem;
+                opacity: 0.8;
+            }
+
+            .play-btn-desktop {
+                .playlist-icon {
+                    width: 5rem;
+                    height: 5rem;
+                    opacity: 1;
+                    filter: none !important;
+                }
+            }
+        }
+
+        .playlist-rightctrl {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+
+            @media (min-width: 991px) {
+                justify-content: flex-end;
+            }
+
+            .playlist-icon {
+                width: 2.4rem;
+                height: 2.4rem;
+                opacity: 0.8;
+            }
+
+            button:last-child {
+                @media (max-width: 990px) {
+                    .playlist-icon {
+                        width: 5rem;
+                        height: 5rem;
+                        opacity: 1;
+                        filter: none !important; 
+                    }
+                    transition: transform 0.2s;
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+
+    .playlist-table-header {
+        display: grid;
+        grid-template-columns: 4rem 1fr 1fr 8rem 4rem;
+        gap: 1.6rem;
+        align-items: center;
+        padding: 0.8rem 0;
+        margin-top: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        span {
+            font-size: map.get(v.$font-sizes, "body-sm");
+            color: v.$second-primary;
+            font-weight: map.get(v.$font-weights, "regular");
+            text-transform: capitalize;
+        }
+    }
+
+    .playlist-songs {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+
+        article {
+            @include m.flex-center($direction: row, $justify: space-between, $align: center);
+            cursor: pointer;
+            padding: 0.8rem 1.6rem;
+            margin: 0 -1.6rem;
+            border-radius: 0.4rem;
+
+            @media (min-width: 991px) {
+                display: grid;
+                grid-template-columns: 4rem 1fr 1fr 8rem 4rem;
+                gap: 1.6rem;
+                margin: 0;
+                padding: 0.8rem 0;
+            }
+
+            .song-index {
+                color: v.$second-primary;
+                font-size: map.get(v.$font-sizes, "body");
+            }
+
+            figure {
+                display: flex;
+                align-items: center;
+                gap: 1.4rem;
+                min-width: 0;
+
+                img {
+                    width: 5.2rem;
+                    height: 5.2rem;
+                    border-radius: 0.4rem;
+                    object-fit: cover;
+                }
+
+                figcaption {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.4rem;
+                    min-width: 0;
+
+                    p {
+                        font-family: v.$font-base;
+                        font-size: map.get(v.$font-sizes, "body");
+                        font-weight: map.get(v.$font-weights, "regular");
+                        color: v.$primary;
+                        margin: 0;
+                        @include m.text-wrap;
+                    }
+
+                    span {
+                        font-size: map.get(v.$font-sizes, "body-sm");
+                        color: v.$second-primary;
+                        @include m.text-wrap;
+                    }
+                }
+            }
+
+            .song-album, .song-duration {
+                color: v.$second-primary;
+                font-size: map.get(v.$font-sizes, "body-sm");
+                @include m.text-wrap;
+            }
+
+            > button {
+                @include m.btn-reset;
+                cursor: pointer;
+                padding: 0.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                    opacity: 0.7;
+                    @include m.apply-icon-hover;
+                }
+            }
+
+            .song-more {
+                @media (min-width: 991px) {
+                    display: none;
+                }
+            }
+            
+            &:hover, &:active {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+    }
+
+    .playlist-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        padding-top: 2rem;
+
+        .sidebar-cover {
+            img {
+                width: 32rem;
+                height: 32rem;
+                border-radius: 0.8rem;
+                box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.5);
+                margin-bottom: 2.4rem;
+            }
+
+            .sidebar-cover-title {
+                display: none;
+            }
+        }
+
+        .sidebar-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+
+            span {
+                padding: 0.6rem 1.6rem;
+                background-color: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 2rem;
+                color: v.$primary;
+                font-size: map.get(v.$font-sizes, "body-sm");
+                font-weight: map.get(v.$font-weights, "regular");
+                cursor: pointer;
+                transition: background-color 0.2s;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                }
+            }
+        }
+
+        .sidebar-related {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+
+            figure {
+                display: flex;
+                align-items: center;
+                gap: 1.6rem;
+                cursor: pointer;
+
+                img {
+                    width: 4.8rem;
+                    height: 4.8rem;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                figcaption {
+                    color: v.$primary;
+                    font-size: map.get(v.$font-sizes, "body");
+                    font-weight: map.get(v.$font-weights, "medium");
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}

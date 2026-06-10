@@ -1,0 +1,65 @@
+@use "../abstracts/variables";
+
+.aside-bar {
+    width: 100%;
+    max-width: 260px;
+    min-width: 150px;
+    &__header {
+        padding: 15px 0 15px 15px;
+    }
+    &__list {
+        height: 100vh;
+        margin-top: 2px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        border-radius: 8px;
+        .aside-bar__icon--active {
+            img:last-child {
+                display: none;
+            }
+        }        
+        &:hover {
+            background-color: variables.$bg-color-hover;
+            .aside-bar__icon--active {
+                color: variables.$text-color-primary;
+                img:last-child {
+                    display: block;
+                }
+                    img:first-child {
+                    display: none;
+                }
+            }
+        }
+        
+    }
+    
+    &__item {
+        overflow: hidden;
+        padding: 15px 0 15px 15px;
+        &:hover {
+            background-color: variables.$bg-list-color-hover;
+            border-radius: 5px;
+        }
+    }
+    &__link {
+        display: grid;
+        grid-template-columns: 28px 1fr;
+        align-items: center;
+        gap: 12px;
+        color: variables.$text-color-secondary;
+    }
+}
+
+.aside-bar__item--arrow-right {
+    background-image: url('../assets/icons/icon_arrow_right.svg');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 95% center;
+}
+
+@media screen and (max-width: 770px) {
+    .aside-bar {
+        display: none;
+    }
+}

@@ -1,0 +1,27 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  overflow-x: auto;
+  padding: 0.8rem 0;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@include respond(tablet) {
+}
+
+@include respond(desktop) {
+  .filters {
+    display: flex;
+    gap: 1rem;
+    padding: 0 0 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+}

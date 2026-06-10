@@ -1,0 +1,356 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 54px;
+  display: flex;
+}
+
+.artist-page {
+  width: 100%;
+  min-height: 100vh;
+  border-radius: 8px;
+
+  padding-bottom: 60px;
+  border: 1px solid #89898933;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.artist-banner {
+  width: 100%;
+  height: 430px;
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%),
+    url("../../assets/artists_img/image171.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding-bottom: 30px;
+  padding-inline: 36px;
+}
+
+.artist-banner-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.artist-banner-info h2 {
+  @include text-style($size: 50px, $color: #e0e0e0, $spacing: 0%);
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.artist-banner-info span {
+  @include text-style($color: #e0e0e0);
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.artist-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.artist-banner-actions img {
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+.artist-banner-actions img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.3);
+}
+
+.artist-banner-actions img:active {
+  transform: scale(0.8);
+}
+
+.artist-banner-actions img[alt="Play"] {
+  &:hover {
+    filter: drop-shadow(0 0 8px #1db954);
+  }
+}
+
+.artist-banner-actions button {
+  height: 40px;
+  padding-inline: 20px;
+  background-color: #89898940;
+  border: none;
+  border-radius: 44px;
+  @include text-style($color: #e0e0e0);
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.artist-banner-actions button:hover {
+  background-color: rgba(137, 137, 137, 0.4);
+  transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// bottom section
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  padding: 10px 20px;
+  display: inline-block;
+  color: #898989;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+#home-tab:checked + label,
+#albums-tab:checked + label,
+#about-tab:checked + label {
+  color: #3e8d94;
+  border-bottom: 2px solid #3e8d94;
+}
+
+.content {
+  display: none;
+  padding: 30px 10px;
+  color: white;
+}
+
+#home-tab:checked ~ #home-content,
+#albums-tab:checked ~ #albums-content,
+#about-tab:checked ~ #about-content {
+  display: flex;
+}
+.song-list {
+  padding-top: 10px;
+}
+.song-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+
+  .song-info {
+    flex: 1;
+  }
+}
+
+.song-item:hover {
+  background-color: #3e8d94;
+  border-radius: 6px;
+}
+
+.home-content h3 {
+  @include text-style($size: 20px, $color: #e0e0e0);
+}
+
+#home-content {
+  flex-direction: column;
+  justify-content: space-between;
+  padding-inline: 25px;
+  gap: 20px;
+}
+
+.artists-pictures {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.artists-pictures h3 {
+  @include text-style($size: 20px, $color: #e0e0e0);
+}
+
+.best-daft {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  padding: 20px 11px;
+  border-radius: 10px;
+  gap: 10px;
+  background-color: #18191e4d;
+}
+
+.best-daft p {
+  @include text-style();
+  padding-top: 20px;
+}
+
+.best-daft img {
+  border-radius: 10px;
+}
+
+.artists-pictures img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
+
+.content#about-content {
+  min-height: 400px;
+  overflow-y: auto;
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+
+  p {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+    color: #e0e0e0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(20, 20, 20, 1);
+      animation: typewriterEffect 10s linear forwards;
+    }
+  }
+
+  #about-tab:checked ~ & p::after {
+    animation: typewriterEffect 10s linear forwards;
+  }
+}
+
+@keyframes typewriterEffect {
+  0% {
+    top: 0;
+    height: 100%;
+  }
+
+  100% {
+    top: 100%;
+    height: 0%;
+  }
+}
+#albums-content {
+  width: 100%;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-inline: 25px;
+}
+.albums-card {
+  width: 170px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.albums-card__img-wrapper {
+  position: relative;
+  z-index: 1;
+}
+.albums-card__img-wrapper img {
+  width: 100%;
+  height: 170px;
+  display: block;
+  border-radius: 8px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.albums-card__img-wrapper:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.507);
+}
+
+.albums-card__img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 6px;
+  right: 6px;
+  height: 100%;
+  background: #d0d4d48e;
+  border-radius: 8px;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.albums-card__img-wrapper::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 12px;
+  right: 12px;
+  height: 100%;
+  background: #f3f3f38e;
+  border-radius: 8px;
+  z-index: -2;
+  opacity: 0.3;
+}
+.albums-card__info-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.albums-card__info-wrapper p {
+  @include text-style($color: #e0e0e0 !important);
+}
+.albums-card__info-wrapper span {
+  @include text-style();
+}
+.albums-card p {
+  @include text-style($size: 12px);
+}
+
+@media (min-width: 769px) {
+  .artist-page {
+    width: calc(100% - 262px);
+  }
+}
+@media (min-width: 1024px) {
+  .artist-banner {
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  #home-content {
+    flex-direction: row;
+    gap: 0;
+  }
+}

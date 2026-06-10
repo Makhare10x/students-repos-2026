@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Markup Project - Git Blame Society</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+</head>
+
+<body class="app-layout">
+
+<!--sidebar-->
+    <aside class="sidebar">
+        <div class="library-header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.14307 3.14307V20.4299" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8.9054 3.14307V20.4299" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14.6676 20.4299V3.14307L20.4299 7.13234V20.4299H14.6676Z" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <a href="./my-library.html">My Library</a>
+        </div>
+        <nav class="library-nav">
+            <ul class="library-menu">
+            <!-- Pins False dropdown -->
+                <li>
+                    <input type="checkbox" id="pins">
+                    <div class="nav-row">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.6064 2.51756L11.0886 0.99972M12.6064 2.51756L5.90602 9.21795C5.78291 9.34106 5.62211 9.41937 5.44928 9.44038L2.69598 9.77507C2.05138 9.85343 1.78008 10.6398 2.23924 11.099L6.16779 15.0275M12.6064 2.51756L18.6778 8.58889M20.1956 10.1067L18.6778 8.58889M18.6778 8.58889L11.9774 15.2893C11.8543 15.4124 11.7759 15.5732 11.7549 15.746L11.4202 18.4993C11.3419 19.1439 10.5555 19.4152 10.0963 18.9561L6.16779 15.0275M6.16779 15.0275L0.999994 20.1953" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Pins</span>
+                        <label for="pins" class="arrow">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.73576 13.4702L11.7871 8.41886L6.73576 3.36751" stroke="currentColor" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </label>
+                    </div>
+                </li>
+
+                <!-- Playlists dropdown -->
+                <li>
+                    <input type="checkbox" id="playlists" checked>
+                    <div class="nav-row">
+                        <svg width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="20" height="20" rx="3" transform="matrix(1 0 0 -1 1 23.75)" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M3 3.75H19C19 2.09315 17.6569 0.75 16 0.75H6C4.34315 0.75 3 2.09315 3 3.75Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M11.5126 14.7059V9.375C11.5126 9.02982 11.7924 8.75 12.1376 8.75H14.254M11.5126 14.7059V17.7229C11.5126 18.2777 11.1187 18.7612 10.564 18.7489C9.60204 18.7275 8.25403 18.3937 8.25403 16.6912C8.25403 14.0441 11.5126 14.7059 11.5126 14.7059Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <a href="./playlist.html">Playlists</a>
+                        <label for="playlists" class="arrow">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.73576 13.4702L11.7871 8.41886L6.73576 3.36751" stroke="currentColor" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </label>
+                    </div>
+                    <ul class="submenu">
+                        <li>
+                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="12" height="12" rx="1.8" transform="matrix(1 0 0 -1 0.599976 14.25)" stroke="#898989" stroke-width="1.2" stroke-linejoin="round"/>
+                            <path d="M6.83444 8.80216V5.82422C6.83444 5.61711 7.00233 5.44922 7.20943 5.44922H8.59998M6.83444 8.80216V10.8238C6.83444 11.159 6.59555 11.4487 6.26032 11.4492C5.59827 11.4502 4.59998 11.2597 4.59998 10.1016C4.59998 8.36901 6.83444 8.80216 6.83444 8.80216Z" stroke="#898989" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1.79999 2.25H11.4C11.4 1.25589 10.5941 0.45 9.59999 0.45H3.59999C2.60587 0.45 1.79999 1.25589 1.79999 2.25Z" stroke="#898989" stroke-width="0.9" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="card-subtitle">Chill Stuff</span>
+                        </li>
+                        <li>
+                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="12" height="12" rx="1.8" transform="matrix(1 0 0 -1 0.599976 14.25)" stroke="#898989" stroke-width="1.2" stroke-linejoin="round"/>
+                            <path d="M6.83444 8.80216V5.82422C6.83444 5.61711 7.00233 5.44922 7.20943 5.44922H8.59998M6.83444 8.80216V10.8238C6.83444 11.159 6.59555 11.4487 6.26032 11.4492C5.59827 11.4502 4.59998 11.2597 4.59998 10.1016C4.59998 8.36901 6.83444 8.80216 6.83444 8.80216Z" stroke="#898989" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1.79999 2.25H11.4C11.4 1.25589 10.5941 0.45 9.59999 0.45H3.59999C2.60587 0.45 1.79999 1.25589 1.79999 2.25Z" stroke="#898989" stroke-width="0.9" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="card-subtitle">Rock N Roll</span>
+                        </li>
+                        <li>
+                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="12" height="12" rx="1.8" transform="matrix(1 0 0 -1 0.599976 14.25)" stroke="#898989" stroke-width="1.2" stroke-linejoin="round"/>
+                            <path d="M6.83444 8.80216V5.82422C6.83444 5.61711 7.00233 5.44922 7.20943 5.44922H8.59998M6.83444 8.80216V10.8238C6.83444 11.159 6.59555 11.4487 6.26032 11.4492C5.59827 11.4502 4.59998 11.2597 4.59998 10.1016C4.59998 8.36901 6.83444 8.80216 6.83444 8.80216Z" stroke="#898989" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1.79999 2.25H11.4C11.4 1.25589 10.5941 0.45 9.59999 0.45H3.59999C2.60587 0.45 1.79999 1.25589 1.79999 2.25Z" stroke="#898989" stroke-width="0.9" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="card-subtitle">The Jux Box</span>
+                        </li>
+                        <li>
+                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="12" height="12" rx="1.8" transform="matrix(1 0 0 -1 0.599976 14.25)" stroke="#898989" stroke-width="1.2" stroke-linejoin="round"/>
+                            <path d="M6.83444 8.80216V5.82422C6.83444 5.61711 7.00233 5.44922 7.20943 5.44922H8.59998M6.83444 8.80216V10.8238C6.83444 11.159 6.59555 11.4487 6.26032 11.4492C5.59827 11.4502 4.59998 11.2597 4.59998 10.1016C4.59998 8.36901 6.83444 8.80216 6.83444 8.80216Z" stroke="#898989" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1.79999 2.25H11.4C11.4 1.25589 10.5941 0.45 9.59999 0.45H3.59999C2.60587 0.45 1.79999 1.25589 1.79999 2.25Z" stroke="#898989" stroke-width="0.9" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="card-subtitle">Selected Linkin Park</span>
+                        </li>
+                        <li>
+                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="12" height="12" rx="1.8" transform="matrix(1 0 0 -1 0.599976 14.25)" stroke="#898989" stroke-width="1.2" stroke-linejoin="round"/>
+                            <path d="M6.83444 8.80216V5.82422C6.83444 5.61711 7.00233 5.44922 7.20943 5.44922H8.59998M6.83444 8.80216V10.8238C6.83444 11.159 6.59555 11.4487 6.26032 11.4492C5.59827 11.4502 4.59998 11.2597 4.59998 10.1016C4.59998 8.36901 6.83444 8.80216 6.83444 8.80216Z" stroke="#898989" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1.79999 2.25H11.4C11.4 1.25589 10.5941 0.45 9.59999 0.45H3.59999C2.60587 0.45 1.79999 1.25589 1.79999 2.25Z" stroke="#898989" stroke-width="0.9" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="card-subtitle">Vibe</span>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                <a href="./liked-songs.html" class="nav-row">
+                    <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.1336 2.36517L11.2698 4.17112L9.40593 2.36518C7.45157 0.471504 4.31642 0.57606 2.49256 2.59574C0.7228 4.55551 0.47915 7.49092 2.08172 9.58963C2.27865 9.84753 2.47228 10.0945 2.65656 10.3206C3.823 11.7515 6.36801 14.2505 7.64315 15.5916C8.58524 16.5824 9.43207 17.4087 10.07 18.0106C10.7438 18.6462 11.7837 18.6323 12.4587 17.9981C13.6351 16.8927 15.439 15.171 16.7097 13.8346C17.9848 12.4935 18.7165 11.7515 19.883 10.3206C20.0672 10.0945 20.2609 9.84753 20.4578 9.58963C22.0604 7.49092 21.8167 4.55551 20.047 2.59574C18.2231 0.57606 15.088 0.471502 13.1336 2.36517Z" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Liked songs</span>
+                </a>
+                </li>
+
+                <li>
+                    <a href="" class="nav-row">
+                        <svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.15979 3.47961V19.7834C1.15979 20.7268 2.22612 21.2756 2.99379 20.7272L7.93045 17.201C8.737 16.6249 9.82049 16.6249 10.627 17.201L15.5637 20.7272C16.3314 21.2756 17.3977 20.7268 17.3977 19.7834V3.47961C17.3977 2.19848 16.3591 1.15991 15.078 1.15991H3.47949C2.19836 1.15991 1.15979 2.19848 1.15979 3.47961Z" stroke="currentColor" stroke-width="2.3197"/>
+                        </svg>
+                        <span>Saves</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="" class="nav-row">
+                        <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11.1131" cy="11.1131" r="2.75528" stroke="currentColor" stroke-width="2.02054"/>
+                        <path d="M11.113 21.2157C5.53339 21.2157 1.01025 16.6925 1.01025 11.113C1.01025 5.53339 5.53339 1.01025 11.113 1.01025C14.0256 1.01025 16.6503 2.24282 18.4941 4.21481" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round"/>
+                        <path d="M20.2036 8.48596V16.063M20.2036 16.063V19.826C20.2036 20.5751 19.6701 21.2285 18.9213 21.2049C17.6831 21.1659 15.9941 20.7218 15.9941 18.5887C15.9941 15.2211 20.2036 16.063 20.2036 16.063Z" stroke="currentColor" stroke-width="1.68378" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Albums</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="" class="nav-row">
+                        <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23 16.5C23 18.1569 21.6569 19.5 20 19.5H4C2.34315 19.5 1 18.1569 1 16.5V4.3V4C1 2.34314 2.34315 1 4 1H8.35962C9.38179 1 10.3336 1.52046 10.8853 2.381L11.2301 2.919C11.7818 3.77954 12.7336 4.3 13.7558 4.3H20C21.6569 4.3 23 5.64315 23 7.3V16.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Folders</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./podcasts.html" class="nav-row">
+                        <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.3611 5.45512V11.3846C13.3611 13.8406 15.3521 15.8316 17.8082 15.8316C20.2642 15.8316 22.2552 13.8406 22.2552 11.3846V10.3963V5.45513C22.2552 2.99908 20.2642 1.00806 17.8082 1.00806C15.3521 1.00806 13.3611 2.99907 13.3611 5.45512Z" stroke="currentColor" stroke-width="2.016" stroke-linecap="round"/>
+                        <path d="M9.40808 11.8784C9.40808 11.8784 10.3963 19.7843 17.8081 19.7843M17.8081 19.7843C25.2199 19.7843 26.2081 11.8784 26.2081 11.8784M17.8081 19.7843V23.2432" stroke="currentColor" stroke-width="2.016" stroke-linecap="round"/>
+                        <path d="M1.00806 6.0481H6.88807" stroke="currentColor" stroke-width="2.016" stroke-linecap="round"/>
+                        <path d="M1.00806 12.7681H5.20807" stroke="currentColor" stroke-width="2.016" stroke-linecap="round"/>
+                        <path d="M1.00806 19.488H6.88807" stroke="currentColor" stroke-width="2.016" stroke-linecap="round"/>
+                        </svg>
+                        <span>Podcasts</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="" class="nav-row">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 20.4829L2.4624 18.1003C1.59791 17.8591 1 17.0715 1 16.1739V3.0014C1 1.71383 2.19893 0.761731 3.45303 1.05338L9.45303 2.44873C10.3589 2.6594 11 3.4667 11 4.39674V20.4829ZM11 20.4829L19.5376 18.1003C20.4021 17.8591 21 17.0715 21 16.1739V3.0654C21 1.75774 19.7657 0.801847 18.4996 1.129L13.8 2.34338" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Audiobooks</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./artist-page.html" class="nav-row">
+                        <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.1541 6.73524C15.1541 8.5951 13.6464 10.1028 11.7865 10.1028C9.92666 10.1028 8.41895 8.5951 8.41895 6.73524C8.41895 4.87539 9.92666 3.36768 11.7865 3.36768C13.6464 3.36768 15.1541 4.87539 15.1541 6.73524Z" stroke="currentColor" stroke-width="2.02054"/>
+                        <path d="M8.41891 13.4705L4.86713 15.8383C3.93028 16.4629 3.36755 17.5143 3.36755 18.6403V20.3178C3.36755 21.1858 4.07115 21.8894 4.93909 21.8894H11.7865" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19.3635 6.73535V14.3124M19.3635 14.3124V18.0754C19.3635 18.8245 18.83 19.4779 18.0813 19.4543C16.843 19.4153 15.1541 18.9712 15.1541 16.8381C15.1541 13.4705 19.3635 14.3124 19.3635 14.3124Z" stroke="currentColor" stroke-width="1.68378" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Artists</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    
+    <main class="content">
+        <!-- Top-Header Section -->
+        <header class="top-header">
+            <div class="header-wrapper">
+                <nav class="main-navigation">
+                    <ul>
+                        <li> 
+                            <a href="./index.html" class="nav-list-active">
+                                <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.17865 9.98612V17.4946C1.17865 18.4245 1.93251 19.1784 2.86243 19.1784H6.23C6.79618 19.2071 7.27095 18.7557 7.27095 18.1888V13.2814C7.27095 12.3557 8.01818 11.6037 8.94384 11.5977L13.7314 11.5667C14.6655 11.5607 15.426 12.3163 15.426 13.2505V18.2717C15.426 18.7724 15.832 19.1784 16.3327 19.1784H19.7003C20.6302 19.1784 21.3841 18.4245 21.3841 17.4946V9.98612C21.3841 9.49083 21.166 9.02066 20.7879 8.70074L12.369 1.57704C11.7412 1.04583 10.8215 1.04583 10.1937 1.57704L1.77481 8.70074C1.39671 9.02066 1.17865 9.49083 1.17865 9.98612Z" fill="currentColor" stroke="currentColor" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li> 
+                            <a href="./discover.html" class="nav-list">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.8042 21.8062C14.0298 17.441 17.441 14.0298 21.8062 12.8042L23.6011 12.3003L21.8062 11.7964C17.441 10.5708 14.0298 7.1596 12.8042 2.79443L12.3003 0.999512L11.7964 2.79443C10.5708 7.1596 7.1596 10.5708 2.79443 11.7964L0.999512 12.3003L2.79443 12.8042C7.1596 14.0298 10.5708 17.441 11.7964 21.8062L12.3003 23.6011L12.8042 21.8062Z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                <span>Discover</span>
+                            </a>
+                        </li>
+                        <li> 
+                            <a href="./search-page.html" class="nav-list search">
+                                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.9159 15.7929C17.4535 14.2244 18.4016 12.0759 18.4016 9.70591C18.4016 4.90343 14.5084 1.01025 9.70594 1.01025C4.90346 1.01025 1.01028 4.90343 1.01028 9.70591C1.01028 14.5084 4.90346 18.4016 9.70594 18.4016C12.1385 18.4016 14.3377 17.4027 15.9159 15.7929ZM15.9159 15.7929L21.0103 21.0103" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round"/>
+                                </svg>
+                                <span>Search</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="actions">
+                    <ul>
+                        <li>
+                            <button class="icon-btn"> 
+                                <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.4546 17.5398H4.39895C3.20929 17.5398 2.55941 16.1522 3.32101 15.2383L4.57552 13.7329C4.79088 13.4745 4.89842 13.1476 4.89514 12.8112C4.8745 10.6918 5.24657 2.80664 11.9268 2.80664C18.607 2.80664 18.9791 10.6918 18.9584 12.8112C18.9552 13.1476 19.0627 13.4745 19.2781 13.7329L20.5326 15.2383C21.2942 16.1522 20.6443 17.5398 19.4546 17.5398Z" stroke="currentColor" stroke-width="1.6838" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.41895 20.3459C8.41895 20.3459 9.12052 22.4507 11.9268 22.4507C14.7331 22.4507 15.4347 20.3459 15.4347 20.3459" stroke="currentColor" stroke-width="1.6838" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="icon-btn"> 
+                                <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.5457 4.26552C14.7544 4.70905 15.2832 4.89939 15.7267 4.69066C16.1702 4.48192 16.3606 3.95316 16.1518 3.50963L14.5457 4.26552ZM3.61666 7.98816C4.49277 7.84598 4.49283 7.84638 4.49289 7.84675C4.49291 7.84684 4.49296 7.84719 4.49299 7.84737C4.49305 7.84773 4.49309 7.84799 4.49312 7.84814C4.49316 7.84844 4.49314 7.84833 4.49306 7.84781C4.4929 7.84676 4.49249 7.84408 4.49187 7.83981C4.49063 7.83128 4.48854 7.81644 4.48589 7.79571C4.48057 7.75421 4.47303 7.68935 4.46549 7.60449C4.45037 7.43439 4.43548 7.18627 4.43819 6.88671C4.44366 6.28146 4.52078 5.49832 4.79016 4.73233C5.05715 3.97315 5.50453 3.25206 6.24453 2.71568C6.98229 2.18093 8.08614 1.77515 9.7633 1.77515V0C7.79098 0 6.30174 0.481792 5.20273 1.27839C4.10595 2.07338 3.47285 3.12744 3.11555 4.1434C2.76065 5.15256 2.66967 6.14457 2.66311 6.87067C2.6598 7.2368 2.67792 7.5434 2.69731 7.76162C2.70702 7.87092 2.71711 7.95861 2.72511 8.02113C2.72911 8.0524 2.7326 8.07743 2.73528 8.09577C2.73661 8.10494 2.73774 8.11244 2.73863 8.11822C2.73908 8.12111 2.73947 8.12357 2.73979 8.12559C2.73995 8.1266 2.74009 8.1275 2.74022 8.1283C2.74028 8.12869 2.74036 8.1292 2.74039 8.1294C2.74047 8.12989 2.74055 8.13034 3.61666 7.98816ZM9.7633 1.77515C11.2681 1.77515 12.31 2.10211 13.0382 2.55229C13.7643 3.00119 14.2364 3.60832 14.5457 4.26552L16.1518 3.50963C15.7204 2.59289 15.0353 1.70001 13.9716 1.0424C12.91 0.386066 11.5295 0 9.7633 0V1.77515Z" fill="currentColor"/>
+                                <path d="M15.9763 8.43188H3.55029C2.07971 8.43188 0.887573 9.62403 0.887573 11.0946V20.4141C0.887573 21.8847 2.07971 23.0768 3.55029 23.0768H15.9763C17.4469 23.0768 18.639 21.8847 18.639 20.4141V11.0946C18.639 9.62403 17.4469 8.43188 15.9763 8.43188Z" stroke="currentColor" stroke-width="1.77515"/>
+                                <circle cx="9.76331" cy="15.9763" r="2.66272" stroke="currentColor" stroke-width="1.77515"/>
+                                </svg>
+                            </button>
+                        </li>
+
+                        <input type="checkbox" id="friends">
+                        <li>
+                            <button class="icon-btn">                         
+                        <label for="friends">                           
+                                <svg width="35" height="26" viewBox="0 0 35 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M26.5729 6.73524C26.5729 8.5951 25.0652 10.1028 23.2054 10.1028C21.3455 10.1028 19.8378 8.5951 19.8378 6.73524C19.8378 4.87539 21.3455 3.36768 23.2054 3.36768C25.0652 3.36768 26.5729 4.87539 26.5729 6.73524Z" stroke="currentColor" stroke-width="2.02054"/>
+                                <path d="M16.286 15.8383L17.0358 15.3384C18.8628 14.1204 21.0095 13.4705 23.2053 13.4705C25.4012 13.4705 27.5478 14.1204 29.3749 15.3384L30.1247 15.8383C31.0615 16.4629 31.6242 17.5143 31.6242 18.6403V20.3178C31.6242 21.1858 30.9206 21.8894 30.0527 21.8894H23.2053H16.3579C15.49 21.8894 14.7864 21.1858 14.7864 20.3178V18.6403C14.7864 17.5143 15.3491 16.4629 16.286 15.8383Z" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.1541 6.73524C15.1541 8.5951 13.6464 10.1028 11.7865 10.1028C9.92666 10.1028 8.41895 8.5951 8.41895 6.73524C8.41895 4.87539 9.92666 3.36768 11.7865 3.36768C13.6464 3.36768 15.1541 4.87539 15.1541 6.73524Z" stroke="currentColor" stroke-width="2.02054"/>
+                                <path d="M11.7865 13.4705C9.59068 13.4705 7.44399 14.1204 5.61695 15.3384L4.86716 15.8383C3.93031 16.4629 3.36758 17.5143 3.36758 18.6403V20.3178C3.36758 21.1858 4.07118 21.8894 4.93912 21.8894H11" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                            
+                        </label>
+                        </button>
+                        </li>
+
+                        <li>
+                            <button class="icon-btn"> 
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.1164 1H9.88363C9.60145 1 9.35689 1.09167 9.14995 1.275C8.94302 1.45833 8.82074 1.6875 8.78312 1.9625L8.4445 4.52C8.19994 4.61167 7.96968 4.72167 7.75371 4.85C7.537 4.97833 7.32517 5.11583 7.11824 5.2625L4.66325 4.2725C4.39988 4.18083 4.13651 4.17167 3.87313 4.245C3.60976 4.31833 3.40283 4.47417 3.25233 4.7125L1.16418 8.26C1.01368 8.49833 0.966651 8.755 1.02309 9.03C1.07952 9.305 1.22062 9.525 1.44636 9.69L3.56273 11.2575C3.54392 11.3858 3.53451 11.5098 3.53451 11.6293V12.3718C3.53451 12.4906 3.54392 12.6142 3.56273 12.7425L1.44636 14.31C1.22062 14.475 1.07952 14.695 1.02309 14.97C0.966651 15.245 1.01368 15.5017 1.16418 15.74L3.25233 19.2875C3.38402 19.5442 3.58606 19.7048 3.85846 19.7693C4.13161 19.8331 4.39988 19.8192 4.66325 19.7275L7.11824 18.7375C7.32517 18.8842 7.54151 19.0217 7.76726 19.15C7.993 19.2783 8.21875 19.3883 8.4445 19.48L8.78312 22.0375C8.82074 22.3125 8.94302 22.5417 9.14995 22.725C9.35689 22.9083 9.60145 23 9.88363 23H14.1164C14.3986 23 14.6431 22.9083 14.85 22.725C15.057 22.5417 15.1793 22.3125 15.2169 22.0375L15.5555 19.48C15.8001 19.3883 16.0307 19.2783 16.2474 19.15C16.4634 19.0217 16.6748 18.8842 16.8818 18.7375L19.3368 19.7275C19.6001 19.8192 19.8635 19.8283 20.1269 19.755C20.3902 19.6817 20.5972 19.5258 20.7477 19.2875L22.8358 15.74C22.9863 15.5017 23.0334 15.245 22.9769 14.97C22.9205 14.695 22.7794 14.475 22.5536 14.31L20.4373 12.7425C20.4561 12.6142 20.4655 12.4906 20.4655 12.3718V11.6293C20.4655 11.5098 20.4467 11.3858 20.4091 11.2575L22.5254 9.69C22.7512 9.525 22.8923 9.305 22.9487 9.03C23.0051 8.755 22.9581 8.49833 22.8076 8.26L20.7195 4.74C20.569 4.50167 20.3575 4.34107 20.0851 4.2582C19.812 4.17607 19.5437 4.18083 19.2803 4.2725L16.8818 5.2625C16.6748 5.11583 16.4585 4.97833 16.2327 4.85C16.007 4.72167 15.7813 4.61167 15.5555 4.52L15.2169 1.9625C15.1793 1.6875 15.057 1.45833 14.85 1.275C14.6431 1.09167 14.3986 1 14.1164 1Z" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="3.34783" cy="3.34783" r="3.34783" transform="matrix(1 0 0 -1 8.65216 15.3478)" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+
+                            </button>
+                        </li>
+
+                        <input type="checkbox" id="account">
+                        <li>
+                            <button> 
+                                <label for="account"> 
+                                <img src="./assets/account.svg" alt="account">
+                                </label>
+                            </button> 
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+
+<section class="main-aside">
+
+<!-- Friends Aside -->
+
+    <aside class="friends-aside">
+            <div class="aside-filter">
+                    <span class="secondary-text">Friends Activity</span>
+                <div class="friends-action">
+                    <button>
+                        <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.1541 6.73512C15.1541 8.59498 13.6464 10.1027 11.7865 10.1027C9.92666 10.1027 8.41895 8.59498 8.41895 6.73512C8.41895 4.87527 9.92666 3.36755 11.7865 3.36755C13.6464 3.36755 15.1541 4.87527 15.1541 6.73512Z" stroke="#898989" stroke-width="2.02054"/>
+                        <path d="M8.41903 13.4703L4.86725 15.8382C3.9304 16.4628 3.36768 17.5142 3.36768 18.6402V20.3177C3.36768 21.1857 4.07127 21.8893 4.93921 21.8893H17.6798" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.1541 14.3124H17.6797M20.2054 14.3124H17.6797M17.6797 14.3124V11.7867M17.6797 14.3124V16.8381" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button>
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.4701 3.36743L8.41878 8.41878M3.36743 13.4701L8.41878 8.41878M8.41878 8.41878L3.36743 3.36743M8.41878 8.41878L13.4701 13.4701" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <section class="friend-list">
+                    <figure class="friend-listening">
+                            <img src="./assets/friend1.svg" alt="Your Friend">                   
+                        <figcaption class="about-friend">
+                            <div class="music-title">
+                                <h2 class="card-subtitle">FriendlyMusicListener</h2>
+                            </div>
+                            <div>
+                            <ul class="details friend">
+                                <li><img src="./assets/playing.svg" alt="playing track"></li>
+                                <li class="secondary-text">Goosebumps</li>
+                                <li class="secondary-text">Travis Scott</li>
+                            </ul>
+                            </div>
+                        </figcaption>
+                    </figure>  
+
+                    <figure class="friend-listening">
+                            <img src="./assets/friend2.svg" alt="Your Friend">                   
+                        <figcaption class="about-friend">
+                            <div class="music-title">
+                                <h2 class="card-subtitle">AverageMusicEnjoyer</h2>
+                            </div>
+                            <div>
+                            <ul class="details friend">
+                                <li><img src="./assets/playing.svg" alt="playing track"></li>
+                                <li class="secondary-text">Get Lucky</li>
+                                <li class="secondary-text">Daft Punk</li>
+                            </ul>
+                            </div>
+                        </figcaption>
+                    </figure>  
+
+                    <figure class="friend-listening">
+                            <img src="./assets/friend3.svg" alt="Your Friend">                   
+                        <figcaption class="about-friend">
+                            <div class="music-title">
+                                <h2 class="card-subtitle">MusicEnthusiast</h2>
+                            </div>
+                            <div>
+                            <ul class="details friend">
+                                <li class="secondary-text">1h</li>
+                                <li class="secondary-text">Goosebumps</li>
+                                <li class="secondary-text">Travis Scott</li>
+                            </ul>
+                            </div>
+                        </figcaption>
+                    </figure>  
+
+                    <figure class="friend-listening">
+                            <img src="./assets/friend4.svg" alt="Your Friend">                   
+                        <figcaption class="about-friend">
+                            <div class="music-title">
+                                <h2 class="card-subtitle">IListenToMusic56</h2>
+                            </div>
+                            <div>
+                                <ul class="details friend">
+                                    <li class="secondary-text">6h</li>
+                                    <li class="secondary-text">Rockstar</li>
+                                    <li class="secondary-text">Post Malone</li>
+                                </ul>
+                            </div>
+                        </figcaption>
+                    </figure>
+            </section>
+        </aside>
+
+
+
+<!-- aside with checkbox for account aside-->
+
+        <aside class="account-aside">
+
+            <section class="friend-list">
+                <div class="your-account">
+                    <figure class="account-info">
+                            <img src="./assets/profile-picture.svg" alt="Your Profile Picture">                   
+                        <figcaption class="about-you">
+                            <div class="your-name">
+                                <h2 class="section-title">Jux</h2>
+                                    <div class="edit-share">
+                                        <button class="btn-action">
+                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <mask id="path-1-inside-1_9404_1646" fill="white">
+                                            <path d="M9.89938 19.092C9.50885 19.4825 8.87569 19.4825 8.48517 19.092L6.36385 16.9707C5.97332 16.5802 5.97332 15.947 6.36385 15.5565L20.1524 1.76788C21.1287 0.791572 22.7117 0.791572 23.688 1.76788C24.6643 2.74419 24.6643 4.32711 23.688 5.30342L9.89938 19.092Z"/>
+                                            </mask>
+                                            <path d="M9.89938 19.092C9.50885 19.4825 8.87569 19.4825 8.48517 19.092L6.36385 16.9707C5.97332 16.5802 5.97332 15.947 6.36385 15.5565L20.1524 1.76788C21.1287 0.791572 22.7117 0.791572 23.688 1.76788C24.6643 2.74419 24.6643 4.32711 23.688 5.30342L9.89938 19.092Z" stroke="#898989" stroke-width="4" mask="url(#path-1-inside-1_9404_1646)"/>
+                                            <path d="M5.24599 18.681L6.77483 20.2099L3.86975 21.5861L5.24599 18.681Z" stroke="#898989" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                        </button>
+
+                                        <button class="btn-action">                                          
+                                            <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.2718 13.5978L12.2718 2.32163M12.2718 2.32163L7.62863 6.96474M12.2718 2.32163L16.9149 6.96474M20.563 11.9395V16.5826C20.563 18.048 19.3751 19.2358 17.9098 19.2358L6.63368 19.2358C5.16835 19.2358 3.98047 18.048 3.98047 16.5826L3.98047 11.9395" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                            </div>
+                            <div>
+                            <ul class="details friend">
+                                <li class="secondary-text">3 followers</li>
+                                <li class="secondary-text">30 following</li>
+                            </ul>
+                            <p class="secondary-text"> 2 Public Playlists</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+
+        <!-- Your-friends -->
+
+                <div class="your-friends">
+                    <div class="aside-filter">
+                    <span class="secondary-text">Friends</span>
+                        <div class="friends-action">
+                            <button>
+                                <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.1541 6.73512C15.1541 8.59498 13.6464 10.1027 11.7865 10.1027C9.92666 10.1027 8.41895 8.59498 8.41895 6.73512C8.41895 4.87527 9.92666 3.36755 11.7865 3.36755C13.6464 3.36755 15.1541 4.87527 15.1541 6.73512Z" stroke="#898989" stroke-width="2.02054"/>
+                                <path d="M8.41903 13.4703L4.86725 15.8382C3.9304 16.4628 3.36768 17.5142 3.36768 18.6402V20.3177C3.36768 21.1857 4.07127 21.8893 4.93921 21.8893H17.6798" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.1541 14.3124H17.6797M20.2054 14.3124H17.6797M17.6797 14.3124V11.7867M17.6797 14.3124V16.8381" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <figure class="friend-listening">
+                            <img src="./assets/friend2.svg" alt="Your Friend">                   
+                        <figcaption class="about-friend">
+                            <div class="music-title">
+                                <h2 class="card-subtitle">AverageMusicEnjoyer</h2>
+                            </div>
+                            <div>
+                            <ul class="details friend">
+                                <li><img src="./assets/playing.svg" alt="playing track"></li>
+                                <li class="secondary-text">Get Lucky</li>
+                                <li class="secondary-text">Daft Punk</li>
+                            </ul>
+                            </div>
+                        </figcaption>
+                    </figure>  
+
+                    <figure class="friend-listening">
+                            <img src="./assets/friend3.svg" alt="Your Friend">                   
+                        <figcaption class="about-friend">
+                            <div class="music-title">
+                                <h2 class="card-subtitle">MusicEnthusiast</h2>
+                            </div>
+                            <div>
+                            <ul class="details friend">
+                                <li class="secondary-text">1h</li>
+                                <li class="secondary-text">Goosebumps</li>
+                                <li class="secondary-text">Travis Scott</li>
+                            </ul>
+                            </div>
+                        </figcaption>
+                    </figure> 
+                </div>     
+
+        <!-- Current Plan -->
+
+                <div class="current-plan"> 
+                    <div class="current-title">
+                        <img src="./assets/spotify-icon.svg" alt="Spotify">
+                        <h3 class="card-subtitle">Current Plan</h3>
+                    </div>
+                    <div class="current-description">
+                        <h2 class="section-subtitle">Premium - Individual</h2>
+                        <span class="secondary-text">$10.99 / month</span>
+                    </div>
+                </div>
+
+        <!-- Account settings -->
+
+                <div class="account-settings">
+                    <div class="settings">
+                        <div class="setting-name">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10" cy="10" r="8.5" stroke="#898989" stroke-width="2.2" stroke-linecap="round"stroke-dasharray="32 5.5 4 5.5 4 5.5" transform="rotate(-105 10 10)"/>  
+                            <path d="M10 5.5V10.5L13.5 13" stroke="#898989" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+
+                            <span class="secondary-text">Listening History</span>
+                        </div>
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.73576 13.4702L11.7871 8.41886L6.73576 3.36751" stroke="#898989" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                    </div>
+
+                    <div class="settings">
+                        <div class="setting-name">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.1164 1H9.88363C9.60145 1 9.35689 1.09167 9.14995 1.275C8.94302 1.45833 8.82074 1.6875 8.78312 1.9625L8.4445 4.52C8.19994 4.61167 7.96968 4.72167 7.75371 4.85C7.537 4.97833 7.32517 5.11583 7.11824 5.2625L4.66325 4.2725C4.39988 4.18083 4.13651 4.17167 3.87313 4.245C3.60976 4.31833 3.40283 4.47417 3.25233 4.7125L1.16418 8.26C1.01368 8.49833 0.966651 8.755 1.02309 9.03C1.07952 9.305 1.22062 9.525 1.44636 9.69L3.56273 11.2575C3.54392 11.3858 3.53451 11.5098 3.53451 11.6293V12.3718C3.53451 12.4906 3.54392 12.6142 3.56273 12.7425L1.44636 14.31C1.22062 14.475 1.07952 14.695 1.02309 14.97C0.966651 15.245 1.01368 15.5017 1.16418 15.74L3.25233 19.2875C3.38402 19.5442 3.58606 19.7048 3.85846 19.7693C4.13161 19.8331 4.39988 19.8192 4.66325 19.7275L7.11824 18.7375C7.32517 18.8842 7.54151 19.0217 7.76726 19.15C7.993 19.2783 8.21875 19.3883 8.4445 19.48L8.78312 22.0375C8.82074 22.3125 8.94302 22.5417 9.14995 22.725C9.35689 22.9083 9.60145 23 9.88363 23H14.1164C14.3986 23 14.6431 22.9083 14.85 22.725C15.057 22.5417 15.1793 22.3125 15.2169 22.0375L15.5555 19.48C15.8001 19.3883 16.0307 19.2783 16.2474 19.15C16.4634 19.0217 16.6748 18.8842 16.8818 18.7375L19.3368 19.7275C19.6001 19.8192 19.8635 19.8283 20.1269 19.755C20.3902 19.6817 20.5972 19.5258 20.7477 19.2875L22.8358 15.74C22.9863 15.5017 23.0334 15.245 22.9769 14.97C22.9205 14.695 22.7794 14.475 22.5536 14.31L20.4373 12.7425C20.4561 12.6142 20.4655 12.4906 20.4655 12.3718V11.6293C20.4655 11.5098 20.4467 11.3858 20.4091 11.2575L22.5254 9.69C22.7512 9.525 22.8923 9.305 22.9487 9.03C23.0051 8.755 22.9581 8.49833 22.8076 8.26L20.7195 4.74C20.569 4.50167 20.3575 4.34107 20.0851 4.2582C19.812 4.17607 19.5437 4.18083 19.2803 4.2725L16.8818 5.2625C16.6748 5.11583 16.4585 4.97833 16.2327 4.85C16.007 4.72167 15.7813 4.61167 15.5555 4.52L15.2169 1.9625C15.1793 1.6875 15.057 1.45833 14.85 1.275C14.6431 1.09167 14.3986 1 14.1164 1Z" stroke="#898989" stroke-width="2"></path>
+                            <circle cx="3.34783" cy="3.34783" r="3.34783" transform="matrix(1 0 0 -1 8.65216 15.3478)" stroke="#898989" stroke-width="2"></circle>
+                            </svg>
+
+                            <span class="secondary-text">Settings and Privacy</span>
+                        </div>
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.73576 13.4702L11.7871 8.41886L6.73576 3.36751" stroke="#898989" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                    </div>
+
+                    <div class="settings">
+                        <div class="setting-name">
+                            <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.4546 17.5398H4.39895C3.20929 17.5398 2.55941 16.1522 3.32101 15.2383L4.57552 13.7329C4.79088 13.4745 4.89842 13.1476 4.89514 12.8112C4.8745 10.6918 5.24657 2.80664 11.9268 2.80664C18.607 2.80664 18.9791 10.6918 18.9584 12.8112C18.9552 13.1476 19.0627 13.4745 19.2781 13.7329L20.5326 15.2383C21.2942 16.1522 20.6443 17.5398 19.4546 17.5398Z" stroke="#898989" stroke-width="1.6838" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M8.41895 20.3459C8.41895 20.3459 9.12052 22.4507 11.9268 22.4507C14.7331 22.4507 15.4347 20.3459 15.4347 20.3459" stroke="#898989" stroke-width="1.6838" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+
+                            <span class="secondary-text">What's New</span>
+                        </div>
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.73576 13.4702L11.7871 8.41886L6.73576 3.36751" stroke="#898989" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                    </div>
+                </div>
+
+            </section>
+        </aside>
+
+
+    <section class="main-content song-section">
+        <section class="song-hero">
+            <img src="./assets/song-hero-cover.svg" alt="song-hero-cover" class="song-hero-img">
+            <div class="song-hero-info">
+                <h1 class="section-title">Get Lucky (feat. Pharrell Williams and Nile Rodgers)</h1>
+                <div class="song-meta">
+                    <span class="white-subtitle">Daft Punk</span>
+                    <div class="dot"></div>
+                    <span class="white-subtitle">Random Access Memories</span>
+                    <div class="dot"></div>
+                    <span class="secondary-text">2013</span>
+                    <div class="dot"></div>
+                    <span class="secondary-text">6:09</span>
+                    <div class="dot"></div>
+                    <span class="secondary-text">489,691,133</span>
+                </div>
+                <div class="details-action">
+                    <button class="icon-btn">
+                        <img src="./assets/discover-page/pause.svg" alt="pause">
+                    </button>
+
+                    <button class="icon-btn">
+                        <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_9404_5097)">
+                        <path d="M5.05078 7.57715C6.63041 7.57715 8.1073 8.36023 8.99367 9.66774L9.8293 10.9004L10.9557 12.562M23.6972 20.8701H18.7722C17.4519 20.8701 16.184 20.3531 15.2401 19.4299L14.3116 18.5217M23.6972 20.8701L20.2049 24.4149M23.6972 20.8701L20.2049 17.3253" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5.05078 22.8995C6.63433 22.8995 8.1189 22.1292 9.03064 20.8345L15.2035 12.0687C16.1496 10.725 17.6902 9.92567 19.3336 9.92567H23.6971M23.6971 9.92567L20.2048 6.38086M23.6971 9.92567L20.2048 13.4705" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_9404_5097">
+                        <rect width="21.8892" height="23.573" fill="white" transform="translate(3.36719 3.36755)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                    </button>
+
+                    <button class="icon-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.9442 3.36743H6.17349C4.62361 3.36743 3.36719 4.62386 3.36719 6.17374C3.36719 7.72362 4.62361 8.98004 6.17349 8.98004H10.9442" stroke="CurrentColor" stroke-width="2.3573" stroke-linecap="round"/>
+                        <path d="M3.36719 14.5925L20.205 14.5925" stroke="currentColor" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3.36719 20.2053L20.205 20.2053" stroke="currentColor" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.1543 5.89311H17.68M20.2056 5.89311H17.68M17.68 5.89311V3.36743M17.68 5.89311V8.41878" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <button class="icon-btn">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.3986 10.0854H10.0859M5.77328 10.0854H10.0859M10.0859 10.0854L10.0859 5.77271M10.0859 10.0854V14.398" stroke="currentColor" stroke-width="1.68378" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="10.1027" cy="10.1027" r="9.26081" stroke="currentColor" stroke-width="1.68378"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="icon-btn">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1031 5.05127V14.9134M10.1031 14.9134L13.4707 11.5459M10.1031 14.9134L6.73557 11.5459" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="10.1027" cy="10.1027" r="9.26081" stroke="currentColor" stroke-width="1.68378"/>
+                        </svg>
+                    </button>
+
+                    <button class="icon-btn">
+                        <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.2718 13.5978L12.2718 2.32163M12.2718 2.32163L7.62863 6.96474M12.2718 2.32163L16.9149 6.96474M20.563 11.9395V16.5826C20.563 18.048 19.3751 19.2358 17.9098 19.2358L6.63368 19.2358C5.16835 19.2358 3.98047 18.048 3.98047 16.5826L3.98047 11.9395" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <button class="icon-btn">
+                        <img src="./assets/more-icon.svg" alt="more">
+                    </button>
+                </div>
+                <div class="artist-buttons">
+                    <button class="genres">Funk</button>
+                    <button class="genres">Electronic music</button>
+                    <button class="genres">Disco</button>
+                    <button class="genres">Soft Rock</button>
+                    <button class="genres">Progressive pop</button>
+                </div>
+                <div class="other-artists">
+                    <figure class="other-artists-info">                    
+                        <img src="./assets/playlists/daftpunksm.svg" alt="Daft Punk">
+                        <figcaption>
+                            <h4 class="music-list-title">Daft Punk</h4>
+                            <p class="card-subtitle">Main artist</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="other-artists-info">                    
+                        <img src="./assets/playlists/Pharrel.svg" alt="Pharrel WIlliams">
+                        <figcaption>
+                            <h4 class="music-list-title">Pharrel Williams</h4>
+                            <p class="card-subtitle">Main artist, Composer, Lyricist</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="other-artists-info">                    
+                        <img src="./assets/playlists/Nile.svg" alt="Nile Rodgers">
+                        <figcaption>
+                            <h4 class="music-list-title">Nile Rodgers</h4>
+                            <p class="card-subtitle">Main artist, Composer, Lyricist</p>
+                        </figcaption>
+                    </figure>
+                    </div>      
+            </section>
+            <section class="lyrics-section">
+                <nav class="song-nav">
+                    <ul>
+                        <li class="song-nav-active">Lyrics</li>
+                        <li>Credits</li>
+                        <li>More like this</li>
+                    </ul>
+                </nav>
+                <div class="lyrics">
+                    <div class="lyrics-buttons">
+                        <button class="icon-btn"> 
+                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.0762 12.8271H15.7324" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M11.0762 19.0497L15.7324 19.0497" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M20.9654 10.8269C25.997 10.8269 30.0759 14.9059 30.0759 19.9375C30.0759 24.9691 25.997 29.048 20.9654 29.048C20.9654 29.048 15.6317 29.048 12.9648 24.6056" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21.1719 14.3827V19.9375L25.8552 22.8277" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="20.0762" cy="35.827" r="2" fill="currentColor"/>
+                                </svg>
+                        </button>
+                        <button class="icon-btn">
+                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.9281 30.3348C21.5281 30.3348 21.2408 30.2058 21.0661 29.9478C20.8908 29.6892 20.8698 29.3682 21.0031 28.9848L24.6531 19.3098C24.7531 19.0432 24.9408 18.8138 25.2161 18.6218C25.4908 18.4305 25.7781 18.3348 26.0781 18.3348C26.3615 18.3348 26.6448 18.4305 26.9281 18.6218C27.2115 18.8138 27.4031 19.0432 27.5031 19.3098L31.1531 28.9848C31.2865 29.3682 31.2658 29.6892 31.0911 29.9478C30.9158 30.2058 30.6198 30.3348 30.2031 30.3348C30.0198 30.3348 29.8531 30.2765 29.7031 30.1598C29.5531 30.0432 29.4448 29.9015 29.3781 29.7348L28.5281 27.2848H23.6781L22.8031 29.7348C22.7365 29.9015 22.6198 30.0432 22.4531 30.1598C22.2865 30.2765 22.1115 30.3348 21.9281 30.3348ZM24.2781 25.5348H27.8781L26.1281 20.5848H26.0281L24.2781 25.5348ZM15.7281 16.8848C15.9948 17.3682 16.2781 17.8138 16.5781 18.2218C16.8781 18.6305 17.2281 19.0515 17.6281 19.4848C18.3615 18.6848 18.9698 17.8642 19.4531 17.0228C19.9365 16.1808 20.3448 15.2848 20.6781 14.3348H10.5781C10.2948 14.3348 10.0575 14.2392 9.86612 14.0478C9.67412 13.8558 9.57812 13.6182 9.57812 13.3348C9.57812 13.0515 9.67412 12.8138 9.86612 12.6218C10.0575 12.4305 10.2948 12.3348 10.5781 12.3348H16.5781V11.3348C16.5781 11.0515 16.6741 10.8138 16.8661 10.6218C17.0575 10.4305 17.2948 10.3348 17.5781 10.3348C17.8615 10.3348 18.0991 10.4305 18.2911 10.6218C18.4825 10.8138 18.5781 11.0515 18.5781 11.3348V12.3348H24.5781C24.8615 12.3348 25.0988 12.4305 25.2901 12.6218C25.4821 12.8138 25.5781 13.0515 25.5781 13.3348C25.5781 13.6182 25.4821 13.8558 25.2901 14.0478C25.0988 14.2392 24.8615 14.3348 24.5781 14.3348H22.6781C22.3281 15.5182 21.8531 16.6682 21.2531 17.7848C20.6531 18.9015 19.9115 19.9515 19.0281 20.9348L21.4281 23.3848L20.6781 25.4348L17.5781 22.3348L13.2781 26.6348C13.0948 26.8182 12.8615 26.9098 12.5781 26.9098C12.2948 26.9098 12.0615 26.8182 11.8781 26.6348C11.6948 26.4515 11.6031 26.2182 11.6031 25.9348C11.6031 25.6515 11.6948 25.4182 11.8781 25.2348L16.2281 20.8848C15.7781 20.3682 15.3615 19.8472 14.9781 19.3218C14.5948 18.7972 14.2531 18.2432 13.9531 17.6598C13.7698 17.3098 13.7615 17.0015 13.9281 16.7348C14.0948 16.4682 14.3865 16.3348 14.8031 16.3348C14.9698 16.3348 15.1448 16.3888 15.3281 16.4968C15.5115 16.6055 15.6448 16.7348 15.7281 16.8848Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                        <button class="icon-btn">
+                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.4932 15.5522H25.2166" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M14.4932 20.7695H21.6421" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M9.57812 23.8132V12.9437C9.57812 11.5029 10.7461 10.335 12.1868 10.335H27.9694C29.4102 10.335 30.5781 11.5029 30.5781 12.9437V23.8132C30.5781 25.254 29.4102 26.4219 27.9694 26.4219H24.6837C23.8908 26.4219 23.141 26.7825 22.6459 27.4019L21.66 28.6353C20.9638 29.5064 19.6393 29.5064 18.943 28.6353L17.9571 27.4019C17.4621 26.7825 16.7122 26.4219 15.9194 26.4219H12.1868C10.7461 26.4219 9.57812 25.254 9.57812 23.8132Z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                        <button class="icon-btn">
+                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.825 27.2494C11.6328 27.7998 11.1137 28.1684 10.5307 28.1684C9.58067 28.1684 8.91867 27.2255 9.24137 26.3319L13.9092 13.4071C14.1954 12.6145 14.9476 12.0864 15.7903 12.0864H15.864C16.7066 12.0864 17.4589 12.6145 17.7451 13.4071L22.4029 26.3043C22.7305 27.2113 22.0585 28.1684 21.0942 28.1684C20.5025 28.1684 19.9755 27.7942 19.7805 27.2356L19.0422 25.1208C18.902 24.7193 18.5233 24.4504 18.0981 24.4504H13.5122C13.087 24.4504 12.7082 24.7193 12.5681 25.1208L11.825 27.2494ZM15.4641 16.8824L13.8723 21.4085C13.7579 21.7338 13.9993 22.0744 14.344 22.0744H17.2854C17.631 22.0744 17.8724 21.7323 17.7565 21.4068L16.1461 16.8824C16.0713 16.6454 15.5462 16.6478 15.4641 16.8824Z" fill="currentColor"/>
+                            <path d="M25.1352 27.6095C25.0239 27.897 24.7473 28.0864 24.4391 28.0864C23.9108 28.0864 23.5497 27.5528 23.7462 27.0624L26.2451 20.8245C26.4237 20.3787 26.8557 20.0864 27.3359 20.0864C27.8162 20.0864 28.2482 20.3787 28.4268 20.8245L30.9195 27.047C31.1189 27.5447 30.7524 28.0864 30.2162 28.0864C29.9033 28.0864 29.6226 27.8941 29.5096 27.6024L29.2196 26.8534C29.0757 26.4818 28.7182 26.2369 28.3197 26.2369H26.3279C25.9294 26.2369 25.5719 26.4818 25.428 26.8534L25.1352 27.6095ZM27.1356 22.4722L26.128 25.055H28.5317L27.512 22.4722C27.4671 22.3442 27.1847 22.3457 27.1356 22.4722Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="full-lyrics">
+                        <p class="lyrics-text-active">Like the legend of the phoenix, huh</p>
+                        <p class="lyrics-text-active">All ends with beginnings</p>
+                        <p class="lyrics-text-active">What keeps the planet spinning, ah</p>
+                        <p class="lyrics-text-active">The force from the beginning, hm, look</p>
+                        <p class="lyrics-text">We've come too far</p>
+                        <p class="lyrics-text">To give up who we are</p>
+                        <p class="lyrics-text">So let's raise the bar</p>
+                        <p class="lyrics-text">And our cups to the stars</p>
+                        <p class="lyrics-text">She's up all night 'til the sun</p>
+                        <p class="lyrics-text">I'm up all night to get some</p>
+                        <p class="lyrics-text">She’s up all night for good fun</p>
+                        <p class="lyrics-text">I’m up all night to get lucky</p>
+                        <p class="lyrics-text">We’re up all night ‘til the sun</p>
+                        <p class="lyrics-text">We’re up all night to get some</p>
+                        <p class="lyrics-text">We’re up all night for good fun</p>
+                        <p class="lyrics-text">We’re up all night to get lucky</p>
+                        <p class="lyrics-text">We’re up all night to get lucky</p>
+                        <p class="lyrics-text">We’re up all night to get lucky</p>
+                        <p class="lyrics-text">We’re up all night to get lucky</p>
+                        <p class="lyrics-text">We’re up all night to get lucky</p>
+                        <p class="lyrics-text">The present has no rhythm</p>
+                        <p class="lyrics-text">Your gift keeps on giving</p>
+                        <p class="lyrics-text">What is this I’m feeling?</p>
+                        <p class="lyrics-text">If you want to leave, I’m with it</p>
+                        <p class="lyrics-text">We’ve come too far</p>
+                        <p class="lyrics-text">To give up who we are</p>
+                        <p class="lyrics-text">So let’s raise the bar</p>
+                        <p class="lyrics-text">And our cups to the stars</p>
+                        <p class="lyrics-text">She's up all night 'til the sun</p>
+                        <p class="lyrics-text">I'm up all night to get some</p>
+                        <p class="lyrics-text">She’s up all night for good fun</p>
+                        <p class="lyrics-text">I’m up all night to get lucky</p>
+                        <p class="lyrics-text">We’re up all night ‘til the sun</p>
+                        <p class="lyrics-text">We’re up all night to get some</p>
+                        <p class="lyrics-text">We’re up all night for good fun</p>
+                        <p class="lyrics-text">We’re up all night to get lucky</p>
+                        <p class="lyrics-text">We’re up all night to get lucky</p>
+                        <p class="lyrics-text">We’re up all night to get lucky</p>
+                        <p class="lyrics-text">We’re up all night to get lucky</p>
+                        <p class="lyrics-text">We’re up all night to get lucky</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+</section>
+
+
+        <!-- Player bar -->
+        <section class="player-bar">
+            <div class="player-left">
+                <button class="icon-btn icon-active">
+                    <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.58398 1.58398V11.0882" stroke="black" stroke-width="3.16809" stroke-linecap="round"/>
+                        <path d="M7.92041 1.58398V11.0882" stroke="black" stroke-width="3.16809" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <button class="icon-btn">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.33679 6.33618V15.8404" stroke="currentColor" stroke-width="2.37606" stroke-linecap="round"/>
+                        <path d="M8.22623 12.3004C7.34291 11.7338 7.34291 10.4429 8.22623 9.87625L14.8115 5.6518C15.7699 5.03697 17.0291 5.72519 17.0291 6.86388V15.3128C17.0291 16.4515 15.7699 17.1397 14.8115 16.5249L8.22623 12.3004Z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="icon-btn">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.8409 6.33618V15.8404" stroke="currentColor" stroke-width="2.37606" stroke-linecap="round"/>
+                        <path d="M13.9514 9.87635C14.8348 10.443 14.8348 11.7339 13.9514 12.3005L7.36617 16.525C6.40774 17.1398 5.14859 16.4516 5.14859 15.3129L5.14859 6.86398C5.14859 5.72529 6.40775 5.03707 7.36618 5.6519L13.9514 9.87635Z" fill="currentColor"/>
+                    </svg>
+                </button>   
+                <button class="icon-btn">
+                    <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.58429 3.96017C3.07035 3.96017 4.45976 4.69686 5.29362 5.92692L6.07975 7.08658L7.13944 8.64978M19.1261 16.4657H14.493C13.2508 16.4657 12.058 15.9794 11.1701 15.1108L10.2965 14.2564M19.1261 16.4657L15.8407 19.8005M19.1261 16.4657L15.8407 13.1309" stroke="currentColor" stroke-width="1.90085" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1.58429 18.3751C3.07403 18.3751 4.47066 17.6505 5.3284 16.4324L11.1356 8.18583C12.0257 6.92182 13.475 6.16979 15.021 6.16979H19.1261M19.1261 6.16979L15.8407 2.83496M19.1261 6.16979L15.8407 9.50462" stroke="currentColor" stroke-width="1.90085" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="icon-btn">
+                    <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.49459 13.6228H4.11852C2.36884 13.6228 0.950439 12.2044 0.950439 10.4547V4.11853C0.950439 2.36884 2.36884 0.950439 4.11853 0.950439H16.7909C18.5406 0.950439 19.959 2.36884 19.959 4.11853V10.4547C19.959 12.2044 18.5406 13.6228 16.7909 13.6228H10.4547M10.4547 13.6228L13.6228 10.4547M10.4547 13.6228L13.6228 16.7909" stroke="currentColor" stroke-width="1.90085" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="timeline">
+                    <p class="card-subtitle">2:23</p>
+                    <div class="progress"><div class="progress-fill"></div></div>
+                    <p class="card-subtitle">4:45</p>
+                </div>
+                <button class="icon-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_10038_1910)">
+                        <path d="M4.39142 15.2446C1.44322 13.7705 1.44323 9.56247 4.39142 8.08838L13.035 3.76709C13.4781 3.54552 13.9995 3.86745 13.9998 4.36279L13.9998 18.9702C13.9995 19.4656 13.4781 19.7875 13.035 19.5659L4.39142 15.2446Z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M18.3334 16.6665C19.1142 16.4535 19.8362 15.9811 20.4115 15.2927C21.2152 14.331 21.6668 13.0266 21.6668 11.6665C21.6668 10.3064 21.2152 9.00204 20.4115 8.04031C19.8362 7.35193 19.1142 6.87946 18.3334 6.6665" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round"/>
+                        <path d="M17.5003 11.1603C17.5003 10.9796 17.6522 10.8274 17.8192 10.8965C17.9203 10.9384 18.0121 10.9998 18.0895 11.0772C18.1669 11.1545 18.2283 11.2464 18.2702 11.3475C18.312 11.4486 18.3336 11.557 18.3336 11.6664C18.3336 11.7759 18.312 11.8842 18.2702 11.9853C18.2283 12.0864 18.1669 12.1783 18.0895 12.2557C18.0121 12.3331 17.9203 12.3944 17.8192 12.4363C17.6522 12.5055 17.5003 12.3532 17.5003 12.1725L17.5003 11.6664L17.5003 11.1603Z" fill="currentColor" stroke="currentColor" stroke-width="0.833333"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_10038_1910">
+                        <rect width="23.3333" height="23.3333" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+            <div class="player-center">
+                <a href="./song.html">
+                <img src="./assets/player-bar/Album Cover.svg" alt="Random-Access-Memories-Album-cover">
+                    <div class="now-playing-info">
+                        <p class="card-title">Get Lucky <span class="additional-info">(feat. Pharrell Williams and Nile Rodgers)</span></p>
+                        <p class="card-subtitle">Daft Punk</p>
+                        <p class="card-subtitle">Random Access Memories</p>
+                    </div>
+                </a>
+            </div>
+            <div class="player-right">
+                <button class="icon-btn">
+                    <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.1336 2.36517L11.2698 4.17112L9.40593 2.36518C7.45157 0.471504 4.31642 0.57606 2.49256 2.59574C0.7228 4.55551 0.47915 7.49092 2.08172 9.58963C2.27865 9.84753 2.47228 10.0945 2.65656 10.3206C3.823 11.7515 6.36801 14.2505 7.64315 15.5916C8.58524 16.5824 9.43207 17.4087 10.07 18.0106C10.7438 18.6462 11.7837 18.6323 12.4587 17.9981C13.6351 16.8927 15.439 15.171 16.7097 13.8346C17.9848 12.4935 18.7165 11.7515 19.883 10.3206C20.0672 10.0945 20.2609 9.84753 20.4578 9.58963C22.0604 7.49092 21.8167 4.55551 20.047 2.59574C18.2231 0.57606 15.088 0.471502 13.1336 2.36517Z" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="icon-btn">
+                    <svg width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="19.75" height="19.75" rx="2.9625" transform="matrix(1 0 0 -1 0.987488 23.4531)" stroke="currentColor" stroke-width="1.975" stroke-linejoin="round"/>
+                        <path d="M2.9621 3.70312H18.7621C18.7621 2.06698 17.4357 0.740625 15.7996 0.740625H5.9246C4.28846 0.740625 2.9621 2.06698 2.9621 3.70312Z" stroke="currentColor" stroke-width="1.48125" stroke-linejoin="round"/>
+                        <path d="M6.91248 13.5782H10.8625M14.8125 13.5782H10.8625M10.8625 13.5782V9.62817M10.8625 13.5782V17.5282" stroke="currentColor" stroke-width="1.99528" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                </button>
+                <button class="icon-btn">
+                    <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.987488 1.9751H12.8375" stroke="currentColor" stroke-width="1.975" stroke-linecap="round"/>
+                    <path d="M0.987579 8.88745H8.88758" stroke="currentColor" stroke-width="1.975" stroke-linecap="round"/>
+                    <path d="M0.987579 15.8H8.88758" stroke="currentColor" stroke-width="1.975" stroke-linecap="round"/>
+                    <path d="M18.7625 0.987549V9.8097M18.7625 9.8097V14.4171C18.7625 15.1576 18.2364 15.7987 17.4958 15.8C16.0329 15.8027 13.825 15.3724 13.825 12.7504C13.825 8.82946 18.7625 9.8097 18.7625 9.8097Z" stroke="currentColor" stroke-width="1.975" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>   
+                <button class="icon-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8.83984" y="2.94629" width="11.7865" height="17.6797" rx="2.94662" stroke="currentColor" stroke-width="2.06263"/>
+                    <circle cx="14.7331" cy="14.733" r="2.94662" fill="currentColor"/>
+                    <circle cx="14.7331" cy="7.36638" r="1.47331" fill="currentColor"/>
+                    <circle cx="4.41997" cy="19.153" r="1.47331" fill="currentColor"/>
+                    <path d="M5.15662 13.9963H4.41997C3.60628 13.9963 2.94666 13.3367 2.94666 12.523V7.36638C2.94666 6.55269 3.60628 5.89307 4.41997 5.89307H5.15662" stroke="currentColor" stroke-width="2.06263" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="icon-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="3.36756" cy="11.7866" r="1.68378" fill="currentColor"/>
+                    <circle cx="11.7865" cy="11.7866" r="1.68378" fill="currentColor"/>
+                    <circle cx="20.2053" cy="11.7866" r="1.68378" fill="currentColor"/>
+                    </svg>
+                </button>
+                <div class="divider-line"></div>
+                <button class="icon-btn">
+                    <img src="./assets/player-bar/DJ.svg" alt="DJ-icon">
+                </button>
+                <button class="icon-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.36755 6.17398C3.36755 4.6241 4.62398 3.36768 6.17386 3.36768H17.3991C18.949 3.36768 20.2054 4.6241 20.2054 6.17398C20.2054 7.72386 18.949 8.98029 17.3991 8.98029H6.17386C4.62398 8.98029 3.36755 7.72386 3.36755 6.17398Z" stroke="currentColor" stroke-width="2.3573"/>
+                    <path d="M3.36755 14.593L20.2054 14.593" stroke="currentColor" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3.36755 20.2056L20.2054 20.2056" stroke="currentColor" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="icon-btn">
+                    <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.7255 5.96965C13.9824 6.69529 13.9824 8.50938 12.7255 9.23502L2.82789 14.9494C1.57105 15.6751 1.87212e-07 14.768 2.50649e-07 13.3167L7.50218e-07 1.88794C8.13655e-07 0.436664 1.57105 -0.470381 2.82789 0.255256L12.7255 5.96965Z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    <!-- Menu for mobile -->
+
+    <section class="mobile-navigation">
+        <nav>
+            <ul class="menu-navigation">
+                <li> 
+                    <a href="./index.html" class="menu nav-list-active">
+                        <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.17865 9.98612V17.4946C1.17865 18.4245 1.93251 19.1784 2.86243 19.1784H6.23C6.79618 19.2071 7.27095 18.7557 7.27095 18.1888V13.2814C7.27095 12.3557 8.01818 11.6037 8.94384 11.5977L13.7314 11.5667C14.6655 11.5607 15.426 12.3163 15.426 13.2505V18.2717C15.426 18.7724 15.832 19.1784 16.3327 19.1784H19.7003C20.6302 19.1784 21.3841 18.4245 21.3841 17.4946V9.98612C21.3841 9.49083 21.166 9.02066 20.7879 8.70074L12.369 1.57704C11.7412 1.04583 10.8215 1.04583 10.1937 1.57704L1.77481 8.70074C1.39671 9.02066 1.17865 9.49083 1.17865 9.98612Z" fill="currentColor" stroke="currentColor" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li> 
+                    <a href="./discover.html" class="menu nav-list">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.8042 21.8062C14.0298 17.441 17.441 14.0298 21.8062 12.8042L23.6011 12.3003L21.8062 11.7964C17.441 10.5708 14.0298 7.1596 12.8042 2.79443L12.3003 0.999512L11.7964 2.79443C10.5708 7.1596 7.1596 10.5708 2.79443 11.7964L0.999512 12.3003L2.79443 12.8042C7.1596 14.0298 10.5708 17.441 11.7964 21.8062L12.3003 23.6011L12.8042 21.8062Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span>Discover</span>
+                    </a>
+                </li>
+                <li> 
+                    <a href="./search-page.html" class="menu nav-list">
+                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.9159 15.7929C17.4535 14.2244 18.4016 12.0759 18.4016 9.70591C18.4016 4.90343 14.5084 1.01025 9.70594 1.01025C4.90346 1.01025 1.01028 4.90343 1.01028 9.70591C1.01028 14.5084 4.90346 18.4016 9.70594 18.4016C12.1385 18.4016 14.3377 17.4027 15.9159 15.7929ZM15.9159 15.7929L21.0103 21.0103" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round"/>
+                        </svg>
+                        <span>Search</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./my-library.html" class="menu nav-list">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.14307 3.14307V20.4299" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.9054 3.14307V20.4299" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.6676 20.4299V3.14307L20.4299 7.13234V20.4299H14.6676Z" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>My Library</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./account.html" class="menu nav-list">
+                        <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.1541 6.73524C15.1541 8.5951 13.6464 10.1028 11.7865 10.1028C9.92666 10.1028 8.41895 8.5951 8.41895 6.73524C8.41895 4.87539 9.92666 3.36768 11.7865 3.36768C13.6464 3.36768 15.1541 4.87539 15.1541 6.73524Z" stroke="#898989" stroke-width="2.02054"/>
+                        <path d="M4.86713 15.8381L5.61692 15.3382C7.44395 14.1202 9.59065 13.4702 11.7865 13.4702C13.9823 13.4702 16.129 14.1202 17.956 15.3382L18.7058 15.8381C19.6427 16.4626 20.2054 17.5141 20.2054 18.6401V20.3176C20.2054 21.1855 19.5018 21.8891 18.6339 21.8891H11.7865H4.93909C4.07115 21.8891 3.36755 21.1855 3.36755 20.3176V18.64C3.36755 17.5141 3.93028 16.4626 4.86713 15.8381Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                        <span>Me</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+    </section>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+// Global Top Header Styles for Spotify Clone
+.top-header {
+  height: auto;
+  min-height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 16px;
+  flex-wrap: nowrap;
+  
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+}
+
+// Navigation Pills (Home, Discover, Search)
+.nav-pills {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.nav-pill {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  flex-shrink: 0;
+  padding: 0;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+  }
+
+  &--active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      display: block;
+      stroke-width: 2.2;
+    }
+  }
+
+  &__text {
+    display: none;
+  }
+}
+
+
+
+
+// Search Bar
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  flex: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2.5;
+  }
+
+  &__input {
+    display: none; // Hide input as per circular icon design
+  }
+}
+
+// Header Icons
+
+// Header Icons
+.header-icon {
+  width: 48px; // Same as nav pills
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  color: #ffffff;
+  flex-shrink: 0;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    display: block;
+  }
+}
+
+
+
+// Header Avatar
+.header-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #0076ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  flex-shrink: 0;
+}

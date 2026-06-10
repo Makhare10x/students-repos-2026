@@ -1,0 +1,272 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+@use "../base/base" as *;
+@use "../base/reset" as *;
+
+.search-mobile {
+background-color:$color-bg-main;
+
+}
+//header//
+.mobile-header-search{
+width: 100%;
+padding: 15px;
+padding-top: 50px;
+background-color: $color-bg-primary;
+display: flex;
+align-items: center;
+gap: 15px;
+.browse{
+ position: relative; 
+flex-grow: 1;
+input {
+width:100%;
+height: 40px;
+padding: 0 40px 0 15px;
+border-radius: 10px;
+background-color: $color-bg-secondary;
+@include typography-search;
+border: none;
+outline: none;
+}
+img {
+@include mobile-version-logos;
+align-self: center;
+position: absolute;
+right: 8px;
+}
+}
+img{
+width: 35px;
+height: 35px;
+flex-shrink: 0;
+}
+}
+//main//
+.mobile-main-search{
+h1{
+font-family: "Satoshi", sans-serif;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 3%;
+color: $color-fg-primary;
+display: block;
+padding: 15px;
+}
+h2{
+font-family: "Satoshi", sans-serif;
+font-weight: 500;
+font-style: Medium;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 3%;
+color: $color-fg-primary;
+padding: 15px;   
+}
+}
+
+//cards//
+.Discover {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+gap: 20px;
+padding: 10px;
+}
+.discover-card {
+width:100%;
+height:100px;
+border-radius: 10px;
+position: relative;
+background-color:rgba(30, 50, 100, 1);
+overflow: hidden;   
+p{
+padding: 10px;
+position: absolute;
+left: 20px;
+top: 20px;
+z-index: 2;
+color:rgba(255, 255, 255, 1);
+background-color: transparent;
+font-family:"Satoshi";
+font-weight: 900;
+font-style: Black;
+font-size: clamp(14px, 4vw, 18px);
+line-height: 100%;
+letter-spacing: 3%;
+}
+img {
+width: 60%;
+height: auto;
+position: absolute;
+top: 40px;
+left: 65px;
+transform: rotate(30deg);
+overflow: hidden;
+opacity: 1;
+border-radius: 5px;
+} 
+}
+.genres {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+opacity:0.6;
+gap: 20px;
+padding: 10px;
+}
+
+@media (max-width:768px){
+ 
+    .search-desktop {
+        display: none;
+    }
+    .mobile-header-search {
+        display: flex;
+    }
+}
+@media (min-width:768px){
+
+       .Discover {
+        display: flex;
+        
+    }
+    
+    .discover-card {
+        height: 165px;
+        width: 165px;
+        aspect-ratio: 1/1;  
+        img {
+            width: 104px;
+            height: 104px;
+            top: 50%;
+            left:50%;
+        }   
+    }
+    .genres {
+        opacity: 1;
+        gap: 10px;
+        .discover-card {
+            height: 165px;
+            width: 165px;
+            gap: 10px;
+        }
+    }
+    
+    .recent-searches {
+        position: absolute;
+        left:300px;
+        top: 100px;
+    }
+    .mobile-main-search {
+    position: absolute;
+    top: 500px;
+    left: 300px;
+}
+.mobile-header-search {
+    display: none;
+}
+.search-main-content {
+    height:120vh;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-bottom: 200px;
+    border: 1px solid $color-bg-secondary;
+    .mobile-main-search {
+    left: 280px;
+    }
+  .Discover {
+    padding: 10px;
+  }
+}
+}
+
+
+//desktop layout styling//
+.recent-searches {
+    width: 70%;
+    height: 280px;
+    h3{
+        @include h3;
+        padding: 20px;
+    }
+}
+.recent-searches-list {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.recent-searches-card {
+    width: 170px;
+    height: 205px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    opacity: 1;
+    @include typography-sub;
+    color: $color-fg-primary;  
+    position: relative;
+    text-align: center;
+.main-image {
+    @include search-circular-image; 
+}
+.cancel-icon {
+    @include cancel-icon;
+    position: absolute;
+    top: 0.5px;
+    left: 130px;   
+}
+}
+.square-image{
+    @extend .recent-searches-card;
+    height: 172px;
+    position: relative;
+.background-image {
+    position: absolute;
+    left: 8%;
+    top: -6px;
+    width: 146px;
+    height: 6px;
+    opacity: 1;
+    border-top-left-radius: 7.32px;
+    border-top-right-radius: 7.32px;
+    background-color: rgba(98, 120, 177, 0.3);  
+}
+.main {
+width: 170px;
+height: auto;
+object-fit: cover;
+border-radius: 7px;
+}
+}
+.text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    padding-top: 10px;
+.music-name {
+font-family: "Satoshi", sans-serif;
+font-weight: 500;
+font-style:medium;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 3%;
+color: $color-fg-primary;
+}
+p{
+    font-family: "Satoshi",sans-serif;
+    font-weight: 400;
+    font-style:normal;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 3%;
+}
+}
+footer {
+    z-index: 999;
+}

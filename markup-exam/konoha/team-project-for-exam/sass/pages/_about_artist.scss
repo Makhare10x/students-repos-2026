@@ -1,0 +1,132 @@
+.main-layout {
+  padding-bottom: 0;
+}
+
+.main-content {
+  width: 100%;
+  max-width: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+
+.about-artist-section {
+  padding-bottom: 110px;
+  margin-bottom: 0;
+  background: #060606;
+  font-family: "Satoshi", sans-serif;
+}
+
+.about-artist-section .about-tab-active {
+  border-bottom: 2px solid #1ED760;
+  padding-bottom: 2px;
+}
+
+.about-artist-section .artist-hero {
+  height: 420px;
+}
+
+.about-artist-content {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr) 260px;
+  gap: 28px;
+  padding: 36px 36px 0;
+}
+
+.about-rank {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about-rank-badge {
+  position: relative;
+  width: 132px;
+  height: 132px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-rank-badge svg {
+  width: 132px;
+  height: 132px;
+  display: block;
+}
+
+.about-rank-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  color: #E0E0E0;
+}
+
+.about-rank-text span {
+  font-size: 30px;
+  line-height: 175%;
+  letter-spacing: 3%;
+}
+
+.about-rank-text small {
+  margin-top: -10px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 175%;
+  letter-spacing: 3%;
+}
+
+.about-artist-bio p {
+  color: #E0E0E0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 175%;
+  letter-spacing: 3%;
+}
+
+.about-artist-bio {
+  max-width: 750px;
+  justify-self: start;
+}
+
+.about-artist-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.about-artist-stats strong {
+  color: #E0E0E0;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 175%;
+  letter-spacing: 3%;
+}
+
+.about-artist-stats span {
+  color: #898989;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 175%;
+  letter-spacing: 3%;
+}
+
+.stat-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-city {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-city strong {
+  font-size: 16px;
+}
+

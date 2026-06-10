@@ -1,0 +1,42 @@
+@use "../abstracts/variables.scss" as *;
+@mixin hover-selected-style {
+  color: $menu-text-hover;
+  background-color: $hover-background-color;
+}
+@mixin font-style {
+  font-family: $main-font;
+  font-size: $font-size-primary;
+}
+@mixin list-title-style {
+  color: $list-title-color;
+  font-size: $list-title-size;
+  font-family: $main-font;
+  margin: 20px 20px;
+  font-weight: $font-weight-bold;
+}
+@mixin podcasts-box($color) {
+  background-color: rgba($color, 0.05);
+  border-radius: 5px;
+  border-left: 4px solid rgba($color, 0.6);
+  padding-left: 10px;
+}
+@mixin episodes-box($color) {
+  background-color: rgba($color, 0.05);
+  border-radius: 5px;
+  padding-left: 10px;
+}
+// button hovers
+@mixin button-hover-effect {
+  img {
+    filter: brightness(1.5);
+  }
+}
+@mixin button-hover-transition {
+  transition: filter 0.3s linear;
+}
+@mixin flex($align, $justify, $gap) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}

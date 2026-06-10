@@ -1,0 +1,56 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.mobile-navigation {
+  margin: 0.8rem;
+  width: 100%;
+  background: transparent; 
+}
+.mobile-navigation__list {
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+}
+.mobile-navigation__title {
+  
+  align-self: center;
+}
+.mobile-navigation__content {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+.mobile-footer {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.album-box {
+    display: flex;
+    
+    width: 100%;
+    background-color: rgba(51, 56, 66, 1);
+    gap: 3rem;
+    padding: 0.8rem;
+    .album-box__icons {
+        display: flex;
+        margin-left: 5rem;
+        justify-content: space-between;
+    }
+    
+}
+h2 {
+    font-family: sans-serif;
+font-weight: 400;
+
+font-size: 14px;
+
+
+}
+.mobileCards__footer{
+display: flex;
+gap: 1rem;
+}
+

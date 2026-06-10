@@ -1,0 +1,79 @@
+@use "../abstracts/variables" as var;
+
+
+
+// ================ FOOTER :  bottom-player__container  ========
+
+.player-btn__primary {
+    width: 3.8rem;
+    height: 3.8rem;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var.$bg-play-res;
+    transition: all 0.3s ease;
+
+    .player-btn__icon {
+        display: none;
+    }
+}
+
+.player-btn__primary:hover {
+    opacity: 1;
+    background-color: var.$bg-play-icon;
+}
+
+.player-btn__primary:hover .player-btn__icon {
+    display: inline-block;
+    filter: brightness(0.65);
+    transform: scale(1.1);
+}
+
+.player-btn:hover {
+    filter: brightness(0) invert(1) contrast(2) drop-shadow(0 0 1.5px var.$hover-color);
+}
+
+// =========== song-page buttons style =========
+
+.playlist__btn {
+    padding: 0.5rem 1.8rem;
+    border-radius: 4.4rem;
+    border: 0.1rem solid var.$Fg-secondary;
+
+    &:hover {
+        color: var.$font-activ;
+        background-color: var.$bg-table-row;
+    }
+
+}
+
+.btn-lirics {
+   
+    border-bottom: 0.1rem solid var.$border-color;
+
+    &:hover {
+        border-color: var.$bg-play-icon;
+    }
+
+}
+
+.player-btn--active img {
+    transition: filter 0.3s ease;
+}
+
+.player-btn--active:hover img {
+    filter: var.$bg-activ-gradient;
+
+
+}
+
+.artists__btn {
+    padding: 1rem 2rem; 
+    border-radius: 4.4rem;
+    color: var.$font-activ;
+    
+
+    &:hover {
+        background-color: var.$bg-btn-secondary;
+    }
+
+}

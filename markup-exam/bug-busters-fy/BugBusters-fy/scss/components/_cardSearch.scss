@@ -1,0 +1,89 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+/*==================
+  Mobile Layout
+==================*/
+
+.card-search {
+  @include mixins.card-badges(variables.$search-colors, $cardType: search);
+  height: 10rem;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  flex: 1 1 17rem;
+
+  a {
+    width: 100%;
+    height: 100%;
+  }
+  h3 {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    font-size: 2rem;
+    color: variables.$color-active-desk;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    font-family: variables.$ff-satoshi-black;
+    max-width: 10rem;
+    z-index: 2;
+  }
+  .img-container {
+    width: 10.4rem;
+    height: 10.4rem;
+    position: absolute;
+    bottom: 0;
+    right: 0rem;
+    transform: rotate(30deg) translate(0, 4rem);
+    transform-origin: bottom center;
+    transition:
+      transform 0.4s ease-in-out,
+      width 0.4s ease-in-out,
+      height 0.4s ease-in-out;
+    // z-index: 1;
+    img {
+      @include mixins.imageShaper($brRadius: 0.5rem);
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at bottom right,
+
+      rgba(0, 0, 0, 0.75)
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+  &:hover {
+    .img-container {
+      transform: rotate(0) translate(0, 0);
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+/*=================
+  Desktop Layout
+==================*/
+
+@media (min-width: 920px) {
+  .card-search {
+    flex: 0 0 17rem;
+    height: 17rem;
+    .img-container {
+      transform: rotate(30deg) translate(-1rem, 1rem);
+    }
+  }
+}

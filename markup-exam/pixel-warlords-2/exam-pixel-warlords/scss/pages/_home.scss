@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+  .spotify-container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "main" "player";
+  }
+  .sidebar { display: none; }
+}
+
+@media (max-width: 1100px) {
+  header { display: none; }
+}

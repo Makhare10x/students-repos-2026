@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+<!--navigation-->
+<input type="checkbox" id="friends-toggle" style="display: none;">
+<header class="header">
+  <nav class="nav">
+
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="/index.html" class="nav__link">
+          <!-- <img class="nav__icon" src="./assets/header-icons/home-icon.png" alt="home-icon"> -->
+         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23 21" fill="none">
+        <path d="M16.3328 19.1784H19.7003C20.6303 19.1784 21.3841 18.4245 21.3841 17.4946V9.98612C21.3841 9.49083 21.1661 9.02067 20.788 8.70074L12.369 1.57704C11.7413 1.04583 10.8216 1.04583 10.1938 1.57704L1.77487 8.70074C1.39677 9.02067 1.17871 9.49083 1.17871 9.98612V17.4946C1.17871 18.4245 1.93257 19.1784 2.86249 19.1784H6.23006" stroke="#898989" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+          <span class="nav__text">Home</span>
+        </a>
+      </li>
+
+      <li class="nav__item">
+        <a href="/discovery.html" class="nav__link">
+          <!-- <img class="nav__icon" src="./assets/header-icons/Star-icon.png" alt="Star-icon"> -->
+
+          <svg   xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 41 41" fill="none">
+          <path d="M20.5903 29.5869C21.8159 25.2217 25.2271 21.8105 29.5923 20.585L31.3872 20.0811L29.5923 19.5771C25.2271 18.3516 21.8159 14.9404 20.5903 10.5752L20.0864 8.78027L19.5825 10.5752C18.357 14.9404 14.9457 18.3516 10.5806 19.5771L8.78564 20.0811L10.5806 20.585C14.9457 21.8105 18.357 25.2217 19.5825 29.5869L20.0864 31.3818L20.5903 29.5869Z" stroke="#898989" stroke-width="2"/>
+          </svg>
+          <span class="nav__text">Discover</span>
+        </a>
+      </li>
+
+     <li class="nav__items">
+       <a href="/search.html" class="nav__link nav__btn"> 
+            <input type="text" name="search" placeholder="Search " class="nav__icon nav__text ">
+      
+      </a>
+      </li>
+    </ul>
+
+    <ul class="nav__list">
+      <li class="nav__items">
+        <button href="#" class="nav__btn">
+          <img class="nav__icon" src="./assets/header-icons/notification-icon.png" alt="notification-icon">
+          
+        </button>
+      </li>
+
+      <li class="nav__items">
+        <button href="#" class="nav__btn">
+          <img class="nav__icon" src="./assets/header-icons/unlock-icon.png" alt="unlock-icon">
+          
+        </button>
+      </li>
+
+      <!-- <li class="nav__item">
+        <a href="#" class="nav__link">
+          <img class="nav__icon" src="./assets/header-icons/friends-icon.png" alt="friends-icon">
+         
+        </a>
+      </li> -->
+      
+      <li class="nav__items">
+        <label for="friends-toggle" class="nav__friends-trigger nav__btn">
+            <!-- <img class="nav__icon" src="./assets/header-icons/friends-icon.png" alt="Friends Activity"> -->
+            <svg   xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 41 41" fill="none">
+            <path d="M29.4 14.3136C29.4 16.1735 27.8922 17.6812 26.0324 17.6812C24.1725 17.6812 22.6648 16.1735 22.6648 14.3136C22.6648 12.4538 24.1725 10.946 26.0324 10.946C27.8922 10.946 29.4 12.4538 29.4 14.3136Z" stroke="#898989" stroke-width="2.02054"/>
+            <path d="M19.113 23.4167L19.8628 22.9168C21.6898 21.6988 23.8365 21.0488 26.0324 21.0488C28.2282 21.0488 30.3749 21.6988 32.2019 22.9168L32.9517 23.4167C33.8885 24.0412 34.4513 25.0927 34.4513 26.2187V27.8962C34.4513 28.7641 33.7477 29.4677 32.8797 29.4677H26.0324H19.185C18.317 29.4677 17.6134 28.7641 17.6134 27.8962V26.2187C17.6134 25.0927 18.1762 24.0412 19.113 23.4167Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M17.9811 14.3136C17.9811 16.1735 16.4734 17.6812 14.6135 17.6812C12.7537 17.6812 11.246 16.1735 11.246 14.3136C11.246 12.4538 12.7537 10.946 14.6135 10.946C16.4734 10.946 17.9811 12.4538 17.9811 14.3136Z" stroke="#898989" stroke-width="2.02054"/>
+            <path d="M14.6135 21.0488C12.4177 21.0488 10.271 21.6988 8.44398 22.9168L7.69419 23.4167C6.75734 24.0412 6.19461 25.0927 6.19461 26.2187V27.8962C6.19461 28.7641 6.89821 29.4677 7.76614 29.4677H13.8271" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </label>
+      </li>
+
+      <li class="nav__items">
+        <button  href="#" class="nav__btn">
+          <img class="nav__icon" src="./assets/header-icons/settings-icon.png" alt="settings-icon">
+          
+        </button>
+      </li>
+
+      <li class="nav__items">
+        <button href="#" class="nav__btn">
+          <img class="nav__icon" src="./assets/header-icons/dark-mode-icon.png" alt="dark-mode-icon">
+          
+        </button>
+      </li>
+    </ul>
+
+  </nav>
+</header>
+<!--left side-bar-->
+<aside class="sidebar">
+   <nav class="nav-aside" aria-label="Main Navigation">
+    <ul class="nav-aside__list">
+      
+      <li class="nav-aside__item">
+        <a href="/library.html" class="nav-aside__link nav-aside__link--active">
+          <!-- <img class="nav-aside__icon" src="./assets/aside-icons/library-icon.png" alt="library" aria-hidden="true"> -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 41 41" fill="none">
+          <g clip-path="url(#clip0_11021_3266)">
+          <path d="M11.562 11.5621V28.849" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17.3242 11.5621V28.849" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M23.0865 28.849V11.5621L28.8488 15.5514V28.849H23.0865Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+
+          </svg>
+          <span class="nav-aside__text">My Library</span>
+        </a>
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/search" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/pin-icon.png" alt="pin" aria-hidden="true">
+          <span class="nav-aside__text">Pins</span>
+        </a>
+        <img  class="nav-aside__vector" src="./assets/aside-icons/vector-icon.png" alt="vector">
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/library" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/playlist-icon.png" alt="playlist" aria-hidden="true">
+          <span class="nav-aside__text">Playlists</span>
+        </a>
+        <img  class="nav-aside__vector" src="./assets/aside-icons/vector-icon.png" alt="vector">
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/likedsongs.html" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/heart-icons.png" alt="heart" aria-hidden="true">
+          <span class="nav-aside__text">Liked songs</span>
+        </a>
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/library" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/albums-icons.png" alt="albums" aria-hidden="true">
+          <span class="nav-aside__text">Albums</span>
+        </a>
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/library" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/folders-icons.png" alt="folders" aria-hidden="true">
+          <span class="nav-aside__text">Folders</span>
+        </a>
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/library" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/podcasts-icons.png" alt="Podcasts" aria-hidden="true">
+          <span class="nav-aside__text">Podcasts</span>
+        </a>
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/library" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/audiobooks-icons.png" alt="Audiobooks" aria-hidden="true">
+          <span class="nav-aside__text">Audiobooks</span>
+        </a>
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/library" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/artists-icons.png" alt="Artists" aria-hidden="true">
+          <span class="nav-aside__text">Artists</span>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+</aside>
+<!--right side-bar-->
+  <aside class="friends-sidebar">
+  <div class="friends-sidebar__header">
+    <span class="friends-sidebar__title">Friend Activity</span>
+    <div class="friends-sidebar__icons">
+    <img src="./assets/aside-icons/addfriends-icons.png" class="friends-sidebar__icon" alt="addfriends">
+    <label for="friends-toggle" class="friends-sidebar__close">✕</label>
+    </div>
+    
+  </div>
+
+  <div class="friends-sidebar__content">
+    <div class="friend-item">
+      <div class="friend-item__avatar">
+        <img src="./assets/aside-icons/friend1.png" alt="User">
+        <div class="friend-item__status-dot"></div> </div>
+      
+      <div class="friend-item__info">
+        <div class="friend-item__name">FriendlyMusicListener</div>
+        <div class="friend-item__details">
+          <span class="friend-item__icon"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+        <path d="M10.4172 20.323V16.24M14.8715 20.323V9.55859M19.3257 20.323V13.6417" stroke="#1ED760" stroke-width="1.48475" stroke-linecap="round"/>
+        </svg></span> <span class="friend-item__song">Goosebumps</span>
+          <span class="friend-item__separator">•</span>
+          <span class="friend-item__artist">Travis Scott</span>
+        </div>
+      </div> 
+    </div>
+    <div class="friend-item">
+      <div class="friend-item__avatar">
+        <img src="./assets/aside-icons/friend2.png" alt="User">
+        <div class="friend-item__status-dot"></div> </div>
+      
+      <div class="friend-item__info">
+        <div class="friend-item__name">AverageMusicEnjoyer</div>
+        <div class="friend-item__details">
+          <span class="friend-item__icon"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+        <path d="M10.4172 20.323V16.24M14.8715 20.323V9.55859M19.3257 20.323V13.6417" stroke="#1ED760" stroke-width="1.48475" stroke-linecap="round"/>
+        </svg></span> <span class="friend-item__song">Get Lucky</span>
+          <span class="friend-item__separator">•</span>
+          <span class="friend-item__artist">Daft Punk</span>
+        </div>
+      </div> 
+    </div>
+    <div class="friend-item">
+      <div class="friend-item__avatar">
+        <img src="./assets/aside-icons/friend3.png" alt="User">
+        <div class="friend-item__status-dot"></div> </div>
+      
+      <div class="friend-item__info">
+        <div class="friend-item__name">MusicEnthusiast</div>
+        <div class="friend-item__details">
+          <span >1h</span> <span class="friend-item__song">would he</span>
+          <span class="friend-item__separator">•</span>
+          <span class="friend-item__artist">joji</span>
+        </div>
+      </div> 
+    </div>
+    <div class="friend-item">
+      <div class="friend-item__avatar">
+        <img src="./assets/aside-icons/friend4.png" alt="User">
+        <div class="friend-item__status-dot"></div> </div>
+      
+      <div class="friend-item__info">
+        <div class="friend-item__name">IListenToMusic56</div>
+        <div class="friend-item__details">
+          <span >6h</span> <span class="friend-item__song">Rockstar</span>
+          <span class="friend-item__separator">•</span>
+          <span class="friend-item__artist">Post Malone</span>
+        </div>
+      </div> 
+    </div>
+
+  
+  
+  </div>
+</aside>
+
+<label for="friends-toggle" class="friends-overlay"></label> 
+
+    <main class="main-content">
+        <section class="main-hdr">
+            <div>
+                <h2>Recent searches</h2>
+                
+            </div>
+
+           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <circle cx="11.7863" cy="20.2056" r="1.68378" fill="#898989"/>
+            <circle cx="20.2053" cy="20.2056" r="1.68378" fill="#898989"/>
+            <circle cx="28.6242" cy="20.2056" r="1.68378" fill="#898989"/>
+            </svg>
+
+        </section>
+
+
+        <div class="category__body slider">
+                <div class="category__card" id="first-card-YFA">  <!--id connected with left arrow-->
+                    <div class="category__cover category__cover_GunsnRoses-YTM">
+                        <svg class="category__svg-icon" width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="-0.411133" width="40.4108" height="40.4108" ry="20.2054" fill="#111111"/>
+                        <path d="M25.2568 14.7428L20.2054 19.7941M15.1541 24.8455L20.2054 19.7941M20.2054 19.7941L15.1541 14.7428M20.2054 19.7941L25.2568 24.8455" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="category__title-groupsearch">
+                        <h3 class="category__card-title">
+                            Guns'n Roses
+                        </h3>
+                        
+                    </div>
+                    
+                </div>
+                <div class="category__card">
+                    <div class="category__cover category__cover_DraftPunkMix-YTM">
+                       <svg class="category__svg-icon" width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="-0.411133" width="40.4108" height="40.4108" ry="20.2054" fill="#111111"/>
+                        <path d="M25.2568 14.7428L20.2054 19.7941M15.1541 24.8455L20.2054 19.7941M20.2054 19.7941L15.1541 14.7428M20.2054 19.7941L25.2568 24.8455" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+         
+                    </div>
+                    <div class="category__title-groupsearch">
+                        <h3 class="category__card-title">
+                            Daft Punk Mix
+                        </h3>
+                        
+                    </div>
+                   
+                </div>
+                <div class="category__card" id="last-card-YFA"> <!--id connected with right arrow-->
+                    <div class="category__cover category__cover_DavidBowieMix-YTM">
+                          <svg class="category__svg-icon" width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="-0.411133" width="40.4108" height="40.4108" ry="20.2054" fill="#111111"/>
+                        <path d="M25.2568 14.7428L20.2054 19.7941M15.1541 24.8455L20.2054 19.7941M20.2054 19.7941L15.1541 14.7428M20.2054 19.7941L25.2568 24.8455" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="category__title-groupsearch">
+                        <h3 class="category__card-title">
+                            David Bowie Mix
+                        </h3>
+                      
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+        <h1 class="hidden"></h1>
+        <section class="category">
+            <!--Made For You category section and action buttons -->
+            <div class="category__hdr">
+                <h2 class="category__title">Browse all</h2>
+                
+                <div class="category__action">
+                     <a href="#first-card-MFY" class="category-left-arrow"><img src="./assets/icon/Arrow-Left.png"
+                            alt="Arrow Left"></a>
+
+                    <a href="#last-card-MFY" class="category-right-arrow"><img src="./assets/icon/Arrow-Right.png"
+                            alt="Arrow Right"></a>
+                    <button class="category__btn">
+                        <img src="./assets/icon/More.png" alt="More">
+                    </button>
+                   
+                </div>
+            </div>
+            <h4 class="category__subtitle">Discover</h4>
+            <!-- made for you cards section -->
+            <div class="category__body slider">
+                
+                <div class="category__card " id="first-card-MFY">
+                     <div class="category__card category__card_search made">
+                    <h3 class="category__search-title">Made ForYou</h3>
+                    <img src="./assets/image/RockMix.png" alt="made" class="category__search-img">
+                </div>
+                   
+                </div>
+                <div class="category__card">
+                     <div class="category__card category__card_search new">
+                    <h3 class="category__search-title">New release</h3>
+                    <img src="./assets/image/60sMix.png" alt="new" class="category__search-img">
+                </div>
+                    
+                </div>
+                <div class="category__card">
+                    <div class="category__card category__card_search spotyclas">
+                    <h3 class="category__search-title">Spotify Classics</h3>
+                    <img src="./assets/image/coverDiscoverWeekly.png" alt="spotyclas" class="category__search-img">
+                </div>
+                </div>
+                <div class="category__card">
+                    <div class="category__card category__card_search charts">
+                    <h3 class="category__search-title">Charts</h3>
+                    <img src="./assets/image/DailyMix1.png" alt="charts" class="category__search-img">
+                </div>
+                    
+                </div>
+                <div class="category__card">
+                     <div class="category__card category__card_search trending">
+                    <h3 class="category__search-title">Trending</h3>
+                    <img src="./assets/image/DailyMix2.png" alt="trending" class="category__search-img">
+                </div>
+                    
+                </div>
+                <div class="category__card">
+                     <div class="category__card category__card_search charts">
+                    <h3 class="category__search-title">discover</h3>
+                    <img src="./assets/image/DailyMix3.png" alt="charts" class="category__search-img">
+                </div>
+                   
+                </div>
+                <div class="category__card">
+                     <div class="category__card category__card_search spotysingles">
+                    <h3 class="category__search-title">Spotify Singles</h3>
+                    <img src="./assets/image/DailyMix4.png" alt="spotysingles" class="category__search-img">
+                </div>
+                    
+                </div>
+                <div class="category__card" id="last-card-MFY">
+                     <div class="category__card category__card_search new">
+                    <h3 class="category__search-title">Decades</h3>
+                    <img src="./assets/image/DailyMix6.png" alt="decades" class="category__search-img">
+                </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="category">
+            <!--Your top mixes category section and action buttons -->
+            <div class="category__hdr">
+                <h4 class="category__subtitle">Genres</h4>
+                <div class="category__action">
+
+                    <a href="#first-card-YTM" class="category-left-arrow"><img src="./assets/icon/Arrow-Left.png"
+                            alt="Arrow Left"></a>
+
+                    <a href="#last-card-YTM" class="category-right-arrow"><img src="./assets/icon/Arrow-Right.png"
+                            alt="Arrow Right"></a>
+                    <button class="category__btn">
+                        <img src="./assets/icon/More.png" alt="More">
+                    </button>
+                </div>
+            </div>
+            <!-- Your top mixes cards section -->
+            <div class="category__body slider">
+                <div class="category__card" id="first-card-YTM">
+                     <div class="category__card category__card_search pop">
+                    <h3 class="category__search-title">Pop</h3>
+                    <img src="./assets/image/PopMix.png" alt="Rock" class="category__search-img">
+                </div>
+                    
+                </div>
+                 <div class="category__card category__card_search country">
+                    <h3 class="category__search-title">Country</h3>
+                    <img src="./assets/image/FallOutBoy.png" alt="country" class="category__search-img">
+                </div>
+                 <div class="category__card category__card_search hiphop">
+                    <h3 class="category__search-title">Hiphop</h3>
+                    <img src="./assets/image/RockMix.png" alt="hiphop" class="category__search-img">
+                </div>
+                <div class="category__card category__card_search rock">
+                    <h3 class="category__search-title">Rock</h3>
+                    <img src="./assets/image/DavidBowieMix.png" alt="Rock" class="category__search-img">
+                </div>
+                 <div class="category__card category__card_search indie">
+                    <h3 class="category__search-title">Indie</h3>
+                    <img src="./assets/image/UpbeatMix.png" alt="indie" class="category__search-img">
+                </div>
+                <div class="category__card category__card_search punk">
+                    <h3 class="category__search-title">Punk</h3>
+                    <img src="./assets/image/DraftPunkMix.png" alt="punk" class="category__search-img">
+                </div>
+              
+
+                <div class="category__card category__card_search metal">
+                    <h3 class="category__search-title">Metal</h3>
+                    <img src="./assets/image/GunsnRoses.png" alt="metal" class="category__search-img">
+                </div>
+                <div class="category__card" id="last-card-YTM">
+                    <div class="category__card category__card_search instrumental">
+                    <h3 class="category__search-title">Instrumental</h3>
+                    <img src="./assets/image/HappyMix.png" alt="instrumental" class="category__search-img">
+                </div>
+                    
+                </div>
+            </div>
+
+        </section>
+
+       
+    </main>
+    <footer class="main-footer">
+        <div class="music-bar">
+            <div class="functional-side">
+                <div class="controls-left">
+                    <img class="icon-size" src="./assets/footer-images/greenbutton.png" alt="play button">
+                    <img class="icon-size" src="./assets/footer-images/left.png" alt="click left ">
+                    <img class="icon-size" src="./assets/footer-images/right.png" alt="click right">
+                    <img class="icon-size" src="./assets/footer-images/random.png" alt="random">
+                    <img class="icon-size" src="./assets/footer-images/return.png" alt="return">
+                </div>
+                <div class="progress-part">
+                    <img src="./assets/footer-images/Group37.png" alt="music line">
+                    <img src="./assets/footer-images/volume.png" alt="volume">
+                    <div class="album-box">
+                        <img src="./assets/footer-images/Rectangle6.png" alt="album photo">
+                        <div class="album-box-title">
+                            <h3>Get Lucky</h3>
+                            <p>Daft Punk</p>
+                            <p>Random Access Memories</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls-right">
+                    <img src="./assets/footer-images/like.png" alt="like button ">
+                    <img src="./assets/footer-images/add.png" alt=" add playlist">
+                    <img src="./assets/footer-images/Group60.png" alt="lyrics">
+                    <img src="./assets/footer-images/Frame4(1).png" alt="device jam">
+                    <img src="./assets/footer-images/Frame4(2).png" alt="other">
+                    <img src="./assets/footer-images/Vector43.png" alt="break line">
+                    <img src="./assets/footer-images/image19.png" alt="Blue circle">
+                    <img src="./assets/footer-images/queue.png" alt="Queue">
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+        <div class="mobile-search-view">
+
+            <div class="search__layout">
+                
+                    <section class="search__header">
+                        <div class="mobileMain-hdr__button">
+                            <li class="nav__items">
+                            <a href="/search.html" class="nav__link nav__btn"> 
+                                    <input type="text" name="search" placeholder="What do you want to play? " class="nav__icon nav__text ">
+                            
+                            </a>
+                            </li>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                        <path d="M7.57837 16.8337V26.3244C7.57837 27.8585 8.82202 29.1022 10.3561 29.1022H29.8006C31.3347 29.1022 32.5784 27.8585 32.5784 26.3244V16.8337C32.5784 15.2995 31.3347 14.0559 29.8006 14.0559H28.3507C27.8169 14.0559 27.3091 13.8256 26.9575 13.424L25.0236 11.2155C24.6719 10.814 24.1641 10.5837 23.6304 10.5837H16.1885C15.6548 10.5837 15.147 10.814 14.7953 11.2155L12.8614 13.424C12.5098 13.8256 12.002 14.0559 11.4682 14.0559H10.3561C8.82202 14.0559 7.57837 15.2995 7.57837 16.8337Z" stroke="#898989" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20.0784" cy="20.306" r="4.16667" stroke="#898989" stroke-width="2"/>
+                        </svg>
+
+
+                    </section>
+
+                    <section class="mobileCards">
+                   
+                <!--Your top mixes category section and action buttons -->
+                <div class="category__hdr">
+                    <h3 class="category__subtitle">Browse all</h3>
+                    <h4 class="category__subtitle">Genres</h4>
+                    
+                </div>
+                <!-- Your top mixes cards section -->
+                <div class="search__body ">
+                    <div class="search__card" id="first-card-YTM">
+                        <div class="search__card category__card_search pop">
+                        <h3 class="category__search-title">Pop</h3>
+                        <img src="./assets/image/PopMix.png" alt="Rock" class="category__search-img">
+                    </div>
+                        
+                    </div>
+                    <div class="search__card category__card_search country">
+                        <h3 class="category__search-title">Country</h3>
+                        <img src="./assets/image/FallOutBoy.png" alt="country" class="category__search-img">
+                    </div>
+                    <div class="search__card category__card_search hiphop">
+                        <h3 class="category__search-title">Hiphop</h3>
+                        <img src="./assets/image/RockMix.png" alt="hiphop" class="category__search-img">
+                    </div>
+                    <div class="search__card category__card_search rock">
+                        <h3 class="category__search-title">Rock</h3>
+                        <img src="./assets/image/DavidBowieMix.png" alt="Rock" class="category__search-img">
+                    </div>
+                    <div class="search__card category__card_search indie">
+                        <h3 class="category__search-title">Indie</h3>
+                        <img src="./assets/image/UpbeatMix.png" alt="indie" class="category__search-img">
+                    </div>
+                    <div class="search__card category__card_search punk">
+                        <h3 class="category__search-title">Punk</h3>
+                        <img src="./assets/image/DraftPunkMix.png" alt="punk" class="category__search-img">
+                    </div>
+                
+
+                    <div class="search__card category__card_search metal">
+                        <h3 class="category__search-title">Metal</h3>
+                        <img src="./assets/image/GunsnRoses.png" alt="metal" class="category__search-img">
+                    </div>
+                    <div class="search__card" id="last-card-YTM">
+                        <div class="search__card category__card_search instrumental">
+                        <h3 class="category__search-title">Instrumental</h3>
+                        <img src="./assets/image/HappyMix.png" alt="instrumental" class="category__search-img">
+                    </div>
+                        
+                </div>
+            </div>
+
+        </section>
+
+                </section>
+            </main>
+             <footer>
+               <div class="mobile-footer">
+                    <div class="album-box">
+                         <div class="mobileCards__footer">
+                        <img class="mobileCards-cover" src="./assets/image/MobileImage/ram.png"
+                            alt="Random Access Memory">
+                        <div class="mobileCards__content">
+                            <h2 class="mobileCards__title">Get Lucky (feat. Pharrell Williams and Nile Rodgers)</h2>
+                            <p class="mobileCards__artist">Daft Punk</p>
+                        </div>
+                    </div>
+                        <div class="album-box__icons">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                        <path d="M28.0942 18.2343C29.3511 18.9599 29.3511 20.774 28.0942 21.4997L18.1966 27.2141C16.9398 27.9397 15.3687 27.0327 15.3687 25.5814L15.3687 14.1526C15.3687 12.7013 16.9398 11.7943 18.1966 12.5199L28.0942 18.2343Z" fill="#898989"/>
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                        <rect width="20" height="20" rx="3" transform="matrix(1 0 0 -1 9.82703 31.3296)" stroke="#898989" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M11.827 11.3296H27.827C27.827 9.67274 26.4839 8.32959 24.827 8.32959H14.827C13.1702 8.32959 11.827 9.67274 11.827 11.3296Z" stroke="#898989" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M15.827 21.3296H19.827M23.827 21.3296H19.827M19.827 21.3296V17.3296M19.827 21.3296V25.3296" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                    </div>
+                        
+                    </div>
+                    
+               </div>
+                    
+
+                
+             </footer>
+            <nav class="mobile-navigation" >
+                <ul class="mobile-navigation__list" 
+                  >
+                    <li class="mobile-navigation__content">
+                         <svg class="mobile-navigation__svg" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 23 21" fill="none">
+                        <path d="M1.17865 9.98612V17.4946C1.17865 18.4245 1.93251 19.1784 2.86243 19.1784H6.23C6.79618 19.2071 7.27095 18.7557 7.27095 18.1888V13.2814C7.27095 12.3557 8.01818 11.6037 8.94384 11.5977L13.7314 11.5667C14.6655 11.5607 15.426 12.3163 15.426 13.2505V18.2717C15.426 18.7724 15.832 19.1784 16.3327 19.1784H19.7003C20.6302 19.1784 21.3841 18.4245 21.3841 17.4946V9.98612C21.3841 9.49083 21.166 9.02066 20.7879 8.70074L12.369 1.57704C11.7412 1.04583 10.8215 1.04583 10.1937 1.57704L1.77481 8.70074C1.39671 9.02066 1.17865 9.49083 1.17865 9.98612Z" fill="#898989" stroke="#898989" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <a class="mobile-navigation__title">Home</a>
+                    </li>
+                    <li class="mobile-navigation__content">
+                        <svg class="mobile-navigation__svg" width="23" height="23" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.5903 29.5869C21.8159 25.2217 25.2271 21.8105 29.5923 20.585L31.3872 20.0811L29.5923 19.5771C25.2271 18.3516 21.8159 14.9404 20.5903 10.5752L20.0864 8.78027L19.5825 10.5752C18.357 14.9404 14.9457 18.3516 10.5806 19.5771L8.78564 20.0811L10.5806 20.585C14.9457 21.8105 18.357 25.2217 19.5825 29.5869L20.0864 31.3818L20.5903 29.5869Z" stroke="#898989" stroke-width="2"/>
+                        </svg>
+                        <a class="mobile-navigation__title">Discover</a>
+                    </li>
+                    <li class="mobile-navigation__content">
+                        <svg class="mobile-navigation__svg" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 41 41" fill="none">
+                        <path d="M24.7356 24.3607C26.2732 22.7923 27.2213 20.6437 27.2213 18.2738C27.2213 13.4713 23.3281 9.57812 18.5256 9.57812C13.7232 9.57812 9.82999 13.4713 9.82999 18.2738C9.82999 23.0763 13.7232 26.9694 18.5256 26.9694C20.9582 26.9694 23.1574 25.9706 24.7356 24.3607ZM24.7356 24.3607L29.83 29.5781" stroke="#898989" stroke-width="2.02054" stroke-linecap="round"/>
+                        </svg>
+                        <a class="mobile-navigation__title">Search</a>
+                    </li>
+                    <li class="mobile-navigation__content">
+                        <svg class="mobile-navigation__svg" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 41 41" fill="none">
+                        <path d="M11.562 11.562V28.8489" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.3242 11.562V28.8489" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M23.0865 28.8489V11.562L28.8488 15.5513V28.8489H23.0865Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <a class="mobile-navigation__title">Library</a>
+                    </li>
+                    <li class="mobile-navigation__content">
+                        <svg class="mobile-navigation__svg" xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 24 26" fill="none">
+                        <path d="M15.1541 6.73524C15.1541 8.5951 13.6464 10.1028 11.7865 10.1028C9.92666 10.1028 8.41895 8.5951 8.41895 6.73524C8.41895 4.87539 9.92666 3.36768 11.7865 3.36768C13.6464 3.36768 15.1541 4.87539 15.1541 6.73524Z" stroke="#898989" stroke-width="2.02054"/>
+                        <path d="M4.86713 15.8381L5.61692 15.3382C7.44395 14.1202 9.59065 13.4702 11.7865 13.4702C13.9823 13.4702 16.129 14.1202 17.956 15.3382L18.7058 15.8381C19.6427 16.4626 20.2054 17.5141 20.2054 18.6401V20.3176C20.2054 21.1855 19.5018 21.8891 18.6339 21.8891H11.7865H4.93909C4.07115 21.8891 3.36755 21.1855 3.36755 20.3176V18.64C3.36755 17.5141 3.93028 16.4626 4.86713 15.8381Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <a class="mobile-navigation__title">Me</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+       
+    </div>
+
+
+</body>
+
+</html>

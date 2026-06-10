@@ -1,0 +1,42 @@
+@use "../abstracts/default" as d;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.aside-wrapper {
+  grid-area: sidebar;
+  width: 26rem;
+  padding: 1rem 0 0.7rem 2.5rem;
+  border-radius: v.$radius-md;
+  @media (max-width: 1480px) {
+       display: none;
+  }
+  .pinned-music {
+    width: auto;
+    position: absolute;
+    right: 0;
+    top: 0.2rem;
+    padding: 1.2rem;
+  }
+  .aside-library {
+    margin-bottom: 4.5rem;
+  }
+  li {
+    margin-bottom: 1.1rem;
+    position: relative;
+  }
+  a {
+    color: v.$color-text-secondary;
+    @include m.flex-align;
+    font-size: v.$text-sm;
+    padding: 1rem 0.9rem;
+    border-radius: v.$radius-sm;
+    &:hover {
+      background-color: v.$color-bg-hover;
+    }
+
+    img {
+      width: 2rem;
+      margin-right: 2.2rem;
+    }
+  }
+}

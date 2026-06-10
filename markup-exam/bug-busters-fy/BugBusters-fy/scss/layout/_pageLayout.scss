@@ -1,0 +1,123 @@
+// Abstracts
+@use "../abstracts/placeholders";
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+// Components
+@use "../components/cardMain";
+@use "../components/cardRecent";
+@use "../components/scrollingTitleGroop";
+@use "../components/cardSearch";
+
+// Main elements
+@use "../layout/footer";
+@use "../layout/header";
+@use "../layout/sideNavbar";
+@use "../layout/sidePopup";
+
+/*==================
+  Mobile Layout
+==================*/
+.pageLayout {
+  $header-h: 9.5rem;
+  $footer-h: 6rem;
+  position: relative;
+  height: 100dvh;
+  overflow-x: hidden;
+  header {
+    background: linear-gradient(
+      180deg,
+      rgba(17, 17, 17, 0.85) 0%,
+      #111111 42.62%
+    );
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    anchor-name: --header;
+  }
+
+  .sideNavbar {
+    padding-right: 0.5rem;
+    display: none;
+  }
+  .main {
+    position: relative;
+    //allows the grid row to shrink
+    min-height: 0;
+    height: 100%;
+    min-width: 0;
+  }
+  .main-container {
+    @extend %scrollBarNon;
+    height: 100%;
+    padding-bottom: calc($header-h + $footer-h);
+    overflow-y: auto;
+  }
+  .sidePopup {
+    display: none;
+  }
+  .footer {
+    position: fixed;
+    z-index: 3;
+    position-anchor: --header;
+    position-area: top center;
+    width: 100%;
+  }
+}
+
+/*==================
+  Desktop Layout
+==================*/
+@media (min-width: 920px) {
+  .pageLayout {
+    padding: 0.7rem;
+    display: grid;
+    grid-template-columns: minmax(160px, 15%) 1fr 0;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "navbar header header"
+      "navbar main popup"
+      "navbar footer footer";
+    transition: grid-template-columns 0.3s ease;
+    &.open {
+      grid-template-columns: minmax(20rem, 15%) 1fr minmax(32rem, 20%);
+
+      .sidePopup {
+        display: block;
+      }
+    }
+    .header {
+      background: transparent;
+      position: static;
+      grid-area: header;
+    }
+    .sideNavbar {
+      grid-area: navbar;
+      display: block;
+    }
+    .main {
+      padding-bottom: 0.5rem;
+      .main-container {
+        padding-bottom: 0;
+        @include mixins.layoutBorder;
+      }
+    }
+
+    .sidePopup {
+      grid-area: popup;
+      padding-bottom: 0.5rem;
+      padding-left: 0.5rem;
+      .sidePopup-wrapper {
+        @include mixins.layoutBorder;
+      }
+    }
+
+    .footer {
+      grid-area: footer;
+      position: static;
+      width: 100%;
+    }
+  }
+}

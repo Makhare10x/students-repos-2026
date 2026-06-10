@@ -1,0 +1,46 @@
+@use "../abstracts/variables";
+@use "../abstracts/fonts";
+@use "../abstracts/mixins";
+
+@media (min-width: 920px) {
+  .sideNavbar {
+
+    
+    nav {
+      height: 100%;
+      padding-left: 1.1rem;
+      border-radius: 1rem;
+      &.active{
+        background-color: variables.$color-active;
+        & a:hover{
+          background-color: variables.$bg-secondary-dark;
+        }
+      }
+
+      ul {
+        @include mixins.flex-prop(1rem, column);
+        li:first-child {
+          a {
+            padding-block: 0.5rem;
+          }
+        }
+      }
+
+      a {
+        @include mixins.flex-prop(1rem, $align: center);
+        @include mixins.interactiveIcon;
+        width: 100%;
+        transition: 0.3s;
+
+        svg:last-child {
+          margin-left: auto;
+        }
+
+        &:hover {
+          background-color: variables.$bg-secondary-dark;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// =====================
+// Bottom Navigation (Mobile only)
+// =====================
+.bottom-nav {
+  display: none;
+
+  @include mobile {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: $bottom-nav-height;
+    background: linear-gradient(to bottom, rgba(6, 6, 6, 0.7) 0%, $color-bg 40%);
+    z-index: 200;
+    padding-bottom: 10px;
+  }
+}
+
+// =====================
+// Bottom Nav List
+// =====================
+.bottom-nav__list {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+// =====================
+// Bottom Nav Item
+// =====================
+.bottom-nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: $color-text-muted;
+
+  // Active state — icon swap + white text
+  &--active {
+    color: $color-text;
+
+    .bottom-nav__icon--default {
+      display: none;
+    }
+
+    .bottom-nav__icon--active {
+      display: block;
+    }
+  }
+
+  // Default state — hide active icon
+  &:not(.bottom-nav__item--active) {
+    .bottom-nav__icon--active {
+      display: none;
+    }
+  }
+}
+
+// =====================
+// Bottom Nav Icon
+// =====================
+.bottom-nav__icon {
+  width: 24px;
+  height: 24px;
+}
+
+// =====================
+// Bottom Nav Label
+// =====================
+.bottom-nav__label {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.bottom-nav__icon[src*="search-active"] {
+  width: 20px;
+  height: 20px;
+}

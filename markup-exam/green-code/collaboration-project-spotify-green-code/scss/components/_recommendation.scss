@@ -1,0 +1,37 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.recommendation{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__image{
+        width: 43px;
+        height: 43px;
+        border-radius: 3px;
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        min-width: 0;
+
+        &-title{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: variables.$text-color-primary;
+            @include mixins.font_14_regular;
+        }
+
+        &-description{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: variables.$text-color-secondary;
+            @include mixins.font_14_regular;
+        }
+    }
+}

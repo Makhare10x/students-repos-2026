@@ -1,0 +1,136 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+a {
+  @include text-style();
+  transition: color 0.5s ease;
+}
+
+.main-header {
+  width: 100%;
+  height: 54px;
+  @include flex-between();
+  padding-inline: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #060606;
+  z-index: 999;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.my_Library {
+  width: 262px;
+  display: none;
+}
+.my_Library li {
+  height: 41px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.home_Page {
+  display: flex;
+  gap: 10px;
+}
+
+.home_Page li {
+  height: 41px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-inline: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+  &.active {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+
+    a {
+      color: #111111;
+      font-weight: 700;
+    }
+
+    img {
+      filter: invert(1);
+    }
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  }
+}
+
+.user-actions ul li:not(:last-child) {
+  display: none;
+}
+
+.avatar {
+  transition:
+    filter 0.3s ease,
+    transform 0.4s ease;
+  cursor: pointer;
+}
+.avatar:hover {
+  filter: drop-shadow(0 0 8px #f08f10);
+  transform: scale(0.8) rotate(360deg) !important;
+}
+
+input[type="search"] {
+  background: transparent;
+  border: 1px solid transparent;
+  outline: none;
+  padding: 5px 5px;
+  @include text-style();
+  width: 100px;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+input[type="search"]:focus {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.user-actions ul {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  gap: 8px;
+}
+
+.user-actions ul li a {
+  width: 40px;
+  height: 40px;
+  @include flex-between($justify: center);
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .user-actions ul li:not(:last-child) {
+    display: block;
+  }
+  input[type="search"] {
+    width: 192px;
+  }
+  .home_Page li {
+    padding-inline: 15px;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .my_Library {
+    display: block;
+  }
+}

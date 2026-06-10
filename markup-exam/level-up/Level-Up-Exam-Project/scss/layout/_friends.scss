@@ -1,0 +1,108 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+
+@media(min-width:60rem) {
+    .friends-section {
+        // display: none;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 35.8rem;
+        height: 100vh;
+        border-radius: 1rem;
+        border: 0.1rem solid #202020;
+        padding: 2rem 2.1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        margin-top: 6.5rem;
+
+
+        .friends-header {
+            display: flex;
+            justify-content: space-between;
+
+            .friends-actions {
+                display: flex;
+                justify-content: center;
+                gap: 2.5rem;
+                cursor: pointer;
+                
+                &-btn {
+                    @include mixins.icon-hover;
+                    &:hover { 
+                        opacity: 1; 
+                    }
+                }
+            }
+
+            .friends-title {
+                color: variables.$primary-color;
+                font-size: variables.$sub-text;
+                font-weight: 400;
+            }
+
+            .close-btn {
+                border: none;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .friends-box {
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+
+            .friend {
+                display: flex;
+                align-items: center;
+                gap: 1.2rem;
+
+                .friend-img {
+                    max-width: 4rem;
+                    height: auto;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+
+                .friend-name {
+                    color: variables.$primary-color;
+                    font-size: variables.$small-text;
+                    margin-left: 1rem;
+                    cursor: pointer;
+                }
+
+                .friend-activity {
+                    display: flex;
+                    align-items: center;
+                    font-size: variables.$sub-text;
+
+                    &-song {
+                        color: variables.$primary-color;
+                        cursor: pointer;
+                        
+                        &.offline {
+                            margin-left: 1rem;
+                            display: flex;
+                            gap: 1rem;
+                        }
+                    }
+
+                    &-artist {
+                        color: variables.$player-artist-text;
+                        cursor: pointer;
+
+                    }
+                }
+            }
+        }
+
+
+
+
+    }
+
+}

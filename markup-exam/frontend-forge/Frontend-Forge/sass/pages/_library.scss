@@ -1,0 +1,265 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../base/base";
+@use "../base/reset";
+
+body {
+  background-color: $color-bg-main;
+}
+
+main {
+  background-color: $color-bg-main;
+}
+
+.library-header {
+  padding: 16px 16px 0;
+  margin-bottom: 100px;
+}
+
+.library-list {
+  margin-bottom: 81px;
+}
+
+.library-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.library-search {
+  display: flex;
+  align-items: center;
+  background-color: $color-bg-secondary;
+  border-radius: 8px;
+  padding: 10px 14px;
+  gap: 10px;
+
+  input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: $color-fg-primary;
+    font-family: 'Satoshi', sans-serif;
+    font-size: $font-size-p;
+
+    &::placeholder {
+      color: $color-fg-secondary;
+    }
+  }
+
+  .library-search-btn,
+  .library-toolbar-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    img {
+      width: 20px;
+      height: 20px;
+      filter: brightness(0.7);
+    }
+  }
+}
+
+.search-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .library-search {
+    flex: 1;        
+    min-width: 0;   
+  }
+
+  .library-toolbar-add {
+    flex-shrink: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.library-toolbar-views {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.library-toolbar-sort {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: $font-size-sub;
+  color: $color-fg-secondary;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+.resent {
+  display: none;
+}
+.library-toolbar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.library-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.library-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0;
+  border-bottom: 1px solid $color-fg-tertiary;
+
+
+  .library-list-item-title {
+    font-size: $font-size-h3;
+    color: $color-fg-primary;
+  }
+
+  .library-list-item-arrow img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.library-content {
+  display: none;
+}
+
+.library-nav-desktop {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .library-header {
+    display: none;
+  }
+
+  .library-nav-desktop {
+    display: unset;
+  }
+
+  .library-content {
+    display: unset;
+  }
+
+  .library-nav-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  
+}
+
+.library-nav-desktop-left {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.library-nav-sort {
+  display: flex;
+  align-items: center; 
+  gap: 5px;
+  
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+.library-row-one,
+.library-row-two,
+.library-row-three {
+  display: flex;
+  gap: 11px;
+  margin: 30px 14px;
+
+  overflow-x: auto;          
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory; 
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+
+  .madeforyou-card {
+    height: 100%;
+  }
+}
+
+.library-card {
+  width: 170px;
+}
+
+
+
+.library-card-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 0px;
+  height: auto;
+
+  h3, span {
+    font-size: $font-size-sub;
+    color: $color-fg-primary;
+  }
+
+  p {
+    font-size: $font-size-small;
+    color: $color-fg-secondary;
+    width: 100%; 
+  }
+}
+
+}
+
+.library-card-cover {
+  width: 170px;
+  height: 170px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+
+  img:not(.pin) {   
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.pin {
+  position: absolute;
+  top: 1px;        
+  right: 1px;      
+  width: 40px;     
+  height: 40px;
+  z-index: 1;
+}

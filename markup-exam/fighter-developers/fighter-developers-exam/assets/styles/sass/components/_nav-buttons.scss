@@ -1,0 +1,49 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+ul.nav-buttons {
+    @include nav-list(); // column by default (used in aside)
+
+    li {
+        border-radius: 1rem;
+        transition: 0.3s;
+        width: 100%;
+
+        &.active,
+        &:hover {
+            background-color: $tag-bg;
+
+            a,
+            form {
+                color: $light-gray-color;
+
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+
+        a,
+        form {
+            display: block;
+            padding: 1rem 10rem 1rem 2rem;
+            color: $gray-color;
+            transition: 0.3s;
+        }
+
+        figure {
+            @include flex-align(flex-start, center);
+            gap: 1.5rem;
+
+            img {
+                opacity: 0.5;
+                transition: 0.3s;
+            }
+        }
+
+        figcaption {
+            font-size: 1.4rem;
+            letter-spacing: 3%;
+        }
+    }
+}

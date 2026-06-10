@@ -1,0 +1,65 @@
+// Spotify Clone - Main SCSS File
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// Layout
+@import "layout/grid";
+@import "layout/sidebar";
+@import "layout/header";
+@import "layout/player";
+
+// Components
+@import "components/card";
+@import "components/filters";
+
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap");
+
+body {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: $bg-primary;
+  color: $fg-primary;
+  margin: 0;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5a5a5a;
+  border-radius: 6px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+
+  &:hover {
+    background: #7a7a7a;
+  }
+}
+
+::selection {
+  background-color: rgba(29, 185, 84, 0.4);
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline: 2px solid $spotify-green;
+  outline-offset: 2px;
+}
+
+.text-ellipsis { @include text-ellipsis; }
+.flex-center { @include flex-center; }
+.flex-between { @include flex-between; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}

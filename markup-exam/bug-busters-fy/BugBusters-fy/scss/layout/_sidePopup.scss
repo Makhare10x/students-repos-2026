@@ -1,0 +1,72 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.sidePopup {
+  display: none;
+}
+
+@media (min-width: 920px) {
+  .sidePopup {
+
+    .card-recent {
+      background-color: transparent;
+    }
+
+    .sidePopup-wrapper {
+      @include mixins.flex-prop(2.4rem, column);
+      width: 100%;
+      padding: 1rem 1rem 0 2rem;
+    }
+
+    .sidePopup-heading {
+      @include mixins.flex-prop($align: center, $justify: space-between);
+
+      p {
+        color: variables.$color-active-desk;
+        font-weight: 500;
+      }
+      .button-wrapper {
+        display: flex;
+        button {
+          @include mixins.interactiveIcon;
+        }
+      }
+    }
+
+    .text-container {
+      @include mixins.flex-prop($direction: column, $justify: center);
+      overflow: hidden;
+
+      .now-listening {
+        color: variables.$color-active-desk;
+        ul {
+          @include mixins.flex-prop(1rem, $align: center);
+        }
+        .artist {
+          font-weight: 400;
+          list-style: disc;
+          margin-left: 2.3rem;
+          font-size: 1.4rem;
+          color: variables.$color-active-mob;
+        }
+        .time-playing {
+          color: variables.$color-active-mob;
+        }
+      }
+
+      h5 {
+        color: variables.$color-active-desk;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        color: variables.$color-primary;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

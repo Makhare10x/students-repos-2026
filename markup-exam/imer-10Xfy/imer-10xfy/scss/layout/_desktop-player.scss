@@ -1,0 +1,73 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixin";
+@use "../base/reset";
+.desktop-player{
+    display: none;
+}
+@media (min-width:1200px){
+    .desktop-player{
+        // gap: 23rem;
+        width: 85.5%;
+        background-color: variables.$player-bacgorund-color;
+        @include mixin.flex-center(space-between,center);
+        border-radius: 1rem;
+        padding:1.5rem;
+        position: fixed;
+        bottom: 0;
+        right: 0
+
+    }
+    .list-item-containers{
+        @include mixin.flex-center;
+        gap: 1rem;
+        li{
+            button{
+                background-color: transparent;
+                border: 0 solid;
+            }
+            button:hover, button:hover{
+                filter: brightness(0) saturate(100%) invert(57%) sepia(98%) saturate(400%) hue-rotate(80deg) brightness(110%);
+            }
+            .pause-button:hover, .line:hover, .profile-img:hover{
+                filter:none
+            }
+        }
+
+    }
+    .player-time{
+        @include mixin.flex-center;
+        gap: 3rem;
+        input{
+            width: 31.7rem;
+        }
+        span{
+            @include mixin.p-of-sidebar-header($font-size:1.2rem);
+            color: variables.$p-color;
+
+        }
+
+    }
+    .desktop-playe-image{
+        width: 5.1rem;
+    }
+    figure {
+        @include mixin.flex-center;
+        gap: 1.5rem;
+        cursor: pointer;
+        figcaption{
+            @include mixin.flex-center(center, start);
+            flex-direction: column;
+            gap: 0.4rem;
+            
+            h1{
+                @include mixin.p-of-sidebar-header($font-size:1.4rem);
+                color: white;
+            }
+            p{
+                @include mixin.p-of-sidebar-header($font-size:1.4rem);
+                color: variables.$p-color;
+            }
+        }
+
+    }
+}

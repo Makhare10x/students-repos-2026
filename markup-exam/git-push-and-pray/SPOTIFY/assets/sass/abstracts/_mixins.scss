@@ -1,0 +1,24 @@
+@mixin flex_structure {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin title_code {
+    font-size: 20px;
+    font-weight: 700;
+    color: #E0E0E0;
+    letter-spacing: 3%;
+}
+@mixin discover_box_style($primary_width, $primary_height, $primary_bac_color, $primary_border_radius) {
+    width: $primary_width;
+    height: $primary_height;
+    background-color: $primary_bac_color;
+    border-radius: $primary_border_radius;
+}
+
+@mixin ganres_box_style($primary_width, $primary_height, $primary_bac_color, $primary_border_radius) {
+    width: $primary_width;
+    height: $primary_height;
+    background-color: $primary_bac_color;
+    border-radius: $primary_border_radius;
+}

@@ -1,0 +1,49 @@
+@use "variables" as *;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: $font-primary;
+  background-color: $color-background;
+  color: $color-white;
+  
+  display: grid;
+  // 1. Columns: Sidebar width and flexible main area
+  grid-template-columns: 240px 1fr; 
+  
+  // 2. Rows: Header (60px), Main (Flexible), Player (90px)
+  grid-template-rows: 64px 1fr 90px; 
+  
+  grid-template-areas:
+    "aside header"
+    "aside main"
+    "player player"; 
+    
+  height: 100vh;
+  overflow: hidden; // Prevents the whole body from scrolling
+}
+
+aside { grid-area: aside; }
+header { grid-area: header; 
+margin:$spacing-sm;
+}
+main { 
+  
+  grid-area: main;
+  background-color: $color-background;
+  overflow-y: auto;
+  margin:$spacing-sm;
+  padding:$spacing-sm $spacing-lg;
+  
+  
+  border: 1px solid $color-border; 
+  border-radius: $radius-md; 
+}
+
+footer.player { grid-area: player; }
+
+

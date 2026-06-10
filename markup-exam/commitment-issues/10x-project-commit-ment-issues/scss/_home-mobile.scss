@@ -1,0 +1,197 @@
+@use 'variables' as *;
+
+@media (max-width: $mobile-breakpoint) {
+
+    .sidebar, .header, .all-button {
+        display: none;
+    }
+
+    .mobile-recents-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding-right: 20px;
+        margin-bottom: 30px;
+
+        .recents-card {
+            background-color: $secondary-background;
+            border-radius: 10px;
+            display: flex;
+            padding: 7px;
+            align-items: center;
+            font-size: 14px;
+            color: $primary-font-color;
+            gap: 8px;
+            min-width: 0;
+            font-weight: 200;
+
+            img {
+                width: 43px;
+                height: 43px;
+                flex-shrink: 0;
+            }
+
+        }
+
+        .recents-card-info {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-width: 0;
+        }
+
+        .recents-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .recents-artist {
+            color: $secondary-font-color;
+        }
+    }
+
+    .footer {
+        width: 100%;
+        left: 0;
+        bottom: $mobile-nav-height;
+        padding: 0 20px;
+
+        .more-menu, .player-controls, .album {
+            display: none;
+        }
+
+        .song-title {
+            white-space: nowrap;
+            overflow: hidden;
+
+            mask-image: linear-gradient(
+                to right,
+                black 70%,
+                transparent 100%
+            );
+
+            -webkit-mask-image: linear-gradient(
+                to right,
+                black 70%,
+                transparent 100%
+            );
+        }
+
+        .feat{
+            display: inline-block;
+        }
+
+        .mobile-footer-icons, .mobile-progress-bar {
+            display: block;
+        }
+
+        .footer-left-group {
+            justify-content: space-between;
+        }
+
+        .mobile-footer-icons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .mobile-progress-bar {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: rgba(219, 219, 219, 0.2);
+            border-radius: 15px;
+
+            height: 2px;
+            width: 100%;
+
+            .progress {
+                height: 100%;
+                width: 45%;
+                background-color: $primary-font-color;
+            }
+        }
+    }
+
+    .content-wrapper {
+        padding: 0;
+    }
+
+    .home-page {
+        border: none;
+        padding-right: 0;
+        padding-bottom: 160px;
+    }
+
+    .mobile-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 0 20px;
+
+        height: $mobile-nav-height;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background: rgba(0,0,0,0.6);
+        z-index: 1;
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        a {
+            text-decoration: none;
+            color: $light-font-color;
+            font-size: 12px;
+        }
+    }
+
+    .mobile-nav::before {
+        content: "";
+        position: absolute;
+
+        left: 0;
+        right: 0;
+
+        height: $mobile-nav-height;
+
+        pointer-events: none;
+
+        background: linear-gradient(
+            to top,
+            rgba(0,0,0,1) 0%,
+            rgba(0,0,0,1) 50%,
+            rgba(0,0,0,0.6) 75%,
+            rgba(0,0,0,0) 100%
+        );
+    }
+
+    .home-pg-section .cards-container {
+        grid-auto-columns: $card-size-mobile;
+    }
+
+    .home-pg-section .cards-container .card, 
+    .home-pg-section .cards-container .card-info {
+        width: $card-size-mobile;
+
+        img {
+            width: $card-size-mobile;
+            height: $card-size-mobile;
+        }
+    }
+
+    .section-header-arrow {
+        display: none;
+    }
+}
+

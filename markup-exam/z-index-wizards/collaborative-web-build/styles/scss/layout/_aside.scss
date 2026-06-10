@@ -1,0 +1,91 @@
+@use "../abstracts/mixins" as *;
+
+/* left aside section */
+
+.sidebar {
+  width: 100%;
+  height: 59px;
+  display: flex;
+  padding-inline: 15px;
+  position: fixed;
+  top: 50px;
+  background-color: #060606;
+  z-index: 1000;
+
+}
+
+.sidebar_Items {
+  width: 100%;
+  height: 100%;
+  @include flex-between($justify: space-between);
+  border-radius: 8px;
+  transition: 0.25s ease;
+}
+
+.move-right {
+  display: none;
+}
+
+.sidebar_Items:nth-child(n + 5) {
+  display: none;
+}
+
+.sidebar_Items:hover {
+  background-color: #9696967a;
+  box-shadow: 0 6px 15px rgba(230, 230, 230, 0.507);
+}
+
+.sidebar_Items a {
+  color: #555;
+  transition: 0.2s;
+}
+
+.sidebar_Items:hover a {
+  color: #000;
+  font-weight: 500;
+}
+
+.sidebar_Items img {
+  transition: 0.2s;
+}
+
+.sidebar_Items:hover img {
+  transform: scale(1.15);
+}
+
+.filter_Part {
+  @include flex-between($justify: center);
+  cursor: pointer;
+}
+
+.filter_Part a {
+  @include text-style($size: 12px);
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    flex-direction: column;
+    width: 262px;
+    min-height: 100vh;
+    gap: 11px;
+    position: static;
+  }
+
+  .sidebar_Items {
+    width: 100%;
+    height: auto;
+    @include flex-between($justify: space-between);
+  }
+
+  .sidebar_Items:nth-child(n + 5) {
+    display: flex;
+  }
+
+  .move-right {
+    display: block;
+  }
+
+  .filter_Part a {
+    @include text-style();
+  }
+}

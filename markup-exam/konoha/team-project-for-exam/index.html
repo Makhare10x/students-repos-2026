@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="sass/style.css">
+</head>
+<body>
+  <div class="container">
+   <!-- Sidebar-->
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/library.png" alt="library">
+              <span>My Library</span>
+            </a>
+          </li>
+
+           <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/pins.png" alt="Pins">
+              <span>Pins</span>
+            </a>
+          </li>
+
+           <li class="sidebar-link">
+            <input type="checkbox" id="playlist-toggle">
+            <label for="playlist-toggle" class="playlist-btn">
+              <img src="css/assets/images/playlists.png" alt="playlist">
+                     <span>Playlists</span>
+              <img src="css/assets/images/arrow.png" alt="arrow icon" class="dropdown-img">
+            </label>
+            <ul class="dropdown-playlist">
+              <li>Chill Stuff</li>
+              <li>Rock n Roll</li>
+              <li>The Jux Box</li>
+              <li>Selected Linkin Park</li>
+              <li>Vibe</li>
+            </ul>
+          </li>
+
+           <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/liked songs.png" alt="liked songs">
+              <span>Liked Songs</span>
+            </a>
+          </li>
+
+           <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/save.png" alt="saves">
+              <span>Saves</span>
+            </a>
+          </li>
+
+          <li class="sidebar-link">
+            <a href="#">
+              <img src="css/assets/images/folders.png" alt="folders">
+              <span>Folders</span>
+            </a>
+          </li>
+
+          <li class="sidebar-link">
+            <a href="Main Content/podcast.html">
+              <img src="css/assets/images/podcasts.png" alt="podcasts">
+              <span>Podcasts</span>
+            </a>
+          </li>
+
+          <li class="sidebar-link">
+              
+            <a href="#">
+
+              <img src="css/assets/images/audiobooks.png" alt="audiobooks">
+              <span>Audiobooks</span>
+            </a>
+          </li>
+
+           <li class="sidebar-link">
+            <a href="artist_home.html">
+              <img src="css/assets/images/artists.png" alt="artists">
+              <span>Artists</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+
+      </aside>
+      <div class="main-layout">
+        <header class="top-header">
+          <!-- Header-->
+          <nav>
+            <ul class="header-right-list">
+              <a href="index.html">
+              <li class="right-list-item">
+                <img src="css/assets/images/home.png" alt="home">
+                <span>Home</span>
+              </li>
+              </a>
+              
+              <a href="Main Content/discover1.html">
+              <li class="right-list-item">
+              <img src="css/assets/images/discoverr.png" alt="discoverr">
+              <span>Discover</span>
+              </li>
+              </a>
+
+              <li class="right-list-item">
+              <img src="css/assets/images/search.png" alt="search">
+              <span>Search</span>
+              </li>
+            </ul>
+   <!-- Header-left list-->
+            <ul class="header-left-list">
+              <li class="left-list-item">
+                <img src="css/assets/images/bell.png" alt="bell">
+              </li>
+
+              <li class="left-list-item">
+                <img src="css/assets/images/lock.png" alt="lock">
+              </li>
+
+              <li class="left-list-item">
+                <img src="css/assets/images/activity.png" alt="activity">
+              </li>
+
+              <li class="left-list-item">
+                <img src="css/assets/images/settings.png" alt="settings">
+              </li>
+
+              <li class="left-list-item">
+                <img src="css/assets/images/sprite.png" alt="sprite">
+              </li>
+
+            </ul>
+          </nav>
+          
+        </header>
+      <main class="main-content">
+ <!-- Media tab for mobile-->
+        <div class="media-tab">
+          <button class="media-button">All</button>
+          <button class="media-button">Music</button>
+          <button class="media-button">Podcasts</button>
+          <button class="media-button">Audiobooks</button>
+      </div>
+      <section class="playlist">
+        <div class="playlist-card">
+          <img src="css/assets/images/daft punk.png" alt="daft punk">
+          <div class="playlist-descr">
+            <h3 class="song-title">Get Lucky</h3>
+            <span class="artist-name">Daft Punk</span>
+          </div>
+        </div>
+        <div class="playlist-card">
+          <img src="css/assets/images/avril lavigne.png" alt="avril lavigne">
+          <div class="playlist-descr">
+            <h3 class="song-title">Daily Mix 2</h3>
+          </div>
+        </div>
+        <div class="playlist-card">
+          <img src="css/assets/images/linkin park.png" alt="linkin park">
+          <div class="playlist-descr">
+            <h3 class="song-title">Daily Mix 1</h3>
+          </div>
+        </div>
+        <div class="playlist-card">
+          <img src="css/assets/images/daft punk.png" alt="daft punk-2">
+          <div class="playlist-descr">       
+            <h3 class="song-title">Instant Crush</h3>
+            <span class="artist-name">Daft Punk</span>
+          </div>  
+        </div>
+        <div class="playlist-card">
+          <img src="css/assets/images/daft punk.png" alt="daft punk-3">
+          <div class="playlist-descr">
+            <h3 class="song-title">Around the wo..</h3>
+            <span class="artist-name">Daft Punk</span>
+          </div>
+        </div>
+        <div class="playlist-card">
+          <img src="css/assets/images/chili peppers.png" alt="chili peppers">
+          <div class="playlist-descr">
+          <h3 class="song-title">Rock mix</h3>
+          </div>
+        </div>
+        </section>
+        <!-- Made For You Section Start -->
+        <section class="recommended-content">
+          <div class="recommended-content-header">
+            <h2>Made For You</h2>
+            <a href="#">
+            <img src="css/assets/images/see more.png" alt="see more">
+            </a>
+            </div>
+          <div class="cards">
+            <article class="card">
+              <img src="css/assets/images/discover weekly.png" alt="Discover Weekly">
+              <div class="card-content">
+                <h3>Discover Weekly</h3>
+                <span class="likes">50</span>
+              </div>
+              <p>Your weekly mixtape of fresh music.</p>
+            </article>
+
+            <article class="card">
+              <img src="css/assets/images/daily-mix,linkin park.png" alt="daily-mix">
+              <div class="card-content">
+                <h3>Daily Mix 1</h3>
+                <span class="likes">50</span>
+              </div>
+              <p>Linkin Park, System Of A Down,<br> 
+                 Coal Chamber...</p>
+            </article>
+
+            <article class="card">
+              <img src="css/assets/images/avril-lavigne.png" alt="Avril Lavigne">
+              <div class="card-content">
+                <h3>Daily Mix 2</h3>
+                <span class="likes">50</span>
+              </div>
+              <p>Avril Lavigne, Lorde, Charli XCX <br>
+                 and more</p>
+            </article>
+            <article class="card">
+              <img src="css/assets/images/daily mix 3.png" alt="The Strokes">
+              <div class="card-content">
+                <h3>Daily Mix 3</h3>
+                <span class="likes">50</span>
+              </div>
+              <p>The Strokes, Martin Garrix,<br>
+                 MGMT and more</p>
+            </article>
+             <article class="card">
+              <img src="css/assets/images/daily mix 4.png" alt="Chuck Berry">
+              <div class="card-content">
+                <h3>Daily Mix 4</h3>
+                <span class="likes">50</span>
+              </div>
+              <p>Chuck Berry, Elvis Presley,<br>
+                 Roy Orbison and more</p>
+            </article>
+
+             <article class="card">
+              <img src="css/assets/images/daily mix 5.png" alt="Frank Sinatra">
+              <div class="card-content">
+                <h3>Daily Mix 5</h3>
+                <span class="likes">50</span>
+              </div>
+              <p>Frank Sinatra, Gerhard Trede, 
+                <br>Dean Martin and more</p>
+            </article>
+             <article class="card">
+              <img src="css/assets/images/nirvana.png" alt="Nirvana">
+              <div class="card-content">
+                <h3>Nirvana</h3>
+                <span class="likes">50</span>
+              </div>
+              <p>The Strokes, Martin Garrix, <br>MGMT
+                 and more</p>
+            </article>
+
+             <article class="card">
+              <img src="css/assets/images/fall out boy.png" alt="Avril Lavigne">
+              <div class="card-content">
+                <h3>Daily Mix 2</h3>
+                <span class="likes">50</span>
+              </div>
+              <p>With Panic! At The Disco,The <br>
+                 All-American Rejects,...</p>
+            </article>
+
+            <article class="card">
+              <img src="css/assets/images/fall out boy.png" alt="Daily Mix 2">
+              <div class="card-content">
+                <h3>Daily Mix 2</h3>
+                <span class="likes">50</span>
+              </div>
+              <p>With Panic! At The Disco,The <br>
+                 All-American Rejects,...</p>
+            </article>
+
+            <article class="card">
+              <img src="css/assets/images/fall out boy.png" alt="The disco">
+              <div class="card-content">
+                <h3>Daily Mix 2</h3>
+                <span class="likes">50</span>
+              </div>
+              <p>With Panic! At The Disco,The <br>
+                 All-American Rejects,...</p>
+            </article>
+           </div>
+          </section>
+ <!-- Top mixes section start -->
+          <section class="top-mixes">
+            <div class="top-mixes-heading">
+              <h2>Your top mixes</h2>
+            </div>
+            <div class="cards">
+            <article class="card">
+              <img src="css/assets/images/rock mix.png" alt="Rock Mix">
+              <div class="card-content">
+                <h3>Rock Mix</h3>
+                <span class="likes">50</span>
+              </div>
+              <p>Red Hot Chili Peppers, R.E.M., <br>
+                 Guns N’ Roses...</p>
+            </article>
+
+            <article class="card">
+              <img src="css/assets/images/chili mix.png" alt="Chili Mix">
+              <div class="card-content">
+                <h3>Daily Mix 1</h3>
+                <span class="likes">50</span>
+              </div>
+                <p>Linkin Park, System Of A Down,<br> 
+                 Coal Chamber...</p>
+            </article>
+
+            <article class="card">
+              <img src="css/assets/images/pop mix.png" alt="Pop Mix">
+              <div class="card-content">
+                <h3>Pop Mix</h3>
+                <span class="likes">50</span>
+              </div>
+              <p>Red Hot Chili Peppers, R.E.M., <br>
+                 Guns N’ Roses...</p>
+            </article>
+
+          <article class="card">
+              <img src="css/assets/images/daft punk mix.png" alt="Daft Punk Mix">
+              <div class="card-content">
+                <h3>Duft Punk Mix</h3>
+                <span class="likes">50</span>
+              </div>
+              <p>Daft Punk, MGMT, Muse, and <br>
+                more</p>
+          </article>
+
+            <article class="card">
+              <img src="css/assets/images/happy mix.png" alt="happy mix">
+            <div class="card-content">
+                <h3>Happy Mix</h3>
+                <span class="likes">50</span>
+              </div>
+              <p>The Turtles, Van Morrison, <br>
+                ABBA and more</p>
+            </article>
+
+            <article class="card">
+              <img src="css/assets/images/david bowie mix.png" alt="david bowie">
+              <div class="card-content">
+                <h3>David Bowie Mix</h3>
+                <span class="likes">50</span>
+              </div>
+              <p>Soft Cell, The Who and The Clash</p>
+            </article>
+
+            <article class="card">
+              <img src="css/assets/images/upbeat mix.png" alt="upbeat mix">
+            <div class="card-content">
+                <h3>Upbeat Mix</h3>
+                <span class="likes">50</span>
+              </div>
+              <p>Kylie Minogue, Charli XCX, <br>
+                Cage The Elephant and...</p>
+            </article>
+
+            <article class="card">
+              <img src="css/assets/images/60s mix.png" alt="Chili Mix">
+              <div class="card-content">
+                <h3>60s Mix</h3>
+                <span class="likes">50</span>
+              </div>
+              <p>Chuck Berry, Skeeter David, <br>
+                 Van Morrison and...</p>
+            </article>
+           
+            <article class="card">
+              <img src="css/assets/images/david bowie mix.png" alt="david bowie">
+              <div class="card-content">
+                <h3>David Bowie Mix</h3>
+                <span class="likes">50</span>
+              </div>
+              <p>Soft Cell, The Who and The Clash</p>
+            </article>
+
+            <article class="card">
+              <img src="css/assets/images/happy mix.png" alt="happy mix">
+            <div class="card-content">
+                <h3>Happy Mix</h3>
+                <span class="likes">50</span>
+              </div>
+              <p>The Turtles, Van Morrison, <br>
+                ABBA and more</p>
+            </article>
+            
+            </div>
+          </section>
+ <!--Favorite-artists section-->
+         <section class="favorite-artists">
+          <div class="favorite-artists-heading">
+            <h2>Your favorite artists</h2>
+          </div>
+          <div class="cards">
+           <article class="artist">
+            <img src="css/assets/images/gunsnroses.png" alt="Guns N' Roses">
+            <h3>Guns N' Roses</h3>
+          </article>
+
+          <article class="artist">
+            <img src="css/assets/images/daftpunkk.png" alt="daft punk pic">
+            <h3>Daft Punk</h3>
+          </article>
+
+          <article class="artist">
+            <img src="css/assets/images/davidbowwie.png" alt="david bowie pic" class="bowiepic">
+            <h3>David Bowie</h3>
+          </article>
+         </div>
+         </section>
+         <!-- Albums -->
+          <section class="albums">
+            
+          </section>
+      </main>
+      </div>
+  </div>
+<!-- Bottom player section-->
+  <footer class="bottom-player">
+    <div class="bottom-player-content">
+      <img src="css/assets/images/Rectangle 6 (1).png" alt="Rectangle 6 (1)">
+      <div class="bottom-player-text">
+        <p class="slide-in">Get Lucky (feat. Pharrell Williams )</p>
+        <p class="artist-name">Daft punk</p>
+      </div>
+      <div class="player-controls">
+        <a href="#">
+          <img src="css/assets/images/add.png" alt="play">
+        </a>
+        <a href="#">
+          <img src="css/assets/images/play.png" alt="add">
+        </a>
+        </div>
+    </div>
+    <!-- Bottom nav for mobile-->
+     <nav class="bottom-menu">
+        <a href="index.html" class="nav-item">
+          <img src="css/assets/images/home.png" alt="home icon">
+          <span>Home</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="css/assets/images/discoverr.png" alt="home icon">
+          <span>Discover</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="css/assets/images/search.png" alt="search icon">
+          <span>Search</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="css/assets/images/library.png" alt="library icon">
+          <span>Library</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="css/assets/images/profile.png" alt="profile icon">
+          <span>Me</span>
+        </a>
+        </nav>
+  </footer>
+</body>
+</html>

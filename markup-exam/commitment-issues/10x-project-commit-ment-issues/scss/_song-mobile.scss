@@ -1,0 +1,130 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@media screen and (max-width: 800px) {
+    
+    .song-footer, .song-mob-navigation, .bg, .overlay, .song-content .song-info, .tabs-bar, .lyrics-container .lyrics-toolbar {
+        display: none;
+    }
+
+    .song-main-content {
+        background: linear-gradient(180deg, #3B414D 0%, #272B33 100%);
+        padding: 64px 24px;
+    }
+
+    .song-content {
+        padding: 0;
+    }
+
+    .song-content .song-info-container {
+        gap: 0;
+    }
+
+    .song-mobile-header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        font-size: 12px;
+        color: $light-font-color;
+        margin-bottom: 28px;
+
+        div {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .song-cover {
+        width: 354px;
+        height: 354px;
+        margin-bottom: 32px;
+    }
+
+    .lyrics-container {
+        display: flex;
+        height: auto;
+
+        .lyrics {
+            font-size: 20px;
+        }
+    }
+
+    .mobile-song-info {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        h3 {
+            font-size: 20px;
+            color: $primary-font-color;
+            max-width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-bottom: 8px;
+
+            mask-image: linear-gradient(
+                to right,
+                black 65%,
+                rgba(0,0,0,0.6) 80%,
+                transparent 100%
+            );
+        }
+
+        h4 {
+            font-size: 18px;
+            color: $light-font-color;
+        }
+    }
+
+    .title-artist-group, .song-icon-group {
+        margin-bottom: 40px;
+    }
+
+    .progress-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        margin-bottom: 16px;
+
+
+        .song-progress-bar {
+            width: 100%;
+            height: 4px;
+            background: $light-font-color;
+            border-radius: 4px;
+            position: relative;
+
+            margin-bottom: 12px;
+        }
+
+        .progress {
+            width: 40%;       
+            height: 100%;
+            background: $primary-font-color;
+            border-radius: 4px;
+        }
+
+        .time {
+            font-size: 12px;
+            color: $light-font-color;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .mobile-song-controls, .song-mobile-icons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        margin-bottom: 36px;
+    }
+
+    
+}

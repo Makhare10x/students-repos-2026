@@ -1,0 +1,155 @@
+.podcast-main {
+    padding: 2.2rem 4rem;
+    background-image: linear-gradient(rgb(165, 96, 42, 0.47), rgb(6, 6, 6, 0.47));
+    display: flex;
+    gap: 6rem;
+}
+
+.podcast-name {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    h1 {
+        color: #E0E0E0;
+        font-size: 3.6rem;
+    }
+
+    span {
+        color: #E0E0E0;
+        font-size: 1.4rem;
+    }
+}
+
+.discover-buttons {
+    display: flex;
+    gap: 1.4rem;
+}
+
+.discover-btn {
+    padding: 1rem 2rem;
+    border: 2px solid #898989;
+    background-color: transparent;
+    border-radius: 4.4rem;
+    color: #898989;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: rgb(137, 137, 137, 0.2);
+    }
+
+    &:nth-child(2) {
+        word-spacing: 9px;
+    }
+}
+
+.active-btn {
+    background-color: rgb(137, 137, 137, 0.25);
+    border: none;
+    color: #E0E0E0;
+}
+
+.episodes-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4.7rem;
+
+    h3 {
+        color: #E0E0E0;
+        font-size: 2rem;
+    }
+}
+
+.episodes-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+
+    span {
+        color: #898989;
+        font-size: 1.4rem;
+    }
+}
+
+.podcasts {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 70%;
+}
+
+.joerogan {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 15%;
+    gap: 1rem;
+
+    h3 {
+        color: #E0E0E0;
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+
+    span {
+        color: #898989;
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.8rem;
+    }
+}
+
+.episodes {
+    display: flex;
+    gap: 1.8rem;
+    margin: 1rem 0;
+    padding: 1rem 0.5rem;
+    border-radius: 1rem;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: #89898922;
+    }
+}
+
+.episodes-img {
+    width: 13rem;
+    height: 13rem;
+}
+
+.episodes-about {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    span {
+        color: #898989;
+        font-size: 1.1rem;
+        width: 100%;
+    }
+}
+
+.episodes-name {
+    color: #E0E0E0;
+    display: flex;
+    font-size: 1.8rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+.podcast-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.line {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #89898941;
+}

@@ -1,0 +1,28 @@
+@use "../abstracts/variables";
+
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    background-color: variables.$page-backgorund-color;
+    color: variables.$h-color;
+    // ფონტის სახელლი არასწორად ეწერა და არ მუშაობდა. პრობლემა გასწორებულია
+    font-family: "Satoshi-Variable", "Satoshi-Regular";
+    // overflow-x:hidden;
+}
+html{
+    font-size: 62.5%;
+}
+li{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: variables.$p-color;
+}
+h1 {
+    color: variables.$p-color;
+}

@@ -1,0 +1,45 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as m;
+
+@media (min-width: 768px){
+    .sidebar{
+        background-color: #111111;
+        margin-right: 5px;
+        margin-top: 10px;
+        border-radius: v.$radius-main;
+    }
+  .filter-wrapper {
+    @include m.flex-center($direction: row, $justify: space-between);
+    padding: 10px;
+    width: 100%; // Ensure it fills the parent
+
+    .filters-left {
+        @include m.flex-center($gap: 10px);
+        flex: 1; // Allows this to take available space
+    }
+
+    .filter-nav-wrapper {
+        @include m.flex-center($gap: 15px);
+        
+        img {
+            height: 20px; // Standardize icon height
+            width: auto;
+        }
+    }
+
+    .filter-item {
+        @include m.flex-center($gap: 5px);
+        cursor: pointer;
+        color: v.$secondary-text-color;
+
+        img {
+            height: 16px; // Keep icons small
+        }
+
+        &:hover {
+            color: white; // Changes both icon and text if configured correctly
+            span { color: white; }
+        }
+    }
+}
+}

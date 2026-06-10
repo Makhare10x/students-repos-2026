@@ -1,0 +1,115 @@
+@use "../abstracts/default" as d;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.header-section {
+  grid-area: header;
+  @media (max-width: 1480px) {
+    margin-bottom: 1rem;
+  }
+}
+
+.header-section nav,
+.header-section nav ul {
+  display: flex;
+}
+.header-section nav ul {
+  .mobile-version-icon {
+    display: none;
+  }
+
+  @media (max-width: 1480px) {
+    .mobile-version-icon {
+      display: block;
+    }
+    .desktop-version-icon {
+      display: none;
+    }
+    width: 100%;
+    padding: 2.5rem 1rem;
+    &:last-child {
+      display: none;
+    }
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+  }
+}
+.header-section nav {
+  width: 100%;
+  justify-content: space-between;
+
+  @media (max-width: 1480px) {
+    background: linear-gradient(
+      180deg,
+      rgba(17, 17, 17, 0.85) 0%,
+      #111111 42.62%
+    );
+  }
+
+  li {
+    display: flex;
+    margin-right: 1.5rem;
+    @media (max-width: 1480px) {
+      img {
+        width: 2.5rem;
+      }
+    }
+  }
+  li:hover {
+    background-color: v.$color-bg-secondary;
+  }
+  ul:first-of-type {
+    li {
+      padding: 1.2rem 3rem;
+      border-radius: v.$radius-lg;
+      @media (max-width: 1480px) {
+        padding: 0;
+        display: grid;
+        place-items: center;
+        margin: auto;
+      }
+      a {
+        width: 21rem;
+        @media (max-width: 1480px) {
+          flex-direction: column;
+          width: auto;
+          img {
+            margin: auto;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+    .header-home {
+      background-color: v.$color-bg-secondary;
+    }
+  }
+
+  ul:last-of-type {
+    width: 24.5rem;
+    justify-content: space-between;
+    img {
+      margin: 0;
+    }
+  }
+}
+.header-section nav a {
+  color: v.$color-text-secondary;
+  font-size: v.$text-sm;
+  @include m.flex-align;
+}
+.header-section nav a img {
+  margin-right: 1.8rem;
+}
+
+// hide things until responsive
+.mobile-version-list {
+  display: none;
+  @media (max-width: 1480px) {
+    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
+}
+

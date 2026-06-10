@@ -1,0 +1,233 @@
+@use '../abstract/mixins' as *;
+@use '../universal components/components' as *;
+@use '../abstract/responsive' as *;
+@use '../abstract/variables' as *;
+@use '../reset' as *;
+@use '../sections/header-section' as *;
+
+// Mobile top row with search and add button
+.top-row--mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem;
+
+    @include desktop { display: none; }
+}
+
+.search-container-mobile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 1.5rem;
+    width: 80%;
+
+    input {
+        padding: 1.2rem 4rem 1.2rem 1.2rem;
+        font-size: $primary-font-size;
+        color: $font-fg-secondary;
+        border: none;
+        background-color: $bg-secondary;
+        border-radius: 0.8rem;
+        width: 100%;
+
+        &:focus { outline: none; }
+        &::placeholder { color: $font-fg-secondary; }
+    }
+
+    img {
+        position: absolute;
+        right: 3rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1.92rem;
+        height: 1.92rem;
+    }
+}
+
+.add-btn--mobile {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: $font-fg-secondary;
+    font-size: 4rem;
+    margin-right: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+// Mobile options 
+.options__mobile {
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 1.5rem;
+
+    &-btn {
+        @include primary-text;
+        border-radius: 0.5rem;
+        cursor: pointer;
+
+        &:hover { background-color: $bg-secondary; }
+    }
+
+    @include desktop { display: none; }
+}
+
+// Mobile category list 
+#librarylist-mobile {
+    margin: 0 1.6rem;
+}
+
+.category-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include desktop { display: none; }
+
+    &--item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.2rem 2.5rem;
+        cursor: pointer;
+        border-bottom: 0.1rem solid #89898926;
+        @include mobile-title-primary;
+
+        &:last-child { border-bottom: none; }
+        &:hover { background-color: $bg-secondary; }
+    }
+}
+
+// Desktop sort bar
+.sort-bar {
+    display: none;
+
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem 2.5rem 1.2rem 2.5rem;
+    }
+}
+
+.sort-bar__add-btn {
+    color: $font-fg-secondary;
+    font-size: 4rem;
+
+    &:hover {
+        @include sidebar-item;
+        @include flex-center;
+        width: 4rem;
+    }
+}
+
+.sort-bar__options {
+    @include flex-center;
+    gap: 3.5rem;
+}
+
+.sort-bar__view {
+    @include flex-center;
+    color: $font-fg-secondary;
+    font-size: 1.4rem;
+}
+
+.sort-bar__btn {
+    @include primary-text;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    &:hover { background-color: $bg-secondary; }
+    &--active { background-color: $bg-secondary; }
+}
+
+// Desktop tracklist 
+#tracklist {
+    display: none;
+
+    @include desktop {
+        display: flex;
+        padding: 0 2.5rem;
+    }
+}
+
+.tracklist__table {
+    @include desktop {
+        width: 100%;
+        border-collapse: collapse;
+        color: $header-text-color;
+        font-size: 1.4rem;
+    }
+}
+
+.tracklist__head tr {
+    border-bottom: 0.1rem solid $bg-secondary;
+
+    th {
+        padding: 0.8rem 1.6rem;
+        text-align: left;
+        color: $font-fg-secondary;
+        font-weight: 400;
+        font-size: 1.2rem;
+    }
+}
+
+.empty-column { width: 30%; }
+
+tbody tr {
+    border-radius: 0.8rem;
+    transition: background 0.2s;
+
+    &:hover { background-color: $hover-bg; }
+
+    td {
+        padding: 1.2rem 1.6rem;
+        vertical-align: middle;
+    }
+}
+
+// Track styles 
+.track-number {
+    color: $font-fg-secondary;
+
+    @include desktop {
+        text-align: center;
+        font-size: 1.6rem;
+    }
+}
+
+.track-title {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    img {
+        width: 5.1rem;
+        border-radius: 0.3rem;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .title {
+        display: block;
+        @include primary-title;
+    }
+
+    .artist {
+        display: block;
+        margin-top: 0.4rem;
+        @include primary-text;
+    }
+}
+
+.track-album { @include primary-text; }
+
+.track-duration { @include primary-text; }
+
+.track-like button {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    img { width: 2rem; height: 2rem; }
+}

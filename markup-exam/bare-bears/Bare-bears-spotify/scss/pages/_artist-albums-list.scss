@@ -1,0 +1,85 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.artist-list-albums-article {
+  margin-left: 25px;
+  .random-article {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 60px;
+    .random-article-img {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1px;
+      &:hover {
+        @include mixins.pointer-opacity;
+      }
+      .card__shadow__smallshadow {
+        width: 120px;
+        height: 6px;
+        border-radius: 5.57px 5.57px 0 0;
+      }
+      .bg-shadow-1 {
+        background: rgba(246, 86, 5, 0.3);
+      }
+      .bg-shadow-2 {
+        background: rgba(64, 69, 89, 0.3);
+      }
+      img {
+        width: 130px;
+        border-radius: 5.57px;
+      }
+    }
+    .random-article-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
+      max-width: 367px;
+      h3 {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        color: rgba(224, 224, 224, 1);
+        &:hover {
+          @include mixins.pointer-opacity;
+        }
+      }
+      .random-article-text-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        li {
+          color: rgba(137, 137, 137, 1);
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: 0.03em;
+          .material-symbols-outlined {
+            font-size: 3px;
+            background-color: rgba(137, 137, 137, 1);
+            display: flex;
+            justify-content: center;
+            border-radius: 50px;
+          }
+        }
+      }
+    }
+  }
+  .random-article-text-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    ul li:hover {
+      cursor: pointer;
+      filter: brightness(20%);
+    }
+  }
+}

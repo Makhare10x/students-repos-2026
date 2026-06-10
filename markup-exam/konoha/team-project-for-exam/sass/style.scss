@@ -1,0 +1,27 @@
+@use './base/reset';
+@use './base/base';
+@use './abstracts/variables';
+@use './abstracts/mixins';
+@use './layout/header';
+@use './layout/main-layout';
+@use './layout/footer';
+@use './layout/sidebar';
+@use './pages/song';
+@use './pages/album';
+@use './pages/playlist';
+@use './pages/artist_home';
+@use './pages/about_artist';
+@use './pages/grid_albums';
+@use './pages/list_albums';
+
+html,
+body,
+*,
+*::before,
+*::after,
+button,
+input,
+select,
+textarea {
+  font-family: "Satoshi", sans-serif;
+}

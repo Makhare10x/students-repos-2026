@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as v;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color:v.$text-primary;
+}
+
+li {
+    list-style: none;
+}
+
+button{
+    border:none;
+    background-color: transparent;
+}

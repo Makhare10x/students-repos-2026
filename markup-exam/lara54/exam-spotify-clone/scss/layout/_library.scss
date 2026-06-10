@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as m;
+@use "../components/buttons" as bt;
+@use "../abstracts/nav-link" as nav;
+@use "../base/typography";
+@use "../components/cards";
+
+
+.library-content-navigation {
+    padding: 1rem;
+    @include m.flex-between;
+
+}
+
+.main-content__cards-container-library {
+    padding: 0.5rem;
+    @include m.grid-fill;
+    gap: 1rem;
+}

@@ -1,0 +1,10 @@
+sass --watch scss/style.scss css/style.css
+git pull origin main
+<<<<<<< HEAD
+git pull origin mixins/stuff
+=======
+>>>>>>> feat/Home
+
+
+
+  

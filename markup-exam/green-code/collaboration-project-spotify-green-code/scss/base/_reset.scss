@@ -1,0 +1,32 @@
+@use "../abstracts/variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: variables.$bg-color;
+    padding: 10px 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body, button, input, textarea {
+    font-family: 'Satoshi-Variable', sans-serif;
+}

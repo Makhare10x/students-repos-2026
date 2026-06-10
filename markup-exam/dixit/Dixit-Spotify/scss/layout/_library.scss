@@ -1,0 +1,227 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+
+.library {
+    display: none;
+    &.active {
+        display: block;
+        z-index: 10;
+    }
+    padding-bottom: 3rem;
+    h3 {
+        font-size: 1.4rem;
+    }
+    .toggle-input {
+        display: none;
+    }
+
+    .icon-last {
+        display: none;
+    }
+    .toggle-input:checked + .toggle-label .icon-first {
+        display: none;
+    }
+    .toggle-input:checked + .toggle-label .icon-last {
+        display: block;
+    }
+    .recents-label {
+        cursor: pointer;
+    }
+}
+.list-to-show {
+    display: none;
+    background-color: #323232;
+    padding-top: 0.01rem;
+    position: absolute;
+    margin-top: 0.5rem;
+    width: 10rem;
+    z-index: 5;
+    border-radius: 0.8rem;
+    li {
+        margin-left: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+.toggle-input:checked ~ .list-to-show {
+    display: block;
+}
+
+.action-Bar {
+    margin-top: 3rem;
+    display: grid;
+    position: relative;
+    color: v.$second-primary;
+    grid-template-columns: repeat(2, auto);
+    justify-content: start;
+    column-gap: 3.5rem;
+    margin-right: auto;
+    margin-left: 2.6rem;
+}
+.recents-toggle {
+    label {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 2rem;
+    }
+}
+.group-list {
+    h3 {
+        img {
+            margin-right: 2rem;
+        }
+    }
+}
+.accordion-item-cards {
+    display: none;
+    h3 {
+        color: v.$primary;
+    }
+}
+.title-toggle:checked ~ .accordion-item-cards {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.8rem;
+    padding-top: 1.5rem;
+    font-size: 2rem;
+    @include m.horizontal-scroll;
+}
+.title-toggle:checked ~ .cards-item-show {
+    border-bottom: none;
+    padding-bottom: 0;
+    img {
+        transform: rotate(90deg);
+    }
+}
+.title-toggle {
+    display: none;
+}
+.cards-item-show {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    color: v.$primary;
+    margin-top: 2rem;
+    border-bottom: solid 0.3rem v.$bg-form;
+    padding-bottom: 2rem;
+    h2 {
+        font-size: 2rem;
+    }
+    img {
+        justify-self: end;
+    }
+}
+.cards-img-library {
+    position: relative;
+}
+
+.playlists {
+    .cards-img-library div:first-child {
+        overflow: visible;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: absolute;
+        background-color: v.$bg-primary;
+        width: 3.5rem;
+        height: 3.5rem;
+        left: 13.4rem;
+        bottom: 15rem;
+        z-index: 2;
+        img {
+            width: 2.3rem;
+            height: 2.3rem;
+        }
+    }
+}
+.pin img:hover {
+    position: relative;
+
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.cards-img-library img:last-child {
+    width: 17rem;
+    height: 17rem;
+    border-radius: 0.725rem;
+    object-fit: cover;
+    z-index: 5;
+}
+.cards-img-library div:nth-child(2) {
+    width: 16rem;
+    height: 0.8rem;
+    border-bottom: solid 0.2rem v.$bg-primary-mobile;
+    border-radius: 0.725rem 0.725rem 0rem 0rem;
+    position: relative;
+    margin-left: 0.5rem;
+    opacity: 0.3;
+}
+.playlists {
+    .accordion-item-cards article:first-child {
+        background-color: rgba(30, 215, 96, 0.1);
+        border-radius: 1rem 1rem 0.725rem 0.725rem;
+        p {
+            color: v.$secondary;
+        }
+    }
+    .accordion-item-cards article:last-child {
+        .cards-img-library div:nth-child(2) {
+            width: 10rem;
+        }
+    }
+}
+.accordion-item-cards article {
+    border-radius: 1rem 1rem 0.725rem 0.725rem;
+    transition: transform 0.3s linear;
+}
+.accordion-item-cards article:hover {
+    transform: scale(1.05);
+}
+.accordion-item-cards {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 0.725rem;
+    .album-card-subtitle {
+        padding-left: 0.4rem;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        p {
+            color: v.$second-primary;
+            font-size: 1.4rem;
+            padding-right: 0.3rem;
+            justify-self: end;
+        }
+        span {
+            @include m.text-wrap;
+            padding-bottom: 0.3rem;
+        }
+    }
+}
+.artists-library {
+    .album-card-subtitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards-img-library {
+        img {
+            border-radius: 50%;
+        }
+    }
+}
+@media (min-width: 991px) {
+    .library-navigation {
+        display: none;
+    }
+}
+
+.album-card-subtitle {
+    display: flex;
+    span {
+        width: 11rem;
+    }
+}

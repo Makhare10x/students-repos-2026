@@ -1,0 +1,372 @@
+// Card Component Styles for Spotify Clone - Figma Design
+
+// Recently Played Grid (Mobile and Tablet)
+.recently-played {
+  margin-bottom: $spacing-xl;
+  display: none;
+
+  @include respond-to(tablet) {
+    display: block;
+  }
+
+  @include respond-to(mobile) {
+    display: block;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+}
+
+.recent-card {
+  display: flex;
+  align-items: center;
+  background-color: #2b2b2b;
+  border-radius: 4px;
+  overflow: hidden;
+  gap: 8px;
+  height: 48px;
+
+  &__image {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    flex: 1;
+    min-width: 0;
+    padding-right: 4px;
+  }
+
+  &__title {
+    font-size: 11px;
+    font-weight: 600;
+    color: #ffffff;
+    @include text-ellipsis;
+  }
+
+  &__subtitle {
+    font-size: 9px;
+    color: #a7a7a7;
+    @include text-ellipsis;
+  }
+}
+
+// Made For You Section
+.made-for-you {
+  margin-top: $spacing-xl;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+
+    .made-for-you__title-icon {
+      width: 20px;
+      height: 20px;
+      stroke: #a7a7a7;
+      stroke-width: 2.2;
+    }
+  }
+
+  &__discover {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #a7a7a7;
+    margin-left: 8px;
+    cursor: pointer;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      stroke-width: 2.6;
+      fill: none;
+    }
+
+    &:hover {
+      color: $fg-primary;
+      text-decoration: underline;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+  }
+
+  &__arrow {
+    @include button-reset;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color $transition-fast;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    svg {
+      width: 14px;
+      height: 14px;
+      fill: $fg-primary;
+    }
+  }
+
+  &__menu {
+    @include button-reset;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color $transition-fast;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    svg {
+      width: 14px;
+      height: 14px;
+      fill: $fg-primary;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: $spacing-md;
+    padding-bottom: $spacing-md;
+
+    @include respond-to(tablet) {
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 12px;
+    }
+
+    @include respond-to(mobile) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+  }
+}
+
+// Card Item
+.card-item {
+  background-color: transparent;
+  border-radius: $radius-md;
+  padding: $spacing-md;
+  cursor: pointer;
+  transition: background-color $transition-normal;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  @include respond-to(mobile) {
+    padding: 8px;
+    gap: 8px;
+    background-color: #1a1a1b;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+
+    .card-item__play-button {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: $radius-md;
+    overflow: hidden;
+    background-color: $bg-hover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__color-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+
+    &--green {
+      background: linear-gradient(90deg, #21e065, #0b8a36);
+    }
+    &--grey {
+      background: linear-gradient(90deg, #808080, #4a4a4a);
+    }
+    &--pink {
+      background: linear-gradient(90deg, #ff6b9d, #c13584);
+    }
+    &--purple {
+      background: linear-gradient(90deg, #a855f7, #6b21a8);
+    }
+    &--orange {
+      background: linear-gradient(90deg, #fb923c, #ea580c);
+    }
+  }
+
+  &__play-button {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: $spotify-green;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+      opacity $transition-normal,
+      transform $transition-normal,
+      background-color $transition-fast;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      background-color: $spotify-green-hover;
+      transform: translateY(0) scale(1.05);
+    }
+  }
+
+  &__play-icon {
+    width: 20px;
+    height: 20px;
+    fill: $bg-primary;
+    margin-left: 4px;
+
+    &--green {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      width: 40px;
+      height: 40px;
+      background-color: $spotify-green;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: translateY(4px);
+      transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        background-color 0.1s ease;
+      box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+
+      svg {
+        width: 14px;
+        height: 14px;
+        fill: $bg-primary;
+        margin-left: 2px;
+      }
+
+      &:hover {
+        background-color: $spotify-green-hover;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &:hover &__play-icon--green {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: $fg-primary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    color: $fg-secondary;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4;
+    margin-top: 4px;
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.625rem;
+    font-weight: 500;
+    color: $fg-secondary;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-top: 4px;
+    width: fit-content;
+  }
+
+  // Artist card variant
+  &--artist {
+    .card-item__image {
+      border-radius: 50%;
+    }
+  }
+}

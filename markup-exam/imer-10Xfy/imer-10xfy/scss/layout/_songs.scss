@@ -1,0 +1,215 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+@use "../base/reset";
+
+.main-content-for-songs{
+    background: linear-gradient(180deg, #060606, rgba(138,157,187,0.18));
+    width: 85%;
+    padding: 0 variables.$h-font;
+    border: 0.1rem solid variables.$main-border;
+    border-radius: 1rem;
+
+    
+
+
+ }
+.song-information{
+    @include mixin.flex-center($J:center,$A:center);
+    gap: 9rem;
+    padding:3.7rem 15rem 3.7rem 6rem;
+    width: 100%;
+    figure{
+        img{
+            width: 50rem;
+            border-radius: 1rem;
+        }
+        
+    
+    }
+    
+    article{
+        @include mixin.flex-center($J:center,$A:start);
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        h1{
+            font-size: 3.6rem;
+            font-weight: 700;
+            line-height: variables.$line-height;
+            color: variables.$h-color; 
+        }
+
+        div{
+            @include mixin.flex-center(center, center);
+            gap: 1rem;
+            p{
+                color: variables.$h-color
+            }
+            span{
+                display: inline-block;
+                color: variables.$p-color;
+                &:hover{
+                    filter: brightness(0) saturate(100%) invert(57%) sepia(98%) saturate(400%) hue-rotate(80deg) brightness(110%);
+                } 
+            }
+            p, span{
+                @include mixin.p-of-sidebar-header(1.4rem);
+            }
+            
+            img{
+                width: 2rem;
+            }
+            a{
+                @include mixin.flex-center($J:space-between,$A:center);
+                &:hover{
+                     filter: brightness(0) saturate(100%) invert(57%) sepia(98%) saturate(400%) hue-rotate(80deg) brightness(110%);
+                     cursor: pointer;
+                }
+
+            }
+            button {
+                background-color: variables.$background-color-transparent;
+                border: none;
+            
+                img{
+                    width: 4rem;
+                    &:hover{
+                        filter: brightness(0) saturate(100%) invert(57%) sepia(98%) saturate(400%) hue-rotate(80deg) brightness(110%);
+                        cursor: pointer;
+                    }
+                }
+            }
+            .pause-song-page:hover{
+                filter: none !important;
+                cursor: pointer;
+            }
+        }
+        .information{
+            div{
+                width: 0.3rem;
+                height: 0.3rem;
+                border-radius: 50%;
+                background-color: variables.$dot-color-in-liked-song;
+            }
+        }
+
+        .ganres{
+            @include mixin.flex-center;
+            flex-direction: row;
+            gap: 1rem;
+            p{
+                padding: 1rem 2rem;
+                border: 0.2rem solid #89898940 ;
+                @include mixin.p-of-sidebar-header(1.4rem);
+                color: variables.$p-color;
+                border-radius: 4.4rem;
+            }
+        }
+        
+
+
+        
+    }
+}
+.song-information article .authors{
+    @include mixin.flex-center(center,start);
+    flex-direction: column;
+    gap:2rem ;
+    .authors-section{
+        @include mixin.flex-center(start, center);
+        gap: 4rem;
+        img{
+            width: 6rem;
+        }
+        .txt-container{   
+            @include mixin.flex-center(center,start);
+            flex-direction: column;
+            gap: 1rem;
+        
+            p{
+                @include mixin.p-of-sidebar-header(1.6rem);
+
+            }
+            h2{
+                font-size: 1.6rem;
+                font-weight: 500;
+                line-height: variables.$line-height;
+                color: variables.$h-color;
+            
+            }
+        }
+    }
+}
+.buttons{
+    @include mixin.flex-center(start,center);
+    gap: 3rem;
+    button{
+        padding: 0.8rem 1rem;
+        border: none;
+        background-color: variables.$background-color-transparent;
+        p{
+            @include mixin.p-of-sidebar-header(1.4rem);
+            color: variables.$h-color;
+        }
+    }
+    p::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 0.2rem;
+        width: 0rem;
+        
+        background-color: green;
+        transition: width 0.3s ease;
+    }
+    p:hover::after {
+        width: 8rem;
+        translate: -6rem;
+        
+    }
+    button::before{
+        content: "";
+        position: absolute;
+        bottom: 0;     
+        right: 0;
+        left: 14.5%;
+        height: 0.2rem;
+        background-color: #89898933;
+    }
+}
+
+
+
+.main-content-for-songs::-webkit-scrollbar{
+    display: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 100vh;
+
+}
+.lyrics{
+    @include mixin.flex-center(start,start);
+    gap: 7rem;
+    margin-top: 7rem;
+    
+    figure{
+        @include mixin.flex-center;
+        top: 0;
+        flex-direction: column;
+        gap: 1.2rem;
+        img:hover{
+            filter: brightness(0) saturate(100%) invert(57%) sepia(98%) saturate(400%) hue-rotate(80deg) brightness(110%);
+
+        }
+    }
+    article{
+        width: 50rem;
+        p{
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: 3%;
+            line-height: variables.$line-height;
+            text-align: center;
+        }   
+    }
+}

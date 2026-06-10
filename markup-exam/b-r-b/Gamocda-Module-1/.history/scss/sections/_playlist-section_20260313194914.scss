@@ -1,0 +1,94 @@
+@use '../abstract/mixins' as *;
+@use '../universal components/components' as *;
+@use '../abstract/responsive' as *;
+@use '../abstract/variables' as *;
+
+.playlist__container {
+    padding: 2.2rem 5rem 2.2rem 3.7rem;
+    display: flex;
+    background: linear-gradient(180deg, #333842, #060606)
+}
+
+.playlist__main {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.playlist__title {
+    @include primary-title;
+    font-weight: 700;
+    font-size: 3.6rem;
+}
+
+.playlist__info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    @include primary-text;
+}
+
+.playlist__artist {
+    color: $header-text-color;
+}
+
+.playlist__nav {
+    @include flex-between;
+}
+
+.playlist__player {
+    display: flex;
+    align-items: center;
+}
+
+.playlist__right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 30%;
+    padding: 2.2rem 3.8rem;
+    @include desktop {
+        display: none;
+    }
+}
+
+.playlist__cover {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.playlist__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 80%;
+}
+
+.playlist__tag {
+    @include primary-text;
+    border: 2px solid #89898940;
+    border-radius: 44px;
+    padding: 10px 20px;
+}
+
+.playlist__last-artists {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.playlist__last-artist {
+    display: flex;
+    align-items: center;
+    @include primary-title;
+    color: $font-fg-secondary;
+
+    &-cover {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+}

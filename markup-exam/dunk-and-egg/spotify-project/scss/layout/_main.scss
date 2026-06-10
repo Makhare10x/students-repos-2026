@@ -1,0 +1,8 @@
+@use '../abstract/variables';
+
+main.main {
+  grid-area: main;
+  border: variables.$color-secondary solid 1px;
+  border-radius: 10px;
+  overflow-y: auto;
+}

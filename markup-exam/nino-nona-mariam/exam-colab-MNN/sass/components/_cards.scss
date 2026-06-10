@@ -1,0 +1,211 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as m;
+
+.cards-wrapper-grid  {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 20px 15px 10px 15px;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: visible;
+}
+
+.cards-wrapper-grid::-webkit-scrollbar { 
+    display: none; 
+}
+
+.card {
+    flex: 0 0 38%;
+    max-width: 38%;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: v.$radius-small;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 3;
+}
+
+.card-txt-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cards-wrapper-grid .card-title {
+    font-size: v.$font-size-small;
+}
+
+.card-title-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: v.$font-size-small;
+}
+
+.card-title-cont span:first-child {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+}
+
+.card-title-cont span:last-child {
+    flex-shrink: 0;
+}
+
+.card-main-txt {
+    font-size: v.$font-size-small-card;
+    color: v.$secondary-text-color;
+}
+
+.card-title-cont span{
+    font-size: 12px;
+    font-weight: 400;
+}
+//mobile library card wrapper
+.cards-cont{
+     display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    padding-top: 15px;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: visible;
+}
+.cards-cont::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+.wrap-colored{
+    background-color: v.$secondary-text-color-9;
+    border-radius: v.$radius-small;
+    padding: 8px;
+
+}
+
+.pin-container {
+    position: absolute;
+    top: -5px;      
+    right: -4px;    
+    z-index: 10;   
+    
+   
+    width: 32px;   
+    height: 32px;
+    background:v.$primary-color;
+    border-radius: 50%;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none; 
+}
+
+.pin-container img {
+    width: 16px !important; 
+    height: 16px !important;
+    margin: 0 !important;   
+}
+
+
+
+
+.card-color-green { @include m.accent-card(#85C585); }
+.card-color-yellow { @include m.accent-card(#FFDCCA); }
+.card-color-orange { @include m.accent-card(#F67D4D); }
+.title-bg-green{@include m.bg-only(#85C585);}
+.title-bgt-yellow{@include m.bg-only(#FFDCCA);}
+.title-bgt-orange{@include m.bg-only(#F67D4D);}
+
+.num-red { @include m.num-color(#CE6E9A); }
+.num-green { @include m.num-color(#95E6D3); }
+.num-pink { @include m.num-color(#F4B8BD); }
+.num-neon { @include m.num-color(#C3E7B7); }
+.num-hotpink { @include m.num-color(#F37FA6); }
+.num-blue { @include m.num-color(#A0BEC8); }
+.num-yellow { @include m.num-color(#FDD87D); }
+.num-darkyellow { @include m.num-color(#D4B2A9); }
+.num-cyan { @include m.num-color(#8DC3B5); }
+.num-purple { @include m.num-color(#A6BAD3); }
+.num-brightgreen { @include m.num-color(#CCF665); }
+.num-brightyellow { @include m.num-color(#F9E72C); }
+.num-babyblue { @include m.num-color(#9BF0E2); }
+.num-electropurple { @include m.num-color(#6F86FF); }
+.num-darkgreen { @include m.num-color(#27856B); }
+.num-fiusa { @include m.num-color(#DD138B); }
+
+
+/* --- Made For You Section --- */
+.card-stacked-pink        { @include m.stacked-card(#CE6E9A); }
+.card-stacked-green       { @include m.stacked-card(#95E6D3); }
+.card-stacked-babypink    { @include m.stacked-card(#F4B8BD); }
+.card-stacked-saladgreen  { @include m.stacked-card(#C3E7B7); }
+.card-stacked-rouge       { @include m.stacked-card(#F37FA6); }
+.card-stacked-blue        { @include m.stacked-card(#A0BEC8); }
+.card-stacked-yellow      { @include m.stacked-card(#FDD87D); }
+.card-stacked-olive       { @include m.stacked-card(#D4B2A9); }
+.card-stacked-darkyellow  { @include m.stacked-card(#D4B2A9); } // Shared with olive? check variables
+.card-stacked-darkgreen   { @include m.stacked-card(#8DC3B5); }
+.card-stacked-purple      { @include m.stacked-card(#A6BAD3); }
+.card-stacked-neongreen   { @include m.stacked-card(#C3E7B7); }
+
+/* --- Your Top Mixes Section --- */
+.card-stacked-electricgreen  { @include m.stacked-card(#CCF665); }
+.card-stacked-electricyellow { @include m.stacked-card(#F9E72C); }
+.card-stacked-cyan           { @include m.stacked-card(#9BF0E2); }
+.card-stacked-deeppurple     { @include m.stacked-card(#6F86FF); }
+.card-stacked-whitepink      { @include m.stacked-card(#F4B8BD); }
+.card-stacked-babyyellow     { @include m.stacked-card(#FDD87D); }
+.card-stacked-deepgreen      { @include m.stacked-card(#27856B); }
+.card-stacked-hotpink        { @include m.stacked-card(#DD138B); }
+
+.card-stacked-grey { @include m.stacked-card(grey); }
+
+
+
+
+
+
+
+// Desktop overrides for your cards
+@media (min-width: 768px) {
+   .card {
+       
+        flex: 0 0 calc(100% / 8 - 20px); 
+        max-width: calc(100% / 8 - 20px);
+        
+        
+        transition: transform 0.2s ease, background-color 0.2s ease;
+        padding: 10px;
+        border-radius: 8px;
+
+       
+
+        &:hover {
+            background-color: #282828; 
+            transform: translateY(-5px);
+        }
+    }
+
+    .card-title-cont span {
+        font-size: v.$font-size-medium; 
+    }
+
+    .card .card-main-txt {
+        font-size: v.$font-size-small;
+    }
+    .popular-almubs{
+        display: none;
+
+   }
+}

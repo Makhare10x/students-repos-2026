@@ -1,0 +1,252 @@
+// footer
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background-color: #333842;
+  border-top: 1px solid #282828;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 16px;
+  z-index: 100;
+ 
+  &-controle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    max-width: 40%;
+
+    .controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+
+      }
+    }
+
+    .progress-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+
+      span {
+        font-size: 14px;
+        color: #898989;
+        min-width: 32px;
+        letter-spacing: 0.02em;
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+
+      .progress-bar {
+        flex: 1;
+        height: 4px;
+        background: #535353;
+        border-radius: 2px;
+        cursor: pointer;
+        position: relative;
+        transition: height 0.4s ease;
+
+
+        .progress {
+          width: 50%;
+          height: 100%;
+          background: #ffffff;
+          border-radius: 2px;
+          position: relative;
+          transition: background 0.4s ease;
+
+        }
+
+      }
+    }
+  }
+  .music_and_buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+      .music {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      justify-content: space-between;
+      gap: 20px;
+      min-width: 0;
+
+      .music_info {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+
+          img {
+          width: 56px;
+          height: 56px;
+          border-radius: 4px;
+          object-fit: cover;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+          flex-shrink: 0;
+          }
+
+          .track-info {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+          min-width: 0;
+
+          p {
+              margin: 0;
+              white-space: nowrap;
+              overflow: hidden;
+          }
+
+          .track-title {
+              font-size: 14px;
+              font-weight: 600;
+              color: #E0E0E0;
+              letter-spacing: 0.01em;
+
+              &:hover {
+              text-decoration: underline;
+              cursor: pointer;
+              }
+          }
+
+          .artist {
+              font-size: 12px;
+              color: #898989;
+          }
+
+          .band {
+              font-size: 11px;
+              color: #898989;
+          }
+          }
+
+      }
+
+      
+      .track-actions {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        flex-shrink: 0;
+
+        img {
+          width: 40px;
+          height: 40px;
+          box-shadow: none;
+          border-radius: 0;
+          cursor: pointer;
+          opacity: 0.7;
+          transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+      }
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex: 1;
+
+      img {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+      }
+    }  
+  }
+  .mobile_icon {
+    display: none;
+  }
+  .footer_nav {
+    display: none;
+  }
+  
+ @media (max-width: 1240px) {
+    .music_and_buttons .track-actions, .music_and_buttons-right, &-controle {
+      display: none;
+    }
+  }
+
+  @media (max-width: 650px) {
+    display: flex;
+    justify-content: center;
+    padding: 0 8px;
+    bottom: 70px;
+
+
+
+    .music_and_buttons {
+      justify-content: center;
+      gap: 8px;
+
+      .music {
+        display: flex;
+        justify-content: center;
+        .track-actions {
+          display: none;
+        }
+
+        .music_info {
+          gap: 8px;
+          display: flex;
+          justify-content: center;
+        }
+      }
+      &-right {
+        display: none;
+      }
+      .player-right {
+        display: none;
+      }
+    }
+
+    &-controle {
+      display: none;
+    }
+    .mobile_icon {
+      display: flex;
+    }
+    .footer_nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 72px;
+        background-color: #1b1f26;
+        border-top: 1px solid #333842;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        padding: 0 16px;
+        z-index: 100;
+
+        a {
+          background-color: #1b1f26;
+          cursor: pointer;
+        }
+      
+
+    }
+  }
+}

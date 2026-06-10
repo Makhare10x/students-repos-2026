@@ -1,0 +1,51 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.filter-btn {
+     
+      text-decoration: none;
+      border: none;
+      background-color: $bg-light-grey;
+      color: $text-active;
+      padding: 8px 12px;
+      border-radius: 8px;
+      gap: 12px;
+
+      
+    }
+
+.filter-btn:hover {
+        background-color: $text-active; 
+        color: $bg-dark-grey;
+        font-weight: bold;
+        
+       
+      }
+
+// Lybrary
+
+.filter-buttons {
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+.filter-buttons img:hover {
+  @include hover-active;
+}
+
+
+// Buttons on the page - Liked Songs
+
+.music-genre {
+
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid $text-primary;
+  color: $text-active;
+  padding: 8px 12px;
+  border-radius: 44px;
+ 
+}
+

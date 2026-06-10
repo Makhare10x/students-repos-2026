@@ -1,0 +1,215 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+
+.profile-mobile-view {
+    background-color: $color-bg-main;
+    min-height: 100vh;
+    @include flexbox-center;
+    padding: 20px 15px;
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: 600px; 
+    display: flex;
+    flex-direction: column;
+    gap: 16px; 
+}
+
+.card-base {
+    @include profile-card;
+    flex-direction: column;
+    padding: 20px;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+//profile info//
+.profile-card {
+    height: 130px;
+    max-height: 200px;
+    @extend .card-base;
+    background: linear-gradient(180deg, rgba(138, 53, 74, 0.4) 0%, rgba(17, 17, 17, 0.4) 100%);
+}
+    .profile-flex-container {
+        display: flex; 
+        flex-direction: row; 
+        align-items: center;
+        gap: 15px;
+    }
+
+    .profile-picture {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .profile-info {
+        flex: 1;
+        .name-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h1 { 
+                @include h3; margin: 0; 
+            }
+        }
+    }
+
+    .action-icons {
+        display: flex;
+        gap: 10px;
+        img { 
+            width: 40px; 
+            height: 40px;
+            object-fit: scale-down;
+            }
+        }
+
+        .stats-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 5px;
+            @include typography-sub;
+            span { 
+                color: $color-fg-primary; 
+                font-weight: bold; 
+            }
+            .divider-dot {
+            @include devider-dot;
+            }
+        }
+
+        .user-id {
+            @include typography-sub;
+            font-size: 11px;
+            opacity: 0.6;
+            word-break: break-all;
+            margin-top: 8px;
+        }
+
+//friends card//
+.friends-card {
+    height: 170px;
+    padding: 15px 20px;
+    background-color:inherit;
+    @extend .card-base;
+}
+
+    .card-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        h2 { 
+            @include typography-small;
+        }
+        img { 
+            @include logos-for-profile;
+            object-fit: scale-down;
+        }
+    }
+
+    .friends-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 5px;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            img {
+                @include logos-for-profile;
+              }
+            }
+        }
+            
+            .friend-details {
+                display: flex;
+                flex-direction: column;
+                
+            }
+
+            .friend-name {
+                @include typography-small;
+            }
+            
+            .music-info {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                
+                @include typography-sub;
+                img { 
+                    width: 30px; 
+                    height: 30px;
+                }
+            }
+        
+
+//payment plan//
+.plan-card {
+    height: 125px;
+    @extend .card-base;
+    background: linear-gradient(180deg, #10301B 0%, #111111 100%);
+    align-items: flex-start;
+}
+
+.plan-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+        @include typography-small;
+        img { 
+            width: 20px; 
+            height: 20px; 
+        }
+    }
+
+    .plan-title { 
+        @include h4; 
+        color: $color-primary; 
+        margin-bottom: 5px; 
+    }
+    .plan-price { 
+        @include typography-sub; 
+    }
+
+//properties//
+.settings-card {
+    @extend .card-base;
+    height: 140px;
+    max-height:240px ;
+    padding: 0;
+}
+
+.setting-item {
+        height: 33%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        &:last-child { 
+            border-bottom: none; 
+        }
+
+        p { 
+            flex: 1; 
+            margin-left: 15px; 
+            @include typography-sub; 
+            color: $color-fg-primary; 
+            margin-bottom: 0; 
+        }
+        .arrow {
+        margin-left: auto;}
+        img:first-child {
+        @include logos-for-profile;
+    }
+    }

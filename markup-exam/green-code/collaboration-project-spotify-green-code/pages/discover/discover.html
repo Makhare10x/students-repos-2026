@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify-Discover</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="icon" sizes="32x32" type="image/png" href="../../assets/icons/favicon32.png" />
+  </head>
+
+  <body class="admin-layout">
+    <input type="checkbox" id="friends-sidebar-toggle" class="hidden-trigger" />
+    <header class="header">
+      <ul class="menu header__nav_left">
+        <li class="header__item">
+          <a class="menu__nav" href="../../index.html"
+            ><img src="../../assets/icons/icon_home.svg" alt="" />
+            <img
+              src="../../assets/icons/icon_homeA.svg"
+              alt="icon home"
+            />Home</a
+          >
+        </li>
+        <li class="header__item">
+          <a class="menu__nav" href="#"
+            ><img
+              src="../../assets/icons/icon_discoverA.svg"
+              alt="icon discover"
+            />
+            <img
+              src="../../assets/icons/icon_discoverA.svg"
+              alt=""
+            />Discover</a
+          >
+        </li>
+        <!-- icon search           -->
+        <li class="header__item search">
+          <input
+            type="text"
+            onclick="window.location.href='../search/search.html'"
+            placeholder="Search..."
+            class="search__bar"
+            name="search-bar"
+          />
+        </li>
+      </ul>
+      <ul class="menu header__nav_right">
+        <!-- icon bell            -->
+        <li>
+          <a class="menu__nav" href="#">
+            <svg
+              class="menu__icon"
+              width="24"
+              height="26"
+              viewBox="0 0 24 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.4546 17.5398H4.39895C3.20929 17.5398 2.55941 16.1522 3.32101 15.2383L4.57552 13.7329C4.79088 13.4745 4.89842 13.1476 4.89514 12.8112C4.8745 10.6918 5.24657 2.80664 11.9268 2.80664C18.607 2.80664 18.9791 10.6918 18.9584 12.8112C18.9552 13.1476 19.0627 13.4745 19.2781 13.7329L20.5326 15.2383C21.2942 16.1522 20.6443 17.5398 19.4546 17.5398Z"
+                stroke-width="1.6838"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8.41895 20.3459C8.41895 20.3459 9.12052 22.4507 11.9268 22.4507C14.7331 22.4507 15.4347 20.3459 15.4347 20.3459"
+                stroke-width="1.6838"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </li>
+        <!-- icon lock            -->
+        <li>
+          <a class="menu__nav" href="#">
+            <svg
+              class="menu__icon"
+              width="20"
+              height="24"
+              viewBox="0 0 20 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.5457 4.26552C14.7544 4.70905 15.2832 4.89939 15.7267 4.69066C16.1702 4.48192 16.3606 3.95316 16.1518 3.50963L14.5457 4.26552ZM3.61666 7.98816C4.49277 7.84598 4.49283 7.84638 4.49289 7.84675C4.49291 7.84684 4.49296 7.84719 4.49299 7.84737C4.49305 7.84773 4.49309 7.84799 4.49312 7.84814C4.49316 7.84844 4.49314 7.84833 4.49306 7.84781C4.4929 7.84676 4.49249 7.84408 4.49187 7.83981C4.49063 7.83128 4.48854 7.81644 4.48589 7.79571C4.48057 7.75421 4.47303 7.68935 4.46549 7.60449C4.45037 7.43439 4.43548 7.18627 4.43819 6.88671C4.44366 6.28146 4.52078 5.49832 4.79016 4.73233C5.05715 3.97315 5.50453 3.25206 6.24453 2.71568C6.98229 2.18093 8.08614 1.77515 9.7633 1.77515V0C7.79098 0 6.30174 0.481792 5.20273 1.27839C4.10595 2.07338 3.47285 3.12744 3.11555 4.1434C2.76065 5.15256 2.66967 6.14457 2.66311 6.87067C2.6598 7.2368 2.67792 7.5434 2.69731 7.76162C2.70702 7.87092 2.71711 7.95861 2.72511 8.02113C2.72911 8.0524 2.7326 8.07743 2.73528 8.09577C2.73661 8.10494 2.73774 8.11244 2.73863 8.11822C2.73908 8.12111 2.73947 8.12357 2.73979 8.12559C2.73995 8.1266 2.74009 8.1275 2.74022 8.1283C2.74028 8.12869 2.74036 8.1292 2.74039 8.1294C2.74047 8.12989 2.74055 8.13034 3.61666 7.98816ZM9.7633 1.77515C11.2681 1.77515 12.31 2.10211 13.0382 2.55229C13.7643 3.00119 14.2364 3.60832 14.5457 4.26552L16.1518 3.50963C15.7204 2.59289 15.0353 1.70001 13.9716 1.0424C12.91 0.386066 11.5295 0 9.7633 0V1.77515Z"
+                fill="#898989"
+              />
+              <path
+                d="M15.9763 8.43188H3.55029C2.07971 8.43188 0.887573 9.62403 0.887573 11.0946V20.4141C0.887573 21.8847 2.07971 23.0768 3.55029 23.0768H15.9763C17.4469 23.0768 18.639 21.8847 18.639 20.4141V11.0946C18.639 9.62403 17.4469 8.43188 15.9763 8.43188Z"
+                stroke-width="1.77515"
+              />
+              <circle
+                cx="9.76331"
+                cy="15.9763"
+                r="2.66272"
+                stroke-width="1.77515"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <label for="friends-sidebar-toggle" class="menu__nav" href="#">
+            <img src="../../assets/icons/icon_friends.svg" alt="icon friends" />
+            <img
+              src="../../assets/icons/icon_friendsActive.svg"
+              alt="icon friends"
+            />
+          </label>
+        </li>
+        <!-- icon settings            -->
+        <li>
+          <a class="menu__nav" href="#">
+            <svg
+              class="menu__icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.1164 1H9.88363C9.60145 1 9.35689 1.09167 9.14995 1.275C8.94302 1.45833 8.82074 1.6875 8.78312 1.9625L8.4445 4.52C8.19994 4.61167 7.96968 4.72167 7.75371 4.85C7.537 4.97833 7.32517 5.11583 7.11824 5.2625L4.66325 4.2725C4.39988 4.18083 4.13651 4.17167 3.87313 4.245C3.60976 4.31833 3.40283 4.47417 3.25233 4.7125L1.16418 8.26C1.01368 8.49833 0.966651 8.755 1.02309 9.03C1.07952 9.305 1.22062 9.525 1.44636 9.69L3.56273 11.2575C3.54392 11.3858 3.53451 11.5098 3.53451 11.6293V12.3718C3.53451 12.4906 3.54392 12.6142 3.56273 12.7425L1.44636 14.31C1.22062 14.475 1.07952 14.695 1.02309 14.97C0.966651 15.245 1.01368 15.5017 1.16418 15.74L3.25233 19.2875C3.38402 19.5442 3.58606 19.7048 3.85846 19.7693C4.13161 19.8331 4.39988 19.8192 4.66325 19.7275L7.11824 18.7375C7.32517 18.8842 7.54151 19.0217 7.76726 19.15C7.993 19.2783 8.21875 19.3883 8.4445 19.48L8.78312 22.0375C8.82074 22.3125 8.94302 22.5417 9.14995 22.725C9.35689 22.9083 9.60145 23 9.88363 23H14.1164C14.3986 23 14.6431 22.9083 14.85 22.725C15.057 22.5417 15.1793 22.3125 15.2169 22.0375L15.5555 19.48C15.8001 19.3883 16.0307 19.2783 16.2474 19.15C16.4634 19.0217 16.6748 18.8842 16.8818 18.7375L19.3368 19.7275C19.6001 19.8192 19.8635 19.8283 20.1269 19.755C20.3902 19.6817 20.5972 19.5258 20.7477 19.2875L22.8358 15.74C22.9863 15.5017 23.0334 15.245 22.9769 14.97C22.9205 14.695 22.7794 14.475 22.5536 14.31L20.4373 12.7425C20.4561 12.6142 20.4655 12.4906 20.4655 12.3718V11.6293C20.4655 11.5098 20.4467 11.3858 20.4091 11.2575L22.5254 9.69C22.7512 9.525 22.8923 9.305 22.9487 9.03C23.0051 8.755 22.9581 8.49833 22.8076 8.26L20.7195 4.74C20.569 4.50167 20.3575 4.34107 20.0851 4.2582C19.812 4.17607 19.5437 4.18083 19.2803 4.2725L16.8818 5.2625C16.6748 5.11583 16.4585 4.97833 16.2327 4.85C16.007 4.72167 15.7813 4.61167 15.5555 4.52L15.2169 1.9625C15.1793 1.6875 15.057 1.45833 14.85 1.275C14.6431 1.09167 14.3986 1 14.1164 1Z"
+                stroke-width="2"
+              />
+              <circle
+                cx="3.34783"
+                cy="3.34783"
+                r="3.34783"
+                transform="matrix(1 0 0 -1 8.65216 15.3478)"
+                stroke-width="2"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="menu__nav" href="#"
+            ><img
+              src="../../assets/icons/icon_sprite.svg"
+              alt="icon sprite" /><img
+              src="../../assets/icons/icon_sprite.svg"
+              alt="icon sprite"
+          /></a>
+        </li>
+      </ul>
+    </header>
+    <aside class="aside-bar">
+      <ul class="aside-bar__list">
+        <li class="aside-bar__item">
+          <a class="aside-bar__link aside-bar__icon--active" href="../Library/">
+            <img
+              src="../../assets/icons/icon_library.svg"
+              alt="icon library"
+            /><img
+              src="../../assets/icons/icon_libraryA.svg"
+              alt="icon library"
+            />My Library</a
+          >
+        </li>
+        <li class="aside-bar__item aside-bar__item--arrow-right">
+          <a href="#" class="aside-bar__link"
+            ><img
+              src="../../assets/icons/icon_pins.svg"
+              alt="icon pins"
+            />Pins</a
+          >
+        </li>
+        <li class="aside-bar__item aside-bar__item--arrow-right">
+          <a href="#" class="aside-bar__link"
+            ><img
+              src="../../assets/icons/icon_playlists.svg"
+              alt="icon playlists"
+            />Playlists</a
+          >
+        </li>
+        <li class="aside-bar__item">
+          <a href="#" class="aside-bar__link"
+            ><img
+              src="../../assets/icons/icon_liked.svg"
+              alt="icon liked"
+            />Liked songs</a
+          >
+        </li>
+        <li class="aside-bar__item">
+          <a href="#" class="aside-bar__link"
+            ><img
+              src="../../assets/icons/icon_saves.svg"
+              alt="icon saves"
+            />Saves</a
+          >
+        </li>
+        <li class="aside-bar__item">
+          <a href="#" class="aside-bar__link"
+            ><img
+              src="../../assets/icons/icon_albums.svg"
+              alt="icon albums"
+            />Albums</a
+          >
+        </li>
+        <li class="aside-bar__item">
+          <a href="#" class="aside-bar__link"
+            ><img
+              src="../../assets/icons/icon_folders.svg"
+              alt="icon folders"
+            />Folders</a
+          >
+        </li>
+        <li class="aside-bar__item">
+          <a href="#" class="aside-bar__link"
+            ><img
+              src="../../assets/icons/icon_podcasts.svg"
+              alt="icon podcasts"
+            />Podcasts</a
+          >
+        </li>
+        <li class="aside-bar__item">
+          <a href="#" class="aside-bar__link"
+            ><img
+              src="../../assets/icons/icon_audiobooks.svg"
+              alt="icon audiobooks"
+            />Audiobooks</a
+          >
+        </li>
+        <li class="aside-bar__item">
+          <a href="#" class="aside-bar__link"
+            ><img
+              src="../../assets/icons/icon_artists.svg"
+              alt="icon artists"
+            />Artists</a
+          >
+        </li>
+      </ul>
+    </aside>
+    <main class="main">
+      <!-- main content -->
+
+      <section class="main_section">
+        <header>
+          <nav>
+            <ul class="main-nav-bar">
+              <li>
+                <button class="main-nav-bar__btn main-nav-bar__btn--active">
+                  Music
+                </button>
+              </li>
+              <li><button class="main-nav-bar__btn">EDM</button></li>
+              <li><button class="main-nav-bar__btn">Indie</button></li>
+              <li><button class="main-nav-bar__btn">Pop</button></li>
+              <li><button class="main-nav-bar__btn">Rock</button></li>
+              <li><button class="main-nav-bar__btn">Alt Rock</button></li>
+              <li><button class="main-nav-bar__btn">Country</button></li>
+              <li><button class="main-nav-bar__btn">R&B</button></li>
+              <li><button class="main-nav-bar__btn">Hip-Hop</button></li>
+              <li><button class="main-nav-bar__btn">Podcast</button></li>
+              <li><button class="main-nav-bar__btn">Audiobooks</button></li>
+            </ul>
+          </nav>
+        </header>
+        <div class="container-discover">
+        <div class="main__content">
+        <div class="main__content__img">
+          <img src="../../assets/images/Frame 85.png" alt="image" />
+        </div>
+        <div class="main__content__artist">
+          <img class="main__content__artist__img" src="../../assets/images/Frame 65.svg" alt="image box">
+          <div class="main__content__artist__body">
+            <h2 class="main__content__artist__title">Linkin Park Mix</h2>
+            <p class="main__content__artist__sub-title">By <span class="spoti">Spotify</span><span class="dot"></span> 2023<span class="dot"></span> 22 songs <span class="dot"></span>1 hr 14 min</p>
+            <div class="main__content__artist__icons">
+              <img src="../../assets/icons/icon-play.svg" alt="icon play">
+              <img src="../../assets/icons/icon-saves500k.svg" alt="icon save">
+              <img src="../../assets/icons/add-playlist.svg" alt="add playlist">
+              <img src="../../assets/icons/icon_menu.svg" alt="icon menu">
+              <img src="../../assets/icons/icon_upload.svg" alt="icon upload">
+              <img src="../../assets/icons/icon_3dots.svg" alt="3 dots">
+            </div>
+            <div class="main__content__artist__footer">
+              <a class="main-nav-bar__btn" href="#">Rock</a>
+              <a class="main-nav-bar__btn" href="#">Alt Rock</a>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="main__content">
+        <div class="main__content__img">
+          <img src="../../assets/images/Frame 86.png" alt="image" />
+        </div>
+        <div class="main__content__artist">
+          <img class="main__content__artist__img" src="../../assets/images/Frame 66.svg" alt="image box">
+          <div class="main__content__artist__body">
+            <h2 class="main__content__artist__title">Get Lucky</h2>
+            <p class="main__content__artist__sub-title">By <span class="spoti">Daft Punk</span><span class="dot"></span> 2013<span class="dot"></span>6:05</p>
+            <div class="main__content__artist__icons">
+              <img src="../../assets/icons/icon-play.svg" alt="icon play">
+              <img src="../../assets/icons/icon-saves500k.svg" alt="icon save">
+              <img src="../../assets/icons/add-playlist.svg" alt="add playlist">
+              <img src="../../assets/icons/icon_menu.svg" alt="icon menu">
+              <img src="../../assets/icons/icon_upload.svg" alt="icon upload">
+              <img src="../../assets/icons/icon_3dots.svg" alt="3 dots">
+            </div>
+            <div class="main__content__artist__footer">
+              <a class="main-nav-bar__btn" href="#">Rock</a>
+              <a class="main-nav-bar__btn" href="#">Alt Rock</a>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        </div>
+      </section>
+
+      <!-- Friends Activity -->
+      <section class="friends_activity">
+        <header class="friends_activity__header">
+          <h3>Friends Activity</h3>
+          <nav>
+            <ul class="friends_activity__nav-bar">
+              <li>
+                <button>
+                  <img
+                    src="../../assets/icons/icon_friend_add.svg"
+                    alt="Add Friend"
+                  />
+                </button>
+              </li>
+              <li>
+                <label for="friends-sidebar-toggle">
+                  <img src="../../assets/icons/icon_close.svg" alt="Close" />
+                </label>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <ul class="friends_activity__list">
+          <li class="friends_activity__item">
+            <img
+              src="../../assets/friend_images/friend4.png"
+              alt="Friend Avatar"
+              class="friends_activity__item-avatar"
+            />
+            <div class="friends_activity__item-info">
+              <h4 class="friends_activity__item-info-name">
+                FriendlyMusicListener
+              </h4>
+              <div
+                class="friends_activity__item-info-activity friends_activity__item-info-activity--active"
+              >
+                <div class="friends_activity__item-info-activity--active-icon">
+                  <img
+                    src="../../assets/icons/icon_music-pictogram.svg"
+                    alt="Just now"
+                  />
+                </div>
+                <span class="friends_activity__item-info-activity--active-time"
+                  >Just now</span
+                >
+                <p class="friends_activity__item-info-activity-song">
+                  Goosebumps
+                </p>
+                <span class="friends_activity__item-info-activity-separator"
+                  >•</span
+                >
+                <p class="friends_activity__item-info-activity-artist">
+                  Travis Scott
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="friends_activity__item">
+            <img
+              src="../../assets/friend_images/friend1.png"
+              alt="Friend Avatar"
+              class="friends_activity__item-avatar"
+            />
+            <div class="friends_activity__item-info">
+              <h4 class="friends_activity__item-info-name">
+                AverageMusicEnjoyer
+              </h4>
+              <div
+                class="friends_activity__item-info-activity friends_activity__item-info-activity--active"
+              >
+                <div class="friends_activity__item-info-activity--active-icon">
+                  <img
+                    src="../../assets/icons/icon_music-pictogram.svg"
+                    alt="Just now"
+                  />
+                </div>
+                <span class="friends_activity__item-info-activity--active-time"
+                  >Just now</span
+                >
+                <p class="friends_activity__item-info-activity-song">
+                  Get Lucky
+                </p>
+                <span class="friends_activity__item-info-activity-separator"
+                  >•</span
+                >
+                <p class="friends_activity__item-info-activity-artist">
+                  Daft Punk
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="friends_activity__item">
+            <img
+              src="../../assets/friend_images/friend2.png"
+              alt="Friend Avatar"
+              class="friends_activity__item-avatar"
+            />
+            <div class="friends_activity__item-info">
+              <h4 class="friends_activity__item-info-name">MusicEnthusiast</h4>
+              <div class="friends_activity__item-info-activity">
+                <div class="friends_activity__item-info-activity--active-icon">
+                  <img
+                    src="../../assets/icons/icon_music-pictogram.svg"
+                    alt="Just now"
+                  />
+                </div>
+                <span class="friends_activity__item-info-activity--active-time"
+                  >1h</span
+                >
+                <p class="friends_activity__item-info-activity-song">
+                  would he
+                </p>
+                <span class="friends_activity__item-info-activity-separator"
+                  >•</span
+                >
+                <p class="friends_activity__item-info-activity-artist">joji</p>
+              </div>
+            </div>
+          </li>
+          <li class="friends_activity__item">
+            <img
+              src="../../assets/friend_images/friend3.png"
+              alt="Friend Avatar"
+              class="friends_activity__item-avatar"
+            />
+            <div class="friends_activity__item-info">
+              <h4 class="friends_activity__item-info-name">IListenToMusic56</h4>
+              <div class="friends_activity__item-info-activity">
+                <div class="friends_activity__item-info-activity--active-icon">
+                  <img
+                    src="../../assets/icons/icon_music-pictogram.svg"
+                    alt="Just now"
+                  />
+                </div>
+                <span class="friends_activity__item-info-activity--active-time"
+                  >6h</span
+                >
+                <p class="friends_activity__item-info-activity-song">
+                  Rockstar
+                </p>
+                <span class="friends_activity__item-info-activity-separator"
+                  >•</span
+                >
+                <p class="friends_activity__item-info-activity-artist">
+                  Post Malone
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="player">
+      <div class="controls">
+        <button>
+          <span class="material-symbols-outlined pause"> pause_circle </span>
+          <span class="material-symbols-outlined play"> play_circle </span>
+        </button>
+        <button>
+          <span class="material-symbols-outlined"> skip_previous </span>
+        </button>
+        <button>
+          <span class="material-symbols-outlined"> skip_next </span>
+        </button>
+        <button>
+          <span class="material-symbols-outlined"> shuffle </span>
+        </button>
+        <button class="repeat">
+          <img src="../../assets/footer-image/repeat.svg" alt="repeat" />
+        </button>
+      </div>
+
+      <div class="progress-area">
+        <p class="time">2:23</p>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+        <span class="time">4:45</span>
+        <a href="#">
+          <img src="../../assets/footer-image/dynamics.svg" alt="dynamics" />
+        </a>
+      </div>
+
+      <div class="song-info">
+        <img src="../../assets/footer-image/song-get.svg" alt="Get lucky" />
+
+        <div class="song-text">
+          <p class="song-title">Get Lucky</p>
+          <p class="song-artist">Daft Punk</p>
+          <p class="song-memories">Random Access Memories</p>
+        </div>
+      </div>
+      <div class="actions mobile-desctop">
+        <ul>
+          <li>
+            <a href="#">
+              <img
+                src="../../assets/footer-image/favourite.svg"
+                alt="favorite"
+              />
+            </a>
+          </li>
+          <li class="mobile-add">
+            <a href="#">
+              <img
+                src="../../assets/footer-image/add-playlist.svg"
+                alt="add-playlist"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../assets/footer-image/lyrics.svg" alt="lyrics" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../assets/footer-image/device.svg" alt="device" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../assets/footer-image/semicolon.svg" alt="colon" />
+            </a>
+          </li>
+          <li>
+            <img
+              src="../../assets/footer-image/horizontal.svg"
+              alt="horizontal"
+            />
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../assets/footer-image/dj.svg" alt="colon" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../assets/footer-image/default.svg" alt="colon" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

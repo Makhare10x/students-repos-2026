@@ -1,0 +1,78 @@
+@use '../abstract/_variables' as*;
+
+
+body {
+    background-color: $primary-bg;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $main-font;
+}
+
+.main-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.music-bar {
+    display: flex;
+    // justify-content: space-between;
+    color: white;
+    background-color: $primary-bar-color;
+    width: 1491px;
+    height: 81px;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.functional-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.controls-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // width: 209px;
+    height: 38.02px;
+    gap: 8px;
+    .icon-size {
+        margin-left: 4.75px;
+    }
+}
+
+.progress-part {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+
+    .album-box {
+        display: flex;
+        width: 233px;
+        height: 57px;
+        gap: 10px;
+        margin: auto 10px;
+
+        img {
+            width: 51px;
+            height: 51px;
+        }
+
+        p{
+            color: $primary-bt-icon;
+        }
+    }
+}
+
+.controls-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+   
+    gap: 12px;
+}

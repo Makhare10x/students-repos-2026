@@ -1,0 +1,541 @@
+@use '../abstract/mixins' as *;
+@use '../universal components/components' as *;
+@use '../abstract/responsive' as *;
+@use '../abstract/_variables.scss' as *;
+
+
+.hide-desktop {
+  display: block;
+}
+
+.hide-mobile {
+  display: none !important;
+}
+
+
+//main container for upper part of page
+.now-playing {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  padding: 1.8rem;
+
+  .blured-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+    //background is made by album picture 
+    background-image: url('../assets/images/imgs/btr.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    filter: blur(60px) brightness(0.3) saturate(2);
+    
+    transform: scale(1.2); 
+  }
+}
+
+.songpage-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-header {
+  @include flex-between;
+  position: relative;
+  margin-top:5rem;
+
+  .icon-btn img {
+    width: 4rem;
+    height: auto;
+    display: block;
+  }
+
+  .mobile-header-center {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .mobile-header-text {
+    font-size: 1.2rem;
+    color: #ffffff;
+  }
+
+  .album-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+
+.track-header {
+  display: flex;
+  flex-direction: column; 
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+.album-pic img {
+  width: 100%;
+  max-width: 70rem;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+.mobile-track-info {
+  width: 100%;
+  padding: 1.6rem 0.3rem 0.4rem;
+
+  .mobile-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .mobile-titles {
+    margin-top: 0.8rem;
+    flex: 1;
+  }
+
+  .track-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $font-fg-primary;
+    line-height: 1.2;
+    margin-bottom: 0.4rem;
+  }
+
+  .track-title2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: $font-fg-secondary;
+  }
+
+  .mobile-actions {
+    display: flex;
+    gap: 0.8rem;
+    flex-shrink: 0;
+
+    .icon-btn img {
+      transform: translateY(-8%);
+      width: 4rem;
+      height: 4rem;
+      display: block;
+    }
+  }
+}
+
+
+.info-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #b3b3b3;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+  gap:0.5rem;
+  font-size: 1.4rem;
+
+  .info-icon {
+    width: 2.4rem;
+    vertical-align: middle;
+  }
+
+  .dot::before {
+    content: "•";
+    padding: 0 5px;
+  }
+}
+
+.icon-bar {
+  list-style: none;
+  display: flex;
+  gap: 1.4rem;
+  margin: 2rem 0;
+  padding: 0;
+
+  .icon-btn img {
+    width: 4rem;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+}
+
+.genres {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+  .genre {
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: $font-fg-secondary
+  }
+}
+
+.artist-list {
+  list-style: none;
+  margin-top: 3rem;
+
+  .sub-artist {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+
+    .img-subartist {
+      width: 6.1rem;
+      height: 6.1rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .name {
+      font-weight: 600;
+      font-size: 1.6rem;
+      color:$font-fg-primary;
+    }
+
+    .role {
+      color:$font-fg-secondary;
+      font-size: 1.6rem; 
+    }
+  }
+}
+
+.songpage_player__progress {
+  margin-top: 7rem;
+  @include flex-center;
+  gap:1rem;
+}
+
+.songpage_progress-bar {
+  flex: 1;
+  height: 0.3rem;
+  background: rgba(255,255,255,0.2);
+  border-radius: 10rem;
+  position: relative;
+  cursor: pointer;
+
+  &songpage_progress_bar__fill {
+    height: 100%;
+    width: 35%;
+    background: #E0E0E0;
+    border-radius: 10rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: -0.55rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.1rem;
+      height: 1.1rem;
+      background: white;
+      border-radius: 50%;
+      opacity: 1; // Always visible on mobile
+    }
+  }
+}
+
+.songpage_track-time {
+  font-size: 1.2rem;
+  color: #b3b3b3;
+}
+
+.songpage_player-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4rem;
+
+  .songpage_player__btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+
+    img {
+      width: 4rem;
+      height: 4rem;
+      display: block;
+    }
+
+    &:nth-child(3) img {
+      background: white;
+      border-radius: 50%;
+      padding: 0.6rem;
+      display: flex;
+
+      .img{
+        filter: invert(1);
+        width: 5.6rem;
+        height: 5.6rem;
+      }
+    }
+  }
+}
+
+.mobile-bottom-bar {
+  @include flex-between;
+  margin-top: 4rem;
+
+  .icon-btn img {
+    width: 5rem;
+    height: 5rem;
+    display: block;
+  }
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.control-bar {
+  display: flex;
+
+  
+  .is-songpage & {
+    @media (max-width: 1023px) {
+      display: none !important;
+    }
+  }
+}
+
+
+.lyrics-section {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: block;
+  }
+}
+
+.mobile-lyrics-inline {
+  display: none;
+}
+
+// When lyrics toggled on mobile
+body.show-lyrics {
+  @media (max-width: 1023px) {
+
+    #main-player-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+
+      .track-header,
+      .mobile-track-info {
+        display: none !important;
+      }
+
+      .mobile-header          { order: 1; flex-shrink: 0; }
+      .mobile-lyrics-inline   { order: 2; flex: 1; min-height: 0; }
+      .songpage_player__progress { order: 3; margin-top: 2rem; flex-shrink: 0; }
+      .songpage_player-row    { order: 4; flex-shrink: 0; }
+      .mobile-bottom-bar      { order: 5; flex-shrink: 0; }
+    }
+
+    .mobile-lyrics-inline {
+      display: flex !important;
+      flex-direction: column;
+      overflow-y: auto;
+
+      .mobile-lyrics-block {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 200%;
+        color: rgba(255, 255, 255, 0.85);
+        white-space: pre-line;
+        flex: 1;
+        overflow-y: auto;
+        transform: translate(0, -5%);
+
+        //on this part i used AI bro...
+        background: linear-gradient(
+        to bottom,
+        $font-fg-primary 0%,
+        $font-fg-primary 48%, 
+        $font-fg-secondary 52%,
+        $font-fg-secondary 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+
+        &::-webkit-scrollbar { display: none; }
+        scrollbar-width: none;
+      }
+    }
+
+    .lyrics-section {
+      display: none !important;
+    }
+
+    #mobile-lyrics-btn img {
+      opacity: 1;
+      filter: invert(0) sepia(1) saturate(5) hue-rotate(90deg); //this colors lyrics button 
+    }
+  }
+}
+
+
+// ------Desktop responsive----------------
+@media (min-width: 1024px) {
+    .hide-desktop {
+      display: none !important;
+    }
+
+    .hide-mobile {
+      display: block !important;
+    }
+
+    .now-playing{
+      padding: 0;
+    }
+
+    .songpage-wrapper {
+      flex-direction: row;
+      padding: 3rem; 
+    }
+    
+
+    .track-header {
+      flex-direction: row;
+      gap: 4rem;
+    }
+
+    .track-info .track-title {
+      background: none;
+      -webkit-text-fill-color: initial;
+      color: #ffffff;
+    }
+
+    .songpage_player__progress {
+      margin-top: 2rem;
+    }
+
+    .songpage_progress_bar__fill::after {
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .songpage_progress-bar:hover .songpage_progress-bar__fill::after {
+      opacity: 1;
+    }
+
+    .icon-bar .icon-btn img:hover {
+      opacity: 1;
+    }
+
+    .track-info {
+      width: 100%;
+      margin:1.5rem 4rem;
+
+    .track-title {
+      font-size: 3.6rem;
+      font-weight: 700;
+      color: $font-fg-primary;
+    }
+
+    .track-title2 {
+      display: none;
+    }
+  }
+
+  .album-pic img {
+      display: block;
+      margin: 1.1rem 3rem;
+  }
+
+  .lyrics-section{
+      margin-left: 1.8rem;
+      margin: 1.5rem 0 3rem 0;
+      .lyrics-tabs{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1.8rem;
+        margin-bottom: 2rem;
+        ul {
+          margin-left: 5rem;
+          display: flex;
+          gap: 5rem;
+
+          li {
+            font-size: 1.4rem;
+            color: $font-fg-secondary;
+            cursor: pointer;
+
+            &.active {
+              color: $font-fg-primary;
+              position: relative;
+
+              &::after { //bottom green line
+                content: '';
+                position: absolute;
+                bottom: -2rem;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background: green;
+              }
+            }
+          }
+      }
+    }
+  }
+
+  .lyrics-content-wrapper {
+      display: flex;
+      gap: 20rem;
+      overflow: hidden;
+      flex:1;
+  }
+
+  .lyrics-sidebar {
+      margin-left: 6.5rem;
+      
+      .icon-btn {
+        margin: 2rem 0;
+        img { width: 4rem; }
+      }
+  }
+
+  .lyrics-text {
+    width: 100%;
+    .lyrics-block {
+      margin:0;
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 150%;
+      color: $font-fg-primary;
+      white-space: pre-line; 
+      max-height: 70vh;
+      overflow-y: auto;
+      margin-top: -2.5%;
+
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+    }
+  }
+}
+
+    
+

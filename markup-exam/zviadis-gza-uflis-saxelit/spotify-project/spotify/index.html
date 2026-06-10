@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shmotify</title>
+    <link rel="icon" href="images/spotify-logo.png" type="image/png">
+    <link rel="stylesheet" href="scss/main.css"> 
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="main-navigation">
+                
+                <a href="#" class="active" >
+                    <img src="images/header/home.png" alt="Home">Home
+                </a>
+                <a href="#" >
+                    <img src="images/header/discover.png" alt="Discover">Discover
+                </a>
+                <a href="#" >
+                    <img src="images/header/search.png" alt="Search">Search
+                </a>
+            </div>
+
+            <div class="actions">
+                <a href="#" >
+                    <img src="images/header/notifications.png" alt="Notifications">
+                </a>
+                <a href="#" >
+                    <img src="images/header/privacy.png" alt="Privacy">
+                </a>
+                <a href="#" >
+                    <img src="images/header/friends.png" alt="friends"> 
+                </a>
+                <a href="#" >
+                    <img src="images/header/settings.png" alt="Settings">     
+                </a>
+                <a href="#" >
+                    <img src="images/header/profile.png" alt="Profile"> 
+                </a>
+
+
+            </div>
+        </nav>
+     
+    </header>
+    <aside>
+           <nav>
+            <ul >
+                <li><a href="#"><img src="images/aside/my-library.png" alt="Library">My Library</a></li>
+                <li><a href="#"><img src="images/aside/pins-icon.png" alt="Pins">Pins</a></li>
+                <li><a href="#" class="active"><img src="images/aside/playlists-icon.png" alt="Playlists">Playlists</a></li>
+                <li><a href="#"><img src="images/aside/liked-songs-icon.png" alt="Liked Songs">Liked Songs</a></li>
+                <li> <a href="#"><img src="images/aside/saves-icon.png" alt="Saves"> Saves</a></li>
+                <li><a href="#"><img src="images/aside/albums-icon.png" alt="Albums"> Albums</a></li>
+                <li><a href="#"><img src="images/aside/folders-icon.png" alt="Folders"> Folders</a></li>
+                <li><a href="#"><img src="images/aside/podcasts-icon.png" alt="Podcasts"> Podcasts</a></li>
+                <li><a href="#"><img src="images/aside/audiobooks-icon.png" alt="Audiobooks"> Audiobooks</a></li>
+                <li><a href="#"><img src="images/aside/artists-icon.png" alt="Artists"> Artists</a></li>
+
+            </ul>
+        </nav>
+        
+    </aside>
+
+    <main>
+     <nav class="filters">
+  <div class="chips-group">
+    <button class="chip active">All</button>
+    <button class="chip">Music</button>
+    <button class="chip">Podcasts</button>
+    <button class="chip">Audiobooks</button>
+  </div>
+
+  <button class="filter-settings" aria-label="Filters and Settings">
+    <img src="images/main/filters.png" alt="Settings">
+  </button>
+</nav>
+     
+
+<section class="made-for-you">
+  <h2 class="section-title">Made For You</h2>
+  
+  <div class="card-grid">
+    <a href="#" class="music-card">
+      <div class="music-card__cover">
+        <img src="images/main/discover-weekly.png" alt="Discover Weekly cover">
+      </div>
+      <div class="music-card__content">
+        <div class="music-card__header">
+          <h3 class="music-card__title">Discover Weekly</h3>
+          <span class="music-card__count">50</span>
+      </div>
+        <p class="music-card__subtitle">Your weekly mixtape of fresh music.</p>
+      </div>
+    </a>
+
+    <a href="#" class="music-card">
+    <div class="music-card__cover">
+      <img src="images/main/daily-mix-1.png" alt="Daily Mix 1">
+    </div>
+    <div class="music-card__content">
+       <div class="music-card__header">
+      <h3 class="music-card__title">Daily Mix 1</h3>
+      <span class="music-card__count">50</span>
+      </div>
+      <p class="music-card__subtitle">Linkin Park, System Of A Down...</p>
+    </div>
+  </a>
+
+    <a href="#" class="music-card">
+    <div class="music-card__cover">
+      <img src="images/main/daily-mix-2.png" alt="Daily Mix 2">
+    </div>
+    <div class="music-card__content">
+       <div class="music-card__header">
+      <h3 class="music-card__title">Daily Mix 2</h3>
+      <span class="music-card__count">50</span>
+    </div>
+      <p class="music-card__subtitle">Avril Lavigne, Lorde, Charli XCX and more</p>
+    </div>
+  </a>
+
+    <a href="#" class="music-card">
+    <div class="music-card__cover">
+      <img src="images/main/daily-mix-3.png" alt="Daily Mix 3">
+    </div>
+    <div class="music-card__content">
+       <div class="music-card__header">
+      <h3 class="music-card__title">Daily Mix 3</h3>
+      <span class="music-card__count">50</span>
+    </div>
+      <p class="music-card__subtitle">The Strokes, Martin Garrix, MGMT and more</p>
+    </div>
+  </a>
+
+  <a href="#" class="music-card">
+    <div class="music-card__cover">
+      <img src="images/main/daily-mix-4.png" alt="Daily Mix 4">
+    </div>
+    <div class="music-card__content">
+      <div class="music-card__header">
+        <h3 class="music-card__title">Daily Mix 4</h3>
+        <span class="music-card__count">50</span>
+      </div>
+      <p class="music-card__subtitle">Chuck Berry, Elvis Presley, Roy Orbison and more</p>
+    </div>
+  </a>
+
+
+  <a href="#" class="music-card">
+    <div class="music-card__cover">
+      <img src="images/main/daily-mix-5.png" alt="Daily Mix 5">
+    </div>
+    <div class="music-card__content">
+       <div class="music-card__header">
+      <h3 class="music-card__title">Daily Mix 5</h3>
+      <span class="music-card__count">50</span>
+    </div>
+      <p class="music-card__subtitle">Frank Sinatra, Gerhard Trede, Dean Martin and more</p>
+    </div>
+  </a>
+      
+  <a href="#" class="music-card">
+    <div class="music-card__cover">
+      <img src="images/main/nirvana.png" alt="Nirvana">
+    </div>
+    <div class="music-card__content">
+       <div class="music-card__header">
+      <h3 class="music-card__title">Nirvana Radio</h3>
+      <span class="music-card__count">50</span>
+    </div>
+      <p class="music-card__subtitle">The Strokes, Martin Garrix, MGMT and more</p>
+    </div>
+  </a>
+
+  <a href="#" class="music-card">
+    <div class="music-card__cover">
+      <img src="images/main/fall.png" alt="Fall Out Boy">
+    </div>
+    <div class="music-card__content">
+       <div class="music-card__header">
+      <h3 class="music-card__title">Fall Out Boy Radio</h3>
+      <span class="music-card__count">50</span>
+    </div>
+      <p class="music-card__subtitle">With Panic! At The Disco, The All-American Rejects,...</p>
+    </div>
+  </a>
+
+  
+    
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="your-top-mixes">
+  <h2 class="section-title">Your Top Mixes</h2>
+  
+  <div class="card-grid">
+    <a href="#" class="music-card">
+      <div class="music-card__cover">
+        <img src="images/main/rock-mix.png" alt="Rock Mix cover">
+      </div>
+      <div class="music-card__content">
+        <div class="music-card__header">
+          <h3 class="music-card__title">Rock Mix</h3>
+          <span class="music-card__count">50</span>
+      </div>
+        <p class="music-card__subtitle">Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+      </div>
+    </a>
+
+    <a href="#" class="music-card">
+    <div class="music-card__cover">
+      <img src="images/main/chill-mix.png" alt="Chill Mix">
+    </div>
+    <div class="music-card__content">
+       <div class="music-card__header">
+      <h3 class="music-card__title">Chill Mix</h3>
+      <span class="music-card__count">50</span>
+      </div>
+      <p class="music-card__subtitle">MF DOOM, Daft Punk, The Chainsmokers, and more</p>
+    </div>
+  </a>
+
+    <a href="#" class="music-card">
+    <div class="music-card__cover">
+      <img src="images/main/pop-mix.png" alt="Pop Mix">
+    </div>
+    <div class="music-card__content">
+       <div class="music-card__header">
+      <h3 class="music-card__title">Pop Mix</h3>
+      <span class="music-card__count">50</span>
+    </div>
+      <p class="music-card__subtitle">Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+    </div>
+  </a>
+
+    <a href="#" class="music-card">
+    <div class="music-card__cover">
+      <img src="images/main/daft-punk-mix.png" alt="Daft Punk Mix">
+    </div>
+    <div class="music-card__content">
+       <div class="music-card__header">
+      <h3 class="music-card__title">Daft Punk Mix</h3>
+      <span class="music-card__count">50</span>
+    </div>
+      <p class="music-card__subtitle">Daft Punk, MGMT, Muse, and more</p>
+    </div>
+  </a>
+
+  <a href="#" class="music-card">
+    <div class="music-card__cover">
+      <img src="images/main/happy-mix.png" alt="Happy Mix">
+    </div>
+    <div class="music-card__content">
+      <div class="music-card__header">
+        <h3 class="music-card__title">Happy Mix</h3>
+        <span class="music-card__count">50</span>
+      </div>
+      <p class="music-card__subtitle">The Turtles, Van Morrison, ABBA and more</p>
+    </div>
+  </a>
+
+
+  <a href="#" class="music-card">
+    <div class="music-card__cover">
+      <img src="images/main/david-bowie-mix.png" alt="David Bowie Mix">
+    </div>
+    <div class="music-card__content">
+       <div class="music-card__header">
+      <h3 class="music-card__title">David Bowie Mix</h3>
+      <span class="music-card__count">50</span>
+    </div>
+      <p class="music-card__subtitle">Soft Cell, The Who and The Clash</p>
+    </div>
+  </a>
+      
+  <a href="#" class="music-card">
+    <div class="music-card__cover">
+      <img src="images/main/upbeat-mix.png" alt="Upbeat Mix">
+    </div>
+    <div class="music-card__content">
+       <div class="music-card__header">
+      <h3 class="music-card__title">Upbeat Mix</h3>
+      <span class="music-card__count">50</span>
+    </div>
+      <p class="music-card__subtitle">Kylie Minogue, Charli XCX, Cage The Elephant and...</p>
+    </div>
+  </a>
+
+  <a href="#" class="music-card">
+    <div class="music-card__cover">
+      <img src="images/main/60s-mix.png" alt="60s Mix">
+    </div>
+    <div class="music-card__content">
+       <div class="music-card__header">
+      <h3 class="music-card__title">60s Mix</h3>
+      <span class="music-card__count">50</span>
+    </div>
+      <p class="music-card__subtitle">Chuck Berry, Skeeter David, Van Morrison and...</p>
+    </div>
+  </a>
+
+  
+    
+  </div>
+</section>
+
+</main>
+
+  <footer class="player">
+  <!-- Left Zone -->
+  <div class="player-left">
+    <div class="player-container">
+    <button class="btn-main pause" aria-label="Pause">
+      <img src="images/player/play-pause-icon.png" alt="Pause">
+    </button>
+
+    <button class="btn-control" aria-label="Previous">
+      <img src="images/player/prev-icon.png" alt="Previous">
+    </button>
+    <button class="btn-control" aria-label="Next">
+      <img src="images/player/next-icon.png" alt="Next">
+    </button>
+
+    <button class="btn-control" aria-label="Shuffle">
+      <img src="images/player/shuffle-icon.png" alt="Shuffle">
+    </button>
+    <button class="btn-control" aria-label="Repeat">
+      <img src="images/player/repeat-icon.png" alt="Repeat">
+    </button>
+  </div>
+
+  <div class="progress-container">
+    <span class="time-stamp">2:23</span>
+    <input type="range" class="progress-bar" value="50" min="0" max="100">
+    <span class="time-stamp">4:45</span>
+  </div>
+
+  <button class="btn-control volume" aria-label="Volume">
+    <img src="images/player/volume-icon.png" alt="Volume">
+  </button>
+</div>
+  </div>
+
+  <!-- Center Zone: album info -->
+  <div class="player-center">
+    <div class="album-info">
+      <img src="images/player/ram-cover.png" alt="Random Access Memories Cover" class="cover-art">
+      <div class="song-details">
+    <h2 class="song-title">Get Lucky</h2>
+    <p class="artist-name">Daft Punk</p>
+    <p class="album-name">Random Access Memories</p>
+  </div>
+</div>
+  </div>
+
+  <!-- Right Zone: Actions -->
+  <div class="player-right">
+    <button class="btn-icon" aria-label="Like">
+    <img src="images/player/heart-icon.png" alt="Like">
+  </button>
+
+  <button class="btn-icon" aria-label="Add to Playlist">
+    <img src="images/player/add-playlist-icon.png" alt="Add to Playlist">
+  </button>
+
+  <button class="btn-icon" aria-label="Lyrics">
+    <img src="images/player/lyrics-icon.png" alt="Lyrics">
+  </button>
+
+  <button class="btn-icon" aria-label="Devices">
+    <img src="images/player/devices-icon.png" alt="Devices">
+  </button>
+
+  <button class="btn-icon" aria-label="More">
+    <img src="images/player/more-icon.png" alt="More">
+  </button>
+
+  <div class="divider"></div>
+
+  <button class="btn-special" aria-label="Special Action">
+    <img src="images/player/blue-circle-icon.png" alt="Special">
+  </button>
+
+  <button class="btn-icon" aria-label="Queue">
+    <img src="images/player/queue-icon.png" alt="Queue">
+  </button>
+  </div>
+</footer>
+
+
+</body>
+</html>

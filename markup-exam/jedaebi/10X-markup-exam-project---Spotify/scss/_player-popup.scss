@@ -1,0 +1,233 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// =====================
+// Player Popup (Mobile only)
+// =====================
+.player-popup__input {
+  display: none;
+}
+
+.player-popup {
+  display: none;
+}
+
+@include mobile {
+  .player-popup {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 400;
+    background: linear-gradient(to bottom, #3b414d, #272b33);
+    padding: 20px $spacing-md $spacing-md;
+    transform: translateY(100%);
+    transition: transform 0.35s ease;
+    overflow-y: auto;
+  }
+
+  .player-popup__input:checked ~ .player-popup {
+    transform: translateY(0);
+  }
+
+  // =====================
+  // Top bar
+  // =====================
+  .player-popup__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  .player-popup__close {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: $color-text;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .player-popup__source {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: $color-text;
+    font-size: $font-sm;
+    font-weight: 600;
+
+    img {
+      width: 16px;
+      height: 16px;
+      opacity: 0.8;
+    }
+  }
+
+  // =====================
+  // Album Cover
+  // =====================
+  .player-popup__cover {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: $radius-md;
+    margin-bottom: 24px;
+  }
+
+  // =====================
+  // Track info
+  // =====================
+  .player-popup__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .player-popup__track {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+  }
+
+  .player-popup__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: $color-text;
+  }
+
+  .player-popup__artist {
+    font-size: $font-md;
+    color: $color-text-muted;
+  }
+
+  .player-popup__track-btns {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    flex-shrink: 0;
+
+    img[src*="heart"] {
+      width: 28px;
+      height: 28px;
+      opacity: 1;
+      filter: brightness(0) saturate(100%) invert(57%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(85%);
+    }
+  }
+
+  // =====================
+  // Progress bar
+  // =====================
+  .player-popup__progress {
+    margin-bottom: 8px;
+  }
+
+  .player-popup__range {
+    width: 100%;
+    height: 4px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: $radius-pill;
+    outline: none;
+    cursor: pointer;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: $color-text;
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: $color-text;
+      cursor: pointer;
+      border: none;
+    }
+  }
+
+  .player-popup__times {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+    font-size: $font-sm;
+    color: $color-text-muted;
+  }
+
+  // =====================
+  // Controls row 1 (shuffle, prev, play, next, repeat)
+  // =====================
+  .player-popup__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0 24px;
+  }
+
+  // =====================
+  // Controls row 2 (extras)
+  // =====================
+  .player-popup__extras {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    img[src*="upload"] {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  // =====================
+  // Shared button style
+  // =====================
+  .player-popup__btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+
+    img {
+      width: 40px;
+      height: 40px;
+      opacity: 0.7;
+    }
+
+    &:hover img {
+      opacity: 1;
+    }
+
+    &--play {
+      background: none;
+      border-radius: 0;
+      padding: 0;
+
+      img {
+        width: 60px;
+        height: 60px;
+        opacity: 1;
+        filter: none;
+      }
+    }
+  }
+}

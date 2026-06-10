@@ -1,0 +1,108 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+
+.friends-aside {
+    display: none;
+}
+
+@media (min-width: 991px) {
+    .friends-aside {
+        display: none;
+        position: fixed;
+        top: 8rem;
+        height: calc(100vh - 17rem);
+        right: 0;
+        max-width: 35.8rem;
+        border: 0.1rem solid v.$border-radius;
+        border-radius: 1rem;
+        background-color: v.$bg-media;
+        padding: 2rem;
+        z-index: 100;
+        overflow-y: auto;
+        margin-right: 1rem;
+
+        &__header {
+            @include m.flex-center(
+                $direction: row,
+                $justify: space-between,
+                $align: center
+            );
+            margin-bottom: 2rem;
+
+            h2 {
+                color: v.$primary;
+                font-size: map.get(v.$font-sizes, "body");
+                font-weight: map.get(v.$font-weights, "regular");
+            }
+        }
+
+        &__actions {
+            @include m.flex-center($direction: row, $align: center);
+            gap: 1rem;
+
+            label {
+                cursor: pointer;
+            }
+        }
+
+        &__list {
+            list-style: none;
+            @include m.flex-center($direction: column, $align: flex-start);
+            gap: 2.5rem;
+        }
+
+        &__item {
+            @include m.flex-center($direction: row, $align: center);
+            gap: 2rem;
+        }
+
+        &__avatar {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+        }
+
+        &__name {
+            color: v.$primary;
+            font-size: map.get(v.$font-sizes, "body-sm");
+            font-weight: map.get(v.$font-weights, "regular");
+            text-align: left;
+            margin-bottom: 0.55rem;
+        }
+
+        &__song {
+            @include m.flex-center($direction: row, $align: center);
+            gap: 0.5rem;
+            color: v.$second-primary;
+            font-size: map.get(v.$font-sizes, "body-sm");
+
+            strong {
+                color: v.$primary;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+@media (min-width: 991px) {
+    // header,
+    // main,
+    // footer {
+    //     margin-left: 26rem;
+    //     width: calc(100% - 27rem);
+    //     transition:
+    //         width 0.3s ease,
+    //         margin-right 0.3s ease;
+    // }
+
+    body:has(#friends-toggle:checked) {
+        main {
+            width: calc(100% - 27.5rem - 29rem);
+        }
+
+        .friends-aside {
+            display: block;
+        }
+    }
+}

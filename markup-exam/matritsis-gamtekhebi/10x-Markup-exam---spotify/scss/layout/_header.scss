@@ -1,0 +1,50 @@
+@use "../base" as *;
+
+.site-header {
+  @include flex-row(space-between, center);
+  height: $header-height;
+  background: $color-bg-primary;
+  margin-top: 6px;
+}
+
+.header-content {
+  @include flex-row(flex-start, center);
+  gap: $spacing-sm;
+}
+
+.nav-items {
+  @include flex-row(flex-start, center);
+  gap: $spacing-sm;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $radius-lg;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  color: $color-text-secondary;
+  text-decoration: none;
+  width: $nav-width-normal;
+  &:nth-child(1) {
+    background-color: $color-bg-secondary;
+  }
+  &:nth-child(3) {
+    width: $nav-width-medium;
+  }
+}
+
+.nav-items .active {
+  color: #fff;
+}
+
+#active-background {
+  background-color: $color-bg-secondary;
+}
+#inactive-background {
+  background-color: $color-bg-primary;
+}
+
+.header-actions {
+  @include flex-row(flex-end, center);
+  gap: $spacing-lg;
+  cursor: pointer;
+  margin-right: 10px;
+}

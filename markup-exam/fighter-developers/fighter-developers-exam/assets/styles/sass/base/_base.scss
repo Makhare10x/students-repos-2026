@@ -1,0 +1,74 @@
+@use "../abstracts/variables.scss" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    overflow: hidden;
+}
+
+body {
+    font-family: "Satoshi-Regular", sans-serif;
+    font-size: 1.6rem;
+    background-color: $dark-bg;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+main {
+    position: fixed;
+    top: $header-height;
+    left: $aside-width;
+    right: 1rem;
+    border: 1px solid #202020;
+    border-radius: 1rem;
+    padding: 1.2rem 2.5rem;
+    bottom: calc($footer-height + 1rem);
+    overflow-y: auto;
+    transition: 0.3s;
+
+    // Firefox
+    scrollbar-width: thin;
+    scrollbar-color: $dark-bg transparent;
+
+    // Chrome, Edge, Safari
+    &::-webkit-scrollbar {
+        width: 0.6rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $dark-bg;
+        border-radius: 1rem;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    main {
+
+        top: 0;
+        left: 0;
+        right: 0;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        bottom: 0;
+        // overflow-y: auto;
+        transition: 0.3s;
+        // scrollbar-width: thin;
+        // scrollbar-color: #060606 transparent;
+
+        section {
+            width: 390px;
+            height: auto;
+            padding: 0.6rem 1rem;
+        }
+    }
+}

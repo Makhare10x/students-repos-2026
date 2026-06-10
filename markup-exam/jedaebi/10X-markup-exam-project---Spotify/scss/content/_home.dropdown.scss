@@ -1,0 +1,409 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// =============================================================================
+// FEED SETTINGS DROPDOWN + FRIENDS SIDEBAR
+// =============================================================================
+
+
+// =============================================================================
+// SHARED UTILITY
+// =============================================================================
+
+// Hides native checkbox inputs used for CSS-only toggle logic
+.hidden-checkbox {
+  display: none !important;
+}
+
+
+// =============================================================================
+// FEED SETTINGS WRAPPER — CSS-only dropdown trigger via hidden checkbox
+// =============================================================================
+
+.feed-settings-wrapper {
+  position: relative;
+  display: inline-block;
+
+  // 1. Show dropdown when the hidden checkbox is checked
+  #feed-dropdown-toggle:checked ~ .feed-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  // 2. Turn the trigger icon green when the dropdown is open
+  #feed-dropdown-toggle:checked ~ .feed-settings-btn .trigger-icon {
+    fill: $color-primary;          
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// FEED SETTINGS BUTTON — the label that toggles the dropdown
+// -----------------------------------------------------------------------------
+
+.feed-settings-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  // SVG gear/settings icon
+  .trigger-icon {
+    width: 20px;                   
+    height: 20px;                  
+    fill: $color-text-muted;       
+    transition: fill 0.2s ease;
+  }
+
+  &:hover .trigger-icon {
+    fill: $fg-primary;              
+  }
+}
+
+
+// =============================================================================
+// FEED DROPDOWN MENU — frosted glass panel
+// =============================================================================
+
+.feed-dropdown-menu {
+  position: absolute;
+  top: 40px;                        
+  right: 0;
+  width: 310px;                   
+  background-color: rgba(30, 30, 30, 0.85); 
+  backdrop-filter: blur(25px);      
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid $color-border; 
+  border-radius: $radius-md;        
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  color: $fg-primary;              
+  z-index: 1000;
+
+  // Hidden by default — animates in when .feed-settings-wrapper checkbox is checked
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+
+
+  // ── Header ──
+  .menu-header {
+    padding: $spacing-md;         
+    font-size: $font-md;            
+    font-weight: 600;
+    border-bottom: 1px solid $color-border;
+  }
+
+
+  // ── Add new source action row ──
+  .menu-action {
+    padding: $spacing-md;          
+    font-size: $font-md;           
+    color: $color-text-muted;       
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;                      
+    transition: color 0.2s ease;
+
+    &:hover { color: $fg-primary; } 
+
+    // Large "+" symbol
+    .plus {
+      font-size: 18px;             
+      font-weight: 300;
+    }
+  }
+
+
+  // ── Draggable source list ──
+  .menu-list {
+    list-style: none;
+    padding: 0 $spacing-sm;        
+    margin: 0;
+
+    .menu-item {
+      @include flex-between;       
+      padding: 10px $spacing-sm;   
+      border-radius: $radius-sm;   
+
+      &:hover { background: rgba(255, 255, 255, 0.05); }
+
+      // Left side: drag handle + name; Right side: pin + eye icons
+      .item-left,
+      .item-right {
+        display: flex;
+        align-items: center;
+        gap: 12px;                  
+      }
+
+      .item-name  {
+        font-size: $font-md;        
+        color: $color-text;         
+      }
+
+      // Drag handle (⋮⋮)
+      .drag-dots {
+        color: #535353;             
+        font-weight: bold;
+        cursor: grab;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+
+  // ── Inline SVG toggle wrapper ──
+  .icon-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    .inline-svg {
+      width: 18px;                  
+      height: 18px;                
+      transition: fill 0.2s ease, opacity 0.2s ease;
+    }
+  }
+
+
+  // ── PIN toggle — changes colour on check ──
+  .pin-toggle {
+    .pin-svg {
+      color: $color-text-muted;    
+    }
+
+    input:checked ~ .pin-svg {
+      color: $color-primary;        
+    }
+  }
+
+
+  // ── EYE toggle — swaps open/closed icon on check ──
+  .eye-toggle {
+
+    // Open eye: visible by default
+    .eye-open {
+      fill: $color-text-muted;     
+      display: block;
+    }
+
+    // Closed eye: hidden by default
+    .eye-closed {
+      fill: #535353;                
+      display: none;
+    }
+
+    // When checked: swap the two icons
+    input:checked ~ .eye-open  { display: none; }
+    input:checked ~ .eye-closed { display: block; }
+  }
+
+
+ 
+  .menu-footer {
+    @include flex-between;         
+    padding: $spacing-md;           
+    border-top: 1px solid $color-border; 
+    font-size: 13px;                
+    color: $color-text-muted;       
+  }
+
+}
+// END .feed-dropdown-menu
+
+
+// =============================================================================
+// GREEN SWITCH — reusable toggle component (used in feed footer + library)
+// =============================================================================
+
+.green-switch {
+  position: relative;
+  width: 32px;                    
+  height: 18px;                    
+
+  // Track (background pill)
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #535353;      
+    transition: 0.4s;
+    border-radius: 20px;           
+
+    // Thumb (white circle)
+    &:before {
+      position: absolute;
+      content: "";
+      height: 14px;                
+      width: 14px;                 
+      left: 2px;
+      bottom: 2px;
+      background-color: $fg-primary; 
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+  }
+
+  // Checked: green track + slide thumb to the right
+  input:checked + .slider           { background-color: $color-primary; } 
+  input:checked + .slider:before    { transform: translateX(14px); }      
+}
+
+
+// =============================================================================
+// FRIENDS SIDEBAR — collapsible right panel, CSS-only toggle via checkbox
+// =============================================================================
+
+// Hidden checkbox drives the open/close state via sibling selectors
+#friends-toggle-input {
+  display: none;
+
+  // When checked: expand the sidebar
+  &:checked ~ .friends-sidebar {
+    width: 280px;                  
+    padding: 20px $spacing-md;      
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // When checked: highlight the friends icon in the header
+  &:checked ~ .main-area .header-actions__btn[for="friends-toggle-input"] {
+    color: $color-primary;          
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// FRIENDS SIDEBAR PANEL
+// -----------------------------------------------------------------------------
+
+.friends-sidebar {
+  width: 0;                         
+  opacity: 0;
+  visibility: hidden;
+  background-color: #000000;       
+  height: calc(100vh - 90px);       
+  transition: width 0.3s ease, padding 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  overflow-y: auto;
+  flex-shrink: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+
+ 
+  &::-webkit-scrollbar { display: none; }
+
+
+ 
+  &__header {
+    @include flex-between;         
+    margin-bottom: $spacing-xl;     
+
+    h4 {
+      font-size: $font-lg;         
+      font-weight: 700;
+      color: $fg-primary;           
+    }
+
+    // Right-side icon buttons (e.g. invite, settings)
+    .header-actions {
+      display: flex;
+      gap: 12px;                    
+      color: $color-text-muted;    
+
+      button,
+      label {
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        color: inherit;
+        transition: color 0.2s ease;
+        display: flex;
+        align-items: center;
+
+        &:hover { color: $fg-primary; } 
+      }
+    }
+  }
+
+
+  // ── Friends list ──
+  .friends-list {
+    @include flex-column;           
+    gap: $spacing-md;           
+  }
+
+
+  // ── Single friend row ──
+  .friend-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;                      
+    cursor: pointer;
+    padding: $spacing-sm 0;        
+    transition: opacity 0.2s ease;
+
+    &:hover { opacity: 0.8; }
+
+    // Avatar with status ring
+    .friend-avatar {
+      position: relative;
+      width: 40px;                  
+      height: 40px;                
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      // Coloured ring indicates what the friend is listening to
+      .status-ring {
+        position: absolute;
+        top: -4px; left: -4px; right: -4px; bottom: -4px;
+        border-radius: 50%;
+        border: 2px solid transparent; 
+
+        &.red    { border-color: #e91e63; } 
+        &.blue   { border-color: #2196f3; }
+        &.green  { border-color: $color-primary; } 
+        &.yellow { border-color: #ffc107; }
+      }
+    }
+
+    // Friend name + now-playing text
+    .friend-info {
+      @include flex-column;        
+      gap: $spacing-xs;             
+      overflow: hidden;             
+
+      .friend-name {
+        font-size: $font-md;        
+        font-weight: 600;
+        color: $fg-primary;         
+        @include truncate;         
+      }
+
+      .friend-song {
+        font-size: $font-sm;        
+        color: $color-text-muted;   
+        @include truncate;          
+        display: flex;
+        align-items: center;
+        gap: 6px;                 
+
+        // Animated equalizer bars indicator
+        .playing-bars {
+          color: $color-primary;    
+          font-weight: bold;
+          font-size: 10px;         
+        }
+      }
+    }
+  }
+
+}
+// END .friends-sidebar

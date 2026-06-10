@@ -1,0 +1,195 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables" as v;
+
+.page-get-lucky {
+  @media screen and (max-width: 490px) {
+    .lyrics-mobile-opened {
+      display: none;
+    }
+
+    .lyrics-mobile-opened:not(.closed) {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      padding-bottom: 18rem;
+    }
+
+    .album-control {
+      @include mixins.flex-row;
+      gap: 5rem;
+      padding-bottom: 2rem;
+    }
+
+    .album-name {
+      @include mixins.flex-row;
+      gap: 0.5rem;
+
+      p {
+        font-size: 1.2rem;
+        color: v.$main-title-color;
+        font-weight: 400;
+      }
+    }
+
+    .lyrics-opened-p-name {
+      width: 50%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .lyrics-mobile-opened.closed {
+    display: none;
+  }
+
+  .head-mobile-section-lyrics-opened {
+    padding: 2.8rem 0rem 2rem;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lyric-div {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    height: 46rem;
+    width: 100%;
+
+    p {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: v.$main-title-color;
+      flex: 1;
+      min-width: 0;
+      margin: 0;
+      line-height: 1.6;
+    }
+    //  play back
+    .Playback-controls {
+      flex-shrink: 0;
+    }
+
+    .mobile-music-section .Playback-controls {
+      display: flex;
+      gap: 3.4rem;
+
+      button {
+        transition:
+          transform 0.2s ease,
+          opacity 0.2s ease;
+      }
+
+      button:hover {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+
+      .control-music {
+        @include mixins.flex-row;
+        justify-content: space-between;
+        gap: 2rem;
+        width: 100%;
+      }
+
+      .Playback__controls--Progress-bar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        button {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition:
+            transform 0.2s ease,
+            opacity 0.2s ease;
+        }
+
+        button:hover {
+          transform: scale(1.1);
+          opacity: 0.85;
+        }
+
+        .play-button {
+          transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+
+          img {
+            width: 5rem;
+            height: 5rem;
+          }
+        }
+
+        .play-button:hover {
+          transform: scale(1.1);
+          box-shadow: 0 0 8px rgba(30, 215, 96, 0.6);
+        }
+
+        .audio-slider-container {
+          @include mixins.flex-column;
+          width: 100%;
+          gap: 0.5rem;
+
+          .time-line {
+            width: 100%;
+          }
+
+          .time-show {
+            width: 100%;
+            @include mixins.flex-between;
+          }
+        }
+
+        .time-display {
+          color: v.$main-subTitle-color;
+          font-size: 1.2rem;
+        }
+
+        .custom-range {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 100%;
+          height: 0.2rem;
+          background: rgb(74, 78, 85);
+          border-radius: 0.5rem;
+          outline: none;
+          cursor: pointer;
+          overflow: hidden;
+
+          &:hover {
+            background: rgb(90, 95, 105);
+          }
+
+          &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 0;
+            height: 0;
+            box-shadow: -100vw 0 0 100vw rgb(224, 223, 224);
+          }
+
+          &::-moz-range-thumb {
+            width: 0;
+            height: 0;
+            border: none;
+            box-shadow: -100vw 0 0 100vw rgb(224, 223, 224);
+          }
+
+          &::-moz-range-progress {
+            background-color: rgb(224, 223, 224);
+            height: 4px;
+          }
+        }
+      }
+    }
+  }
+}

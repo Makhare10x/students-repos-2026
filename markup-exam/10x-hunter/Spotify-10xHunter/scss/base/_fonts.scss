@@ -1,0 +1,48 @@
+/* ======= Fonts ======= */
+
+/* -- Circular Spotify (original) --
+@font-face {
+  font-family: 'Circular Spotify';
+  src: url('../assets/fonts/CircularSpotify-Book.woff2') format('woff2'),
+       url('../assets/fonts/CircularSpotify-Book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Circular Spotify';
+  src: url('../assets/fonts/CircularSpotify-Medium.woff2') format('woff2'),
+       url('../assets/fonts/CircularSpotify-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Circular Spotify';
+  src: url('../assets/fonts/CircularSpotify-Bold.woff2') format('woff2'),
+       url('../assets/fonts/CircularSpotify-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+-- */
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../assets/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Variable.woff2') format('woff2'),
+       url('../assets/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Variable.woff') format('woff');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../assets/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-VariableItalic.woff2') format('woff2'),
+       url('../assets/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-VariableItalic.woff') format('woff');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}

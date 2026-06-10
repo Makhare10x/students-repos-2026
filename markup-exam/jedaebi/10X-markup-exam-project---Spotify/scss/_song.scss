@@ -1,0 +1,180 @@
+@use 'variables' as *;
+// @use 'mixins' as *;
+
+.main-sec-wrapper {
+  height: 100vh;
+  background-color: #8a9dbb2e;
+}
+.main-top-wrapper {
+  display: flex;
+}
+
+.song-cover {
+  height: 335px;
+  width: 335px;
+  overflow: hidden;
+  margin: 30px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  margin-right: 40px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+span {
+  display: inline-block;
+}
+
+.song-details-wrapper {
+  margin-top: 17px;
+  margin-left: 10px;
+
+  .song-title {
+    font-family: $font-family;
+    // not working
+    font-size: 33px;
+    width: 590px;
+  }
+}
+
+.song-details {
+  margin-top: 13px;
+  margin-bottom: 13px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.song-details img {
+  width: 15px;
+  height: 15px;
+}
+
+.song-details span,
+.song-details a {
+  white-space: nowrap;
+}
+
+// <!-- ნავიგაციის აიქონები -->
+.song-icons {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  gap: 10px;
+
+  button img {
+    width: 30px;
+  }
+}
+
+.player-btn {
+  width: 35px;
+  height: 35px;
+}
+
+//<!-- ----------------
+//  ჟანრების პანელი
+//------------------ -->
+.genres {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+
+  h3 {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 13px;
+    color: #ccc;
+    background: transparent;
+  }
+}
+
+// <!-- ----------------
+//    SIMILAR ARTISTS
+//   ---------------- -->
+.similar-wrapper {
+  .similar-text {
+    display: flex;
+    flex-direction: row;
+
+    h4 {
+      font-size: 15px;
+      font-weight: 350;
+      margin-bottom: 2px;
+      color: #e0e0e0;
+    }
+
+    h5 {
+      font-size: 13px;
+      font-weight: 300;
+      color: #898989;
+    }
+  }
+
+  img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 17px;
+    margin-bottom: 10px;
+  }
+}
+
+//  <!-- -----------------
+//  main-bottom-wrapper START
+//  ----------------- -->
+
+.main-bottom-wrapper {
+  margin-top: 12px;
+}
+.track-nav {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+  span {
+    margin-left: 30px;
+    color: #898989;
+  }
+  .first-bot-nav {
+    margin-left: 50px;
+    border-bottom: 2px solid #1db954;
+    color: white;
+  }
+}
+
+.bottom-icn {
+  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  img {
+    display: inline-block;
+  }
+  .button-icon {
+    width: 38px;
+    margin-left: 50px;
+    margin-right: 150px;
+  }
+
+  .lyrics {
+    margin-top: 12px;
+    width: 600px;
+  }
+}
+
+.bottom-icons-aside {
+  display: flex;
+  flex-direction: column;
+}

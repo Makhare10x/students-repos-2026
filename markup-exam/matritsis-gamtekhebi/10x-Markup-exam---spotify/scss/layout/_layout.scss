@@ -1,0 +1,64 @@
+@use "../base" as *;
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: $sidebar-width 1fr auto;
+  grid-template-areas:
+    "sidebar header header"
+    "sidebar content toggledbar"
+    "sidebar footer footer";
+  height: 100vh;
+  overflow: hidden;
+  grid-template-rows: auto 1fr auto;
+}
+
+aside.sidebar {
+  grid-area: sidebar;
+  background-color: $color-bg-elevated;
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-lg;
+}
+.toggledbar {
+  grid-area: toggledbar;
+  background-color: $color-bg-secondary;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  grid-area: header;
+  background-color: #060606;
+  display: flex;
+  align-items: center;
+}
+
+.main-content {
+  grid-area: content;
+  flex: 1;
+  overflow-y: auto;
+  padding: $spacing-md $spacing-lg;
+  padding-bottom: $spacing-xl;
+  min-width: 0;
+  border: 1px solid #1a1a1a;
+  border-radius: 6px;
+  height: 750px;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-text-muted;
+    border-radius: $radius-pill;
+  }
+}
+
+footer {
+  grid-area: footer;
+  background-color: $color-bg-secondary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $player-height;
+  background-color: blue;
+}

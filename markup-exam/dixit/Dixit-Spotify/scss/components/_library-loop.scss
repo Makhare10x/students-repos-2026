@@ -1,0 +1,40 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+   $library-colors: (#1ED7604D, #f7f7f7, #3b3991, #577d92, #6e4242, #6d6a6a, );
+
+.playlists .accordion-item-cards {
+    article {
+        @for $i from 1 through length($library-colors) {
+            &:nth-of-type(#{length($library-colors)}n + #{$i}) {
+                .cards-img-library div:nth-child(2) {
+                    background-color: nth($library-colors, $i);
+                }
+            }
+        }
+    }
+}
+$playlists-colors: (#f7f7f7, #bbd491e5, #e0e990, #80a18a, #6e4242, #6d6a6a);
+.playlists-by-spotify .accordion-item-cards {
+    article {
+        @for $i from 1 through length($playlists-colors) {
+            &:nth-of-type(#{length($playlists-colors)}n + #{$i}) {
+                .cards-img-library div:nth-child(2) {
+                    background-color: nth($playlists-colors, $i);
+                }
+            }
+        }
+    }
+}
+.playlists-by-spotify .accordion-item-cards {
+    article {
+        @for $i from 1 through length($playlists-colors) {
+            &:nth-of-type(#{length($playlists-colors)}n + #{$i}) {
+                background-color: rgba(nth($playlists-colors, $i), 0.1);
+                .cards-img-library div:nth-child(2) {
+                    background-color: nth($playlists-colors, $i);
+                }
+            }
+        }
+    }
+}

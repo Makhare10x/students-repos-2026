@@ -1,0 +1,49 @@
+@use "variables" as *;
+
+.app {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: $sidebar-width;
+    background-color: #d7cfcf; //temp color for testing
+    min-width: $sidebar-width;
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 90px;
+    background-color: $primary-background;
+
+    min-width: 0; 
+}
+
+.header {
+    height: 54px;
+    background-color: #e3cece; //temp color for testing
+}
+
+.main-content {
+    flex: 1;
+    background-color: #efe2e2; //temp color for testing
+    //padding-bottom: $footer-height; // to ensure content is not hidden behind the fixed footer
+}
+
+.footer {
+    position: fixed;
+    bottom: 5px;
+    left: $sidebar-width;
+    width: calc(100% - #{$sidebar-width});
+    height: $footer-height;
+    background-color: #190101; //temp color for testing
+}
+
+
+
+
+
+
+

@@ -1,0 +1,78 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+
+.player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $footer-col;
+  border-radius: 10px;
+  width: 100%;  
+  height: 100%;
+  padding: 20px;
+  
+
+  &:hover {
+    background-color: $bg-light-grey;
+  }
+
+  
+}
+
+
+
+.player-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.player-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-left: auto;  
+}
+
+.space {
+  width: auto !important; 
+  flex-shrink: 0;        
+  padding: 0 10px;       
+}
+.space-for-icons {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%; 
+
+}
+
+.song-info {
+  display: flex;
+  align-items: center;
+}
+
+.song-text {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.song-text p:first-child {
+  color: $text-active;
+}
+
+.current-song {
+  width: 51px;
+  height: 51px;
+  min-width: 51px;
+  min-height: 51px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+

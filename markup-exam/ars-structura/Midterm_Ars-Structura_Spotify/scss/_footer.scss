@@ -1,0 +1,192 @@
+
+$player-bg: #333842;
+$player-text: #ffffff;
+$player-muted: rgba(255, 255, 255, 0.55);
+$player-line: rgba(255, 255, 255, 0.15);
+$player-hover: rgba(255, 255, 255, 0.08);
+$spotify-green: #1db954;
+
+.player {
+  position: sticky; 
+  bottom: 0;
+  width: 96vw;
+  height: 78px;
+  background: $player-bg;
+  border-radius: 12px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+
+  &__inner {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 18px;
+    align-items: center;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  &__center {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 240px;
+  }
+
+  &__time {
+    font-size: 12px;
+    color: $player-muted;
+    width: 44px;
+    text-align: center;
+    user-select: none;
+  }
+
+  &__bar {
+    position: relative;
+    width: min(520px, 100%);
+    height: 12px; 
+    display: flex;
+    align-items: center;
+  }
+
+  &__bar-track {
+    width: 100%;
+    height: 4px;
+    border-radius: 999px;
+    background: $player-line;
+  }
+
+  &__bar-fill {
+    position: absolute;
+    left: 0;
+    height: 4px;
+    border-radius: 999px;
+    background: $player-text;
+  }
+
+  &__bar-thumb {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: $player-text;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+
+  &__bar:hover {
+    .player__bar-fill { background: $spotify-green; }
+    .player__bar-thumb { opacity: 1; }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 320px;
+    justify-content: flex-end;
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    min-width: 160px;
+    max-width: 220px;
+    font-family: satoshi;
+  }
+
+  &__title {
+    color: $player-text;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__subtitle {
+    color: $player-muted;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &--muted {
+      opacity: 0.75;
+    }
+  }
+
+  &__btn {
+    border: 0;
+    background: transparent;
+    // background: red;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background: $player-hover;
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+      display: block;
+    }
+  }
+
+  &__btn--primary {
+    width: 42px;
+    height: 42px;
+
+    &:hover {
+      background: $spotify-green;
+    }
+
+    img {
+      width: 34px;
+      height: 34px;
+
+    }
+  }
+  .player__cover {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.15);
+
+    img {
+      width: 34px;
+      height: 34px;
+    }
+  }
+
+
+  .player__rightbar img {
+    width: 30px;
+    height: 30px;
+  }
+
+  @media (max-width: 900px) {
+    &__right { min-width: auto; }
+    &__meta { display: none; }
+  }
+}
+
+@font-face {
+  font-family: "satoshi";
+  src: url(./assets/Fonts/Satoshi-Variable.ttf);
+  font-weight: normal;
+  font-style: normal;
+}

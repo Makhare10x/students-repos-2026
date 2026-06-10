@@ -1,0 +1,57 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as m;
+@use "../components/buttons" as bt;
+@use "../abstracts/nav-link" as nav;
+@use "../base/typography";
+@use "../components/cards";
+
+
+
+.home-page {
+
+    .main-app-container {
+        width: 100%;
+        height: 100vh;
+
+        display: grid;
+        grid-template-columns: 25.9rem 1fr 35.8rem;
+        grid-template-rows: 5.4rem 1fr 8.1rem;
+        grid-template-areas:
+            "sidebar  header header"
+            "sidebar  main article"
+            "sidebar footer footer";
+    }
+
+    .main-header {
+        grid-area: header;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .main-content {
+        grid-area: main;
+    }
+
+    .main-article {
+        grid-area: article;
+
+    }
+
+    .footer-player-bar {
+        grid-area: footer;
+    }
+
+}
+
+.main-article {
+    padding: 2rem;
+    @include m.page-border;
+}
+
+.main-article__title {
+    padding: 1rem;
+    @include m.flex-box($justify: space-between, $align: center);
+
+}

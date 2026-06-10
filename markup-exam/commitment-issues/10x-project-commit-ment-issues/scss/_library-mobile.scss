@@ -1,0 +1,29 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+
+@media screen and (max-width: 1050px) {
+    .grid-view, .library-button-wrapper {
+        display: none;
+    }
+
+    .buttons-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+
+        font-size: 12px;
+        color: $light-font-color;
+
+        .button-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+
+    .list-view .grid-img {
+        width: $card-size-mobile;
+        height: $card-size-mobile + 8px;
+    }
+}

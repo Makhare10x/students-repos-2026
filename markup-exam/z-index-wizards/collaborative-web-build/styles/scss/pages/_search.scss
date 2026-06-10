@@ -1,0 +1,207 @@
+@use "../abstracts/mixins" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #060606;
+  font-family: "Satoshi", sans-serif;
+}
+#header-placeholder{
+    display: none;
+}
+.search-placeholder{
+    padding-top: 6px;
+    height: 42px;
+    @include flex-between();
+    padding-inline: 15px;
+    gap: 10px;
+}
+.mobile-search{
+@include flex-between();
+width: 306px;
+background-color: #20202080;
+border-radius: 10px;
+height: 40px;
+padding-inline: 6px;
+}
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-top: 10px;
+}
+
+.Recent_searches {
+  margin-top: 20px;
+  padding-left: 20px;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.Recent_searches h3 {
+  @include text-style($size: 20px, $color: e0e0e0);
+  font-weight: 700;
+}
+
+.artists_container {
+  width: 100%;
+  display: none;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.artists {
+  width: 169px;
+  height: 205px;
+  @include flex-between();
+  flex-direction: column;
+}
+
+.artists p {
+  @include text-style($color: #e0e0e0);
+}
+
+.circled_img {
+  width: 169px;
+  height: 169px;
+  position: relative;
+}
+
+.daft_Punk {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.icon_close,
+.icon_close_square {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: -0.41px;
+  left: 129px;
+}
+
+.Black_Holes_card {
+  position: relative;
+  width: 170px;
+  height: 229px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.square_img {
+  width: 170px;
+  height: 170px;
+  padding-top: 8px;
+}
+
+.Black_Holes {
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  position: relative;
+}
+
+.Black_Holes_card p {
+  @include text-style($color: #e0e0e0);
+  font-weight: 500;
+}
+
+.Black_Holes_card span {
+  @include text-style($size: 12px, $color: #898989);
+}
+.category_card h2 {
+  height: 40;
+  @include text-style($size: 20px, $color: #e0e0e0);
+  font-weight: 700;
+}
+.category_card h3 {
+  @include text-style($size: 18px, $color: #e0e0e0);
+  height: 40;
+  font-weight: 500;
+}
+.cards_grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 30px;
+}
+.category-card {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: #1e3264;
+  position: relative;
+  overflow: hidden;
+}
+.category-name {
+  @include text-style($size: 20px, $color: #ffffff);
+  font-weight: 900;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  position: absolute;
+}
+.card-image {
+  width: 104px;
+  height: 104px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.direction_icon {
+  @include flex-between();
+}
+.color-orange{
+    background-color: #BA5D07;
+}
+.color-blue{
+background-color: #8D67AB;
+}
+.purple-color {
+    background-color: #B02897;
+}
+.green-color{
+    background-color: #006450;
+}
+.red-color{
+    background-color: #E91429;
+}
+.red-orange-color{
+    background-color: #D84000;
+}
+.light-green-color{
+    background-color: #148A08;
+}
+
+
+@media screen and (min-width: 375px) { 
+    #header-placeholder{
+    display: flex;
+}
+  .artists_container {
+    display: flex;
+  }
+  .category-card {
+    height: 170px;
+  }
+  .Recent_searches{
+    display: flex;
+  }
+}

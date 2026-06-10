@@ -1,0 +1,52 @@
+@use "../abstracts/default" as d;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.main-content--alb-background {
+  background: linear-gradient(
+    180deg, 
+    #1d2025 0%, 
+    #060606 100%);
+}
+
+.album-sidebar {
+  width: 400px;
+}
+
+.album {
+  &__header {
+    display: grid;
+    grid-template-columns: 40px 400px 136px;
+    gap: 2rem;
+    align-items: center;
+    padding: 1.2rem;
+    font-size: v.$text-sm;
+    color: v.$color-text-secondary;
+  }
+
+  &__divider {
+    height: 2px;
+    background-color: v.$color-border-soft;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    @include m.flex-column;
+  }
+}
+
+.song-row--album {
+  grid-template-columns: 40px 400px 95px 18px;
+  gap: 2rem;
+}
+
+.song-row--album:hover {
+  background-color: v.$color-bg-secondary;
+}
+
+.song-row__title {
+  font-weight: 400;
+}
+.album-active {
+  background-color: v.$color-bg-hover;
+}

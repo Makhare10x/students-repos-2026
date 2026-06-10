@@ -1,0 +1,84 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-bar-list {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px ;
+  grid-template-rows: 50px;
+  height: 50px;
+  width: 900px;
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  background-color: #111111;
+  display: grid;
+  border-radius: 10px;
+}
+
+.nav-bar-list-items {
+  // background-color: white;
+  width: 200px;
+  color: #E0E0E0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  padding-left: 10px;
+}
+
+.nav-bar-p {
+  color: #898989;
+  font-family: "satoshi", "sans-serif";
+  font-size: 13px;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.nav-bar-icons img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.nav-bar-icons {
+  width: 30px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;  
+}
+
+// .home-color {
+//   color: #E0E0E0;
+//   font-family: "satoshi", "sans-serif";
+//   font-size: 13px;
+//   padding-left: 10px;
+// }
+
+.nav-bar-right-icons {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+
+.friends:hover img {
+opacity: 0;
+}
+
+.friends:hover {
+background-image: url(../assets/navbar/3-hover.svg);
+background-repeat: no-repeat;
+}
+
+.cat-profile {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}

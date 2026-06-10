@@ -1,0 +1,49 @@
+@use "../../abstracts/mixins";
+@use "../../abstracts/variables";
+
+.filter {
+  @include mixins.flex-prop($align: center, $justify: space-between);
+  padding-left: 2.5rem;
+  font-size: 1.2rem;
+  background-color: variables.$bg-primary-mob;
+  position: sticky;
+  z-index: 3;
+  top: 0;
+
+  .filter-btns {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .all {
+    display: none;
+  }
+
+  button {
+    padding: 0.8rem 1.5rem;
+    background-color: variables.$bg-secondary-dark;
+    color: variables.$color-active-desk;
+    border-radius: 0.8rem;
+    cursor: pointer;
+
+    &.filter-icon {
+      // @include mixins.flex-prop($align: center, $justify: center);
+      background-color: transparent;
+      @include mixins.interactiveIcon;
+    }
+  }
+}
+
+@media (min-width: 920px) {
+  .filter {
+    background-color: variables.$bg-primary-desk;
+    button.active {
+      color: variables.$bg-primary-mob;
+      background-color: variables.$color-active-desk;
+    }
+
+    .all {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@use "../abstracts/variables";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: variables.$ff-satoshi;
+  background-color: variables.$bg-primary-mob;
+  color: variables.$color-primary;
+  font-size: variables.$fs-primary;
+}
+
+@media (min-width: 920px) {
+  body {
+    background-color: variables.$bg-primary-desk;
+  }
+}

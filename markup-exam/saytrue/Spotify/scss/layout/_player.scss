@@ -1,0 +1,332 @@
+// Player Bar Styles for Spotify Clone - Enhanced
+
+.player-bar {
+  flex-shrink: 0;
+  width: calc(100% - 24px);
+  height: 64px;
+  background-color: #2b2b31;
+  margin: 12px;
+  border-radius: 12px;
+  z-index: $z-player;
+  display: grid;
+  grid-template-columns: 240px 1fr auto; 
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  min-width: 320px;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+  }
+
+  &__center {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    min-width: 100px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px; 
+    min-width: 0;
+  }
+
+  &__separator {
+    width: 1px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+    margin: 0 4px;
+
+    @media (max-width: 1100px) {
+      display: none;
+    }
+  }
+  @include respond-to(mobile) {
+    width: calc(100% - 24px);
+    margin: 12px;
+    bottom: 64px; // Above bottom nav
+    position: fixed;
+    height: 56px;
+    padding: 0 12px;
+    background-color: #2b2b31;
+    display: flex;
+    
+    &__left {
+      display: none;
+    }
+
+    &__center {
+      display: none;
+    }
+
+    .player-bar__right {
+      flex: 1;
+      justify-content: space-between;
+      gap: 12px;
+      width: auto;
+    }
+
+    .player-track-info {
+      max-width: none;
+      flex: 1;
+    }
+
+    .player-bar__actions {
+      gap: 12px;
+      
+      .player-controls__button:not([title="Add to playlist"]):not(.player-controls__button-play) {
+        display: none;
+      }
+
+      .player-controls__button-play {
+        display: flex;
+        background: transparent;
+        color: white;
+        width: auto;
+        height: auto;
+        
+        svg {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+
+    .player-controls__button-shuffle,
+    .player-controls__button-loop,
+    .volume-bar, 
+    &__separator, 
+    .header-avatar, 
+    .player-controls__button[title="Queue"], 
+    .player-controls__button[title="Devices"], 
+    .player-controls__button[title="More"] {
+      display: none !important;
+    }
+  }
+}
+
+
+
+
+
+// Playback Controls
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px; // Increased gap to prevent clumping
+  }
+
+  &__button {
+    @include button-reset;
+    color: #b3b3b3;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: #ffffff;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+    }
+
+    &-play {
+      width: 32px;
+      height: 32px;
+      background-color: #1ed760;
+      border-radius: 50%;
+      color: #000000;
+      padding: 0;
+      
+      svg {
+        width: 14px;
+        height: 14px;
+        fill: currentColor;
+        stroke: none;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        background-color: #1fdf64;
+      }
+    }
+  }
+
+  &__progress {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  &__time {
+    font-size: 10px; // Smaller time
+    color: #a7a7a7;
+    min-width: 28px;
+    font-weight: 400;
+  }
+
+  &__bar {
+    flex: 1;
+    height: 3px;
+    background-color: #3e3e42;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      .player-controls__bar-fill {
+        background-color: #1ed760;
+      }
+    }
+  }
+
+  &__bar-fill {
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 2px;
+    width: 30%;
+  }
+}
+
+// Track Info in the center-right area as per image
+.player-track-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 1 200px; // Slightly more space
+  min-width: 0;
+  overflow: hidden;
+
+  &__cover {
+    width: 32px; // Smaller cover
+    height: 32px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    min-width: 0;
+  }
+
+  &__title {
+    font-size: 12px; // Slightly smaller
+    font-weight: 700;
+    color: #ffffff;
+    @include text-ellipsis;
+    line-height: 1.2;
+  }
+
+  &__artist {
+    font-size: 11px;
+    color: #a7a7a7;
+    @include text-ellipsis;
+    line-height: 1.2;
+  }
+
+  &__album {
+    display: none;
+  }
+
+  @media (max-width: 900px) and (min-width: 481px) {
+    display: none; // Only hide on tablet, show on mobile
+  }
+}
+
+.player-bar__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px; // Increased gap
+  flex-shrink: 0;
+
+  @media (max-width: 1200px) {
+    .player-controls__button[title="More"] { display: none; }
+  }
+  
+  @media (max-width: 1000px) {
+    .player-controls__button[title="Devices"] { display: none; }
+  }
+
+  @media (max-width: 850px) {
+    .player-controls__button[title="Queue"] { display: none; }
+  }
+
+  .player-controls__button {
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+// Volume section
+.volume-bar {
+  display: flex;
+  align-items: center;
+  color: #a7a7a7;
+  flex-shrink: 0;
+  
+  svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    stroke-width: 2;
+  }
+}
+
+.player-bar .header-avatar {
+  width: 32px;
+  height: 32px;
+  font-size: 11px;
+  background-color: #0076ff;
+  border-radius: 50%;
+  flex-shrink: 0;
+
+  @media (max-width: 1100px) {
+    display: none;
+  }
+}
+
+.player-bar > .player-controls__button {
+  margin-left: 4px;
+  flex-shrink: 0;
+  
+  @media (max-width: 600px) {
+     display: none;
+  }
+}
+

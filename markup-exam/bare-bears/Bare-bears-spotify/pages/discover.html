@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <title>Spotify - Discover</title>
+  </head>
+
+  <body>
+    <aside class="sidebar">
+      <a href="./library.html" class="sidebar-title">
+        <h2>
+          <img src="../assets/icons/library-icon.svg" alt="library" />My Library
+        </h2>
+      </a>
+      <nav class="sidebar-nav">
+        <ul class="sidebar-links">
+          <li>
+            <a href="#">
+              <div class="sidebar-link-text">
+                <img src="../assets/icons/pins-icon.svg" alt="pins" />Pins
+              </div>
+              <div class="sidebar-link-arrow">
+                <img src="../assets/icons/arrow-right.svg" alt="arrow right" />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="./playlist.html">
+              <div class="sidebar-link-text">
+                <img
+                  src="../assets/icons/playlist-icon.svg"
+                  alt="playlist"
+                />Playlists
+              </div>
+              <div class="sidebar-link-arrow">
+                <img src="../assets/icons/arrow-right.svg" alt="arrow right" />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="./library-list.html">
+              <div class="sidebar-link-text">
+                <img
+                  src="../assets/icons/liked-songs-icon.svg"
+                  alt="liked songs"
+                />Liked songs
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="sidebar-link-text">
+                <img src="../assets/icons/saves-icon.svg" alt="saves" />Saves
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="./album.html">
+              <div class="sidebar-link-text">
+                <img src="../assets/icons/albums-icon.svg" alt="albums" />Albums
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="sidebar-link-text">
+                <img
+                  src="../assets/icons/folders-icon.svg"
+                  alt="folders"
+                />Folders
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="./podcast.html">
+              <div class="sidebar-link-text">
+                <img
+                  src="../assets/icons/podcasts-icon.svg"
+                  alt="podcasts"
+                />Podcasts
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="sidebar-link-text">
+                <img
+                  src="../assets/icons/audiobooks-icon.svg"
+                  alt="audiobooks"
+                />AudioBooks
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="./artist.html">
+              <div class="sidebar-link-text">
+                <img
+                  src="../assets/icons/artists-icon.svg"
+                  alt="artists"
+                />Artists
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+     <header class="top-header">
+    <nav class="header-nav">
+      <a href="../index.html" class="header-nav-link">
+        <img class="icon-default" src="../assets/icons/home-icon.svg" alt="home" />
+        <img class="icon-active" src="../assets/icons/home-icon-active.svg" alt="home" />
+        Home
+      </a>
+      <a href="./discover.html" class="header-nav-link">
+        <img class="icon-default" src="../assets/icons/discover-icon.svg" alt="discover" />
+        <img class="icon-active" src="../assets/icons/discover-icon-active.svg" alt="discover" />
+        Discover
+      </a>
+      <a href="./search.html" class="header-nav-link">
+        <img src="../assets/icons/search-icon.svg" alt="search" />
+        Search
+      </a>
+      <a href="./library.html" class="header-nav-link mobile-only">
+        <img src="../assets/icons/library-icon.svg" alt="library" />
+        Library
+      </a>
+      <a href="#" class="header-nav-link mobile-only">
+        <img src="../assets/icons/me-icon.svg" alt="me" />
+        Me
+      </a>
+    </nav>
+    <div class="header-actions">
+      <button class="header-btn">
+        <img src="../assets/icons/notifications-icon.svg" alt="notifications" />
+      </button>
+      <button class="header-btn">
+        <img src="../assets/icons/lock-icon.svg" alt="lock" />
+      </button>
+      <button class="header-btn">
+        <img src="../assets/icons/friends-icon.svg" alt="friends" />
+      </button>
+      <button class="header-btn">
+        <img src="../assets/icons/settings-icon.svg" alt="settings" />
+      </button>
+      <button class="header-btn">
+        <img src="../assets/icons/profile.svg" alt="profile" />
+      </button>
+    </div>
+  </header>
+
+    <main class="main-content">
+      <div class="main-content-discover">
+        <div class="discover-bg discover-bg-1"></div>
+        <div class="discover-bg discover-bg-2"></div>
+        <nav class="discover-filters">
+          <ul class="discover-chips">
+            <li class="active-chip"><a href="#">Music</a></li>
+            <li><a href="#">EDM</a></li>
+            <li><a href="#">Indie</a></li>
+            <li><a href="#">Pop</a></li>
+            <li><a href="#">Rock</a></li>
+            <li><a href="#">Alt Rock</a></li>
+            <li><a href="#">Country</a></li>
+            <li><a href="#">R&B</a></li>
+            <li><a href="#">Hip-Hop</a></li>
+            <li><a href="#">Podcast</a></li>
+            <li><a href="#">Audiobooks</a></li>
+          </ul>
+        </nav>
+
+        <section class="discover-featured">
+          <div class="discover-slide">
+            <div class="discover-card">
+              <img
+                src="../assets/images/linkin-park-big.png"
+                alt="Linkin Park Mix"
+              />
+            </div>
+            <div class="discover-info">
+              <img
+                class="discover-cover"
+                src="../assets/images/linkin-park-small.png"
+                alt="Linkin Park Mix cover"
+              />
+              <div class="discover-details">
+                <h2 class="discover-title">Linkin Park Mix</h2>
+                <div class="discover-meta">
+                  <span>By</span>
+                  <span class="discover-meta-highlight">Spotify</span>
+                  <div class="discover-dot"></div>
+                  <span>2023</span>
+                  <div class="discover-dot"></div>
+                  <span>22 songs</span>
+                  <div class="discover-dot"></div>
+                  <span>1 hr 14 min</span>
+                </div>
+                <div class="discover-actions">
+                  <a href="#" class="discover-play">
+                    <img
+                      src="../assets/icons/green-start-icon.svg"
+                      alt="play"
+                    />
+                  </a>
+                  <a href="#" class="discover-action-btn">
+                    <img src="../assets/icons/save-icon.svg" alt="save" />
+                    <span class="discover-save-count">500K</span>
+                  </a>
+                  <a href="#" class="discover-action-btn">
+                    <img
+                      src="../assets/icons/discover-add-icon.svg"
+                      alt="add"
+                    />
+                  </a>
+                  <a href="#" class="discover-action-btn">
+                    <img
+                      src="../assets/icons/discover-button-icon.svg"
+                      alt="queue"
+                    />
+                  </a>
+                  <a href="#" class="discover-action-btn">
+                    <img src="../assets/icons/share.svg" alt="share" />
+                  </a>
+                  <a href="#" class="discover-action-btn">
+                    <img src="../assets/icons/dots-icon.svg" alt="more" />
+                  </a>
+                </div>
+                <div class="discover-genres">
+                  <span class="genre-tag">Rock</span>
+                  <span class="genre-tag">Alt Rock</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="discover-slide">
+            <div class="discover-card">
+              <img
+                src="../assets/images/duft-punk-big.png"
+                alt="Daft Punk - Get Lucky"
+              />
+            </div>
+            <div class="discover-info">
+              <img
+                class="discover-cover"
+                src="../assets/images/daft-punk-cover.svg"
+                alt="Daft Punk cover"
+              />
+              <div class="discover-details">
+                <h2 class="discover-title">Get Lucky</h2>
+                <div class="discover-meta">
+                  <span>By</span>
+                  <span class="discover-meta-highlight">Daft Punk</span>
+                  <div class="discover-dot"></div>
+                  <span>2013</span>
+                  <div class="discover-dot"></div>
+                  <span>6:05</span>
+                </div>
+                <div class="discover-actions">
+                  <a href="#" class="discover-play">
+                    <img
+                      src="../assets/icons/green-start-icon.svg"
+                      alt="play"
+                    />
+                  </a>
+                  <a href="#" class="discover-action-btn">
+                    <img src="../assets/icons/save-icon.svg" alt="save" />
+                    <span class="discover-save-count">500K</span>
+                  </a>
+                  <a href="#" class="discover-action-btn">
+                    <img
+                      src="../assets/icons/discover-add-icon.svg"
+                      alt="add"
+                    />
+                  </a>
+                  <a href="#" class="discover-action-btn">
+                    <img
+                      src="../assets/icons/discover-button-icon.svg"
+                      alt="queue"
+                    />
+                  </a>
+                  <a href="#" class="discover-action-btn">
+                    <img src="../assets/icons/share.svg" alt="share" />
+                  </a>
+                  <a href="#" class="discover-action-btn">
+                    <img src="../assets/icons/dots-icon.svg" alt="more" />
+                  </a>
+                </div>
+                <div class="discover-genres">
+                  <span class="genre-tag">Rock</span>
+                  <span class="genre-tag">Alt Rock</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="player-bar">
+      <div class="player-left-container">
+        <div class="player-controls">
+          <div class="player-buttons">
+            <button class="player-btn">
+              <img
+                class="desktop-only"
+                src="../assets/icons/player-pause-icon.svg"
+                alt="pause"
+              />
+              <img
+                class="mobile-only"
+                src="../assets/icons/play-icon.svg"
+                alt="play"
+              />
+            </button>
+            <button class="player-btn">
+              <img
+                src="../assets/icons/player-previous-icon.svg"
+                alt="previous"
+              />
+            </button>
+            <button class="player-btn">
+              <img src="../assets/icons/player-next-icon.svg" alt="next" />
+            </button>
+            <button class="player-btn">
+              <img
+                src="../assets/icons/player-shuffle-icon.svg"
+                alt="shuffle"
+              />
+            </button>
+            <button class="player-btn">
+              <img src="../assets/icons/player-repeat-icon.svg" alt="repeat" />
+            </button>
+          </div>
+          <div class="player-progress">
+            <span class="progress-time">2:23</span>
+            <div class="progress-bar">
+              <div class="progress-bar-fill"></div>
+            </div>
+            <span class="progress-time">4:45</span>
+          </div>
+          <div class="player-volume">
+            <button class="player-btn">
+              <img src="../assets/icons/player-volume-icon.svg" alt="volume" />
+            </button>
+          </div>
+        </div>
+        <div class="player-info">
+          <a href="./song.html"
+            ><img
+              class="player-cover"
+              src="../assets/images/duft-punk-small.png"
+              alt="album cover"
+          /></a>
+          <div class="player-text">
+            <a href="./song.html" class="player-title"
+              >Get Lucky<span class="player-title-extended">
+                (feat. Pharrell Williams)</span
+              ></a
+            >
+            <span class="player-artist">Daft Punk</span>
+            <span class="player-album">Random Access Memories</span>
+          </div>
+        </div>
+      </div>
+      <div class="player-right-container">
+        <button class="player-btn">
+          <img src="../assets/icons/player-heart-icon.svg" alt="like" />
+        </button>
+        <button class="player-btn">
+          <img src="../assets/icons/player-add-icon.svg" alt="add" />
+        </button>
+        <button class="player-btn">
+          <img src="../assets/icons/player-lyrics-icon.svg" alt="lyrics" />
+        </button>
+        <button class="player-btn">
+          <img src="../assets/icons/player-idk-icon.svg" alt="icon" />
+        </button>
+        <button class="player-btn">
+          <img src="../assets/icons/player-more-icon.svg" alt="more" />
+        </button>
+        <div class="player-divider">
+          <img src="../assets/icons/player-divider-icon.svg" alt="divider" />
+        </div>
+        <button class="player-btn">
+          <img src="../assets/icons/player-dj-icon.svg" alt="dj" />
+        </button>
+        <button class="player-btn">
+          <img src="../assets/icons/player-queue-icon.svg" alt="queue" />
+        </button>
+        <button class="player-btn mobile-only">
+          <img src="../assets/icons/play-icon.svg" alt="play" />
+        </button>
+      </div>
+    </footer>
+  </body>
+</html>

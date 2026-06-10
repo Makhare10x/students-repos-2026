@@ -1,0 +1,141 @@
+/* =====================
+  Filter Chips
+===================== */
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/* =====================
+  Filter Chips
+===================== */
+
+.filter-bar {
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.filters{
+   display:flex;
+   gap: $space-xs;
+  margin-bottom: $space-xl;
+  
+}
+
+.filters__chip {
+  min-height: 29px;
+  padding: 0 14px;
+  border-radius: $radius-sm;
+  background-color: $color-chip;
+  color: $color-text-secondary;
+  font-size: 14px;
+  line-height: 1;
+  transition: background-color $transition-base, color $transition-base;
+}
+
+.filters__chip--active {
+  background-color: $color-chip;
+  color:$color-text-secondary;
+  font-size: 14px;
+}
+
+.filters__chip--active:hover{
+  color:black;
+  background-color: white;
+
+}
+.filters__chip:hover{
+  color:black;
+  background-color: white;
+}
+.quick-mixes {
+  display: none;
+}
+@include mobile {
+  .filter-bar {
+    align-items: center;
+    margin-bottom: 18px;
+  }
+
+  .filters {
+    gap: 8px;
+    margin-bottom: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filters__chip {
+    min-height: 36px;
+    padding: 0 14px;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+
+  .fillter__icon--right {
+    flex-shrink: 0;
+  }
+
+  .filter_icon {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+  }
+  .quick-mixes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .quick-mix-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    min-height: 54px;
+    padding: 6px;
+    border-radius: 12px;
+    background: #1a1a1a;
+  }
+
+  .quick-mix-card__cover {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #101010;
+  }
+
+  .quick-mix-card__cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .quick-mix-card__meta {
+    min-width: 0;
+  }
+
+  .quick-mix-card__title,
+  .quick-mix-card__artist {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .quick-mix-card__title {
+    font-size: 13px;
+    color: #ffffff;
+  }
+
+  .quick-mix-card__artist {
+    font-size: 12px;
+    color: #8f8f8f;
+  }
+}

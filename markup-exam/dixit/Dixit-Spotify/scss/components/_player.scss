@@ -1,0 +1,175 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+@use "sass:map";
+
+.player-checkbox {
+    position: fixed;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mini-player {
+    width: 100%;
+    background-color: v.$bg-player;
+    min-height: 6.1rem;
+    border-radius: 1rem;
+    padding: 0.6rem 1rem;
+    @include m.flex-center($justify: center, $align: center);
+    flex-shrink: 0;
+
+    @media (min-width: 991px) {
+        display: none;
+    }
+
+    &__wrapper {
+        width: 100%;
+        @include m.flex-center($justify: space-between, $align: center);
+        cursor: pointer;
+    }
+
+    &__album {
+        margin: 0;
+        @include m.flex-center($align: center);
+        gap: 1rem;
+
+        img {
+            max-width: 4.3rem;
+            min-height: 4.3rem;
+            border-radius: 0.3rem;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+    }
+
+    &__track {
+        @include m.flex-center($direction: column);
+        gap: 0.4rem;
+        max-width: 17rem;
+    }
+}
+
+.mini-player__title-shell {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+}
+.mini-player__title {
+    display: inline-block;
+    padding-left: 0;
+    will-change: transform;
+    transform: translateX(0);
+    animation: player-marquee 18s linear infinite;
+    color: v.$player-text;
+    font-size: map.get(v.$font-sizes, "body-sm");
+}
+
+.mini-player__artist {
+    font-style: normal;
+    font-size: map.get(v.$font-sizes, "body-sm");
+    color: v.$footer-text;
+    margin-left: -12rem;
+
+    @media (min-width: 991px) {
+        margin-left: -18rem;
+    }
+}
+
+.mini-player__controls {
+    @include m.flex-center($align: center);
+}
+.mini-player__button {
+    border: none;
+    background-color: v.$bg-player;
+    @include m.flex-center($align: center, $justify: space-between);
+    cursor: pointer;
+    padding-left: 7rem;
+
+    figure {
+        @include m.flex-center($align: center, $justify: center);
+        gap: 2.236rem;
+
+        .icon-play {
+            max-width: 2.074rem;
+            min-height: 2.074rem;
+        }
+
+        .icon-add {
+            max-width: 3rem;
+
+            .icon-add-outline {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+        }
+        .icon-pause {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+}
+
+.player-bar {
+    flex-grow: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 0.4rem;
+    border-radius: 0.2rem;
+    background: v.$player-bar;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    position: absolute;
+    margin-top: 5rem;
+    left: 1rem;
+
+    width: calc(100% - 2rem);
+
+    @media (min-width: 991px) {
+        display: none;
+    }
+}
+
+.player-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    background: v.$primary;
+    transition: transform 0.4s ease;
+}
+
+footer:has(#icon-add:checked) {
+    label[for="icon-add"] .icon-outline {
+        display: none;
+    }
+
+    label[for="icon-add"] .icon-filled {
+        @include m.flex-center($justify: center, $align: center);
+        transform: scale(1.5);
+    }
+}
+
+footer:has(#icon-play:checked) {
+    label[for="icon-play"] .icon-outline {
+        display: none;
+    }
+
+    label[for="icon-play"] .icon-filled {
+        @include m.flex-center($justify: center, $align: center);
+        color: v.$second-primary;
+    }
+}
+
+// Shared scrolling-text animation for song titles
+@keyframes player-marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

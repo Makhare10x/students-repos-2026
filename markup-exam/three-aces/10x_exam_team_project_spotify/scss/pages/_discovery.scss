@@ -1,0 +1,45 @@
+
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+@use '../base/typography' as *;
+
+
+
+
+.Linkin-Park-Mix {
+    display: flex;
+    justify-content: center;
+   align-items: center;
+    background: linear-gradient(135deg, #212a2a 0%, #1a2222 100%);
+    gap: 8rem;
+padding: 5rem;
+}
+
+.Get-Lucky {
+     display: flex;
+    justify-content: center;
+    align-items: center;
+background: linear-gradient(180deg, #2a1b15 0%, #18100d 100%);
+gap: 8rem;
+padding: 5rem;
+}
+.cover-photo {
+    width: 500px;
+    height: 612px;
+}
+.discovery-song {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    
+}
+.discovery__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 18.4rem;
+    gap: 2rem;
+    padding: 0.5rem;
+}
+.rounded, img {
+    border-radius: 1rem;
+}

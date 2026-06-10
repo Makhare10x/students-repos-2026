@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as m;
+@use "../components/buttons";
+@use "../abstracts/nav-link";
+@use "../base/typography";
+@use "../components/cards";
+
+
+.main-content {
+    padding: 1rem;
+    @include m.page-border;
+}
+
+.main-content-wrapper {
+    padding: 0.5rem;
+    max-height: 86.9rem;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.main-content-section__title {
+    width: 100%;
+    padding: 1rem;
+    @include m.flex-between;
+}
+
+.main-content__music-cards-container {
+    height: 24rem;
+    width: 100%;
+    padding: 0.5rem;
+    @include m.grid-fill;
+
+}

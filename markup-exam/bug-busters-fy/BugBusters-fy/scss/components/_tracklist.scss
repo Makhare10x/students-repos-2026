@@ -1,0 +1,82 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+// ***********************************
+// Table component desktop version
+// ***********************************
+
+.tracklist {
+  width: 100%;
+  max-width: 120rem;
+  &-table {
+    width: 100%;
+    border-collapse: collapse;
+    thead {
+      position: relative;
+      th {
+        text-align: left;
+        padding: 10px;
+        padding-bottom: 1.2rem;
+        // border-bottom: 1px solid variables.$color-primary;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: -100vw;
+        bottom: 0;
+        height: 1px;
+        background: variables.$color-primary;
+      }
+    }
+    tbody {
+      .track {
+        @include mixins.interactiveIcon(
+          $hoverColor: #1ed760,
+          $activeColor: #1ed760
+        );
+        transition: all 0.15s ease;
+        cursor: pointer;
+
+        &:hover {
+          background: variables.$bg-secondary-dark;
+        }
+        td {
+          padding: 10px;
+          vertical-align: middle;
+        }
+
+        &-index {
+          width: 30px;
+        }
+
+        /* title cell track details */
+        &-title-cell {
+          a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+          }
+        }
+        &-cover {
+          width: 5.1rem;
+          height: 5.1rem;
+          object-fit: cover;
+          border-radius: 4px;
+        }
+        &-meta {
+          @include mixins.flex-prop(0.5rem, $direction: column);
+        }
+        &-name {
+          color: variables.$color-active-desk;
+          font-family: variables.$ff-satoshi-medium;
+        }
+
+        /*likes*/
+        &-like {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

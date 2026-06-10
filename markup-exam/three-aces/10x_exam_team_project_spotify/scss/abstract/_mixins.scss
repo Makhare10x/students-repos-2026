@@ -1,0 +1,73 @@
+
+@use './variables' as *;
+
+// 1. ქარდის ქავერი
+@mixin card-cover ($wd, $heig, $br, $url){
+    width: $wd;
+    height: $heig;
+    border-radius: $br;
+    background-image: url($url);
+    background-size: cover;
+
+    
+}
+
+// 2. ტექსტის სტილი
+@mixin text-style ($fs, $weight, $clr) {
+    font-size: $fs;
+    font-weight: $weight;
+    color: $clr;
+}
+
+// 3. ღილაკის მიქსინი 
+@mixin btn ($br, $padv, $padh, $fs, $bg-clr, $txt-clr) {
+    border-radius: $br;
+    padding: $padv $padh;
+    font-size: $fs;
+    background-color: $bg-clr;
+    color: $txt-clr;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        // იმ color.adjust-ის ნაცვლად ჩაწერე ეს:
+        filter: brightness(1.2); 
+        transform: scale(1.04);
+    }
+
+    &:active {
+        // darken-ის ნაცვლად ჩაწერე ეს:
+        filter: brightness(0.9);
+        transform: scale(0.96);
+    }
+}
+// 4. ვახოს მიქსინი (დისპლეი)
+@mixin display ($disp: flex, $fdir: row, $jus: center, $aln: center, $gap: null) {
+    display: $disp;
+    flex-direction: $fdir;
+    justify-content: $jus;
+    align-items: $aln;
+    gap: $gap;
+}
+
+// 5. ძებნის ქარდების ლეიაუტი
+@mixin search-card-layout { 
+    height: 18rem;
+    position: relative; 
+    overflow: hidden; 
+    padding: 1.6rem; 
+    border-radius: 0.8rem; 
+    cursor: pointer; 
+}
+
+@mixin card-img-style {
+    position: absolute;
+    bottom: -1rem;
+    right: -1.5rem;
+    width: 10rem;
+    height: 10rem;
+    transform: rotate(25deg);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    object-fit: cover;
+}

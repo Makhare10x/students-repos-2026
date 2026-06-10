@@ -1,0 +1,126 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+
+.artist-tabs input[type="radio"] {
+  display: none;
+}
+
+.alt-nav-btns {
+  display: none;
+  gap: 0.9rem;
+}
+
+#artist-albums:checked ~ .artist-navigation .alt-nav-btns {
+  display: flex;
+}
+
+.artist-tab-content {
+  display: none;
+}
+
+#artist-home:checked ~ #panel-home,
+#artist-albums:checked ~ #panel-albums,
+#artist-singles:checked ~ #panel-singles,
+#artist-compilations:checked ~ #panel-compilations,
+#artist-merch:checked ~ #panel-merch,
+#artist-about:checked ~ #panel-about,
+#artist-features:checked ~ #panel-features {
+  display: block;
+}
+
+#panel-albums .albums-list-view,
+#panel-albums .albums-grid-view {
+  display: none;
+}
+
+#albums-list:checked ~ #panel-albums .albums-list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+#albums-grid:checked ~ #panel-albums .albums-grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 1.1rem;
+}
+
+#albums-list:checked ~ .artist-navigation .alt-nav-btns label[for="albums-list"],
+#albums-grid:checked ~ .artist-navigation .alt-nav-btns label[for="albums-grid"] {
+  color: v.$text-primary;
+}
+
+#artist-home:checked ~ .artist-navigation .artist-menu label[for="artist-home"],
+#artist-albums:checked ~ .artist-navigation .artist-menu label[for="artist-albums"],
+#artist-singles:checked ~ .artist-navigation .artist-menu label[for="artist-singles"],
+#artist-compilations:checked ~ .artist-navigation .artist-menu label[for="artist-compilations"],
+#artist-merch:checked ~ .artist-navigation .artist-menu label[for="artist-merch"],
+#artist-about:checked ~ .artist-navigation .artist-menu label[for="artist-about"],
+#artist-features:checked ~ .artist-navigation .artist-menu label[for="artist-features"] {
+  color: v.$text-primary;
+  border-bottom: 0.2rem solid v.$primary-accent;
+}
+
+//album grid view//
+.albums-grid-view {
+  .description,
+  .album-title-wrapper {
+    min-width: 0;
+  }
+
+  .album-title-wrapper{
+    gap:3.3rem;
+  }
+
+  .card-title {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+//album list view//
+.albums-list-view {
+  @include m.flex($direction: column, $align: stretch);
+  gap: 1.1rem;
+}
+
+.album-row {
+  display: grid;
+  grid-template-columns: 5rem 1fr auto auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.album-cover-small {
+  width: 13rem;
+  height: 13rem;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+
+.album-info {
+  min-width: 0;
+}
+
+.album-title-wrapper {
+  min-width: 0;
+  @include m.flex($justify: flex-start, $align: center);
+  gap: 0.6rem;
+}
+
+.album-controls {
+  @include m.flex($justify: flex-start, $align: center);
+  gap: 0.6rem;
+}
+
+.album-arrow {
+  background: transparent;
+  border: none;
+} 

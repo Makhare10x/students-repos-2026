@@ -1,0 +1,85 @@
+@use "variables" as *;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin card-style {
+
+  gap: 11px;
+  background-color: $bg-light-grey;
+  border-radius: $border-radius-base;
+  padding: $padding-base;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $bg-dark-grey; 
+  }
+}
+
+@mixin flex-row($justify: space-between) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}
+
+// Hover effects
+@mixin hover-active {
+  color: $text-active;
+  background-color: $bg-light-grey;
+  border-color: $border-col;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+ 
+}
+
+
+@mixin nav-flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+// Card layouts for different pages
+// @mixin card-grid-layout($min-width: 170px, $gap: 11px) {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax($min-width, 1fr));
+//   gap: $gap;
+// }
+
+
+// Content inside header
+
+@mixin content-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* სქროლის ხაზის გასაქრობად */
+
+@mixin hide-scrollbar {
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // IE/Edge
+  &::-webkit-scrollbar {
+    display: none; // Chrome/Safari/Opera
+  }
+}
+
+
+// For making images round
+
+@mixin round {
+    border-radius: 50% !important;
+    aspect-ratio: 1 / 1 !important;
+    overflow: hidden;
+}    
+
+
+@mixin green-hover {
+  color: $brand-color;
+}

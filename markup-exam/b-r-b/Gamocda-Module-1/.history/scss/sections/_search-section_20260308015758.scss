@@ -1,0 +1,45 @@
+@use '../abstract/mixins' as *;
+@use '../universal components/components' as *;
+@use '../abstract/responsive' as *;
+@use '../abstract/variables' as *;
+
+
+
+
+.search-card-x-doublelayer-container {
+    @include search-card-x-doublelayer();
+}
+
+
+.card-inside-image-container {
+    @include inside-image-card()
+}
+
+
+.search-card-pin-doublelayer-container {
+    display: grid;
+    
+
+     .pin-mark-cont, .pin-icon{
+        grid-area: 1 / 1;   
+    }
+    .melody {
+        
+    }
+    .pin-card-image-cont {
+        background-color: #3D3D3D;
+        width: 17rem;
+        height: 17rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -100;
+    }
+
+    .pin-icon {
+        transform: translateY(-6.6rem);
+        z-index: 100;
+    }
+    
+    
+}

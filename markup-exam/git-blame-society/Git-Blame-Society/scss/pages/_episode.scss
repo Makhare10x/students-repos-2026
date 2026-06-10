@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+
+.episode {
+    display: flex;
+    align-items: flex-start;
+}
+
+.watch-episode {
+    margin: 3rem 0 10rem 0;
+}
+
+.episode-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin:2rem 5rem 0 5.7rem;
+}
+
+.episode-about {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}

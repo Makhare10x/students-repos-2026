@@ -1,0 +1,243 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spotify playlist</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page-mobile-library">
+<header class="navbar">
+        <div class="navbar-container desktop-version">
+
+           <nav class="nav-group center-section">
+        
+            <a href="#" class="nav-link active ">
+                <img src="./assets/icons/nav-library/home-active.svg" alt="" >
+                <span class="label">Home</span>
+            </a>
+
+            <a href="#" class="nav-link ">
+                <img src="./assets/icons/nav-library/discover.svg" alt="">
+                <span class="label">Discover</span>
+            </a>
+        
+            <form class="search-container" role="search">
+                <label for="nav-search" class="search-icon">
+                    <img src="./assets/icons/nav-library/search.svg" alt="Search">
+                </label>
+                <input type="text" id="nav-search" placeholder="Search" class="search-input">
+            </form>
+
+    </nav>
+        
+       
+        <section class="nav-group right icon-section">
+            <button class="tool-btn " aria-label="News">
+                <img src="./assets/icons/nav-library/notification.svg" alt="">
+            </button>
+
+            <button class="tool-btn " aria-label="Private">
+                <img src="./assets/icons/nav-library/lock.svg" alt="">
+            </button>
+
+            <button class="tool-btn for-desktop" aria-label="Friends">
+                <img src="./assets/icons/nav-library/friends.svg" alt="">
+            </button>
+
+            <button class="tool-btn " aria-label="Settings">
+                <img src="./assets/icons/nav-library/settings.svg" alt="">
+            </button>
+
+            <button class="tool-btn " aria-label="profile-pic">
+                <img src="./assets/icons/nav-library/pofile-pic.svg" alt="">
+            </button>
+
+    </section>
+         </div>
+
+         <section class="mobile-version">
+            
+            
+
+          
+            <a href="index.html" class="mobile-icon active" role="button" aria-label="home">
+                <img src="./assets/icons/nav-library/home-inactive.png" alt="Profile avatar">
+            </a>
+            
+             <a class="mobile-icon" role="button" aria-label="Profile">
+                <img src="./assets/icons/nav-library/discover.svg" alt="Profile avatar">
+            </a>
+
+             <a class="mobile-icon" role="button" aria-label="Profile">
+                <img src="./assets/icons/nav-library/search.svg" alt="Profile avatar">
+            </a>
+
+             <a class="mobile-icon" role="button" aria-label="Profile">
+                <img src="./assets/icons/nav-library/library-active.png" alt="Profile avatar">
+            </a>
+            
+             <a class="mobile-icon" role="button" aria-label="Profile">
+                <img src="./assets/icons/nav-library/me-prof.png" alt="Profile avatar">
+            </a>
+         </section>
+
+    </header>
+
+    
+ <!--this is a sidebar library for mobile-->
+    <section class="mobile-library">
+        <header class="mobile-library-header">
+            <form class="search-form" role="search">
+                <div class="search-input-wrapper">
+            <input 
+                type="search" 
+                placeholder="Search library" 
+                class="search-input"
+                aria-label="Search your library"
+            >
+            <img src="assets/icons/sidebar-library/search.png" alt="search-icon" class="search-icon">
+        </div>
+    </form>
+        <img src="assets/icons/sidebar-library/plus.png" alt="plus">
+
+        
+        </header>
+
+        <div class="filter">
+            <button class="group">
+                <img src="assets/icons/sidebar-library/group.png" alt="group">
+                <span>Group</span>
+
+            </button>
+            <button class="recents">
+                <span>Recents</span>
+                <img src="assets/icons/sidebar-library/recents.png" alt="recents" class="recents-og">
+            </button>
+
+        </div>
+
+        <ul class="mobile-library-list">
+            <li class="mobile-library-item">
+                <a href="playlist.html">
+                <span>Playlists</span>
+                <img src="assets/icons/sidebar-library/aroow-down.png" alt="">
+                </a>
+
+            </li>
+
+            <li class="mobile-library-item">
+                <a href="mobile-library.html">
+                <span>Playlists by Spotify</span>
+                <img src="assets/icons/sidebar-library/arrow.png" alt="">
+                </a>
+
+                
+                <div class="cards-cont">
+                
+                <div class="card card-stacked-green"> 
+                    <img src="assets/pictures/made-for-u/dailymix1.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont num-green">
+                        <span>Daily Mix 1</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">Linkin Park, System Of A Down, Coal Chamber...</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-babypink">
+                    <img src="assets/pictures/made-for-u/dailymix2.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont num-pink">
+                        <span>Daily Mix 2</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">Avril Lavigne, Lorde, Charli XCX and more</p>
+                    </div>
+                </div>
+            
+                <div class="card card-stacked-saladgreen">
+                    <img src="assets/pictures/made-for-u/dailymix3.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont num-neon">
+                        <span>Daily Mix 3</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">The Strokes, Martin Garrix, MGMT and more</p>
+                    </div>
+                </div>
+
+                 <div class="card card-stacked-electricgreen">
+                    <img src="assets/pictures/made-for-u/rockmix.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont num-brightgreen">
+                        <span>Rock Mix</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-electricyellow"> 
+                    <img src="assets/pictures/made-for-u/chilimix.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont num-brightyellow">
+                        <span>Chill Mix</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">MF DOOM, Daft Punk, The Chainsmokers, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-cyan">
+                    <img src="assets/pictures/made-for-u/popmix.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont num-babyblue">
+                        <span>Pop Mix</span>
+                        <span>50</span>
+                    </div>
+                    <p class="card-main-txt">Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+                    </div>
+                </div>
+               
+                
+            </div>
+
+            </li>
+
+            <li class="mobile-library-item">
+                <a href="albums.html">
+                <span>Albums</span>
+                <img src="assets/icons/sidebar-library/arrow.png" alt="">
+                </a>
+
+            </li>
+
+            <li class="mobile-library-item">
+                <a href="folders.html">
+                <span>Folders</span>
+                <img src="assets/icons/sidebar-library/arrow.png" alt="">
+                </a>
+
+            </li>
+
+            <li class="mobile-library-item">
+                <a href="artists.html">
+                <span>Artists</span>
+                <img src="assets/icons/sidebar-library/arrow.png" alt="">
+                </a>
+
+            </li>
+
+        </ul>
+
+    </section>
+</body>

@@ -1,0 +1,104 @@
+@use "./variables" as var;
+
+
+@mixin flex-column-items($justify: null, $align: null, $direction: null) {
+    display: flex;
+    flex-direction: $direction;
+    justify-items: $justify;
+    align-items: $align;
+}
+
+@mixin flex-column($justify: null, $direction: column) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+
+}
+
+
+@mixin flex-wrap($justify: null, $align: null, $flex-wrap: null) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify;
+    align-content: $align;
+}
+
+@mixin flex-box($justify: null, $align: null) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+@mixin grid-fill() {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+    gap: 1rem;
+}
+
+@mixin flex-menu($grow: 0.5, $shrink: 0.5, $basis: auto) {
+    ul {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+
+        li {
+            flex: $grow $shrink $basis;
+        }
+    }
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-lyst {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+@mixin link-style($color, $hover-color) {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: $color;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: $hover-color;
+    }
+}
+
+// ======== Footer - player stile  =============
+
+@mixin player-border {
+    border: 0.2rem solid var.$bg-base;
+    border-radius: 1rem;
+    background-color: var.$Fg-secondary;
+    padding: 2rem;
+}
+
+// ======= layout  border-style ==========
+@mixin page-border {
+    border: 0.1rem solid var.$border-color;
+    border-radius: 1rem;
+}
+
+@mixin title-style {
+    font-size: 3.6rem;
+    line-height: auto;
+    letter-spacing: 2%;
+    color: var.$font-activ;
+
+}
+
+@mixin artists-title {
+   
+    font-size: 5rem;
+    color: var.$font-activ;
+}

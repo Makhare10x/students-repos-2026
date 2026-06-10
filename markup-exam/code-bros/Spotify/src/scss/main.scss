@@ -1,0 +1,36 @@
+@use "base/reset";
+@use "base/typography";
+@use "components/buttons";
+@use "abstracts/variables";
+@use "abstracts/mixins";
+
+@use "components/navigation";
+@use "components/player";
+@use "components/sidebar";
+@use "layout/homepage";
+@use "layout/search";
+@use "layout/library";
+
+
+
+
+
+body {
+  background-color: variables.$bg-primary;
+
+
+  @media (min-width: 1024px) {
+    @include mixins.grid-layout;
+
+    &.friends-open {
+        grid-template-columns: 24.8rem 1fr 28rem;
+        grid-template-areas:
+            "header  header  header"
+            "sidebar main    friends"
+            "sidebar footer  footer";
+    }
+  }
+}
+main{
+    grid-area: main;
+}

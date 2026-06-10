@@ -1,0 +1,170 @@
+@use "../abstracts/default" as d;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+@media (min-width: 1000px) {
+  .profile-page-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+  }
+  .profile-header__setting-list {
+    margin-bottom: 2rem;
+  }
+}
+
+.profile-header {
+  &__profile-content-wrapper {
+    max-width: 97rem;
+    width: 100%;
+  }
+
+  .profile-image-mobile-version {
+    img {
+      width: 0.9rem;
+    }
+  }
+  &__profile-content-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__profile-wrapper {
+    position: relative;
+    display: flex;
+    gap: 1.6rem;
+    padding: 1.9rem;
+    margin: 0 0.7rem 1.5rem 0.7em;
+    background: linear-gradient(
+      180.48deg,
+      rgba(138, 53, 74, 0.47) -22.33%,
+      rgba(17, 17, 17, 0.47) 89.29%
+    );
+    border-radius: 1.2rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+  }
+  &__profile-info {
+    h3 {
+      color: v.$color-text-primary;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .followers-count {
+      margin-bottom: 1rem;
+    }
+    p {
+      color: v.$color-text-secondary;
+      font-size: 1.4rem;
+
+      strong {
+        color: v.$color-text-primary;
+        margin-right: 0.5rem;
+      }
+      span {
+        font-size: 0.5rem;
+        margin: 0 1rem;
+        position: relative;
+        bottom: 0.5rem;
+      }
+    }
+  }
+  &__profile-actions {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.8rem;
+    top: 1.3rem;
+    right: 1.9rem;
+  }
+  &__premium-wrapper {
+    padding: 1.9rem;
+    background: linear-gradient(180deg, #10301b 0%, #111111 100%);
+    border-radius: 1.2rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    margin: 0 0.7rem 1.5rem 0.7rem;
+  }
+  &__premium-icon {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: v.$color-text-primary;
+  }
+  &__premium-status {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    color: rgba(30, 215, 96, 1);
+  }
+
+  &__premium-price {
+    font-size: 1.4rem;
+    color: v.$color-text-primary;
+  }
+  &__settings-wrapper {
+    margin: 0 0.7rem 1.5rem 0.7rem;
+  }
+  &__setting-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(32, 32, 32, 1);
+  }
+  &__setting-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    p {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: v.$color-text-primary;
+    }
+  }
+  &__list-padding-reset {
+    padding: 0 1rem 0.5rem 0;
+  }
+}
+
+.mobile-version {
+  &__mobile-version-wrapper {
+    position: relative;
+    padding: 4.7rem 1.9rem 2rem 1.9rem;
+    height: 16.5rem;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.2rem;
+    margin: 0 0.7rem 1.5rem 0.7rem;
+  }
+  &__friendlist-wrapper {
+    margin: 0 0.7rem;
+    position: relative;
+    overflow: scroll;
+    height: 11.5rem;
+  }
+  &__mobile-version-wrapper::before {
+    content: "Friends";
+    position: absolute;
+    color: v.$color-text-primary;
+    top: 1.3rem;
+    left: 1.9rem;
+    font-size: 1.2rem;
+  }
+  &__add-friend-icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 1.9rem;
+    top: 1.3rem;
+    cursor: pointer;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    &:hover {
+      background-color: v.$color-border-soft;
+    }
+  }
+}

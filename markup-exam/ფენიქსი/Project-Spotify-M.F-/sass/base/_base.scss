@@ -1,0 +1,29 @@
+/* =====================
+  Helpers
+===================== */
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+
+
+/* =====================
+  Base
+===================== */
+
+body {
+
+  min-width: 1200px;
+  background-color: $color-body;
+  color: $color-text-primary;
+  font-family: $font-primary;
+  overflow: hidden;
+
+  }
+  
+@include mobile {
+  body {
+    min-width: 320px;
+    overflow-x: hidden;
+  }
+}
+

@@ -1,0 +1,61 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
+.search-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    form {
+        margin-top: 1.8rem;
+        display: flex;
+        position: relative;   
+        input{
+          background-color: v.$bg-form;  
+          border: none;
+          border-radius: 1rem;
+          width: map.get(v.$card-dimensions, "search-width");
+          height: map.get(v.$card-dimensions, "search-height");   
+          padding-left:1rem; 
+          font-size: map.get(v.$font-sizes, "body-sm");
+          color:v.$cover-text;
+              &::placeholder{
+               color: v.$form-text;
+                 font-weight:map.get(v.$font-weights,"bold") ;
+            }
+        }
+        img:first-of-type {
+            position: relative;
+            right: 2.9rem;
+        }
+    }
+}
+.library-navigation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    form{
+        margin-top:1.8rem ;
+        display: flex;
+        position: relative;   
+        input{
+          background-color: v.$bg-form;  
+          border: none;
+          border-radius: 1rem;
+          width: map.get(v.$card-dimensions, "search-width");
+          height: map.get(v.$card-dimensions, "search-height");   
+          padding-left:1rem; 
+          font-size: map.get(v.$font-sizes, "body-sm");
+          color:v.$cover-text;
+              &::placeholder{
+               color: v.$form-text;
+                 font-weight:map.get(v.$font-weights,"bold") ;
+            }
+       }   
+       img:first-of-type {
+             position: relative;
+             right:2.9rem;
+       }
+    }
+}

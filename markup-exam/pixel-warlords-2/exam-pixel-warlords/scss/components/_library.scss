@@ -1,0 +1,97 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+.library-select {
+  .library-nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 1rem;
+    margin: 1rem;
+	  color: gray;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+
+      &:nth-child(1) {
+        margin-right: 12px;
+      }
+
+      &:nth-child(2) {
+        margin-right: 28px;
+      }
+
+      &:nth-child(3) {
+        margin-right: 18px;
+      }
+
+      &:nth-child(5) {
+        margin-left: 28px;
+      }
+      &:nth-child(6){
+        margin-left: auto;
+      }
+    }
+  }
+}
+.lib-sidebar {
+  position:fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: flex-start;
+  background-color: variables.$bg-light; 
+  border-radius: 16px;                       
+  width: 250px;
+  height: 100vh;
+  z-index: 11;
+  list-style: none;
+  margin: 5px;
+  
+
+    li {
+      padding: 10px 0;
+      color: white;
+      cursor: pointer;
+      
+    }
+
+    .nav-item{
+      padding: 10px 0;
+      color: variables.$text-muted;
+      
+    }
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .nav-item a {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+        color: variables.$text-main;
+        transition: 0.3s ease;
+        
+        
+        &:hover {
+          color: variables.$spotify-green;
+          scale: 1.05;
+        }
+
+      }
+
+      .nav-item.active a {
+        color: variables.$text-main;
+        scale: 1.05;
+      }
+      .pins-point-icon{
+        margin-left: 140px;
+      }
+      .play-point-icon{
+        margin-left: 120px;
+      }
+    }  
+}

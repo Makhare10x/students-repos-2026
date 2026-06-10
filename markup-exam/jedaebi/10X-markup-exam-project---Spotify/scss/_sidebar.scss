@@ -1,0 +1,172 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// =====================
+// Sidebar
+// =====================
+.sidebar {
+  width: $sidebar-width;
+  height: calc(100vh - 20px);
+  background-color: $color-sidebar-bg;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: 0 $spacing-md $spacing-md;
+  border-radius: 10px;
+  margin: 10px 0 10px 10px;
+  overflow-y: auto;
+}
+
+// =====================
+// Sidebar Header
+// =====================
+.sidebar-header {
+  @include flex-between;
+  height: $header-height;
+  padding: 0 $spacing-md;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    color: $color-text;
+    font-weight: 700;
+    font-size: $font-lg;
+     cursor: pointer; // ✅ დაამატე
+     text-decoration: none; // ✅ დაამატე
+
+  &:hover {
+    color: #fff; // ✅ დაამატე
+  }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  &__btn {
+    color: $color-text-muted;
+    font-size: $font-lg;
+    padding: $spacing-xs;
+
+    &:hover {
+      color: $color-text;
+    }
+  }
+
+  &:hover &__actions {
+    opacity: 1;
+  }
+}
+
+// =====================
+// Sidebar Navigation
+// =====================
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $radius-md;
+  color: $color-text-muted;
+  font-size: $font-md;
+  transition: all 0.2s ease;
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  &__arrow {
+    margin-left: auto;
+    font-size: $font-sm;
+  }
+
+  &:hover {
+    color: $color-text;
+    background-color: $color-surface;
+  }
+}
+
+// =====================
+// Active State
+// =====================
+.sidebar-item--active {
+  color: $color-text;
+  background-color: $color-surface;
+}
+
+// =====================
+// Dropdown
+// =====================
+.sidebar-dropdown {
+  summary {
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &[open] .sidebar-link__arrow {
+    transform: rotate(90deg);
+    transition: transform 0.2s ease;
+  }
+
+  .sidebar-link__arrow {
+    transition: transform 0.2s ease;
+  }
+}
+
+.sidebar-sublist {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+  padding-left: $spacing-lg;
+  margin-top: $spacing-xs;
+}
+
+.sidebar-sublink {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-xs $spacing-md;
+  border-radius: $radius-md;
+  color: $color-text-muted;
+  font-size: $font-md;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $color-text;
+    background-color: $color-surface;
+  }
+}
+
+// =====================
+// Mobile: hide sidebar
+// =====================
+@include mobile {
+  .sidebar {
+    display: none;
+  }
+}

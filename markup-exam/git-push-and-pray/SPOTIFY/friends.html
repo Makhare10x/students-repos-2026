@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <section class="main_structure">
+            <!-- aside section -->
+        <aside class="side-nav">
+            <!-- side navigation -->
+            <nav class="aside_nav">
+                <ul class="aside_nav_items">
+                    <li class="main_pages">
+                        <div class="each_page">
+                            <img src="assets/images/aside/library.png" alt="library icon">
+                            <a href="my_library.html">My Library</a>
+                        </div>
+                        <div class="each_page">
+                            <img src="assets/images/aside/pin.png" alt="pin icon">
+                            <a href="#">Pins</a>
+                        </div>
+                        <div class="each_page">
+                            <img src="assets/images/aside/albums.png" alt="playlist icon">
+                            <a href="#">Playlists</a>
+                        </div>
+                        <div class="each_page">
+                            <img src="assets/images/aside/like.png" alt="like icon">
+                            <a href="librarypg2.html">Liked songs</a>
+                        </div>
+                        <div class="each_page">
+                            <img src="assets/images/aside/save.png" alt="save icon">
+                            <a href="#">Saves</a>
+                        </div>
+                        <div class="each_page">
+                            <img src="assets/images/aside/albums.png" alt="album icon">
+                            <a href="album.html">Albums</a>
+                        </div>
+                        <div class="each_page">
+                            <img src="assets/images/aside/folder.png" alt="folder icon">
+                            <a href="#">Folders</a>
+                        </div>
+                        <div class="each_page">
+                            <img src="assets/images/aside/podcast.png" alt="podcast icon">
+                            <a href="podcast.html">Podcasts</a>
+                        </div>
+                        <div class="each_page">
+                            <img src="assets/images/aside/audiobook.png" alt="audiobook icon">
+                            <a href="#">Audiobooks</a>
+                        </div>
+                        <div class="each_page">
+                            <img src="assets/images/aside/artist.png" alt="artist icon">
+                            <a href="#">Artists</a>
+                        </div>
+
+                    </li>
+                </ul>
+            </nav>
+
+        </aside>
+        <!-- page header -->
+        <section class="first_page">
+                <!-- header -->
+            <header class="header">
+                <nav class="nav_section">
+                    <!-- header's main navigation -->
+                    <section class="main_section">
+                        <div class="home">
+                            <img class="header_btn" src="assets/images/header/home.png" alt="home logo">
+                            <a href="index.html">Home</a>
+                        </div>
+                        <div class="discover">
+                            <img class="header_btn" src="assets/images/header/discover.png" alt="discover logo">
+                            <a href="discover.html">Discover</a>
+                        </div>
+                        <div class="search">
+                            <img class="header_btn" src="assets/images/header/search.png" alt="discover logo">
+                            <input type="text" placeholder="search">
+                        </div>
+                    </section>
+                </nav>
+
+                <!-- action buttons -->
+                <section class="actions">
+                    <button><img src="assets/images/header/notification.png" alt="notification icon"></button>
+                    <button><img src="assets/images/header/lock.png" alt="lock icon"></button>
+                    <button><img src="assets/images/friends/friend.png" alt="friend icon"></button>
+                    <button><img src="assets/images/header/settings.png" alt="settings icon"></button>
+                    <img class="profile" src="assets/images/header/profile.png" alt="profile picture">
+                </section>
+
+            </header>
+            <hr>
+            <!-- main -->
+            <main class="main">
+                <!-- filters -->
+                <div class="filters">
+                    <button class="full_btn">All</button>
+                    <button>Music</button>
+                    <button>Podcasts</button>
+                    <button>Audiobooks</button> 
+                </div>
+                
+                <!-- title and scroll options -->
+                <section class="scroll">
+                     <h2>Made For You</h2>
+                     <div class="arrows">
+                        <img src="assets/images/main/left.png" alt="left arrow">
+                        <img src="assets/images/main/right.png" alt="right arrow">
+                        <img src="assets/images/main/dots.png" alt="view more">
+                     </div>
+                </section>
+               
+                <!-- playlists, made for you -->
+                <section class="made_for_you">
+                    <div class="each_pl">
+                        <div class="pl_photo">
+                            <img src="assets/images/main/1.png" alt="discover weakly">
+                        </div>
+                        <div class="pl_info">
+                            <div class="pl_name">
+                                <p class="pl_title">Discover Weekly</p>
+                                <p class="pl_num" id="pink">50</p>
+                            </div>
+                            <p>Your weekly mixtape of fresh music.</p>
+                        </div>
+                    </div>
+                    <div class="each_pl">
+                        <div class="pl_photo">
+                            <img src="assets/images/main/2.png" alt="daily mix 1">
+                        </div>
+                        <div class="pl_info">
+                            <div class="pl_name">
+                                <p class="pl_title">Daily Mix 1</p>
+                                <p class="pl_num" id="green">50</p>
+                            </div>
+                            <p>Linkin Park, System Of A Down, Coal Chamber...</p>
+                        </div>
+                    </div>
+                    <div class="each_pl">
+                        <div class="pl_photo">
+                            <img src="assets/images/main/3.png" alt="daily mix 2">
+                        </div>
+                        <div class="pl_info">
+                            <div class="pl_name">
+                                <p class="pl_title">Daily Mix 2</p>
+                                <p class="pl_num" id="green">50</p>
+                            </div>
+                            <p>Avril Lavigne, Lorde, Charli XCX and more</p>
+                        </div>
+                    </div>
+                    <div class="each_pl">
+                        <div class="pl_photo">
+                            <img src="assets/images/main/4.png" alt="daily mix 3">
+                        </div>
+                        <div class="pl_info">
+                            <div class="pl_name">
+                                <p class="pl_title">Daily Mix 3</p>
+                                <p class="pl_num" id="green">50</p>
+                            </div>
+                            <p>The Strokes, Martin Garrix, MGMT and more</p>
+                        </div>
+                    </div>
+
+                    <div class="each_pl">
+                         <div class="pl_photo">
+                            <img src="assets/images/main/5.png" alt="daily mix 4">
+                        </div>
+                        <div class="pl_info">
+                            <div class="pl_name">
+                                <p class="pl_title">Daily Mix 4</p>
+                                <p class="pl_num" id="pink">50</p>
+                            </div>
+                            <p>Chuck Berry, Elvis Presley, Roy Orbison and more</p>
+                        </div>
+                    </div>
+
+                    <div class="each_pl">
+                        <div class="pl_photo">
+                            <img src="assets/images/main/6.png" alt="daily mix 6">
+                        </div>
+                        <div class="pl_info">
+                            <div class="pl_name">
+                                <p class="pl_title">Daily Mix 6</p>
+                                <p class="pl_num" id="green">50</p>
+                            </div>
+                            <p>Frank Sinatra, Gerhard Trede, Dean Martin and more</p>
+                        </div>
+                    </div>
+                       
+
+                    <div class="each_pl">
+                        <div class="pl_photo">
+                            <img src="assets/images/main/7.png" alt="nirvana">
+                        </div>
+                        <div class="pl_info">
+                            <div class="pl_name">
+                                <p class="pl_title">Nirvana Radio</p>
+                                <p class="pl_num" id="yellow">50</p>
+                            </div>
+                            <p>The Strokes, Martin Garrix, MGMT and more</p>
+                        </div>
+                    </div>
+
+                    <div class="each_pl">
+                        <div class="pl_photo">
+                            <img src="assets/images/main/8.png" alt="fall out boys">
+                        </div>
+                        <div class="pl_info">
+                            <div class="pl_name">
+                                <p class="pl_title">Fall Out Boys</p>
+                                <p class="pl_num" id="yellow">50</p>
+                            </div>
+                            <p>With Panic! At The Disco, The All-American Rejects,...</p>
+                        </div>
+                    </div>
+
+                </section>
+                <!-- second section -->
+                <section class="scroll">
+                     <h2>Your top mixes</h2>
+                     <div class="arrows">
+                        <img src="assets/images/main/left.png" alt="left arrow">
+                        <img src="assets/images/main/right.png" alt="right arrow">
+                        <img src="assets/images/main/dots.png" alt="view more">
+                     </div>
+                </section>
+                <!-- your top mixes section -->
+                <section class="your_top_mixes">
+                    <div class="each_pl">
+                        <div class="pl_photo">
+                            <img src="assets/images/main/9.png" alt="rock mix">
+                        </div>
+                        <div class="pl_info">
+                            <div class="pl_name">
+                                <p class="pl_title">Rock Mix</p>
+                                <p class="pl_num" id="yellow">50</p>
+                            </div>
+                            <p>Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+                        </div>
+                    </div>
+                    <div class="each_pl">
+                        <div class="pl_photo">
+                            <img src="assets/images/main/10.png" alt="chill mix">
+                        </div>
+                        <div class="pl_info">
+                            <div class="pl_name">
+                                <p class="pl_title">Chill mix</p>
+                                <p class="pl_num" id="yellow">50</p>
+                            </div>
+                            <p>MF DOOM, Daft Punk, The Chainsmokers, and more</p>
+                        </div>
+                    </div>
+                    <div class="each_pl">
+                        <div class="pl_photo">
+                            <img src="assets/images/main/11.png" alt="pop mix">
+                        </div>
+                        <div class="pl_info">
+                            <div class="pl_name">
+                                <p class="pl_title">Pop Mix</p>
+                                <p class="pl_num" id="green">50</p>
+                            </div>
+                            <p>Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+                        </div>
+                    </div>
+                    <div class="each_pl">
+                        <div class="pl_photo">
+                            <img src="assets/images/main/12.png" alt="Daft pank Mix">
+                        </div>
+                        <div class="pl_info">
+                            <div class="pl_name">
+                                <p class="pl_title">Daft pank Mix</p>
+                                <p class="pl_num" id="green">50</p>
+                            </div>
+                            <p>Daft Punk, MGMT, Muse, and more</p>
+                        </div>
+                    </div>
+
+                    <div class="each_pl">
+                         <div class="pl_photo">
+                            <img src="assets/images/main/13.png" alt="Happy Mix">
+                        </div>
+                        <div class="pl_info">
+                            <div class="pl_name">
+                                <p class="pl_title">Happy Mix</p>
+                                <p class="pl_num" id="pink">50</p>
+                            </div>
+                            <p>The Turtles, Van Morrison, ABBA and more</p>
+                        </div>
+                    </div>
+
+                    <div class="each_pl">
+                        <div class="pl_photo">
+                            <img src="assets/images/main/14.png" alt="David Bowie Mix">
+                        </div>
+                        <div class="pl_info">
+                            <div class="pl_name">
+                                <p class="pl_title">David Bowie Mix</p>
+                                <p class="pl_num" id="yellow">50</p>
+                            </div>
+                            <p>Soft Cell, The Who and The Clash</p>
+                        </div>
+                    </div>
+                       
+
+                    <div class="each_pl">
+                        <div class="pl_photo">
+                            <img src="assets/images/main/15.png" alt="Upbeat Mix">
+                        </div>
+                        <div class="pl_info">
+                            <div class="pl_name">
+                                <p class="pl_title">Upbeat Mix</p>
+                                <p class="pl_num" id="green">50</p>
+                            </div>
+                            <p>Kylie Minogue, Charli XCX, Cage The Elephant and...</p>
+                        </div>
+                    </div>
+
+                    <div class="each_pl">
+                        <div class="pl_photo">
+                            <img src="assets/images/main/16.png" alt="60's mix">
+                        </div>
+                        <div class="pl_info">
+                            <div class="pl_name">
+                                <p class="pl_title">60's mix</p>
+                                <p class="pl_num" id="pink">50</p>
+                            </div>
+                            <p>Chuck Berry, Skeeter David, Van Morrison and...</p>
+                        </div>
+                    </div>
+
+                </section>
+                <!-- recent watches -->
+                <section class="recent">
+                     <h2>Resent Watches</h2>
+                     <div class="arrows">
+                        <img src="assets/images/main/dots.png" alt="view more">
+                     </div>
+                </section>
+                <!-- recent searches -->
+                <section class="searches">
+                    <div class="each_search">
+                        <img class="artist" src="assets/images/main/punk.png" alt="daft punk">
+                        <img class="close" src="assets/images/main/X.png" alt="x">
+                        <p>Daft Punk</p>
+                    </div>
+                    <div class="each_search">
+                        <img class="artist" src="assets/images/main/bowie.png" alt="David Bowie">
+                        <p>David Bowie</p>
+                    </div>
+                    <div class="each_search">
+                        <img class="artist" src="assets/images/main/black_holes.png" alt="black holes">
+                        <img class="close" src="assets/images/main/X.png" alt="x">
+                        <p>Black Holes</p>
+                    </div>
+
+                </section>
+
+                <!-- browse all -->
+                <section class="browse">
+                     <h2>Browse All</h2>
+                     <p>discover</p>
+                </section>
+                <!-- albums sort by popularity -->
+                <section class="discover_ls" id="discover">
+                    <div class="each_discover_box" id="madeforu" >
+                        <p class="discover_title">Made For You</p>
+                        <img src="assets/images/main/madeforyou.png" alt="made for u">
+                    </div>
+                    <div class="each_discover_box" id="releases" >
+                        <p class="discover_title">New Releases</p>
+                        <img src="assets/images/main/releases.png" alt="new releases">
+                    </div>
+                    <div class="each_discover_box" id="classics" >
+                        <p class="discover_title">Spotify Classics</p>
+                        <img src="assets/images/main/classics.png" alt="classics">
+                    </div>
+                    <div class="each_discover_box" id="charts" >
+                        <p class="discover_title">Charts</p>
+                        <img src="assets/images/main/charts.png" alt="charts">
+                    </div>
+                    <div class="each_discover_box" id="trending" >
+                        <p class="discover_title">Trending</p>
+                        <img src="assets/images/main/trending.png" alt="trending">
+                    </div>
+                    <div class="each_discover_box" id="discover" >
+                        <p class="discover_title">Discover</p>
+                        <img src="assets/images/main/discover.png" alt="discover">
+                    </div>
+                    <div class="each_discover_box" id="singles" >
+                        <p class="discover_title">Spotify Singles</p>
+                        <img src="assets/images/main/singles.png" alt="singles">
+                    </div>
+                    <div class="each_discover_box" id="decades" >
+                        <p class="discover_title">Decades</p>
+                        <img src="assets/images/main/decades.png" alt="decades">
+                    </div>
+                </section>
+                <!-- albums sort by ganres -->
+                <div class="ganres_title">
+                    <p>Ganres</p>
+                </div>
+                <section class="ganres">
+                    <div class="each_ganres_box" id="pop" >
+                        <p class="ganres_title">Pop</p>
+                        <img src="assets/images/main/pop.png" alt="pop">
+                    </div>
+                    <div class="each_ganres_box" id="country" >
+                        <p class="ganres_title">Country</p>
+                        <img src="assets/images/main/country.png" alt="country">
+                    </div>
+                    <div class="each_ganres_box" id="hip-hop" >
+                        <p class="ganres_title">Hip-Hop</p>
+                        <img src="assets/images/main/hip-hop.png" alt="hip-hop">
+                    </div>
+                    <div class="each_ganres_box" id="rock" >
+                        <p class="ganres_title">Rock</p>
+                        <img src="assets/images/main/rock.png" alt="Rock">
+                    </div>
+                    <div class="each_ganres_box" id="indie" >
+                        <p class="ganres_title">Indie</p>
+                        <img src="assets/images/main/indie.png" alt="indie">
+                    </div>
+                    <div class="each_ganres_box" id="punk" >
+                        <p class="ganres_title">Punk</p>
+                        <img src="assets/images/main/punk2.png" alt="punk">
+                    </div>
+                    <div class="each_ganres_box" id="metal" >
+                        <p class="ganres_title">Metal</p>
+                        <img src="assets/images/main/metal.png" alt="metal">
+                    </div>
+                    <div class="each_ganres_box" id="instrumental" >
+                        <p class="ganres_title">Instrumental</p>
+                        <img src="assets/images/main/instrumental.png" alt="instrumental">
+                    </div>
+                </section>
+            </main>
+            <footer class="player">
+            <!-- controls -->
+            <section class="player-controle">
+                <div class="controls">
+                    <img src="assets/images/footer/pause.png" alt="pause">
+                    <img src="assets/images/footer/left.png" alt="left">
+                    <img src="assets/images/footer/right.png" alt="right">
+                    <img src="assets/images/footer/switch.png" alt="switch">
+                    <img src="assets/images/footer/reply.png" alt=reply>
+                </div>
+                <div class="progress-section">
+                    <span>2:23</span>
+
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+
+                    <span>4:45</span>
+                </div>
+            </section>
+            <section class="music_and_buttons">
+                <!-- Track info -->
+                <section class="music">
+                    <div class="music_info">
+                        <img src="assets/images/footer/song.png" alt="album cover">
+                        <div class="track-info">
+                            <p class="track-title">Get Lucky</p>
+                            <p class="artist">Daft Punk</p>
+                            <p class="band">Random Access Memories</p>
+                        </div>
+                    </div>
+                    
+                    <div class="track-actions">
+                        <img src="assets/images/footer/like.png" alt="like">
+                        <img src="assets/images/footer/add.png" alt="add">
+                        <img src="assets/images/footer/lyrics.png" alt="playlist">
+                        <img src="assets/images/footer/queue.png" alt="queue">
+                    </div>
+                </section>
+
+
+                <!-- actions -->
+                <section class="player-right">
+
+                    <img src="assets/images/footer/DJ.png" alt="dj">
+                    <img src="assets/images/footer/pc-queue.png" alt="pc-queue">
+
+                </section>
+                             
+            </section>
+
+            </footer>
+        </section>
+
+
+        <aside class="friend_list">
+        <section class="aside_title">
+            <p>Friends Activity</p>
+            <div class="btns">
+                <img src="assets/images/friends/add.png" alt="add friend">
+                <img src="assets/images/main/X.png" alt="close">
+            </div>
+        </section>
+        <section class="friend_list">
+            <div class="each_friend">
+                <div class="friend_img">
+                    <img src="assets/images/friends/first.png" alt="friend">
+                </div>
+                <div class="friend_info">
+                    <p>FriendlyMusicListener</p>
+                    <p><i>Goosebumps</i> . Travis Scott </p>
+                </div>
+            </div>
+            <div class="each_friend">
+                <div class="friend_img">
+                    <img src="assets/images/friends/second.png" alt="friend">
+                </div>
+                <div class="friend_info">
+                    <p>AvarageMusicEnjoyer</p>
+                    <p><i>Get Lucky</i> . Daft Punk</p>
+                </div>
+            </div>
+            <div class="each_friend">
+                <div class="friend_img">
+                    <img src="assets/images/friends/green.png" alt="friend">
+                </div>
+                <div class="friend_info">
+                    <p>MusicEnthusiast</p>
+                    <p><i>would he</i> . joji </p>
+                </div>
+            </div>
+            <div class="each_friend">
+                <div class="friend_img">
+                    <img src="assets/images/friends/fourth.png" alt="friend">
+                </div>
+                <div class="friend_info">
+                    <p>ILinstenToMusic56</p>
+                    <p><i>Rockstar</i> . Post Malone </p>
+                </div>
+            </div>
+        </section>
+
+    </aside>
+
+    </section>
+
+    
+    
+</body>
+</html>
